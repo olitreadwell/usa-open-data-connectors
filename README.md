@@ -1,3 +1,5 @@
+USA open data connectors (scaffold). Derived from nz-open-data-connectors; adapters being ported to USA sources. See COUNTRY.md.
+
 # NZ Open Data Connectors
 
 TypeScript connectors for New Zealand public data, with language-agnostic wrappers so you can use them from any language (Python, R, Julia, curl, whatever you like).

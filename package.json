@@ -1,5 +1,5 @@
 {
-  "name": "nz-open-data-connectors",
+  "name": "usa-open-data-connectors",
   "version": "0.1.0",
   "private": true,
   "packageManager": "npm@10.9.2",
@@ -39,5 +39,6 @@
     "prettier": "3.9.6",
     "@vitest/coverage-v8": "3.2.7"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "description": "USA open data connectors (scaffold, derived from nz-open-data-connectors)"
 }
