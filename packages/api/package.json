@@ -37,7 +37,7 @@
     "@nzlab/config-typescript": "*",
     "@types/node": "22.20.1",
     "eslint": "9.39.5",
-    "tsx": "4.23.12",
+    "tsx": "4.23.15",
     "typescript": "6.0.3",
     "vitest": "3.2.7"
   }
