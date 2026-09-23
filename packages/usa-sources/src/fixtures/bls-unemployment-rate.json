@@ -1,7 +1,7 @@
 {
-  "note": "BLS public data API response for LNS14000000, 2006 to 2025, merged from two ten-year windows because the API caps a request at ten years.",
+  "note": "BLS public data API response for LNS14000000, 2006 to 2026, merged from three windows because the API caps a request at ten years.",
   "status": "REQUEST_SUCCEEDED",
-  "responseTime": 94,
+  "responseTime": 130,
   "message": [],
   "Results": {
     "series": [
@@ -868,7 +868,10 @@
             "periodName": "October",
             "value": "-",
             "footnotes": [
-              { "code": "9", "text": "Data unavailable due to the 2025 lapse in appropriations." }
+              {
+                "code": "9",
+                "text": "Data unavailable due to the 2025 lapse in appropriations."
+              }
             ]
           },
           {
@@ -1689,6 +1692,68 @@
             "periodName": "January",
             "value": "4.8",
             "footnotes": [{}]
+          },
+          {
+            "year": "2026",
+            "period": "M08",
+            "periodName": "August",
+            "latest": "true",
+            "value": "4.1",
+            "footnotes": [{}]
+          },
+          {
+            "year": "2026",
+            "period": "M07",
+            "periodName": "July",
+            "value": "4.1",
+            "footnotes": [{}]
+          },
+          {
+            "year": "2026",
+            "period": "M06",
+            "periodName": "June",
+            "value": "4.2",
+            "footnotes": [{}]
+          },
+          {
+            "year": "2026",
+            "period": "M05",
+            "periodName": "May",
+            "value": "4.3",
+            "footnotes": [{}]
+          },
+          {
+            "year": "2026",
+            "period": "M04",
+            "periodName": "April",
+            "value": "4.3",
+            "footnotes": [{}]
+          },
+          {
+            "year": "2026",
+            "period": "M03",
+            "periodName": "March",
+            "value": "4.3",
+            "footnotes": [{}]
+          },
+          {
+            "year": "2026",
+            "period": "M02",
+            "periodName": "February",
+            "value": "4.4",
+            "footnotes": [{}]
+          },
+          {
+            "year": "2026",
+            "period": "M01",
+            "periodName": "January",
+            "value": "4.3",
+            "footnotes": [
+              {
+                "code": "12",
+                "text": "January 2026 estimates were revised to incorporate updated population controls. For more information, see www.bls.gov/cps/documentation.htm#pop."
+              }
+            ]
           }
         ]
       }

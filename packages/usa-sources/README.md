@@ -28,8 +28,8 @@ console.log(rate.latest.year, rate.latest.period, rate.latest.value);
 ## Notes on the BLS API
 
 - The public API refuses a request spanning more than ten years, so
-  `fetchBlsSeries` splits a longer range into windows. Twenty years costs two
-  calls.
+  `fetchBlsSeries` splits a longer range into windows: two decades cost three
+  calls once the range runs into the current year.
 - Keyless access allows 25 series queries a day. A registered key raises that
   to 500, and the adapter takes `apiKey` for the day that matters.
 - The agency uses `-` for a month it could not publish, and `M13` for an

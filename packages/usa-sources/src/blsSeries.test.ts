@@ -20,7 +20,7 @@ const FIXTURE = readFixtureJson('bls-unemployment-rate.json');
 describe('parseBlsObservations', () => {
   it('parses the fixture into monthly observations', () => {
     const observations = parseBlsObservations(FIXTURE);
-    expect(observations.length).toBe(239);
+    expect(observations.length).toBe(247);
     expect(observations[0]).toMatchObject({
       seriesId: US_UNEMPLOYMENT_SERIES_ID,
       year: 2006,
@@ -81,18 +81,18 @@ describe('parseBlsObservations', () => {
 describe('buildBlsSeries', () => {
   it('orders the fixture oldest first and finds the ends', () => {
     const series = buildBlsSeries(parseBlsObservations(FIXTURE), US_UNEMPLOYMENT_SERIES_ID);
-    expect(series.points).toHaveLength(239);
+    expect(series.points).toHaveLength(247);
     expect(series.first.year).toBe(2006);
     expect(series.first.period).toBe('M01');
-    expect(series.latest.year).toBe(2025);
-    expect(series.latest.period).toBe('M12');
+    expect(series.latest.year).toBe(2026);
+    expect(series.latest.period).toBe('M08');
   });
 
   it('finds the pandemic peak and the tightest month', () => {
     const series = buildBlsSeries(parseBlsObservations(FIXTURE), US_UNEMPLOYMENT_SERIES_ID);
     expect(series.peak).toMatchObject({ year: 2020, period: 'M04', value: 14.8 });
     expect(series.lowest).toMatchObject({ year: 2023, period: 'M04', value: 3.4 });
-    expect(series.changeFromPeak).toBeCloseTo(-10.4, 5);
+    expect(series.changeFromPeak).toBeCloseTo(-10.7, 5);
   });
 
   it('keeps only the named series', () => {
