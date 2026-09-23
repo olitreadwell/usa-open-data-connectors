@@ -87,9 +87,9 @@ describe('runCli', () => {
 
   it('errors on an unknown source', async () => {
     const { err, output } = createCapture();
-    const exitCode = await runCli(['probe', 'linz'], output, createDeps());
+    const exitCode = await runCli(['probe', 'not-a-source'], output, createDeps());
     expect(exitCode).toBe(1);
-    expect(err.join('\n')).toContain('Unknown source: linz');
+    expect(err.join('\n')).toContain('Unknown source: not-a-source');
   });
 
   it('errors on an unknown command', async () => {
