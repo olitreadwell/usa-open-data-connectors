@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Dependencies: Renovate now runs weekly, groups bumps by ecosystem, keeps GitHub Actions pinned to commit SHAs, and never auto-merges. See `docs/dependency-updates.md`
 - Repo: renamed the npm scope to `@open-data-connectors` across package names, imports, scripts, and docs
 - Repo: deleted `packages/nz-sources` and `packages/stats-nz`; the API and CLI now read `packages/usa-sources`
 - API: dropped `/api/digitalnz/media` and the three `/api/stats-nz` routes. `GET /api/sources/{id}/data` serves the parsed live payload for any registered adapter

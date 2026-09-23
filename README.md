@@ -141,6 +141,7 @@ keyless.
 - `docs/GLOSSARY.md` - plain-language definitions of every term
 - `docs/CONNECTOR_DISCOVERY.md` - the US adapters and the sources not yet probed
 - `docs/RELEASING.md` - how versions, tags, and publishing work
+- `docs/dependency-updates.md` - how Renovate opens and groups dependency bumps
 
 ## Contributing
 
