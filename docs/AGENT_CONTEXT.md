@@ -26,11 +26,9 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 ## What is left
 
 1. `python/` and `ruby/` still implement the NZ design. Port or delete them.
-2. `docs/CONNECTOR_DISCOVERY.md` and the backlog table in `COUNTRY.md` still
-   list NZ candidates; replace them with US candidates.
-3. Backlog of US sources to add: Census Bureau, BEA, EIA, EPA, CDC, NOAA,
+2. Backlog of US sources to add: Census Bureau, BEA, EIA, EPA, CDC, NOAA,
    and api.data.gov.
-4. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
+3. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
    `usa-data-lab` repos vendors one package by name and renames its scope as
    it copies. That script matches the old scope, so it needs updating before
    the rename lands there.
@@ -81,5 +79,6 @@ type-check against `packages/usa-sources/dist`, so build before type-checking.
 - `docs/ARCHITECTURE.md` - how the pieces fit together
 - `docs/SECURITY.md` - key handling and security checklist
 - `docs/GLOSSARY.md` - plain-language terms
+- `docs/CONNECTOR_DISCOVERY.md` - the US adapters and the sources not yet probed
 - `docs/RELEASING.md` - versioning and tags
 - `docs/AGENT_CONTEXT.md` - this file

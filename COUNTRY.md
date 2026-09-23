@@ -25,6 +25,6 @@ gone, and the API and CLI read the US registry. The Python and Ruby ports in
 ## Remaining work
 
 - [ ] Port `python/` and `ruby/` to the US sources, or delete them
-- [ ] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
+- [x] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
 - [ ] Add the pending adapters above, each verified live before commit
 - [ ] Add each new adapter to the registry so the API and CLI pick it up
