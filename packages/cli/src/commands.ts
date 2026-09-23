@@ -1,15 +1,10 @@
 import { parseArgs } from 'node:util';
 
 import {
-  DIGITAL_NZ_MEDIA_TYPES,
-  NZ_DATA_SOURCES,
-  getNzDataSource,
-  probeNzDataSource,
-  searchDigitalNzMedia,
-} from '@nzlab/nz-sources';
-import type { DigitalNzMediaType } from '@nzlab/nz-sources';
-import { createStatsNzClient, serializeStatsNzRowsToCsv } from '@nzlab/stats-nz';
-import type { StatsNzClient } from '@nzlab/stats-nz';
+  getUsDataSource,
+  probeUsDataSource,
+  US_DATA_SOURCES,
+} from '@open-data-connectors/usa-sources';
 
 /** Where the CLI writes its output. Injectable for tests. */
 export interface CliOutput {
@@ -19,56 +14,22 @@ export interface CliOutput {
 
 /** Optional overrides so tests can stub network calls. */
 export interface CliDependencies {
-  probeSource?: typeof probeNzDataSource;
-  searchMedia?: typeof searchDigitalNzMedia;
-  statsNzClient?: StatsNzClient;
+  probeSource?: typeof probeUsDataSource;
 }
 
-/** Help text shown by `nzdata help` and on unknown commands. */
-export const HELP_TEXT = `nzdata - NZ open data connectors
+/** Help text shown by `usdata help` and on unknown commands. */
+export const HELP_TEXT = `usdata - US open data connectors
 
 Usage:
-  nzdata sources                          List every data source adapter
-  nzdata probe <id>                       Live probe one source (e.g. linz)
-  nzdata media --query <q> [--type <type>]
-                                          Search DigitalNZ media (images,
-                                          newspapers, videos, audio,
-                                          literature, artwork)
-  nzdata catalogue                        List every Stats NZ dataflow
-  nzdata data --dataflow <id> [--format json|csv]
-                                          Pull data rows for a dataflow
-  nzdata codelist --codelist <id>         Resolve dimension codes to labels
-  nzdata help                             Show this help
+  usdata sources                          List every data source adapter
+  usdata probe <id>                       Live probe one source
+                                          (e.g. bls-unemployment-rate)
+  usdata help                             Show this help
 
 Options:
-  -d, --dataflow <id>   Stats NZ dataflow id (e.g. AGR_AGR_003)
-  -f, --format <fmt>    Output format: json (default) or csv
-  -c, --codelist <id>   Stats NZ codelist id (e.g. CL_LIVESTOCK_AGR_AGR_003)
-  -q, --query <q>       DigitalNZ media search text
-  -t, --type <type>     Media type: images (default), newspapers, videos,
-                        audio, literature, artwork
   -h, --help            Show help
 
-Keys are read from the environment (STATS_NZ_SUBSCRIPTION_KEY, LINZ_API_KEY,
-DIGITAL_NZ_API_KEY). Output goes to stdout as JSON (or CSV); errors go to stderr.`;
-
-function createCliStatsNzClient(): StatsNzClient {
-  const options: { subscriptionKey?: string } = {};
-  if (process.env.STATS_NZ_SUBSCRIPTION_KEY !== undefined) {
-    options.subscriptionKey = process.env.STATS_NZ_SUBSCRIPTION_KEY;
-  }
-  return createStatsNzClient(options);
-}
-
-function getApiKeyForSource(id: string): string | undefined {
-  if (id === 'linz') {
-    return process.env.LINZ_API_KEY;
-  }
-  if (id === 'digitalnz') {
-    return process.env.DIGITAL_NZ_API_KEY;
-  }
-  return undefined;
-}
+Every adapter is keyless. Output goes to stdout as JSON; errors go to stderr.`;
 
 /** Runs one CLI invocation and returns the process exit code. */
 export async function runCli(
@@ -77,14 +38,9 @@ export async function runCli(
   deps: CliDependencies = {}
 ): Promise<number> {
   try {
-    const { values, positionals } = parseArgs({
+    const { positionals, values } = parseArgs({
       args,
       options: {
-        dataflow: { type: 'string', short: 'd' },
-        format: { type: 'string', short: 'f' },
-        codelist: { type: 'string', short: 'c' },
-        query: { type: 'string', short: 'q' },
-        type: { type: 'string', short: 't' },
         help: { type: 'boolean', short: 'h' },
       },
       allowPositionals: true,
@@ -96,12 +52,10 @@ export async function runCli(
     }
 
     const command = positionals[0];
-    const probeSource = deps.probeSource ?? probeNzDataSource;
-    const searchMedia = deps.searchMedia ?? searchDigitalNzMedia;
-    const client = deps.statsNzClient ?? createCliStatsNzClient();
+    const probeSource = deps.probeSource ?? probeUsDataSource;
 
     if (command === 'sources') {
-      const sources = NZ_DATA_SOURCES.map((source) => ({
+      const sources = US_DATA_SOURCES.map((source) => ({
         id: source.id,
         name: source.name,
         auth: source.auth,
@@ -114,75 +68,17 @@ export async function runCli(
     if (command === 'probe') {
       const id = positionals[1];
       if (id === undefined) {
-        output.writeErr('Usage: nzdata probe <id>');
+        output.writeErr('Usage: usdata probe <id>');
         return 1;
       }
-      const adapter = getNzDataSource(id);
+      const adapter = getUsDataSource(id);
       if (adapter === undefined) {
         output.writeErr(`Unknown source: ${id}`);
         return 1;
       }
-      const apiKey = getApiKeyForSource(id);
-      const probe = await probeSource(adapter, apiKey === undefined ? {} : { apiKey });
+      const probe = await probeSource(adapter);
       output.writeOut(JSON.stringify(probe, null, 2));
       return probe.ok ? 0 : 1;
-    }
-
-    if (command === 'media') {
-      const query = values.query;
-      if (typeof query !== 'string' || query.length === 0) {
-        output.writeErr('Usage: nzdata media --query <q> [--type <type>]');
-        return 1;
-      }
-      const rawType = values.type ?? 'images';
-      if (!DIGITAL_NZ_MEDIA_TYPES.includes(rawType as DigitalNzMediaType)) {
-        output.writeErr(
-          `Unknown media type: ${rawType}. Choose one of: ${DIGITAL_NZ_MEDIA_TYPES.join(', ')}`
-        );
-        return 1;
-      }
-      const mediaType = rawType as DigitalNzMediaType;
-      const apiKey = getApiKeyForSource('digitalnz');
-      const records = await searchMedia(query, mediaType, apiKey === undefined ? {} : { apiKey });
-      output.writeOut(JSON.stringify({ query, mediaType, records }, null, 2));
-      return 0;
-    }
-
-    if (command === 'catalogue') {
-      const dataflows = await client.getDataflowCatalogue();
-      output.writeOut(JSON.stringify(dataflows, null, 2));
-      return 0;
-    }
-
-    if (command === 'data') {
-      const dataflowId = values.dataflow;
-      if (typeof dataflowId !== 'string' || dataflowId.length === 0) {
-        output.writeErr('Usage: nzdata data --dataflow <id> [--format json|csv]');
-        return 1;
-      }
-      const format = values.format;
-      if (format !== undefined && format !== 'json' && format !== 'csv') {
-        output.writeErr(`Unknown format: ${format} (use json or csv)`);
-        return 1;
-      }
-      const rows = await client.getData({ dataflowId, format: 'csv' });
-      if (format === 'csv') {
-        output.writeOut(serializeStatsNzRowsToCsv(rows));
-      } else {
-        output.writeOut(JSON.stringify(rows, null, 2));
-      }
-      return 0;
-    }
-
-    if (command === 'codelist') {
-      const codelistId = values.codelist;
-      if (typeof codelistId !== 'string' || codelistId.length === 0) {
-        output.writeErr('Usage: nzdata codelist --codelist <id>');
-        return 1;
-      }
-      const codelist = await client.getCodelist(codelistId);
-      output.writeOut(JSON.stringify(codelist, null, 2));
-      return 0;
     }
 
     output.writeErr(`Unknown command: ${command}\n\n${HELP_TEXT}`);

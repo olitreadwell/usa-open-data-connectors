@@ -1,5 +1,5 @@
 {
-  "extends": "@nzlab/config-typescript/library.json",
+  "extends": "@open-data-connectors/config-typescript/library.json",
   "compilerOptions": {
     "rootDir": ".",
     "types": ["vitest/globals", "node"]

@@ -2,10 +2,10 @@
 export const OPEN_API_DOCUMENT = {
   openapi: '3.0.3',
   info: {
-    title: 'NZ Open Data Connectors',
+    title: 'USA Open Data Connectors',
     version: '0.1.0',
     description:
-      'Language-agnostic HTTP wrapper over NZ public data connectors. ' +
+      'Language-agnostic HTTP wrapper over US public data connectors. ' +
       'API keys stay server-side; every endpoint works keyless unless noted.',
   },
   paths: {
@@ -63,80 +63,23 @@ export const OPEN_API_DOCUMENT = {
         },
       },
     },
-    '/api/digitalnz/media': {
+    '/api/sources/{id}/data': {
       get: {
-        summary: 'Search DigitalNZ media (images, newspapers, videos, audio, literature, artwork)',
+        summary: 'Read and parse the live data behind one source',
         parameters: [
           {
-            name: 'q',
-            in: 'query',
-            required: true,
-            schema: { type: 'string' },
-          },
-          {
-            name: 'type',
-            in: 'query',
-            schema: {
-              type: 'string',
-              enum: ['images', 'newspapers', 'videos', 'audio', 'literature', 'artwork'],
-            },
-          },
-        ],
-        responses: {
-          '200': { description: 'Media records with preview image URLs' },
-          '400': { description: 'Missing or empty q' },
-          '429': { description: 'Rate limit exceeded' },
-        },
-      },
-    },
-    '/api/stats-nz/catalogue': {
-      get: {
-        summary: 'List every Aotearoa Data Explorer dataflow',
-        responses: {
-          '200': { description: 'Dataflow list' },
-          '429': { description: 'Rate limit exceeded' },
-        },
-      },
-    },
-    '/api/stats-nz/data': {
-      get: {
-        summary: 'Pull data rows for a dataflow',
-        parameters: [
-          {
-            name: 'dataflowId',
-            in: 'query',
-            required: true,
-            schema: { type: 'string' },
-          },
-          {
-            name: 'format',
-            in: 'query',
-            schema: { type: 'string', enum: ['json', 'csv'] },
-          },
-        ],
-        responses: {
-          '200': { description: 'Rows as JSON or CSV' },
-          '400': { description: 'Missing or invalid dataflowId' },
-          '429': { description: 'Rate limit exceeded' },
-        },
-      },
-    },
-    '/api/stats-nz/codelist': {
-      get: {
-        summary: 'Resolve dimension codes to labels',
-        parameters: [
-          {
-            name: 'codelistId',
-            in: 'query',
+            name: 'id',
+            in: 'path',
             required: true,
             schema: { type: 'string' },
           },
         ],
         responses: {
-          '200': { description: 'Codelist items' },
-          '400': { description: 'Missing or invalid codelistId' },
-          '401': { description: 'Subscription key required' },
+          '200': { description: 'Parsed payload for that source' },
+          '400': { description: 'Missing or invalid source id' },
+          '404': { description: 'Unknown source id' },
           '429': { description: 'Rate limit exceeded' },
+          '502': { description: 'The upstream source failed' },
         },
       },
     },
