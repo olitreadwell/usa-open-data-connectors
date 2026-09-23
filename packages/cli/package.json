@@ -1,11 +1,11 @@
 {
-  "name": "@nzlab/connectors-cli",
+  "name": "@open-data-connectors/connectors-cli",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/cli.js",
   "types": "./dist/cli.d.ts",
   "bin": {
-    "nzdata": "dist/cli.js"
+    "usdata": "dist/cli.js"
   },
   "exports": {
     ".": {
@@ -29,12 +29,11 @@
     "clean:all": "rm -rf dist tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage node_modules"
   },
   "dependencies": {
-    "@nzlab/nz-sources": "*",
-    "@nzlab/stats-nz": "*"
+    "@open-data-connectors/usa-sources": "*"
   },
   "devDependencies": {
-    "@nzlab/config-eslint": "*",
-    "@nzlab/config-typescript": "*",
+    "@open-data-connectors/config-eslint": "*",
+    "@open-data-connectors/config-typescript": "*",
     "@types/node": "22.20.4",
     "eslint": "9.39.5",
     "tsx": "4.23.15",

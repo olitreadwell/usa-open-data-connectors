@@ -1,28 +1,30 @@
 # USA Open Data Connectors
 
-Scaffold repo derived from `nz-open-data-connectors`. The multi-language
-design (TypeScript source of truth, Python + Ruby ports) carries over; the
-source adapters are being ported from NZ sources to USA sources.
+TypeScript connectors for US public data in `packages/usa-sources`, with an
+HTTP API and a CLI on top of them.
 
-## Target adapters (port in progress)
+The repo was copied from `nz-open-data-connectors`. The TypeScript side has
+been converted: the npm scope is `@open-data-connectors`, the NZ packages are
+gone, and the API and CLI read the US registry. The Python and Ruby ports in
+`python/` and `ruby/` still implement the NZ design.
 
-| Source | Adapter package | Status |
+## Adapters
+
+| Source | Adapter id | Status |
 | --- | --- | --- |
-| Census Bureau Data API | `packages/*` | pending |
-| api.data.gov | `packages/*` | pending |
-| BLS | `packages/*` | pending |
-| BEA | `packages/*` | pending |
-| EIA | `packages/*` | pending |
-| USGS | `packages/*` | pending |
-| EPA | `packages/*` | pending |
-| CDC | `packages/*` | pending |
-| NOAA | `packages/*` | pending |
+| BLS | `bls-unemployment-rate` | live, keyless, fixture committed |
+| USGS | `usgs-hawaii-earthquakes` | live, keyless, fixture committed |
+| Census Bureau Data API | - | not started |
+| api.data.gov | - | not started |
+| BEA | - | not started |
+| EIA | - | not started |
+| EPA | - | not started |
+| CDC | - | not started |
+| NOAA | - | not started |
 
-## Port checklist
+## Remaining work
 
-- [ ] Rename adapter interfaces (NzDataAdapter -> USADataAdapter)
-- [ ] Port source adapters above, verified live (HTTP 200) before commit
-- [ ] Port the API and CLI exposure
-- [ ] Port Python and Ruby packages with matching tests
-
-See ARCHITECTURE.md in the NZ origin for the one-design contract.
+- [ ] Port `python/` and `ruby/` to the US sources, or delete them
+- [ ] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
+- [ ] Add the pending adapters above, each verified live before commit
+- [ ] Add each new adapter to the registry so the API and CLI pick it up
