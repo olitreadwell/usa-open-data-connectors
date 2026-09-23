@@ -12,10 +12,15 @@ describe 'live smoke tests' do
     api_keys['linz'] = ENV['LINZ_API_KEY'] unless ENV['LINZ_API_KEY'].nil?
     probes = Nzdata.probe_all_nz_data_sources(api_keys)
     _(probes.length).must_equal 8
+    # NZOR's hosts (nzor.org.nz, data.nzor.org.nz) have failed the TLS
+    # handshake with "unexpected eof while reading" since 2026-09-21, from
+    # this machine and from Actions runners. The adapter stays for its
+    # committed fixture.
+    retired = %w[nzor]
     probes.each do |probe|
       # The data.govt.nz catalogue blocks non-NZ IPs at the CDN, so it is
       # verified by the committed fixture instead of the live probe.
-      next if %w[data-govt-nz data-govt-datastore lawa].include?(probe.id)
+      next if (%w[data-govt-nz data-govt-datastore lawa] + retired).include?(probe.id)
 
       _(probe.ok).must_equal true, "#{probe.id}: #{probe.status}"
     end
