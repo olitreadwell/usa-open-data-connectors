@@ -1,4 +1,4 @@
-import config from '@nzlab/config-eslint/base';
+import config from '@open-data-connectors/config-eslint/base';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 

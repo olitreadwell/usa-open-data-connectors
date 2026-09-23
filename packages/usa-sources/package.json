@@ -1,5 +1,5 @@
 {
-  "name": "@nzlab/usa-sources",
+  "name": "@open-data-connectors/usa-sources",
   "version": "0.1.0",
   "private": false,
   "type": "module",
@@ -29,8 +29,8 @@
     "test:smoke": "RUN_SMOKE=1 vitest run src/smoke.test.ts"
   },
   "devDependencies": {
-    "@nzlab/config-eslint": "*",
-    "@nzlab/config-typescript": "*",
+    "@open-data-connectors/config-eslint": "*",
+    "@open-data-connectors/config-typescript": "*",
     "@types/node": "22.20.4",
     "eslint": "9.39.5",
     "typescript": "6.0.3",

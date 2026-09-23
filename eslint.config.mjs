@@ -2,14 +2,12 @@
 // `eslint .` from the repo root works (used by the lint-review CI job).
 import api from './packages/api/eslint.config.mjs';
 import cli from './packages/cli/eslint.config.mjs';
-import nzSources from './packages/nz-sources/eslint.config.mjs';
-import statsNz from './packages/stats-nz/eslint.config.mjs';
+import usaSources from './packages/usa-sources/eslint.config.mjs';
 
 const packageConfigs = {
   'packages/api': api,
   'packages/cli': cli,
-  'packages/nz-sources': nzSources,
-  'packages/stats-nz': statsNz,
+  'packages/usa-sources': usaSources,
 };
 
 export default [

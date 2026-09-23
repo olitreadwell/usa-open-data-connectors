@@ -109,8 +109,7 @@ jobs:
         with:
           name: coverage
           path: |
-            packages/nz-sources/coverage/
-            packages/stats-nz/coverage/
+            packages/usa-sources/coverage/
             packages/api/coverage/
             packages/cli/coverage/
 

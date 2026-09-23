@@ -1,6 +1,6 @@
 name: Live smoke tests
 
-# Hits the real NZ public APIs nightly. Unit tests use fixtures and never
+# Hits the real US public APIs nightly. Unit tests use fixtures and never
 # touch the network; these jobs prove the fixtures have not drifted.
 on:
   schedule:
@@ -10,10 +10,6 @@ on:
 concurrency:
   group: smoke-${{ github.ref }}
   cancel-in-progress: true
-
-env:
-  STATS_NZ_SUBSCRIPTION_KEY: ${{ secrets.STATS_NZ_SUBSCRIPTION_KEY }}
-  LINZ_API_KEY: ${{ secrets.LINZ_API_KEY }}
 
 jobs:
   typescript:
