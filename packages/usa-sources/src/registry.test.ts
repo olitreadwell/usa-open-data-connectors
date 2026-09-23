@@ -3,6 +3,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import { blsUnemploymentAdapter } from './blsSeries.js';
+import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import {
   getUsDataSource,
   probeAllUsDataSources,
@@ -10,17 +11,33 @@ import {
   US_DATA_SOURCES,
 } from './registry.js';
 
-// The live fetch parses a BLS response, so the stubs answer with the raw
-// fixture rather than with the parsed series.
+// Each adapter parses its own response shape, so the stubs answer with the
+// raw fixture for the host being asked rather than with a parsed value.
 const RAW_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/bls-unemployment-rate.json'),
   'utf8'
 );
+const RAW_USGS_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/usgs-hawaii-earthquakes.json'),
+  'utf8'
+);
+
+/** The raw fixture that answers a given request host, or the BLS one. */
+function rawFixtureForUrl(url: string): string {
+  return url.includes('earthquake.usgs.gov') ? RAW_USGS_FIXTURE : RAW_FIXTURE;
+}
+
+/** A fetch stub that answers each source with its own fixture. */
+const FIXTURE_FETCH = (async (input: string | URL) =>
+  new Response(rawFixtureForUrl(String(input)), {
+    status: 200,
+  })) as unknown as typeof globalThis.fetch;
 
 describe('US_DATA_SOURCES', () => {
   it('registers the unemployment adapter with a unique id', () => {
     const ids = US_DATA_SOURCES.map((source) => source.id);
     expect(ids).toContain('bls-unemployment-rate');
+    expect(ids).toContain('usgs-hawaii-earthquakes');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -40,6 +57,7 @@ describe('US_DATA_SOURCES', () => {
 describe('getUsDataSource', () => {
   it('finds a source by id', () => {
     expect(getUsDataSource('bls-unemployment-rate')).toBe(blsUnemploymentAdapter);
+    expect(getUsDataSource('usgs-hawaii-earthquakes')).toBe(usgsHawaiiEarthquakesAdapter);
   });
 
   it('returns undefined for an unknown id', () => {
@@ -68,9 +86,7 @@ describe('probeUsDataSource', () => {
 
 describe('probeAllUsDataSources', () => {
   it('probes every registered source', async () => {
-    const fetchImpl = (async () =>
-      new Response(RAW_FIXTURE, { status: 200 })) as unknown as typeof globalThis.fetch;
-    const probes = await probeAllUsDataSources({ fetchImpl });
+    const probes = await probeAllUsDataSources({ fetchImpl: FIXTURE_FETCH });
     expect(probes).toHaveLength(US_DATA_SOURCES.length);
     expect(probes.every((probe) => probe.ok)).toBe(true);
   });

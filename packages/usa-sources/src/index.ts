@@ -13,6 +13,27 @@ export {
 } from './blsSeries.js';
 /** BLS series types. */
 export type { BlsObservation, BlsSeries } from './blsSeries.js';
+/** USGS earthquake catalogue (keyless). */
+export {
+  buildUsgsEarthquakeCatalogue,
+  buildUsgsEarthquakeUrl,
+  fetchUsgsEarthquakes,
+  parseUsgsEarthquakes,
+  sortEarthquakesOldestFirst,
+  USGS_EARTHQUAKE_API_BASE,
+  USGS_HAWAII_BOUNDS,
+  USGS_HAWAII_MIN_MAGNITUDE,
+  USGS_ROLLING_WINDOW_DAYS,
+  usgsHawaiiEarthquakesAdapter,
+  usgsHawaiiRollingWindow,
+} from './usgsEarthquakes';
+/** USGS earthquake types. */
+export type {
+  UsgsEarthquake,
+  UsgsEarthquakeBounds,
+  UsgsEarthquakeCatalogue,
+  UsgsEarthquakeQuery,
+} from './usgsEarthquakes';
 /** The uniform adapter registry and probe helpers. */
 export {
   US_DATA_SOURCES,
