@@ -15,6 +15,11 @@ pytestmark = pytest.mark.skipif(not RUN_SMOKE, reason="set RUN_SMOKE=1 to run li
 # fixture instead of the live probe.
 GEO_BLOCKED_SOURCE_IDS = {"data-govt-nz", "data-govt-datastore", "lawa"}
 
+# NZOR's hosts (nzor.org.nz, data.nzor.org.nz) have failed the TLS handshake
+# with "unexpected eof while reading" since 2026-09-21, from this machine and
+# from Actions runners. The adapter stays for its committed fixture.
+RETIRED_SOURCE_IDS = {"nzor"}
+
 
 def test_probes_every_source_with_optional_keys():
     api_keys = {}
@@ -23,7 +28,7 @@ def test_probes_every_source_with_optional_keys():
     probes = probe_all_nz_data_sources(api_keys)
     assert len(probes) == 8
     for probe in probes:
-        if probe.id in GEO_BLOCKED_SOURCE_IDS:
+        if probe.id in GEO_BLOCKED_SOURCE_IDS | RETIRED_SOURCE_IDS:
             continue
         assert probe.ok, f"{probe.id}: {probe.status}"
 
