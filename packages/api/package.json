@@ -25,7 +25,7 @@
   "dependencies": {
     "@hono/node-server": "2.1.1",
     "@hono/swagger-ui": "0.6.1",
-    "@hono/zod-validator": "0.9.0",
+    "@hono/zod-validator": "0.9.1",
     "@nzlab/nz-sources": "*",
     "@nzlab/stats-nz": "*",
     "@sentry/node": "10.71.0",
