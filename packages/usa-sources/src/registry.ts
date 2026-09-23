@@ -1,8 +1,12 @@
 import { blsUnemploymentAdapter } from './blsSeries.js';
+import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import type { UsDataAdapter, UsFetchOptions, UsSourceProbe } from './types.js';
 
 /** Every US data source behind the uniform adapter interface. */
-export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [blsUnemploymentAdapter];
+export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
+  blsUnemploymentAdapter,
+  usgsHawaiiEarthquakesAdapter,
+];
 
 /** Looks up a source adapter by id. */
 export function getUsDataSource<T>(id: string): UsDataAdapter<T> | undefined {
