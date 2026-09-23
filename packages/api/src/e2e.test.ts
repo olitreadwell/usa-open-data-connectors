@@ -38,9 +38,9 @@ describe('end-to-end over a real HTTP socket', () => {
     expect(metrics.headers.get('content-type')).toContain('text/plain');
 
     const metricsBody = await metrics.text();
-    expect(metricsBody).toContain('nzdata_http_requests_total{method="GET",route="/health"} 1');
+    expect(metricsBody).toContain('usdata_http_requests_total{method="GET",route="/health"} 1');
     expect(metricsBody).toContain(
-      'nzdata_http_requests_total{method="GET",route="/api/sources"} 1'
+      'usdata_http_requests_total{method="GET",route="/api/sources"} 1'
     );
   });
 

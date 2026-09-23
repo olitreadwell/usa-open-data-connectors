@@ -2,6 +2,14 @@
 
 ## Unreleased
 
+- Dependencies: Renovate now runs weekly, groups bumps by ecosystem, keeps GitHub Actions pinned to commit SHAs, and never auto-merges. See `docs/dependency-updates.md`
+- Repo: renamed the npm scope to `@open-data-connectors` across package names, imports, scripts, and docs
+- Repo: deleted `packages/nz-sources` and `packages/stats-nz`; the API and CLI now read `packages/usa-sources`
+- API: dropped `/api/digitalnz/media` and the three `/api/stats-nz` routes. `GET /api/sources/{id}/data` serves the parsed live payload for any registered adapter
+- CLI: `usdata` replaces `nzdata`. Commands with no US equivalent (`media`, `catalogue`, `data`, `codelist`) are gone; `sources` and `probe` read the US registry
+- Scripts: `build` compiles `usa-sources` and the CLI. The root `typecheck` script is gone; pre-commit runs `type-check`
+- API: the Prometheus counter is now `usdata_http_requests_total`
+- Ports: `python/` and `ruby/` still implement the NZ design; porting them to US sources is follow-up work
 - DigitalNZ media search: `nzdata media --query <q> --type <type>` and
   `GET /api/digitalnz/media?q=<q>&type=<type>` for images, newspapers,
   videos, audio, literature, and artwork, with preview image URLs. Mirrored

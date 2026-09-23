@@ -40,11 +40,11 @@ describe('createRequestLogger', () => {
     app.use('*', createRequestLogger(write));
     app.get('/api/sources/:id/probe', (c) => c.json({ ok: true }));
 
-    await app.request('/api/sources/linz/probe');
+    await app.request('/api/sources/not-a-source/probe');
 
     const event = JSON.parse(lines[0] ?? '');
     expect(event.route).toBe('/api/sources/:id/probe');
-    expect(event.path).toBe('/api/sources/linz/probe');
+    expect(event.path).toBe('/api/sources/not-a-source/probe');
   });
 
   it('logs errors at error level with status 500', async () => {

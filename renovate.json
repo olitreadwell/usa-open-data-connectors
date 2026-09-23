@@ -1,6 +1,66 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:recommended",
+    ":timezone(Pacific/Auckland)",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "schedule": ["before 6am on monday"],
+  "rangeStrategy": "pin",
+  "prConcurrentLimit": 6,
+  "prHourlyLimit": 2,
+  "rebaseWhen": "behind-base-branch",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 6am on the first day of the month"]
+  },
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "schedule": ["at any time"]
+  },
+  "packageRules": [
+    {
+      "description": "One PR for every GitHub Actions bump. Digests stay pinned.",
+      "matchManagers": ["github-actions"],
+      "groupName": "github actions"
+    },
+    {
+      "description": "Keep the Node version in .nvmrc, engines, and the Docker base image in step.",
+      "matchDepNames": ["node"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "node version"
+    },
+    {
+      "description": "One PR for npm runtime dependencies across every workspace.",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["dependencies", "optionalDependencies", "peerDependencies"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "npm dependencies"
+    },
+    {
+      "description": "One PR for npm dev tooling (prettier, vitest, shared lint configs).",
+      "matchManagers": ["npm"],
+      "matchDepTypes": ["devDependencies"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "npm dev dependencies"
+    },
+    {
+      "description": "One PR for the Python port's pinned dependencies, pyproject.toml plus uv.lock.",
+      "matchManagers": ["pep621"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "python dependencies"
+    },
+    {
+      "description": "One PR for the Dockerfile entries that are not the Node image.",
+      "matchManagers": ["dockerfile"],
+      "matchUpdateTypes": ["patch", "minor"],
+      "groupName": "docker base image"
+    },
+    {
+      "description": "Majors never share a PR with a smaller bump and carry a label for review.",
+      "matchUpdateTypes": ["major"],
+      "groupName": null,
+      "addLabels": ["major update"]
+    }
   ]
 }
