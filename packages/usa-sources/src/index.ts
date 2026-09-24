@@ -34,6 +34,27 @@ export type {
   UsgsEarthquakeCatalogue,
   UsgsEarthquakeQuery,
 } from './usgsEarthquakes';
+/** CDC PLACES county obesity estimates (keyless). */
+export {
+  buildCdcCountyObesitySet,
+  buildCdcCountyObesityUrl,
+  cdcCountyObesityAdapter,
+  CDC_PLACES_COUNTY_API_BASE,
+  CDC_PLACES_COUNTY_ROW_LIMIT,
+  CDC_PLACES_CRUDE_PREVALENCE_ID,
+  CDC_PLACES_NATIONAL_STATE_CODE,
+  CDC_PLACES_OBESITY_MEASURE_ID,
+  fetchCdcCountyObesity,
+  parseCdcCountyObesityPayload,
+  sortCdcCountiesByPercent,
+} from './cdcCountyObesity.js';
+/** CDC PLACES county obesity types. */
+export type {
+  CdcCountyObesityEstimate,
+  CdcCountyObesityPayload,
+  CdcCountyObesitySet,
+  CdcNationalObesityEstimate,
+} from './cdcCountyObesity.js';
 /** The uniform adapter registry and probe helpers. */
 export {
   US_DATA_SOURCES,
