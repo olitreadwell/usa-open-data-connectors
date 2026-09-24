@@ -29,7 +29,7 @@
     "@nzlab/nz-sources": "*",
     "@nzlab/stats-nz": "*",
     "@sentry/node": "10.71.0",
-    "hono": "4.13.8",
+    "hono": "4.13.9",
     "zod": "3.25.76"
   },
   "devDependencies": {
