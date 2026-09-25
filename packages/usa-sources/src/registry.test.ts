@@ -27,12 +27,19 @@ const RAW_CDC_FIXTURE = readFileSync(
   'utf8'
 );
 
-/** The raw fixture that answers a given request host, or the BLS one. */
+/**
+ * Pick the fixture that answers a request, by exact host.
+ *
+ * Parsing the URL and comparing `hostname` keeps the match on the real host, so
+ * a URL that merely mentions `data.cdc.gov` elsewhere cannot select the wrong
+ * fixture (`js/incomplete-url-substring-sanitization`).
+ */
 function rawFixtureForUrl(url: string): string {
-  if (url.includes('earthquake.usgs.gov')) {
+  const { hostname } = new URL(url);
+  if (hostname === 'earthquake.usgs.gov') {
     return RAW_USGS_FIXTURE;
   }
-  return url.includes('data.cdc.gov') ? RAW_CDC_FIXTURE : RAW_FIXTURE;
+  return hostname === 'data.cdc.gov' ? RAW_CDC_FIXTURE : RAW_FIXTURE;
 }
 
 /** A fetch stub that answers each source with its own fixture. */
