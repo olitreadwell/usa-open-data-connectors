@@ -20,9 +20,15 @@
   },
   "packageRules": [
     {
-      "description": "build 1.5.0+ needs Python >=3.10, and python/pyproject.toml still supports 3.9, so a bump makes `uv sync --locked` unresolvable.",
+      "description": "build 1.5.0 needs Python >=3.10, and python/pyproject.toml still supports 3.9, so a bump makes `uv sync --locked` unresolvable.",
       "matchPackageNames": ["build"],
       "allowedVersions": "<1.5.0",
+      "automerge": false
+    },
+    {
+      "description": "mypy 1.20.0 needs Python >=3.10 for the same reason build 1.5.0 does.",
+      "matchPackageNames": ["mypy"],
+      "allowedVersions": "<1.20.0",
       "automerge": false
     },
     {
