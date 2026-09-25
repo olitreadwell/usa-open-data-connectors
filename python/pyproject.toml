@@ -29,7 +29,7 @@ dev = [
   # declares requires-python >=3.9, so uv cannot resolve a lock that satisfies
   # both. Keep build on the last 3.9-compatible release.
   "build==1.4.4",
-  "mypy==1.19.1",
+  "mypy==1.20.2",
   "pytest==8.4.2",
   "pytest-cov==7.1.0",
   "ruff==0.16.8",
