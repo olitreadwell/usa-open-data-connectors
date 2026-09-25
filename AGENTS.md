@@ -1,19 +1,18 @@
 # Agent instructions
 
-TypeScript connectors for New Zealand public data, with Python and Ruby
-ports. npm workspaces, one package per concern. Read `docs/ARCHITECTURE.md`
-for the plain-language map, `docs/GLOSSARY.md` for terms.
+TypeScript connectors for US public data. npm workspaces, one package per
+concern. Read `docs/ARCHITECTURE.md` for the plain-language map,
+`docs/GLOSSARY.md` for terms.
 
 ## Repo map
 
-- `packages/nz-sources` - one adapter per NZ data source (GeoNet,
-  data.govt.nz, LINZ, DigitalNZ, Trade Me, NZOR, ADE search, MSD benefits)
-- `packages/stats-nz` - Aotearoa Data Explorer (ADE) client
+- `packages/usa-sources` - one adapter per US data source (BLS unemployment
+  rate, USGS earthquakes) behind a uniform interface, plus the registry
 - `packages/api` - HTTP wrapper (Hono), OpenAPI spec, Swagger UI
-- `packages/cli` - `nzdata` command line tool
+- `packages/cli` - `usdata` command line tool
 - `packages/config-eslint`, `packages/config-typescript` - shared config
-- `python/` - Python port (`nzdata` on PyPI)
-- `ruby/` - Ruby port (`nzdata` gem)
+- `python/` - Python port (`nzdata` on PyPI), still on the NZ design
+- `ruby/` - Ruby port (`nzdata` gem), still on the NZ design
 - `docs/` - architecture, security, glossary, releasing
 
 ## Commands
@@ -24,6 +23,10 @@ npm run test:smoke     # live tests against real APIs (needs RUN_SMOKE=1)
 cd python && .venv/bin/ruff check src tests && .venv/bin/mypy && .venv/bin/pytest
 cd ruby && bundle exec rake check
 ```
+
+`npm run build` compiles `usa-sources` and the CLI, in that order: the API and
+CLI type-check against `packages/usa-sources/dist`, so build before
+type-checking.
 
 Run `npm run check` before finishing any TypeScript change. Python and
 Ruby changes run their own gates.
@@ -38,24 +41,29 @@ Ruby changes run their own gates.
 - Python: `ruff` + `mypy` + pytest coverage gate, deps pinned in `uv.lock`
 - Ruby: `rubocop` + SimpleCov gate via `bundle exec rake check`
 - Never fabricate a data source, a stat, or a "this worked" claim
-- Fixtures are real snapshots from the live APIs, dated in their filenames
+- Fixtures are real snapshots from the live APIs. Each one records the window
+  it covers, in a note inside the file or in its filename
 
 ## Conventions
 
-- Adapters live in `packages/nz-sources`, the Stats NZ client in
-  `packages/stats-nz`
+- Adapters live in `packages/usa-sources`. A new adapter goes in its own
+  module, gets registered in `src/registry.ts`, and is exported from
+  `src/index.ts`
 - The HTTP wrapper is `packages/api`, the CLI is `packages/cli`
+- `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data`
+  are the generic routes over the registry. Prefer extending those over
+  adding a source-specific route
 - Keys are read from env only, server-side. The API and CLI never accept
   keys from callers
 - Tests never hit the network unless `RUN_SMOKE=1` is set
-- Test files sit next to their source file (`client.test.ts` tests
-  `client.ts`)
+- Test files sit next to their source file (`registry.test.ts` tests
+  `registry.ts`)
 - Use 2-3 word, domain-prefixed names for exports
-  (`getNzDataSource`, not `get`)
-- Pick one spelling per concept and use it everywhere (`dataflowId`, not
+  (`getUsDataSource`, not `get`)
+- Pick one spelling per concept and use it everywhere (`seriesId`, not
   `dataset` in one place and `flow` in another)
-- Keep changes in all three languages when a behavior change affects the
-  shared design
+- When a change touches the adapter contract, update `usa-sources`, the API,
+  and the CLI in the same change
 
 ## Docs for humans and agents
 

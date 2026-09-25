@@ -26,14 +26,14 @@ export {
   USGS_ROLLING_WINDOW_DAYS,
   usgsHawaiiEarthquakesAdapter,
   usgsHawaiiRollingWindow,
-} from './usgsEarthquakes';
+} from './usgsEarthquakes.js';
 /** USGS earthquake types. */
 export type {
   UsgsEarthquake,
   UsgsEarthquakeBounds,
   UsgsEarthquakeCatalogue,
   UsgsEarthquakeQuery,
-} from './usgsEarthquakes';
+} from './usgsEarthquakes.js';
 /** The uniform adapter registry and probe helpers. */
 export {
   US_DATA_SOURCES,

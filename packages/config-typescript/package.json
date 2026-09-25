@@ -1,5 +1,5 @@
 {
-  "name": "@nzlab/config-typescript",
+  "name": "@open-data-connectors/config-typescript",
   "version": "0.0.0",
   "private": true,
   "files": [
