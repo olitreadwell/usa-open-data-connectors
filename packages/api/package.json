@@ -28,7 +28,7 @@
     "@hono/zod-validator": "0.9.1",
     "@nzlab/nz-sources": "*",
     "@nzlab/stats-nz": "*",
-    "@sentry/node": "10.71.0",
+    "@sentry/node": "10.75.3",
     "hono": "4.13.8",
     "zod": "3.25.76"
   },
