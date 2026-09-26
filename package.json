@@ -14,7 +14,7 @@
     "build": "npm run build -w @nzlab/nz-sources -w @nzlab/stats-nz && npm run build -w @nzlab/connectors-cli",
     "start": "next start",
     "setup": "node scripts/setup.mjs",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "npm run type-check --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "format": "npm run format --workspaces --if-present",
     "format:check": "npm run format:check --workspaces --if-present",
