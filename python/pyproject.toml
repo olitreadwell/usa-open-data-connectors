@@ -7,7 +7,7 @@ name = "nzdata"
 version = "0.1.0"
 description = "Keyless-first connectors for NZ public data"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.14.7"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Oli Treadwell", email = "oliver.treadwell@gmail.com" }]
