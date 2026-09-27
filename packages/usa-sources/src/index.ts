@@ -107,5 +107,24 @@ export {
   probeAllUsDataSources,
   probeUsDataSource,
 } from './registry.js';
+/** US Treasury average interest rate on the debt outstanding (keyless). */
+export {
+  buildTreasuryAvgInterestRateSeries,
+  buildTreasuryAvgInterestRateUrl,
+  fetchTreasuryAvgInterestRates,
+  parseTreasuryAvgInterestRatePayload,
+  treasuryAvgInterestRateAdapter,
+  TREASURY_AVG_INTEREST_RATE_FIRST_YEAR,
+  TREASURY_AVG_INTEREST_RATE_PATH,
+  TREASURY_AVG_INTEREST_RATE_ROW_LIMIT,
+  TREASURY_AVG_INTEREST_RATE_SECURITY_DESCRIPTION,
+  TREASURY_AVG_INTEREST_RATE_SECURITY_TYPE,
+  TREASURY_FISCAL_DATA_API_BASE,
+} from './treasuryAvgInterestRate.js';
+/** Treasury interest rate types. */
+export type {
+  TreasuryInterestRateMonth,
+  TreasuryInterestRateSeries,
+} from './treasuryAvgInterestRate.js';
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';

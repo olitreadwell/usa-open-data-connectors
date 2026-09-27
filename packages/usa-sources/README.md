@@ -16,6 +16,7 @@ workspace under that scope already. Renaming the scope is a separate change.
 | `cdc-county-obesity`      | Centers for Disease Control (CDC) | none | The share of adults with obesity in each US county, from CDC PLACES |
 | `ncei-annual-temperature` | NOAA National Centers for Environmental Information | none | Calendar-year average temperature for the contiguous United States, since 1895 |
 | `noaa-sea-level` | NOAA Center for Operational Oceanographic Products and Services | none | Monthly mean sea level at a tide gauge, folded into calendar-year averages, since 1856 at The Battery |
+| `treasury-avg-interest-rate` | US Department of the Treasury | none | Average interest rate on the interest-bearing federal debt outstanding, monthly since 2001 |
 
 ## Usage
 
@@ -80,6 +81,13 @@ console.log(
   seaLevel.highest.year,
   seaLevel.trendMillimetresPerYear
 );
+```
+
+```ts
+import { fetchTreasuryAvgInterestRates } from '@nzlab/usa-sources';
+
+const rates = await fetchTreasuryAvgInterestRates();
+console.log(rates.monthCount, rates.lastMonth.averageInterestRatePercent, rates.lowest.recordDate);
 ```
 
 ## Notes on the BLS API
@@ -148,6 +156,27 @@ console.log(
   `{"error":{"message":"..."}}`, so the parser checks for that before reading
   the data. A wrong product name answers with plain text instead, which fails
   the shape check.
+
+## Notes on the Treasury average interest rate
+
+- One keyless request covers the whole run. The dataset answers a row per
+  month per security type, and the filter pins the response to
+  `security_type_desc:eq:Interest-bearing Debt`, which is the portfolio total
+  the bureau's own monthly statement is built from. The other rows, the rates
+  on bills, notes, bonds, and non-marketable debt, never reach the parser.
+- The rate is the average across everything outstanding, not the rate on
+  anything issued today. That is why it moves slowly: a new bill reprices a
+  fraction of the portfolio, and a bond issued in 2019 still pays its own
+  coupon.
+- A page holds at most 10,000 rows and the run is around 300, so the adapter
+  asks for the whole series in one request and does not page. A run longer
+  than the cap would be a change worth making here rather than a silent
+  truncation, so the row limit is a named constant.
+- Each row is dated to the last day of its month. A month the agency could
+  not compute would arrive without a value, and those rows are dropped.
+- A request the API rejects answers with an HTTP error and a body of
+  `{"error":"Invalid Query Param","message":"..."}`, which the parser reports
+  as an API error rather than a shape error.
 
 ## Checks
 
