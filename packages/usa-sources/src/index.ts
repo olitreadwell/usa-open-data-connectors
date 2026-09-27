@@ -55,6 +55,51 @@ export type {
   CdcCountyObesitySet,
   CdcNationalObesityEstimate,
 } from './cdcCountyObesity.js';
+/** NOAA NCEI contiguous US annual average temperature (keyless). */
+export {
+  buildNceiAnnualTemperatureSeries,
+  buildNceiAnnualTemperatureUrl,
+  fetchNceiAnnualTemperature,
+  NCEI_ANNUAL_WINDOW_MONTHS,
+  NCEI_AVERAGE_TEMPERATURE_PARAMETER_ID,
+  NCEI_CLIMATE_AT_A_GLANCE_BASE,
+  NCEI_CONTIGUOUS_US_REGION_ID,
+  NCEI_FIRST_RECORD_YEAR,
+  nceiAnnualTemperatureAdapter,
+  parseNceiAnnualTemperatureCsv,
+} from './nceiAnnualTemperature';
+/** NOAA NCEI temperature types. */
+export type {
+  NceiTemperatureQuery,
+  NceiTemperatureSeries,
+  NceiTemperatureYear,
+} from './nceiAnnualTemperature';
+/** NOAA CO-OPS monthly mean sea level at a tide gauge (keyless). */
+export {
+  buildNoaaSeaLevelSeries,
+  buildNoaaSeaLevelUrl,
+  fetchNoaaSeaLevel,
+  noaaSeaLevelAdapter,
+  noaaSeaLevelTrendMillimetresPerYear,
+  NOAA_BATTERY_STATION_ID,
+  NOAA_BATTERY_STATION_NAME,
+  NOAA_COOPS_API_BASE,
+  NOAA_SEA_LEVEL_APPLICATION_ID,
+  NOAA_SEA_LEVEL_DATUM,
+  NOAA_SEA_LEVEL_FIRST_YEAR,
+  NOAA_SEA_LEVEL_PRODUCT,
+  NOAA_SEA_LEVEL_UNITS,
+  parseNoaaSeaLevelPayload,
+} from './noaaSeaLevel';
+/** NOAA CO-OPS sea level types. */
+export type {
+  NoaaSeaLevelMonth,
+  NoaaSeaLevelPayload,
+  NoaaSeaLevelQuery,
+  NoaaSeaLevelSeries,
+  NoaaSeaLevelStation,
+  NoaaSeaLevelYear,
+} from './noaaSeaLevel';
 /** The uniform adapter registry and probe helpers. */
 export {
   US_DATA_SOURCES,

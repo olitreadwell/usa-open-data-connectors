@@ -14,6 +14,8 @@ workspace under that scope already. Renaming the scope is a separate change.
 | `bls-unemployment-rate`   | Bureau of Labor Statistics | none | The national unemployment rate, monthly, seasonally adjusted        |
 | `usgs-hawaii-earthquakes` | US Geological Survey       | none | Earthquakes of magnitude 2.5 and above near the Hawaiian islands    |
 | `cdc-county-obesity`      | Centers for Disease Control (CDC) | none | The share of adults with obesity in each US county, from CDC PLACES |
+| `ncei-annual-temperature` | NOAA National Centers for Environmental Information | none | Calendar-year average temperature for the contiguous United States, since 1895 |
+| `noaa-sea-level` | NOAA Center for Operational Oceanographic Products and Services | none | Monthly mean sea level at a tide gauge, folded into calendar-year averages, since 1856 at The Battery |
 
 ## Usage
 
@@ -55,6 +57,31 @@ const set = buildCdcCountyObesitySet(await fetchCdcCountyObesity());
 console.log(set.countyCount, set.lowest.countyName, set.highest.percent, set.national.percent);
 ```
 
+```ts
+import {
+  buildNceiAnnualTemperatureSeries,
+  fetchNceiAnnualTemperature,
+} from '@nzlab/usa-sources';
+
+const series = await fetchNceiAnnualTemperature({ startYear: 1895, endYear: new Date().getFullYear() });
+console.log(series.yearCount, series.warmest.year, series.coldest.valueFahrenheit);
+```
+
+```ts
+import {
+  buildNoaaSeaLevelSeries,
+  fetchNoaaSeaLevel,
+} from '@nzlab/usa-sources';
+
+const seaLevel = buildNoaaSeaLevelSeries(await fetchNoaaSeaLevel());
+console.log(
+  seaLevel.station.name,
+  seaLevel.yearCount,
+  seaLevel.highest.year,
+  seaLevel.trendMillimetresPerYear
+);
+```
+
 ## Notes on the BLS API
 
 - The public API refuses a request spanning more than ten years, so
@@ -89,6 +116,38 @@ console.log(set.countyCount, set.lowest.countyName, set.highest.percent, set.nat
   release carries no obesity rows at all for Kentucky and Pennsylvania. Rows
   without a value are dropped, and the national row is kept apart from the
   counties rather than counted as one.
+
+## Notes on the Climate at a Glance download
+
+- The download is a CSV, not JSON: two comment lines, a header, then one row
+  per year as `YYYYMM,value` in degrees Fahrenheit. `parseNceiAnnualTemperatureCsv`
+  skips the comments and the header, and stops on any other line shape rather
+  than dropping it.
+- The URL carries a window length and a window end month. Twelve months ending
+  in December is the calendar year, which is the number a story about a year
+  can compare. A shorter window ending in December would be that month alone,
+  and the parser refuses a file with more than one row per year.
+- The current year joins the file only once December has closed it, so the
+  newest row is the last complete calendar year. The 2026 download is dated
+  2026-09-26 and ends at 2025.
+
+## Notes on the CO-OPS sea level record
+
+- One request covers the whole window: the `monthly_mean` product answers one
+  row per month rather than one row per reading, so 170 years cost one call
+  and about 460 KB. The endpoint is keyless.
+- Values are metres against the station's MSL datum, the average of hourly
+  heights over the 1983-2001 National Tidal Datum Epoch. Reading the whole
+  record against one fixed epoch is what makes two years comparable.
+- The API answers a row for every month in the window and leaves the value
+  blank when it has none, which is how the early gaps arrive (1920 holds
+  seven months, 1861 and 1879-1892 hold none). Blank rows are dropped, and a
+  year's average is taken over the months it does have, so `monthCount` says
+  how much of the year a value covers.
+- Errors come back in the body with HTTP 200, as
+  `{"error":{"message":"..."}}`, so the parser checks for that before reading
+  the data. A wrong product name answers with plain text instead, which fails
+  the shape check.
 
 ## Checks
 
