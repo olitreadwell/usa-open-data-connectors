@@ -17,6 +17,7 @@ workspace under that scope already. Renaming the scope is a separate change.
 | `ncei-annual-temperature` | NOAA National Centers for Environmental Information | none | Calendar-year average temperature for the contiguous United States, since 1895 |
 | `noaa-sea-level` | NOAA Center for Operational Oceanographic Products and Services | none | Monthly mean sea level at a tide gauge, folded into calendar-year averages, since 1856 at The Battery |
 | `treasury-avg-interest-rate` | US Department of the Treasury | none | Average interest rate on the interest-bearing federal debt outstanding, monthly since 2001 |
+| `fema-disaster-declarations` | Federal Emergency Management Agency | none | Every disaster declaration FEMA has published, one row per declaration, from 1953 to the newest one |
 
 ## Usage
 
@@ -88,6 +89,17 @@ import { fetchTreasuryAvgInterestRates } from '@nzlab/usa-sources';
 
 const rates = await fetchTreasuryAvgInterestRates();
 console.log(rates.monthCount, rates.lastMonth.averageInterestRatePercent, rates.lowest.recordDate);
+```
+
+```ts
+import { fetchFemaDeclarations } from '@nzlab/usa-sources';
+
+const declarations = await fetchFemaDeclarations();
+console.log(
+  declarations.declarationCount,
+  declarations.busiestYear.year,
+  declarations.incidentTypes[0]?.name
+);
 ```
 
 ## Notes on the BLS API

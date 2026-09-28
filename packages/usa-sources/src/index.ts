@@ -126,5 +126,24 @@ export type {
   TreasuryInterestRateMonth,
   TreasuryInterestRateSeries,
 } from './treasuryAvgInterestRate.js';
+/** FEMA disaster declarations (keyless). */
+export {
+  buildFemaDeclarationCatalogue,
+  buildFemaDeclarationUrl,
+  femaDisasterDeclarationsAdapter,
+  fetchFemaDeclarations,
+  FEMA_DECLARATION_PATH,
+  FEMA_DECLARATION_ROW_LIMIT,
+  FEMA_FIRE_INCIDENT_TYPE,
+  FEMA_OPEN_DATA_API_BASE,
+  parseFemaDeclarationPayload,
+} from './femaDisasterDeclarations.js';
+/** FEMA declaration types. */
+export type {
+  FemaDeclaration,
+  FemaDeclarationCatalogue,
+  FemaDeclarationCount,
+  FemaDeclarationYear,
+} from './femaDisasterDeclarations.js';
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';

@@ -1,5 +1,6 @@
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
+import { femaDisasterDeclarationsAdapter } from './femaDisasterDeclarations.js';
 import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
 import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
 import { treasuryAvgInterestRateAdapter } from './treasuryAvgInterestRate.js';
@@ -14,6 +15,7 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   nceiAnnualTemperatureAdapter,
   noaaSeaLevelAdapter,
   treasuryAvgInterestRateAdapter,
+  femaDisasterDeclarationsAdapter,
 ];
 
 /** Looks up a source adapter by id. */
