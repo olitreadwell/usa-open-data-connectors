@@ -4,6 +4,9 @@ import { describe, expect, it } from 'vitest';
 
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
+import { femaDisasterDeclarationsAdapter } from './femaDisasterDeclarations.js';
+import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
+import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import {
   getUsDataSource,
@@ -26,6 +29,22 @@ const RAW_CDC_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/cdc-county-obesity-2026-09-25.json'),
   'utf8'
 );
+const RAW_NCEI_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/ncei-annual-temperature-2026-09-26.csv'),
+  'utf8'
+);
+const RAW_NOAA_SEA_LEVEL_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/noaa-sea-level-2026-09-27.json'),
+  'utf8'
+);
+const RAW_TREASURY_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/treasury-avg-interest-rate-2026-09-28.json'),
+  'utf8'
+);
+const RAW_FEMA_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/fema-disaster-declarations-2026-09-29.json'),
+  'utf8'
+);
 
 /**
  * Pick the fixture that answers a request, by exact host.
@@ -39,7 +58,19 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'earthquake.usgs.gov') {
     return RAW_USGS_FIXTURE;
   }
-  return hostname === 'data.cdc.gov' ? RAW_CDC_FIXTURE : RAW_FIXTURE;
+  if (hostname === 'data.cdc.gov') {
+    return RAW_CDC_FIXTURE;
+  }
+  if (hostname === 'www.ncei.noaa.gov') {
+    return RAW_NCEI_FIXTURE;
+  }
+  if (hostname === 'api.fiscaldata.treasury.gov') {
+    return RAW_TREASURY_FIXTURE;
+  }
+  if (hostname === 'www.fema.gov') {
+    return RAW_FEMA_FIXTURE;
+  }
+  return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
 
 /** A fetch stub that answers each source with its own fixture. */
@@ -54,6 +85,10 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('bls-unemployment-rate');
     expect(ids).toContain('usgs-hawaii-earthquakes');
     expect(ids).toContain('cdc-county-obesity');
+    expect(ids).toContain('ncei-annual-temperature');
+    expect(ids).toContain('noaa-sea-level');
+    expect(ids).toContain('treasury-avg-interest-rate');
+    expect(ids).toContain('fema-disaster-declarations');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -75,6 +110,9 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('bls-unemployment-rate')).toBe(blsUnemploymentAdapter);
     expect(getUsDataSource('usgs-hawaii-earthquakes')).toBe(usgsHawaiiEarthquakesAdapter);
     expect(getUsDataSource('cdc-county-obesity')).toBe(cdcCountyObesityAdapter);
+    expect(getUsDataSource('ncei-annual-temperature')).toBe(nceiAnnualTemperatureAdapter);
+    expect(getUsDataSource('noaa-sea-level')).toBe(noaaSeaLevelAdapter);
+    expect(getUsDataSource('fema-disaster-declarations')).toBe(femaDisasterDeclarationsAdapter);
   });
 
   it('returns undefined for an unknown id', () => {
