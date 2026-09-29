@@ -18,6 +18,7 @@ workspace under that scope already. Renaming the scope is a separate change.
 | `noaa-sea-level` | NOAA Center for Operational Oceanographic Products and Services | none | Monthly mean sea level at a tide gauge, folded into calendar-year averages, since 1856 at The Battery |
 | `treasury-avg-interest-rate` | US Department of the Treasury | none | Average interest rate on the interest-bearing federal debt outstanding, monthly since 2001 |
 | `fema-disaster-declarations` | Federal Emergency Management Agency | none | Every disaster declaration FEMA has published, one row per declaration, from 1953 to the newest one |
+| `openfda-food-recalls` | US Food and Drug Administration | none | Every food recall FDA has published as an enforcement report, from June 2012 to the newest publication date |
 
 ## Usage
 
