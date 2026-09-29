@@ -3,6 +3,7 @@ import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { femaDisasterDeclarationsAdapter } from './femaDisasterDeclarations.js';
 import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
 import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
+import { openFdaFoodRecallsAdapter } from './openFdaFoodRecalls.js';
 import { treasuryAvgInterestRateAdapter } from './treasuryAvgInterestRate.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import type { UsDataAdapter, UsFetchOptions, UsSourceProbe } from './types.js';
@@ -16,6 +17,7 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   noaaSeaLevelAdapter,
   treasuryAvgInterestRateAdapter,
   femaDisasterDeclarationsAdapter,
+  openFdaFoodRecallsAdapter,
 ];
 
 /** Looks up a source adapter by id. */

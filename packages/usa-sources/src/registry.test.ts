@@ -7,6 +7,7 @@ import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { femaDisasterDeclarationsAdapter } from './femaDisasterDeclarations.js';
 import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
 import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
+import { openFdaFoodRecallsAdapter } from './openFdaFoodRecalls.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import {
   getUsDataSource,
@@ -45,6 +46,43 @@ const RAW_FEMA_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/fema-disaster-declarations-2026-09-29.json'),
   'utf8'
 );
+const OPENFDA_FOOD_RECALL_FIXTURE = JSON.parse(
+  readFileSync(
+    path.join(process.cwd(), 'src/fixtures/openfda-food-recalls-2026-09-30.json'),
+    'utf8'
+  )
+) as {
+  recallCount: number;
+  reportDates: unknown[];
+  classOneDates: unknown[];
+  classifications: unknown[];
+  voluntary: unknown[];
+};
+
+/**
+ * Answer one openFDA request with the part of the snapshot it asks for.
+ *
+ * The food recall adapter asks five questions on one host, so the fixture is
+ * picked by the counted field rather than by the host alone.
+ */
+function openFdaFixtureFor(url: URL): string {
+  const count = url.searchParams.get('count');
+  if (count === 'report_date') {
+    return JSON.stringify({
+      results:
+        url.searchParams.get('search') === null
+          ? OPENFDA_FOOD_RECALL_FIXTURE.reportDates
+          : OPENFDA_FOOD_RECALL_FIXTURE.classOneDates,
+    });
+  }
+  if (count === 'classification.exact') {
+    return JSON.stringify({ results: OPENFDA_FOOD_RECALL_FIXTURE.classifications });
+  }
+  if (count === 'voluntary_mandated.exact') {
+    return JSON.stringify({ results: OPENFDA_FOOD_RECALL_FIXTURE.voluntary });
+  }
+  return JSON.stringify({ meta: { results: { total: OPENFDA_FOOD_RECALL_FIXTURE.recallCount } } });
+}
 
 /**
  * Pick the fixture that answers a request, by exact host.
@@ -54,7 +92,11 @@ const RAW_FEMA_FIXTURE = readFileSync(
  * fixture (`js/incomplete-url-substring-sanitization`).
  */
 function rawFixtureForUrl(url: string): string {
-  const { hostname } = new URL(url);
+  const parsed = new URL(url);
+  const { hostname } = parsed;
+  if (hostname === 'api.fda.gov') {
+    return openFdaFixtureFor(parsed);
+  }
   if (hostname === 'earthquake.usgs.gov') {
     return RAW_USGS_FIXTURE;
   }
@@ -89,6 +131,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('noaa-sea-level');
     expect(ids).toContain('treasury-avg-interest-rate');
     expect(ids).toContain('fema-disaster-declarations');
+    expect(ids).toContain('openfda-food-recalls');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -113,6 +156,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('ncei-annual-temperature')).toBe(nceiAnnualTemperatureAdapter);
     expect(getUsDataSource('noaa-sea-level')).toBe(noaaSeaLevelAdapter);
     expect(getUsDataSource('fema-disaster-declarations')).toBe(femaDisasterDeclarationsAdapter);
+    expect(getUsDataSource('openfda-food-recalls')).toBe(openFdaFoodRecallsAdapter);
   });
 
   it('returns undefined for an unknown id', () => {

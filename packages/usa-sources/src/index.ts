@@ -145,5 +145,33 @@ export type {
   FemaDeclarationCount,
   FemaDeclarationYear,
 } from './femaDisasterDeclarations.js';
+/** openFDA food enforcement reports (keyless). */
+export {
+  buildOpenFdaFoodRecallCountUrl,
+  buildOpenFdaFoodRecallSummary,
+  buildOpenFdaFoodRecallTotalUrl,
+  fetchOpenFdaFoodRecalls,
+  openFdaFoodRecallsAdapter,
+  openFdaReportDateLabel,
+  OPENFDA_CLASSIFICATION_COUNT_FIELD,
+  OPENFDA_CLASS_ONE,
+  OPENFDA_FOOD_ENFORCEMENT_BASE,
+  OPENFDA_MANDATED_TERM,
+  OPENFDA_REPORT_DATE_FIELD,
+  OPENFDA_VOLUNTARY_COUNT_FIELD,
+  OPENFDA_VOLUNTARY_TERM,
+  parseOpenFdaFoodRecallSnapshot,
+  parseOpenFdaRecallCounts,
+  parseOpenFdaRecallDateCounts,
+  parseOpenFdaRecallTotal,
+} from './openFdaFoodRecalls.js';
+/** openFDA food recall types. */
+export type {
+  OpenFdaFoodRecallSnapshot,
+  OpenFdaFoodRecallSummary,
+  OpenFdaFoodRecallYear,
+  OpenFdaRecallCount,
+  OpenFdaRecallDateCount,
+} from './openFdaFoodRecalls.js';
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
