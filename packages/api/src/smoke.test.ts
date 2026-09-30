@@ -10,30 +10,28 @@ describe.skipIf(!RUN_SMOKE)('live API smoke test', () => {
     const res = await app.request('/api/sources');
     expect(res.status).toBe(200);
     const sources = (await res.json()) as Array<{ id: string }>;
-    expect(sources.length).toBeGreaterThanOrEqual(8);
+    expect(sources.length).toBeGreaterThanOrEqual(2);
   });
 
-  it('pulls the catalogue and agriculture data keyless', async () => {
+  it('reads the BLS unemployment series keyless', async () => {
     const app = createConnectorsApp({});
-    const catalogue = await app.request('/api/stats-nz/catalogue');
-    expect(catalogue.status).toBe(200);
-    const data = await app.request('/api/stats-nz/data?dataflowId=AGR_AGR_003');
-    expect(data.status).toBe(200);
-    const body = (await data.json()) as { rows: Array<unknown> };
-    expect(body.rows.length).toBeGreaterThan(0);
-  });
+    const res = await app.request('/api/sources/bls-unemployment-rate/data');
+    expect(res.status).toBe(200);
+    const body = (await res.json()) as { data: { seriesId: string; points: Array<unknown> } };
+    expect(body.data.seriesId).toBe('LNS14000000');
+    expect(body.data.points.length).toBeGreaterThan(0);
+  }, 60_000);
 
-  it('probes keyed sources when keys are present', async () => {
-    const apiKeys: Record<string, string> = {};
-    if (process.env.LINZ_API_KEY !== undefined) {
-      apiKeys.linz = process.env.LINZ_API_KEY;
-    }
-    const app = createConnectorsApp({ apiKeys });
-    for (const id of Object.keys(apiKeys)) {
-      const res = await app.request(`/api/sources/${id}/probe`);
+  it('probes every registered source', async () => {
+    const app = createConnectorsApp({});
+    const listed = await app.request('/api/sources');
+    const sources = (await listed.json()) as Array<{ id: string }>;
+    expect(sources.length).toBeGreaterThanOrEqual(2);
+    for (const source of sources) {
+      const res = await app.request(`/api/sources/${source.id}/probe`);
       expect(res.status).toBe(200);
       const probe = (await res.json()) as { ok: boolean; status: string };
-      expect(probe.ok, `${id}: ${probe.status}`).toBe(true);
+      expect(probe.ok, `${source.id}: ${probe.status}`).toBe(true);
     }
-  });
+  }, 60_000);
 });

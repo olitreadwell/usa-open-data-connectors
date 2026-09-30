@@ -5,8 +5,9 @@ are, and what to check before shipping.
 
 ## API keys
 
-Three optional keys exist: `STATS_NZ_SUBSCRIPTION_KEY`, `LINZ_API_KEY`,
-`DIGITAL_NZ_API_KEY`.
+No registered connector needs a key today. Both adapters in
+`packages/usa-sources` are keyless. When a keyed source lands, its key gets an
+environment variable and is added to this list.
 
 Rules:
 - Keys come from the environment only, server-side
@@ -32,6 +33,7 @@ The HTTP API rejects bad input at the boundary:
 - Route parameters go through zod schemas
 - Unknown sources answer 404
 - Malformed input answers 400
+- An upstream source that fails answers 502, with no key material in the body
 
 ## CORS
 

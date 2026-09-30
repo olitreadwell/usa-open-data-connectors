@@ -1,11 +1,12 @@
-# @nzlab/usa-sources
+# @usa-open-data-connectors/usa-sources
 
 Uniform TypeScript adapters for US public data sources. Keyless first, with a
 strict parser and a committed fixture behind every adapter so a build never
 depends on a live API.
 
-The package scope is still `@nzlab` because the rest of this repo is a
-workspace under that scope already. Renaming the scope is a separate change.
+The HTTP API and the CLI read this package's registry (`US_DATA_SOURCES`), so a
+new adapter is exposed on `/api/sources`, `/api/sources/{id}/probe`, and
+`/api/sources/{id}/data` as soon as it is registered.
 
 ## Sources
 
@@ -23,7 +24,7 @@ workspace under that scope already. Renaming the scope is a separate change.
 ## Usage
 
 ```ts
-import { fetchBlsSeries, US_UNEMPLOYMENT_SERIES_ID } from '@nzlab/usa-sources';
+import { fetchBlsSeries, US_UNEMPLOYMENT_SERIES_ID } from '@usa-open-data-connectors/usa-sources';
 
 const rate = await fetchBlsSeries(US_UNEMPLOYMENT_SERIES_ID, {
   startYear: 2006,
@@ -38,7 +39,7 @@ import {
   fetchUsgsEarthquakes,
   USGS_HAWAII_BOUNDS,
   USGS_HAWAII_MIN_MAGNITUDE,
-} from '@nzlab/usa-sources';
+} from '@usa-open-data-connectors/usa-sources';
 
 const earthquakes = await fetchUsgsEarthquakes({
   startDate: '2025-01-01',
@@ -54,7 +55,7 @@ console.log(catalogue.count, catalogue.strongest.place, catalogue.strongest.magn
 import {
   buildCdcCountyObesitySet,
   fetchCdcCountyObesity,
-} from '@nzlab/usa-sources';
+} from '@usa-open-data-connectors/usa-sources';
 
 const set = buildCdcCountyObesitySet(await fetchCdcCountyObesity());
 console.log(set.countyCount, set.lowest.countyName, set.highest.percent, set.national.percent);
@@ -194,6 +195,6 @@ console.log(
 ## Checks
 
 ```sh
-npm run test --workspace @nzlab/usa-sources
-npm run test:smoke --workspace @nzlab/usa-sources   # hits the live API
+npm run test --workspace @usa-open-data-connectors/usa-sources
+npm run test:smoke --workspace @usa-open-data-connectors/usa-sources   # hits the live API
 ```

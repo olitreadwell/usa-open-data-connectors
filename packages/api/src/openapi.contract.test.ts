@@ -63,11 +63,8 @@ describe('OpenAPI contract', () => {
     expect(Object.keys(documentedResponses('/api/sources/{id}/probe'))).toEqual(
       expect.arrayContaining(['200', '400', '404', '429'])
     );
-    expect(Object.keys(documentedResponses('/api/stats-nz/data'))).toEqual(
-      expect.arrayContaining(['200', '400', '429'])
-    );
-    expect(Object.keys(documentedResponses('/api/stats-nz/codelist'))).toEqual(
-      expect.arrayContaining(['200', '400', '401', '429'])
+    expect(Object.keys(documentedResponses('/api/sources/{id}/data'))).toEqual(
+      expect.arrayContaining(['200', '400', '404', '429', '502'])
     );
   });
 });

@@ -28,21 +28,8 @@ const options: ConnectorsAppOptions = {};
 if (process.env.CORS_ORIGIN !== undefined) {
   options.corsOrigin = process.env.CORS_ORIGIN;
 }
-if (process.env.STATS_NZ_SUBSCRIPTION_KEY !== undefined) {
-  options.statsNzSubscriptionKey = process.env.STATS_NZ_SUBSCRIPTION_KEY;
-}
 if (process.env.SENTRY_DSN !== undefined) {
   options.sentryDsn = process.env.SENTRY_DSN;
-}
-const apiKeys: Record<string, string> = {};
-if (process.env.LINZ_API_KEY !== undefined) {
-  apiKeys.linz = process.env.LINZ_API_KEY;
-}
-if (process.env.DIGITAL_NZ_API_KEY !== undefined) {
-  apiKeys.digitalnz = process.env.DIGITAL_NZ_API_KEY;
-}
-if (Object.keys(apiKeys).length > 0) {
-  options.apiKeys = apiKeys;
 }
 options.rateLimit = {
   maxRequests: parsePositiveIntEnv(
@@ -58,5 +45,5 @@ options.rateLimit = {
 const app = createConnectorsApp(options);
 
 serve({ fetch: app.fetch, port }, (info) => {
-  process.stdout.write(`NZ open data connectors listening on http://localhost:${info.port}\n`);
+  process.stdout.write(`USA open data connectors listening on http://localhost:${info.port}\n`);
 });

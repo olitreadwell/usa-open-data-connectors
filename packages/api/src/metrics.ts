@@ -35,7 +35,7 @@ export function renderPrometheusMetrics(metrics: RequestMetrics): string {
     const separatorIndex = key.indexOf(' ');
     const method = key.slice(0, separatorIndex);
     const route = key.slice(separatorIndex + 1);
-    return `nzdata_http_requests_total{method="${method}",route="${route}"} ${count}`;
+    return `usdata_http_requests_total{method="${method}",route="${route}"} ${count}`;
   });
   return `${lines.join('\n')}\n`;
 }

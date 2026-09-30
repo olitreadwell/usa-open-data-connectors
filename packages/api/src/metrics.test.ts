@@ -30,8 +30,8 @@ describe('createMetricsCounter', () => {
     const text = renderPrometheusMetrics(counter);
     expect(text).toBe(
       [
-        'nzdata_http_requests_total{method="GET",route="/health"} 2',
-        'nzdata_http_requests_total{method="POST",route="/api/sources"} 1',
+        'usdata_http_requests_total{method="GET",route="/health"} 2',
+        'usdata_http_requests_total{method="POST",route="/api/sources"} 1',
         '',
       ].join('\n')
     );
