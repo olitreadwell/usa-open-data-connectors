@@ -173,5 +173,22 @@ export type {
   OpenFdaRecallCount,
   OpenFdaRecallDateCount,
 } from './openFdaFoodRecalls.js';
+/** USGS annual peak streamflow at a gauge (keyless). */
+export {
+  buildUsgsPeakStreamflowSeries,
+  buildUsgsPeakStreamflowUrl,
+  fetchUsgsPeakStreamflow,
+  parseUsgsPeakStreamflowPayload,
+  USGS_DISCHARGE_PARAMETER_CODE,
+  USGS_MISSISSIPPI_ST_LOUIS_LOCATION_ID,
+  USGS_MISSISSIPPI_ST_LOUIS_LOCATION_NAME,
+  USGS_PEAK_STREAMFLOW_COLLECTION,
+  USGS_PEAK_STREAMFLOW_FIRST_WATER_YEAR,
+  USGS_PEAK_STREAMFLOW_ROW_LIMIT,
+  USGS_WATER_DATA_API_BASE,
+  usgsPeakStreamflowAdapter,
+} from './usgsPeakStreamflow.js';
+/** USGS peak-streamflow types. */
+export type { UsgsPeakStreamflowSeries, UsgsPeakStreamflowYear } from './usgsPeakStreamflow.js';
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';

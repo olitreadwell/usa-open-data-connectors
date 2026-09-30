@@ -9,6 +9,7 @@ import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
 import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
 import { openFdaFoodRecallsAdapter } from './openFdaFoodRecalls.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
+import { usgsPeakStreamflowAdapter } from './usgsPeakStreamflow.js';
 import {
   getUsDataSource,
   probeAllUsDataSources,
@@ -44,6 +45,10 @@ const RAW_TREASURY_FIXTURE = readFileSync(
 );
 const RAW_FEMA_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/fema-disaster-declarations-2026-09-29.json'),
+  'utf8'
+);
+const RAW_USGS_PEAK_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/usgs-peak-streamflow-2026-10-01.json'),
   'utf8'
 );
 const OPENFDA_FOOD_RECALL_FIXTURE = JSON.parse(
@@ -112,6 +117,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'www.fema.gov') {
     return RAW_FEMA_FIXTURE;
   }
+  if (hostname === 'api.waterdata.usgs.gov') {
+    return RAW_USGS_PEAK_FIXTURE;
+  }
   return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
 
@@ -132,6 +140,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('treasury-avg-interest-rate');
     expect(ids).toContain('fema-disaster-declarations');
     expect(ids).toContain('openfda-food-recalls');
+    expect(ids).toContain('usgs-peak-streamflow');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -157,6 +166,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('noaa-sea-level')).toBe(noaaSeaLevelAdapter);
     expect(getUsDataSource('fema-disaster-declarations')).toBe(femaDisasterDeclarationsAdapter);
     expect(getUsDataSource('openfda-food-recalls')).toBe(openFdaFoodRecallsAdapter);
+    expect(getUsDataSource('usgs-peak-streamflow')).toBe(usgsPeakStreamflowAdapter);
   });
 
   it('returns undefined for an unknown id', () => {

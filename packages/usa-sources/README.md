@@ -20,6 +20,7 @@ new adapter is exposed on `/api/sources`, `/api/sources/{id}/probe`, and
 | `treasury-avg-interest-rate` | US Department of the Treasury | none | Average interest rate on the interest-bearing federal debt outstanding, monthly since 2001 |
 | `fema-disaster-declarations` | Federal Emergency Management Agency | none | Every disaster declaration FEMA has published, one row per declaration, from 1953 to the newest one |
 | `openfda-food-recalls` | US Food and Drug Administration | none | Every food recall FDA has published as an enforcement report, from June 2012 to the newest publication date |
+| `usgs-peak-streamflow` | US Geological Survey | none | The annual peak-flow record at a USGS stream gauge, one row per water year, since 1844 at the Mississippi River at St. Louis |
 
 ## Usage
 
@@ -65,7 +66,7 @@ console.log(set.countyCount, set.lowest.countyName, set.highest.percent, set.nat
 import {
   buildNceiAnnualTemperatureSeries,
   fetchNceiAnnualTemperature,
-} from '@nzlab/usa-sources';
+} from '@usa-open-data-connectors/usa-sources';
 
 const series = await fetchNceiAnnualTemperature({ startYear: 1895, endYear: new Date().getFullYear() });
 console.log(series.yearCount, series.warmest.year, series.coldest.valueFahrenheit);
@@ -75,7 +76,7 @@ console.log(series.yearCount, series.warmest.year, series.coldest.valueFahrenhei
 import {
   buildNoaaSeaLevelSeries,
   fetchNoaaSeaLevel,
-} from '@nzlab/usa-sources';
+} from '@usa-open-data-connectors/usa-sources';
 
 const seaLevel = buildNoaaSeaLevelSeries(await fetchNoaaSeaLevel());
 console.log(
@@ -87,20 +88,35 @@ console.log(
 ```
 
 ```ts
-import { fetchTreasuryAvgInterestRates } from '@nzlab/usa-sources';
+import { fetchTreasuryAvgInterestRates } from '@usa-open-data-connectors/usa-sources';
 
 const rates = await fetchTreasuryAvgInterestRates();
 console.log(rates.monthCount, rates.lastMonth.averageInterestRatePercent, rates.lowest.recordDate);
 ```
 
 ```ts
-import { fetchFemaDeclarations } from '@nzlab/usa-sources';
+import { fetchFemaDeclarations } from '@usa-open-data-connectors/usa-sources';
 
 const declarations = await fetchFemaDeclarations();
 console.log(
   declarations.declarationCount,
   declarations.busiestYear.year,
   declarations.incidentTypes[0]?.name
+);
+```
+
+```ts
+import {
+  buildUsgsPeakStreamflowSeries,
+  fetchUsgsPeakStreamflow,
+} from '@usa-open-data-connectors/usa-sources';
+
+const record = await fetchUsgsPeakStreamflow();
+console.log(
+  record.yearCount,
+  record.highest.waterYear,
+  record.highest.peakDischargeCubicFeetPerSecond,
+  record.highestToLowestRatio
 );
 ```
 
@@ -191,6 +207,39 @@ console.log(
 - A request the API rejects answers with an HTTP error and a body of
   `{"error":"Invalid Query Param","message":"..."}`, which the parser reports
   as an API error rather than a shape error.
+
+## Notes on the USGS peak-flow record
+
+- The adapter reads the `peaks` collection on the USGS Water Data OGC API
+  (`https://api.waterdata.usgs.gov/ogcapi/v0`), not the older
+  `waterservices.usgs.gov` endpoints. The older statistics service answers
+  `503 Service unavailable` to roughly half of scripted requests, which is
+  enough to fail a build; the OGC API answered every request in the same
+  window. The daily-values service on the older host still works and is worth
+  using when a daily series is what a story needs.
+- Every number in a row arrives as a string, including the peak itself, so
+  the parser converts once and keeps the number. `value` blank means the
+  agency filed no peak for that year, and the row is dropped rather than
+  read as zero.
+- The rows are dated by **water year**, which starts on 1 October. A peak on
+  1955-10-08 is filed under water year 1956, so `waterYear` and
+  `calendarYear` are separate fields and are not always the same number. The
+  record is sorted and charted by water year, because that is the unit the
+  agency files and the unit a flood season belongs to.
+- The record has holes. At the default gauge there is no row for the 17
+  water years from 1845 to 1861, and the series lists them in
+  `missingWaterYears` rather than drawing them as zero, because a year with
+  no filing is not a year the river ran dry.
+- A gauge with several peaks in one water year is filed once, with the
+  largest. The adapter does not de-duplicate, so a response carrying two rows
+  for one water year would be a change in the source worth seeing.
+- Rows carry the agency's qualifiers, for example `UNKNOWNREGULATION` where
+  the agency could not tell whether works upstream changed the flow, or
+  `MAXDAILYMEAN` where the peak is a daily mean rather than an instantaneous
+  reading. They are kept on each year rather than dropped, so the copy can be
+  honest about them.
+- One keyless request covers the whole record. The default gauge answers 165
+  water years in one page of about 126 KB.
 
 ## Checks
 

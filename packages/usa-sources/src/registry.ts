@@ -6,6 +6,7 @@ import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
 import { openFdaFoodRecallsAdapter } from './openFdaFoodRecalls.js';
 import { treasuryAvgInterestRateAdapter } from './treasuryAvgInterestRate.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
+import { usgsPeakStreamflowAdapter } from './usgsPeakStreamflow.js';
 import type { UsDataAdapter, UsFetchOptions, UsSourceProbe } from './types.js';
 
 /** Every US data source behind the uniform adapter interface. */
@@ -18,6 +19,7 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   treasuryAvgInterestRateAdapter,
   femaDisasterDeclarationsAdapter,
   openFdaFoodRecallsAdapter,
+  usgsPeakStreamflowAdapter,
 ];
 
 /** Looks up a source adapter by id. */
