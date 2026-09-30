@@ -14,6 +14,7 @@
     "build": "npm run build -w @usa-open-data-connectors/usa-sources && npm run build -w @usa-open-data-connectors/connectors-cli",
     "start": "next start",
     "setup": "node scripts/setup.mjs",
+    "typecheck": "npm run type-check --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "format": "npm run format --workspaces --if-present",
     "format:check": "npm run format:check --workspaces --if-present",

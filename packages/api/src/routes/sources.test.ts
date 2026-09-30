@@ -29,6 +29,11 @@ describe('GET /sources', () => {
       'bls-unemployment-rate',
       'usgs-hawaii-earthquakes',
       'cdc-county-obesity',
+      'ncei-annual-temperature',
+      'noaa-sea-level',
+      'treasury-avg-interest-rate',
+      'fema-disaster-declarations',
+      'openfda-food-recalls',
     ]);
     for (const source of sources) {
       expect(Object.keys(source).sort()).toEqual(['auth', 'description', 'id', 'name']);
