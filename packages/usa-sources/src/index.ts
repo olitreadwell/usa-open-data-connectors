@@ -74,6 +74,32 @@ export type {
   NceiTemperatureSeries,
   NceiTemperatureYear,
 } from './nceiAnnualTemperature';
+/** NOAA CO-OPS monthly mean sea level at a tide gauge (keyless). */
+export {
+  buildNoaaSeaLevelSeries,
+  buildNoaaSeaLevelUrl,
+  fetchNoaaSeaLevel,
+  noaaSeaLevelAdapter,
+  noaaSeaLevelTrendMillimetresPerYear,
+  NOAA_BATTERY_STATION_ID,
+  NOAA_BATTERY_STATION_NAME,
+  NOAA_COOPS_API_BASE,
+  NOAA_SEA_LEVEL_APPLICATION_ID,
+  NOAA_SEA_LEVEL_DATUM,
+  NOAA_SEA_LEVEL_FIRST_YEAR,
+  NOAA_SEA_LEVEL_PRODUCT,
+  NOAA_SEA_LEVEL_UNITS,
+  parseNoaaSeaLevelPayload,
+} from './noaaSeaLevel';
+/** NOAA CO-OPS sea level types. */
+export type {
+  NoaaSeaLevelMonth,
+  NoaaSeaLevelPayload,
+  NoaaSeaLevelQuery,
+  NoaaSeaLevelSeries,
+  NoaaSeaLevelStation,
+  NoaaSeaLevelYear,
+} from './noaaSeaLevel';
 /** The uniform adapter registry and probe helpers. */
 export {
   US_DATA_SOURCES,
@@ -81,5 +107,71 @@ export {
   probeAllUsDataSources,
   probeUsDataSource,
 } from './registry.js';
+/** US Treasury average interest rate on the debt outstanding (keyless). */
+export {
+  buildTreasuryAvgInterestRateSeries,
+  buildTreasuryAvgInterestRateUrl,
+  fetchTreasuryAvgInterestRates,
+  parseTreasuryAvgInterestRatePayload,
+  treasuryAvgInterestRateAdapter,
+  TREASURY_AVG_INTEREST_RATE_FIRST_YEAR,
+  TREASURY_AVG_INTEREST_RATE_PATH,
+  TREASURY_AVG_INTEREST_RATE_ROW_LIMIT,
+  TREASURY_AVG_INTEREST_RATE_SECURITY_DESCRIPTION,
+  TREASURY_AVG_INTEREST_RATE_SECURITY_TYPE,
+  TREASURY_FISCAL_DATA_API_BASE,
+} from './treasuryAvgInterestRate.js';
+/** Treasury interest rate types. */
+export type {
+  TreasuryInterestRateMonth,
+  TreasuryInterestRateSeries,
+} from './treasuryAvgInterestRate.js';
+/** FEMA disaster declarations (keyless). */
+export {
+  buildFemaDeclarationCatalogue,
+  buildFemaDeclarationUrl,
+  femaDisasterDeclarationsAdapter,
+  fetchFemaDeclarations,
+  FEMA_DECLARATION_PATH,
+  FEMA_DECLARATION_ROW_LIMIT,
+  FEMA_FIRE_INCIDENT_TYPE,
+  FEMA_OPEN_DATA_API_BASE,
+  parseFemaDeclarationPayload,
+} from './femaDisasterDeclarations.js';
+/** FEMA declaration types. */
+export type {
+  FemaDeclaration,
+  FemaDeclarationCatalogue,
+  FemaDeclarationCount,
+  FemaDeclarationYear,
+} from './femaDisasterDeclarations.js';
+/** openFDA food enforcement reports (keyless). */
+export {
+  buildOpenFdaFoodRecallCountUrl,
+  buildOpenFdaFoodRecallSummary,
+  buildOpenFdaFoodRecallTotalUrl,
+  fetchOpenFdaFoodRecalls,
+  openFdaFoodRecallsAdapter,
+  openFdaReportDateLabel,
+  OPENFDA_CLASSIFICATION_COUNT_FIELD,
+  OPENFDA_CLASS_ONE,
+  OPENFDA_FOOD_ENFORCEMENT_BASE,
+  OPENFDA_MANDATED_TERM,
+  OPENFDA_REPORT_DATE_FIELD,
+  OPENFDA_VOLUNTARY_COUNT_FIELD,
+  OPENFDA_VOLUNTARY_TERM,
+  parseOpenFdaFoodRecallSnapshot,
+  parseOpenFdaRecallCounts,
+  parseOpenFdaRecallDateCounts,
+  parseOpenFdaRecallTotal,
+} from './openFdaFoodRecalls.js';
+/** openFDA food recall types. */
+export type {
+  OpenFdaFoodRecallSnapshot,
+  OpenFdaFoodRecallSummary,
+  OpenFdaFoodRecallYear,
+  OpenFdaRecallCount,
+  OpenFdaRecallDateCount,
+} from './openFdaFoodRecalls.js';
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
