@@ -28,6 +28,7 @@ describe('GET /sources', () => {
     expect(sources.map((source) => source.id)).toEqual([
       'bls-unemployment-rate',
       'usgs-hawaii-earthquakes',
+      'cdc-county-obesity',
     ]);
     for (const source of sources) {
       expect(Object.keys(source).sort()).toEqual(['auth', 'description', 'id', 'name']);

@@ -1,5 +1,5 @@
 {
-  "name": "@open-data-connectors/connectors-api",
+  "name": "@usa-open-data-connectors/connectors-api",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -26,14 +26,14 @@
     "@hono/node-server": "2.1.1",
     "@hono/swagger-ui": "0.6.1",
     "@hono/zod-validator": "0.9.1",
-    "@open-data-connectors/usa-sources": "*",
-    "@sentry/node": "10.71.0",
-    "hono": "4.13.8",
+    "@usa-open-data-connectors/usa-sources": "*",
+    "@sentry/node": "10.75.3",
+    "hono": "4.13.9",
     "zod": "3.25.76"
   },
   "devDependencies": {
-    "@open-data-connectors/config-eslint": "*",
-    "@open-data-connectors/config-typescript": "*",
+    "@usa-open-data-connectors/config-eslint": "*",
+    "@usa-open-data-connectors/config-typescript": "*",
     "@types/node": "22.20.4",
     "eslint": "9.39.5",
     "tsx": "4.23.15",

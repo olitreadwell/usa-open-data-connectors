@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { probeUsDataSource } from '@open-data-connectors/usa-sources';
+import { probeUsDataSource } from '@usa-open-data-connectors/usa-sources';
 
 import { runCli } from './commands.js';
 import type { CliDependencies, CliOutput } from './commands.js';

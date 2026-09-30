@@ -4,7 +4,7 @@ import {
   getUsDataSource,
   probeUsDataSource,
   US_DATA_SOURCES,
-} from '@open-data-connectors/usa-sources';
+} from '@usa-open-data-connectors/usa-sources';
 
 /** Where the CLI writes its output. Injectable for tests. */
 export interface CliOutput {

@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=77"]
+requires = ["setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -7,7 +7,7 @@ name = "nzdata"
 version = "0.1.0"
 description = "Keyless-first connectors for NZ public data"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.14.7"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{ name = "Oli Treadwell", email = "oliver.treadwell@gmail.com" }]
@@ -25,7 +25,11 @@ Documentation = "https://github.com/olitreadwell/nz-open-data-connectors/tree/ma
 
 [project.optional-dependencies]
 dev = [
+  # build 1.5.0 raised its own floor to Python >=3.10, and this package still
+  # declares requires-python >=3.9, so uv cannot resolve a lock that satisfies
+  # both. Keep build on the last 3.9-compatible release.
   "build==1.4.4",
+  # mypy 1.20.2 needs Python >=3.10 for the same reason build 1.5.0 does.
   "mypy==1.19.1",
   "pytest==8.4.2",
   "pytest-cov==7.1.0",

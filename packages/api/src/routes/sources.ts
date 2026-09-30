@@ -2,8 +2,8 @@ import { Hono } from 'hono';
 import { zValidator } from '@hono/zod-validator';
 import { z } from 'zod';
 
-import { US_DATA_SOURCES, probeUsDataSource } from '@open-data-connectors/usa-sources';
-import type { UsDataAdapter, UsFetchOptions } from '@open-data-connectors/usa-sources';
+import { US_DATA_SOURCES, probeUsDataSource } from '@usa-open-data-connectors/usa-sources';
+import type { UsDataAdapter, UsFetchOptions } from '@usa-open-data-connectors/usa-sources';
 
 const sourceIdParamSchema = z.object({
   id: z

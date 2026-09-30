@@ -51,8 +51,7 @@ describe('createRequestLogger', () => {
     const { lines, write } = captureWrites();
     const app = new Hono();
     app.use('*', createRequestLogger(write));
-    app.onError((error, c) => {
-      void error;
+    app.onError((_error, c) => {
       return c.json({ error: 'internal_error' }, 500);
     });
     app.get('/boom', () => {

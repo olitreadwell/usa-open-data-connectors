@@ -1,5 +1,5 @@
 {
-  "name": "@open-data-connectors/connectors-cli",
+  "name": "@usa-open-data-connectors/connectors-cli",
   "version": "0.1.0",
   "type": "module",
   "main": "./dist/cli.js",
@@ -29,11 +29,11 @@
     "clean:all": "rm -rf dist tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage node_modules"
   },
   "dependencies": {
-    "@open-data-connectors/usa-sources": "*"
+    "@usa-open-data-connectors/usa-sources": "*"
   },
   "devDependencies": {
-    "@open-data-connectors/config-eslint": "*",
-    "@open-data-connectors/config-typescript": "*",
+    "@usa-open-data-connectors/config-eslint": "*",
+    "@usa-open-data-connectors/config-typescript": "*",
     "@types/node": "22.20.4",
     "eslint": "9.39.5",
     "tsx": "4.23.15",

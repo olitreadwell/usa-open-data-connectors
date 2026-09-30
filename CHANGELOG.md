@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-- Repo: renamed the npm scope to `@open-data-connectors` across package names, imports, scripts, and docs
+- Repo: renamed the npm scope to `@usa-open-data-connectors` across package names, imports, scripts, and docs
 - Repo: deleted `packages/nz-sources` and `packages/stats-nz`; the API and CLI now read `packages/usa-sources`
 - API: dropped `/api/digitalnz/media` and the three `/api/stats-nz` routes. `GET /api/sources/{id}/data` serves the parsed live payload for any registered adapter
 - CLI: `usdata` replaces `nzdata`. Commands with no US equivalent (`media`, `catalogue`, `data`, `codelist`) are gone; `sources` and `probe` read the US registry

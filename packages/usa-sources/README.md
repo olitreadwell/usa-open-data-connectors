@@ -1,4 +1,4 @@
-# @open-data-connectors/usa-sources
+# @usa-open-data-connectors/usa-sources
 
 Uniform TypeScript adapters for US public data sources. Keyless first, with a
 strict parser and a committed fixture behind every adapter so a build never
@@ -10,15 +10,16 @@ new adapter is exposed on `/api/sources`, `/api/sources/{id}/probe`, and
 
 ## Sources
 
-| id                        | publisher                  | auth | what it reads                                                    |
-| ------------------------- | -------------------------- | ---- | ---------------------------------------------------------------- |
-| `bls-unemployment-rate`   | Bureau of Labor Statistics | none | The national unemployment rate, monthly, seasonally adjusted     |
-| `usgs-hawaii-earthquakes` | US Geological Survey       | none | Earthquakes of magnitude 2.5 and above near the Hawaiian islands |
+| id                        | publisher                  | auth | what it reads                                                       |
+| ------------------------- | -------------------------- | ---- | ------------------------------------------------------------------- |
+| `bls-unemployment-rate`   | Bureau of Labor Statistics | none | The national unemployment rate, monthly, seasonally adjusted        |
+| `usgs-hawaii-earthquakes` | US Geological Survey       | none | Earthquakes of magnitude 2.5 and above near the Hawaiian islands    |
+| `cdc-county-obesity`      | Centers for Disease Control (CDC) | none | The share of adults with obesity in each US county, from CDC PLACES |
 
 ## Usage
 
 ```ts
-import { fetchBlsSeries, US_UNEMPLOYMENT_SERIES_ID } from '@open-data-connectors/usa-sources';
+import { fetchBlsSeries, US_UNEMPLOYMENT_SERIES_ID } from '@usa-open-data-connectors/usa-sources';
 
 const rate = await fetchBlsSeries(US_UNEMPLOYMENT_SERIES_ID, {
   startYear: 2006,
@@ -33,7 +34,7 @@ import {
   fetchUsgsEarthquakes,
   USGS_HAWAII_BOUNDS,
   USGS_HAWAII_MIN_MAGNITUDE,
-} from '@open-data-connectors/usa-sources';
+} from '@usa-open-data-connectors/usa-sources';
 
 const earthquakes = await fetchUsgsEarthquakes({
   startDate: '2025-01-01',
@@ -43,6 +44,16 @@ const earthquakes = await fetchUsgsEarthquakes({
 });
 const catalogue = buildUsgsEarthquakeCatalogue(earthquakes);
 console.log(catalogue.count, catalogue.strongest.place, catalogue.strongest.magnitude);
+```
+
+```ts
+import {
+  buildCdcCountyObesitySet,
+  fetchCdcCountyObesity,
+} from '@usa-open-data-connectors/usa-sources';
+
+const set = buildCdcCountyObesitySet(await fetchCdcCountyObesity());
+console.log(set.countyCount, set.lowest.countyName, set.highest.percent, set.national.percent);
 ```
 
 ## Notes on the BLS API
@@ -65,9 +76,24 @@ console.log(catalogue.count, catalogue.strongest.place, catalogue.strongest.magn
 - The catalogue answers newest first. `parseUsgsEarthquakes` returns oldest
   first, so a caller reading index 0 gets the start of the window.
 
+## Notes on the CDC PLACES county release
+
+- The resource id is per release. `cdc-county-obesity` reads the 2025
+  release, whose estimates come from the 2023 Behavioral Risk Factor
+  Surveillance System (BRFSS) and the Census Bureau's 2023 county population
+  estimates. A new release gets a new id, so a caller pinned to this one
+  keeps reading the numbers it was written against.
+- Every row is a model-based estimate, not a count. The release publishes
+  each measure twice, as crude and as age-adjusted prevalence; the adapter
+  reads the crude rows, because age-adjusted ones answer a different question.
+- A county the model could not estimate arrives with no value, and the
+  release carries no obesity rows at all for Kentucky and Pennsylvania. Rows
+  without a value are dropped, and the national row is kept apart from the
+  counties rather than counted as one.
+
 ## Checks
 
 ```sh
-npm run test --workspace @open-data-connectors/usa-sources
-npm run test:smoke --workspace @open-data-connectors/usa-sources   # hits the live API
+npm run test --workspace @usa-open-data-connectors/usa-sources
+npm run test:smoke --workspace @usa-open-data-connectors/usa-sources   # hits the live API
 ```

@@ -11,16 +11,16 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| `@open-data-connectors/usa-sources` | Uniform adapters for US public data sources (BLS unemployment rate, USGS earthquakes) with live probes and offline fixtures |
-| `@open-data-connectors/connectors-api` | HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
-| `@open-data-connectors/connectors-cli` | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
-| `@open-data-connectors/config-eslint`, `@open-data-connectors/config-typescript` | Shared lint and TypeScript settings |
+| `@usa-open-data-connectors/usa-sources` | Uniform adapters for US public data sources (BLS unemployment rate, USGS earthquakes) with live probes and offline fixtures |
+| `@usa-open-data-connectors/connectors-api` | HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
+| `@usa-open-data-connectors/connectors-cli` | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
+| `@usa-open-data-connectors/config-eslint`, `@usa-open-data-connectors/config-typescript` | Shared lint and TypeScript settings |
 | `python/` (`nzdata` on PyPI) | Python port, still on the New Zealand sources. See "Language ports" |
 | `ruby/` (`nzdata` gem) | Ruby port, still on the New Zealand sources. See "Language ports" |
 
 ## Connectors
 
-Two adapters, both in `@open-data-connectors/usa-sources`. Both are keyless and
+Two adapters, both in `@usa-open-data-connectors/usa-sources`. Both are keyless and
 need no environment variable.
 
 | id | Source | Keyless? | Example command |
@@ -85,7 +85,7 @@ npm run check
 ```
 
 ```ts
-import { probeAllUsDataSources } from '@open-data-connectors/usa-sources';
+import { probeAllUsDataSources } from '@usa-open-data-connectors/usa-sources';
 
 const probes = await probeAllUsDataSources();
 console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status}`).join('\n'));

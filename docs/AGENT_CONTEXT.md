@@ -11,7 +11,7 @@ workspaces, one package per concern. The Python and Ruby ports in
 `python/` and `ruby/` still implement the New Zealand connector design.
 
 The repo was copied from `nz-open-data-connectors` and is being turned into
-a US connectors repo. The npm scope is now `@open-data-connectors`. The NZ
+a US connectors repo. The npm scope is now `@usa-open-data-connectors`. The NZ
 TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 
 ## Current state

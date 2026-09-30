@@ -2,7 +2,7 @@ import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { swaggerUI } from '@hono/swagger-ui';
 
-import { probeUsDataSource } from '@open-data-connectors/usa-sources';
+import { probeUsDataSource } from '@usa-open-data-connectors/usa-sources';
 
 import { OPEN_API_DOCUMENT } from './openapi';
 import { createErrorTracker } from './errorTracking';

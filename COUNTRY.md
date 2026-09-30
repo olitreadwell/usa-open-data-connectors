@@ -4,7 +4,7 @@ TypeScript connectors for US public data in `packages/usa-sources`, with an
 HTTP API and a CLI on top of them.
 
 The repo was copied from `nz-open-data-connectors`. The TypeScript side has
-been converted: the npm scope is `@open-data-connectors`, the NZ packages are
+been converted: the npm scope is `@usa-open-data-connectors`, the NZ packages are
 gone, and the API and CLI read the US registry. The Python and Ruby ports in
 `python/` and `ruby/` still implement the NZ design.
 

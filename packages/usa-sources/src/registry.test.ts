@@ -3,6 +3,7 @@ import path from 'node:path';
 import { describe, expect, it } from 'vitest';
 
 import { blsUnemploymentAdapter } from './blsSeries.js';
+import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import {
   getUsDataSource,
@@ -21,10 +22,24 @@ const RAW_USGS_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/usgs-hawaii-earthquakes.json'),
   'utf8'
 );
+const RAW_CDC_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/cdc-county-obesity-2026-09-25.json'),
+  'utf8'
+);
 
-/** The raw fixture that answers a given request host, or the BLS one. */
+/**
+ * Pick the fixture that answers a request, by exact host.
+ *
+ * Parsing the URL and comparing `hostname` keeps the match on the real host, so
+ * a URL that merely mentions `data.cdc.gov` elsewhere cannot select the wrong
+ * fixture (`js/incomplete-url-substring-sanitization`).
+ */
 function rawFixtureForUrl(url: string): string {
-  return url.includes('earthquake.usgs.gov') ? RAW_USGS_FIXTURE : RAW_FIXTURE;
+  const { hostname } = new URL(url);
+  if (hostname === 'earthquake.usgs.gov') {
+    return RAW_USGS_FIXTURE;
+  }
+  return hostname === 'data.cdc.gov' ? RAW_CDC_FIXTURE : RAW_FIXTURE;
 }
 
 /** A fetch stub that answers each source with its own fixture. */
@@ -38,6 +53,7 @@ describe('US_DATA_SOURCES', () => {
     const ids = US_DATA_SOURCES.map((source) => source.id);
     expect(ids).toContain('bls-unemployment-rate');
     expect(ids).toContain('usgs-hawaii-earthquakes');
+    expect(ids).toContain('cdc-county-obesity');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -58,6 +74,7 @@ describe('getUsDataSource', () => {
   it('finds a source by id', () => {
     expect(getUsDataSource('bls-unemployment-rate')).toBe(blsUnemploymentAdapter);
     expect(getUsDataSource('usgs-hawaii-earthquakes')).toBe(usgsHawaiiEarthquakesAdapter);
+    expect(getUsDataSource('cdc-county-obesity')).toBe(cdcCountyObesityAdapter);
   });
 
   it('returns undefined for an unknown id', () => {
