@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
+import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import {
   getUsDataSource,
@@ -26,6 +27,10 @@ const RAW_CDC_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/cdc-county-obesity-2026-09-25.json'),
   'utf8'
 );
+const RAW_NCEI_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/ncei-annual-temperature-2026-09-26.csv'),
+  'utf8'
+);
 
 /**
  * Pick the fixture that answers a request, by exact host.
@@ -39,7 +44,10 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'earthquake.usgs.gov') {
     return RAW_USGS_FIXTURE;
   }
-  return hostname === 'data.cdc.gov' ? RAW_CDC_FIXTURE : RAW_FIXTURE;
+  if (hostname === 'data.cdc.gov') {
+    return RAW_CDC_FIXTURE;
+  }
+  return hostname === 'www.ncei.noaa.gov' ? RAW_NCEI_FIXTURE : RAW_FIXTURE;
 }
 
 /** A fetch stub that answers each source with its own fixture. */
@@ -54,6 +62,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('bls-unemployment-rate');
     expect(ids).toContain('usgs-hawaii-earthquakes');
     expect(ids).toContain('cdc-county-obesity');
+    expect(ids).toContain('ncei-annual-temperature');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -75,6 +84,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('bls-unemployment-rate')).toBe(blsUnemploymentAdapter);
     expect(getUsDataSource('usgs-hawaii-earthquakes')).toBe(usgsHawaiiEarthquakesAdapter);
     expect(getUsDataSource('cdc-county-obesity')).toBe(cdcCountyObesityAdapter);
+    expect(getUsDataSource('ncei-annual-temperature')).toBe(nceiAnnualTemperatureAdapter);
   });
 
   it('returns undefined for an unknown id', () => {
