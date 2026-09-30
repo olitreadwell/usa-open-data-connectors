@@ -66,7 +66,7 @@ console.log(set.countyCount, set.lowest.countyName, set.highest.percent, set.nat
 import {
   buildNceiAnnualTemperatureSeries,
   fetchNceiAnnualTemperature,
-} from '@nzlab/usa-sources';
+} from '@usa-open-data-connectors/usa-sources';
 
 const series = await fetchNceiAnnualTemperature({ startYear: 1895, endYear: new Date().getFullYear() });
 console.log(series.yearCount, series.warmest.year, series.coldest.valueFahrenheit);
@@ -76,7 +76,7 @@ console.log(series.yearCount, series.warmest.year, series.coldest.valueFahrenhei
 import {
   buildNoaaSeaLevelSeries,
   fetchNoaaSeaLevel,
-} from '@nzlab/usa-sources';
+} from '@usa-open-data-connectors/usa-sources';
 
 const seaLevel = buildNoaaSeaLevelSeries(await fetchNoaaSeaLevel());
 console.log(
@@ -88,14 +88,14 @@ console.log(
 ```
 
 ```ts
-import { fetchTreasuryAvgInterestRates } from '@nzlab/usa-sources';
+import { fetchTreasuryAvgInterestRates } from '@usa-open-data-connectors/usa-sources';
 
 const rates = await fetchTreasuryAvgInterestRates();
 console.log(rates.monthCount, rates.lastMonth.averageInterestRatePercent, rates.lowest.recordDate);
 ```
 
 ```ts
-import { fetchFemaDeclarations } from '@nzlab/usa-sources';
+import { fetchFemaDeclarations } from '@usa-open-data-connectors/usa-sources';
 
 const declarations = await fetchFemaDeclarations();
 console.log(
