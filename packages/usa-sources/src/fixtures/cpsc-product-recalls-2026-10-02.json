@@ -1,0 +1,593 @@
+{
+  "exportedAt": "2026-10-02",
+  "firstYear": 2014,
+  "newestYear": 2026,
+  "newestRecallDate": "2026-09-24",
+  "totalRecalls": 3986,
+  "years": [
+    {
+      "year": 2014,
+      "recallCount": 296
+    },
+    {
+      "year": 2015,
+      "recallCount": 305
+    },
+    {
+      "year": 2016,
+      "recallCount": 330
+    },
+    {
+      "year": 2017,
+      "recallCount": 280
+    },
+    {
+      "year": 2018,
+      "recallCount": 258
+    },
+    {
+      "year": 2019,
+      "recallCount": 241
+    },
+    {
+      "year": 2020,
+      "recallCount": 257
+    },
+    {
+      "year": 2021,
+      "recallCount": 219
+    },
+    {
+      "year": 2022,
+      "recallCount": 292
+    },
+    {
+      "year": 2023,
+      "recallCount": 324
+    },
+    {
+      "year": 2024,
+      "recallCount": 305
+    },
+    {
+      "year": 2025,
+      "recallCount": 420
+    },
+    {
+      "year": 2026,
+      "recallCount": 459
+    }
+  ],
+  "remedyOptions": [
+    {
+      "option": "Refund",
+      "recallCount": 1980
+    },
+    {
+      "option": "Repair",
+      "recallCount": 1289
+    },
+    {
+      "option": "Replace",
+      "recallCount": 1003
+    },
+    {
+      "option": "Dispose",
+      "recallCount": 22
+    },
+    {
+      "option": "New Instructions",
+      "recallCount": 20
+    },
+    {
+      "option": "Label",
+      "recallCount": 6
+    },
+    {
+      "option": "No Remedy Available",
+      "recallCount": 5
+    },
+    {
+      "option": "Inspect",
+      "recallCount": 4
+    },
+    {
+      "option": "R",
+      "recallCount": 1
+    },
+    {
+      "option": "Consumers should immediately stop using the recalled boilers and contact NTI Boilers to arrange to have a certified technician install the repair at no cost to the consumer. Consumers who must continue using the boiler while awaiting repair should have working smoke and carbon monoxide alarms in their homes.",
+      "recallCount": 1
+    }
+  ],
+  "manufacturerCountries": [
+    {
+      "country": "China",
+      "recallCount": 2312
+    },
+    {
+      "country": "United States",
+      "recallCount": 753
+    },
+    {
+      "country": "Taiwan",
+      "recallCount": 189
+    },
+    {
+      "country": "Mexico",
+      "recallCount": 129
+    },
+    {
+      "country": "Vietnam",
+      "recallCount": 128
+    },
+    {
+      "country": "India",
+      "recallCount": 82
+    },
+    {
+      "country": "Canada",
+      "recallCount": 65
+    },
+    {
+      "country": "Japan",
+      "recallCount": 35
+    },
+    {
+      "country": "Indonesia",
+      "recallCount": 34
+    },
+    {
+      "country": "Thailand",
+      "recallCount": 33
+    },
+    {
+      "country": "Austria",
+      "recallCount": 25
+    },
+    {
+      "country": "Germany",
+      "recallCount": 24
+    },
+    {
+      "country": "Italy",
+      "recallCount": 24
+    },
+    {
+      "country": "Malaysia",
+      "recallCount": 18
+    },
+    {
+      "country": "Poland",
+      "recallCount": 18
+    },
+    {
+      "country": "Turkey",
+      "recallCount": 17
+    },
+    {
+      "country": "South Korea",
+      "recallCount": 15
+    },
+    {
+      "country": "United Kingdom",
+      "recallCount": 14
+    },
+    {
+      "country": "France",
+      "recallCount": 14
+    },
+    {
+      "country": "Hong Kong",
+      "recallCount": 13
+    },
+    {
+      "country": "Cambodia",
+      "recallCount": 13
+    },
+    {
+      "country": "Brazil",
+      "recallCount": 13
+    },
+    {
+      "country": "Peru",
+      "recallCount": 13
+    },
+    {
+      "country": "Bangladesh",
+      "recallCount": 11
+    },
+    {
+      "country": "Romania",
+      "recallCount": 9
+    },
+    {
+      "country": "Portugal",
+      "recallCount": 8
+    },
+    {
+      "country": "Philippines",
+      "recallCount": 8
+    },
+    {
+      "country": "Israel",
+      "recallCount": 7
+    },
+    {
+      "country": "Pakistan",
+      "recallCount": 7
+    },
+    {
+      "country": "Switzerland",
+      "recallCount": 7
+    },
+    {
+      "country": "Sweden",
+      "recallCount": 7
+    },
+    {
+      "country": "Denmark",
+      "recallCount": 7
+    },
+    {
+      "country": "Korea",
+      "recallCount": 6
+    },
+    {
+      "country": "Finland",
+      "recallCount": 6
+    },
+    {
+      "country": "Spain",
+      "recallCount": 5
+    },
+    {
+      "country": "Colombia",
+      "recallCount": 5
+    },
+    {
+      "country": "Netherlands",
+      "recallCount": 5
+    },
+    {
+      "country": "Czech Republic",
+      "recallCount": 4
+    },
+    {
+      "country": "Slovenia",
+      "recallCount": 4
+    },
+    {
+      "country": "Australia",
+      "recallCount": 4
+    },
+    {
+      "country": "Belgium",
+      "recallCount": 4
+    },
+    {
+      "country": "Sri Lanka",
+      "recallCount": 4
+    },
+    {
+      "country": "Guatemala",
+      "recallCount": 3
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "recallCount": 3
+    },
+    {
+      "country": "Latvia",
+      "recallCount": 2
+    },
+    {
+      "country": "Lithuania",
+      "recallCount": 2
+    },
+    {
+      "country": "New Zealand",
+      "recallCount": 2
+    },
+    {
+      "country": "Nepal",
+      "recallCount": 2
+    },
+    {
+      "country": "Various countries",
+      "recallCount": 2
+    },
+    {
+      "country": "Unknown",
+      "recallCount": 2
+    },
+    {
+      "country": "United States and Mexico",
+      "recallCount": 2
+    },
+    {
+      "country": "Ireland",
+      "recallCount": 2
+    },
+    {
+      "country": "Singapore",
+      "recallCount": 2
+    },
+    {
+      "country": "Honduras",
+      "recallCount": 2
+    },
+    {
+      "country": "Egypt",
+      "recallCount": 2
+    },
+    {
+      "country": "Kosovo",
+      "recallCount": 2
+    },
+    {
+      "country": "Estonia",
+      "recallCount": 1
+    },
+    {
+      "country": "Bosnia Herzegovina",
+      "recallCount": 1
+    },
+    {
+      "country": "Morocco",
+      "recallCount": 1
+    },
+    {
+      "country": "Chile",
+      "recallCount": 1
+    },
+    {
+      "country": "Norway",
+      "recallCount": 1
+    },
+    {
+      "country": "United States (tins)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (sound chip)",
+      "recallCount": 1
+    },
+    {
+      "country": "United States (crossbows), China (sensors)",
+      "recallCount": 1
+    },
+    {
+      "country": "El Salvador",
+      "recallCount": 1
+    },
+    {
+      "country": "Tunisia",
+      "recallCount": 1
+    },
+    {
+      "country": "Mauritius",
+      "recallCount": 1
+    },
+    {
+      "country": "Great Britain",
+      "recallCount": 1
+    },
+    {
+      "country": "Costa Rica",
+      "recallCount": 1
+    },
+    {
+      "country": "Jordan",
+      "recallCount": 1
+    },
+    {
+      "country": "China (seat slider mechanism)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (batteries)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (connectors)",
+      "recallCount": 1
+    },
+    {
+      "country": "United States (solar panels)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (power supplies)",
+      "recallCount": 1
+    },
+    {
+      "country": "United States (lift chairs)",
+      "recallCount": 1
+    },
+    {
+      "country": "Taiwan (frame)",
+      "recallCount": 1
+    },
+    {
+      "country": "India (torque sensor)",
+      "recallCount": 1
+    },
+    {
+      "country": "Croatia",
+      "recallCount": 1
+    },
+    {
+      "country": "Assembled in United States",
+      "recallCount": 1
+    },
+    {
+      "country": "China (battery packs)",
+      "recallCount": 1
+    },
+    {
+      "country": "Japan (notebook computers and workstations)",
+      "recallCount": 1
+    },
+    {
+      "country": "Japan and assembled in the United States",
+      "recallCount": 1
+    },
+    {
+      "country": "Taiwan (power supply)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (plug)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (Adapter)",
+      "recallCount": 1
+    },
+    {
+      "country": "Indonesia (Scanner)",
+      "recallCount": 1
+    },
+    {
+      "country": "Assembled in the United States",
+      "recallCount": 1
+    },
+    {
+      "country": "Canada (heater)",
+      "recallCount": 1
+    },
+    {
+      "country": "Mexico (valve)",
+      "recallCount": 1
+    },
+    {
+      "country": "Hungary (BCD)",
+      "recallCount": 1
+    },
+    {
+      "country": "Italy (IP inflator hose)",
+      "recallCount": 1
+    },
+    {
+      "country": "Taiwan (bicycles)",
+      "recallCount": 1
+    },
+    {
+      "country": "Germany (bicycles)",
+      "recallCount": 1
+    },
+    {
+      "country": "United States (bicycles)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (handlebars)",
+      "recallCount": 1
+    },
+    {
+      "country": "United States (Aspirin)",
+      "recallCount": 1
+    },
+    {
+      "country": "India (Ibuprofen)",
+      "recallCount": 1
+    },
+    {
+      "country": "Canada (home energy system)",
+      "recallCount": 1
+    },
+    {
+      "country": "South Korea (lithium-ion battery module)",
+      "recallCount": 1
+    },
+    {
+      "country": "India (Fabric Flavours)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (Mini Lunn, Beau Kid)",
+      "recallCount": 1
+    },
+    {
+      "country": "European Union (My Little Pie, Joha)",
+      "recallCount": 1
+    },
+    {
+      "country": "Ecuador",
+      "recallCount": 1
+    },
+    {
+      "country": "Kenya",
+      "recallCount": 1
+    },
+    {
+      "country": "China (wood panels)",
+      "recallCount": 1
+    },
+    {
+      "country": "Bosnia",
+      "recallCount": 1
+    },
+    {
+      "country": "N/A",
+      "recallCount": 1
+    },
+    {
+      "country": "Slovenia (Aprepitant Capsules)",
+      "recallCount": 1
+    },
+    {
+      "country": "United States (Lidocaine and Prilocaine cream)",
+      "recallCount": 1
+    },
+    {
+      "country": "Greece",
+      "recallCount": 1
+    },
+    {
+      "country": "Slovakia",
+      "recallCount": 1
+    },
+    {
+      "country": "Vietnam (MMA008)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (BPB002 and PB0003)",
+      "recallCount": 1
+    },
+    {
+      "country": "Canada (ski kits)",
+      "recallCount": 1
+    },
+    {
+      "country": "China (adaptor kits)",
+      "recallCount": 1
+    },
+    {
+      "country": "USA",
+      "recallCount": 1
+    },
+    {
+      "country": "Trinidad",
+      "recallCount": 1
+    },
+    {
+      "country": "Puerto Rico",
+      "recallCount": 1
+    },
+    {
+      "country": "England",
+      "recallCount": 1
+    },
+    {
+      "country": "United Arab Emirates",
+      "recallCount": 1
+    },
+    {
+      "country": "South Africa",
+      "recallCount": 1
+    }
+  ]
+}

@@ -10,17 +10,18 @@ new adapter is exposed on `/api/sources`, `/api/sources/{id}/probe`, and
 
 ## Sources
 
-| id                        | publisher                  | auth | what it reads                                                       |
-| ------------------------- | -------------------------- | ---- | ------------------------------------------------------------------- |
-| `bls-unemployment-rate`   | Bureau of Labor Statistics | none | The national unemployment rate, monthly, seasonally adjusted        |
-| `usgs-hawaii-earthquakes` | US Geological Survey       | none | Earthquakes of magnitude 2.5 and above near the Hawaiian islands    |
-| `cdc-county-obesity`      | Centers for Disease Control (CDC) | none | The share of adults with obesity in each US county, from CDC PLACES |
-| `ncei-annual-temperature` | NOAA National Centers for Environmental Information | none | Calendar-year average temperature for the contiguous United States, since 1895 |
-| `noaa-sea-level` | NOAA Center for Operational Oceanographic Products and Services | none | Monthly mean sea level at a tide gauge, folded into calendar-year averages, since 1856 at The Battery |
-| `treasury-avg-interest-rate` | US Department of the Treasury | none | Average interest rate on the interest-bearing federal debt outstanding, monthly since 2001 |
-| `fema-disaster-declarations` | Federal Emergency Management Agency | none | Every disaster declaration FEMA has published, one row per declaration, from 1953 to the newest one |
-| `openfda-food-recalls` | US Food and Drug Administration | none | Every food recall FDA has published as an enforcement report, from June 2012 to the newest publication date |
-| `usgs-peak-streamflow` | US Geological Survey | none | The annual peak-flow record at a USGS stream gauge, one row per water year, since 1844 at the Mississippi River at St. Louis |
+| id                           | publisher                                                       | auth | what it reads                                                                                                                |
+| ---------------------------- | --------------------------------------------------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `bls-unemployment-rate`      | Bureau of Labor Statistics                                      | none | The national unemployment rate, monthly, seasonally adjusted                                                                 |
+| `usgs-hawaii-earthquakes`    | US Geological Survey                                            | none | Earthquakes of magnitude 2.5 and above near the Hawaiian islands                                                             |
+| `cdc-county-obesity`         | Centers for Disease Control (CDC)                               | none | The share of adults with obesity in each US county, from CDC PLACES                                                          |
+| `ncei-annual-temperature`    | NOAA National Centers for Environmental Information             | none | Calendar-year average temperature for the contiguous United States, since 1895                                               |
+| `noaa-sea-level`             | NOAA Center for Operational Oceanographic Products and Services | none | Monthly mean sea level at a tide gauge, folded into calendar-year averages, since 1856 at The Battery                        |
+| `treasury-avg-interest-rate` | US Department of the Treasury                                   | none | Average interest rate on the interest-bearing federal debt outstanding, monthly since 2001                                   |
+| `fema-disaster-declarations` | Federal Emergency Management Agency                             | none | Every disaster declaration FEMA has published, one row per declaration, from 1953 to the newest one                          |
+| `openfda-food-recalls`       | US Food and Drug Administration                                 | none | Every food recall FDA has published as an enforcement report, from June 2012 to the newest publication date                  |
+| `usgs-peak-streamflow`       | US Geological Survey                                            | none | The annual peak-flow record at a USGS stream gauge, one row per water year, since 1844 at the Mississippi River at St. Louis |
+| `cpsc-product-recalls`       | US Consumer Product Safety Commission                           | none | Every consumer product recall CPSC has published, one row per recall, from 2014 to the newest one                            |
 
 ## Usage
 
@@ -68,15 +69,15 @@ import {
   fetchNceiAnnualTemperature,
 } from '@usa-open-data-connectors/usa-sources';
 
-const series = await fetchNceiAnnualTemperature({ startYear: 1895, endYear: new Date().getFullYear() });
+const series = await fetchNceiAnnualTemperature({
+  startYear: 1895,
+  endYear: new Date().getFullYear(),
+});
 console.log(series.yearCount, series.warmest.year, series.coldest.valueFahrenheit);
 ```
 
 ```ts
-import {
-  buildNoaaSeaLevelSeries,
-  fetchNoaaSeaLevel,
-} from '@usa-open-data-connectors/usa-sources';
+import { buildNoaaSeaLevelSeries, fetchNoaaSeaLevel } from '@usa-open-data-connectors/usa-sources';
 
 const seaLevel = buildNoaaSeaLevelSeries(await fetchNoaaSeaLevel());
 console.log(
@@ -117,6 +118,18 @@ console.log(
   record.highest.waterYear,
   record.highest.peakDischargeCubicFeetPerSecond,
   record.highestToLowestRatio
+);
+```
+
+```ts
+import { fetchCpscProductRecalls } from '@usa-open-data-connectors/usa-sources';
+
+const recalls = await fetchCpscProductRecalls();
+console.log(
+  recalls.totalRecalls,
+  recalls.busiestCompleteYear.year,
+  recalls.remedyOptions[0]?.option,
+  recalls.manufacturerCountries[0]?.country
 );
 ```
 
@@ -240,6 +253,42 @@ console.log(
   honest about them.
 - One keyless request covers the whole record. The default gauge answers 165
   water years in one page of about 126 KB.
+
+## Notes on the CPSC recall service
+
+- The adapter reads
+  `https://www.saferproducts.gov/RestWebServices/Recall`, the same service
+  behind the public SaferProducts.gov search. It is keyless.
+- One request covers one calendar year. A range wider than a year fails: the
+  service answers HTTP 200 with a single row whose title reads
+  `Error retrieving Recalls: The underlying provider failed on Open.` The
+  adapter reads a year at a time for that reason, and the parser throws on
+  that row rather than counting it as a recall.
+- A year of rows is heavy as JSON. 2025 is 420 recalls in about 1.3 MB, so the
+  default window of 2014 to the current year costs about 11 MB across 13
+  requests. A year with no recall keeps a zero row in `years` rather than
+  disappearing from the chart.
+- The newest year in the window is the year the agency is still filling, so
+  `busiestCompleteYear` and `quietestCompleteYear` are picked from the years
+  before it. `completeYearCount` says how many those were.
+- `ManufacturerCountries` names every country a recall touches, so a recall
+  can list several and the country counts add to more than the recall count.
+  In the 2014 to 2026 window China appears on 2,312 of 3,986 recalls, the
+  United States on 753, and 122 countries appear at least once.
+- `RemedyOptions` is nearly an enum (Refund, Repair, Replace, Dispose, New
+  Instructions, Label, Inspect) with two junk rows in it: one carries `R` and
+  one carries a whole paragraph of consumer instructions. The adapter keeps
+  whatever the agency sends and sorts the counts, so the tail of the list
+  shows the mess rather than hiding it.
+- The service holds recalls from the 1970s. The adapter starts at 2014, which
+  keeps the window to 13 requests and to the years a reading of the current
+  trend needs.
+- The committed snapshot (`cpsc-product-recalls-2026-10-02.json`) holds the
+  folded counts, not the raw years, because a year of raw rows is about a
+  megabyte and the counts are a few kilobytes. The second fixture
+  (`cpsc-recall-rows-2014-2026-sampled-2026-10-02.json`) holds the first three
+  recalls of every year in the window, which is what the registry test answers
+  each per-year request with.
 
 ## Checks
 

@@ -190,5 +190,26 @@ export {
 } from './usgsPeakStreamflow.js';
 /** USGS peak-streamflow types. */
 export type { UsgsPeakStreamflowSeries, UsgsPeakStreamflowYear } from './usgsPeakStreamflow.js';
+/** CPSC consumer product recalls (keyless). */
+export {
+  buildCpscProductRecallSeries,
+  buildCpscRecallUrl,
+  CPSC_ERROR_RECALL_ID,
+  CPSC_RECALL_API_BASE,
+  CPSC_RECALL_FIRST_YEAR,
+  cpscProductRecallsAdapter,
+  fetchCpscProductRecalls,
+  parseCpscRecallPayload,
+  parseCpscRecallSnapshot,
+} from './cpscProductRecalls.js';
+/** CPSC product recall types. */
+export type {
+  CpscManufacturerCountryCount,
+  CpscProductRecall,
+  CpscProductRecallSeries,
+  CpscRemedyOptionCount,
+  CpscRecallWindow,
+  CpscRecallYearCount,
+} from './cpscProductRecalls.js';
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
