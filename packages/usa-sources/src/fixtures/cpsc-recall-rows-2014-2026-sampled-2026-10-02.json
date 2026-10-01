@@ -1,0 +1,851 @@
+[
+  {
+    "RecallID": 1976,
+    "RecallNumber": "15715",
+    "RecallDate": "2014-12-30",
+    "Title": "Olympic Mountain Products Recalls Tealight Wax Warmers Due to Fire and Burn Hazards; Sold Exclusively at Costco (Recall Alert)",
+    "Products": [
+      {
+        "Name": "Tealight Wax Warmer sets"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United States"
+      },
+      {
+        "Country": "Canada"
+      },
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 1889,
+    "RecallNumber": "15054",
+    "RecallDate": "2014-12-23",
+    "Title": "Keurig Recalls MINI Plus Brewing Systems Due to Burn Hazard",
+    "Products": [
+      {
+        "Name": "Keurig® MINI Plus Brewing Systems"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      },
+      {
+        "Country": "Malaysia"
+      }
+    ]
+  },
+  {
+    "RecallID": 1975,
+    "RecallNumber": "15714",
+    "RecallDate": "2014-12-22",
+    "Title": "James Trading Group Recalls Croker Kids Fleece Panel Hoodie Due to Strangulation Hazard (Recall Alert)",
+    "Products": [
+      {
+        "Name": "Kids GAA Fleece Panel Hoodie"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 6613,
+    "RecallNumber": "16718",
+    "RecallDate": "2015-12-30",
+    "Title": "KTM North America Recalls Competition Off-Road Motorcycles Due to Fire Hazard (Recall Alert)",
+    "Products": [
+      {
+        "Name": "KTM Competition/Closed Course Off-Road Motorcycles"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "Austria"
+      }
+    ]
+  },
+  {
+    "RecallID": 6612,
+    "RecallNumber": "16068",
+    "RecallDate": "2015-12-30",
+    "Title": "Origin8 Recalls Folding Bicycles Due to Fall Hazard",
+    "Products": [
+      {
+        "Name": "Origin8 folding bicycles"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Replace"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 6611,
+    "RecallNumber": "16067",
+    "RecallDate": "2015-12-29",
+    "Title": "Macy's Recalls Martha Stewart Stainless Steel Cookware; Injury Hazard with Frying Pans",
+    "Products": [
+      {
+        "Name": "Martha Stewart Collection™ 10-piece Stainless Steel Cookware Set"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 7944,
+    "RecallNumber": "17062",
+    "RecallDate": "2016-12-29",
+    "Title": "GLOPO Recalls Children's Scooters Due to Fall Hazard",
+    "Products": [
+      {
+        "Name": "Joyrider three-wheeled scooters"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 7943,
+    "RecallNumber": "17061",
+    "RecallDate": "2016-12-29",
+    "Title": "Polaris Recalls Sportsman 570 All-Terrain Vehicles Due to Fire Hazard",
+    "Products": [
+      {
+        "Name": "Sportsman 570 all-terrain vehicles (ATVs)"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United States"
+      },
+      {
+        "Country": "Mexico"
+      }
+    ]
+  },
+  {
+    "RecallID": 7942,
+    "RecallNumber": "17721",
+    "RecallDate": "2016-12-28",
+    "Title": "Suzuki Recalls KingQuad ATVs Due to Crash Hazard (Recall Alert)",
+    "Products": [
+      {
+        "Name": "KingQuad 750 all-terrain vehicles (ATVs)"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United States"
+      }
+    ]
+  },
+  {
+    "RecallID": 8222,
+    "RecallNumber": "18712",
+    "RecallDate": "2017-12-28",
+    "Title": "The Land of Nod Recalls Toddler Beds Due to Entrapment Hazard (Recall Alert)",
+    "Products": [
+      {
+        "Name": "Nook toddler beds"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "Vietnam"
+      }
+    ]
+  },
+  {
+    "RecallID": 8223,
+    "RecallNumber": "18073",
+    "RecallDate": "2017-12-28",
+    "Title": "Western Gas Recalls to Inspect Propane Gas Due To Fire and Burn Hazards",
+    "Products": [
+      {
+        "Name": "Propane (LP) Gas"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Replace"
+      },
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United States"
+      }
+    ]
+  },
+  {
+    "RecallID": 8221,
+    "RecallNumber": "18711",
+    "RecallDate": "2017-12-27",
+    "Title": "HealthPostures Recalls IntimateRider Chair and RiderMate Bench Due to Fall Hazard (Recall Alert)",
+    "Products": [
+      {
+        "Name": "IntimateRider Chair and RiderMate Bench"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Replace"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United States"
+      }
+    ]
+  },
+  {
+    "RecallID": 8480,
+    "RecallNumber": "19056",
+    "RecallDate": "2018-12-20",
+    "Title": "Miles Industries Recalls Gas Fireplaces Due to Burn Hazard",
+    "Products": [
+      {
+        "Name": "Valor H5 gas fireplaces"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "Canada"
+      }
+    ]
+  },
+  {
+    "RecallID": 8481,
+    "RecallNumber": "19057",
+    "RecallDate": "2018-12-20",
+    "Title": "Navien Recalls Tankless Water Heaters and Boilers Due to Risk of Carbon Monoxide Poisoning",
+    "Products": [
+      {
+        "Name": "Navien condensing tankless water heaters and combination boilers"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Replace"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "South Korea"
+      }
+    ]
+  },
+  {
+    "RecallID": 8478,
+    "RecallNumber": "19054",
+    "RecallDate": "2018-12-19",
+    "Title": "Manhattan Toy Recalls Children's Books Due to Choking Hazard",
+    "Products": [
+      {
+        "Name": "Children's soft books"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 8721,
+    "RecallNumber": "20046",
+    "RecallDate": "2019-12-20",
+    "Title": "Bosch Thermotechnology Recalls Buderus Boilers Due to Carbon Monoxide Poisoning Hazard",
+    "Products": [
+      {
+        "Name": "Buderus GB125-35 oil-condensing boilers"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "Germany"
+      }
+    ]
+  },
+  {
+    "RecallID": 8722,
+    "RecallNumber": "20047",
+    "RecallDate": "2019-12-20",
+    "Title": "Hallmark Recalls Candles Due to Fire and Laceration Hazards",
+    "Products": [
+      {
+        "Name": "Frosted balsam jar candles"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United States"
+      }
+    ]
+  },
+  {
+    "RecallID": 8719,
+    "RecallNumber": "20044",
+    "RecallDate": "2019-12-19",
+    "Title": "BCI Burke Recalls Merge Playground Climbers Due to Entrapment Hazard",
+    "Products": [
+      {
+        "Name": "Merge Playground Climbers"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Replace"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United States"
+      }
+    ]
+  },
+  {
+    "RecallID": 8979,
+    "RecallNumber": "21716",
+    "RecallDate": "2020-12-31",
+    "Title": "Anticimex Recalls SMART Connect Mini Devices Due to Fire and Injury Hazards (Recall Alert)",
+    "Products": [
+      {
+        "Name": "SMART Connect Mini Devices"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Replace"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "Thailand"
+      }
+    ]
+  },
+  {
+    "RecallID": 8977,
+    "RecallNumber": "21061",
+    "RecallDate": "2020-12-30",
+    "Title": "Target Recalls Infant Rompers Due to Choking Hazard",
+    "Products": [
+      {
+        "Name": "Cloud Island infant rompers"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      },
+      {
+        "Country": "Vietnam"
+      }
+    ]
+  },
+  {
+    "RecallID": 8978,
+    "RecallNumber": "21062",
+    "RecallDate": "2020-12-30",
+    "Title": "Target Recalls Infant-Toddler Girl's One-Piece Rashguard Swimsuits Due to Choking Hazard",
+    "Products": [
+      {
+        "Name": "Cat & Jack Infant-Toddler One-Piece Rashguard Swimsuits"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "Vietnam"
+      }
+    ]
+  },
+  {
+    "RecallID": 9198,
+    "RecallNumber": "22042",
+    "RecallDate": "2021-12-29",
+    "Title": "Scott Fetzer Consumer Brands Recalls American Angler Electric Fillet Knives Due to Laceration Hazard",
+    "Products": [
+      {
+        "Name": "American Angler Electric Fillet Knives"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Replace"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 9197,
+    "RecallNumber": "22714",
+    "RecallDate": "2021-12-23",
+    "Title": "Polaris Recalls Recreational Off-Road Vehicles Due to Crash Hazard (Recall Alert)",
+    "Products": [
+      {
+        "Name": "Polaris RZR and GENERAL Recreational Off-Road Vehicles"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "Mexico"
+      }
+    ]
+  },
+  {
+    "RecallID": 9191,
+    "RecallNumber": "22034",
+    "RecallDate": "2021-12-22",
+    "Title": "Big Game Treestands Recalls 2021 The Captain Hang-on Treestands Due to Fall and Injury Hazards",
+    "Products": [
+      {
+        "Name": "The Captain Hang-on Treestands (2021 Batch #2M-0121)"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      },
+      {
+        "Option": "Replace"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 9488,
+    "RecallNumber": "23082",
+    "RecallDate": "2022-12-29",
+    "Title": "Surf 9 Recalls Body Glove Tandem and ULI Inflatable Paddle Boards Due to Drowning Hazard; Sold Exclusively at Costco",
+    "Products": [
+      {
+        "Name": "Body Glove Tandem Inflatable Stand Up Paddle Board, ULI Inventor Inflatable Paddle Board, ULI Zettian Inflatable Supyak and ULI Lila Inflatable Supyak"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 9490,
+    "RecallNumber": "23719",
+    "RecallDate": "2022-12-29",
+    "Title": "Yamaha Recalls Viking Off-Road Side-by-Side Vehicles Due to Crash and Injury Hazards (Recall Alert)",
+    "Products": [
+      {
+        "Name": "Yamaha Viking Off-Road Side-by-Side vehicles"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United States"
+      }
+    ]
+  },
+  {
+    "RecallID": 9489,
+    "RecallNumber": "23083",
+    "RecallDate": "2022-12-29",
+    "Title": "ZLINE Recalls Gas Ranges Due to Serious Risk of Injury or Death from Carbon Monoxide Poisoning",
+    "Products": [
+      {
+        "Name": "ZLINE 30-inch and 36-inch RG gas ranges"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 9812,
+    "RecallNumber": "24069",
+    "RecallDate": "2023-12-28",
+    "Title": "BlendJet Recalls 4.8 Million BlendJet 2 Portable Blenders Due to Fire and Laceration Hazards",
+    "Products": [
+      {
+        "Name": "BlendJet 2 Portable Blenders"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Replace"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 9813,
+    "RecallNumber": "24070",
+    "RecallDate": "2023-12-28",
+    "Title": "FNA Group Recalls Simpson Pressure Washers Due to Burn Hazard; Sold Exclusively at Lowe's",
+    "Products": [
+      {
+        "Name": "Simpson Gas Pressure Washers with Electric Start"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United States"
+      }
+    ]
+  },
+  {
+    "RecallID": 9814,
+    "RecallNumber": "24071",
+    "RecallDate": "2023-12-28",
+    "Title": "High-Powered Magnetic Balls Recalled Due to Ingestion Hazard; Sold Exclusively on Walmart.com through Joybuy",
+    "Products": [
+      {
+        "Name": "Relax 5mm Science Kit, Large Hematite Magnets Magnetic Stones Building Blocks"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 10119,
+    "RecallNumber": "25080",
+    "RecallDate": "2024-12-26",
+    "Title": "BCI Burke Recalls Playground Merry-Go-Rounds Due to Crush Hazard",
+    "Products": [
+      {
+        "Name": "Inclusive Orbit merry-go-rounds"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "United Kingdom"
+      }
+    ]
+  },
+  {
+    "RecallID": 10116,
+    "RecallNumber": "25077",
+    "RecallDate": "2024-12-26",
+    "Title": "Black Diamond Equipment Recalls PIEPS Pro IPS Avalanche Transceivers Due to Risk of Loss of Emergency Communications",
+    "Products": [
+      {
+        "Name": "PIEPS Pro IPS Avalanche Transceivers"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      },
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "Austria"
+      }
+    ]
+  },
+  {
+    "RecallID": 10118,
+    "RecallNumber": "25079",
+    "RecallDate": "2024-12-26",
+    "Title": "GIKPAL Dressers Recalled Due to Tip-Over and Entrapment Hazards; Violations of Federal Regulation for Clothing Storage Units; Sold Exclusively on Walmart.com by ONME Direct",
+    "Products": [
+      {
+        "Name": "GIKPAL 12-Drawer Dressers"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 10531,
+    "RecallNumber": "26156",
+    "RecallDate": "2025-12-18",
+    "Title": "17 Stories Furniture 18-Drawer Dressers Recalled Due to Risk of Serious Injury or Death from Tip-Over and Entrapment Hazards; Violates Mandatory Standard for Clothing Storage Units; Imported by Shenzhen Jinhongzhen Technology Co",
+    "Products": [
+      {
+        "Name": "17 Stories Furniture 18-Drawer Dressers"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 10525,
+    "RecallNumber": "26150",
+    "RecallDate": "2025-12-18",
+    "Title": "Amp Fit Recalls AMP Smart Fitness Machines Due to Laceration and Serious Injury Hazard",
+    "Products": [
+      {
+        "Name": "AMP MP2 Smart Fitness Machine"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Repair"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 10536,
+    "RecallNumber": "26161",
+    "RecallDate": "2025-12-18",
+    "Title": "ANNQUAN Brand Power Strips Recalled Due to Risk of Serious Injury or Death from Fire; Sold on Amazon by Hefei Juyuan Sporting Development",
+    "Products": [
+      {
+        "Name": "ANNQUAN Power Strips, Models EX-D112-05 and EX-D106-25"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 10992,
+    "RecallNumber": "26789",
+    "RecallDate": "2026-09-24",
+    "Title": "5Color Recalls Children’s Bicycle Helmet and Pads Sets Due to Risk of Serious Injury or Death from Head Injury; Violate Mandatory Standard for Bicycle Helmets",
+    "Products": [
+      {
+        "Name": "5Color Children’s Bike Helmet and Pads Sets"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 10999,
+    "RecallNumber": "26799",
+    "RecallDate": "2026-09-24",
+    "Title": "ABC Trading Recalls Light-Up Children’s Toys Due to Risk of Serious Injury or Death from Battery Ingestion; Violate Mandatory Standard for Toys",
+    "Products": [
+      {
+        "Name": "Light-Up Glasses, Crown Headbands, Sparkle Headbands and Ties"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "China"
+      }
+    ]
+  },
+  {
+    "RecallID": 10996,
+    "RecallNumber": "26790",
+    "RecallDate": "2026-09-24",
+    "Title": "Hyperfuels Recalls Methanol and Ethanol Fuel Containers Due to Risk of Serious Injury or Death from Child Poisoning and Flame Jetting; Violates Multiple Federal Safety Standards",
+    "Products": [
+      {
+        "Name": "Hyperfuels Methanol and Ethanol Fuel Containers"
+      }
+    ],
+    "RemedyOptions": [
+      {
+        "Option": "Refund"
+      },
+      {
+        "Option": "Replace"
+      }
+    ],
+    "ManufacturerCountries": [
+      {
+        "Country": "USA"
+      },
+      {
+        "Country": "Trinidad"
+      }
+    ]
+  }
+]

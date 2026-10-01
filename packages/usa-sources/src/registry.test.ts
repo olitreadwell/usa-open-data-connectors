@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
+import { cpscProductRecallsAdapter } from './cpscProductRecalls.js';
 import { femaDisasterDeclarationsAdapter } from './femaDisasterDeclarations.js';
 import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
 import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
@@ -49,6 +50,13 @@ const RAW_FEMA_FIXTURE = readFileSync(
 );
 const RAW_USGS_PEAK_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/usgs-peak-streamflow-2026-10-01.json'),
+  'utf8'
+);
+// The recall service answers one year per request. This fixture holds the
+// first three recalls of every year from 2014 to 2026, so the stub answers
+// each year with the rows dated inside it.
+const RAW_CPSC_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/cpsc-recall-rows-2014-2026-sampled-2026-10-02.json'),
   'utf8'
 );
 const OPENFDA_FOOD_RECALL_FIXTURE = JSON.parse(
@@ -120,6 +128,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'api.waterdata.usgs.gov') {
     return RAW_USGS_PEAK_FIXTURE;
   }
+  if (hostname === 'www.saferproducts.gov') {
+    return RAW_CPSC_FIXTURE;
+  }
   return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
 
@@ -141,6 +152,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('fema-disaster-declarations');
     expect(ids).toContain('openfda-food-recalls');
     expect(ids).toContain('usgs-peak-streamflow');
+    expect(ids).toContain('cpsc-product-recalls');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -167,6 +179,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('fema-disaster-declarations')).toBe(femaDisasterDeclarationsAdapter);
     expect(getUsDataSource('openfda-food-recalls')).toBe(openFdaFoodRecallsAdapter);
     expect(getUsDataSource('usgs-peak-streamflow')).toBe(usgsPeakStreamflowAdapter);
+    expect(getUsDataSource('cpsc-product-recalls')).toBe(cpscProductRecallsAdapter);
   });
 
   it('returns undefined for an unknown id', () => {
