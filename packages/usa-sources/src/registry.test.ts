@@ -4,6 +4,7 @@ import { describe, expect, it } from 'vitest';
 
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
+import { cfpbConsumerComplaintsAdapter } from './cfpbConsumerComplaints.js';
 import { cpscProductRecallsAdapter } from './cpscProductRecalls.js';
 import { femaDisasterDeclarationsAdapter } from './femaDisasterDeclarations.js';
 import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
@@ -59,6 +60,61 @@ const RAW_CPSC_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/cpsc-recall-rows-2014-2026-sampled-2026-10-02.json'),
   'utf8'
 );
+// The complaint search API answers one question per request. This fixture is
+// the folded snapshot, so the stub can answer each year from its year rows and
+// the tally request from its product and company lists.
+const CFPB_COMPLAINT_FIXTURE = JSON.parse(
+  readFileSync(
+    path.join(process.cwd(), 'src/fixtures/cfpb-consumer-complaints-2026-10-03.json'),
+    'utf8'
+  )
+) as {
+  newestReceivedDate: string;
+  years: { year: number; complaintCount: number }[];
+  topProducts: { product: string; complaintCount: number }[];
+  topCompanies: { company: string; complaintCount: number }[];
+};
+
+/**
+ * Answer one Consumer Complaint Database request with the part of the
+ * snapshot it asks for.
+ *
+ * The adapter asks three shapes on one host: one year of totals, one day of
+ * totals, and the product and company tallies, so the fixture is picked by
+ * the query rather than by the host alone.
+ */
+function cfpbFixtureFor(url: URL): string {
+  if (url.searchParams.get('no_aggs') !== 'true') {
+    return JSON.stringify({
+      aggregations: {
+        product: {
+          product: {
+            buckets: CFPB_COMPLAINT_FIXTURE.topProducts.map((row) => ({
+              key: row.product,
+              doc_count: row.complaintCount,
+            })),
+          },
+        },
+        company: {
+          company: {
+            buckets: CFPB_COMPLAINT_FIXTURE.topCompanies.map((row) => ({
+              key: row.company,
+              doc_count: row.complaintCount,
+            })),
+          },
+        },
+      },
+    });
+  }
+  const min = url.searchParams.get('date_received_min') ?? '';
+  const max = url.searchParams.get('date_received_max') ?? '';
+  const count =
+    min === max
+      ? Number(min === CFPB_COMPLAINT_FIXTURE.newestReceivedDate)
+      : (CFPB_COMPLAINT_FIXTURE.years.find((row) => min.startsWith(String(row.year)))
+          ?.complaintCount ?? 0);
+  return JSON.stringify({ hits: { total: { value: count, relation: 'eq' }, hits: [] } });
+}
 const OPENFDA_FOOD_RECALL_FIXTURE = JSON.parse(
   readFileSync(
     path.join(process.cwd(), 'src/fixtures/openfda-food-recalls-2026-09-30.json'),
@@ -131,6 +187,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'www.saferproducts.gov') {
     return RAW_CPSC_FIXTURE;
   }
+  if (hostname === 'www.consumerfinance.gov') {
+    return cfpbFixtureFor(parsed);
+  }
   return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
 
@@ -153,6 +212,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('openfda-food-recalls');
     expect(ids).toContain('usgs-peak-streamflow');
     expect(ids).toContain('cpsc-product-recalls');
+    expect(ids).toContain('cfpb-consumer-complaints');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -180,6 +240,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('openfda-food-recalls')).toBe(openFdaFoodRecallsAdapter);
     expect(getUsDataSource('usgs-peak-streamflow')).toBe(usgsPeakStreamflowAdapter);
     expect(getUsDataSource('cpsc-product-recalls')).toBe(cpscProductRecallsAdapter);
+    expect(getUsDataSource('cfpb-consumer-complaints')).toBe(cfpbConsumerComplaintsAdapter);
   });
 
   it('returns undefined for an unknown id', () => {

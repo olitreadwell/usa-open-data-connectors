@@ -22,6 +22,7 @@ new adapter is exposed on `/api/sources`, `/api/sources/{id}/probe`, and
 | `openfda-food-recalls`       | US Food and Drug Administration                                 | none | Every food recall FDA has published as an enforcement report, from June 2012 to the newest publication date                  |
 | `usgs-peak-streamflow`       | US Geological Survey                                            | none | The annual peak-flow record at a USGS stream gauge, one row per water year, since 1844 at the Mississippi River at St. Louis |
 | `cpsc-product-recalls`       | US Consumer Product Safety Commission                           | none | Every consumer product recall CPSC has published, one row per recall, from 2014 to the newest one                            |
+| `cfpb-consumer-complaints`   | Consumer Financial Protection Bureau                            | none | Every consumer complaint sent to a company since December 2011, counted by year, with the products and companies named most |
 
 ## Usage
 
@@ -130,6 +131,18 @@ console.log(
   recalls.busiestCompleteYear.year,
   recalls.remedyOptions[0]?.option,
   recalls.manufacturerCountries[0]?.country
+);
+```
+
+```ts
+import { fetchCfpConsumerComplaints } from '@usa-open-data-connectors/usa-sources';
+
+const complaints = await fetchCfpConsumerComplaints();
+console.log(
+  complaints.totalComplaints,
+  complaints.busiestCompleteYear.year,
+  complaints.newestReceivedDate,
+  complaints.topCompanies[0]?.company
 );
 ```
 
@@ -289,6 +302,34 @@ console.log(
   (`cpsc-recall-rows-2014-2026-sampled-2026-10-02.json`) holds the first three
   recalls of every year in the window, which is what the registry test answers
   each per-year request with.
+
+## Notes on the Consumer Complaint Database
+
+- The adapter reads
+  `https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/`,
+  the search endpoint behind the public Consumer Complaint Database. It is
+  keyless. The bureau answers a scripted request with 403 and a request with a
+  declared user agent with 200.
+- The search API computes its term aggregations on every request, which takes
+  the body from about fifteen kilobytes to about four hundred. Adding
+  `no_aggs=true` drops them, so the adapter asks for `size=0&no_aggs=true` and
+  reads `hits.total.value` when it only needs a count, and makes one extra
+  request without `no_aggs` for the product and company tallies.
+- The API answers one question per request and has no date sort, so the window
+  costs one request per year plus one for the tallies plus one or two to find
+  the newest day. `findNewestCfpComplaintDate` walks back from today and stops
+  at the first day with a complaint.
+- The first year in the window, 2011, holds only December: the bureau
+  published its first complaints on 1 December 2011. It is kept rather than
+  dropped, and the page's data note says the first bar covers one month.
+- The product tally splits credit reporting across more than one label because
+  the bureau changed its product taxonomy over the years. The adapter keeps
+  whatever the API sends rather than merging labels, so a reader of
+  `topProducts` should not assume the labels are stable.
+- The committed snapshot (`cfpb-consumer-complaints-2026-10-03.json`) holds
+  the folded counts, not the eighteen million raw rows. The registry test
+  answers each per-year request, the newest-day probe, and the tally request
+  from that one fixture.
 
 ## Checks
 
