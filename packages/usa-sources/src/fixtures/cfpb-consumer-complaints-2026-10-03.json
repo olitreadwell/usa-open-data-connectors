@@ -1,0 +1,173 @@
+{
+  "exportedAt": "2026-10-02T17:56:15Z",
+  "firstYear": 2011,
+  "newestYear": 2026,
+  "newestReceivedDate": "2026-10-02",
+  "totalComplaints": 18145013,
+  "years": [
+    {
+      "year": 2011,
+      "complaintCount": 2536
+    },
+    {
+      "year": 2012,
+      "complaintCount": 72368
+    },
+    {
+      "year": 2013,
+      "complaintCount": 108214
+    },
+    {
+      "year": 2014,
+      "complaintCount": 152908
+    },
+    {
+      "year": 2015,
+      "complaintCount": 168272
+    },
+    {
+      "year": 2016,
+      "complaintCount": 191292
+    },
+    {
+      "year": 2017,
+      "complaintCount": 242745
+    },
+    {
+      "year": 2018,
+      "complaintCount": 257130
+    },
+    {
+      "year": 2019,
+      "complaintCount": 277239
+    },
+    {
+      "year": 2020,
+      "complaintCount": 444213
+    },
+    {
+      "year": 2021,
+      "complaintCount": 495940
+    },
+    {
+      "year": 2022,
+      "complaintCount": 800245
+    },
+    {
+      "year": 2023,
+      "complaintCount": 1292049
+    },
+    {
+      "year": 2024,
+      "complaintCount": 2734268
+    },
+    {
+      "year": 2025,
+      "complaintCount": 5442963
+    },
+    {
+      "year": 2026,
+      "complaintCount": 5462631
+    }
+  ],
+  "topProducts": [
+    {
+      "product": "Credit reporting or other personal consumer reports",
+      "complaintCount": 12555681
+    },
+    {
+      "product": "Credit reporting, credit repair services, or other personal consumer reports",
+      "complaintCount": 2163770
+    },
+    {
+      "product": "Debt collection",
+      "complaintCount": 1204659
+    },
+    {
+      "product": "Mortgage",
+      "complaintCount": 461886
+    },
+    {
+      "product": "Checking or savings account",
+      "complaintCount": 400057
+    },
+    {
+      "product": "Credit card",
+      "complaintCount": 347909
+    },
+    {
+      "product": "Credit card or prepaid card",
+      "complaintCount": 206356
+    },
+    {
+      "product": "Money transfer, virtual currency, or money service",
+      "complaintCount": 193043
+    },
+    {
+      "product": "Credit reporting",
+      "complaintCount": 140426
+    },
+    {
+      "product": "Student loan",
+      "complaintCount": 134209
+    },
+    {
+      "product": "Vehicle loan or lease",
+      "complaintCount": 104063
+    },
+    {
+      "product": "Bank account or service",
+      "complaintCount": 86198
+    }
+  ],
+  "topCompanies": [
+    {
+      "company": "TRANSUNION INTERMEDIATE HOLDINGS, INC.",
+      "complaintCount": 5015681
+    },
+    {
+      "company": "EQUIFAX, INC.",
+      "complaintCount": 4815296
+    },
+    {
+      "company": "Experian Information Solutions Inc.",
+      "complaintCount": 4396123
+    },
+    {
+      "company": "BANK OF AMERICA, NATIONAL ASSOCIATION",
+      "complaintCount": 187669
+    },
+    {
+      "company": "JPMORGAN CHASE & CO.",
+      "complaintCount": 176811
+    },
+    {
+      "company": "WELLS FARGO & COMPANY",
+      "complaintCount": 175669
+    },
+    {
+      "company": "CAPITAL ONE FINANCIAL CORPORATION",
+      "complaintCount": 173298
+    },
+    {
+      "company": "CITIBANK, N.A.",
+      "complaintCount": 142559
+    },
+    {
+      "company": "SYNCHRONY FINANCIAL",
+      "complaintCount": 84360
+    },
+    {
+      "company": "Resurgent Capital Services L.P.",
+      "complaintCount": 72713
+    },
+    {
+      "company": "Block, Inc.",
+      "complaintCount": 71549
+    },
+    {
+      "company": "LEXISNEXIS",
+      "complaintCount": 68667
+    }
+  ]
+}

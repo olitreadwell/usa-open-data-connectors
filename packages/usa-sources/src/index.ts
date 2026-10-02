@@ -211,5 +211,29 @@ export type {
   CpscRecallWindow,
   CpscRecallYearCount,
 } from './cpscProductRecalls.js';
+/** CFPB Consumer Complaint Database (keyless). */
+export {
+  buildCfpComplaintAggregationUrl,
+  buildCfpComplaintCountUrl,
+  buildCfpComplaintDayUrl,
+  buildCfpConsumerComplaintSeries,
+  CFPB_COMPLAINT_FIRST_YEAR,
+  CFPB_COMPLAINT_SEARCH_API_BASE,
+  CFPB_NEWEST_DATE_PROBE_DAYS,
+  CFPB_TOP_LIST_LIMIT,
+  cfpbConsumerComplaintsAdapter,
+  fetchCfpConsumerComplaints,
+  findNewestCfpComplaintDate,
+  parseCfpComplaintAggregations,
+  parseCfpComplaintSnapshot,
+  parseCfpComplaintTotal,
+} from './cfpbConsumerComplaints.js';
+/** CFPB complaint types. */
+export type {
+  CfpComplaintCompanyCount,
+  CfpComplaintProductCount,
+  CfpComplaintYearCount,
+  CfpConsumerComplaintSeries,
+} from './cfpbConsumerComplaints.js';
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
