@@ -11,7 +11,7 @@
   ],
   "scripts": {
     "dev": "next dev",
-    "build": "npm run build -w @usa-open-data-connectors/usa-sources && npm run build -w @usa-open-data-connectors/connectors-cli",
+    "build": "npm run build -w @usa-open-data-connectors/usa-sources && npm run build -w @usa-open-data-connectors/usa-mcp && npm run build -w @usa-open-data-connectors/connectors-cli",
     "start": "next start",
     "setup": "node scripts/setup.mjs",
     "typecheck": "npm run type-check --workspaces --if-present",

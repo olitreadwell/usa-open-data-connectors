@@ -67,13 +67,13 @@ export {
   NCEI_FIRST_RECORD_YEAR,
   nceiAnnualTemperatureAdapter,
   parseNceiAnnualTemperatureCsv,
-} from './nceiAnnualTemperature';
+} from './nceiAnnualTemperature.js';
 /** NOAA NCEI temperature types. */
 export type {
   NceiTemperatureQuery,
   NceiTemperatureSeries,
   NceiTemperatureYear,
-} from './nceiAnnualTemperature';
+} from './nceiAnnualTemperature.js';
 /** NOAA CO-OPS monthly mean sea level at a tide gauge (keyless). */
 export {
   buildNoaaSeaLevelSeries,
@@ -90,7 +90,7 @@ export {
   NOAA_SEA_LEVEL_PRODUCT,
   NOAA_SEA_LEVEL_UNITS,
   parseNoaaSeaLevelPayload,
-} from './noaaSeaLevel';
+} from './noaaSeaLevel.js';
 /** NOAA CO-OPS sea level types. */
 export type {
   NoaaSeaLevelMonth,
@@ -99,7 +99,7 @@ export type {
   NoaaSeaLevelSeries,
   NoaaSeaLevelStation,
   NoaaSeaLevelYear,
-} from './noaaSeaLevel';
+} from './noaaSeaLevel.js';
 /** The uniform adapter registry and probe helpers. */
 export {
   US_DATA_SOURCES,

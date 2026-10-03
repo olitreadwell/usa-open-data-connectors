@@ -1,10 +1,13 @@
 {
-  "name": "@usa-open-data-connectors/usa-sources",
-  "version": "0.1.2",
+  "name": "@usa-open-data-connectors/usa-mcp",
+  "version": "0.1.0",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "usa-open-data-mcp": "./dist/stdio.js"
+  },
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -25,22 +28,23 @@
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest --watch",
     "clean": "rm -rf dist tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage",
-    "clean:all": "rm -rf dist tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage node_modules",
-    "test:smoke": "RUN_SMOKE=1 vitest run src/smoke.test.ts"
+    "clean:all": "rm -rf dist tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage node_modules"
   },
   "devDependencies": {
-    "@usa-open-data-connectors/config-eslint": "*",
-    "@usa-open-data-connectors/config-typescript": "*",
-    "@types/node": "22.20.4",
+    "@types/node": "22.20.1",
     "eslint": "9.39.5",
     "typescript": "6.0.3",
-    "vitest": "3.2.7"
+    "vitest": "3.2.7",
+    "@usa-open-data-connectors/config-eslint": "*",
+    "@usa-open-data-connectors/config-typescript": "*"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.0",
+    "@usa-open-data-connectors/usa-sources": "^0.1.0",
     "zod": "3.25.76"
   },
   "publishConfig": {
     "access": "public"
   },
-  "description": "Uniform TypeScript adapters for US public data sources"
+  "description": "MCP server exposing the USA open data connector library to Claude and ChatGPT"
 }

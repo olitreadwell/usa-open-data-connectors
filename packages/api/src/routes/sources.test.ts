@@ -35,6 +35,8 @@ describe('GET /sources', () => {
       'fema-disaster-declarations',
       'openfda-food-recalls',
       'usgs-peak-streamflow',
+      'cpsc-product-recalls',
+      'cfpb-consumer-complaints',
     ]);
     for (const source of sources) {
       expect(Object.keys(source).sort()).toEqual(['auth', 'description', 'id', 'name']);
