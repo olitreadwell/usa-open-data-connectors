@@ -21,6 +21,9 @@ jobs:
           cache: 'npm'
       - run: npm ci
       - run: npm run build
-      - run: npm publish --workspaces --provenance
+      # `npm stage publish` needs npm 11.15 or later. The Node version in
+      # `.nvmrc` ships npm 10, so install npm 11 for this step.
+      - run: npm install -g npm@^11.15.0
+      - run: npm stage publish --workspaces --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

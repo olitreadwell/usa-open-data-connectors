@@ -15,17 +15,35 @@ tags; there is no separate release machine.
 
 ## TypeScript / HTTP API
 
-The TypeScript packages share version `0.1.0`. Bump it in every
-`packages/*/package.json`, update the lockfile, and tag:
+The TypeScript packages carry their own versions in `packages/*/package.json`.
+Bump the package you are shipping, update the lockfile, and tag:
 
 ```sh
-git tag v0.2.0
-git push origin v0.2.0
+git tag v0.1.1
+git push origin v0.1.1
 ```
 
-The `v*` tag also triggers `.github/workflows/release.yml`, which creates
-a GitHub Release with notes, and `.github/workflows/publish-npm.yml`,
-which publishes the TypeScript packages to npm.
+The `v*` tag triggers two workflows:
+
+- `.github/workflows/release.yml` creates a GitHub Release with notes.
+- `.github/workflows/publish-npm.yml` runs `npm stage publish --workspaces`,
+  which stages every public workspace but publishes nothing on its own.
+
+### Approving a staged publish
+
+`npm stage publish` needs npm 11.15 or later, so the workflow installs npm 11
+first. A maintainer then approves each staged version. Open the `Staged
+Packages` tab on npmjs.com, or work from a terminal:
+
+```sh
+npm stage list
+npm stage view <stage-id>
+npm stage approve <stage-id> --otp 123456
+```
+
+Approving needs an interactive 2FA code. The `NPM_TOKEN` secret must be a
+granular access token with `Read and write (stage only)` access, which cannot
+put a version live on its own.
 
 ## Python (`python/`)
 
