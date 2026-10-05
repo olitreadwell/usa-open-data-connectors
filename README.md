@@ -11,10 +11,12 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for US public data sources (Treasury, SEC, FDIC, BLS, USGS, CDC, NOAA, EPA, FEMA, CPSC, CFPB, ClinicalTrials.gov, USAspending, NCBI, BTS) with live probes and offline fixtures |
-| `@usa-open-data-connectors/connectors-api` | HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
+| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 22 US public data sources, with live probes and offline fixtures |
+| [`@usa-open-data-connectors/usa-mcp`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-mcp) | MCP server that exposes the connectors to Claude, ChatGPT, and other MCP clients |
 | `@usa-open-data-connectors/connectors-cli` | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
-| `@usa-open-data-connectors/config-eslint`, `@usa-open-data-connectors/config-typescript` | Shared lint and TypeScript settings |
+| `@usa-open-data-connectors/connectors-api` | HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
+| `@usa-open-data-connectors/config-eslint` | Shared ESLint flat configuration |
+| `@usa-open-data-connectors/config-typescript` | Shared TypeScript compiler settings |
 | `python/` (`nzdata` on PyPI) | Python port, still on the New Zealand sources. See "Language ports" |
 | `ruby/` (`nzdata` gem) | Ruby port, still on the New Zealand sources. See "Language ports" |
 
