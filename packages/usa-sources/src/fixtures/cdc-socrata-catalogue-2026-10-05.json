@@ -1,0 +1,1189 @@
+[
+  {
+    "id": "ahfs-x44r",
+    "name": "Epidemic Trends and Rt: COVID-19, Influenza, and RSV at National, State, Local Level",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Center for Forecasting and Outbreak Analytics",
+    "createdAt": 1790887924,
+    "description": "An archive of time-varying reproductive number (Rt) estimates and epidemic trend categories.\n\nCDC estimates epidemic trends, based on the time-varying reproductive number (Rt), for COVID-19, influenza, and RSV at the national, state, and health service area (HSA) levels. Estimates are released weekly at https://www.cdc.gov/cfa-modeling-and-forecasting/rt-estimates.\n\n\n------- About Rt estimates -------\nThese estimates indicate whether infections are increasing (Rt > 1) or decreasing (Rt < 1). Rt is estimated from daily incident emergency department visits reported through the National Syndromic Surveillance Program.\n\n\n------- Methods and resources -------\nRead more about the hierarchical generalized additive models (HGAMs) used to generate these estimates in:\n\n[1] Behind the Model: CDC’s Tools to Assess Epidemic Trends (https://www.cdc.gov/cfa-behind-the-model/php/data-research/rt-estimates/index.html)\n[2] Modeling Handbook chapter on Rt (https://www.cdc.gov/cfa-modeling-and-forecasting/modeling-handbook/mh-rt.html)\n\n\n------- Geographic resolution -------\nWe release estimates at the national, state, and local levels. Local estimates are for health service areas (HSAs). An HSA is a geographic area that combines one or more counties that are next to each other to form a region that is relatively self-contained with respect to hospital care. CFA uses NCI modified HSAs, where all counties within an HSA are in the same state. We provide one row for each county, to support searchability and merging with other data sets. However, Rt estimates are at the HSA level, so for each county in an HSA, the estimated values are identical (for a given disease, origin_date, and target_date). \n\n\n------- Dates, release cadence, and version history -------\nWeekly releases include an Rt estimate for each location, and disease, across the most recent 8 weeks. The target_date column indicates the date, t, for which the Rt estimate was made. \n\nThe origin_date column indicates the vintage of the data used to generate all the estimates in the release (think of this as a version ID, release date, or as-of date). The origin_date is typically the final date available in the surveillance data at the time the estimates were generated. For example, if models were run using data available through Tuesday, 9/15, then the origin_date for every estimate in the run (across 8 weeks of target_dates) is 9/15.  \n\nFinally, the horizon is defined as the difference between the target_date and origin_date. A negative horizon implies the target_date falls in the observed period; the target_date had already passed at the time the estimate was generated. \n\nOur date definitions and terminology follow standards used by the forecast hubverse (https://docs.hubverse.io/en/latest/user-guide/tasks.html#standard-task-id-variables).\n\n\n------- How to work with this large dataset -------\nThis is a very large dataset. \n\nBefore downloading data, run a query to filter for the specific locations, diseases, and origin_dates (release versions) you want to access. To filter the data in your browser use the “Actions” dropdown menu to open the \"Query” tool.  If you’re a developer you can also run SoQL queries using the available SDKs, including for R and Python.\n\nWe do not recommend using the “Export” button, which will download every estimate we have ever published (including weekly releases for >800 HSAs, 50 states, DC, and the US overall, across three diseases).",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 16,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42623419,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790950666,
+    "publicationGroup": 20646017,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790950548,
+    "rowsUpdatedBy": "u5sr-tyar",
+    "tableId": 20646017,
+    "totalTimesRated": 0,
+    "viewCount": 190,
+    "viewLastModified": 1790950666,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790950920,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7772759,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790950920,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790950920,
+          "failureCount": 0,
+          "startedAt": 1790950920,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u5sr-tyar",
+          "displayName": "KELLY REAGAN"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "cfa@cdc.gov",
+          "Contact Name": "Center for Forecasting and Outbreak Analytics",
+          "Update Frequency": "Weekly",
+          "Program Code": "009:037",
+          "Geographic Coverage": "National, State, Health Service Area (HSA)",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "cfa@cdc.gov",
+          "Contact Name": "Center for Forecasting and Outbreak Analytics",
+          "Update Frequency": "Weekly",
+          "Program Code": "009:037",
+          "Restriction Status": "Public",
+          "Geographic Coverage": "National, State, Health Service Area (HSA)",
+          "Source": "https://www.cdc.gov/cfa-modeling-and-forecasting/rt-estimates",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        }
+      },
+      "rowIdentifier": 647836877,
+      "rowLabel": "Each row is an Rt estimate for a specific disease, date, and location, as of a given release (origin_date)",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "u5sr-tyar",
+      "displayName": "KELLY REAGAN",
+      "screenName": "KELLY REAGAN",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "u5sr-tyar",
+      "displayName": "KELLY REAGAN",
+      "screenName": "KELLY REAGAN",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "rt",
+      "public health",
+      "surveillance",
+      "respiratory disease",
+      "epidemic trends",
+      "real-time monitoring",
+      "rsv",
+      "influenza",
+      "covid-19",
+      "national syndromic surveillance program"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "wxxp-vsvi",
+    "name": "DRAFT_PRIVATE_TEST",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1789758989,
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 22,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42575719,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790607961,
+    "publicationGroup": 20618461,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790649377,
+    "rowsUpdatedBy": "ufkc-rj9t",
+    "tableId": 20618461,
+    "totalTimesRated": 0,
+    "viewCount": 68,
+    "viewLastModified": 1790649377,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790649377,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7765140,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790649377,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790649378,
+          "failureCount": 0,
+          "startedAt": 1790649377,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ufkc-rj9t",
+          "displayName": "Douglas Wirtz"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "ksf4@cdc.gov",
+          "Contact Name": "Doug Wirtz",
+          "Program Code": "009:037",
+          "Bureau Code": "009:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "ufkc-rj9t",
+      "displayName": "Douglas Wirtz",
+      "screenName": "Douglas Wirtz",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "ufkc-rj9t",
+      "displayName": "Douglas Wirtz",
+      "screenName": "Douglas Wirtz",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "7xz4-qgju",
+    "name": "Historical Averages of Pollen Season Timing and Concentrations for Select United States Cities, 2003-2024",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "National Center for Environmental Health",
+    "createdAt": 1789502749,
+    "description": "The National Allergy Bureau™ (NAB™) commonly provides grouped pollen levels rather than taxa-specific data. In this dataset, however, pollen data are provided as historical averages of pollen season timing and concentrations using data from the NAB. This is the first time pollen data at this level of detail has been made publicly available. Grass pollen metrics were excluded from selected products to align with NAB and CDC data-sharing policies.\n\nPollen concentrations are reported as pollen grains per cubic meter (PPCM) and provided for each year of data available. The pollen data are available from 2003 through 2024 and includes ready-to-use pollen measures including: main pollen season (MPS) start date, peak date, end date, season length, total seasonal pollen concentration (i.e., seasonal pollen integral), average seasonal pollen concentration, peak concentration, and the number of pollen observations per year. Data availability varies by year and pollen type for each NAB site. This dataset is part of a series of pollen datasets from the NAB, processed and standardized by the Division of Environmental Health Science and Practice (DEHSP), National Center for Environmental Health (NCEH), CDC. Further details about the pollen data, including collection, counting, and calculations, can be found here: https://www.mdpi.com/3954654",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 139,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42506988,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789504265,
+    "publicationGroup": 20586634,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1789745687,
+    "rowsUpdatedBy": "k59p-qqrp",
+    "tableId": 20586634,
+    "totalTimesRated": 0,
+    "viewCount": 416,
+    "viewLastModified": 1790122440,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1789504265,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7697541,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789504265,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789504265,
+          "failureCount": 0,
+          "startedAt": 1789504265,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "k59p-qqrp",
+          "displayName": "Arie Manangan"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Quality": {
+          "Suggested Citation": "Manangan, A.P.; Brown, C.L.; Werner, A.K.; Katz, D.S.W.; Rorie, A.; Voelker, D.; Gabrish, P.; Hess, J.J.; Schramm, P.J. Pollen Season Timing and Concentrations in the United States: Developing a Standardized Pollen Dataset Using Data from the National Allergy Bureau (NAB) (2003–2024). Atmosphere 2026, 17, 635. https://doi.org/10.3390/atmos17070635"
+        },
+        "Common Core": {
+          "Contact Email": "climateandhealth@cdc.gov",
+          "References": "https://doi.org/10.3390/atmos17070635",
+          "Contact Name": "CHP Support",
+          "Update Frequency": "Annually",
+          "Temporal Applicability": "Yearly Average",
+          "Program Code": "009:032",
+          "Geographic Coverage": "Cities (point locations)",
+          "Publisher": "National Center for Environmental Health",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Public Access Level": "public"
+        }
+      },
+      "rowLabel": "Average pollen concentration or seasonal timing for a specific NAB pollen station for a specific pollen type",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "k59p-qqrp",
+      "displayName": "Arie Manangan",
+      "screenName": "Arie Manangan",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "k59p-qqrp",
+      "displayName": "Arie Manangan",
+      "screenName": "Arie Manangan",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "pollen",
+      "allergy",
+      "environmental health",
+      "air quality",
+      "hayfever",
+      "allergic rhinitis",
+      "pollen count",
+      "pollen concentrations",
+      "aeroallergens",
+      "allergen exposure",
+      "respiratory health",
+      "asthma triggers",
+      "seasonal allergies",
+      "high pollen days",
+      "allergy season",
+      "tree pollen",
+      "weed pollen"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "rq2k-zaqh",
+    "name": "Yearly Pollen Season Timing and Concentrations for Select United States Cities, 2003-2024",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "National Center for Environmental Health",
+    "createdAt": 1789492019,
+    "description": "The National Allergy Bureau™ (NAB™) commonly provides grouped pollen levels rather than taxa-specific data. In this dataset, however, pollen data are provided as yearly pollen season timing and concentrations using data from the NAB. This is the first time pollen data at this level of detail has been made publicly available. Grass pollen metrics were excluded from selected products to align with NAB and CDC data-sharing policies.\n\nPollen concentrations are reported as pollen grains per cubic meter (PPCM) and provided for each year of data available. The pollen data are available from 2003 through 2024 and includes ready-to-use pollen measures including: main pollen season (MPS) start date, peak date, end date, season length, total seasonal pollen concentration (i.e., seasonal pollen integral), average seasonal pollen concentration, peak concentration, and the number of pollen observations per year. Data availability varies by year and pollen type for each NAB site. This dataset is part of a series of pollen datasets from the NAB, processed and standardized by the Division of Environmental Health Science and Practice (DEHSP), National Center for Environmental Health (NCEH), CDC. Further details about the pollen data, including collection, counting, and calculations, can be found here: https://www.mdpi.com/3954654",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 150,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42504559,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789501461,
+    "publicationGroup": 20584253,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1789745969,
+    "rowsUpdatedBy": "k59p-qqrp",
+    "tableId": 20584253,
+    "totalTimesRated": 0,
+    "viewCount": 449,
+    "viewLastModified": 1790116099,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1789501461,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7692262,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789501461,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789501461,
+          "failureCount": 0,
+          "startedAt": 1789501461,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "k59p-qqrp",
+          "displayName": "Arie Manangan"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Quality": {
+          "Suggested Citation": "Manangan, A.P.; Brown, C.L.; Werner, A.K.; Katz, D.S.W.; Rorie, A.; Voelker, D.; Gabrish, P.; Hess, J.J.; Schramm, P.J. Pollen Season Timing and Concentrations in the United States: Developing a Standardized Pollen Dataset Using Data from the National Allergy Bureau (NAB) (2003–2024). Atmosphere 2026, 17, 635. https://doi.org/10.3390/atmos17070635"
+        },
+        "Common Core": {
+          "Contact Email": "climateandhealth@cdc.gov",
+          "Contact Name": "CHP Support",
+          "Update Frequency": "Annually",
+          "Temporal Applicability": "Yearly",
+          "Program Code": "009:032",
+          "Geographic Coverage": "Cities (point locations)",
+          "Publisher": "National Center for Environmental Health",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Public Access Level": "public"
+        }
+      },
+      "rowLabel": "Yearly pollen concentration observation for a specific NAB pollen station for a specific pollen type",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "k59p-qqrp",
+      "displayName": "Arie Manangan",
+      "screenName": "Arie Manangan",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "k59p-qqrp",
+      "displayName": "Arie Manangan",
+      "screenName": "Arie Manangan",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "pollen",
+      "allergy",
+      "environmental health",
+      "air quality",
+      "hayfever",
+      "allergic rhinitis",
+      "pollen count",
+      "pollen concentrations",
+      "aeroallergens",
+      "allergen exposure",
+      "respiratory health",
+      "asthma triggers",
+      "seasonal allergies",
+      "high pollen days",
+      "allergy season",
+      "tree pollen",
+      "weed pollen"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "bgxp-nxmn",
+    "name": "Weekly Grouped Pollen Concentrations (Trees and Weeds) for Select United States Cities, 2003-2024",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "National Center for Environmental Health",
+    "createdAt": 1789490684,
+    "description": "The National Allergy Bureau™ (NAB™) commonly provides grouped pollen levels. In this dataset, grouped trees and grouped weeds are provided as weekly pollen concentrations using data from the NAB. Grouped grass pollen metrics were excluded from selected products to align with data-sharing policies. Public release of grouped grass data could allow inference of taxa-specific concentrations in some contexts; therefore, these metrics are not included.\n\nPollen concentrations are reported as pollen grains per cubic meter (PPCM) and provided for each calendar week. This dataset is part of a series of pollen datasets from the NAB, processed and standardized by the Division of Environmental Health Science and Practice (DEHSP), National Center for Environmental Health (NCEH), CDC. Further details about the pollen data, including collection, counting, and calculations, can be found here: https://www.mdpi.com/3954654",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 118,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42504542,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789491856,
+    "publicationGroup": 20584237,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1789491825,
+    "rowsUpdatedBy": "k59p-qqrp",
+    "tableId": 20584237,
+    "totalTimesRated": 0,
+    "viewCount": 487,
+    "viewLastModified": 1790119357,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1789491857,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7690275,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789491857,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789491857,
+          "failureCount": 0,
+          "startedAt": 1789491857,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "k59p-qqrp",
+          "displayName": "Arie Manangan"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Quality": {
+          "Suggested Citation": "Manangan, A.P.; Brown, C.L.; Werner, A.K.; Katz, D.S.W.; Rorie, A.; Voelker, D.; Gabrish, P.; Hess, J.J.; Schramm, P.J. Pollen Season Timing and Concentrations in the United States: Developing a Standardized Pollen Dataset Using Data from the National Allergy Bureau (NAB) (2003–2024). Atmosphere 2026, 17, 635. https://doi.org/10.3390/atmos17070635"
+        },
+        "Common Core": {
+          "Contact Email": "climateandhealth@cdc.gov",
+          "References": "https://doi.org/10.3390/atmos17070635",
+          "Contact Name": "CHP Support",
+          "Update Frequency": "Annually",
+          "Temporal Applicability": "Weekly",
+          "Program Code": "009:032",
+          "Publisher": "National Center for Environmental Health",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Public Access Level": "public"
+        }
+      },
+      "rowLabel": "Weekly pollen concentration observation for each NAB pollen station for a specific pollen type (e.g., Grouped Trees Pollen, Grouped Weeds Pollen)",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "k59p-qqrp",
+      "displayName": "Arie Manangan",
+      "screenName": "Arie Manangan",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "k59p-qqrp",
+      "displayName": "Arie Manangan",
+      "screenName": "Arie Manangan",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "pollen",
+      "allergy",
+      "environmental health",
+      "air quality",
+      "hayfever",
+      "allergic rhinitis",
+      "pollen count",
+      "pollen concentrations",
+      "aeroallergens",
+      "allergen exposure",
+      "respiratory health",
+      "asthma triggers",
+      "seasonal allergies",
+      "high pollen days",
+      "allergy season",
+      "tree pollen",
+      "weed pollen"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "5djz-e8qk",
+    "name": "Commercially Available Filovirus Real-Time and Nested RT-PCR Assays",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1789407056,
+    "description": "Please see the \"Commercially Available Real-Time and Nested RT-PCR Assays for Filovirus Detection Overview and Operational Considerations\" attachment for a description of the dataset. Two supplementary datasets are also included under attachments \"Regulatory-Emergency Use Status\" and \"Abbreviations and Notes\".",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 82,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42500689,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789408027,
+    "publicationGroup": 20582354,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1789408015,
+    "rowsUpdatedBy": "9csa-7yg2",
+    "tableId": 20582354,
+    "totalTimesRated": 0,
+    "viewCount": 104,
+    "viewLastModified": 1789408027,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1789408027,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7687687,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789408027,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789408027,
+          "failureCount": 0,
+          "startedAt": 1789408027,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "9csa-7yg2",
+          "displayName": "AMY SCHUH"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "Regulatory-Emergency Use Status.xlsx",
+          "assetId": "b89e5a9b-e235-4917-b120-e7c16b1e6858",
+          "name": "Regulatory-Emergency Use Status.xlsx"
+        },
+        {
+          "filename": "Abbreviations and Notes.xlsx",
+          "assetId": "e8f5f21f-6874-4acd-8d14-cd0cd27acf8d",
+          "name": "Abbreviations and Notes.xlsx"
+        },
+        {
+          "filename": "Commercially Available Real-Time and Nested RT-PCR Assays for Filovirus Detection Overview and Operational Considerations_8Aug26.docx",
+          "assetId": "f0b79d55-b656-4e8a-8943-23a5f5143e29",
+          "name": "Commercially Available Real-Time and Nested RT-PCR Assays for Filovirus Detection Overview and Operational Considerations_8Aug26.docx"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "wuc2@cdc.gov",
+          "Contact Name": "Amy Schuh",
+          "Program Code": "009:028",
+          "Bureau Code": "009:20"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "9csa-7yg2",
+      "displayName": "AMY SCHUH",
+      "screenName": "AMY SCHUH",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "9csa-7yg2",
+      "displayName": "AMY SCHUH",
+      "screenName": "AMY SCHUH",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "435k-2whj",
+    "name": "Daily Grouped Pollen Concentrations (Trees and Weeds) for Select United States Cities, 2003-2024",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "National Center for Environmental Health",
+    "createdAt": 1789403191,
+    "description": "The National Allergy Bureau™ (NAB™) commonly provides grouped pollen levels. In this dataset, grouped trees and grouped weeds are provided as daily pollen levels and concentrations using data from the NAB. Grouped grass pollen metrics were excluded from selected products to align with data-sharing policies. Public release of grouped grass data could allow inference of taxa-specific concentrations in some contexts; therefore, these metrics are not included.\n\nPollen concentrations are reported as pollen grains per cubic meter (PPCM). Daily pollen levels are determined from PPCM concentrations that fall within the following thresholds, which are based on the proportion of days exceeding these PPCM numbers. The pollen levels provided in this dataset correspond to the following grouped pollen concentrations:\nGrouped Trees\nVery High: ≥1500 PPCM\nHigh: ≥90–1500 PPCM\nModerate: ≥15–90 PPCM\nLow: <15 PPCM\n\nGrouped Weeds\nVery High: ≥500 PPCM\nHigh: ≥50–500 PPCM\nModerate: ≥10–50 PPCM\nLow: <10 PPCM \n\nPollen dates were converted to a 365-day-of-year format using 2024 as the reference year for all date calculations, which is the last year of pollen data for this release. This dataset is part of a series of pollen datasets from the NAB, processed and standardized by the Division of Environmental Health Science and Practice (DEHSP), National Center for Environmental Health (NCEH), CDC. Further details about the pollen data, including collection, counting, and calculations, can be found here: https://www.mdpi.com/3954654",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 126,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42500636,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789410630,
+    "publicationGroup": 20582313,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1789490246,
+    "rowsUpdatedBy": "k59p-qqrp",
+    "tableId": 20582313,
+    "totalTimesRated": 0,
+    "viewCount": 657,
+    "viewLastModified": 1790119377,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1789410630,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7687693,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789410630,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789410630,
+          "failureCount": 0,
+          "startedAt": 1789410630,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "k59p-qqrp",
+          "displayName": "Arie Manangan"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Quality": {
+          "Suggested Citation": "Manangan, A.P.; Brown, C.L.; Werner, A.K.; Katz, D.S.W.; Rorie, A.; Voelker, D.; Gabrish, P.; Hess, J.J.; Schramm, P.J. Pollen Season Timing and Concentrations in the United States: Developing a Standardized Pollen Dataset Using Data from the National Allergy Bureau (NAB) (2003–2024). Atmosphere 2026, 17, 635. https://doi.org/10.3390/atmos17070635"
+        },
+        "Common Core": {
+          "Contact Email": "climateandhealth@cdc.gov",
+          "References": "https://doi.org/10.3390/atmos17070635",
+          "Contact Name": "CHP Support",
+          "Update Frequency": "Annually",
+          "Temporal Applicability": "Daily",
+          "Program Code": "009:032",
+          "Geographic Coverage": "Cities (point locations)",
+          "Publisher": "National Center for Environmental Health",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Update Frequency": "Annually",
+          "Restriction Status": "Public",
+          "Public Access Level": "public"
+        }
+      },
+      "rowLabel": "Daily pollen concentration observation for a specific NAB pollen station for a specific pollen type (e.g., Grouped Trees Pollen, Grouped Weeds Pollen)",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "k59p-qqrp",
+      "displayName": "Arie Manangan",
+      "screenName": "Arie Manangan",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "k59p-qqrp",
+      "displayName": "Arie Manangan",
+      "screenName": "Arie Manangan",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "pollen",
+      "allergy",
+      "environmental health",
+      "air quality",
+      "hayfever",
+      "allergic rhinitis",
+      "pollen count",
+      "pollen concentrations",
+      "aeroallergens",
+      "allergen exposure",
+      "respiratory health",
+      "asthma triggers",
+      "seasonal allergies",
+      "high pollen days",
+      "allergy season",
+      "tree pollen",
+      "weed pollen"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "inau-mhw3",
+    "name": "Quantitative headform fit evaluation and predictive modeling to assist with selecting N95 filtering facepiece respirators to mitigate respiratory hazards",
+    "assetType": "file",
+    "averageRating": 0,
+    "blobFilename": "RD-1122-2026-0.zip",
+    "blobFileSize": 2133234,
+    "blobId": "faa0f882-c5c3-49af-9693-9ab2b8a07ea2",
+    "blobMimeType": "application/x-zip-compressed",
+    "category": "National Institute for Occupational Safety and Health",
+    "createdAt": 1788956982,
+    "description": "Proper respirator fit is essential for ensuring that NIOSH Approved® N95® filtering facepiece respirators (FFRs) provide their expected level of respiratory protection. Because respirator fit varies according to both respirator design and an individual's facial dimensions, selecting a well-fitting respirator can be difficult, particularly in settings where formal respirator fit testing is unavailable or resources are limited. To better understand these relationships, the National Institute for Occupational Safety and Health (NIOSH) conducted a laboratory study evaluating the fit performance of 12 NIOSH Approved N95 FFR models distributed through the U.S. Strategic National Stockpile (SNS). Quantitative fit evaluations were performed using five ISO Static Advanced Headforms, which represent approximately 95% of the U.S. worker population based on NIOSH’s 2003 Anthropometric Survey, resulting in 540 individual headform fit tests. These experimental data were subsequently combined with anthropometric data from the 2003 NIOSH survey to develop and evaluate predictive models that estimate an individual's representative headform size from a limited set of facial measurements.\nThe datasets were collected to improve understanding of how respirator fit varies across representative facial sizes and to support development of tools that may assist workers, employers, emergency response organizations, researchers, and the public in identifying respirator models that are more likely to provide an adequate fit. The quantitative fit evaluation data were used to characterize fit performance across multiple respirator models and headform sizes, while the anthropometric modeling data were used to develop and evaluate multinomial logistic regression models capable of predicting headform size with high accuracy under laboratory conditions. Because the fit evaluation was conducted using laboratory manikin headforms rather than human subjects, the findings should not be interpreted as a replacement for OSHA-accepted respirator fit testing. Additionally, only selected NIOSH Approved N95 FFR models available through the SNS at the time of the study were evaluated, and further validation with human subjects is needed before predictive modeling approaches are applied in real-world respirator selection. Nevertheless, these datasets provide a valuable resource for research involving respirator fit, facial anthropometry, respirator design, and development of future respirator selection and fit assessment tools.",
+    "diciBackend": false,
+    "displayType": "blob",
+    "downloadCount": 893,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42484991,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1788972634,
+    "publicationGroup": 20571347,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1788956982,
+    "tableId": 20571347,
+    "totalTimesRated": 0,
+    "viewCount": 184,
+    "viewLastModified": 1790117944,
+    "viewType": "blobby",
+    "approvals": [
+      {
+        "reviewedAt": 1788972635,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7675642,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1788972635,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1788972635,
+          "failureCount": 0,
+          "startedAt": 1788972635,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "p2ji-vjyr",
+          "displayName": "GLENN DOYLE"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "PPEConcerns@cdc.gov",
+          "Contact Name": "Research Branch (RB) National Personal Protective Technology Laboratory (NPPTL)",
+          "Program Code": "009:034",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "PPEConcerns@cdc.gov",
+          "Contact Name": "Research Branch (RB) National Personal Protective Technology Laboratory (NPPTL)",
+          "Program Code": "009:034",
+          "Restriction Status": "public",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "p2ji-vjyr",
+      "displayName": "GLENN DOYLE",
+      "screenName": "GLENN DOYLE",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "p2ji-vjyr",
+      "displayName": "GLENN DOYLE",
+      "screenName": "GLENN DOYLE",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["workplace"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "y5ii-knwc",
+    "name": "Stroke Mortality Data Among US Adults (35+) by State/Territory and County – 2022-2024",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Heart Disease & Stroke Prevention",
+    "createdAt": 1783438334,
+    "description": "2022 to 2024, 3-year average. Rates are age-standardized. County rates are spatially smoothed. The data can be viewed by sex and racial/ethnic group. Data source: National Vital Statistics System and U.S. Census Bureau. Additional data, maps, and methodology can be viewed on the Interactive Atlas of Heart Disease and Stroke. https://www.cdc.gov/heart-disease-stroke-atlas/about/index.html",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 1730,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42268902,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1783439087,
+    "publicationGroup": 20452655,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1783439050,
+    "rowsUpdatedBy": "a7ta-3b7u",
+    "tableId": 20452655,
+    "totalTimesRated": 0,
+    "viewCount": 4832,
+    "viewLastModified": 1790121208,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1783449311,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7559499,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1783449311,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1783449311,
+          "failureCount": 0,
+          "startedAt": 1783449311,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a7ta-3b7u",
+          "displayName": "DHDSP Small Area Analysis Team"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Quality": {
+          "Geospatial Resolution": "County",
+          "Suggested Citation": "Centers for Disease Control and Prevention. Stroke Mortality Data Among US Adults (35+) by State/Territory and County – 2022-2024. Accessed [insert date]. https://data.cdc.gov/dataset/Stroke-Mortality-Data-Among-US-Adults-35-by-State-/y5ii-knwc ",
+          "Geographic Unit of Analysis": "County",
+          "Analytical Methods Reference": "https://www.cdc.gov/heart-disease-stroke-atlas/statistical-methods/index.html"
+        },
+        "Common Core": {
+          "Contact Email": "dhdsprequests@cdc.gov",
+          "Homepage": "https://www.cdc.gov/heart-disease-and-stroke-data/index.html",
+          "Contact Name": "DHDSP Requests",
+          "Issued": "July 7, 2026",
+          "Program Code": "009:029",
+          "Geographic Coverage": "All counties in the United States",
+          "Publisher": "Centers for Disease Control and Prevention",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "dhdsprequests@cdc.gov",
+          "Geographic Name": "All counties in the United States",
+          "Contact Name": "DHDSP Requests",
+          "Program Code": "009:029",
+          "Restriction Status": "public",
+          "Publisher": "Centers for Disease Control and Prevention",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Dataset Information": {
+          "Glossary/Methodology": "ICD 10 codes: I60-I69"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "a7ta-3b7u",
+      "displayName": "DHDSP Small Area Analysis Team",
+      "screenName": "DHDSP Small Area Analysis Team",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "a7ta-3b7u",
+      "displayName": "DHDSP Small Area Analysis Team",
+      "screenName": "DHDSP Small Area Analysis Team",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "stroke",
+      "cerebrovascular disease",
+      "cardiovascular disease",
+      "county",
+      "counties",
+      "cardiovascular"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "mri7-5jtw",
+    "name": "Heart Disease Mortality Data Among US Adults (35+) by State/Territory and County – 2022-2024",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Heart Disease & Stroke Prevention",
+    "createdAt": 1783337832,
+    "description": "2022 to 2024, 3-year average. Rates are age-standardized. County rates are spatially smoothed. The data can be viewed by sex and racial/ethnic group. Data source: National Vital Statistics System. Additional data, maps, and methodology can be viewed on the Interactive Atlas of Heart Disease and Stroke",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 880,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42264065,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1783436648,
+    "publicationGroup": 20450425,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1783436631,
+    "rowsUpdatedBy": "a7ta-3b7u",
+    "tableId": 20450425,
+    "totalTimesRated": 0,
+    "viewCount": 3933,
+    "viewLastModified": 1790121195,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1783449303,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7559498,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1783449303,
+        "targetAudience": "public",
+        "workflowId": 2100,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1783449303,
+          "failureCount": 0,
+          "startedAt": 1783449303,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a7ta-3b7u",
+          "displayName": "DHDSP Small Area Analysis Team"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Quality": {
+          "Geospatial Resolution": "County",
+          "Suggested Citation": "Centers for Disease Control and Prevention. Heart Disease Mortality Data Among US Adults (35+) by State/Territory and County – 2022-2024. Accessed [insert date]. https://data.cdc.gov/dataset/Heart-Disease-Mortality-Data-Among-US-Adults-35-by/mri7-5jtw",
+          "Geographic Unit of Analysis": "County",
+          "Analytical Methods Reference": "https://www.cdc.gov/heart-disease-stroke-atlas/statistical-methods/index.html"
+        },
+        "Common Core": {
+          "Contact Email": "dhdsprequests@cdc.gov",
+          "Homepage": "https://www.cdc.gov/heart-disease-and-stroke-data/index.html",
+          "Contact Name": "DHDSP Requests",
+          "Issued": "July 6, 2026",
+          "Program Code": "009:029",
+          "Geographic Coverage": "All counties in the United States",
+          "Publisher": "Centers for Disease Control and Prevention",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "dhdsprequests@cdc.gov",
+          "Geographic Name": "All counties in the United States",
+          "Contact Name": "DHDSP Requests",
+          "Program Code": "009:029",
+          "Restriction Status": "public",
+          "Publisher": "Centers for Disease Control and Prevention",
+          "Bureau Code": "009:20",
+          "Public Access Level": "public"
+        },
+        "Dataset Information": {
+          "Glossary/Methodology": "ICD 10 codes: I00-I09, I11, I13, I20-I51  "
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "a7ta-3b7u",
+      "displayName": "DHDSP Small Area Analysis Team",
+      "screenName": "DHDSP Small Area Analysis Team",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "a7ta-3b7u",
+      "displayName": "DHDSP Small Area Analysis Team",
+      "screenName": "DHDSP Small Area Analysis Team",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "heart disease",
+      "cardiovascular disease",
+      "cardiovascular",
+      "counties",
+      "county",
+      "heart"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

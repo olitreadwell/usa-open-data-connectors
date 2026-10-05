@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "total": 27835,
+    "parameters": { "filters": "", "fields": "NAME,CITY,STALP", "limit": "10" },
+    "index": { "name": "institutions_20261002090007", "createTimestamp": "2026-10-02T11:56:31Z" }
+  },
+  "data": [
+    {
+      "data": { "CITY": "Sanford", "STALP": "ME", "NAME": "Northeast Bank of Sanford", "ID": "10" },
+      "score": 1
+    },
+    {
+      "data": { "CITY": "Bentonville", "STALP": "AR", "NAME": "Bank of Bentonville", "ID": "100" },
+      "score": 1
+    },
+    {
+      "data": {
+        "CITY": "Wheeling",
+        "STALP": "WV",
+        "NAME": "Progressive Bank, National Association",
+        "ID": "10002"
+      },
+      "score": 1
+    },
+    {
+      "data": {
+        "CITY": "White Sulphur Springs",
+        "STALP": "WV",
+        "NAME": "First Citizens Bank & Trust Company",
+        "ID": "10003"
+      },
+      "score": 1
+    },
+    {
+      "data": { "CITY": "Markesan", "STALP": "WI", "NAME": "Ergo Bank", "ID": "10004" },
+      "score": 1
+    },
+    {
+      "data": {
+        "CITY": "Green Bay",
+        "STALP": "WI",
+        "NAME": "Valley Bank, Green Bay",
+        "ID": "10005"
+      },
+      "score": 1
+    },
+    {
+      "data": {
+        "CITY": "Jefferson",
+        "STALP": "WI",
+        "NAME": "Jefferson County Bank",
+        "ID": "10006"
+      },
+      "score": 1
+    },
+    {
+      "data": { "CITY": "Cedarburg", "STALP": "WI", "NAME": "Partnership Bank", "ID": "10007" },
+      "score": 1
+    },
+    {
+      "data": {
+        "CITY": "Elkhart Lake",
+        "STALP": "WI",
+        "NAME": "Bank of Elkhart Lake",
+        "ID": "10008"
+      },
+      "score": 1
+    },
+    {
+      "data": { "CITY": "Delafield", "STALP": "WI", "NAME": "Bank One, Waukesha", "ID": "10009" },
+      "score": 1
+    }
+  ],
+  "totals": { "count": 27835 }
+}

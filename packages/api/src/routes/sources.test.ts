@@ -37,6 +37,17 @@ describe('GET /sources', () => {
       'usgs-peak-streamflow',
       'cpsc-product-recalls',
       'cfpb-consumer-complaints',
+      'treasury-debt-to-penny',
+      'sec-edgar-filings',
+      'fdic-bank-directory',
+      'clinicaltrials-studies',
+      'nws-point-forecast',
+      'usaspending-agencies',
+      'epa-envirofacts-facilities',
+      'ncbi-pubmed-search',
+      'cdc-socrata-catalogue',
+      'healthdata-socrata-catalogue',
+      'bts-transportation-stats',
     ]);
     for (const source of sources) {
       expect(Object.keys(source).sort()).toEqual(['auth', 'description', 'id', 'name']);

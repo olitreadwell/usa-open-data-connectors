@@ -1,0 +1,1163 @@
+[
+  {
+    "id": "p8sk-eeaq",
+    "name": "Pocket Guide to Transportation - redesign",
+    "assetType": "story",
+    "averageRating": 0,
+    "category": "Research and Statistics",
+    "createdAt": 1790617994,
+    "description": "The BTS Pocket Guide to Transportation is a quick reference guide that provides transportation statistics at your fingertips. It provides key information and highlights major trends on the U.S. transportation system. The Pocket Guide is available in both web and print editions. It includes dynamic data updates to highlight the latest statistics, enhanced navigation, and sharable data to social media.",
+    "diciBackend": false,
+    "displayType": "story",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42612944,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790618486,
+    "publicationGroup": 20640405,
+    "publicationStage": "published",
+    "resourceName": "pocketguide2",
+    "rowsUpdatedAt": 1790617994,
+    "tableId": 20640405,
+    "totalTimesRated": 0,
+    "viewCount": 52,
+    "viewLastModified": 1790868128,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1790618502,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7764683,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790618487,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "ej86-wwb4",
+          "displayName": "Sean Jahanmir"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790618502,
+          "failureCount": 0,
+          "startedAt": 1790618502,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ej86-wwb4",
+          "displayName": "Sean Jahanmir"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "btspgt@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Pocket Guide to Transportation Data Program",
+          "Update Frequency": "R/P1Y",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Is Quality Data": "true",
+          "Bureau Code": "021:00",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "btspgt@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Pocket Guide to Transportation Data Program",
+          "Program Code": "021:053",
+          "Restriction Status": "Public",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:00"
+        }
+      },
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "t6gj-3a9f",
+      "displayName": "BTS Pocket Guide to Transportation Program",
+      "screenName": "BTS Pocket Guide to Transportation Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "t6gj-3a9f",
+      "displayName": "BTS Pocket Guide to Transportation Program",
+      "screenName": "BTS Pocket Guide to Transportation Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["pocket guide to transportation"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "77a8-zryr",
+    "name": "BTS Freight Mobility Initiative: County-to-county truck travel times (2025) - Experimental",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Trucking and Motorcoaches",
+    "createdAt": 1786979922,
+    "description": "Experimental estimates of the travel times experienced by a sample of freight trucks observed moving between all county pairs in the United States over the course of calendar year 2025.\n\nEstimated by parsing GPS pings collected from a sample of approximately 300,000 trucks as part of the BTS ATRI Freight Mobility Initiative, these travel times were estimated (1) using the amount of elapsed time between the times that a truck was observed sequentially departing and arriving in each named county pair and (2) calculating 25th, 50th, and 75th travel times for all trucks observed moving between those counties over the course of 2025.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 11,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42412343,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790619441,
+    "publicationGroup": 20525427,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790619288,
+    "rowsUpdatedBy": "9jkt-td85",
+    "tableId": 20525427,
+    "totalTimesRated": 0,
+    "viewCount": 65,
+    "viewLastModified": 1790684316,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790688521,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7766332,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790684338,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "iugb-aqy2",
+          "displayName": "Simona Jones"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790688521,
+          "failureCount": 0,
+          "startedAt": 1790688521,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ue3d-2yqr",
+          "displayName": "theresa.firestine"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Homepage": "https://www.bts.gov/explore-topics-and-geography/topics/freight-transportation/trucking-movements-bts-atri-freight",
+          "Contact Name": "BTS Freight Mobility Initiative",
+          "Update Frequency": "R/P1Y",
+          "Temporal Applicability": "Annual",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:04",
+          "Contact Email": "btsfmi@dot.gov",
+          "Language": "en-US",
+          "Geographic Coverage": "United States",
+          "Access Level Comment": "Public",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "btsfmi@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Freight Mobility Initiative",
+          "Program Code": "021:053",
+          "Restriction Status": "Public",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:00"
+        }
+      },
+      "rowLabel": "County pair",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "9jkt-td85",
+      "displayName": "BTS Freight Mobility Initiative (FMI)",
+      "profileImageUrlLarge": "/api/users/9jkt-td85/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/9jkt-td85/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/9jkt-td85/profile_images/TINY",
+      "screenName": "BTS Freight Mobility Initiative (FMI)",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "9jkt-td85",
+      "displayName": "BTS Freight Mobility Initiative (FMI)",
+      "profileImageUrlLarge": "/api/users/9jkt-td85/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/9jkt-td85/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/9jkt-td85/profile_images/TINY",
+      "screenName": "BTS Freight Mobility Initiative (FMI)",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "trucks",
+      "freight transportation",
+      "trucking",
+      "county",
+      "travel time",
+      "gps",
+      "probe"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "efdz-vdab",
+    "name": "Sales Tax Collections by State (quarterly)",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Research and Statistics",
+    "createdAt": 1783696753,
+    "description": "Quarterly estimates of state and local government tax revenue from motor fuel sales by state from U.S. Census Bureau Quarterly Summary of State and Local Government Tax Revenue.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 167,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42277187,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1783697272,
+    "publicationGroup": 20457148,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1783697255,
+    "rowsUpdatedBy": "ue3d-2yqr",
+    "tableId": 20457148,
+    "totalTimesRated": 0,
+    "viewCount": 296,
+    "viewLastModified": 1790683780,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1783697608,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7564468,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1783697272,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "ue3d-2yqr",
+          "displayName": "theresa.firestine"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1783697608,
+          "failureCount": 0,
+          "startedAt": 1783697608,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ue3d-2yqr",
+          "displayName": "theresa.firestine"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "bts@dot.gov",
+          "Language": "en-US",
+          "Phone": "202-366-DATA(3282)",
+          "Contact Name": "Bureau of Transportation Statistics",
+          "Update Frequency": "R/P3M",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Is Quality Data": "true",
+          "Bureau Code": "021:00",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "bts@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "Bureau of Transportation Statistics",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:00",
+          "Public Access Level": "public"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "2zpf-yds6",
+      "displayName": "BTS Transportation Economic Trends Program",
+      "screenName": "BTS Transportation Economic Trends Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "2zpf-yds6",
+      "displayName": "BTS Transportation Economic Trends Program",
+      "screenName": "BTS Transportation Economic Trends Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["motor fuel tax", "gas tax", "fuel tax", "fuel", "state"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "4a5a-igqv",
+    "name": "Freight by Month",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Aviation",
+    "createdAt": 1781197270,
+    "description": "Commercial air passengers, seats, freight, and mail by year and month.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 20,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "jqx4-4iha",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42210570,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790867995,
+    "publicationGroup": 20416172,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1781205317,
+    "rowsUpdatedBy": "7cqb-ye3q",
+    "tableId": 20417933,
+    "totalTimesRated": 0,
+    "viewCount": 115,
+    "viewLastModified": 1790868035,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787236057,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7771067,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787234142,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "y96g-mvgi",
+          "displayName": "Robinson, Ramond (OST)"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787236057,
+          "failureCount": 0,
+          "startedAt": 1787236057,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ggq5-z89b",
+          "displayName": "Hyun Kim"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": true,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Aviation Facts and Figures Program",
+          "Update Frequency": "R/P1Y",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Is Quality Data": "true",
+          "Bureau Code": "021:04",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Aviation Facts and Figures Program",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:00"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "uc5b-485g",
+    "name": "Mail by Month",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Aviation",
+    "createdAt": 1781196712,
+    "description": "Commercial air passengers, seats, freight, and mail by year and month.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 3,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "jqx4-4iha",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42208488,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1781198343,
+    "publicationGroup": 20416172,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1781205317,
+    "rowsUpdatedBy": "7cqb-ye3q",
+    "tableId": 20417933,
+    "totalTimesRated": 0,
+    "viewCount": 113,
+    "viewLastModified": 1790681955,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787236055,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7629849,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787234203,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "y96g-mvgi",
+          "displayName": "Robinson, Ramond (OST)"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787236055,
+          "failureCount": 0,
+          "startedAt": 1787236055,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ggq5-z89b",
+          "displayName": "Hyun Kim"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Aviation Facts and Figures Program",
+          "Update Frequency": "R/P1M",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Is Quality Data": "true",
+          "Bureau Code": "021:00",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Aviation Facts and Figures Program",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:00",
+          "Public Access Level": "public"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["aviation", "aviation facts and figures", "aff"],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "xbmf-y2a8",
+    "name": "Seats by Month",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Aviation",
+    "createdAt": 1781193198,
+    "description": "Commercial air passengers, seats, freight, and mail by year and month.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 8,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "jqx4-4iha",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42208443,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1781193501,
+    "publicationGroup": 20416172,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1781205317,
+    "rowsUpdatedBy": "7cqb-ye3q",
+    "tableId": 20417933,
+    "totalTimesRated": 0,
+    "viewCount": 131,
+    "viewLastModified": 1790682153,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1784224341,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7574043,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1784222361,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "y96g-mvgi",
+          "displayName": "Robinson, Ramond (OST)"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1784224341,
+          "failureCount": 0,
+          "startedAt": 1784224341,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ggq5-z89b",
+          "displayName": "Hyun Kim"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Aviation Facts and Figures Program",
+          "Update Frequency": "R/P3M",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Is Quality Data": "true",
+          "Bureau Code": "021:00",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Aviation Facts and Figures Program",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:00",
+          "Public Access Level": "public"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["aviation", "aviation facts and figures", "aff"],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "26wb-322s",
+    "name": "Passengers by Month",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Aviation",
+    "createdAt": 1781192397,
+    "description": "Commercial air passengers, seats, freight, and mail by year and month.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 21,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "jqx4-4iha",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42617954,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790769921,
+    "publicationGroup": 20416172,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1781205317,
+    "rowsUpdatedBy": "7cqb-ye3q",
+    "tableId": 20417933,
+    "totalTimesRated": 0,
+    "viewCount": 334,
+    "viewLastModified": 1790769921,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1784222244,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7767957,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1784222102,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "y96g-mvgi",
+          "displayName": "Robinson, Ramond (OST)"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1784222244,
+          "failureCount": 0,
+          "startedAt": 1784222244,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ggq5-z89b",
+          "displayName": "Hyun Kim"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS Aviation Facts and Figures Program",
+          "Update Frequency": "R/P1M",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Is Quality Data": "true",
+          "Bureau Code": "021:00",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "OST-R",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Designation Indicator": "Controlled by DOT OST-R",
+          "Bureau Code": "021:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["aviation", "aviation facts and figures", "aff"],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "ycbf-f4fr",
+    "name": "Load Factor by Month",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Aviation",
+    "createdAt": 1781192278,
+    "description": "Commercial air passengers, seats, freight, and mail by year and month.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 16,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "jqx4-4iha",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42238765,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790867766,
+    "publicationGroup": 20416172,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1781205317,
+    "rowsUpdatedBy": "7cqb-ye3q",
+    "tableId": 20417933,
+    "totalTimesRated": 0,
+    "viewCount": 272,
+    "viewLastModified": 1790867803,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1784224343,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7771055,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1784222377,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "y96g-mvgi",
+          "displayName": "Robinson, Ramond (OST)"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1784224344,
+          "failureCount": 0,
+          "startedAt": 1784224343,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ggq5-z89b",
+          "displayName": "Hyun Kim"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": true,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Contact Name": "OST-R",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:04",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "BTSAviationFacts@dot.gov",
+          "Contact Name": "OST-R",
+          "Publisher": "Bureau of Transportation Statistics"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "th5g-u2v6",
+      "displayName": "BTS Aviation Facts and Figures Program",
+      "screenName": "BTS Aviation Facts and Figures Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "2nk8-933h",
+    "name": "2024 NCFO Terminals Operators Supplement",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Maritime and Waterways",
+    "createdAt": 1781178380,
+    "description": "This supplemental file is used to generate the Terminal Summary File. It contains operator responses form the terminal where available. These are aggregated to create a single response per terminal in the case where there are multiple operators per ferry terminal",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 341,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42208298,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1781178685,
+    "publicationGroup": 20417840,
+    "publicationStage": "published",
+    "resourceName": "NCFO_Terminal_Operators_Supplement",
+    "rowsUpdatedAt": 1781178669,
+    "rowsUpdatedBy": "knxt-vpv4",
+    "tableId": 20417840,
+    "totalTimesRated": 0,
+    "viewCount": 307,
+    "viewLastModified": 1790682273,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1781291366,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7520491,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1781286437,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "dszc-hrin",
+          "displayName": "Cha-Chi Fan"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1781291366,
+          "failureCount": 0,
+          "startedAt": 1781291366,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "knxt-vpv4",
+          "displayName": "National Census of Ferry Operators"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "ferry@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS National Census of Ferry Operators",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Is Quality Data": "true",
+          "Bureau Code": "021:04",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "ferry@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS National Census of Ferry Operators",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:04",
+          "Public Access Level": "public"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "knxt-vpv4",
+      "displayName": "National Census of Ferry Operators",
+      "screenName": "National Census of Ferry Operators",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "knxt-vpv4",
+      "displayName": "National Census of Ferry Operators",
+      "screenName": "National Census of Ferry Operators",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["ncfo", "ferry", "passenger ferry", "ferry operators", "ferry transit"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "wmvq-by24",
+    "name": "2024 NCFO Terminals Supplemental",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Maritime and Waterways",
+    "createdAt": 1781178045,
+    "description": "This is a supplemental file used in making the Terminal Summary File. It is just an ID, a name and the geographical attributes of a terminal",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 263,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42208297,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1781178350,
+    "publicationGroup": 20417839,
+    "publicationStage": "published",
+    "resourceName": "NCFO_2024_Terminals_Supplement",
+    "rowsUpdatedAt": 1781178339,
+    "rowsUpdatedBy": "knxt-vpv4",
+    "tableId": 20417839,
+    "totalTimesRated": 0,
+    "viewCount": 340,
+    "viewLastModified": 1790682486,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1781291363,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7520490,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1781286422,
+        "targetAudience": "public",
+        "workflowId": 2520,
+        "reviewer": {
+          "id": "dszc-hrin",
+          "displayName": "Cha-Chi Fan"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1781291363,
+          "failureCount": 0,
+          "startedAt": 1781291363,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "knxt-vpv4",
+          "displayName": "National Census of Ferry Operators"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "ferry@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS National Census of Ferry Operators",
+          "License": "http://www.usa.gov/publicdomain/label/1.0/",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Is Quality Data": "true",
+          "Bureau Code": "021:04",
+          "Public Access Level": "public"
+        },
+        "Common Core 3": {
+          "Contact Email": "ferry@dot.gov",
+          "Language": "en-US",
+          "Contact Name": "BTS National Census of Ferry Operators",
+          "Program Code": "021:053",
+          "Publisher": "Bureau of Transportation Statistics",
+          "Bureau Code": "021:04",
+          "Public Access Level": "public"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "knxt-vpv4",
+      "displayName": "National Census of Ferry Operators",
+      "screenName": "National Census of Ferry Operators",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "knxt-vpv4",
+      "displayName": "National Census of Ferry Operators",
+      "screenName": "National Census of Ferry Operators",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["ferry", "ncfo", "passenger ferry", "ferry operators", "ferry transit"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

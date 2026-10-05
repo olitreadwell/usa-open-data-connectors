@@ -5,6 +5,17 @@ import { describe, expect, it } from 'vitest';
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { cfpbConsumerComplaintsAdapter } from './cfpbConsumerComplaints.js';
+import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
+import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
+import { clinicalTrialsStudiesAdapter } from './clinicalTrialsStudies.js';
+import { epaEnvirofactsFacilitiesAdapter } from './epaEnvirofactsFacilities.js';
+import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
+import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
+import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
+import { nwsPointForecastAdapter } from './nwsPointForecast.js';
+import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
+import { treasuryDebtToPennyAdapter } from './treasuryDebtToPenny.js';
+import { usaspendingAgenciesAdapter } from './usaspendingAgencies.js';
 import { cpscProductRecallsAdapter } from './cpscProductRecalls.js';
 import { femaDisasterDeclarationsAdapter } from './femaDisasterDeclarations.js';
 import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
@@ -115,6 +126,50 @@ function cfpbFixtureFor(url: URL): string {
           ?.complaintCount ?? 0);
   return JSON.stringify({ hits: { total: { value: count, relation: 'eq' }, hits: [] } });
 }
+const RAW_TREASURY_DEBT_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/treasury-debt-to-penny-2026-10-05.json'),
+  'utf8'
+);
+const RAW_SEC_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/sec-edgar-filings-2026-10-05.json'),
+  'utf8'
+);
+const RAW_FDIC_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/fdic-bank-directory-2026-10-05.json'),
+  'utf8'
+);
+const RAW_CLINICALTRIALS_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/clinicaltrials-studies-2026-10-05.json'),
+  'utf8'
+);
+const RAW_NWS_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/nws-point-forecast-2026-10-05.json'),
+  'utf8'
+);
+const RAW_USASPENDING_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/usaspending-agencies-2026-10-05.json'),
+  'utf8'
+);
+const RAW_EPA_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/epa-envirofacts-facilities-2026-10-05.json'),
+  'utf8'
+);
+const RAW_PUBMED_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/ncbi-pubmed-search-2026-10-05.json'),
+  'utf8'
+);
+const RAW_CDC_CATALOGUE_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/cdc-socrata-catalogue-2026-10-05.json'),
+  'utf8'
+);
+const RAW_HEALTHDATA_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/healthdata-socrata-catalogue-2026-10-05.json'),
+  'utf8'
+);
+const RAW_BTS_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/bts-transportation-stats-2026-10-05.json'),
+  'utf8'
+);
 const OPENFDA_FOOD_RECALL_FIXTURE = JSON.parse(
   readFileSync(
     path.join(process.cwd(), 'src/fixtures/openfda-food-recalls-2026-09-30.json'),
@@ -170,13 +225,17 @@ function rawFixtureForUrl(url: string): string {
     return RAW_USGS_FIXTURE;
   }
   if (hostname === 'data.cdc.gov') {
-    return RAW_CDC_FIXTURE;
+    return parsed.pathname.endsWith('/api/views.json')
+      ? RAW_CDC_CATALOGUE_FIXTURE
+      : RAW_CDC_FIXTURE;
   }
   if (hostname === 'www.ncei.noaa.gov') {
     return RAW_NCEI_FIXTURE;
   }
   if (hostname === 'api.fiscaldata.treasury.gov') {
-    return RAW_TREASURY_FIXTURE;
+    return parsed.pathname.includes('debt_to_penny')
+      ? RAW_TREASURY_DEBT_FIXTURE
+      : RAW_TREASURY_FIXTURE;
   }
   if (hostname === 'www.fema.gov') {
     return RAW_FEMA_FIXTURE;
@@ -189,6 +248,33 @@ function rawFixtureForUrl(url: string): string {
   }
   if (hostname === 'www.consumerfinance.gov') {
     return cfpbFixtureFor(parsed);
+  }
+  if (hostname === 'data.sec.gov') {
+    return RAW_SEC_FIXTURE;
+  }
+  if (hostname === 'banks.data.fdic.gov') {
+    return RAW_FDIC_FIXTURE;
+  }
+  if (hostname === 'clinicaltrials.gov') {
+    return RAW_CLINICALTRIALS_FIXTURE;
+  }
+  if (hostname === 'api.weather.gov') {
+    return RAW_NWS_FIXTURE;
+  }
+  if (hostname === 'api.usaspending.gov') {
+    return RAW_USASPENDING_FIXTURE;
+  }
+  if (hostname === 'data.epa.gov') {
+    return RAW_EPA_FIXTURE;
+  }
+  if (hostname === 'eutils.ncbi.nlm.nih.gov') {
+    return RAW_PUBMED_FIXTURE;
+  }
+  if (hostname === 'healthdata.gov') {
+    return RAW_HEALTHDATA_FIXTURE;
+  }
+  if (hostname === 'data.bts.gov') {
+    return RAW_BTS_FIXTURE;
   }
   return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
@@ -213,6 +299,17 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('usgs-peak-streamflow');
     expect(ids).toContain('cpsc-product-recalls');
     expect(ids).toContain('cfpb-consumer-complaints');
+    expect(ids).toContain('treasury-debt-to-penny');
+    expect(ids).toContain('sec-edgar-filings');
+    expect(ids).toContain('fdic-bank-directory');
+    expect(ids).toContain('clinicaltrials-studies');
+    expect(ids).toContain('nws-point-forecast');
+    expect(ids).toContain('usaspending-agencies');
+    expect(ids).toContain('epa-envirofacts-facilities');
+    expect(ids).toContain('ncbi-pubmed-search');
+    expect(ids).toContain('cdc-socrata-catalogue');
+    expect(ids).toContain('healthdata-socrata-catalogue');
+    expect(ids).toContain('bts-transportation-stats');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -241,6 +338,17 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('usgs-peak-streamflow')).toBe(usgsPeakStreamflowAdapter);
     expect(getUsDataSource('cpsc-product-recalls')).toBe(cpscProductRecallsAdapter);
     expect(getUsDataSource('cfpb-consumer-complaints')).toBe(cfpbConsumerComplaintsAdapter);
+    expect(getUsDataSource('treasury-debt-to-penny')).toBe(treasuryDebtToPennyAdapter);
+    expect(getUsDataSource('sec-edgar-filings')).toBe(secEdgarFilingsAdapter);
+    expect(getUsDataSource('fdic-bank-directory')).toBe(fdicBankDirectoryAdapter);
+    expect(getUsDataSource('clinicaltrials-studies')).toBe(clinicalTrialsStudiesAdapter);
+    expect(getUsDataSource('nws-point-forecast')).toBe(nwsPointForecastAdapter);
+    expect(getUsDataSource('usaspending-agencies')).toBe(usaspendingAgenciesAdapter);
+    expect(getUsDataSource('epa-envirofacts-facilities')).toBe(epaEnvirofactsFacilitiesAdapter);
+    expect(getUsDataSource('ncbi-pubmed-search')).toBe(ncbiPubmedSearchAdapter);
+    expect(getUsDataSource('cdc-socrata-catalogue')).toBe(cdcSocrataCatalogueAdapter);
+    expect(getUsDataSource('healthdata-socrata-catalogue')).toBe(healthdataSocrataCatalogueAdapter);
+    expect(getUsDataSource('bts-transportation-stats')).toBe(btsTransportationStatsAdapter);
   });
 
   it('returns undefined for an unknown id', () => {

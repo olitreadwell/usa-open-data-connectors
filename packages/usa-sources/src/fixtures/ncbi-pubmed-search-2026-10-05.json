@@ -1,0 +1,27 @@
+{
+  "header": { "type": "esearch", "version": "0.3" },
+  "esearchresult": {
+    "count": "245942",
+    "retmax": "10",
+    "retstart": "0",
+    "idlist": [
+      "42831281",
+      "42831193",
+      "42830892",
+      "42830891",
+      "42830888",
+      "42830867",
+      "42830859",
+      "42830655",
+      "42830320",
+      "42830251"
+    ],
+    "translationset": [
+      {
+        "from": "asthma",
+        "to": "\"asthma\"[MeSH Terms] OR \"asthma\"[All Fields] OR \"asthmas\"[All Fields] OR \"asthma's\"[All Fields]"
+      }
+    ],
+    "querytranslation": "\"asthma\"[MeSH Terms] OR \"asthma\"[All Fields] OR \"asthmas\"[All Fields] OR \"asthma s\"[All Fields]"
+  }
+}

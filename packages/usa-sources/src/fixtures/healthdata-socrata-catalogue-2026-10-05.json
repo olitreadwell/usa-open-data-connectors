@@ -1,0 +1,1855 @@
+[
+  {
+    "id": "da5j-wi7i",
+    "name": "Epidemic Trends and Rt: COVID-19, Influenza, and RSV at National, State, Local Level",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "CDC",
+    "createdAt": 1791000088,
+    "description": "An archive of time-varying reproductive number (Rt) estimates and epidemic trend categories.\n\nCDC estimates epidemic trends, based on the time-varying reproductive number (Rt), for COVID-19, influenza, and RSV at the national, state, and health service area (HSA) levels. Estimates are released weekly at https://www.cdc.gov/cfa-modeling-and-forecasting/rt-estimates.\n\n\n------- About Rt estimates -------\nThese estimates indicate whether infections are increasing (Rt > 1) or decreasing (Rt < 1). Rt is estimated from daily incident emergency department visits reported through the National Syndromic Surveillance Program.\n\n\n------- Methods and resources -------\nRead more about the hierarchical generalized additive models (HGAMs) used to generate these estimates in:\n\n[1] Behind the Model: CDC’s Tools to Assess Epidemic Trends (https://www.cdc.gov/cfa-behind-the-model/php/data-research/rt-estimates/index.html)\n[2] Modeling Handbook chapter on Rt (https://www.cdc.gov/cfa-modeling-and-forecasting/modeling-handbook/mh-rt.html)\n\n\n------- Geographic resolution -------\nWe release estimates at the national, state, and local levels. Local estimates are for health service areas (HSAs). An HSA is a geographic area that combines one or more counties that are next to each other to form a region that is relatively self-contained with respect to hospital care. CFA uses NCI modified HSAs, where all counties within an HSA are in the same state. We provide one row for each county, to support searchability and merging with other data sets. However, Rt estimates are at the HSA level, so for each county in an HSA, the estimated values are identical (for a given disease, origin_date, and target_date). \n\n\n------- Dates, release cadence, and version history -------\nWeekly releases include an Rt estimate for each location, and disease, across the most recent 8 weeks. The target_date column indicates the date, t, for which the Rt estimate was made. \n\nThe origin_date column indicates the vintage of the data used to generate all the estimates in the release (think of this as a version ID, release date, or as-of date). The origin_date is typically the final date available in the surveillance data at the time the estimates were generated. For example, if models were run using data available through Tuesday, 9/15, then the origin_date for every estimate in the run (across 8 weeks of target_dates) is 9/15.  \n\nFinally, the horizon is defined as the difference between the target_date and origin_date. A negative horizon implies the target_date falls in the observed period; the target_date had already passed at the time the estimate was generated. \n\nOur date definitions and terminology follow standards used by the forecast hubverse (https://docs.hubverse.io/en/latest/user-guide/tasks.html#standard-task-id-variables).\n\n\n------- How to work with this large dataset -------\nThis is a very large dataset. \n\nBefore downloading data, run a query to filter for the specific locations, diseases, and origin_dates (release versions) you want to access. To filter the data in your browser use the “Actions” dropdown menu to open the \"Query” tool.  If you’re a developer you can also run SoQL queries using the available SDKs, including for R and Python.\n\nWe do not recommend using the “Export” button, which will download every estimate we have ever published (including weekly releases for >800 HSAs, 50 states, DC, and the US overall, across three diseases).",
+    "diciBackend": false,
+    "displayType": "href",
+    "domainCName": "healthdata.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42636655,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791000088,
+    "publicationGroup": 20657698,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791000088,
+    "tableId": 20657698,
+    "totalTimesRated": 0,
+    "viewCount": 28,
+    "viewLastModified": 1791000088,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1791000089,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7783610,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791000089,
+        "targetAudience": "public",
+        "workflowId": 2689,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791000089,
+          "failureCount": 0,
+          "startedAt": 1791000089,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/csv": "https://data.cdc.gov/api/v3/views/ahfs-x44r/export.csv?accessType=DOWNLOAD"
+          }
+        },
+        {
+          "urls": {
+            "application/json": "https://data.cdc.gov/api/v3/views/ahfs-x44r/query.json?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.cdc.gov/api/views/ahfs-x44r/columns.json",
+          "describedByType": "application/json"
+        },
+        {
+          "urls": {
+            "application/xml": "https://data.cdc.gov/api/v3/views/ahfs-x44r/query.xml?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.cdc.gov/api/views/ahfs-x44r/columns.xml",
+          "describedByType": "application/xml"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Homepage": "https://data.cdc.gov/d/ahfs-x44r",
+          "Contact Name": "Center for Forecasting and Outbreak Analytics",
+          "Update Frequency": "Weekly",
+          "License": "https://www.usa.gov/government-works",
+          "Program Code": "009:037",
+          "Publisher": "Centers for Disease Control and Prevention",
+          "Bureau Code": "009:20",
+          "Contact Email": "cfa@cdc.gov",
+          "Issued": "2026-10-02",
+          "Last Update": "2026-10-02",
+          "Theme": "Center for Forecasting and Outbreak Analytics",
+          "Unique Identifier": "https://data.cdc.gov/api/views/ahfs-x44r",
+          "Geographic Coverage": "National, State, Health Service Area (HSA)",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://data.cdc.gov/data.json",
+          "Last Harvest Performed": "2026-10-03T04:01:20.312263Z",
+          "Harvest Source Title": "data.cdc.gov"
+        }
+      }
+    },
+    "owner": {
+      "id": "wcbi-9i57",
+      "createdAt": 1611696827,
+      "displayName": "Centers for Disease Control and Prevention (CDC)",
+      "screenName": "Centers for Disease Control and Prevention (CDC)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1349457,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "wcbi-9i57",
+      "createdAt": 1611696827,
+      "displayName": "Centers for Disease Control and Prevention (CDC)",
+      "screenName": "Centers for Disease Control and Prevention (CDC)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1349457,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": [
+      "covid-19",
+      "epidemic trends",
+      "influenza",
+      "national syndromic surveillance program",
+      "public health",
+      "real-time monitoring",
+      "respiratory disease",
+      "rsv",
+      "rt",
+      "surveillance"
+    ],
+    "flags": ["default", "federated", "internalToPublicFederatedView"]
+  },
+  {
+    "id": "ritp-swjh",
+    "name": "Catalog Record Data - Download Information",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "NIH",
+    "createdAt": 1790827210,
+    "description": "NLM produces bibliographic records for books, journals and other materials from NLM's collections in NLMXML, MARCXML and MARC 21 formats. These records can be searched at NLM LocatorPlus or the NLM Catalog.",
+    "diciBackend": false,
+    "displayType": "href",
+    "domainCName": "healthdata.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42620684,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790827210,
+    "publicationGroup": 20644600,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790827210,
+    "tableId": 20644600,
+    "totalTimesRated": 0,
+    "viewCount": 10,
+    "viewLastModified": 1790827210,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790827211,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7769593,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790827210,
+        "targetAudience": "public",
+        "workflowId": 2689,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790827211,
+          "failureCount": 0,
+          "startedAt": 1790827211,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "description": "This dataset does not contain any distributions. To learn more, please see this dataset's metadata."
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "custserv@nlm.nih.gov",
+          "Homepage": "https://datadiscovery.nlm.nih.gov/d/a8yd-6fah",
+          "Contact Name": "National Library of Medicine",
+          "Issued": "2026-09-30",
+          "License": "http://opendefinition.org/licenses/odc-odbl/",
+          "Last Update": "2026-09-30",
+          "Program Code": "009:041",
+          "Theme": "Literature",
+          "Unique Identifier": "https://datadiscovery.nlm.nih.gov/api/views/a8yd-6fah",
+          "Publisher": "National Library of Medicine",
+          "Bureau Code": "009:25",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://datadiscovery.nlm.nih.gov/data.json",
+          "Last Harvest Performed": "2026-10-01T04:00:08.192055Z",
+          "Harvest Source Title": "datadiscovery.nlm.nih.gov"
+        }
+      }
+    },
+    "owner": {
+      "id": "7hn8-z2at",
+      "createdAt": 1719515897,
+      "displayName": "National Institute of Health (NIH)",
+      "screenName": "National Institute of Health (NIH)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1624861,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "7hn8-z2at",
+      "createdAt": 1719515897,
+      "displayName": "National Institute of Health (NIH)",
+      "screenName": "National Institute of Health (NIH)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1624861,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["catalog", "catalogs - library", "databases - bibliographic"],
+    "flags": ["default", "federated", "internalToPublicFederatedView"]
+  },
+  {
+    "id": "jq8q-zgpq",
+    "name": "MeSH - Download Information",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "NIH",
+    "createdAt": 1790827209,
+    "description": "Medical Subject Headings (MeSH) is a hierarchically-organized terminology for indexing and cataloging of biomedical information. It is used for the indexing of PubMed and other NLM databases. These records can be searched either via the MeSH Browser or the MeSH Entrez Database.",
+    "diciBackend": false,
+    "displayType": "href",
+    "domainCName": "healthdata.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42620683,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790827209,
+    "publicationGroup": 20644599,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790827209,
+    "tableId": 20644599,
+    "totalTimesRated": 0,
+    "viewCount": 9,
+    "viewLastModified": 1790827209,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790827210,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7769592,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790827209,
+        "targetAudience": "public",
+        "workflowId": 2689,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790827210,
+          "failureCount": 0,
+          "startedAt": 1790827210,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "description": "This dataset does not contain any distributions. To learn more, please see this dataset's metadata."
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "custserv@nlm.nih.gov",
+          "Homepage": "https://datadiscovery.nlm.nih.gov/d/6b6i-67fb",
+          "Contact Name": "National Library of Medicine",
+          "Issued": "2026-09-30",
+          "License": "http://opendefinition.org/licenses/odc-odbl/",
+          "Last Update": "2026-09-30",
+          "Program Code": "009:041",
+          "Theme": "Terminology",
+          "Unique Identifier": "https://datadiscovery.nlm.nih.gov/api/views/6b6i-67fb",
+          "Publisher": "National Library of Medicine",
+          "Bureau Code": "009:25",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://datadiscovery.nlm.nih.gov/data.json",
+          "Last Harvest Performed": "2026-10-01T04:00:08.170018Z",
+          "Harvest Source Title": "datadiscovery.nlm.nih.gov"
+        }
+      }
+    },
+    "owner": {
+      "id": "7hn8-z2at",
+      "createdAt": 1719515897,
+      "displayName": "National Institute of Health (NIH)",
+      "screenName": "National Institute of Health (NIH)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1624861,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "7hn8-z2at",
+      "createdAt": 1719515897,
+      "displayName": "National Institute of Health (NIH)",
+      "screenName": "National Institute of Health (NIH)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1624861,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["medical subject headings", "subject headings", "vocabulary - controlled"],
+    "flags": ["default", "federated", "internalToPublicFederatedView"]
+  },
+  {
+    "id": "r72n-2rsn",
+    "name": "Health Equity Impact Assessments",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "State",
+    "createdAt": 1790740843,
+    "description": "undescribed",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": true,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42617030,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790740843,
+    "publicationGroup": 20642591,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790740843,
+    "tableId": 20642591,
+    "totalTimesRated": 0,
+    "viewCount": 68,
+    "viewLastModified": 1791000038,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790740844,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7767342,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790740844,
+        "targetAudience": "public",
+        "workflowId": 2688,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790740844,
+          "failureCount": 0,
+          "startedAt": 1790740844,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "description": "This dataset does not contain any distributions. To learn more, please see this dataset's metadata."
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "no-reply@health.data.ny.gov",
+          "Homepage": "https://health.data.ny.gov/d/hqjt-xmk8",
+          "Contact Name": "Open Data NY - DOH",
+          "Issued": "2025-12-17",
+          "License": "http://opendefinition.org/licenses/odc-odbl/",
+          "Last Update": "2026-10-02",
+          "Theme": "Health",
+          "Unique Identifier": "https://health.data.ny.gov/api/views/hqjt-xmk8",
+          "Publisher": "State of New York",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://health.data.ny.gov/data.json",
+          "Last Harvest Performed": "2026-10-03T04:00:36.166719Z",
+          "Harvest Source Title": "health.data.ny.gov"
+        }
+      }
+    },
+    "owner": {
+      "id": "taan-vh9z",
+      "createdAt": 1614043008,
+      "displayName": "HHS Office of the Chief Data Officer",
+      "screenName": "HHS Office of the Chief Data Officer",
+      "type": "team",
+      "members": [
+        {
+          "id": "6md3-j47u",
+          "createdAt": 1627317712,
+          "displayName": "Alec Blase",
+          "screenName": "Alec Blase",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1355175,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "3vn2-zwg4",
+          "createdAt": 1766070346,
+          "displayName": "JESSE ISAACMAN-BECK",
+          "screenName": "JESSE ISAACMAN-BECK",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "4tk6-ykfq",
+          "createdAt": 1704727173,
+          "disabledAt": 1752009823,
+          "displayName": "M. Miles",
+          "screenName": "M. Miles",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "taan-vh9z",
+      "createdAt": 1614043008,
+      "displayName": "HHS Office of the Chief Data Officer",
+      "screenName": "HHS Office of the Chief Data Officer",
+      "type": "team",
+      "members": [
+        {
+          "id": "6md3-j47u",
+          "createdAt": 1627317712,
+          "displayName": "Alec Blase",
+          "screenName": "Alec Blase",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1355175,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "3vn2-zwg4",
+          "createdAt": 1766070346,
+          "displayName": "JESSE ISAACMAN-BECK",
+          "screenName": "JESSE ISAACMAN-BECK",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "4tk6-ykfq",
+          "createdAt": 1704727173,
+          "disabledAt": 1752009823,
+          "displayName": "M. Miles",
+          "screenName": "M. Miles",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["untagged"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "ctqj-5kea",
+    "name": "DRAFT_PRIVATE_TEST",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "CDC",
+    "createdAt": 1790654411,
+    "description": "undescribed",
+    "diciBackend": false,
+    "displayType": "href",
+    "domainCName": "healthdata.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42613768,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790654411,
+    "publicationGroup": 20640890,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790654411,
+    "tableId": 20640890,
+    "totalTimesRated": 0,
+    "viewCount": 13,
+    "viewLastModified": 1790655034,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790654412,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7765147,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790654412,
+        "targetAudience": "public",
+        "workflowId": 2689,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790654412,
+          "failureCount": 0,
+          "startedAt": 1790654412,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/csv": "https://data.cdc.gov/api/v3/views/wxxp-vsvi/export.csv?accessType=DOWNLOAD"
+          }
+        },
+        {
+          "urls": {
+            "application/json": "https://data.cdc.gov/api/v3/views/wxxp-vsvi/query.json?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.cdc.gov/api/views/wxxp-vsvi/columns.json",
+          "describedByType": "application/json"
+        },
+        {
+          "urls": {
+            "application/xml": "https://data.cdc.gov/api/v3/views/wxxp-vsvi/query.xml?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.cdc.gov/api/views/wxxp-vsvi/columns.xml",
+          "describedByType": "application/xml"
+        }
+      ],
+      "custom_fields": {
+        "Archive": {
+          "Archive Repository": "https://healthdata.gov/d/jqyf-g4s4"
+        },
+        "Common Core": {
+          "Contact Email": "ksf4@cdc.gov",
+          "Homepage": "https://data.cdc.gov/d/wxxp-vsvi",
+          "Contact Name": "Doug Wirtz",
+          "Issued": "2026-09-28",
+          "License": "http://opendefinition.org/licenses/odc-odbl/",
+          "Last Update": "2026-09-29",
+          "Program Code": "009:037",
+          "Unique Identifier": "https://data.cdc.gov/api/views/wxxp-vsvi",
+          "Publisher": "Centers for Disease Control and Prevention",
+          "Bureau Code": "009:00",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://data.cdc.gov/data.json",
+          "Last Harvest Performed": "2026-09-29T04:00:09.942249Z",
+          "Harvest Source Title": "data.cdc.gov"
+        }
+      }
+    },
+    "owner": {
+      "id": "wcbi-9i57",
+      "createdAt": 1611696827,
+      "displayName": "Centers for Disease Control and Prevention (CDC)",
+      "screenName": "Centers for Disease Control and Prevention (CDC)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1349457,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "wcbi-9i57",
+      "createdAt": 1611696827,
+      "displayName": "Centers for Disease Control and Prevention (CDC)",
+      "screenName": "Centers for Disease Control and Prevention (CDC)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1349457,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["untagged"],
+    "flags": ["default", "federated", "internalToPublicFederatedView"]
+  },
+  {
+    "id": "p28d-6j22",
+    "name": "Medicaid Enrolled Provider - Revalidation Notifications Sent",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "State",
+    "createdAt": 1790395253,
+    "description": "In April 2026, the Centers for Medicare & Medicaid Services (CMS) directed all states to implement comprehensive provider revalidation strategies, requiring every Medicaid-enrolled provider to be revalidated over the next 24 months. New York State (NYS) commits to working with every provider to help them complete this revalidation process in the new Medicaid Services Portal (PSP) .\n\nThis dataset publishes all enrolled providers in the New York State Medicaid program that are currently required to revalidate and have been sent a revalidation notification. The dataset will enable providers, support staff, and credentialing staff to know which providers have been sent a revalidation notification, the date of the first revalidation notification sent, the date when a second (reminder) notification will be sent, and the scheduled termination date if they do not submit a revalidation within 123 days from the date of the first notification.",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": true,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42609007,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790395253,
+    "publicationGroup": 20638869,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790395253,
+    "tableId": 20638869,
+    "totalTimesRated": 0,
+    "viewCount": 76,
+    "viewLastModified": 1790395835,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790395253,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7762746,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790395253,
+        "targetAudience": "public",
+        "workflowId": 2688,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790395253,
+          "failureCount": 0,
+          "startedAt": 1790395253,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/csv": "https://health.data.ny.gov/api/v3/views/j2ak-3v6z/export.csv?accessType=DOWNLOAD"
+          }
+        },
+        {
+          "urls": {
+            "application/json": "https://health.data.ny.gov/api/v3/views/j2ak-3v6z/query.json?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://health.data.ny.gov/api/views/j2ak-3v6z/columns.json",
+          "describedByType": "application/json"
+        },
+        {
+          "urls": {
+            "application/xml": "https://health.data.ny.gov/api/v3/views/j2ak-3v6z/query.xml?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://health.data.ny.gov/api/views/j2ak-3v6z/columns.xml",
+          "describedByType": "application/xml"
+        }
+      ],
+      "custom_fields": {
+        "Archive": {
+          "Archive Repository": "https://healthdata.gov/d/cdex-w29c"
+        },
+        "Common Core": {
+          "Contact Email": "no-reply@health.data.ny.gov",
+          "Homepage": "https://health.data.ny.gov/d/j2ak-3v6z",
+          "Contact Name": "Open Data NY - DOH",
+          "Issued": "2026-09-08",
+          "License": "http://opendefinition.org/licenses/odc-odbl/",
+          "Last Update": "2026-09-25",
+          "Theme": "Health",
+          "Unique Identifier": "https://health.data.ny.gov/api/views/j2ak-3v6z",
+          "Publisher": "State of New York",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://health.data.ny.gov/data.json",
+          "Last Harvest Performed": "2026-09-26T04:00:49.741088Z",
+          "Harvest Source Title": "health.data.ny.gov"
+        }
+      }
+    },
+    "owner": {
+      "id": "taan-vh9z",
+      "createdAt": 1614043008,
+      "displayName": "HHS Office of the Chief Data Officer",
+      "screenName": "HHS Office of the Chief Data Officer",
+      "type": "team",
+      "members": [
+        {
+          "id": "6md3-j47u",
+          "createdAt": 1627317712,
+          "displayName": "Alec Blase",
+          "screenName": "Alec Blase",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1355175,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "3vn2-zwg4",
+          "createdAt": 1766070346,
+          "displayName": "JESSE ISAACMAN-BECK",
+          "screenName": "JESSE ISAACMAN-BECK",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "4tk6-ykfq",
+          "createdAt": 1704727173,
+          "disabledAt": 1752009823,
+          "displayName": "M. Miles",
+          "screenName": "M. Miles",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "taan-vh9z",
+      "createdAt": 1614043008,
+      "displayName": "HHS Office of the Chief Data Officer",
+      "screenName": "HHS Office of the Chief Data Officer",
+      "type": "team",
+      "members": [
+        {
+          "id": "6md3-j47u",
+          "createdAt": 1627317712,
+          "displayName": "Alec Blase",
+          "screenName": "Alec Blase",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1355175,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "3vn2-zwg4",
+          "createdAt": 1766070346,
+          "displayName": "JESSE ISAACMAN-BECK",
+          "screenName": "JESSE ISAACMAN-BECK",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "4tk6-ykfq",
+          "createdAt": 1704727173,
+          "disabledAt": 1752009823,
+          "displayName": "M. Miles",
+          "screenName": "M. Miles",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["medicaid provider", "revalidation"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "8i5e-iads",
+    "name": "Respiratory Virus Test Results Reported over Time",
+    "assetType": "href",
+    "averageRating": 0,
+    "createdAt": 1790308854,
+    "description": "<strong>A. SUMMARY</strong>\nThis dataset includes a weekly count of test results reported, and how many of those were positive, negative, and indeterminate for Influenza, Respiratory syncytial virus (RSV) and COVID-19 amongst San Francisco residents. The <u><a href=\"https://www.cdph.ca.gov/Programs/CID/DCDC/CDPH%20Document%20Library/LabReportableDiseases_June2025.pdf\">California Code of Regulations, Title 17, Section 2505</a></u> requires all laboratories in San Francisco to report all COVID-19, Influenza, and RSV test results to the San Francisco Department of Public Health via electronic lab reporting (ELR). Reported tests include tests with a positive, negative or indeterminate result. Indeterminate results, which could not conclusively determine whether the respiratory virus was present, are not included in the calculation of percent positive.\n\nTests are de-duplicated by an individual, date, and virus. This means that if a person gets tested multiple times on different dates in the last 30 days, all of those individual tests will be included in this data as individual tests (on each specimen collection date).\n\nData are reported from 6/29/2025 onward, aligning with CDPH’s start of the 2025-2026 respiratory season. \n\nPlease note that the number of total positive test results is not equal to the total number of respiratory virus cases in San Francisco. Not all respiratory virus cases will be identified from lab testing.\n\nFor information on services related to respiratory viruses, <u><a href=\"https://www.sf.gov/topics--respiratory-viruses-covid-19-flu-rsv\">please visit our online resource page.</a></u> \n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nLaboratory test volume and positivity for Influenza, RSV, and COVID-19 are based on electronic laboratory test reports. Deduplication, quality assurance measures and other data verification processes maximize accuracy of laboratory test information.\n\n<strong>C. UPDATE PROCESS</strong>\nThe dataset is updated every Friday and includes data from the previous Sunday through Saturday. For example, the update on Friday, October 17th will include data through Saturday, October 11th. Historic data may change as more current information becomes available.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\nWeekly data represent a count of Influenza, RSV, and COVID-19 tests reported amongst San Francisco residents. The data also displays how many of those tests resulted as positive, negative, or indeterminate. Test positivity for each respiratory virus is calculated by summing the number of positive tests reported each week and dividing by the total number of positive and negative tests reported for a given week.\n \nRespiratory virus activity levels for test positivity are based on a <u><a href=\"https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/RespiratoryVirusReport.aspx\">CDPH definition</a></u> which uses 5 prior seasons of test-positivity data. Definitions are shown below:\n<UL><LI>COVID-19: Very Low <2%, Low 2-7%, Moderate 7-11%, High 11-16%, Very High >16%\n<LI>Influenza: Very Low <2%, Low 2-5%, Moderate 5-9%, High 9-13%, Very High >13%\n<LI>RSV: Very Low <1%, Low 1-4%, Moderate 4-6%, High 6-9%, Very High >9%</UL>\nTrend indicators are also included to describe whether the positivity rate for each respiratory virus is increasing, decreasing, or stable compared to the previous week. Increasing and decreasing values indicate a change of at least 0.5 percentage points (0.5%) in the percentage of specimens positive for Influenza, COVID‑19, or RSV compared to the previous week reported. Stable represents a change less than 0.5 percentage points (0.5%).\n\n<strong>E. RELATED DATASETS</strong>\nA previous version of COVID‑19 Testing Over Time dataset was archived. For historical purposes, you can access the archived dataset <u><a href=\"https://data.sfgov.org/Health-and-Social-Services/COVID-19-Testing-Over-Time/nfpa-mg4g/data_preview\">here</a></u>.",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": true,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42606283,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790308854,
+    "publicationGroup": 20637531,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790308854,
+    "tableId": 20637531,
+    "totalTimesRated": 0,
+    "viewCount": 166,
+    "viewLastModified": 1791000054,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790308854,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7761010,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790308854,
+        "targetAudience": "public",
+        "workflowId": 2688,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790308854,
+          "failureCount": 0,
+          "startedAt": 1790308854,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/csv": "https://data.sf.gov/api/v3/views/xtu7-vn3r/export.csv?accessType=DOWNLOAD"
+          }
+        },
+        {
+          "urls": {
+            "application/json": "https://data.sf.gov/api/v3/views/xtu7-vn3r/query.json?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.sf.gov/api/views/xtu7-vn3r/columns.json",
+          "describedByType": "application/json"
+        },
+        {
+          "urls": {
+            "application/xml": "https://data.sf.gov/api/v3/views/xtu7-vn3r/query.xml?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.sf.gov/api/views/xtu7-vn3r/columns.xml",
+          "describedByType": "application/xml"
+        }
+      ],
+      "custom_fields": {
+        "Archive": {
+          "Archive Repository": "https://healthdata.gov/d/htip-qjfi"
+        },
+        "Common Core": {
+          "Contact Email": "no-reply@data.sf.gov",
+          "Homepage": "https://data.sf.gov/d/xtu7-vn3r",
+          "Contact Name": "OpenData",
+          "Issued": "2026-09-15",
+          "License": "http://opendatacommons.org/licenses/pddl/1.0/",
+          "Last Update": "2026-10-02",
+          "Theme": "Health and Social Services",
+          "Unique Identifier": "https://data.sf.gov/api/views/xtu7-vn3r",
+          "Publisher": "City of San Francisco",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://data.sfgov.org/data.json",
+          "Last Harvest Performed": "2026-10-03T04:00:52.970350Z",
+          "Harvest Source Title": "data.sfgov.org"
+        }
+      }
+    },
+    "owner": {
+      "id": "taan-vh9z",
+      "createdAt": 1614043008,
+      "displayName": "HHS Office of the Chief Data Officer",
+      "screenName": "HHS Office of the Chief Data Officer",
+      "type": "team",
+      "members": [
+        {
+          "id": "6md3-j47u",
+          "createdAt": 1627317712,
+          "displayName": "Alec Blase",
+          "screenName": "Alec Blase",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1355175,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "3vn2-zwg4",
+          "createdAt": 1766070346,
+          "displayName": "JESSE ISAACMAN-BECK",
+          "screenName": "JESSE ISAACMAN-BECK",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "4tk6-ykfq",
+          "createdAt": 1704727173,
+          "disabledAt": 1752009823,
+          "displayName": "M. Miles",
+          "screenName": "M. Miles",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "taan-vh9z",
+      "createdAt": 1614043008,
+      "displayName": "HHS Office of the Chief Data Officer",
+      "screenName": "HHS Office of the Chief Data Officer",
+      "type": "team",
+      "members": [
+        {
+          "id": "6md3-j47u",
+          "createdAt": 1627317712,
+          "displayName": "Alec Blase",
+          "screenName": "Alec Blase",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1355175,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "3vn2-zwg4",
+          "createdAt": 1766070346,
+          "displayName": "JESSE ISAACMAN-BECK",
+          "screenName": "JESSE ISAACMAN-BECK",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "4tk6-ykfq",
+          "createdAt": 1704727173,
+          "disabledAt": 1752009823,
+          "displayName": "M. Miles",
+          "screenName": "M. Miles",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["untagged"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "utu7-nm5q",
+    "name": "2027 Auto Reenrollment FAQs",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "State",
+    "createdAt": 1789531276,
+    "description": "Frequently Asked Questions (FAQs) for 2027 automatic reenrollment or \"crosswalking.\"",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": true,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42538491,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789531276,
+    "publicationGroup": 20601278,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1789531276,
+    "tableId": 20601278,
+    "totalTimesRated": 0,
+    "viewCount": 84,
+    "viewLastModified": 1790154403,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1789531277,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7713476,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789531277,
+        "targetAudience": "public",
+        "workflowId": 2688,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789531277,
+          "failureCount": 0,
+          "startedAt": 1789531277,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/csv": "https://data.oregon.gov/api/v3/views/gwdt-gm3c/export.csv?accessType=DOWNLOAD"
+          }
+        },
+        {
+          "urls": {
+            "application/json": "https://data.oregon.gov/api/v3/views/gwdt-gm3c/query.json?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.oregon.gov/api/views/gwdt-gm3c/columns.json",
+          "describedByType": "application/json"
+        },
+        {
+          "urls": {
+            "application/xml": "https://data.oregon.gov/api/v3/views/gwdt-gm3c/query.xml?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.oregon.gov/api/views/gwdt-gm3c/columns.xml",
+          "describedByType": "application/xml"
+        }
+      ],
+      "custom_fields": {
+        "Archive": {
+          "Archive Repository": "https://healthdata.gov/d/y97v-zgcb"
+        },
+        "Common Core": {
+          "Contact Email": "no-reply@data.oregon.gov",
+          "Homepage": "https://data.oregon.gov/d/gwdt-gm3c",
+          "Contact Name": "Amy Coven",
+          "Issued": "2026-09-15",
+          "License": "http://opendefinition.org/licenses/odc-odbl/",
+          "Last Update": "2026-09-15",
+          "Theme": "Health & Human Services",
+          "Unique Identifier": "https://data.oregon.gov/api/views/gwdt-gm3c",
+          "Publisher": "State of Oregon",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://data.oregon.gov/data.json",
+          "Last Harvest Performed": "2026-09-16T04:01:16.116370Z",
+          "Harvest Source Title": "data.oregon.gov"
+        }
+      }
+    },
+    "owner": {
+      "id": "taan-vh9z",
+      "createdAt": 1614043008,
+      "displayName": "HHS Office of the Chief Data Officer",
+      "screenName": "HHS Office of the Chief Data Officer",
+      "type": "team",
+      "members": [
+        {
+          "id": "6md3-j47u",
+          "createdAt": 1627317712,
+          "displayName": "Alec Blase",
+          "screenName": "Alec Blase",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1355175,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "3vn2-zwg4",
+          "createdAt": 1766070346,
+          "displayName": "JESSE ISAACMAN-BECK",
+          "screenName": "JESSE ISAACMAN-BECK",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "4tk6-ykfq",
+          "createdAt": 1704727173,
+          "disabledAt": 1752009823,
+          "displayName": "M. Miles",
+          "screenName": "M. Miles",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "taan-vh9z",
+      "createdAt": 1614043008,
+      "displayName": "HHS Office of the Chief Data Officer",
+      "screenName": "HHS Office of the Chief Data Officer",
+      "type": "team",
+      "members": [
+        {
+          "id": "6md3-j47u",
+          "createdAt": 1627317712,
+          "displayName": "Alec Blase",
+          "screenName": "Alec Blase",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1355175,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "3vn2-zwg4",
+          "createdAt": 1766070346,
+          "displayName": "JESSE ISAACMAN-BECK",
+          "screenName": "JESSE ISAACMAN-BECK",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "4tk6-ykfq",
+          "createdAt": 1704727173,
+          "disabledAt": 1752009823,
+          "displayName": "M. Miles",
+          "screenName": "M. Miles",
+          "teamId": 1355175,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["health insurance", "insurance information"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "ttnc-rbry",
+    "name": "Yearly Taxa-Specific Pollen Season Timing and Concentrations for Select United States Cities, 2003-2024",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "CDC",
+    "createdAt": 1789531242,
+    "description": "The National Allergy Bureau™ (NAB™) commonly provides grouped pollen levels rather than taxa-specific data. In this dataset, however, taxa-specific pollen data are provided as yearly pollen season timing and concentrations using data from the NAB. This is the first time pollen data at this level of detail has been made publicly available. Grass pollen metrics were excluded from selected products to align with NAB and CDC data-sharing policies.\n\nPollen concentrations are reported as pollen grains per cubic meter (PPCM) and provided for each year of data available. The pollen data are available from 2003 through 2024 and includes ready-to-use pollen measures including: main pollen season (MPS) start date, peak date, end date, season length, total seasonal pollen concentration (i.e., seasonal pollen integral), average seasonal pollen concentration, peak concentration, and the number of pollen observations per year. Data availability varies by year and pollen type for each NAB site. This dataset is part of a series of pollen datasets from the NAB, processed and standardized by the Division of Environmental Health Science and Practice (DEHSP), National Center for Environmental Health (NCEH), CDC. Further details about the pollen data, including collection, counting, and calculations, can be found here: https://www.mdpi.com/3954654",
+    "diciBackend": false,
+    "displayType": "href",
+    "domainCName": "healthdata.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42538490,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789531242,
+    "publicationGroup": 20601277,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1789531242,
+    "tableId": 20601277,
+    "totalTimesRated": 0,
+    "viewCount": 65,
+    "viewLastModified": 1790154396,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1789531242,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7713475,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789531242,
+        "targetAudience": "public",
+        "workflowId": 2689,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789531242,
+          "failureCount": 0,
+          "startedAt": 1789531242,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/csv": "https://data.cdc.gov/api/v3/views/rq2k-zaqh/export.csv?accessType=DOWNLOAD"
+          }
+        },
+        {
+          "urls": {
+            "application/json": "https://data.cdc.gov/api/v3/views/rq2k-zaqh/query.json?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.cdc.gov/api/views/rq2k-zaqh/columns.json",
+          "describedByType": "application/json"
+        },
+        {
+          "urls": {
+            "application/xml": "https://data.cdc.gov/api/v3/views/rq2k-zaqh/query.xml?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.cdc.gov/api/views/rq2k-zaqh/columns.xml",
+          "describedByType": "application/xml"
+        }
+      ],
+      "custom_fields": {
+        "Archive": {
+          "Archive Repository": "https://healthdata.gov/d/tja9-e34x"
+        },
+        "Common Core": {
+          "Homepage": "https://data.cdc.gov/d/rq2k-zaqh",
+          "Contact Name": "CHP Support",
+          "Update Frequency": "Annually",
+          "Temporal Applicability": "Yearly",
+          "License": "https://www.usa.gov/government-works",
+          "Program Code": "009:032",
+          "Publisher": "Centers for Disease Control and Prevention",
+          "Bureau Code": "009:20",
+          "Contact Email": "climateandhealth@cdc.gov",
+          "Issued": "2026-09-15",
+          "Last Update": "2026-09-22",
+          "Theme": "National Center for Environmental Health",
+          "Unique Identifier": "https://data.cdc.gov/api/views/rq2k-zaqh",
+          "Geographic Coverage": "Cities (point locations)",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://data.cdc.gov/data.json",
+          "Last Harvest Performed": "2026-09-23T04:00:11.858803Z",
+          "Harvest Source Title": "data.cdc.gov"
+        }
+      }
+    },
+    "owner": {
+      "id": "wcbi-9i57",
+      "createdAt": 1611696827,
+      "displayName": "Centers for Disease Control and Prevention (CDC)",
+      "screenName": "Centers for Disease Control and Prevention (CDC)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1349457,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "wcbi-9i57",
+      "createdAt": 1611696827,
+      "displayName": "Centers for Disease Control and Prevention (CDC)",
+      "screenName": "Centers for Disease Control and Prevention (CDC)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1349457,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["untagged"],
+    "flags": ["default", "federated", "internalToPublicFederatedView"]
+  },
+  {
+    "id": "nk6k-338d",
+    "name": "Weekly Grouped Pollen Season Timing and Concentrations (Trees and Weeds) for Select United States Cities, 2003-2024",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "CDC",
+    "createdAt": 1789531241,
+    "description": "The National Allergy Bureau™ (NAB™) commonly provides grouped pollen levels. In this dataset, grouped trees and grouped weeds are provided as weekly pollen concentrations using data from the NAB. Grouped grass pollen metrics were excluded from selected products to align with data-sharing policies. Public release of grouped grass data could allow inference of taxa-specific concentrations in some contexts; therefore, these metrics are not included.\n\nPollen concentrations are reported as pollen grains per cubic meter (PPCM) and provided for each calendar week. This dataset is part of a series of pollen datasets from the NAB, processed and standardized by the Division of Environmental Health Science and Practice (DEHSP), National Center for Environmental Health (NCEH), CDC. Further details about the pollen data, including collection, counting, and calculations, can be found here: https://www.mdpi.com/3954654",
+    "diciBackend": false,
+    "displayType": "href",
+    "domainCName": "healthdata.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42538489,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789531241,
+    "publicationGroup": 20601276,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1789531241,
+    "tableId": 20601276,
+    "totalTimesRated": 0,
+    "viewCount": 43,
+    "viewLastModified": 1790154389,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1789531241,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7713474,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789531241,
+        "targetAudience": "public",
+        "workflowId": 2689,
+        "reviewer": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789531241,
+          "failureCount": 0,
+          "startedAt": 1789531241,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9gh-n599",
+          "displayName": "Tyler Service Account - HHS"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/csv": "https://data.cdc.gov/api/v3/views/bgxp-nxmn/export.csv?accessType=DOWNLOAD"
+          }
+        },
+        {
+          "urls": {
+            "application/json": "https://data.cdc.gov/api/v3/views/bgxp-nxmn/query.json?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.cdc.gov/api/views/bgxp-nxmn/columns.json",
+          "describedByType": "application/json"
+        },
+        {
+          "urls": {
+            "application/xml": "https://data.cdc.gov/api/v3/views/bgxp-nxmn/query.xml?accessType=DOWNLOAD"
+          },
+          "describedBy": "https://data.cdc.gov/api/views/bgxp-nxmn/columns.xml",
+          "describedByType": "application/xml"
+        }
+      ],
+      "custom_fields": {
+        "Archive": {
+          "Archive Repository": "https://healthdata.gov/d/75m9-ijmm"
+        },
+        "Common Core": {
+          "Homepage": "https://data.cdc.gov/d/bgxp-nxmn",
+          "Contact Name": "CHP Support",
+          "Update Frequency": "Annually",
+          "Temporal Applicability": "Weekly",
+          "License": "https://www.usa.gov/government-works",
+          "Program Code": "009:032",
+          "Publisher": "Centers for Disease Control and Prevention",
+          "Bureau Code": "009:20",
+          "Contact Email": "climateandhealth@cdc.gov",
+          "References": "https://doi.org/10.3390/atmos17070635",
+          "Issued": "2026-09-15",
+          "Last Update": "2026-09-22",
+          "Theme": "National Center for Environmental Health",
+          "Unique Identifier": "https://data.cdc.gov/api/views/bgxp-nxmn",
+          "Public Access Level": "public"
+        },
+        "Harvest Source": {
+          "Is Harvested Data": "Yes",
+          "Harvest Source URI": "https://data.cdc.gov/data.json",
+          "Last Harvest Performed": "2026-09-23T04:00:11.301811Z",
+          "Harvest Source Title": "data.cdc.gov"
+        }
+      }
+    },
+    "owner": {
+      "id": "wcbi-9i57",
+      "createdAt": 1611696827,
+      "displayName": "Centers for Disease Control and Prevention (CDC)",
+      "screenName": "Centers for Disease Control and Prevention (CDC)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1349457,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "wcbi-9i57",
+      "createdAt": 1611696827,
+      "displayName": "Centers for Disease Control and Prevention (CDC)",
+      "screenName": "Centers for Disease Control and Prevention (CDC)",
+      "type": "team",
+      "members": [
+        {
+          "id": "8nk4-igws",
+          "createdAt": 1608234263,
+          "displayName": "Anthony.Caponiti@hhs.gov",
+          "profileImageUrlLarge": "/api/users/8nk4-igws/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/8nk4-igws/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/8nk4-igws/profile_images/TINY",
+          "screenName": "Anthony.Caponiti@hhs.gov",
+          "teamId": 1349457,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["untagged"],
+    "flags": ["default", "federated", "internalToPublicFederatedView"]
+  }
+]

@@ -225,7 +225,7 @@ const US_QUERY_TOOLS: SourceQueryTool[] = [
 ];
 
 /**
- * Builds the US MCP server: the 11 keyless US sources, plus one tool per named
+ * Builds the US MCP server: every keyless US source in the registry, plus one tool per named
  * function in the connector library.
  *
  * @returns an MCP server ready to connect to a transport

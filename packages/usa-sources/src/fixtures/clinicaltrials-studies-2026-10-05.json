@@ -1,0 +1,2000 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07065435",
+          "orgStudyIdInfo": { "id": "NJMU-BC07" },
+          "organization": {
+            "fullName": "The First Affiliated Hospital with Nanjing Medical University",
+            "class": "OTHER"
+          },
+          "briefTitle": "RC48 Plus Bevacizumab or Pyrotinib in HER2-Positive Metastatic Breast Cancer After T-DXd Failure: A Phase II Study",
+          "officialTitle": "Efficacy and Safety of Disitamab Vedotin (RC48) in Combination With Bevacizumab or Pyrotinib in Patients With HER2-Positive Metastatic Breast Cancer After Trastuzumab Deruxtecan (T-DXd) Treatment Failure: A Phase II Study"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2025-06",
+          "overallStatus": "RECRUITING",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2024-01-01", "type": "ACTUAL" },
+          "primaryCompletionDateStruct": { "date": "2025-12-01", "type": "ESTIMATED" },
+          "completionDateStruct": { "date": "2026-01-01", "type": "ESTIMATED" },
+          "studyFirstSubmitDate": "2025-07-02",
+          "studyFirstSubmitQcDate": "2025-07-13",
+          "studyFirstPostDateStruct": { "date": "2025-07-15", "type": "ACTUAL" },
+          "lastUpdateSubmitDate": "2025-07-13",
+          "lastUpdatePostDateStruct": { "date": "2025-07-15", "type": "ACTUAL" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": { "type": "SPONSOR" },
+          "leadSponsor": {
+            "name": "The First Affiliated Hospital with Nanjing Medical University",
+            "class": "OTHER"
+          },
+          "collaborators": [
+            { "name": "RenJi Hospital", "class": "OTHER" },
+            { "name": "Anhui Provincial Hospital", "class": "OTHER_GOV" },
+            { "name": "The Affiliated Hospital of Xuzhou Medical University", "class": "OTHER" },
+            { "name": "The First Hospital of Jilin University", "class": "OTHER" },
+            { "name": "Shanghai Minhang Central Hospital", "class": "OTHER" },
+            { "name": "Zhejiang Cancer Hospital", "class": "OTHER" },
+            { "name": "Huai'an First People's Hospital", "class": "OTHER" }
+          ]
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false,
+          "isUsExport": false
+        },
+        "descriptionModule": {
+          "briefSummary": "This multicenter, Phase II study (RADIANT-BC01) evaluates the efficacy and safety of Disitamab Vedotin (RC48) in combination with either bevacizumab or pyrotinib in adult patients with HER2-positive metastatic breast cancer whose disease has progressed on prior trastuzumab deruxtecan (T-Dxd) therapy.\n\nEligible participants will be randomized 1:1 to receive RC48 plus bevacizumab (7.5 mg/kg IV every 2 weeks) or RC48 plus pyrotinib (320 mg orally once daily). Treatment continues until disease progression, unacceptable toxicity, withdrawal of consent, or initiation of new anticancer therapy.\n\nThe primary endpoint is objective response rate (ORR); key secondary endpoints include progression-free survival (PFS), disease control rate (DCR), duration of response (DOR), overall survival (OS), and safety.\n\nThis study aims to identify new post-T-Dxd treatment options and improve outcomes for patients with advanced HER2-positive breast cancer.",
+          "detailedDescription": "Despite the remarkable benefits of trastuzumab deruxtecan (T-Dxd) as second-line therapy, resistance inevitably develops in HER2-positive metastatic breast cancer, and no standard treatment exists after T-Dxd failure. Disitamab Vedotin (RC48) is a novel antibody-drug conjugate (ADC) targeting HER2, with a cathepsin-cleavable linker and MMAE payload that has demonstrated encouraging antitumor activity and tolerability in earlier studies. Preclinical and real-world data suggest that combining RC48 with anti-angiogenic agents (bevacizumab) or a pan-HER tyrosine kinase inhibitor (pyrotinib) may enhance tumor penetration, overcome resistance mechanisms, and provide synergistic effects without overlapping toxicity.\n\nRADIANT-BC01 is designed as two parallel Simon two-stage cohorts: one evaluating RC48 + bevacizumab and the other RC48 + pyrotinib. In each arm, 14 patients will be enrolled in the first stage, with progression to a total of 37 patients if at least five responses are observed. Patients must have received at least two cycles of prior T-Dxd, possess measurable disease per RECIST 1.1, an ECOG performance status of 0-2, and adequate organ function. Key exclusion criteria include uncontrolled comorbidities, active interstitial lung disease, and prior adverse reactions to study agents.\n\nThe study's primary objective is to determine the ORR of each combination regimen. Secondary objectives encompass PFS, DCR, DOR, OS, and safety assessments. Exploratory biomarker analyses will be conducted on serial blood and stool samples to identify predictors of response and resistance. Tumor assessments occur every 6 weeks, with safety evaluations at each treatment visit and a follow-up period of 90 days post-treatment, then every 3 months for survival status. By exploring these combination strategies, RADIANT-BC01 seeks to establish new therapeutic options for patients who have exhausted current HER2-targeted treatments."
+        },
+        "conditionsModule": {
+          "conditions": ["HER2 + Breast Cancer"],
+          "keywords": [
+            "Disitamab Vedotin (RC48)",
+            "Bevacizumab",
+            "Pyrotinib",
+            "Trastuzumab deruxtecan failure"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": ["PHASE2"],
+          "designInfo": {
+            "allocation": "RANDOMIZED",
+            "interventionModel": "PARALLEL",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": { "masking": "NONE" }
+          },
+          "enrollmentInfo": { "count": 74, "type": "ESTIMATED" }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "RC48 + Bevacizumab",
+              "type": "EXPERIMENTAL",
+              "description": "Participants receive Disitamab Vedotin (RC48) at 2.0 mg/kg IV every 2 weeks plus Bevacizumab 7.5 mg/kg IV every 2 weeks. Treatment continues until disease progression, unacceptable toxicity, withdrawal of consent, or initiation of new anticancer therapy.",
+              "interventionNames": ["Drug: Disitamab Vedotin (RC48)", "Drug: Bevacizumab"]
+            },
+            {
+              "label": "RC48 + Pyrotinib",
+              "type": "EXPERIMENTAL",
+              "description": "Participants receive Disitamab Vedotin (RC48) at 2.0 mg/kg IV every 2 weeks plus Pyrotinib 320 mg orally once daily (post-meal). Treatment continues until disease progression, unacceptable toxicity, withdrawal of consent, or initiation of new anticancer therapy.",
+              "interventionNames": ["Drug: Disitamab Vedotin (RC48)", "Drug: Pyrotinib"]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Disitamab Vedotin (RC48)",
+              "description": "A HER2-targeted antibody-drug conjugate comprising a humanized anti-HER2 monoclonal antibody linked via a cathepsin-cleavable MC-VC-PAB linker to the microtubule inhibitor MMAE (drug-to-antibody ratio ≈4). Administered intravenously at 2.0 mg/kg every 2 weeks.",
+              "armGroupLabels": ["RC48 + Bevacizumab", "RC48 + Pyrotinib"]
+            },
+            {
+              "type": "DRUG",
+              "name": "Bevacizumab",
+              "description": "A recombinant humanized monoclonal antibody that binds vascular endothelial growth factor (VEGF) to inhibit tumor angiogenesis. Administered intravenously at 7.5 mg/kg every 2 weeks in combination with RC48.",
+              "armGroupLabels": ["RC48 + Bevacizumab"]
+            },
+            {
+              "type": "DRUG",
+              "name": "Pyrotinib",
+              "description": "An irreversible pan-HER tyrosine kinase inhibitor targeting HER1, HER2, and HER4, inhibiting downstream PI3K/Akt and MAPK signaling. Administered orally at 320 mg once daily (post-meal) in combination with RC48.",
+              "armGroupLabels": ["RC48 + Pyrotinib"]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Objective Response Rate (ORR)",
+              "description": "The Objective Response Rate (ORR) is defined as the proportion of patients who achieve a complete response (CR) or partial response (PR) according to RECIST version 1.1 criteria, as assessed by independent radiological review. Tumor assessments will be performed every 6 weeks. This endpoint evaluates the antitumor activity of RC48 in combination with either bevacizumab or pyrotinib in patients with HER2-positive advanced breast cancer who have failed prior treatment with trastuzumab deruxtecan (T-Dxd).",
+              "timeFrame": "From date of randomization until the date of first documented progression or date of death from any cause, whichever came first, assessed up to 100 months"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Progression-Free Survival (PFS)",
+              "description": "Progression-Free Survival is defined as the time from the date of randomization to the date of first documented disease progression (per RECIST v1.1 by independent review) or death from any cause, whichever occurs first. PFS will be used to evaluate the efficacy of the combination regimens in delaying disease progression in patients with HER2-positive advanced breast cancer previously treated with trastuzumab deruxtecan.",
+              "timeFrame": "From date of randomization until the date of first documented progression or date of death from any cause, whichever came first, assessed up to 100 months"
+            },
+            {
+              "measure": "Overall Survival (OS)",
+              "description": "Overall Survival is defined as the time from randomization to death from any cause. Patients who are still alive at the time of analysis will be censored at the date of last follow-up. OS will provide a measure of the survival benefit of RC48 combined with either bevacizumab or pyrotinib.",
+              "timeFrame": "From date of randomization until the date of first documented progression or date of death from any cause, whichever came first, assessed up to 100 months"
+            },
+            {
+              "measure": "Duration of Response (DoR)",
+              "description": "Duration of Response is defined as the time from the first documentation of objective tumor response (CR or PR per RECIST v1.1) to the time of disease progression or death. Only patients with confirmed objective response will be included in this analysis.",
+              "timeFrame": "From first documented response until disease progression or death, assessed up to 24 months"
+            },
+            {
+              "measure": "Disease Control Rate (DCR)",
+              "description": "Disease Control Rate is defined as the proportion of patients who achieve a complete response (CR), partial response (PR), or stable disease (SD) lasting at least 6 weeks, based on RECIST v1.1 as assessed by independent review.",
+              "timeFrame": "Assessed at 6 weeks and every 8 weeks thereafter up to 24 months"
+            },
+            {
+              "measure": "Incidence of Treatment-Related Adverse Events",
+              "description": "The incidence and severity of treatment-related adverse events (TRAEs) will be assessed according to the National Cancer Institute Common Terminology Criteria for Adverse Events (NCI-CTCAE) version 5.0. This measure aims to evaluate the safety and tolerability of the treatment regimens.",
+              "timeFrame": "From first dose until 30 days after last dose, assessed up to 36 months"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n1. Age ≥18 years.\n2. Histologically or cytologically confirmed HER2-positive (IHC 3+ or IHC 2+ with ISH amplification) advanced or metastatic breast cancer.\n3. Prior treatment with trastuzumab deruxtecan (T-DXd) and documented disease progression during or after therapy.\n4. At least one measurable lesion at baseline as defined by RECIST v1.1.\n5. Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1.\n6. Adequate organ and marrow function, including:\n\nAbsolute neutrophil count ≥1.5 × 10⁹/L Platelet count ≥100 × 10⁹/L Hemoglobin ≥9 g/dL ALT and AST ≤2.5 × ULN Total bilirubin ≤1.5 × ULN Creatinine clearance ≥50 mL/min Estimated life expectancy of ≥12 weeks. Ability to understand and willingness to sign a written informed consent form.\n\nExclusion Criteria:\n\n1. Prior treatment with disitamab vedotin (RC48).\n2. Active infections requiring systemic therapy (bacterial, viral, or fungal).\n3. History of interstitial lung disease or non-infectious pneumonitis requiring corticosteroid therapy.\n4. Uncontrolled cardiovascular disease, including but not limited to: uncontrolled hypertension, recent myocardial infarction (within 6 months), unstable angina, or congestive heart failure.\n5. Pregnant or breastfeeding women.\n6. Concurrent malignancy other than adequately treated basal cell carcinoma of the skin or in situ carcinoma of the cervix, unless disease-free for ≥5 years.\n7. Participation in another interventional clinical trial with investigational agents not yet completed.\n8. Any condition that, in the opinion of the investigator, would interfere with the subject's ability to comply with study requirements or jeopardize their safety.",
+          "healthyVolunteers": false,
+          "sex": "FEMALE",
+          "minimumAge": "18 Years",
+          "maximumAge": "75 Years",
+          "stdAges": ["ADULT", "OLDER_ADULT"]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Wei Li, Ph.D",
+              "role": "CONTACT",
+              "phone": "025-68307102",
+              "email": "liwei1218@njmu.edu.cn"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "The First Affiliated Hospital with Nanjing Medical University",
+              "status": "RECRUITING",
+              "city": "Nanjing",
+              "state": "Jiangsu",
+              "country": "China",
+              "contacts": [
+                {
+                  "name": "Wei Li, Ph.D",
+                  "role": "CONTACT",
+                  "phone": "025-68307102",
+                  "email": "liwei1218@njmu.edu.cn"
+                }
+              ],
+              "geoPoint": { "lat": 32.06167, "lon": 118.77778 }
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "YES",
+          "infoTypes": ["STUDY_PROTOCOL", "SAP", "ICF", "CSR", "ANALYTIC_CODE"]
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": { "versionHolder": "2026-10-02" },
+        "conditionBrowseModule": {
+          "meshes": [{ "id": "D001943", "term": "Breast Neoplasms" }],
+          "ancestors": [
+            { "id": "D009371", "term": "Neoplasms by Site" },
+            { "id": "D009369", "term": "Neoplasms" },
+            { "id": "D001941", "term": "Breast Diseases" },
+            { "id": "D012871", "term": "Skin Diseases" },
+            { "id": "D017437", "term": "Skin and Connective Tissue Diseases" }
+          ]
+        },
+        "interventionBrowseModule": {
+          "meshes": [
+            { "id": "C000722994", "term": "disitamab vedotin" },
+            { "id": "C000720858", "term": "RC48 antibody" },
+            { "id": "D000068258", "term": "Bevacizumab" },
+            { "id": "C000622954", "term": "pyrotinib" }
+          ],
+          "ancestors": [
+            { "id": "D061067", "term": "Antibodies, Monoclonal, Humanized" },
+            { "id": "D000911", "term": "Antibodies, Monoclonal" },
+            { "id": "D000906", "term": "Antibodies" },
+            { "id": "D007136", "term": "Immunoglobulins" },
+            { "id": "D007162", "term": "Immunoproteins" },
+            { "id": "D001798", "term": "Blood Proteins" },
+            { "id": "D011506", "term": "Proteins" },
+            { "id": "D000602", "term": "Amino Acids, Peptides, and Proteins" },
+            { "id": "D012712", "term": "Serum Globulins" },
+            { "id": "D005916", "term": "Globulins" }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02194335",
+          "orgStudyIdInfo": { "id": "1149.34" },
+          "organization": { "fullName": "Boehringer Ingelheim", "class": "INDUSTRY" },
+          "briefTitle": "Safety, Tolerability and Pharmacokinetics of Increasing Doses of BIBN 4096 BS in Healthy Male and Female Volunteers",
+          "officialTitle": "A Double-blind (Within Dose Groups), Randomised, Placebo-controlled Single Increasing Dose Safety, Tolerability and Pharmacokinetics Study (Parallel Groups) in Healthy Male and Female Volunteers After Oral Administration of BIBN 4096 BS Drinking Solution (Dosage: 20 - 200 mg)"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2014-07",
+          "overallStatus": "COMPLETED",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2000-10" },
+          "primaryCompletionDateStruct": { "date": "2000-12", "type": "ACTUAL" },
+          "studyFirstSubmitDate": "2014-07-17",
+          "studyFirstSubmitQcDate": "2014-07-17",
+          "studyFirstPostDateStruct": { "date": "2014-07-18", "type": "ESTIMATED" },
+          "lastUpdateSubmitDate": "2014-07-22",
+          "lastUpdatePostDateStruct": { "date": "2014-07-23", "type": "ESTIMATED" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": { "type": "SPONSOR" },
+          "leadSponsor": { "name": "Boehringer Ingelheim", "class": "INDUSTRY" }
+        },
+        "descriptionModule": {
+          "briefSummary": "The objective of the present study was to obtain information about safety, tolerability and pharmacokinetics of BIBN 4096 BS after oral administration of increasing doses in healthy male and female volunteers. With respect to pharmacokinetics, it was of particular importance to investigate whether therapeutic plasma levels (for treatment of migraine) could have been achieved by oral administration of a BIBN 4096 BS formulation."
+        },
+        "conditionsModule": { "conditions": ["Healthy"] },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": ["PHASE1"],
+          "designInfo": {
+            "allocation": "RANDOMIZED",
+            "interventionModel": "PARALLEL",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": { "masking": "DOUBLE" }
+          },
+          "enrollmentInfo": { "count": 32, "type": "ACTUAL" }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "BIBN 4096 BS - in single rising doses",
+              "type": "EXPERIMENTAL",
+              "interventionNames": ["Drug: BIBN 4096 BS - in single rising doses"]
+            },
+            {
+              "label": "Placebo",
+              "type": "PLACEBO_COMPARATOR",
+              "interventionNames": ["Drug: Placebo"]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "BIBN 4096 BS - in single rising doses",
+              "armGroupLabels": ["BIBN 4096 BS - in single rising doses"]
+            },
+            { "type": "DRUG", "name": "Placebo", "armGroupLabels": ["Placebo"] }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            { "measure": "Number of patients with adverse events", "timeFrame": "up to 24 days" },
+            {
+              "measure": "Number of patients with abnormal changes in laboratory parameters",
+              "timeFrame": "up to 8 days after drug administration"
+            },
+            {
+              "measure": "Number of patients with clinically significant changes in vital signs (blood pressure, pulse rate)",
+              "timeFrame": "up to 8 days after drug administration"
+            },
+            {
+              "measure": "Number of patients with clinically significant changes in 12-lead Electrocardiogram (ECG)",
+              "timeFrame": "up to 8 days after drug administration"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "AUC0-∞ (Area under the concentration-time curve of the analyte in plasma over the time interval from 0 extrapolated to infinity)",
+              "timeFrame": "up to 24 hours after drug administration"
+            },
+            {
+              "measure": "Cmax (Maximum measured concentration of the analyte in plasma)",
+              "timeFrame": "up to 24 hours after drug administration"
+            },
+            {
+              "measure": "tmax (Time from dosing to the maximum concentration of the analyte in plasma)",
+              "timeFrame": "up to 24 hours after drug administration"
+            },
+            {
+              "measure": "CL/F (Apparent clearance of the analyte in plasma following extravascular administration)",
+              "timeFrame": "up to 24 hours after drug administration"
+            },
+            {
+              "measure": "t½ (Terminal half-life of the analyte in plasma)",
+              "timeFrame": "up to 24 hours after drug administration"
+            },
+            {
+              "measure": "MRTtot (Total mean residence time of the analyte in plasma)",
+              "timeFrame": "up to 24 hours after drug administration"
+            },
+            {
+              "measure": "Vz/F (Apparent volume of distribution of the analyte during the terminal phase)",
+              "timeFrame": "up to 24 hours after drug administration"
+            },
+            {
+              "measure": "AUC0-tz (Area under the concentration-time curve of the analyte in plasma over the time interval from 0 to the last quantifiable data point)",
+              "timeFrame": "up to 24 hours after drug administration"
+            },
+            {
+              "measure": "Terminal rate constant in plasma",
+              "timeFrame": "up to 24 hours after drug administration"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* Participants should be healthy males and females\n* Age range from 21 to 50 years\n* Broca Index: within +- 20% of their normal weight\n* Subsequently each subject will have his medical history taken and will receive a complete medical examination (incl. blood pressure and pulse rate measurements) as well as a 12-lead Electrocardiogram (ECG). Hematopoietic, hepatic and renal function test will be carried out in the laboratory. The subjects will fast for 12 hours before collection of specimens for all laboratory evaluations. The above mentioned examinations will be performed within 14 days before the first administration of the test substance. In accordance with Good Clinical Practice (GCP) and local legislation all volunteers will have given their written informed consent prior to admission to the study\n\nExclusion Criteria:\n\n* Any finding of the medical examination (including blood pressure, pulse rate and ECG) deviating from normal and of clinical relevance\n* Gastrointestinal, hepatic, renal, respiratory, cardiovascular, metabolic, immunological or hormonal disorders\n* Diseases of the central nervous system (such as epilepsy) or with psychiatric disorders or neurological disorders\n* History of orthostatic hypotension, fainting spells or blackouts\n* Chronic or relevant acute infections\n* History of allergy/hypersensitivity (including drug allergy) which is deemed relevant to the trial as judged by the investigator\n* Intake of drugs with a long half-life (\\>24 hours) within at least one month or less than ten half-lives of the respective drug before enrolment in the study (exclusion: substitution therapy regarding thyroid gland and/or ovaries)\n* Use of any drugs which might influence the results of the trial (within one week prior to administration or during the trial)\n* Participation in another study with an investigational drug within two months prior to administration or during the trial\n* Smoker (\\> 10 cigarettes or \\> 3 cigars or \\> 3 pipes/day)\n* Inability to refrain from smoking on study days\n* Alcohol abuse (\\> 60 g/day)\n* Drug abuse\n* Blood donation (\\>= 100 ml) within four weeks prior to administration or during the trial\n* Excessive physical activities (within the last week before the study)\n* Any laboratory value outside the reference range of clinical relevance\n\nFor female subjects:\n\n* Pregnancy\n* Positive pregnancy test\n* No adequate contraception e.g. oral contraceptives, sterilization, intrauterine pessary (IUP)\n* Inability to maintain this adequate contraception during the whole study period\n* Lactation period",
+          "healthyVolunteers": true,
+          "sex": "ALL",
+          "minimumAge": "21 Years",
+          "maximumAge": "50 Years",
+          "stdAges": ["ADULT"]
+        }
+      },
+      "derivedSection": { "miscInfoModule": { "versionHolder": "2026-10-02" } },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04265235",
+          "orgStudyIdInfo": { "id": "RRK6589" },
+          "organization": { "fullName": "University of Birmingham", "class": "OTHER" },
+          "briefTitle": "EXerCise Intervention in cholesTatic LivEr Disease: The EXCITED Study",
+          "officialTitle": "EXerCise Intervention in cholesTatic LivEr Disease: The EXCITED Study",
+          "acronym": "EXCITED"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2020-07",
+          "overallStatus": "TERMINATED",
+          "whyStopped": "COVID pandemic. Recruited 31 out of target 40 patients.",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2019-04-07", "type": "ACTUAL" },
+          "primaryCompletionDateStruct": { "date": "2020-03-30", "type": "ACTUAL" },
+          "completionDateStruct": { "date": "2020-07-01", "type": "ACTUAL" },
+          "studyFirstSubmitDate": "2020-02-06",
+          "studyFirstSubmitQcDate": "2020-02-07",
+          "studyFirstPostDateStruct": { "date": "2020-02-11", "type": "ACTUAL" },
+          "lastUpdateSubmitDate": "2020-07-05",
+          "lastUpdatePostDateStruct": { "date": "2020-07-08", "type": "ACTUAL" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "PRINCIPAL_INVESTIGATOR",
+            "investigatorFullName": "Matthew Armstrong",
+            "investigatorTitle": "Consultant in Liver and Transplant Medicine, Honorary Clinical research Fellow and Principal Investigator",
+            "investigatorAffiliation": "University of Birmingham"
+          },
+          "leadSponsor": { "name": "University of Birmingham", "class": "OTHER" },
+          "collaborators": [
+            { "name": "University Hospital Birmingham NHS Foundation Trust", "class": "OTHER" },
+            { "name": "Intercept Pharmaceuticals", "class": "INDUSTRY" }
+          ]
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "A prospective, single centre, single-arm, pilot study investigating the safety and efficacy of a 12-week remotely-monitored home-based exercise program in patients with refractory fatigue (based on PBC-40 Quality of Life measure) secondary to Primary Biliary Cirrhosis.",
+          "detailedDescription": "Recruitment from the research nurse-led PBC clinic: Eligibility screen followed by recruitment letters being sent to patients.\n\nThe outpatient clinic review by the liver specialist physiotherapist (week 0):\n\nPatients will undergo a baseline assessment of quality of life, anthropometry, functional capacity (with validated tools including the incremental shuttle walk test and short performance battery test) and exercise tolerance. At the same visit, patients will be prescribed and trained to perform the individualised Home-based Exercise Program. Patients will be provided with an accelerometer to assess daily step count and a symptoms/side effects diary.\n\nSix weeks of telephone support (weeks 0-6):\n\nPatients will be telephoned weekly over a period of 6 weeks, in order to evaluate compliance with therapy and any difficulties encountered. At each phone call, the daily step count and the intensity of the resistance-exercises will be adjusted to the patients ability.\n\nThe outpatient clinic review by the liver specialist physiotherapist (week 6 +/- 5 days): Reassessment of baseline parameters of quality of life, functionality and exercise tolerance; and modification of step count targets and resistance-exercise intervention as needed.\n\nThe outpatient clinic review by the liver specialist physiotherapist (week 12 +/- 5 days): Reassessment of baseline parameters of quality of life, functionality and exercise tolerance; and modification of step count targets and resistance-exercise intervention as needed.\n\nValidate the efficacy of exercise intervention: Given that the goal is to improve fatigue-related symptoms and thus patient quality of life, the investigators will determine the interim efficacy and longevity of intervention using a multi-modal patient-reported outcome approach. This will principally be through changes in validated quality of life (QoL) scoring measures at baseline and during sequential study visits; including the fatigue domain of the PBC-40 QoL measure (primary outcome measure), in addition to the relevant PBC-40 domains of cognitive, social, emotional and overall symptom burden; the Hospital Anxiety and Depression Scale (HADS); Epworth Sleepiness Scale to assess daytime somnolence; Patient-Reported Outcomes Measurement Information System Health Assessment Questionnaire (PROMIS-HAQ®) to assess functional status, and the Cognitive Failure questionnaire (COGFAIL) to determine cognitive functionality.\n\nAll data will be collated onto a standardised clinical case record form. Outcomes will be audited after 6 months to determine whether the intervention has proven beneficial to patients, and whether improvements in functional status correlate with changes in fatigue and QoL scores"
+        },
+        "conditionsModule": {
+          "conditions": ["Primary Biliary Cholangitis"],
+          "keywords": ["Exercise", "Fatigue", "Liver"]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": ["NA"],
+          "designInfo": {
+            "allocation": "NA",
+            "interventionModel": "SINGLE_GROUP",
+            "interventionModelDescription": "Single-arm Exercise Intervention study",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": { "masking": "NONE" }
+          },
+          "enrollmentInfo": { "count": 31, "type": "ACTUAL" }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Home-based Exercise Program",
+              "type": "EXPERIMENTAL",
+              "description": "12-weeks, remotely monitored home-based exercise program consisting or aerobic and resistance exercise",
+              "interventionNames": ["Other: Home-based exercise program"]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "Home-based exercise program",
+              "description": "see 'arm' section",
+              "armGroupLabels": ["Home-based Exercise Program"]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Change in PBC-40 Quality of Life for Primary Biliary Cirrhosis",
+              "description": "PBC-40 is a quality of life questionnaire (validated) with the domains of cognitive, social, emotional and overall symptom burden. 40 questions, each scored on a scale of 1 to 5 (where 1 = least impact, 5 = greatest impact)",
+              "timeFrame": "12 weeks"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Health Anxiety Depression Score (HADS)",
+              "description": "Questionnaire - out of 24. higher score means worse depression and anxiety",
+              "timeFrame": "12 weeks"
+            },
+            {
+              "measure": "hand grips strength (kg)",
+              "description": "measures of muscle strength",
+              "timeFrame": "12 weeks"
+            },
+            {
+              "measure": "liver frailty index",
+              "description": "index based on hand grip strength, chair stands, balance. higher the value the more frail.",
+              "timeFrame": "12 weeks"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* 18 Years Old\n* A confirmed diagnosis of PBC through clinical observation as per guidance of BSG/ EASL\n* Fatigue Impact Scale \\>40\n* Access to a SMART Phone or Computer\n\nExclusion Criteria:\n\n* Decompensated PBC with the following clinical signs:\n* Moderate Ascites\n* A Bilirubin of \\>50\n* Variceal Bleed \\< 6 Months\n* Encephalopathic\n* Refractory Pruritis (Judged by PI)\n* Cardiovascular Instability (Judged by PI)\n* Untreated Vitamin Deficiency\n* Untreated hypothyroidism\n* Untreated Coeliac Disease\n* WHO Performance Status \\> 3\n* History of Unexplained Falls",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "stdAges": ["ADULT", "OLDER_ADULT"]
+        },
+        "contactsLocationsModule": {
+          "locations": [
+            {
+              "facility": "Liver Unit, University Hospital Birminghmam",
+              "city": "Birmingham",
+              "state": "West Midlands",
+              "zip": "B152TH",
+              "country": "United Kingdom",
+              "geoPoint": { "lat": 52.48142, "lon": -1.89983 }
+            }
+          ]
+        },
+        "referencesModule": {
+          "references": [
+            {
+              "pmid": "39640219",
+              "type": "DERIVED",
+              "citation": "Freer A, Williams FR, Durman S, Hayden J, Armstrong MJ, Trivedi PJ. A home-based exercise programme attenuates fatigue in primary biliary cholangitis: Results from the EXCITED clinical trial. JHEP Rep. 2024 Sep 6;6(12):101210. doi: 10.1016/j.jhepr.2024.101210. eCollection 2024 Dec."
+            },
+            {
+              "pmid": "33707216",
+              "type": "DERIVED",
+              "citation": "Freer A, Williams F, Durman S, Hayden J, Trivedi PJ, Armstrong MJ. Home-based exercise in patients with refractory fatigue associated with primary biliary cholangitis: a protocol for the EXerCise Intervention in cholesTatic LivEr Disease (EXCITED) feasibility trial. BMJ Open Gastroenterol. 2021 Mar;8(1):e000579. doi: 10.1136/bmjgast-2020-000579."
+            }
+          ]
+        },
+        "ipdSharingStatementModule": { "ipdSharing": "NO" }
+      },
+      "derivedSection": {
+        "miscInfoModule": { "versionHolder": "2026-10-02" },
+        "conditionBrowseModule": {
+          "meshes": [
+            { "id": "D008105", "term": "Liver Cirrhosis, Biliary" },
+            { "id": "D009043", "term": "Motor Activity" },
+            { "id": "D005221", "term": "Fatigue" }
+          ],
+          "ancestors": [
+            { "id": "D002780", "term": "Cholestasis, Intrahepatic" },
+            { "id": "D002779", "term": "Cholestasis" },
+            { "id": "D001649", "term": "Bile Duct Diseases" },
+            { "id": "D001660", "term": "Biliary Tract Diseases" },
+            { "id": "D004066", "term": "Digestive System Diseases" },
+            { "id": "D008107", "term": "Liver Diseases" },
+            { "id": "D008103", "term": "Liver Cirrhosis" },
+            { "id": "D005355", "term": "Fibrosis" },
+            { "id": "D010335", "term": "Pathologic Processes" },
+            { "id": "D013568", "term": "Pathological Conditions, Signs and Symptoms" },
+            { "id": "D001519", "term": "Behavior" },
+            { "id": "D012816", "term": "Signs and Symptoms" }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01448135",
+          "orgStudyIdInfo": { "id": "AAAI1205" },
+          "secondaryIdInfos": [
+            { "id": "ANUS1015", "type": "OTHER_GRANT", "domain": "ABBOTT Nutrition" }
+          ],
+          "organization": { "fullName": "Columbia University", "class": "OTHER" },
+          "briefTitle": "Tolerance and Efficacy of a Predigested, High Protein, High Omega 3 Fat Enteral Feeding Formula Versus a Standard Formula In Multiple Intensive Care Unit Settings",
+          "officialTitle": "Pilot Study Evaluating the Efficacy, Tolerance and Safety of VITAL AF (Semi Elemental, High Protein, High Omega 3 Fat Enteral Formula) Versus Osmolite 1.2 (High Protein Enteral Formula) in Multiple ICU Settings (Medical, Surgical, Cardiothoracic)"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2014-01",
+          "overallStatus": "COMPLETED",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2011-10" },
+          "primaryCompletionDateStruct": { "date": "2014-11", "type": "ACTUAL" },
+          "completionDateStruct": { "date": "2014-11", "type": "ACTUAL" },
+          "studyFirstSubmitDate": "2011-10-03",
+          "studyFirstSubmitQcDate": "2011-10-05",
+          "studyFirstPostDateStruct": { "date": "2011-10-07", "type": "ESTIMATED" },
+          "lastUpdateSubmitDate": "2015-06-22",
+          "lastUpdatePostDateStruct": { "date": "2015-06-23", "type": "ESTIMATED" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "PRINCIPAL_INVESTIGATOR",
+            "investigatorFullName": "Ira Jay Goldberg",
+            "investigatorTitle": "Dickinson W. Richards, Jr. Professor of Medicine",
+            "investigatorAffiliation": "Columbia University"
+          },
+          "leadSponsor": { "name": "Columbia University", "class": "OTHER" },
+          "collaborators": [{ "name": "Abbott Nutrition", "class": "INDUSTRY" }]
+        },
+        "oversightModule": { "oversightHasDmc": false },
+        "descriptionModule": {
+          "briefSummary": "The purpose of this pilot study is to assess the efficacy, safety and tolerance profile of the enteral feeding product VITAL AF (a semi-elemental, high protein, and high omega-3 fish oil) when compared to Osmolite 1.2, a standard feeding product in critically ill and/or post surgical patients in the intensive care unit (ICU). If enough patients are recruited, inferences about impact on outcomes may also be drawn."
+        },
+        "conditionsModule": { "conditions": ["Critical Illness", "Enteral Feeding"] },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": ["NA"],
+          "designInfo": {
+            "allocation": "RANDOMIZED",
+            "interventionModel": "PARALLEL",
+            "primaryPurpose": "PREVENTION",
+            "maskingInfo": { "masking": "DOUBLE", "whoMasked": ["PARTICIPANT", "CARE_PROVIDER"] }
+          },
+          "enrollmentInfo": { "count": 50, "type": "ESTIMATED" }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Vital AF",
+              "type": "EXPERIMENTAL",
+              "interventionNames": ["Other: VITAL AF"]
+            },
+            {
+              "label": "Osmolite 1.2",
+              "type": "ACTIVE_COMPARATOR",
+              "interventionNames": ["Other: Osmolite 1.2"]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "VITAL AF",
+              "description": "Semi-elemental, high protein, and high omega-3 fish oil enteral formula",
+              "armGroupLabels": ["Vital AF"]
+            },
+            {
+              "type": "OTHER",
+              "name": "Osmolite 1.2",
+              "description": "High protein enteral formula",
+              "armGroupLabels": ["Osmolite 1.2"]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Improved tolerance to enteral (tube) feeding",
+              "description": "Measure incidence of diarrhea, nausea, vomiting, increased gastric residual, etc.",
+              "timeFrame": "Baseline and 21 Days"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Improved delivery of prescribed calories",
+              "description": "Measurement of volume of feeding product actually delivered to patient is part of the daily flow-sheet data.",
+              "timeFrame": "Baseline and 21 Days"
+            },
+            {
+              "measure": "Decreased incidence of complications",
+              "description": "Measure incidence of diarrhea, nausea, vomiting, increased gastric residual, etc.",
+              "timeFrame": "Baseline and 21 Days"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* Subject requires enteral tube feeding as sole source of nourishment\n* Subject, or subject's legally acceptable representative (LAR), has provided voluntarily and informed consent form, as deemed appropriate and approved by the Columbia University Medical Center Institutional Review Board\n* Subject is ≥ 18 years of age\n* Subject is male or non-pregnant female at least six weeks postpartum and non-lactating females of childbearing potential will be required to confirm non-pregnancy status with a pregnancy test at screening\n* Subject has an initial APACHE II score less than or equal to 24\n\nExclusion Criteria:\n\n* Subject requires parenteral nutrition\n* Subject is acutely impacted or constipated\n* Subject has intestinal obstruction\n* Subject is too hemodynamically unstable for enteral feeding\n* Subject has an allergy or intolerance to any ingredient in the study product by documentation or verbal report by subject or subject's LAR\n* Subject is participating in a non-Abbott approved concomitant trial\n* Subject has gastrointestinal disease, including acute pancreatitis, active gastrointestinal bleeding, acute inflammatory bowel disease, or has undergone intestinal surgery within the past month",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "stdAges": ["ADULT", "OLDER_ADULT"]
+        },
+        "contactsLocationsModule": {
+          "overallOfficials": [
+            {
+              "name": "Ira J Goldberg, MD",
+              "affiliation": "Columbia University",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "NewYork-Presbyterian Hospital at Columbia University Medical Center",
+              "city": "New York",
+              "state": "New York",
+              "zip": "10032",
+              "country": "United States",
+              "geoPoint": { "lat": 40.71427, "lon": -74.00597 }
+            }
+          ]
+        },
+        "referencesModule": {
+          "references": [
+            {
+              "pmid": "27161892",
+              "type": "DERIVED",
+              "citation": "Seres DS, Ippolito PR. Pilot study evaluating the efficacy, tolerance and safety of a peptide-based enteral formula versus a high protein enteral formula in multiple ICU settings (medical, surgical, cardiothoracic). Clin Nutr. 2017 Jun;36(3):706-709. doi: 10.1016/j.clnu.2016.04.016. Epub 2016 Apr 26."
+            }
+          ]
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": { "versionHolder": "2026-10-02" },
+        "conditionBrowseModule": {
+          "meshes": [{ "id": "D016638", "term": "Critical Illness" }],
+          "ancestors": [
+            { "id": "D020969", "term": "Disease Attributes" },
+            { "id": "D010335", "term": "Pathologic Processes" },
+            { "id": "D013568", "term": "Pathological Conditions, Signs and Symptoms" }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04412135",
+          "orgStudyIdInfo": { "id": "87RI19_0050" },
+          "organization": { "fullName": "University Hospital, Limoges", "class": "OTHER" },
+          "briefTitle": "The Point of View of Hematological Cancer Patients and Their Loved Ones Regarding Spirituality",
+          "officialTitle": "The Point of View of Hematological Cancer Patients and Their Loved Ones Regarding Spirituality During the Initial Healing Phase",
+          "acronym": "SPIRIHEMATO"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2026-06",
+          "overallStatus": "WITHDRAWN",
+          "whyStopped": "Sponsor decision",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2020-06", "type": "ESTIMATED" },
+          "primaryCompletionDateStruct": { "date": "2021-02", "type": "ESTIMATED" },
+          "completionDateStruct": { "date": "2021-06", "type": "ESTIMATED" },
+          "studyFirstSubmitDate": "2020-05-29",
+          "studyFirstSubmitQcDate": "2020-05-29",
+          "studyFirstPostDateStruct": { "date": "2020-06-02", "type": "ACTUAL" },
+          "lastUpdateSubmitDate": "2026-06-25",
+          "lastUpdatePostDateStruct": { "date": "2026-06-29", "type": "ACTUAL" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": { "type": "SPONSOR" },
+          "leadSponsor": { "name": "University Hospital, Limoges", "class": "OTHER" }
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "The management of patients with malignant hemopathy is based on comprehensive management. In this context and faced with the various difficulties encountered by cancer patients, the question of spirituality and its experience is central. Spirituality refers to the person's attachment to what inspires and gives him foundation, as well as the beliefs, values, and existential experiences associated with it, whether these are religious in nature or not. Although the concept has been identified as a resource in the literature and widely treated in an end-of-life context, assessing the needs of patients with hematological cancer and their loved ones in terms of spirituality from the initiation of treatment does not has not been developed"
+        },
+        "conditionsModule": { "conditions": ["Hematologic Cancer"] },
+        "designModule": {
+          "studyType": "OBSERVATIONAL",
+          "patientRegistry": false,
+          "designInfo": { "observationalModel": "COHORT", "timePerspective": "PROSPECTIVE" },
+          "enrollmentInfo": { "count": 0, "type": "ACTUAL" }
+        },
+        "armsInterventionsModule": {
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "spirituality",
+              "description": "Patients will take three questionnaires (FACIT-Sp, Euroqol 5 dimensions and ESAS)"
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [{ "measure": "FACIT-Sp questionnaire", "timeFrame": "15 minutes" }]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* Aged ≥ 18 years with a recent diagnosis of hematological cancer (lymphoma or leukemia) and in treatment;\n* Patients who speak and read French;\n* Patients in general condition (physical and mental) judged emotionally and physically fit by the referring nurse to answer the questionnaires;\n* Patients benefiting from a social security scheme,\n* Patients who signed the non-objection form after being informed of the study,\n\nfamily person:\n\n* Have been designated by the patient as being the loved one they wish to include with them;\n* Aged ≥ 18 years;\n* Fluent in and reading French;\n* Having signed the non-objection form after being informed of the study.\n\nExclusion Criteria:\n\n* Patients in recurrence / progress or in remission of cancer;\n* Patients in the terminal phase of the disease.\n\nFamily person:\n\nperson in the curative phase of cancer",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "stdAges": ["ADULT", "OLDER_ADULT"],
+          "studyPopulation": "hematologic cancer patient and family member",
+          "samplingMethod": "PROBABILITY_SAMPLE"
+        },
+        "ipdSharingStatementModule": { "ipdSharing": "NO" }
+      },
+      "derivedSection": {
+        "miscInfoModule": { "versionHolder": "2026-10-02" },
+        "conditionBrowseModule": {
+          "meshes": [{ "id": "D019337", "term": "Hematologic Neoplasms" }],
+          "ancestors": [
+            { "id": "D009371", "term": "Neoplasms by Site" },
+            { "id": "D009369", "term": "Neoplasms" },
+            { "id": "D006402", "term": "Hematologic Diseases" },
+            { "id": "D006425", "term": "Hemic and Lymphatic Diseases" }
+          ]
+        },
+        "interventionBrowseModule": {
+          "meshes": [{ "id": "D026443", "term": "Spiritual Therapies" }],
+          "ancestors": [
+            { "id": "D000529", "term": "Complementary Therapies" },
+            { "id": "D013812", "term": "Therapeutics" }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04960735",
+          "orgStudyIdInfo": { "id": "INT/2020/VOICE" },
+          "organization": {
+            "fullName": "Biosistemak Institute for Health Systems Research",
+            "class": "OTHER"
+          },
+          "briefTitle": "Implementation, Effectiveness and Impact of a Value Based Intervention for Patients with Breast or Lung Cancer",
+          "officialTitle": "Value-based Healthcare for Outcomes in Breast and Lung Cancer in Europe",
+          "acronym": "VOICE"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2024-01",
+          "overallStatus": "COMPLETED",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2019-01-01", "type": "ACTUAL" },
+          "primaryCompletionDateStruct": { "date": "2020-12-31", "type": "ACTUAL" },
+          "completionDateStruct": { "date": "2023-03-30", "type": "ACTUAL" },
+          "studyFirstSubmitDate": "2021-06-11",
+          "studyFirstSubmitQcDate": "2021-07-02",
+          "studyFirstPostDateStruct": { "date": "2021-07-14", "type": "ACTUAL" },
+          "lastUpdateSubmitDate": "2025-03-05",
+          "lastUpdatePostDateStruct": { "date": "2025-03-10", "type": "ACTUAL" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": { "type": "SPONSOR" },
+          "leadSponsor": {
+            "name": "Biosistemak Institute for Health Systems Research",
+            "class": "OTHER"
+          },
+          "collaborators": [
+            { "name": "Hospital de Cruces", "class": "OTHER" },
+            { "name": "Hospital Donostia", "class": "OTHER" },
+            { "name": "Hospital Universitario 12 de Octubre", "class": "OTHER" },
+            {
+              "name": "Complejo Hospitalario de Especialidades Juan Ramón Jimenez",
+              "class": "OTHER"
+            },
+            {
+              "name": "Istituto Romagnolo per lo Studio dei Tumori Dino Amadori IRST S.r.l. IRCCS",
+              "class": "OTHER"
+            },
+            {
+              "name": "Instituto Portugues de Oncologia, Francisco Gentil, Porto",
+              "class": "OTHER"
+            },
+            { "name": "Onze Lieve Vrouwziekenhuis Aalst", "class": "OTHER" },
+            { "name": "UNICANCER", "class": "OTHER" }
+          ]
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false,
+          "isUsExport": false
+        },
+        "descriptionModule": {
+          "briefSummary": "VOICE project aims to guide health services in their reorganization towards the provision of the highest value care for the patient at the best cost. VOICE is targeted to patients with breast and lung cancer. The purpose is to offer a new innovative strategic framework based on value-based healthcare model to these patients in Europe. VOICE Community consists of 13 hospitals across Europe working collaboratively to implement this approach.\n\nThe Community addresses what matters most to patients by measuring patient reported health outcomes in routine clinical practice on a systematic and long-term basis, by including patients´ perspective in clinical decision-making, improving patient empowerment and physician-patient communication, assessing the impact on costs of the processes implemented, identifying factors for a successful implementation of value-based healthcare and boosting knowledge generation and best practice exchange across Europe.\n\nThe VOICE ambition is to collect the health-related Quality of Life evidence from more than 1000 patients (patients with breast cancer and patients with lung cancer), by means of health related and patient reported questionnaires (ICHOM, International Consortium for Health Outcome Measurements, standard sets). Hospitals will go further by assessing the satisfaction, acceptability, relationship with professionals or decision-making process with patients.\n\nThe VOICE Community will benchmark health outcomes and related costs to improve care delivery of these patients.",
+          "detailedDescription": "VOICE is a Europe-wide Hospital Community pioneering in the assessment of value-based healthcare outcomes related to breast and lung cancer. The VOICE Community members have extended experience in value-based healthcare paradigm as they founded the community in 2018 in continuity with in the All.Can initiative launched by International Consortium for Health Outcome Measurements (ICHOM).\n\nVOICE aims to implement the innovative value based healthcare approach for patients with breast cancer or lung cancer in routine practice to transform care provision and place the patient at the centre of the system. The project will assess the implementation process, the effectiveness of clinical practice and its impact on costs grouped by process for an intervention-based measurement of outcome values for patients with breast or lung cancer. As a result is expected to (i) analyse the effectiveness of an intervention based on measuring outcome values for patients in order to improve patient empowerment, shared decision-making, and physician-patient communication; (ii) assess the impact of an intervention based on measuring outcome values for patients on costs grouped by clinical process, and in the organisation of healthcare by processes and (iii) integrate the measurement of value-based health outcomes in everyday clinical practice for organisations both systematically and long term.\n\nThis study duration will be three years and a half.\n\n* Preparation period (July-December 2018): the intervention was defined; the data battery to be collected was designed; the systems required for that purpose were developed; and professionals participating in the study were recruited and trained.\n* Intervention period (January 2019-June 2020): all processes set forth were activated; patient recruitment and follow-up, as well as data collection started.\n* Analysis and benchmarking period (June 2020-June 2023): data collected will be analysed and outcomes will be compared among organisations participating in the study and corresponding dissemination.\n\nMore than 1,000 patients were progressively recruited in 13 pilot sites (European Hospitals) when diagnosed with breast or lung cancer. Patients who met the eligibility criteria described below were invited to take part in the study once diagnosed at the hospital. Medical professionals (gynaecology, oncology, pneumology and thoracic surgery consultants) explained the study and provided the patients with the information sheet and informed consent form.\n\nRecruitment was conducted in the first six months and patients were monitored for at least six months or until death, if that occurred first. Intervention outcomes were monitored at different times: at the start (on recruitment which coincided with diagnosis); at 6 months in breast cancer; and at the start (on recruitment which coincided with diagnosis), at 3 months; and after 6 months in lung cancer.\n\nThis multicentre prospective study combines an implementation research component and an effectiveness component, using quantitative and qualitative methods for data collection and analysis. Quantitative analysis includes a descriptive analysis of all variables included in the study. Categorical variables will be shown using frequencies and percentages, n (%). Continuous variables with normal distribution will be shown as standard deviation (SD). Continuous variables with non-normal distribution will be shown as median and first and third quartiles (Q1, Q3). Pre and post intervention differences between categorical variables will be calculated with McNemar's test used on paired data. In continuous variables, the Student´s t test will be used on paired data; or the Wilcoxon rank sum test for variables with normal and non-normal distributions, respectively. Moreover, regression models for the pre/post difference will be proposed to assess whether that difference varies from 0. Models will be adjusted by possible determinant factors such as gender and other socio-demographic elements.\n\nThe qualitative analysis to be carried out at the end of the intervention will include semi-structured interviews and focus groups methods. Analyses will be performed at individual level (patient) and at organisational level (costs).\n\nData management will meet the current European Union (EU) General Data Protection Regulations (GDPR) and shall include detailed information on the procedures in terms of data collection, conservation, protection, reuse and/or destruction. The project will only obtain essential data, and will never share patients' personal data or raw anonymous data. Data obtained will be used for assessment purposes, impact valuation and to increase the empirical base. Templates are based on ICHOM data dictionary for breast cancer and lung cancer where each variable is coded and responses are typified.\n\nVOICE will follow the procedures indicated in the new general data protection regulation No 2016/679 that has been recently applied in Europe for the data access, protection and sharing.\n\nThe Community partners have signed an agreement to access and to share data."
+        },
+        "conditionsModule": {
+          "conditions": ["Breast Cancer", "Lung Cancer"],
+          "keywords": [
+            "Value-Based Healthcare",
+            "Breast Cancer",
+            "Lung Cancer",
+            "Patient Health Outcomes",
+            "Patient's perspective",
+            "Patient Reported Outcomes Measures (PROMs)",
+            "Patient Reported Experience Measures (PREMs)",
+            "Patient quality of life",
+            "Healthcare process",
+            "Cost analyses"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": ["NA"],
+          "designInfo": {
+            "allocation": "NA",
+            "interventionModel": "SINGLE_GROUP",
+            "interventionModelDescription": "A single group intervention that will collect health-related Quality of Life evidence from patients with cancer from 13 hospitals for six months. The multicentre study combines an implementation research component and effectiveness, using quantitative and qualitative methods for data collection and analysis. Outcomes will be analysed not only at individual level but also at health organisation level.",
+            "primaryPurpose": "HEALTH_SERVICES_RESEARCH",
+            "maskingInfo": { "masking": "NONE" }
+          },
+          "enrollmentInfo": { "count": 1007, "type": "ACTUAL" }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Patients with cancer (patients with breast cancer and patients with lung cancer)",
+              "type": "EXPERIMENTAL",
+              "description": "Health-related Quality of Life evidence was collected from patients with cancer (patients with breast cancer and patients with lung cancer) for six months. The evidence was collected by means of health related and patient reported questionnaires (ICHOM standard sets for breast cancer and lung cancer).\n\nPatients were monitored for six months. Intervention outcomes were monitored at different times: for patients with breast cancer, at the start (on recruitment which coincided with diagnosis) and at six months; for patients with lung cancer, at the start (on recruitment which coincided with diagnosis), at three and at six months.",
+              "interventionNames": ["Other: VOICE intervention"]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "VOICE intervention",
+              "description": "The intervention consists of four stages:\n\n* S1, Value identification and description of current care processes: Needs are detected from two perspectives: feedback from patients and mapping of healthcare processes. ICHOM questionnaires are reviewed. Patient surveys and clinical forms are developed. The methodology for cost analysis is set up.\n* S2, Intervention implementation: Patients are recruited according to the eligibility criteria. Their care follows the current healthcare pathway and information is collected at different time points.\n* S3, Assessment of outcomes and continued benchmarking: Data and costs are analysed at both local level and Community level (benchmarking). Interviews and focus groups are held (optional). Root cause analysis is performed.\n* S4, Best practice sharing: Identifying what lessons could be learned from the best-performing sites, according to the results of the VOICE community benchmarking and following qualitative techniques.",
+              "armGroupLabels": [
+                "Patients with cancer (patients with breast cancer and patients with lung cancer)"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Change from baseline overall well-being for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months.. Lung Cancer patients completed the PROMs questionnaires at baseline, and after three and six months."
+            },
+            {
+              "measure": "Change from baseline Asthenia and fatigue (including physical functioning) at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Emotional functioning (also including anxiety and depression) for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Cognitive functioning for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Social and working functioning (also including financial impact) for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months"
+            },
+            {
+              "measure": "Change from baseline Body image for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC QLQ---BR23 (BR23: Breast Cancer Module).",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Sexual functioning for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC QLQ---BR23 (BR23: Breast Cancer Module).",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Satisfaction with breasts for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire BREAST---Q ---Satisfaction with Breast (The BREAST-Q © is a multiscale, multimodule, patient-reported outcome instrument (PRO) measuring health-related quality of life and patient satisfaction in women who undergo breast surgery.Domain Patient satisfaction: Satisfaction with breasts).",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Arm and breast symptoms for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC QLQ---BR23 (BR23: Breast Cancer Module).",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Adverse effects: vasomotor symptoms for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC QLQ---BR23 (BR23: Breast Cancer Module).",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Adverse effects: peripheral neuropathy for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC QLQ---LMC21 (questionnaire for assessment of patient-reported outcomes during treatment of colorectal liver metastases) -- single item.",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Adverse effects: Arthralgia for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaires EORTC QLQ---BR23, EORTC QLQ---LMC21 -- (questionnaire for assessment of patient-reported outcomes during treatment of colorectal liver metastases) single item and FACT (Functional Assessment of Cancer Therapy) -- ES (Endocrine Subscale) (single item).",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Vaginal symptoms for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire FACT (Functional Assessment of Cancer Therapy) -- ES (Endocrine Subscale) (single item).",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Quality of life for patients with breast cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the standardised measure EQ-5D (5D: Dimensions) (EQ-5D is a standardised measure of health-related quality of life developed by the EuroQol Group to provide a simple, generic questionnaire for use in clinical and economic appraisal and population health surveys) for the measurement of health-related quality of life. EQ-5D descriptive system comprises five dimensions: mobility, self-care, usual activities, pain and discomfort, and anxiety and depression. On the scale, a value of 100 indicates the best imaginable state of health while a value of 0 the worst imaginable state of health.",
+              "timeFrame": "Breast Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Global health status / Quality of life for patients with Lung Cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Lung Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Fatigue for patients with lung cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Lung Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Social function for patients with lung cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Lung Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Physical functioning for patients with Lung Cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Lung Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Emotional functioning for patients with lung cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Lung Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Cognitive function for patients with Lung Cancer at 6 months",
+              "description": "Outcome measure reported by patients with breast cancer by means of completion of the questionnaire EORTC (European Organization for Research and Treatment of Cancer) QLQ (quality of life questionnaire) -- C30.",
+              "timeFrame": "Lung Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Pain for patients with lung cancer at 6 months",
+              "description": "Outcome measure reported by patients with lung cancer by means of completion of the questionnaires EORTC QLQ---C30 and EORT QLQ-LC13 (a modular supplement to the EORTC Core Quality of Life Questionnaire (QLQ-C30) for use in lung cancer clinical trials).",
+              "timeFrame": "Lung Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Shortness of breath for patients with Lung Cancer at 6 months",
+              "description": "Outcome measure reported by patients with lung cancer by means of completion of the questionnaire EORT QLQ-LC13 (a modular supplement to the EORTC Core Quality of Life Questionnaire (QLQ-C30) for use in lung cancer clinical trials).",
+              "timeFrame": "Lung Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            },
+            {
+              "measure": "Change from baseline Cough for patients with lung cancer at 6 months",
+              "description": "Outcome measure reported by patients with lung cancer by means of completion of the questionnaire EORT QLQ-LC13 (a modular supplement to the EORTC Core Quality of Life Questionnaire (QLQ-C30) for use in lung cancer clinical trials).",
+              "timeFrame": "Lung Cancer patients completed the PROMs questionnaires at baseline and after six months."
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Rate of survival of patients with Breast Cancer",
+              "description": "Percentage of patients alive after completion of the study For Lung Cancer: Overall survival, Cause of death, Quality of death.",
+              "timeFrame": "For Breast cancer patients, during the intervention: at baseline and at six months."
+            },
+            {
+              "measure": "Rate of survival of patients with Lung Cancer",
+              "description": "Percentage of patients alive after completion of the study",
+              "timeFrame": "For Breast cancer patients, during the intervention: at baseline, and at three and at six months."
+            },
+            {
+              "measure": "Number of patients suffering serious treatment-related complications due to care of treatment for breast cancer",
+              "description": "For Breast Cancer: Number of patients with serious treatment-related complications defined as death, life-threatening, requiring in-patient hospitalization or prolongation of existing hospitalization, resulting in persistent or significant disability or incapacity, or a congenital anomaly/birth effect / Total number of patients",
+              "timeFrame": "For Breast cancer patients, during the intervention: at six months since the diagnostic."
+            },
+            {
+              "measure": "Number of patients suffering serious treatment-related complications due to care of treatment for lung cancer",
+              "description": "For Lung Cancer: Number of patients with serious treatment-related complications defined as death, life-threatening, requiring in-patient hospitalization or prolongation of existing hospitalization, resulting in persistent or significant disability or incapacity, or a congenital anomaly/birth effect / Total number of patients",
+              "timeFrame": "For Lung Cancer patients, during the intervention: at six months since the diagnostic."
+            },
+            {
+              "measure": "Average total cost per patient with breast cancer",
+              "description": "Sum of costs associated to the resource use of the total number of patients / Total number of patients",
+              "timeFrame": "For Breast cancer patients, during the intervention at 12 months period since the diagnostic"
+            },
+            {
+              "measure": "Average total cost per patient with lung cancer",
+              "description": "Sum of costs associated to the resource use of the total number of patients / Total number of patients",
+              "timeFrame": "For Lung cancer patients, during the intervention at 12 months period since the diagnostic"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria for patients with breast cancer:\n\n* male and female over 18\n* recently diagnosed with invasive stage I-IV cancer, or Ductal Carcinoma in Situ (DCIS)\n* undergoing any treatment type (surgery, radiotherapy, chemotherapy, hormone therapy and/or targeted therapy).\n\nInclusion Criteria for patients with lung cancer:\n\n* male and female over 18\n* newly diagnosed with lung cancer\n* eligible to receive curative or palliative care treatment.\n\nExclusion Criteria for patients with breast cancer:\n\n* With rare tumours\n* With Lobular Carcinoma In Situ (LCIS)\n* With recurring illness",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "stdAges": ["ADULT", "OLDER_ADULT"]
+        },
+        "contactsLocationsModule": {
+          "overallOfficials": [
+            {
+              "name": "Ane Fullaondo, Ph.D.",
+              "affiliation": "Biosistemak (formerly Kronikgune)",
+              "role": "STUDY_CHAIR"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "Olv Aalst",
+              "city": "Aalst",
+              "state": "Flanders",
+              "zip": "B-9300",
+              "country": "Belgium",
+              "geoPoint": { "lat": 50.93604, "lon": 4.0355 }
+            },
+            {
+              "facility": "Institut de Cancerologie de l'Ouest",
+              "city": "Angers",
+              "state": "Maine Et Loira",
+              "zip": "49 055",
+              "country": "France",
+              "geoPoint": { "lat": 47.47156, "lon": -0.55202 }
+            },
+            {
+              "facility": "Istituto Scientifico Romagnolo per lo Studio e la Cura dei Tumori",
+              "city": "Meldola",
+              "state": "Forlì-Cesena",
+              "zip": "47014",
+              "country": "Italy",
+              "geoPoint": { "lat": 44.12775, "lon": 12.0626 }
+            },
+            {
+              "facility": "Instituto Português de Oncologia do Porto",
+              "city": "Porto",
+              "zip": "4200-072",
+              "country": "Portugal",
+              "geoPoint": { "lat": 41.1485, "lon": -8.61097 }
+            },
+            {
+              "facility": "Donostia University Hospital",
+              "city": "San Sebastián",
+              "state": "Gipuzkoa",
+              "zip": "20014",
+              "country": "Spain",
+              "geoPoint": { "lat": 43.56667, "lon": -5.9 }
+            },
+            {
+              "facility": "Hospital Juan Ramón Jiménez",
+              "city": "Huelva",
+              "state": "Huelva",
+              "zip": "21005",
+              "country": "Spain",
+              "geoPoint": { "lat": 37.26638, "lon": -6.94004 }
+            },
+            {
+              "facility": "12 Octubre University Hospital",
+              "city": "Madrid",
+              "state": "Madrid",
+              "zip": "28041",
+              "country": "Spain",
+              "geoPoint": { "lat": 40.4165, "lon": -3.70256 }
+            },
+            {
+              "facility": "Cruces University Hospital",
+              "city": "Barakaldo",
+              "state": "Vizcaya",
+              "zip": "48903",
+              "country": "Spain",
+              "geoPoint": { "lat": 43.29639, "lon": -2.98813 }
+            }
+          ]
+        },
+        "referencesModule": {
+          "references": [
+            {
+              "pmid": "37875008",
+              "type": "BACKGROUND",
+              "citation": "Garcia-Lorenzo B, Gorostiza A, Alayo I, Castelo Zas S, Cobos Baena P, Gallego Camina I, Izaguirre Narbaiza B, Mallabiabarrena G, Ustarroz-Aguirre I, Rigabert A, Balzi W, Maltoni R, Massa I, Alvarez Lopez I, Arevalo Lobera S, Esteban M, Fernandez Calleja M, Gomez Mediavilla J, Fernandez M, Del Oro Hitar M, Ortega Torres MDC, Sanz Ferrandez MC, Manso Sanchez L, Serrano Balazote P, Varela Rodriguez C, Campone M, Le Lann S, Vercauter P, Tournoy K, Borges M, Oliveira AS, Soares M, Fullaondo A; VOICE Study Group. European value-based healthcare benchmarking: moving from theory to practice. Eur J Public Health. 2024 Feb 5;34(1):44-51. doi: 10.1093/eurpub/ckad181."
+            },
+            {
+              "pmid": "38878265",
+              "type": "BACKGROUND",
+              "citation": "Garcia-Lorenzo B, Alayo I, Arrospide A, Gorostiza A, Fullaondo A; VOICE Study Group. Disentangling the value equation: a step forward in value-based healthcare. Eur J Public Health. 2024 Aug 1;34(4):632-638. doi: 10.1093/eurpub/ckae060."
+            }
+          ],
+          "seeAlsoLinks": [
+            {
+              "label": "Description of VOICE project in the web page of the Sponsor",
+              "url": "https://www.kronikgune.org/en/european-community-voice/"
+            }
+          ]
+        },
+        "ipdSharingStatementModule": { "ipdSharing": "NO" }
+      },
+      "derivedSection": {
+        "miscInfoModule": { "versionHolder": "2026-10-02" },
+        "conditionBrowseModule": {
+          "meshes": [
+            { "id": "D001943", "term": "Breast Neoplasms" },
+            { "id": "D008175", "term": "Lung Neoplasms" }
+          ],
+          "ancestors": [
+            { "id": "D009371", "term": "Neoplasms by Site" },
+            { "id": "D009369", "term": "Neoplasms" },
+            { "id": "D001941", "term": "Breast Diseases" },
+            { "id": "D012871", "term": "Skin Diseases" },
+            { "id": "D017437", "term": "Skin and Connective Tissue Diseases" },
+            { "id": "D012142", "term": "Respiratory Tract Neoplasms" },
+            { "id": "D013899", "term": "Thoracic Neoplasms" },
+            { "id": "D008171", "term": "Lung Diseases" },
+            { "id": "D012140", "term": "Respiratory Tract Diseases" }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT01133535",
+          "orgStudyIdInfo": { "id": "AHC-001" },
+          "organization": {
+            "fullName": "Wake Forest University Health Sciences",
+            "class": "OTHER"
+          },
+          "briefTitle": "Idiopathic Recurrent Acute Pancreatitis (IRAP)",
+          "officialTitle": "The IRAP Registry is a Multi-center Prospective, Collaborative Database Designed to Create a National Registry That Collects Information Concerning Episodes of Idiopathic Recurrent Acute Pancreatitis From Major 'Pancreas' Centers. Intent is to do a Comparative Effectiveness Study of Interventions.",
+          "acronym": "IRAP"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2014-06",
+          "overallStatus": "COMPLETED",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2010-06" },
+          "primaryCompletionDateStruct": { "date": "2013-12", "type": "ACTUAL" },
+          "completionDateStruct": { "date": "2014-04", "type": "ACTUAL" },
+          "studyFirstSubmitDate": "2010-05-28",
+          "studyFirstSubmitQcDate": "2010-05-28",
+          "studyFirstPostDateStruct": { "date": "2010-05-31", "type": "ESTIMATED" },
+          "lastUpdateSubmitDate": "2024-10-01",
+          "lastUpdatePostDateStruct": { "date": "2024-10-03", "type": "ACTUAL" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": { "type": "SPONSOR" },
+          "leadSponsor": { "name": "Wake Forest University Health Sciences", "class": "OTHER" }
+        },
+        "oversightModule": { "oversightHasDmc": true },
+        "descriptionModule": {
+          "briefSummary": "The purpose of this study is to collect standardized data on the diagnosis and management of idiopathic (unknown cause) recurrent acute pancreatitis. The intent is to collect data for at least five years to obtain information regarding long-term outcomes and obtain comparative effectiveness data."
+        },
+        "conditionsModule": { "conditions": ["Pancreatitis"] },
+        "designModule": {
+          "studyType": "OBSERVATIONAL",
+          "designInfo": { "observationalModel": "COHORT", "timePerspective": "PROSPECTIVE" },
+          "enrollmentInfo": { "count": 50, "type": "ACTUAL" }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Pancreatitis, acute, recurrent",
+              "description": "Patients with acute recurrent pancreatitis where the cause is unknown"
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "IDIOPATHIC RECURRENT ACUTE PANCREATITIS (IRAP)",
+              "description": "Expect 750 to be treated with ERCP Expect 250 to be treated with conservative treatment. Therefore, the smaller group was used for the sample size analysis.\n\nSmallest difference in QOL for treatment is expected to be 10-20%. For smaller of two treatment groups (N=250), no effect would be 0 got better and 250 did not. If 10% of the subjects improved, 25 would get better and 225 would not. Result: Chi-square analysis yielded a highly significantly difference as follows. Chi-square= 24.253 with 1 degrees of freedom. (P = \\<0.001). Yates correction for continuity was used in calculating this test.An alternate analysis is that for no effect, 125 subjects would get better and 125 patients would not (random effects model).",
+              "timeFrame": "The goal is to recruit 1000 subjects in 5 years."
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n1. 18 years or older\n2. Able to provide consent\n3. More than one documented episode of pancreatitis (\\>3 fold elevation of amylase and or lipase with abdominal pain or with body imaging consistent with pancreatitis: need two of the three)\n4. Subjects with abdominal pain and enzyme elevation which is \\<3 fold above normal or absence of imaging findings: these subjects who are undergoing endoscopic interventions but do not fit the \"classic criteria\" for pancreatitis will be included but the analysis of data of these subjects would be done separately.\n\nNote: subjects with a diagnosis of pancreas divisum and or Sphincter of Oddi dysfunction diagnosed prior to or after entry into the study will be included in the study but their data will be analyzed separately because of the controversy regarding the association of these entities with pancreatitis.\n\nExclusion Criteria:\n\n1. Unable to give informed consent.\n2. Definite evidence of biliary or alcoholic pancreatitis.\n3. Clear evidence of hypertriglyceridemia-induced pancreatitis (triglycerides \\>1,000 mg/dl).\n4. Post-ERCP pancreatitis, drug-induced pancreatitis, or any identifiable cause for pancreatitis.\n5. History of pancreatic surgery.",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "stdAges": ["ADULT", "OLDER_ADULT"],
+          "studyPopulation": "Subjects with recurrent pancreatitis presenting to major centers for pancreatic disorders",
+          "samplingMethod": "NON_PROBABILITY_SAMPLE"
+        },
+        "contactsLocationsModule": {
+          "overallOfficials": [
+            {
+              "name": "Nalini M Guda, MD",
+              "affiliation": "Wake Forest University Health Sciences",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "Aurora St. Lukes Medical Center of Aurora Health Care",
+              "city": "Milwaukee",
+              "state": "Wisconsin",
+              "zip": "53215",
+              "country": "United States",
+              "geoPoint": { "lat": 43.0389, "lon": -87.90647 }
+            }
+          ]
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": { "versionHolder": "2026-10-02" },
+        "conditionBrowseModule": {
+          "meshes": [{ "id": "D010195", "term": "Pancreatitis" }],
+          "ancestors": [
+            { "id": "D010182", "term": "Pancreatic Diseases" },
+            { "id": "D004066", "term": "Digestive System Diseases" }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT00374335",
+          "orgStudyIdInfo": { "id": "06 02 029E" },
+          "organization": { "fullName": "Children's Mercy Hospital Kansas City", "class": "OTHER" },
+          "briefTitle": "Incidence of Hepatic Hemangiomatosis in Patients With Cutaneous Hemangiomas",
+          "officialTitle": "Multiple Hemangiomas and Large Cutaneous Hemangiomas of Infancy: Incidence of Hepatic Hemangiomatosis"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2011-09",
+          "overallStatus": "COMPLETED",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2006-09" },
+          "primaryCompletionDateStruct": { "date": "2008-06", "type": "ACTUAL" },
+          "completionDateStruct": { "date": "2009-12", "type": "ACTUAL" },
+          "studyFirstSubmitDate": "2006-09-07",
+          "studyFirstSubmitQcDate": "2006-09-08",
+          "studyFirstPostDateStruct": { "date": "2006-09-11", "type": "ESTIMATED" },
+          "resultsFirstSubmitDate": "2011-08-09",
+          "resultsFirstSubmitQcDate": "2011-08-09",
+          "resultsFirstPostDateStruct": { "date": "2011-09-12", "type": "ESTIMATED" },
+          "lastUpdateSubmitDate": "2011-09-12",
+          "lastUpdatePostDateStruct": { "date": "2011-09-16", "type": "ESTIMATED" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": { "type": "SPONSOR" },
+          "leadSponsor": { "name": "Children's Mercy Hospital Kansas City", "class": "OTHER" },
+          "collaborators": [
+            { "name": "Medical College of Wisconsin", "class": "OTHER" },
+            { "name": "University of California, San Francisco", "class": "OTHER" },
+            { "name": "Columbia University", "class": "OTHER" },
+            { "name": "Baylor College of Medicine", "class": "OTHER" },
+            { "name": "Northwestern University", "class": "OTHER" },
+            { "name": "St. Justine's Hospital", "class": "OTHER" },
+            {
+              "name": "Fundació Institut de Recerca de l'Hospital de la Santa Creu i Sant Pau",
+              "class": "OTHER"
+            }
+          ]
+        },
+        "oversightModule": { "oversightHasDmc": true },
+        "descriptionModule": {
+          "briefSummary": "This study will attempt to determine how common liver hemangiomas are in children with infantile hemangiomas by comparing liver ultrasound results in patients with 1-4 cutaneous hemangiomas, 5 or more cutaneous hemangiomas, or at least 1 large hemangioma versus ultrasound results in children without hemangiomas. Other objectives of the study include identifying specific risk factors in patients who have liver hemangiomas and identifying risk factors in children with symptomatic liver hemangiomas.",
+          "detailedDescription": "Hemangioma of infancy is the most common tumor of childhood occurring in 4% to 10% of infants. While most hemangiomas are benign in behavior and involute spontaneously, some can cause significant morbidity due to their location and size. In addition, some hemangiomas may be associated with extracutaneous hemangiomas that result in significant morbidity. Certain \"high risk\" hemangiomas of infancy, specifically multiple cutaneous hemangiomas or a solitary large hemangioma, have been associated with hepatic hemangiomatosis; however, the exact number or size of the cutaneous lesions at which the risk increases and the protocol for evaluating these patients remain controversial. The true prevalence of hepatic hemangiomatosis is unknown since there have been no large scale prospective studies evaluating clinically asymptomatic patients with cutaneous hemangiomas for the presence of hepatic hemangiomatosis.\n\nOne of the primary objectives of this study is to determine the incidence of hepatic hemangiomatosis in patients with hemangiomas of infancy by comparing hepatic ultrasound imaging results of patients with 1-4 cutaneous hemangiomas, 5 or more cutaneous hemangiomas, or at least 1 large hemangioma \\>30 cm2 versus imaging results in patients without cutaneous hemangiomas. The study will also attempt to identify specific risk factors associated with the development of hepatic hemangiomatosis and to identify associated risk factors in patients with clinically symptomatic hepatic hemangiomatosis."
+        },
+        "conditionsModule": {
+          "conditions": ["Hemangioma"],
+          "keywords": ["prospective cohort study"]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": ["NA"],
+          "designInfo": {
+            "allocation": "NON_RANDOMIZED",
+            "interventionModel": "SINGLE_GROUP",
+            "primaryPurpose": "SCREENING",
+            "maskingInfo": { "masking": "NONE" }
+          },
+          "enrollmentInfo": { "count": 261, "type": "ACTUAL" }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "infants with cutaneous hemangiomas",
+              "type": "OTHER",
+              "interventionNames": [
+                "Procedure: abdominal ultrasound",
+                "Other: Dermatologic Examination"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "PROCEDURE",
+              "name": "abdominal ultrasound",
+              "description": "abdominal ultrasound to detect hepatic hemangiomas",
+              "armGroupLabels": ["infants with cutaneous hemangiomas"]
+            },
+            {
+              "type": "OTHER",
+              "name": "Dermatologic Examination",
+              "description": "Complete dermatologic examination",
+              "armGroupLabels": ["infants with cutaneous hemangiomas"]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Frequency of Hepatic Hemangiomas Identified on Abdominal Ultrasound",
+              "description": "The number of participants with cutaneous infantile hemangiomas (1-4 cutaneous hemangiomas, greater than 5 cutaneous hemangiomas, or at least one large cutaneous hemangioma) who were found to have hepatic hemangiomas on abdominal ultrasound",
+              "timeFrame": "2 years"
+            },
+            {
+              "measure": "Presence of Hepatic Hemangiomas on Abdominal Ultrasound",
+              "description": "The number of participants with cutaneous infantile hemangiomas (1-4 cutaneous hemangiomas, greater than 5 cutaneous hemangiomas, or at least one large cutaneous hemangioma) who were found to have hepatic hemangiomas on abdominal ultrasound",
+              "timeFrame": "2 years"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Risk Factors Associated With the Development of Hepatic Hemangiomas",
+              "description": "Which participants with cutaneous infantile hemangiomas (1-4 cutaneous hemangiomas, greater than 5 cutaneous hemangiomas, or at least 1 large cutaneous hemangioma) were found to have hepatic hemangiomas on abdominal ultrasound",
+              "timeFrame": "2 years"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* Infants less than 6 months of age\n* clinical diagnosis of 1-4 cutaneous hemangiomas\n* clinical diagnosis of 5 or more cutaneous hemangiomas\n* clinical diagnosis of at least 1 large cutaneous hemangioma greater than 30 cm2\n\nExclusion Criteria:\n\n* Infants greater than 6 months of age",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "maximumAge": "6 Months",
+          "stdAges": ["CHILD"]
+        },
+        "contactsLocationsModule": {
+          "overallOfficials": [
+            {
+              "name": "Beth A Drolet, MD",
+              "affiliation": "Medical College of Wisconsin",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            },
+            {
+              "name": "Maria Garzon, MD",
+              "affiliation": "Columbia University",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            },
+            {
+              "name": "Kimberly A Horii, MD",
+              "affiliation": "Children's Mercy Hospital Kansas City",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            },
+            {
+              "name": "Denise Metry, MD",
+              "affiliation": "Baylor College of Medicine",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            },
+            {
+              "name": "Sarah Chamlin, MD",
+              "affiliation": "Northwestern University-Children's Memorial Hospital",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            },
+            {
+              "name": "Ilona J Frieden, MD",
+              "affiliation": "University of California, San Francisco",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            },
+            {
+              "name": "Julie Powell, MD",
+              "affiliation": "St. Justine's Hospital",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            },
+            {
+              "name": "Anne Lucky, MD",
+              "affiliation": "Children's Hospital of Cincinnati",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            },
+            {
+              "name": "Eulalia Baselga, MD",
+              "affiliation": "Hospital de la Santa Crue i Santa Pau",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "Children's Mercy Hospital",
+              "city": "Kansas City",
+              "state": "Missouri",
+              "zip": "64108",
+              "country": "United States",
+              "geoPoint": { "lat": 39.09973, "lon": -94.57857 }
+            }
+          ]
+        },
+        "referencesModule": {
+          "references": [
+            {
+              "pmid": "12472344",
+              "type": "BACKGROUND",
+              "citation": "Chiller KG, Passaro D, Frieden IJ. Hemangiomas of infancy: clinical characteristics, morphologic subtypes, and their relationship to race, ethnicity, and sex. Arch Dermatol. 2002 Dec;138(12):1567-76. doi: 10.1001/archderm.138.12.1567."
+            },
+            {
+              "pmid": "8804322",
+              "type": "BACKGROUND",
+              "citation": "Boon LM, Burrows PE, Paltiel HJ, Lund DP, Ezekowitz RA, Folkman J, Mulliken JB. Hepatic vascular anomalies in infancy: a twenty-seven-year experience. J Pediatr. 1996 Sep;129(3):346-54. doi: 10.1016/s0022-3476(96)70065-3."
+            },
+            {
+              "pmid": "15148105",
+              "type": "BACKGROUND",
+              "citation": "Metry DW, Hawrot A, Altman C, Frieden IJ. Association of solitary, segmental hemangiomas of the skin with visceral hemangiomatosis. Arch Dermatol. 2004 May;140(5):591-6. doi: 10.1001/archderm.140.5.591."
+            },
+            {
+              "pmid": "15037141",
+              "type": "BACKGROUND",
+              "citation": "Hughes JA, Hill V, Patel K, Syed S, Harper J, De Bruyn R. Cutaneous haemangioma: prevalence and sonographic characteristics of associated hepatic haemangioma. Clin Radiol. 2004 Mar;59(3):273-80. doi: 10.1016/S0009-9260(03)00267-8."
+            },
+            {
+              "pmid": "12664009",
+              "type": "BACKGROUND",
+              "citation": "Bruckner AL, Frieden IJ. Hemangiomas of infancy. J Am Acad Dermatol. 2003 Apr;48(4):477-93; quiz 494-6. doi: 10.1067/mjd.2003.200."
+            },
+            {
+              "pmid": "20157038",
+              "type": "DERIVED",
+              "citation": "Horii KA, Drolet BA, Baselga E, Frieden IJ, Metry DW, Morel KD, Newell BD, Nopper AJ, Garzon MC; Hemangioma Investigator Group. Risk of hepatic hemangiomas in infants with large hemangiomas. Arch Dermatol. 2010 Feb;146(2):201-3. doi: 10.1001/archdermatol.2009.391. No abstract available."
+            }
+          ]
+        }
+      },
+      "resultsSection": {
+        "participantFlowModule": {
+          "groups": [
+            {
+              "id": "FG000",
+              "title": "Group 1",
+              "description": "Cutaneous Hemangiomas (multiple \\> 5, 1-4, or at least 1 hemangioms \\>30 cm2)"
+            }
+          ],
+          "periods": [
+            {
+              "title": "Overall Study",
+              "milestones": [
+                {
+                  "type": "STARTED",
+                  "achievements": [{ "groupId": "FG000", "numSubjects": "261" }]
+                },
+                {
+                  "type": "COMPLETED",
+                  "achievements": [{ "groupId": "FG000", "numSubjects": "261" }]
+                },
+                {
+                  "type": "NOT COMPLETED",
+                  "achievements": [{ "groupId": "FG000", "numSubjects": "0" }]
+                }
+              ]
+            }
+          ]
+        },
+        "baselineCharacteristicsModule": {
+          "groups": [
+            {
+              "id": "BG000",
+              "title": "Group 1",
+              "description": "Cutaneous Hemangiomas (multiple \\> 5, 1-4, or at least 1 hemangioms \\>30 cm2)"
+            }
+          ],
+          "denoms": [
+            { "units": "Participants", "counts": [{ "groupId": "BG000", "value": "261" }] }
+          ],
+          "measures": [
+            {
+              "title": "Age, Categorical",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unitOfMeasure": "Participants",
+              "classes": [
+                {
+                  "categories": [
+                    {
+                      "title": "<=18 years",
+                      "measurements": [{ "groupId": "BG000", "value": "261" }]
+                    },
+                    {
+                      "title": "Between 18 and 65 years",
+                      "measurements": [{ "groupId": "BG000", "value": "0" }]
+                    },
+                    {
+                      "title": ">=65 years",
+                      "measurements": [{ "groupId": "BG000", "value": "0" }]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Age Continuous",
+              "paramType": "MEAN",
+              "dispersionType": "STANDARD_DEVIATION",
+              "unitOfMeasure": "years",
+              "classes": [
+                {
+                  "categories": [
+                    { "measurements": [{ "groupId": "BG000", "value": "0.3", "spread": "0.1" }] }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Sex: Female, Male",
+              "paramType": "COUNT_OF_PARTICIPANTS",
+              "unitOfMeasure": "Participants",
+              "classes": [
+                {
+                  "categories": [
+                    { "title": "Female", "measurements": [{ "groupId": "BG000", "value": "192" }] },
+                    { "title": "Male", "measurements": [{ "groupId": "BG000", "value": "69" }] }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Region of Enrollment",
+              "paramType": "NUMBER",
+              "unitOfMeasure": "participants",
+              "classes": [
+                {
+                  "title": "United States",
+                  "categories": [{ "measurements": [{ "groupId": "BG000", "value": "232" }] }]
+                },
+                {
+                  "title": "Spain",
+                  "categories": [{ "measurements": [{ "groupId": "BG000", "value": "13" }] }]
+                },
+                {
+                  "title": "Canada",
+                  "categories": [{ "measurements": [{ "groupId": "BG000", "value": "16" }] }]
+                }
+              ]
+            }
+          ]
+        },
+        "outcomeMeasuresModule": {
+          "outcomeMeasures": [
+            {
+              "type": "PRIMARY",
+              "title": "Frequency of Hepatic Hemangiomas Identified on Abdominal Ultrasound",
+              "description": "The number of participants with cutaneous infantile hemangiomas (1-4 cutaneous hemangiomas, greater than 5 cutaneous hemangiomas, or at least one large cutaneous hemangioma) who were found to have hepatic hemangiomas on abdominal ultrasound",
+              "reportingStatus": "POSTED",
+              "paramType": "NUMBER",
+              "unitOfMeasure": "participants",
+              "timeFrame": "2 years",
+              "groups": [
+                {
+                  "id": "OG000",
+                  "title": "Group 1",
+                  "description": "Cutaneous Hemangiomas (multiple \\> 5, 1-4, or at least 1 hemangioms \\>30 cm2)"
+                }
+              ],
+              "denoms": [
+                { "units": "Participants", "counts": [{ "groupId": "OG000", "value": "261" }] }
+              ],
+              "classes": [
+                { "categories": [{ "measurements": [{ "groupId": "OG000", "value": "24" }] }] }
+              ]
+            },
+            {
+              "type": "SECONDARY",
+              "title": "Risk Factors Associated With the Development of Hepatic Hemangiomas",
+              "description": "Which participants with cutaneous infantile hemangiomas (1-4 cutaneous hemangiomas, greater than 5 cutaneous hemangiomas, or at least 1 large cutaneous hemangioma) were found to have hepatic hemangiomas on abdominal ultrasound",
+              "reportingStatus": "POSTED",
+              "paramType": "NUMBER",
+              "unitOfMeasure": "participants",
+              "timeFrame": "2 years",
+              "groups": [
+                {
+                  "id": "OG000",
+                  "title": "Group 1",
+                  "description": "Cutaneous Hemangiomas (multiple \\> 5, 1-4, or at least 1 hemangioms \\>30 cm2)"
+                }
+              ],
+              "denoms": [
+                { "units": "Participants", "counts": [{ "groupId": "OG000", "value": "261" }] }
+              ],
+              "classes": [
+                { "categories": [{ "measurements": [{ "groupId": "OG000", "value": "24" }] }] }
+              ]
+            },
+            {
+              "type": "PRIMARY",
+              "title": "Presence of Hepatic Hemangiomas on Abdominal Ultrasound",
+              "description": "The number of participants with cutaneous infantile hemangiomas (1-4 cutaneous hemangiomas, greater than 5 cutaneous hemangiomas, or at least one large cutaneous hemangioma) who were found to have hepatic hemangiomas on abdominal ultrasound",
+              "reportingStatus": "NOT_POSTED",
+              "timeFrame": "2 years"
+            }
+          ]
+        },
+        "adverseEventsModule": {
+          "frequencyThreshold": "0",
+          "eventGroups": [
+            {
+              "id": "EG000",
+              "title": "Group 1",
+              "description": "Cutaneous Hemangiomas (multiple \\> 5, 1-4, or at least 1 hemangioms \\>30 cm2)",
+              "seriousNumAffected": 0,
+              "seriousNumAtRisk": 261,
+              "otherNumAffected": 0,
+              "otherNumAtRisk": 261
+            }
+          ]
+        },
+        "moreInfoModule": {
+          "certainAgreement": { "piSponsorEmployee": false, "restrictiveAgreement": false },
+          "pointOfContact": {
+            "title": "Dr. Kimberly Horii",
+            "organization": "Children's Mercy Hospitals and Clinics",
+            "email": "kahorii@cmh.edu",
+            "phone": "816-234-3924"
+          }
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": { "versionHolder": "2026-10-02" },
+        "conditionBrowseModule": {
+          "meshes": [{ "id": "D006391", "term": "Hemangioma" }],
+          "ancestors": [
+            { "id": "D009383", "term": "Neoplasms, Vascular Tissue" },
+            { "id": "D009370", "term": "Neoplasms by Histologic Type" },
+            { "id": "D009369", "term": "Neoplasms" }
+          ]
+        }
+      },
+      "hasResults": true
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05895435",
+          "orgStudyIdInfo": { "id": "the effect of radiofrequancy" },
+          "organization": { "fullName": "Cairo University", "class": "OTHER" },
+          "briefTitle": "THE EFFECT OF RADIOFREQUENCY ON POSTMENOPAUSAL ADIPOSE TISSUE",
+          "officialTitle": "THE EFFECT OF RADIOFREQUENCY ON POSTMENOPAUSAL ADIPOSE TISSUE"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2023-05",
+          "overallStatus": "UNKNOWN",
+          "lastKnownStatus": "NOT_YET_RECRUITING",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2023-05-31", "type": "ESTIMATED" },
+          "primaryCompletionDateStruct": { "date": "2023-10-15", "type": "ESTIMATED" },
+          "completionDateStruct": { "date": "2023-10-18", "type": "ESTIMATED" },
+          "studyFirstSubmitDate": "2023-05-31",
+          "studyFirstSubmitQcDate": "2023-05-31",
+          "studyFirstPostDateStruct": { "date": "2023-06-08", "type": "ACTUAL" },
+          "lastUpdateSubmitDate": "2023-05-31",
+          "lastUpdatePostDateStruct": { "date": "2023-06-08", "type": "ACTUAL" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "PRINCIPAL_INVESTIGATOR",
+            "investigatorFullName": "Mahmoud Adel Elasyed Darahem",
+            "investigatorTitle": "effect of radiofrequancy on postmenopausal adipose tissue",
+            "investigatorAffiliation": "Cairo University"
+          },
+          "leadSponsor": { "name": "Cairo University", "class": "OTHER" }
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "* Menopause is associated with a redistribution of adipose tissue towards central adiposity, known to cause insulin resistance. It was found that menopause was associated with changes in adipose tissue phenotype related to metabolic dysfunction. In subcutaneous adipose tissue (SAT)\n* The radiofrequency uses high-frequency electromagnetic waves to produce heat at the cutaneous and the subcutaneous levels. The mechanism of action, through the vibration of water molecules, transforms the electromagnetic energy into thermal. The heat generated by conversion occurs under 30 kHz to 300 MHz, and the most frequently used frequency is set between 0.5 and 1.5 MHz. The RF mechanism of fat reduction occurs by the generation of thermal stimulation of adipocyte metabolism, occurring through enzymatic degradation by lipase-mediated triglycerides, apoptosis, and adipocyte rupture and the objective of study to show the positive effect of radiofrequancy on postmenopausal adipose tissue",
+          "detailedDescription": "About 90% of menopausal women experience some amount of weight gain. It is a natural and common aspect of getting older. It occurs because the body mass increases, as a result of fat deposits. However, weight gain associated with menopause typically involves increased amounts of fat around the abdomen. On an average, women gain between 8-10 kilogram between the ages of 45 and 55, the stage in life when menopause occurs. This extra weight generally does not evenly distribute itself throughout a woman's body. The weight tends instead to accumulate around the abdomen or thighs (Singh et al., 2013).\n\nPostmenopausal women are usually troubled by increasing weight and waist circumference caused by obesity and android fat redistribution it is mostly attributed to estrogen depletion though other factors such as chronological aging and decline in physical activity play a significant role. The deleterious health consequences of obesity and visceral fat deposition after menopause encompass a variety of problems; from dyslipidemia and metabolic syndrome to increased risk of cardiovascular disease (CVD), osteoporosis, malignancies and mortality (Stachowiak et al., 2015) This emphasizes the need of effective methods for treating central adiposity in post-menopausal woman. No prior studies have investigated the effect of radiofrequency on adipose tissue. So this may add a new physical therapy method for treating this problem."
+        },
+        "conditionsModule": {
+          "conditions": ["Show Positive Effect of Radiofrequancy on Postmenopausal Adipose Tissue"]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": ["NA"],
+          "designInfo": {
+            "allocation": "RANDOMIZED",
+            "interventionModel": "PARALLEL",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": { "masking": "SINGLE", "whoMasked": ["PARTICIPANT"] }
+          },
+          "enrollmentInfo": { "count": 60, "type": "ESTIMATED" }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "first group",
+              "type": "EXPERIMENTAL",
+              "description": "Group (A) (Control Group):\n\nIt will be consisted of 30 patients who will receive aerobic exercise and diet for 8 successive weeks 2 sessions per week.",
+              "interventionNames": ["Other: aerobic exercise"]
+            },
+            {
+              "label": "second group",
+              "type": "EXPERIMENTAL",
+              "description": "Group (B) (Study Group):\n\nIt will be consisted of 30 patients who will receive aerobic exercise and diet and radiofrequency for 8 successive weeks 2 sessions per week.",
+              "interventionNames": ["Device: radiofrequancy", "Other: aerobic exercise"]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "radiofrequancy",
+              "description": "* Power of device: 150 W\n* Duration of the session: 40 minutes\n* Frequency: 2 sessions per week for 8 week.\n* Heating temperature: According to patient tolerance.",
+              "armGroupLabels": ["second group"]
+            },
+            {
+              "type": "OTHER",
+              "name": "aerobic exercise",
+              "description": "The program include five minutes for warming-up in the form of range of motion and stretching exercises, thirty minutes of walking on treadmill with high speed (60-70% of maximum heart rate) and five minutes of cooling down (on treadmill with low speed and without inclination",
+              "armGroupLabels": ["first group", "second group"]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "total cholestrol and HDL and LDL and triglycerides and VLDL by blood analysis",
+              "description": "measure before and after tratement programm",
+              "timeFrame": "8 week"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "waist circumferance using tape measurment",
+              "description": "measure before and after tratement",
+              "timeFrame": "8 week"
+            },
+            {
+              "measure": "body mass index",
+              "description": "measure before and after tratement",
+              "timeFrame": "8 week"
+            },
+            {
+              "measure": "weight",
+              "description": "measure before and after tratement",
+              "timeFrame": "8 week"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* 1-Their ages will be ranged from 45 to 60 years 2- BMI \\> 25 kg/m² and \\< 35 kg/m². 3- Waist circumference more than 88cm\n\nExclusion Criteria:\n\n* 1-Cancer. 2-Renal failure 3-tumors 4-Hepatic diseases 5-skin disease that prevent the use of radiofrequancy",
+          "healthyVolunteers": true,
+          "sex": "FEMALE",
+          "genderBased": true,
+          "minimumAge": "45 Years",
+          "maximumAge": "60 Years",
+          "stdAges": ["ADULT"]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "mahmoud adel darahem",
+              "role": "CONTACT",
+              "phone": "01028911100",
+              "email": "mahmouddarahem2023@gamil.com"
+            },
+            {
+              "name": "afaf mohamed botla",
+              "role": "CONTACT",
+              "phone": "01283126608",
+              "email": "drafafmohamed@cu.edu.eg"
+            }
+          ]
+        },
+        "referencesModule": {
+          "references": [
+            {
+              "pmid": "12841881",
+              "type": "BACKGROUND",
+              "citation": "Guthrie JR, Dennerstein L, Taffe JR, Donnelly V. Health care-seeking for menopausal problems. Climacteric. 2003 Jun;6(2):112-7."
+            }
+          ],
+          "seeAlsoLinks": [
+            {
+              "label": "data obtain through the study may be provided to a qualified resarcher",
+              "url": "https://www.who.int/news-room/fact-sheets/detail/menopause"
+            }
+          ],
+          "availIpds": [
+            { "type": "Study Protocol", "url": "https://pubmed.ncbi.nlm.nih.gov/12841881/" }
+          ]
+        },
+        "ipdSharingStatementModule": { "ipdSharing": "NO" }
+      },
+      "derivedSection": {
+        "miscInfoModule": { "versionHolder": "2026-10-02" },
+        "interventionBrowseModule": {
+          "meshes": [{ "id": "D015444", "term": "Exercise" }],
+          "ancestors": [
+            { "id": "D009043", "term": "Motor Activity" },
+            { "id": "D009068", "term": "Movement" },
+            { "id": "D009142", "term": "Musculoskeletal Physiological Phenomena" },
+            { "id": "D055687", "term": "Musculoskeletal and Neural Physiological Phenomena" }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05367635",
+          "orgStudyIdInfo": { "id": "SKB315-I-01" },
+          "organization": {
+            "fullName": "Sichuan Kelun-Biotech Biopharmaceutical Co., Ltd.",
+            "class": "INDUSTRY"
+          },
+          "briefTitle": "A Study of SKB315 in Patients With Advanced Solid Tumors",
+          "officialTitle": "A Phase 1 Clinical Study to Evaluate the Safety, Tolerability, Pharmacokinetics and Preliminary Efficacy of SKB315 for Injection in Patients With Advanced Solid Tumors Expressing Claudin18.2"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2026-05",
+          "overallStatus": "RECRUITING",
+          "expandedAccessInfo": { "hasExpandedAccess": false },
+          "startDateStruct": { "date": "2022-03-16", "type": "ACTUAL" },
+          "primaryCompletionDateStruct": { "date": "2026-06-30", "type": "ESTIMATED" },
+          "completionDateStruct": { "date": "2028-06-30", "type": "ESTIMATED" },
+          "studyFirstSubmitDate": "2022-04-21",
+          "studyFirstSubmitQcDate": "2022-05-05",
+          "studyFirstPostDateStruct": { "date": "2022-05-10", "type": "ACTUAL" },
+          "lastUpdateSubmitDate": "2026-05-05",
+          "lastUpdatePostDateStruct": { "date": "2026-05-08", "type": "ACTUAL" }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": { "type": "SPONSOR" },
+          "leadSponsor": {
+            "name": "Sichuan Kelun-Biotech Biopharmaceutical Co., Ltd.",
+            "class": "INDUSTRY"
+          }
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "This is a multicenter, open-label, multiple-dose dose finding and expansion study to evaluate the safety, tolerability, pharmacokinetic(PK) profile, and anti-tumor efficacy of SKB315 for injection in patients with advanced solid tumors.",
+          "detailedDescription": "This is a multicenter, open-label, multiple-dose dose finding and expansion study to evaluate the safety, tolerability, PK profile, and anti-tumor efficacy of SKB315 for injection in patients with advanced solid tumors.The study is divided into Phase 1a and Phase 1b: Phase 1a is a dose escalation study to determine the maximum tolerated dose(MTD); Phase 1b （monotherapy）is a dose expansion study to conduct preliminary evaluation of anti-tumor efficacy and further evaluation of safety, tolerability, PK, and immunogenicity of SKB315.Phase 1b（combination with Tagitanlimab and Capecitabine） is designed to evaluate the efficacy and safety of SKB315 combination with Tagitanlimab and Capecitabine in CLDN18.2-positive of patients with locally advanced, recurrent, or metastatic gastric and esophagogastric junction adenocarcinoma."
+        },
+        "conditionsModule": { "conditions": ["Advanced Solid Tumors"] },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": ["PHASE1"],
+          "designInfo": {
+            "allocation": "NON_RANDOMIZED",
+            "interventionModel": "SINGLE_GROUP",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": { "masking": "NONE" }
+          },
+          "enrollmentInfo": { "count": 246, "type": "ESTIMATED" }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Phase 1a：Dose escalation",
+              "type": "EXPERIMENTAL",
+              "description": "Eleven dose levels are tentatively planned for Phase 1a",
+              "interventionNames": ["Drug: SKB315 for injection"]
+            },
+            {
+              "label": "Phase 1b: Dose expansion",
+              "type": "EXPERIMENTAL",
+              "description": "The dose of SKB315 for injection in Phase 1b is selected based on the Phase 1a monotherapy dose escalation study.",
+              "interventionNames": ["Drug: SKB315 for injection"]
+            },
+            {
+              "label": "Phase 1b combination",
+              "type": "EXPERIMENTAL",
+              "description": "The dose of SKB315 for injection in Phase 1b is selected based on the Phase 1a monotherapy dose escalation study.",
+              "interventionNames": [
+                "Drug: SKB315 for injection",
+                "Drug: Drug: Tagitanlimab Drug: Capecitabine"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "SKB315 for injection",
+              "description": "SKB315 for injection is an Antibody Drug Conjugates (ADC) drug targeting Claudin18.2. The strength of SKB315 is 200 mg/vial.",
+              "armGroupLabels": [
+                "Phase 1a：Dose escalation",
+                "Phase 1b combination",
+                "Phase 1b: Dose expansion"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "Drug: Tagitanlimab Drug: Capecitabine",
+              "armGroupLabels": ["Phase 1b combination"]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Phase 1a: Dose Limiting Toxicities (DLT)",
+              "description": "Incidence of Dose Limiting Toxicities",
+              "timeFrame": "From data of initial dose until up to 21/28 days for treatment"
+            },
+            {
+              "measure": "Phase 1b: Objective Response Rate (ORR)",
+              "description": "The sum of the number of cases with Complete Response (CR) and Partial Response (PR) in all treated tumor patients (CR + PR) divided by the total number of cases.",
+              "timeFrame": "Up to 2 years"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Progression Free Survival (PFS)",
+              "description": "PFS: Time from start of treatment to progression of disease (PD) or death, whichever occurs first, in patients with tumors.",
+              "timeFrame": "Up to 2 years"
+            },
+            {
+              "measure": "Duration of Response (DOR)",
+              "description": "DOR: Time from the start of the first assessment of CR or PR in tumor patients to PD or death due to any reason.",
+              "timeFrame": "Up to 2 years"
+            },
+            {
+              "measure": "Overall Survival (OS)",
+              "description": "OS: Time from start of treatment to death due to any reason.",
+              "timeFrame": "Up to 2 years"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\nIa\\&Ib(monotherapy):1) Male or female patients aged 18 to 80 years (inclusive) at the time of signing the informed consent form (ICF); 2) Patients with histologically and/or cytologically confirmed advanced solid tumors who have failed standard of care, or who have no available standard of care regimen, or who are unqualified for standard of care; 3) Consent to provide archival or fresh tumor tissue slides for immunohistochemistry (IHC) assessment, and advanced solid tumors with Claudin 18.2 expression as determined by IHC; 4) Presence of at least one measurable lesion based on Response Evaluation Criteria in Solid Tumors (RECIST) v1.1; 5) Eastern Cooperative Oncology Group (ECOG) score of 0 or 1; 6) Estimated survival ≥ 3 months as judged by the investigator; 7) Adequate organ and bone marrow function (no blood components and cytokines are allowed within 2 weeks prior to the first dose) ; 8) Have recovered to ≤ Grade 1 (according to national cancer institute (NCI) common terminology criteria adverse events (CTCAE) V5.0) from previously treated toxicity prior to the first dose of study treatment; 9) Patients of childbearing potential (male or female) must use effective medical contraception during the study and for 6 months after the end of dosing; 10) Patients voluntarily participate in the study, sign the ICF, and will be able to comply with the protocol-specified visits and relevant procedures.\n\nPhase Ib (combination) Inclusion criteria\n\n1. Age 18 to 80 years old (including boundary values);\n2. Histopathologically confirmed unresectable locally advanced, recurrent, or metastatic adenocarcinoma of the gastric and gastroesophageal junction 3 positive CLDN18.2 expression in tumor tissue;\n\n4\\. ECOG score 0-1; 5. Expected survival ≥3 months; 6. There is at least one measurable lesion that meets the RECIST 1.1 criteria; 7. Adequate bone marrow and organ function\n\nExclusion Criteria:\n\nIa\\&Ib(monotherapy)1) Received other drugs in clinical study, major surgeries, or any other anti-tumor therapies within 4 weeks prior to the first dose of study treatment; 2) Received any previous therapy targeting Claudin18.2; 3) Plan to receive any other anti-tumor therapy during the study; 4) Received strong cytochrome P450 3A4(CYP3A4) inhibitors or inducers within 2 weeks prior to the first dose of study treatment or within 5 half-lives of drug elimination, whichever is longer; 5) Have other malignancies within 5 years prior to signing of ICF; 6) Pregnant or lactating women; 7) Known history of allergy to any component of SKB315 or other monoclonal antibodies (mAbs); 8) Known history of alcohol abuse (consumption of more than 14 units of alcohol per week or drug abuse); 9) Patients with active hepatitis B or hepatitis C; 10) Human immunodeficiency virus (HIV) positive; 11) Active severe digestive disease; 12) History of major cardiovascular diseases 13) Confirmed serious lung disease or lung disease that may impair the respiratory reserve function of the patient as judged by the investigator; 14) History of serious dementia, altered mental status, or any psychiatric disorder; 15) Concomitant or known metastases to brain or central nervous system; 16) Have clinically significant systemic diseases that may adversely affect the safety of the study; 17) Subjects who may have poor compliance with the clinical study or have other factors based on which the investigator considers that the subjects are not appropriate to participate in the study.\n\nIb(combination)\n\n1. HER2 expression in tumor tissue is positive.\n2. Has a history of brain metastases.\n3. Additional malignancy within the five years prior to the first administration.\n4. Has an active autoimmune disease or a history of autoimmune disease.\n5. Received systemic use of corticosteroids or other immunosuppressants for immunosuppressive effects within 14 days prior to the first administration.\n6. A history of immunodeficiency, including a positive HIV test; Presence of active hepatitis B or hepatitis C.\n7. In the investigator's judgment, the subjects has other factors that could have affected the study results or led to the forced termination of the study.",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "maximumAge": "80 Years",
+          "stdAges": ["ADULT", "OLDER_ADULT"]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Yi Ba, Professor",
+              "role": "CONTACT",
+              "phone": "022-23340123",
+              "email": "bayi@tjmuch.com"
+            }
+          ],
+          "overallOfficials": [
+            {
+              "name": "Yi Ba, Professor",
+              "affiliation": "Tianjin Medical University Cancer Institute and Hospital",
+              "role": "PRINCIPAL_INVESTIGATOR"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "Tianjin Medical University Cancer Institute & Hospital",
+              "status": "RECRUITING",
+              "city": "Tianjin",
+              "state": "Tianjin Municipality",
+              "zip": "300060",
+              "country": "China",
+              "contacts": [
+                { "name": "Yi Ba, Professor", "role": "CONTACT", "email": "bayi@tjmuch.com" }
+              ],
+              "geoPoint": { "lat": 39.14222, "lon": 117.17667 }
+            }
+          ]
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": { "versionHolder": "2026-10-02" },
+        "interventionBrowseModule": {
+          "meshes": [{ "id": "D007267", "term": "Injections" }],
+          "ancestors": [
+            { "id": "D004333", "term": "Drug Administration Routes" },
+            { "id": "D004358", "term": "Drug Therapy" },
+            { "id": "D013812", "term": "Therapeutics" }
+          ]
+        }
+      },
+      "hasResults": false
+    }
+  ],
+  "nextPageToken": "ZVNj7o2Elu8o3lpwTcito62tmo6Qe5dvbPSm2fg"
+}

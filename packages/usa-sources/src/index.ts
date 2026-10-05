@@ -235,5 +235,173 @@ export type {
   CfpComplaintYearCount,
   CfpConsumerComplaintSeries,
 } from './cfpbConsumerComplaints.js';
+/** Treasury debt to the penny, daily public debt outstanding (keyless). */
+export {
+  buildTreasuryDebtToPennyPage,
+  buildTreasuryDebtToPennyUrl,
+  fetchTreasuryDebtToPenny,
+  parseTreasuryDebtToPennyPayload,
+  treasuryDebtToPennyAdapter,
+  TREASURY_DEBT_TO_PENNY_API_BASE,
+  TREASURY_DEBT_TO_PENNY_PATH,
+  TREASURY_DEBT_TO_PENNY_ROW_LIMIT,
+  TREASURY_DEBT_TO_PENNY_SOURCE_ID,
+} from './treasuryDebtToPenny.js';
+/** Treasury debt to the penny types. */
+export type { TreasuryDebtToPennyDay, TreasuryDebtToPennyPage } from './treasuryDebtToPenny.js';
+/** SEC EDGAR issuer submissions and recent filings (keyless). */
+export {
+  buildSecEdgarSubmissionsUrl,
+  fetchSecEdgarFilings,
+  parseSecEdgarFilingsPayload,
+  secEdgarFilingsAdapter,
+  SEC_EDGAR_APPLE_CIK,
+  SEC_EDGAR_FILINGS_SOURCE_ID,
+  SEC_EDGAR_SUBMISSIONS_API_BASE,
+  SEC_EDGAR_USER_AGENT,
+} from './secEdgarFilings.js';
+/** SEC EDGAR filings types. */
+export type {
+  SecEdgarCompanyFilings,
+  SecEdgarFiling,
+  SecEdgarFormCount,
+} from './secEdgarFilings.js';
+/** FDIC bank directory (keyless). */
+export {
+  buildFdicBankDirectoryUrl,
+  FDIC_BANK_API_BASE,
+  FDIC_BANK_DIRECTORY_SOURCE_ID,
+  FDIC_BANK_FIELDS,
+  FDIC_BANK_ROW_LIMIT,
+  fdicBankDirectoryAdapter,
+  fetchFdicBankDirectory,
+  parseFdicBankDirectoryPayload,
+} from './fdicBankDirectory.js';
+/** FDIC bank directory types. */
+export type { FdicBank, FdicBankDirectory, FdicBankStateCount } from './fdicBankDirectory.js';
+/** ClinicalTrials.gov registered studies (keyless). */
+export {
+  buildClinicalTrialsStudiesUrl,
+  CLINICALTRIALS_STUDIES_API_BASE,
+  CLINICALTRIALS_STUDIES_PAGE_SIZE,
+  CLINICALTRIALS_STUDIES_SOURCE_ID,
+  clinicalTrialsStudiesAdapter,
+  fetchClinicalTrialsStudies,
+  parseClinicalTrialsStudiesPayload,
+} from './clinicalTrialsStudies.js';
+/** ClinicalTrials.gov study types. */
+export type {
+  ClinicalTrialStatusCount,
+  ClinicalTrialStudy,
+  ClinicalTrialStudyPage,
+} from './clinicalTrialsStudies.js';
+/** National Weather Service point forecast grid (keyless). */
+export {
+  buildNwsPointUrl,
+  fetchNwsPointForecast,
+  NWS_API_BASE,
+  NWS_DEFAULT_LATITUDE,
+  NWS_DEFAULT_LONGITUDE,
+  NWS_POINT_FORECAST_PATH,
+  NWS_POINT_FORECAST_SOURCE_ID,
+  NWS_USER_AGENT,
+  nwsPointForecastAdapter,
+  parseNwsPointForecastPayload,
+} from './nwsPointForecast.js';
+/** National Weather Service point forecast types. */
+export type { NwsForecastPoint } from './nwsPointForecast.js';
+/** USAspending top-tier federal agencies (keyless). */
+export {
+  fetchUsaSpendingAgencies,
+  parseUsaSpendingAgenciesPayload,
+  usaspendingAgenciesAdapter,
+  USASPENDING_AGENCIES_SOURCE_ID,
+  USASPENDING_API_BASE,
+  USASPENDING_TOP_TIER_AGENCIES_PATH,
+} from './usaspendingAgencies.js';
+/** USAspending agency types. */
+export type { UsaSpendingAgency, UsaSpendingAgencyDirectory } from './usaspendingAgencies.js';
+/** EPA Envirofacts Toxics Release Inventory facilities (keyless). */
+export {
+  buildEpaEnvirofactsFacilitiesUrl,
+  EPA_ENVIROFACTS_API_BASE,
+  EPA_ENVIROFACTS_FACILITIES_SOURCE_ID,
+  EPA_ENVIROFACTS_ROW_WINDOW,
+  EPA_ENVIROFACTS_STATE_ABBR,
+  EPA_ENVIROFACTS_STATE_COLUMN,
+  EPA_ENVIROFACTS_TABLE,
+  epaEnvirofactsFacilitiesAdapter,
+  fetchEpaEnvirofactsFacilities,
+  parseEpaEnvirofactsFacilitiesPayload,
+} from './epaEnvirofactsFacilities.js';
+/** EPA Envirofacts facility types. */
+export type {
+  EpaEnvirofactsFacility,
+  EpaEnvirofactsFacilityPage,
+  EpaEnvirofactsCountyCount,
+} from './epaEnvirofactsFacilities.js';
+/** NCBI PubMed literature search (keyless). */
+export {
+  buildNcbiPubmedSearchUrl,
+  fetchNcbiPubmedSearch,
+  NCBI_EUTILS_API_BASE,
+  NCBI_PUBMED_DEFAULT_RETMAX,
+  NCBI_PUBMED_DEFAULT_TERM,
+  NCBI_PUBMED_ESEARCH_PATH,
+  NCBI_PUBMED_SEARCH_SOURCE_ID,
+  ncbiPubmedSearchAdapter,
+  parseNcbiPubmedSearchPayload,
+} from './ncbiPubmedSearch.js';
+/** NCBI PubMed search types. */
+export type { NcbiPubmedSearchResult, NcbiPubmedTranslation } from './ncbiPubmedSearch.js';
+/** CDC Socrata catalogue of public health datasets (keyless). */
+export {
+  buildCdcSocrataCatalogueUrl,
+  CDC_SOCRATA_CATALOGUE_API_BASE,
+  CDC_SOCRATA_CATALOGUE_LIMIT,
+  CDC_SOCRATA_CATALOGUE_SOURCE_ID,
+  cdcSocrataCatalogueAdapter,
+  fetchCdcSocrataCatalogue,
+  parseCdcSocrataCataloguePayload,
+} from './cdcSocrataCatalogue.js';
+/** CDC Socrata catalogue types. */
+export type {
+  CdcSocrataCatalogue,
+  CdcSocrataCatalogueEntry,
+  CdcSocrataCategoryCount,
+} from './cdcSocrataCatalogue.js';
+/** HealthData.gov Socrata catalogue of health datasets (keyless). */
+export {
+  buildHealthdataSocrataCatalogueUrl,
+  fetchHealthdataSocrataCatalogue,
+  HEALTHDATA_SOCRATA_CATALOGUE_API_BASE,
+  HEALTHDATA_SOCRATA_CATALOGUE_LIMIT,
+  HEALTHDATA_SOCRATA_CATALOGUE_SOURCE_ID,
+  healthdataSocrataCatalogueAdapter,
+  parseHealthdataSocrataCataloguePayload,
+} from './healthdataSocrataCatalogue.js';
+/** HealthData.gov Socrata catalogue types. */
+export type {
+  HealthdataSocrataCatalogue,
+  HealthdataSocrataCatalogueEntry,
+  HealthdataSocrataCategoryCount,
+} from './healthdataSocrataCatalogue.js';
+/** Bureau of Transportation Statistics catalogue (keyless). */
+export {
+  buildBtsTransportationStatsUrl,
+  BTS_TRANSPORTATION_STATS_API_BASE,
+  BTS_TRANSPORTATION_STATS_LIMIT,
+  BTS_TRANSPORTATION_STATS_SOURCE_ID,
+  btsTransportationStatsAdapter,
+  fetchBtsTransportationStats,
+  parseBtsTransportationStatsPayload,
+} from './btsTransportationStats.js';
+/** Bureau of Transportation Statistics catalogue types. */
+export type {
+  BtsCatalogueCategoryCount,
+  BtsCatalogueEntry,
+  BtsTransportationCatalogue,
+} from './btsTransportationStats.js';
+
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';

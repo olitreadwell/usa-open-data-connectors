@@ -1,4 +1,15 @@
 import { blsUnemploymentAdapter } from './blsSeries.js';
+import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
+import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
+import { clinicalTrialsStudiesAdapter } from './clinicalTrialsStudies.js';
+import { epaEnvirofactsFacilitiesAdapter } from './epaEnvirofactsFacilities.js';
+import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
+import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
+import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
+import { nwsPointForecastAdapter } from './nwsPointForecast.js';
+import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
+import { treasuryDebtToPennyAdapter } from './treasuryDebtToPenny.js';
+import { usaspendingAgenciesAdapter } from './usaspendingAgencies.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { cfpbConsumerComplaintsAdapter } from './cfpbConsumerComplaints.js';
 import { cpscProductRecallsAdapter } from './cpscProductRecalls.js';
@@ -24,6 +35,17 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   usgsPeakStreamflowAdapter,
   cpscProductRecallsAdapter,
   cfpbConsumerComplaintsAdapter,
+  treasuryDebtToPennyAdapter,
+  secEdgarFilingsAdapter,
+  fdicBankDirectoryAdapter,
+  clinicalTrialsStudiesAdapter,
+  nwsPointForecastAdapter,
+  usaspendingAgenciesAdapter,
+  epaEnvirofactsFacilitiesAdapter,
+  ncbiPubmedSearchAdapter,
+  cdcSocrataCatalogueAdapter,
+  healthdataSocrataCatalogueAdapter,
+  btsTransportationStatsAdapter,
 ];
 
 /** Looks up a source adapter by id. */

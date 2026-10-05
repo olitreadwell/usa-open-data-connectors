@@ -24,5 +24,13 @@
   "peerDependencies": {
     "eslint": "9.39.5",
     "typescript": "6.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olitreadwell/usa-open-data-connectors.git"
+  },
+  "homepage": "https://github.com/olitreadwell/usa-open-data-connectors#readme",
+  "bugs": {
+    "url": "https://github.com/olitreadwell/usa-open-data-connectors/issues"
   }
 }

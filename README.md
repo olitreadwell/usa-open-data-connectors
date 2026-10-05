@@ -11,7 +11,7 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| `@usa-open-data-connectors/usa-sources` | Uniform adapters for US public data sources (BLS unemployment rate, USGS earthquakes) with live probes and offline fixtures |
+| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for US public data sources (Treasury, SEC, FDIC, BLS, USGS, CDC, NOAA, EPA, FEMA, CPSC, CFPB, ClinicalTrials.gov, USAspending, NCBI, BTS) with live probes and offline fixtures |
 | `@usa-open-data-connectors/connectors-api` | HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
 | `@usa-open-data-connectors/connectors-cli` | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
 | `@usa-open-data-connectors/config-eslint`, `@usa-open-data-connectors/config-typescript` | Shared lint and TypeScript settings |
@@ -20,13 +20,35 @@ exposed over the API or committed to the repo.
 
 ## Connectors
 
-Two adapters, both in `@usa-open-data-connectors/usa-sources`. Both are keyless and
-need no environment variable.
+Twenty-two adapters, all in `@usa-open-data-connectors/usa-sources`. All are
+keyless and need no environment variable. Two sources ask callers to identify
+themselves: the SEC EDGAR and `api.weather.gov` adapters send a descriptive
+`User-Agent` header from inside the adapter, so callers send nothing extra.
 
 | id | Source | Keyless? | Example command |
 | --- | --- | --- | --- |
 | `bls-unemployment-rate` | Bureau of Labor Statistics, national unemployment rate | Yes | `npx tsx packages/cli/src/cli.ts probe bls-unemployment-rate` |
 | `usgs-hawaii-earthquakes` | US Geological Survey, earthquakes near Hawaii | Yes | `npx tsx packages/cli/src/cli.ts probe usgs-hawaii-earthquakes` |
+| `cdc-county-obesity` | CDC PLACES county obesity estimates | Yes | `npx tsx packages/cli/src/cli.ts probe cdc-county-obesity` |
+| `ncei-annual-temperature` | NOAA NCEI contiguous US annual average temperature | Yes | `npx tsx packages/cli/src/cli.ts probe ncei-annual-temperature` |
+| `noaa-sea-level` | NOAA CO-OPS monthly mean sea level | Yes | `npx tsx packages/cli/src/cli.ts probe noaa-sea-level` |
+| `treasury-avg-interest-rate` | US Treasury average interest rate on the debt | Yes | `npx tsx packages/cli/src/cli.ts probe treasury-avg-interest-rate` |
+| `fema-disaster-declarations` | FEMA disaster declarations | Yes | `npx tsx packages/cli/src/cli.ts probe fema-disaster-declarations` |
+| `openfda-food-recalls` | openFDA food enforcement reports | Yes | `npx tsx packages/cli/src/cli.ts probe openfda-food-recalls` |
+| `usgs-peak-streamflow` | USGS annual peak streamflow at St. Louis | Yes | `npx tsx packages/cli/src/cli.ts probe usgs-peak-streamflow` |
+| `cpsc-product-recalls` | CPSC consumer product recalls | Yes | `npx tsx packages/cli/src/cli.ts probe cpsc-product-recalls` |
+| `cfpb-consumer-complaints` | CFPB Consumer Complaint Database | Yes | `npx tsx packages/cli/src/cli.ts probe cfpb-consumer-complaints` |
+| `treasury-debt-to-penny` | US Treasury debt to the penny | Yes | `npx tsx packages/cli/src/cli.ts probe treasury-debt-to-penny` |
+| `sec-edgar-filings` | SEC EDGAR issuer submissions and recent filings | Yes | `npx tsx packages/cli/src/cli.ts probe sec-edgar-filings` |
+| `fdic-bank-directory` | FDIC bank directory | Yes | `npx tsx packages/cli/src/cli.ts probe fdic-bank-directory` |
+| `clinicaltrials-studies` | ClinicalTrials.gov registered studies | Yes | `npx tsx packages/cli/src/cli.ts probe clinicaltrials-studies` |
+| `nws-point-forecast` | National Weather Service forecast grid point | Yes | `npx tsx packages/cli/src/cli.ts probe nws-point-forecast` |
+| `usaspending-agencies` | USAspending top-tier federal agencies | Yes | `npx tsx packages/cli/src/cli.ts probe usaspending-agencies` |
+| `epa-envirofacts-facilities` | EPA Envirofacts Toxics Release Inventory facilities | Yes | `npx tsx packages/cli/src/cli.ts probe epa-envirofacts-facilities` |
+| `ncbi-pubmed-search` | NCBI PubMed literature search | Yes | `npx tsx packages/cli/src/cli.ts probe ncbi-pubmed-search` |
+| `cdc-socrata-catalogue` | CDC Socrata catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe cdc-socrata-catalogue` |
+| `healthdata-socrata-catalogue` | HealthData.gov Socrata catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe healthdata-socrata-catalogue` |
+| `bts-transportation-stats` | Bureau of Transportation Statistics catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe bts-transportation-stats` |
 
 Each adapter knows how to fetch live data, parse the response, and load a
 committed fixture, so a build never depends on a live API.
@@ -139,7 +161,7 @@ keyless.
 - `docs/ARCHITECTURE.md` - how the pieces fit together, in plain language
 - `docs/SECURITY.md` - key handling and the security checklist
 - `docs/GLOSSARY.md` - plain-language definitions of every term
-- `docs/CONNECTOR_DISCOVERY.md` - the US adapters and the sources not yet probed
+- `docs/CONNECTOR_DISCOVERY.md` - the US adapters, the exact curl command for each, and the sources not yet probed
 - `docs/RELEASING.md` - how versions, tags, and publishing work
 
 ## Contributing

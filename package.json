@@ -1,6 +1,6 @@
 {
   "name": "usa-open-data-connectors",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "private": true,
   "packageManager": "npm@10.9.9",
   "engines": {
@@ -40,5 +40,13 @@
     "@vitest/coverage-v8": "3.2.7"
   },
   "dependencies": {},
-  "description": "USA open data connectors: TypeScript adapters, HTTP API, and CLI for US public data"
+  "description": "USA open data connectors: TypeScript adapters, HTTP API, and CLI for US public data",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olitreadwell/usa-open-data-connectors.git"
+  },
+  "homepage": "https://github.com/olitreadwell/usa-open-data-connectors#readme",
+  "bugs": {
+    "url": "https://github.com/olitreadwell/usa-open-data-connectors/issues"
+  }
 }

@@ -46,5 +46,13 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "MCP server exposing the USA open data connector library to Claude and ChatGPT"
+  "description": "MCP server exposing the USA open data connector library to Claude and ChatGPT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olitreadwell/usa-open-data-connectors.git"
+  },
+  "homepage": "https://github.com/olitreadwell/usa-open-data-connectors#readme",
+  "bugs": {
+    "url": "https://github.com/olitreadwell/usa-open-data-connectors/issues"
+  }
 }
