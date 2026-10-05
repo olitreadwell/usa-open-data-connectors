@@ -31,7 +31,7 @@
     "clean:all": "rm -rf dist tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage node_modules"
   },
   "devDependencies": {
-    "@types/node": "22.20.1",
+    "@types/node": "24.19.1",
     "eslint": "9.39.5",
     "typescript": "6.0.3",
     "vitest": "3.2.7",
