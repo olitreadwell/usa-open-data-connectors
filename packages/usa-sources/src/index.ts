@@ -221,6 +221,7 @@ export {
   CFPB_COMPLAINT_SEARCH_API_BASE,
   CFPB_NEWEST_DATE_PROBE_DAYS,
   CFPB_TOP_LIST_LIMIT,
+  CFPB_USER_AGENT,
   cfpbConsumerComplaintsAdapter,
   fetchCfpConsumerComplaints,
   findNewestCfpComplaintDate,

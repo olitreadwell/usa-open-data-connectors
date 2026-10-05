@@ -6,6 +6,7 @@ import {
   buildCfpComplaintDayUrl,
   buildCfpConsumerComplaintSeries,
   CFPB_COMPLAINT_SEARCH_API_BASE,
+  CFPB_USER_AGENT,
   cfpbConsumerComplaintsAdapter,
   fetchCfpConsumerComplaints,
   findNewestCfpComplaintDate,
@@ -192,11 +193,14 @@ describe('parseCfpComplaintSnapshot', () => {
 });
 
 describe('findNewestCfpComplaintDate', () => {
-  it('stops at the first day with a complaint', async () => {
+  it('stops at the first day with a complaint and names itself to the API', async () => {
     const asked: string[] = [];
-    const fetchImpl = (async (input: string | URL) => {
+    const agents: string[] = [];
+    const fetchImpl = (async (input: string | URL, init?: RequestInit) => {
       const date = new URL(String(input)).searchParams.get('date_received_min') ?? '';
       asked.push(date);
+      const headers = new Headers(init?.headers);
+      agents.push(headers.get('User-Agent') ?? '');
       return new Response(JSON.stringify(totalPayload(date === '2026-10-01' ? 6739 : 0)), {
         status: 200,
       });
@@ -204,6 +208,8 @@ describe('findNewestCfpComplaintDate', () => {
     const newest = await findNewestCfpComplaintDate(fetchImpl, new Date('2026-10-03T00:00:00Z'));
     expect(newest).toBe('2026-10-01');
     expect(asked).toEqual(['2026-10-03', '2026-10-02', '2026-10-01']);
+    // The search API's edge rejects undici's default user agent with a 403.
+    expect(agents).toEqual([CFPB_USER_AGENT, CFPB_USER_AGENT, CFPB_USER_AGENT]);
   });
 
   it('throws when no recent day has a complaint', async () => {
