@@ -41,6 +41,7 @@
   },
   "dependencies": {},
   "description": "USA open data connectors: TypeScript adapters, HTTP API, and CLI for US public data",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/olitreadwell/usa-open-data-connectors.git"

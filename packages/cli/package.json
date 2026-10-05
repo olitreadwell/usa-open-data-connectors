@@ -1,6 +1,7 @@
 {
   "name": "@usa-open-data-connectors/connectors-cli",
   "version": "0.1.0",
+  "license": "MIT",
   "type": "module",
   "main": "./dist/cli.js",
   "types": "./dist/cli.d.ts",

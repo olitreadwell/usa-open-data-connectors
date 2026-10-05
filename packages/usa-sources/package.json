@@ -43,6 +43,7 @@
     "access": "public"
   },
   "description": "Uniform TypeScript adapters for US public data sources",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/olitreadwell/usa-open-data-connectors.git"
