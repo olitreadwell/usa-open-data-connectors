@@ -55,6 +55,150 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
 `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data` as soon as it is registered.
 
+### Usage examples
+
+The examples below hit the live sources and need no key. Each one uses the exported functions for that adapter.
+
+`bls-unemployment-rate`:
+
+```ts
+import { fetchBlsSeries, US_UNEMPLOYMENT_SERIES_ID } from '@usa-open-data-connectors/usa-sources';
+
+const rate = await fetchBlsSeries(US_UNEMPLOYMENT_SERIES_ID, {
+  startYear: 2006,
+  endYear: 2025,
+});
+console.log(rate.latest.year, rate.latest.period, rate.latest.value);
+```
+
+`usgs-hawaii-earthquakes`:
+
+```ts
+import {
+  buildUsgsEarthquakeCatalogue,
+  fetchUsgsEarthquakes,
+  USGS_HAWAII_BOUNDS,
+  USGS_HAWAII_MIN_MAGNITUDE,
+} from '@usa-open-data-connectors/usa-sources';
+
+const earthquakes = await fetchUsgsEarthquakes({
+  startDate: '2025-01-01',
+  endDate: '2026-01-01',
+  minMagnitude: USGS_HAWAII_MIN_MAGNITUDE,
+  bounds: USGS_HAWAII_BOUNDS,
+});
+const catalogue = buildUsgsEarthquakeCatalogue(earthquakes);
+console.log(catalogue.count, catalogue.strongest.place, catalogue.strongest.magnitude);
+```
+
+`cdc-county-obesity`:
+
+```ts
+import {
+  buildCdcCountyObesitySet,
+  fetchCdcCountyObesity,
+} from '@usa-open-data-connectors/usa-sources';
+
+const set = buildCdcCountyObesitySet(await fetchCdcCountyObesity());
+console.log(set.countyCount, set.lowest.countyName, set.highest.percent, set.national.percent);
+```
+
+`ncei-annual-temperature`:
+
+```ts
+import {
+  buildNceiAnnualTemperatureSeries,
+  fetchNceiAnnualTemperature,
+} from '@usa-open-data-connectors/usa-sources';
+
+const series = await fetchNceiAnnualTemperature({
+  startYear: 1895,
+  endYear: new Date().getFullYear(),
+});
+console.log(series.yearCount, series.warmest.year, series.coldest.valueFahrenheit);
+```
+
+`noaa-sea-level`:
+
+```ts
+import { buildNoaaSeaLevelSeries, fetchNoaaSeaLevel } from '@usa-open-data-connectors/usa-sources';
+
+const seaLevel = buildNoaaSeaLevelSeries(await fetchNoaaSeaLevel());
+console.log(
+  seaLevel.station.name,
+  seaLevel.yearCount,
+  seaLevel.highest.year,
+  seaLevel.trendMillimetresPerYear
+);
+```
+
+`treasury-avg-interest-rate`:
+
+```ts
+import { fetchTreasuryAvgInterestRates } from '@usa-open-data-connectors/usa-sources';
+
+const rates = await fetchTreasuryAvgInterestRates();
+console.log(rates.monthCount, rates.lastMonth.averageInterestRatePercent, rates.lowest.recordDate);
+```
+
+`fema-disaster-declarations`:
+
+```ts
+import { fetchFemaDeclarations } from '@usa-open-data-connectors/usa-sources';
+
+const declarations = await fetchFemaDeclarations();
+console.log(
+  declarations.declarationCount,
+  declarations.busiestYear.year,
+  declarations.incidentTypes[0]?.name
+);
+```
+
+`usgs-peak-streamflow`:
+
+```ts
+import {
+  buildUsgsPeakStreamflowSeries,
+  fetchUsgsPeakStreamflow,
+} from '@usa-open-data-connectors/usa-sources';
+
+const record = await fetchUsgsPeakStreamflow();
+console.log(
+  record.yearCount,
+  record.highest.waterYear,
+  record.highest.peakDischargeCubicFeetPerSecond,
+  record.highestToLowestRatio
+);
+```
+
+`cpsc-product-recalls`:
+
+```ts
+import { fetchCpscProductRecalls } from '@usa-open-data-connectors/usa-sources';
+
+const recalls = await fetchCpscProductRecalls();
+console.log(
+  recalls.totalRecalls,
+  recalls.busiestCompleteYear.year,
+  recalls.remedyOptions[0]?.option,
+  recalls.manufacturerCountries[0]?.country
+);
+```
+
+`cfpb-consumer-complaints`:
+
+```ts
+import { fetchCfpConsumerComplaints } from '@usa-open-data-connectors/usa-sources';
+
+const complaints = await fetchCfpConsumerComplaints();
+console.log(
+  complaints.totalComplaints,
+  complaints.busiestCompleteYear.year,
+  complaints.newestReceivedDate,
+  complaints.topCompanies[0]?.company
+);
+```
+
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
@@ -127,10 +271,17 @@ The data comes from US federal agencies and the open data catalogue services the
 | Bureau of Transportation Statistics | `https://data.bts.gov/api/views.json` |
 | HealthData.gov | `https://healthdata.gov/api/views.json` |
 
-US federal government works are not subject to copyright in the United States, so most of this data is
-in the public domain. The Socrata catalogue adapters return each entry's own licence field, and some
-entries are Open Database License (ODbL) or Public Domain Dedication and License (PDDL). Check that
-field before you reuse an entry. The package licence covers the code, not the data.
+Each publisher sets its own terms for its data. The adapters read the publisher's own source page or
+licence field. For example, the Socrata catalogue adapters (CDC, HealthData.gov, and BTS) return each
+entry's `license` field. The fixtures in this repo record entries under these terms:
+
+- USA.gov public-domain label: `http://www.usa.gov/publicdomain/label/1.0/`
+- USA.gov government works: `https://www.usa.gov/government-works`
+- Open Database License (ODbL): `http://opendefinition.org/licenses/odc-odbl/`
+- Public Domain Dedication and License (PDDL): `http://opendatacommons.org/licenses/pddl/1.0/`
+
+Check the licence field on each entry before you reuse it. This section is not legal advice. The package
+licence covers the code, not the data.
 
 ## Package licence
 
