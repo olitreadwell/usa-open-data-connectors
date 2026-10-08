@@ -22,7 +22,7 @@ from .errors import StatsNzApiError, StatsNzError, StatsNzParseError
 DEFAULT_BASE_URL = "https://api.data.stats.govt.nz/rest"
 DEFAULT_VERSION = "1.0"
 DEFAULT_TIMEOUT_MS = 30_000
-USER_AGENT = "nz-open-data-connectors/0.1.0 (Language=Python)"
+USER_AGENT = "nz-open-data-connectors (Language=Python)"
 VALID_FORMATS = ("csv", "csvfilewithlabels", "jsondata")
 
 FetchResult = Tuple[int, str]

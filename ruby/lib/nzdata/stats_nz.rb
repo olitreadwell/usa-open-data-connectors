@@ -16,7 +16,7 @@ module Nzdata
   DEFAULT_BASE_URL = 'https://api.data.stats.govt.nz/rest'
   DEFAULT_VERSION = '1.0'
   DEFAULT_TIMEOUT_MS = 30_000
-  USER_AGENT = 'nz-open-data-connectors/0.1.0 (Language=Ruby)'
+  USER_AGENT = 'nz-open-data-connectors (Language=Ruby)'
   VALID_FORMATS = %w[csv csvfilewithlabels jsondata].freeze
 
   module_function
