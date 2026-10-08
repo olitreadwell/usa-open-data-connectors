@@ -30,6 +30,7 @@
     "audit": "npm audit",
     "test:setup": "node --test scripts/setup.test.mjs",
     "check": "npm run format:check && npm run build && npm run lint && npm run type-check && npm run test:coverage",
+    "check:ci": "bash scripts/local-ci.sh",
     "type-check": "npm run type-check --workspaces --if-present",
     "test:smoke": "npm run test:smoke --workspaces --if-present",
     "dev:api": "npm run dev -w @usa-open-data-connectors/connectors-api",
