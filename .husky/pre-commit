@@ -10,7 +10,7 @@ echo "=== Pre-commit checks ==="
 G1=$!
 
 (
-  npm run type-check --if-present
+  npm run typecheck --if-present
 ) &
 G2=$!
 
