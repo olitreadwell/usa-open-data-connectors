@@ -16,9 +16,14 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 
 ## Current state
 
-- `main` holds the merged USGS and BLS adapters plus the retired NZOR smoke
-  fix (PRs 14, 15, and 16)
-- `packages/usa-sources` holds both adapters, the registry, and fixtures
+- `main` is the integration branch. Pull requests target `main`.
+- Twenty-two US adapters, all keyless, each with a live fetch, a strict parse,
+  and a committed fixture
+- `packages/usa-sources` holds all 22 adapters, the registry, the shared HTTP
+  layer (`src/http.ts`), and the fixtures
+- Every fetch goes through `httpGet`: one `User-Agent`, a 30 second timeout,
+  and `retryable` set on HTTP 429, HTTP 5xx and network failures. The SEC,
+  NWS and CFPB adapters replace the default `User-Agent` with their own
 - The API and the CLI serve `usa-sources` through the registry. The NZ-only
   routes and CLI commands were removed rather than re-pointed
 - Working tree clean; `npm run check` green
@@ -26,8 +31,7 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 ## What is left
 
 1. `python/` and `ruby/` still implement the NZ design. Port or delete them.
-2. Backlog of US sources to add: Census Bureau, BEA, EIA, EPA, CDC, NOAA,
-   and api.data.gov.
+2. Backlog of US sources to add: Census Bureau, BEA, EIA, and api.data.gov.
 3. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
    `usa-data-lab` repos vendors one package by name and renames its scope as
    it copies. That script matches the old scope, so it needs updating before

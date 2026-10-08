@@ -49,16 +49,27 @@ The API exposes three generic routes over the registry:
 
 Adding an adapter to the registry is enough to expose it on all three routes.
 
+Live fetches go through the shared helper in
+`packages/usa-sources/src/http.ts`. It sets one `User-Agent`
+(`usa-open-data-connectors (Language=TypeScript)`), aborts after 30 seconds, and
+marks HTTP 429, HTTP 5xx and network failures as `retryable` on the thrown
+`UsSourceApiError`, with the HTTP status attached. The SEC EDGAR, National
+Weather Service and CFPB adapters pass a `User-Agent` of their own and that
+replaces the default; other headers merge over it.
+
 ## Keyless first
 
-Both registered sources work without an API key:
+Every registered source works without an API key:
 
-- BLS: 25 series queries a day keyless, 500 with a registered key
-- USGS: keyless, public domain
+No adapter needs a key today, and none reads an environment variable. The one
+published limit is BLS: 25 series queries a day keyless, 500 with a registered
+key, and the adapter does not send a key.
 
 When a keyed source lands, the key is read from the environment at process
-start. The API and CLI never accept keys from callers, and keys are never
-committed to the repo.
+start, the API and the CLI never accept keys from callers, and keys are never
+committed to the repo. `normalizeSourceApiKey` in
+`packages/usa-sources/src/apiKey.ts` trims a key that is set but blank, so it
+is treated as unset.
 
 ## Fixtures instead of the live network
 
@@ -98,6 +109,9 @@ type-check against the built package.
 
 - `README.md` - quickstart and commands
 - `docs/ARCHITECTURE.md` - this file
+- `docs/CONNECTOR_DISCOVERY.md` - what has been checked live, and what is left to probe
 - `docs/SECURITY.md` - keys, audits, and the security checklist
 - `docs/GLOSSARY.md` - plain-language terms
 - `docs/RELEASING.md` - how versions and tags work
+- `docs/AGENT_CONTEXT.md` - handoff context for an agent working in this repo
+- `COUNTRY.md` - adapter status and what is left

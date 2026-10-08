@@ -13,19 +13,35 @@ exposed over the API or committed to the repo.
 | ------- | ---------- |
 | [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 22 US public data sources, with live probes and offline fixtures |
 | [`@usa-open-data-connectors/usa-mcp`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-mcp) | MCP server that exposes the connectors to Claude, ChatGPT, and other MCP clients |
-| `@usa-open-data-connectors/connectors-cli` | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
-| `@usa-open-data-connectors/connectors-api` | HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
-| `@usa-open-data-connectors/config-eslint` | Shared ESLint flat configuration |
-| `@usa-open-data-connectors/config-typescript` | Shared TypeScript compiler settings |
+| [`@usa-open-data-connectors/connectors-cli`](https://www.npmjs.com/package/@usa-open-data-connectors/connectors-cli) | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
+| `@usa-open-data-connectors/connectors-api` | Private. HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
+| `@usa-open-data-connectors/config-eslint` | Private. Shared ESLint flat configuration |
+| `@usa-open-data-connectors/config-typescript` | Private. Shared TypeScript compiler settings |
 | `python/` (`nzdata` on PyPI) | Python port, still on the New Zealand sources. See "Language ports" |
 | `ruby/` (`nzdata` gem) | Ruby port, still on the New Zealand sources. See "Language ports" |
 
 ## Connectors
 
 Twenty-two adapters, all in `@usa-open-data-connectors/usa-sources`. All are
-keyless and need no environment variable. Two sources ask callers to identify
-themselves: the SEC EDGAR and `api.weather.gov` adapters send a descriptive
-`User-Agent` header from inside the adapter, so callers send nothing extra.
+keyless and need no environment variable.
+
+Most of this data comes from US federal agencies, and works of the US federal
+government are generally not subject to copyright in the United States, so it
+is effectively public domain there. The NCBI and NLM services attach their own
+terms to some content, and public domain in the US is not public domain
+everywhere. Check the publisher's terms before you republish: the connectors
+fetch the data, they do not relicense it. `docs/CONNECTOR_DISCOVERY.md` lists
+where each source's terms live.
+
+Three sources ask callers to identify themselves. The SEC EDGAR, National
+Weather Service and CFPB adapters send their own descriptive `User-Agent`
+header from inside the adapter, which replaces the default one, so callers send
+nothing extra. Every other adapter sends the shared `User-Agent`
+(`usa-open-data-connectors (Language=TypeScript)`), waits at most 30 seconds
+for a response, and marks rate-limited (HTTP 429), server-error (HTTP 5xx) and
+network failures as `retryable` on the thrown `UsSourceApiError`. The shared
+`httpGet` helper in `packages/usa-sources/src/http.ts` does this for all 22
+adapters.
 
 | id | Source | Keyless? | Example command |
 | --- | --- | --- | --- |
@@ -161,10 +177,18 @@ keyless.
 ## Documentation
 
 - `docs/ARCHITECTURE.md` - how the pieces fit together, in plain language
+- `docs/CONNECTOR_DISCOVERY.md` - every adapter, the live check behind it, and the sources not yet probed
 - `docs/SECURITY.md` - key handling and the security checklist
 - `docs/GLOSSARY.md` - plain-language definitions of every term
-- `docs/CONNECTOR_DISCOVERY.md` - the US adapters, the exact curl command for each, and the sources not yet probed
 - `docs/RELEASING.md` - how versions, tags, and publishing work
+- `docs/AGENT_CONTEXT.md` - handoff context for an agent working in this repo
+- `docs/faq.md` - keys, licences, fixtures, and how to add a source
+- `docs/contact.md` - how to report a bug, a dead source, or a security problem
+- `COUNTRY.md` - adapter status table and the sources still to come
+
+The other files under `docs/` come from the shared project template
+(`olitreadwell/template`) and describe the template's own gates. For this repo,
+the API contract lives at `GET /openapi.json` and `/docs`.
 
 ## Contributing
 

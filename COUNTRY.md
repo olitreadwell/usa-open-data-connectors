@@ -44,6 +44,10 @@ fixture captured from the live service.
 
 ## Remaining work
 
+- [x] Shared HTTP layer (`httpGet`): one User-Agent, 30 second timeout,
+      `retryable` on 429, 5xx and network failures
+- [ ] Return licence and attribution metadata per record, instead of leaving
+      the publisher's page as the only source
 - [ ] Port `python/` and `ruby/` to the US sources, or delete them
 - [x] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
 - [ ] Add the remaining pending adapters (Census, api.data.gov, BEA, EIA), each verified live before commit

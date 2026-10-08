@@ -1,77 +1,38 @@
 # Contact and feedback
 
-Every scaffolded project gets contact, feedback, and help-center mechanisms
-out of the box. Abuse protection is on by default and costs humans almost
-nothing.
+## Bugs and feature requests
 
-## Endpoints
+Use the issue templates in `.github/ISSUE_TEMPLATE/`. A good report includes:
 
-| Route | Purpose |
-| --- | --- |
-| `/contact` | Contact form -> project inbox |
-| `/feedback` | Feedback form -> labelled GitHub issue |
-| `/help` | Help center / FAQ |
-| `/api/challenge` | Proof-of-work challenge (GET) |
-| `/api/contact` | Contact submission (POST) |
-| `/api/feedback` | Feedback submission (POST) |
-| `/.well-known/feedback.json` | Machine-readable contract (static) |
+- the adapter id, for example `bls-unemployment-rate` or `sec-edgar-filings`
+- the exact command you ran
+- what you expected and what came back
+- the output, including the error message and, when there is one, the HTTP
+  status
+- your Node version, and your Python or Ruby version if you use a port
 
-## Abuse protection
+Never paste an API key into an issue.
 
-Every submission must pass three gates before it is processed:
+## A source has moved or died
 
-1. **Proof of work.** `GET /api/challenge` returns
-   `{ challengeId, noncePrefix, difficulty }`. The client finds a `nonce`
-   such that `sha256(noncePrefix + nonce)` hex starts with `difficulty`
-   zeros (default 4, about 65k hashes — milliseconds for a browser, seconds
-   of wasted effort per spam attempt). Challenges expire after 5 minutes
-   and are single-use.
-2. **Rate limit.** Per-IP fixed window, default 10 submissions/hour
-   (`RATE_LIMIT_MAX`, `RATE_LIMIT_WINDOW_MS`). Blocked requests answer 429
-   with `Retry-After`.
-3. **Honeypot.** A hidden `website` field that bots fill and humans never
-   see; any value rejects the submission silently.
+Still worth an issue. Say which adapter, the endpoint URL from
+`docs/CONNECTOR_DISCOVERY.md`, and what the endpoint answers now. If a source
+is gone for good it moves to the "Remaining work" section in `COUNTRY.md`.
 
-Limiter and challenge store are in-memory: single-instance deploys only.
-Multi-instance setups should rate limit at a proxy and share the challenge
-store.
+## Security reports
 
-## Contact delivery
+Do not open a public issue for a security problem. Use GitHub's private
+advisory form:
 
-Set `CONTACT_TO` to the project inbox (default pattern:
-`<app>-contact@ot.mozmail.com`). With `SMTP_HOST`/`SMTP_PORT`/`SMTP_USER`/
-`SMTP_PASS` configured, the form emails the inbox via nodemailer. Without
-SMTP, the form still validates and gates, then opens a `mailto:` link.
+https://github.com/olitreadwell/usa-open-data-connectors/security/advisories/new
 
-## Feedback -> GitHub issues
+`docs/SECURITY.md` says what is in scope.
 
-Set `GH_TOKEN` (a token with `issues:write`) and `GH_REPO` (`owner/repo`) to
-enable issue creation. Submissions:
+## Pull requests
 
-- pick the label by type: `bug`, `enhancement`, or `question`;
-- include full context: title, description, steps, expected/actual, page,
-  user agent, app version, timestamp, repo;
-- get created against the GitHub issues API with the
-  `application/vnd.github+json` media type.
+`CONTRIBUTING.md` covers setup, the quality gates, and the branch naming
+pattern. Keep a PR small and say which adapter or package it touches.
 
-When disabled, the form still validates and explains where to go instead.
+## Maintainer
 
-## The agent contract
-
-The feedback path is deliberately AI-readable so agents can file issues the
-same way humans do:
-
-1. `GET /.well-known/feedback.json` — discover endpoints and the PoW spec.
-2. `GET /api/challenge` — obtain `{ challengeId, noncePrefix, difficulty }`.
-3. Compute `nonce` by brute force (SHA-256, leading zeros).
-4. `POST /api/feedback` with the form fields plus `challengeId` and `nonce`.
-
-The same applies to `/api/contact`. Agents include the same detail a careful
-human would: repro steps, expected vs actual, environment, page. Never
-include secrets in an issue.
-
-## Privacy
-
-Collected context: submitted fields, page URL, user agent, timestamp.
-Issues on public repos are public. Do not submit credentials, tokens, or
-personal data into either form.
+Oli Treadwell (`@olitreadwell`).

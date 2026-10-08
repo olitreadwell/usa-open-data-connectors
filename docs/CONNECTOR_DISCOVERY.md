@@ -104,3 +104,38 @@ longer on this list.
 | api.data.gov | Shared key and catalogue across several federal APIs |
 | Bureau of Economic Analysis | GDP and regional accounts |
 | Energy Information Administration | Energy production and prices |
+
+## Licences and attribution
+
+The MIT licence in this repo covers the code, not the data.
+
+Most of this data comes from US federal agencies. Works of the US federal
+government are generally not subject to copyright in the United States
+(17 U.S.C. 105), so the data is effectively public domain there. That is a
+statement about US law: public domain in the US is not public domain
+everywhere, and a few services attach their own terms on top.
+
+| Adapter | Publisher | Licence note |
+| --- | --- | --- |
+| `bls-unemployment-rate` | Bureau of Labor Statistics | US federal work, public domain in the US |
+| `usgs-hawaii-earthquakes`, `usgs-peak-streamflow` | US Geological Survey | US federal work, public domain in the US |
+| `cdc-county-obesity`, `cdc-socrata-catalogue` | Centers for Disease Control and Prevention | US federal work, public domain in the US |
+| `ncei-annual-temperature`, `noaa-sea-level` | NOAA | US federal work, public domain in the US |
+| `treasury-avg-interest-rate`, `treasury-debt-to-penny` | US Treasury | US federal work, public domain in the US |
+| `fema-disaster-declarations` | FEMA | US federal work, public domain in the US |
+| `openfda-food-recalls` | US Food and Drug Administration | US federal work, public domain in the US |
+| `cpsc-product-recalls` | Consumer Product Safety Commission | US federal work, public domain in the US |
+| `cfpb-consumer-complaints` | Consumer Financial Protection Bureau | US federal work, public domain in the US |
+| `sec-edgar-filings` | US Securities and Exchange Commission | US federal work, public domain in the US |
+| `fdic-bank-directory` | Federal Deposit Insurance Corporation | US federal work, public domain in the US |
+| `clinicaltrials-studies` | National Library of Medicine | US federal work, public domain in the US |
+| `nws-point-forecast` | National Weather Service | US federal work, public domain in the US |
+| `usaspending-agencies` | USAspending, US Treasury | US federal work, public domain in the US |
+| `epa-envirofacts-facilities` | Environmental Protection Agency | US federal work, public domain in the US |
+| `ncbi-pubmed-search` | National Center for Biotechnology Information | US federal work, but NLM attaches its own terms to some content. Check the NLM terms before bulk reuse |
+| `healthdata-socrata-catalogue` | HealthData.gov, US Department of Health and Human Services | US federal work, public domain in the US |
+| `bts-transportation-stats` | Bureau of Transportation Statistics | US federal work, public domain in the US |
+
+No adapter returns licence metadata today, and no adapter can tell you whether a
+particular dataset has terms on top. Read the publisher's page before you
+republish, and credit the publisher rather than this library.
