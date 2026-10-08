@@ -114,7 +114,9 @@ describe('fetchNwsPointForecast', () => {
     const fetchImpl = vi.fn().mockResolvedValue(new Response(SMALL_PAYLOAD, { status: 200 }));
     const point = await fetchNwsPointForecast({ fetchImpl });
     expect(fetchImpl).toHaveBeenCalledTimes(1);
-    expect(fetchImpl.mock.calls[0]?.[1]).toEqual({ headers: { 'User-Agent': NWS_USER_AGENT } });
+    expect(new Headers(fetchImpl.mock.calls[0]?.[1]?.headers).get('user-agent')).toBe(
+      NWS_USER_AGENT
+    );
     expect(point.gridId).toBe('LWX');
   });
 

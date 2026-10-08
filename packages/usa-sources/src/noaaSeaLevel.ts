@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -337,10 +338,7 @@ export async function fetchNoaaSeaLevel(options?: {
     startYear: options?.startYear ?? NOAA_SEA_LEVEL_FIRST_YEAR,
     endYear: options?.endYear ?? new Date().getFullYear(),
   });
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError('noaa', `HTTP ${response.status} reading the sea level record`);
-  }
+  const response = await httpGet('noaa', url, { fetchImpl });
   return buildNoaaSeaLevelSeries(parseNoaaSeaLevelPayload(await response.json()));
 }
 

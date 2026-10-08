@@ -1,5 +1,7 @@
 /** Errors shared by every US source adapter. */
 export { UsSourceApiError, UsSourceError, UsSourceParseError } from './errors.js';
+/** API error detail type. */
+export type { UsSourceApiErrorDetails } from './errors.js';
 /** Bureau of Labor Statistics time series (keyless). */
 export {
   BLS_API_BASE,
@@ -406,3 +408,10 @@ export type {
 
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
+
+/** API key normalization shared by adapters, the API, and the CLI. */
+export { normalizeSourceApiKey } from './apiKey.js';
+/** The shared HTTP layer every adapter fetch goes through. */
+export { httpGet, USER_AGENT, DEFAULT_TIMEOUT_MS } from './http.js';
+/** Shared HTTP layer types. */
+export type { HttpGetOptions } from './http.js';

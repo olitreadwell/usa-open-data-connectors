@@ -1,4 +1,5 @@
-import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureText } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -194,10 +195,7 @@ export async function fetchNceiAnnualTemperature(options?: {
     startYear: options?.startYear ?? NCEI_FIRST_RECORD_YEAR,
     endYear: options?.endYear ?? new Date().getFullYear(),
   });
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError('ncei', `HTTP ${response.status} reading the temperature series`);
-  }
+  const response = await httpGet('ncei', url, { fetchImpl });
   return buildNceiAnnualTemperatureSeries(parseNceiAnnualTemperatureCsv(await response.text()));
 }
 

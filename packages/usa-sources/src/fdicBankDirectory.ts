@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -164,13 +165,7 @@ export async function fetchFdicBankDirectory(options?: {
   const url = buildFdicBankDirectoryUrl(
     options?.rowLimit === undefined ? {} : { rowLimit: options.rowLimit }
   );
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      FDIC_BANK_DIRECTORY_SOURCE_ID,
-      `HTTP ${response.status} reading the bank directory`
-    );
-  }
+  const response = await httpGet(FDIC_BANK_DIRECTORY_SOURCE_ID, url, { fetchImpl });
   return parseFdicBankDirectoryPayload(await response.json());
 }
 

@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -14,7 +15,8 @@ export const NWS_POINT_FORECAST_SOURCE_ID = 'nws-point-forecast';
  * operator, so the adapter sends a descriptive name and a contact address on
  * every call. A real deployment should override the contact with its own.
  */
-export const NWS_USER_AGENT = 'usa-open-data-connectors contact@example.com';
+export const NWS_USER_AGENT =
+  'usa-open-data-connectors (https://github.com/olitreadwell/usa-open-data-connectors)';
 
 /**
  * One forecast grid point, the service's lookup for a latitude and longitude.
@@ -205,13 +207,10 @@ export async function fetchNwsPointForecast(options?: {
     options?.latitude ?? NWS_DEFAULT_LATITUDE,
     options?.longitude ?? NWS_DEFAULT_LONGITUDE
   );
-  const response = await fetchImpl(url, { headers: { 'User-Agent': NWS_USER_AGENT } });
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      NWS_POINT_FORECAST_SOURCE_ID,
-      `HTTP ${response.status} reading the point forecast`
-    );
-  }
+  const response = await httpGet(NWS_POINT_FORECAST_SOURCE_ID, url, {
+    fetchImpl,
+    headers: { 'User-Agent': NWS_USER_AGENT },
+  });
   return parseNwsPointForecastPayload(await response.json());
 }
 

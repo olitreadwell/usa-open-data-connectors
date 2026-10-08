@@ -20,6 +20,7 @@ import { openFdaFoodRecallsAdapter } from './openFdaFoodRecalls.js';
 import { treasuryAvgInterestRateAdapter } from './treasuryAvgInterestRate.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import { usgsPeakStreamflowAdapter } from './usgsPeakStreamflow.js';
+import { normalizeSourceApiKey } from './apiKey.js';
 import type { UsDataAdapter, UsFetchOptions, UsSourceProbe } from './types.js';
 
 /** Every US data source behind the uniform adapter interface. */
@@ -64,9 +65,10 @@ export async function probeUsDataSource<T>(
   adapter: UsDataAdapter<T>,
   options?: { apiKey?: string; fetchImpl?: typeof globalThis.fetch }
 ): Promise<UsSourceProbe> {
+  const apiKey = normalizeSourceApiKey(options?.apiKey);
   try {
     const fetchOptions: UsFetchOptions = {
-      ...(options?.apiKey === undefined ? {} : { apiKey: options.apiKey }),
+      ...(apiKey === undefined ? {} : { apiKey }),
       ...(options?.fetchImpl === undefined ? {} : { fetchImpl: options.fetchImpl }),
     };
     const data = await adapter.fetchLive(fetchOptions);
@@ -103,7 +105,7 @@ export async function probeAllUsDataSources(options?: {
   const { apiKey, apiKeys, fetchImpl } = options ?? {};
   return Promise.all(
     US_DATA_SOURCES.map((source) => {
-      const key = apiKeys?.[source.id] ?? apiKey;
+      const key = normalizeSourceApiKey(apiKeys?.[source.id] ?? apiKey);
       return probeUsDataSource(source, {
         ...(key === undefined ? {} : { apiKey: key }),
         ...(fetchImpl === undefined ? {} : { fetchImpl }),

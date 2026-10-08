@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -189,13 +190,7 @@ export async function fetchCdcSocrataCatalogue(options?: {
   const url = buildCdcSocrataCatalogueUrl(
     options?.limit === undefined ? {} : { limit: options.limit }
   );
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      CDC_SOCRATA_CATALOGUE_SOURCE_ID,
-      `HTTP ${response.status} reading the catalogue`
-    );
-  }
+  const response = await httpGet(CDC_SOCRATA_CATALOGUE_SOURCE_ID, url, { fetchImpl });
   return parseCdcSocrataCataloguePayload(await response.json());
 }
 

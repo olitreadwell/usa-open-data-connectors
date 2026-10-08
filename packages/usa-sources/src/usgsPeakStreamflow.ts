@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -280,13 +281,7 @@ export async function fetchUsgsPeakStreamflow(options?: {
       ? {}
       : { monitoringLocationId: options.monitoringLocationId }
   );
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      'usgs-peak-streamflow',
-      `HTTP ${response.status} reading the peak-flow record`
-    );
-  }
+  const response = await httpGet('usgs-peak-streamflow', url, { fetchImpl });
   return buildUsgsPeakStreamflowSeries(
     parseUsgsPeakStreamflowPayload(await response.json()),
     options?.monitoringLocationId === undefined

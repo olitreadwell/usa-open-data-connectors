@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -362,10 +363,7 @@ export function buildOpenFdaFoodRecallSummary(
 
 /** Reads one URL as JSON, refusing a response the host did not deliver. */
 async function fetchOpenFdaJson(url: string, fetchImpl: typeof globalThis.fetch): Promise<unknown> {
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(OPENFDA_SOURCE_NAME, `HTTP ${response.status} reading ${url}`);
-  }
+  const response = await httpGet(OPENFDA_SOURCE_NAME, url, { fetchImpl });
   return response.json();
 }
 

@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -431,13 +432,7 @@ export async function fetchCpscProductRecalls(options?: {
   const recalls: CpscProductRecall[] = [];
   for (let year = firstYear; year <= newestYear; year += 1) {
     const url = buildCpscRecallUrl(year);
-    const response = await fetchImpl(url);
-    if (!response.ok) {
-      throw new UsSourceApiError(
-        'cpsc-product-recalls',
-        `HTTP ${response.status} reading the ${year} recall file`
-      );
-    }
+    const response = await httpGet('cpsc-product-recalls', url, { fetchImpl });
     recalls.push(...parseCpscRecallPayload(await response.json(), year));
   }
 

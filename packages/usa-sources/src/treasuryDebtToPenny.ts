@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -219,13 +220,7 @@ export async function fetchTreasuryDebtToPenny(options?: {
   const url = buildTreasuryDebtToPennyUrl(
     options?.rowLimit === undefined ? {} : { rowLimit: options.rowLimit }
   );
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      TREASURY_DEBT_TO_PENNY_SOURCE_ID,
-      `HTTP ${response.status} reading the debt to the penny file`
-    );
-  }
+  const response = await httpGet(TREASURY_DEBT_TO_PENNY_SOURCE_ID, url, { fetchImpl });
   return buildTreasuryDebtToPennyPage(parseTreasuryDebtToPennyPayload(await response.json()));
 }
 

@@ -107,7 +107,8 @@ describe('fetchUsaSpendingAgencies', () => {
     const fetchImpl = vi.fn().mockResolvedValue(new Response(SMALL_PAYLOAD, { status: 200 }));
     const directory = await fetchUsaSpendingAgencies({ fetchImpl });
     expect(fetchImpl).toHaveBeenCalledWith(
-      `${USASPENDING_API_BASE}${USASPENDING_TOP_TIER_AGENCIES_PATH}`
+      `${USASPENDING_API_BASE}${USASPENDING_TOP_TIER_AGENCIES_PATH}`,
+      expect.anything()
     );
     expect(directory.agencyCount).toBe(2);
   });

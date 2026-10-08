@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -198,13 +199,7 @@ export async function fetchHealthdataSocrataCatalogue(options?: {
   const url = buildHealthdataSocrataCatalogueUrl(
     options?.limit === undefined ? {} : { limit: options.limit }
   );
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      HEALTHDATA_SOCRATA_CATALOGUE_SOURCE_ID,
-      `HTTP ${response.status} reading the catalogue`
-    );
-  }
+  const response = await httpGet(HEALTHDATA_SOCRATA_CATALOGUE_SOURCE_ID, url, { fetchImpl });
   return parseHealthdataSocrataCataloguePayload(await response.json());
 }
 

@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -205,13 +206,7 @@ export async function fetchClinicalTrialsStudies(options?: {
   const url = buildClinicalTrialsStudiesUrl(
     options?.pageSize === undefined ? {} : { pageSize: options.pageSize }
   );
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      CLINICALTRIALS_STUDIES_SOURCE_ID,
-      `HTTP ${response.status} reading the studies`
-    );
-  }
+  const response = await httpGet(CLINICALTRIALS_STUDIES_SOURCE_ID, url, { fetchImpl });
   return parseClinicalTrialsStudiesPayload(await response.json());
 }
 

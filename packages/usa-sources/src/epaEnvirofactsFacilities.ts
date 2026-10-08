@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -202,13 +203,7 @@ export async function fetchEpaEnvirofactsFacilities(options?: {
   const url = buildEpaEnvirofactsFacilitiesUrl(
     options?.stateAbbr === undefined ? {} : { stateAbbr: options.stateAbbr }
   );
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      EPA_ENVIROFACTS_FACILITIES_SOURCE_ID,
-      `HTTP ${response.status} reading the facilities`
-    );
-  }
+  const response = await httpGet(EPA_ENVIROFACTS_FACILITIES_SOURCE_ID, url, { fetchImpl });
   return parseEpaEnvirofactsFacilitiesPayload(await response.json());
 }
 

@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -175,13 +176,7 @@ export async function fetchUsaSpendingAgencies(options?: {
 }): Promise<UsaSpendingAgencyDirectory> {
   const fetchImpl = options?.fetchImpl ?? globalThis.fetch;
   const url = `${USASPENDING_API_BASE}${USASPENDING_TOP_TIER_AGENCIES_PATH}`;
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      USASPENDING_AGENCIES_SOURCE_ID,
-      `HTTP ${response.status} reading the top-tier agencies`
-    );
-  }
+  const response = await httpGet(USASPENDING_AGENCIES_SOURCE_ID, url, { fetchImpl });
   return parseUsaSpendingAgenciesPayload(await response.json());
 }
 

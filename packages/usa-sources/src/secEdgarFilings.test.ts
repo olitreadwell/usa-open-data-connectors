@@ -118,9 +118,9 @@ describe('fetchSecEdgarFilings', () => {
     expect(fetchImpl.mock.calls[0]?.[0]).toBe(
       `${SEC_EDGAR_SUBMISSIONS_API_BASE}/CIK0000320193.json`
     );
-    expect(fetchImpl.mock.calls[0]?.[1]).toEqual({
-      headers: { 'User-Agent': SEC_EDGAR_USER_AGENT },
-    });
+    expect(new Headers(fetchImpl.mock.calls[0]?.[1]?.headers).get('user-agent')).toBe(
+      SEC_EDGAR_USER_AGENT
+    );
     expect(filings.filingCount).toBe(3);
   });
 

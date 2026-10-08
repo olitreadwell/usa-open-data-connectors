@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -14,7 +15,8 @@ export const SEC_EDGAR_FILINGS_SOURCE_ID = 'sec-edgar-filings';
  * adapter sends a descriptive name and a contact address on every call. A
  * real deployment should override the contact with its own address.
  */
-export const SEC_EDGAR_USER_AGENT = 'usa-open-data-connectors contact@example.com';
+export const SEC_EDGAR_USER_AGENT =
+  'usa-open-data-connectors (https://github.com/olitreadwell/usa-open-data-connectors)';
 
 /** One filing in an issuer's recent submissions list. */
 export interface SecEdgarFiling {
@@ -285,13 +287,10 @@ export async function fetchSecEdgarFilings(options?: {
 }): Promise<SecEdgarCompanyFilings> {
   const fetchImpl = options?.fetchImpl ?? globalThis.fetch;
   const url = buildSecEdgarSubmissionsUrl(options?.cik ?? SEC_EDGAR_APPLE_CIK);
-  const response = await fetchImpl(url, { headers: { 'User-Agent': SEC_EDGAR_USER_AGENT } });
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      SEC_EDGAR_FILINGS_SOURCE_ID,
-      `HTTP ${response.status} reading the submissions file`
-    );
-  }
+  const response = await httpGet(SEC_EDGAR_FILINGS_SOURCE_ID, url, {
+    fetchImpl,
+    headers: { 'User-Agent': SEC_EDGAR_USER_AGENT },
+  });
   return parseSecEdgarFilingsPayload(await response.json());
 }
 

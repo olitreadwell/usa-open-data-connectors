@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -47,7 +48,8 @@ export interface CfpConsumerComplaintSeries {
 
 /** Base URL for the Consumer Complaint Database search API. */
 /** The user agent the search API accepts. Its edge rejects undici's default. */
-export const CFPB_USER_AGENT = 'usa-open-data-connectors contact@example.com';
+export const CFPB_USER_AGENT =
+  'usa-open-data-connectors (https://github.com/olitreadwell/usa-open-data-connectors)';
 
 export const CFPB_COMPLAINT_SEARCH_API_BASE =
   'https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/';
@@ -301,15 +303,10 @@ export async function findNewestCfpComplaintDate(
   for (let daysBack = 0; daysBack < CFPB_NEWEST_DATE_PROBE_DAYS; daysBack += 1) {
     const day = new Date(today.getTime() - daysBack * 24 * 60 * 60 * 1000);
     const isoDate = day.toISOString().slice(0, 10);
-    const response = await fetchImpl(buildCfpComplaintDayUrl(isoDate), {
+    const response = await httpGet('cfpb-consumer-complaints', buildCfpComplaintDayUrl(isoDate), {
+      fetchImpl,
       headers: { 'User-Agent': CFPB_USER_AGENT },
     });
-    if (!response.ok) {
-      throw new UsSourceApiError(
-        'cfpb-consumer-complaints',
-        `HTTP ${response.status} reading the complaint count for ${isoDate}`
-      );
-    }
     if (parseCfpComplaintTotal(await response.json()) > 0) {
       return isoDate;
     }
@@ -341,27 +338,18 @@ export async function fetchCfpConsumerComplaints(options?: {
 
   const years: CfpComplaintYearCount[] = [];
   for (let year = firstYear; year <= newestYear; year += 1) {
-    const response = await fetchImpl(buildCfpComplaintCountUrl(year), {
+    const response = await httpGet('cfpb-consumer-complaints', buildCfpComplaintCountUrl(year), {
+      fetchImpl,
       headers: { 'User-Agent': CFPB_USER_AGENT },
     });
-    if (!response.ok) {
-      throw new UsSourceApiError(
-        'cfpb-consumer-complaints',
-        `HTTP ${response.status} reading the ${String(year)} complaint count`
-      );
-    }
     years.push({ year, complaintCount: parseCfpComplaintTotal(await response.json()) });
   }
 
-  const aggregationResponse = await fetchImpl(buildCfpComplaintAggregationUrl(), {
-    headers: { 'User-Agent': CFPB_USER_AGENT },
-  });
-  if (!aggregationResponse.ok) {
-    throw new UsSourceApiError(
-      'cfpb-consumer-complaints',
-      `HTTP ${aggregationResponse.status} reading the product and company tallies`
-    );
-  }
+  const aggregationResponse = await httpGet(
+    'cfpb-consumer-complaints',
+    buildCfpComplaintAggregationUrl(),
+    { fetchImpl, headers: { 'User-Agent': CFPB_USER_AGENT } }
+  );
   const { topProducts, topCompanies } = parseCfpComplaintAggregations(
     await aggregationResponse.json()
   );

@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -257,13 +258,7 @@ export async function fetchTreasuryAvgInterestRates(options?: {
   const url = buildTreasuryAvgInterestRateUrl(
     options?.securityType === undefined ? {} : { securityType: options.securityType }
   );
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      'treasury',
-      `HTTP ${response.status} reading the average interest rates`
-    );
-  }
+  const response = await httpGet('treasury', url, { fetchImpl });
   return buildTreasuryAvgInterestRateSeries(
     parseTreasuryAvgInterestRatePayload(await response.json())
   );

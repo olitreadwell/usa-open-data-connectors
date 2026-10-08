@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -175,10 +176,7 @@ async function fetchBlsWindow(
   fetchImpl: typeof globalThis.fetch
 ): Promise<BlsObservation[]> {
   const url = `${BLS_API_BASE}/${seriesId}?startyear=${startYear}&endyear=${endYear}`;
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError('bls', `HTTP ${response.status} reading series ${seriesId}`);
-  }
+  const response = await httpGet('bls', url, { fetchImpl });
   return parseBlsObservations(await response.json());
 }
 

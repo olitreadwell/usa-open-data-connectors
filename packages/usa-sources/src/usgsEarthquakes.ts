@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -227,10 +228,7 @@ export async function fetchUsgsEarthquakes(
   options?: { fetchImpl?: typeof globalThis.fetch }
 ): Promise<UsgsEarthquake[]> {
   const fetchImpl = options?.fetchImpl ?? globalThis.fetch;
-  const response = await fetchImpl(buildUsgsEarthquakeUrl(query));
-  if (!response.ok) {
-    throw new UsSourceApiError('usgs', `HTTP ${response.status} reading the catalogue`);
-  }
+  const response = await httpGet('usgs', buildUsgsEarthquakeUrl(query), { fetchImpl });
   return parseUsgsEarthquakes(await response.json());
 }
 

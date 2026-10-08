@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
-import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -221,10 +222,7 @@ export async function fetchCdcCountyObesity(options?: {
   fetchImpl?: typeof globalThis.fetch;
 }): Promise<CdcCountyObesityPayload> {
   const fetchImpl = options?.fetchImpl ?? globalThis.fetch;
-  const response = await fetchImpl(buildCdcCountyObesityUrl());
-  if (!response.ok) {
-    throw new UsSourceApiError('cdc', `HTTP ${response.status} reading the county estimates`);
-  }
+  const response = await httpGet('cdc', buildCdcCountyObesityUrl(), { fetchImpl });
   return parseCdcCountyObesityPayload(await response.json());
 }
 

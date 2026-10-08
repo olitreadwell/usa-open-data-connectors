@@ -1,6 +1,7 @@
 import { z } from 'zod';
 
 import { UsSourceApiError, UsSourceParseError } from './errors.js';
+import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
 
@@ -154,13 +155,7 @@ export async function fetchNcbiPubmedSearch(options?: {
     ...(options?.term === undefined ? {} : { term: options.term }),
     ...(options?.retmax === undefined ? {} : { retmax: options.retmax }),
   });
-  const response = await fetchImpl(url);
-  if (!response.ok) {
-    throw new UsSourceApiError(
-      NCBI_PUBMED_SEARCH_SOURCE_ID,
-      `HTTP ${response.status} reading the PubMed search`
-    );
-  }
+  const response = await httpGet(NCBI_PUBMED_SEARCH_SOURCE_ID, url, { fetchImpl });
   return parseNcbiPubmedSearchPayload(await response.json());
 }
 
