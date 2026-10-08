@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:24.21.0-alpine
+FROM node:26.10.0-alpine
 
 WORKDIR /app
 
