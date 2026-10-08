@@ -28,7 +28,7 @@
     "@hono/swagger-ui": "0.6.1",
     "@hono/zod-validator": "0.9.1",
     "@usa-open-data-connectors/usa-sources": "*",
-    "@sentry/node": "10.75.3",
+    "@sentry/node": "11.4.0",
     "hono": "4.13.9",
     "zod": "3.25.76"
   },
