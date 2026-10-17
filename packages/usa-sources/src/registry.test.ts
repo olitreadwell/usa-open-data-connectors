@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
@@ -376,6 +376,17 @@ describe('probeUsDataSource', () => {
 });
 
 describe('probeAllUsDataSources', () => {
+  // The Consumer Complaint adapter walks back from "today" to the newest
+  // complaint its fixture carries, so this test freezes Date to the day after
+  // that fixture rather than depending on the real calendar.
+  beforeEach(() => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(new Date('2026-10-03T00:00:00Z'));
+  });
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   it('probes every registered source', async () => {
     const probes = await probeAllUsDataSources({ fetchImpl: FIXTURE_FETCH });
     expect(probes).toHaveLength(US_DATA_SOURCES.length);

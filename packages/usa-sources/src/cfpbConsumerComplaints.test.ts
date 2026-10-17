@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
 import {
   buildCfpComplaintAggregationUrl,
@@ -224,6 +224,18 @@ describe('findNewestCfpComplaintDate', () => {
 });
 
 describe('fetchCfpConsumerComplaints', () => {
+  // The adapter walks back from "today" to the newest published complaint, and
+  // the stub below pins that day to 2026-10-02. Freezing Date keeps the test
+  // deterministic; without it the assertion rots as the calendar moves past
+  // the stub's fourteen-day probe window.
+  beforeEach(() => {
+    vi.useFakeTimers({ toFake: ['Date'] });
+    vi.setSystemTime(new Date('2026-10-03T00:00:00Z'));
+  });
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
   const fetchImpl = (async (input: string | URL) => {
     const url = new URL(String(input));
     if (!url.searchParams.has('no_aggs')) {
