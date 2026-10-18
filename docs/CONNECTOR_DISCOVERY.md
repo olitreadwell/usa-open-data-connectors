@@ -1,6 +1,6 @@
 # Connector discovery notes (US)
 
-Findings from the US source passes. Twenty-three keyless adapters are built and
+Findings from the US source passes. Twenty-four keyless adapters are built and
 verified against live APIs, and each has a fixture committed from the same
 endpoint.
 
@@ -35,6 +35,7 @@ were captured between 2026-09-23 and 2026-10-03.
 | `healthdata-socrata-catalogue` | HealthData.gov | `https://healthdata.gov/api/views.json` | `healthdata-socrata-catalogue-2026-10-05.json` |
 | `bts-transportation-stats` | Bureau of Transportation Statistics | `https://data.bts.gov/api/views.json` | `bts-transportation-stats-2026-10-05.json` |
 | `estimatetax-income-tax` | EstimateTax | `https://estimatetax.net/api/v1/calculate` | `estimatetax-income-tax-2026-10-18.json` |
+| `nyc-open-data-catalogue` | New York City Open Data | `https://data.cityofnewyork.us/api/views.json` | `nyc-open-data-catalogue-2026-10-19.json` |
 
 ## Exact curl commands for the 2026-10-05 additions
 
@@ -75,6 +76,7 @@ curl -sS -A "$UA_BROWSER" 'https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch
 curl -sS -A "$UA_BROWSER" 'https://data.cdc.gov/api/views.json?limit=10'
 curl -sS -A "$UA_BROWSER" 'https://healthdata.gov/api/views.json?limit=10'
 curl -sS -A "$UA_BROWSER" 'https://data.bts.gov/api/views.json?limit=10'
+curl -sS -A "$UA_BROWSER" 'https://data.cityofnewyork.us/api/views.json?limit=50'
 ```
 
 ## Findings table
@@ -92,6 +94,7 @@ curl -sS -A "$UA_BROWSER" 'https://data.bts.gov/api/views.json?limit=10'
 | CDC `data.cdc.gov` Socrata catalogue | LIVE | Keyless. The discovery API answers a bare JSON array of catalogue entries, not dataset rows. An entry can arrive without a category, which the adapter counts under `Uncategorised`. |
 | HealthData.gov `healthdata.gov` Socrata catalogue | LIVE | Keyless. Same shape as the CDC catalogue. The page captured on 2026-10-05 held no `dataset` entries: all ten were `href` records. |
 | BTS `data.bts.gov` Socrata catalogue | LIVE | Keyless. Same shape as the other two Socrata catalogues. The page mixes datasets, charts, and stories. |
+| NYC `data.cityofnewyork.us` Socrata catalogue | LIVE | Keyless. Same discovery shape as the other Socrata catalogues. The 50-entry page captured on 2026-10-19 mixes datasets and maps, and three entries arrive without a category. |
 | EstimateTax `estimatetax.net` | LIVE | Keyless, with a 60 request per minute limit per address. One request returns federal, state, and local income tax for one salary. The response cites the IRS or state document behind each layer and the date it was checked. The default fixture is the $85,000 single filer in New York City for tax year 2026. |
 
 ## Exact curl command for the 2026-10-18 addition
@@ -143,6 +146,7 @@ everywhere, and a few services attach their own terms on top.
 | `ncbi-pubmed-search` | National Center for Biotechnology Information | US federal work, but NLM attaches its own terms to some content. Check the NLM terms before bulk reuse |
 | `healthdata-socrata-catalogue` | HealthData.gov, US Department of Health and Human Services | US federal work, public domain in the US |
 | `bts-transportation-stats` | Bureau of Transportation Statistics | US federal work, public domain in the US |
+| `nyc-open-data-catalogue` | New York City Open Data | City of New York public data, published under the portal's terms. Check the dataset page before reuse |
 | `estimatetax-income-tax` | EstimateTax | Private publisher, not a federal agency. The API terms ask for attribution and the source document alongside any displayed figure. No open licence is stated for the API output. |
 
 No adapter returns licence metadata today, and no adapter can tell you whether a

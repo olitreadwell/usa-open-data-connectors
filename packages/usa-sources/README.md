@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 23 source adapters behind one interface.
+- Exposes 24 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads a committed fixture when the network is unavailable.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -52,6 +52,7 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `healthdata-socrata-catalogue` | HealthData.gov | The HealthData.gov Socrata catalogue, one row per dataset, chart, or story. |
 | `bts-transportation-stats` | Bureau of Transportation Statistics | The BTS Socrata catalogue, one row per dataset, chart, or story. |
 | `estimatetax-income-tax` | EstimateTax | US federal, state, and local income tax for one salary, with the official document behind every figure. |
+| `nyc-open-data-catalogue` | New York City Open Data | The NYC Socrata catalogue, one row per published dataset or map. |
 
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
 `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data` as soon as it is registered.
@@ -258,6 +259,8 @@ console.log(tax.totals.totalTax, tax.totals.effectiveRate, tax.sources.federal.u
 - `estimatetax-income-tax`: the response is a calculation from the publisher's own engine, not a row from an official statistical release. Every layer cites the IRS or state document it was read from, so the source and the date are visible in the response.
 - `estimatetax-income-tax`: the engine assumes the standard deduction unless `preTaxDeductions` is supplied. It does not model itemised deductions, capital gains, or credits, and the response carries that disclaimer.
 - `estimatetax-income-tax`: the default query is the $85,000 single filer in New York City recorded in the fixture. A federal-only query sets `state` to null.
+- `nyc-open-data-catalogue`: the discovery API answers a bare JSON array of catalogue entries, not dataset rows. An entry can arrive without a category, which the adapter counts under `Uncategorised`.
+- `nyc-open-data-catalogue`: the page captured on 2026-10-19 mixes datasets and maps. The adapter counts both, and keeps the view and download totals for the page it read.
 - Unit tests use the committed fixtures and run offline. Run them with `npm run test --workspace @usa-open-data-connectors/usa-sources`.
 - Smoke tests hit the live APIs and need `RUN_SMOKE=1`. Run them with `npm run test:smoke --workspace @usa-open-data-connectors/usa-sources`.
 
@@ -287,9 +290,10 @@ The data comes from US federal agencies and the open data catalogue services the
 | Bureau of Transportation Statistics | `https://data.bts.gov/api/views.json` |
 | EstimateTax | `https://estimatetax.net/api/v1/calculate` |
 | HealthData.gov | `https://healthdata.gov/api/views.json` |
+| New York City Open Data | `https://data.cityofnewyork.us/api/views.json` |
 
 Each publisher sets its own terms for its data. The adapters read the publisher's own source page or
-licence field. For example, the Socrata catalogue adapters (CDC, HealthData.gov, and BTS) return each
+licence field. For example, the Socrata catalogue adapters (CDC, HealthData.gov, BTS, and NYC) return each
 entry's `license` field. The fixtures in this repo record entries under these terms:
 
 - USA.gov public-domain label: `http://www.usa.gov/publicdomain/label/1.0/`
