@@ -13,6 +13,7 @@ import { epaEnvirofactsFacilitiesAdapter } from './epaEnvirofactsFacilities.js';
 import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
 import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
 import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
+import { nycOpenDataCatalogueAdapter } from './nycOpenDataCatalogue.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
 import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
 import { treasuryDebtToPennyAdapter } from './treasuryDebtToPenny.js';
@@ -171,6 +172,10 @@ const RAW_BTS_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/bts-transportation-stats-2026-10-05.json'),
   'utf8'
 );
+const RAW_NYC_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/nyc-open-data-catalogue-2026-10-19.json'),
+  'utf8'
+);
 const RAW_ESTIMATETAX_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/estimatetax-income-tax-2026-10-18.json'),
   'utf8'
@@ -281,6 +286,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'data.bts.gov') {
     return RAW_BTS_FIXTURE;
   }
+  if (hostname === 'data.cityofnewyork.us') {
+    return RAW_NYC_FIXTURE;
+  }
   if (hostname === 'estimatetax.net') {
     return RAW_ESTIMATETAX_FIXTURE;
   }
@@ -318,6 +326,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('cdc-socrata-catalogue');
     expect(ids).toContain('healthdata-socrata-catalogue');
     expect(ids).toContain('bts-transportation-stats');
+    expect(ids).toContain('nyc-open-data-catalogue');
     expect(ids).toContain('estimatetax-income-tax');
     expect(new Set(ids).size).toBe(ids.length);
   });
@@ -358,6 +367,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('cdc-socrata-catalogue')).toBe(cdcSocrataCatalogueAdapter);
     expect(getUsDataSource('healthdata-socrata-catalogue')).toBe(healthdataSocrataCatalogueAdapter);
     expect(getUsDataSource('bts-transportation-stats')).toBe(btsTransportationStatsAdapter);
+    expect(getUsDataSource('nyc-open-data-catalogue')).toBe(nycOpenDataCatalogueAdapter);
     expect(getUsDataSource('estimatetax-income-tax')).toBe(estimatetaxIncomeTaxAdapter);
   });
 

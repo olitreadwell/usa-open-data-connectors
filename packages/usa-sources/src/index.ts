@@ -389,6 +389,22 @@ export type {
   HealthdataSocrataCatalogueEntry,
   HealthdataSocrataCategoryCount,
 } from './healthdataSocrataCatalogue.js';
+/** New York City Open Data catalogue (keyless). */
+export {
+  buildNycOpenDataCatalogueUrl,
+  fetchNycOpenDataCatalogue,
+  NYC_OPEN_DATA_API_BASE,
+  NYC_OPEN_DATA_CATALOGUE_LIMIT,
+  NYC_OPEN_DATA_CATALOGUE_SOURCE_ID,
+  nycOpenDataCatalogueAdapter,
+  parseNycOpenDataCataloguePayload,
+} from './nycOpenDataCatalogue.js';
+/** New York City catalogue types. */
+export type {
+  NycOpenDataCatalogue,
+  NycOpenDataCatalogueEntry,
+  NycOpenDataCategoryCount,
+} from './nycOpenDataCatalogue.js';
 /** Bureau of Transportation Statistics catalogue (keyless). */
 export {
   buildBtsTransportationStatsUrl,
