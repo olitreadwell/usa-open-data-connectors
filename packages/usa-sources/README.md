@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 22 source adapters behind one interface.
+- Exposes 23 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads a committed fixture when the network is unavailable.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -51,6 +51,7 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `cdc-socrata-catalogue` | Centers for Disease Control and Prevention | The CDC Socrata catalogue, one row per dataset, chart, or story. |
 | `healthdata-socrata-catalogue` | HealthData.gov | The HealthData.gov Socrata catalogue, one row per dataset, chart, or story. |
 | `bts-transportation-stats` | Bureau of Transportation Statistics | The BTS Socrata catalogue, one row per dataset, chart, or story. |
+| `estimatetax-income-tax` | EstimateTax | US federal, state, and local income tax for one salary, with the official document behind every figure. |
 
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
 `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data` as soon as it is registered.
@@ -199,6 +200,17 @@ console.log(
 );
 ```
 
+`estimatetax-income-tax`:
+
+```ts
+import { fetchEstimateTaxCalculation } from '@usa-open-data-connectors/usa-sources';
+
+const tax = await fetchEstimateTaxCalculation({
+  query: { income: 85_000, filingStatus: 'single', state: 'NY', city: 'new-york-city' },
+});
+console.log(tax.totals.totalTax, tax.totals.effectiveRate, tax.sources.federal.url);
+```
+
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
@@ -242,6 +254,10 @@ console.log(
 - `cfpb-consumer-complaints`: the first year in the window, 2011, holds only December. The bureau published its first complaints on 1 December 2011. The adapter keeps the year, and the page's data note says the first bar covers one month.
 - `cfpb-consumer-complaints`: the product tally splits credit reporting across more than one label because the bureau changed its product taxonomy over the years. The adapter keeps whatever the API sends, so the labels in `topProducts` are not stable.
 - `cfpb-consumer-complaints`: the committed snapshot holds the folded counts, not the eighteen million raw rows.
+- `estimatetax-income-tax`: one keyless request answers the federal, state, and local income tax for one salary. The endpoint is limited to 60 requests a minute per address.
+- `estimatetax-income-tax`: the response is a calculation from the publisher's own engine, not a row from an official statistical release. Every layer cites the IRS or state document it was read from, so the source and the date are visible in the response.
+- `estimatetax-income-tax`: the engine assumes the standard deduction unless `preTaxDeductions` is supplied. It does not model itemised deductions, capital gains, or credits, and the response carries that disclaimer.
+- `estimatetax-income-tax`: the default query is the $85,000 single filer in New York City recorded in the fixture. A federal-only query sets `state` to null.
 - Unit tests use the committed fixtures and run offline. Run them with `npm run test --workspace @usa-open-data-connectors/usa-sources`.
 - Smoke tests hit the live APIs and need `RUN_SMOKE=1`. Run them with `npm run test:smoke --workspace @usa-open-data-connectors/usa-sources`.
 
@@ -269,6 +285,7 @@ The data comes from US federal agencies and the open data catalogue services the
 | Environmental Protection Agency | `https://data.epa.gov/efservice/TRI_FACILITY/STATE_ABBR/RI/rows/0:9/JSON` |
 | National Center for Biotechnology Information | `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi` |
 | Bureau of Transportation Statistics | `https://data.bts.gov/api/views.json` |
+| EstimateTax | `https://estimatetax.net/api/v1/calculate` |
 | HealthData.gov | `https://healthdata.gov/api/views.json` |
 
 Each publisher sets its own terms for its data. The adapters read the publisher's own source page or
@@ -282,6 +299,11 @@ entry's `license` field. The fixtures in this repo record entries under these te
 
 Check the licence field on each entry before you reuse it. This section is not legal advice. The package
 licence covers the code, not the data.
+
+EstimateTax is a private publisher rather than a federal agency. Its API terms ask for attribution
+and the source document alongside any figure you display, and the calculation response cites the
+official document behind each tax figure. No open licence is stated for the API output, so credit
+EstimateTax and the cited authority when you republish a calculation.
 
 ## Package licence
 

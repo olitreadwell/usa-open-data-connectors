@@ -10,7 +10,7 @@ gone, and the API and CLI read the US registry. The Python and Ruby ports in
 
 ## Adapters
 
-Twenty-two adapters are registered. Every one is keyless and has a committed
+Twenty-three adapters are registered. Every one is keyless and has a committed
 fixture captured from the live service.
 
 | Source | Adapter id | Status |
@@ -37,6 +37,7 @@ fixture captured from the live service.
 | CDC Socrata catalogue | `cdc-socrata-catalogue` | live, keyless, fixture committed 2026-10-05 |
 | HealthData.gov | `healthdata-socrata-catalogue` | live, keyless, fixture committed 2026-10-05 |
 | Bureau of Transportation Statistics | `bts-transportation-stats` | live, keyless, fixture committed 2026-10-05 |
+| EstimateTax | `estimatetax-income-tax` | live, keyless, fixture committed 2026-10-18 |
 | Census Bureau Data API | - | not started |
 | api.data.gov | - | not started |
 | BEA | - | not started |

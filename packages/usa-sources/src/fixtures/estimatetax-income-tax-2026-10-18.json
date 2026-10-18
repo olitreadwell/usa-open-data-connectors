@@ -1,0 +1,82 @@
+{
+  "taxYear": 2026,
+  "input": {
+    "income": 85000,
+    "filingStatus": "single",
+    "state": "NY",
+    "city": "new-york-city",
+    "preTaxDeductions": 0,
+    "selfEmploymentIncome": 0
+  },
+  "federal": {
+    "adjustedGrossIncome": 85000,
+    "deduction": 16100,
+    "taxableIncome": 68900,
+    "incomeTax": 9870,
+    "socialSecurity": 5270,
+    "medicare": 1232.5,
+    "additionalMedicare": 0,
+    "selfEmploymentTax": 0,
+    "totalFica": 6502.5,
+    "marginalRate": 0.22,
+    "brackets": [
+      {
+        "rate": 0.1,
+        "taxableInBracket": 12400,
+        "tax": 1240,
+        "min": 0,
+        "max": 12400
+      },
+      {
+        "rate": 0.12,
+        "taxableInBracket": 38000,
+        "tax": 4560,
+        "min": 12400,
+        "max": 50400
+      },
+      {
+        "rate": 0.22,
+        "taxableInBracket": 18500,
+        "tax": 4070,
+        "min": 50400,
+        "max": 105700
+      }
+    ]
+  },
+  "state": {
+    "code": "NY",
+    "name": "New York",
+    "tax": 3993,
+    "system": "graduated"
+  },
+  "local": {
+    "jurisdiction": "New York City",
+    "tax": 2859.52,
+    "rate": 0.03713662337662338,
+    "base": "city_taxable"
+  },
+  "totals": {
+    "totalTax": 23225.02,
+    "netIncome": 61774.98,
+    "effectiveRate": 0.2732,
+    "effectiveIncomeTaxRate": 0.1631
+  },
+  "sources": {
+    "federal": {
+      "citation": "IRS Rev. Proc. 2025-32, § 3.01, Tables 1-4",
+      "url": "https://www.irs.gov/pub/irs-drop/rp-25-32.pdf",
+      "verified": "2026-08-31"
+    },
+    "state": {
+      "authority": "New York State Department of Taxation and Finance",
+      "checked": "2026-09-24",
+      "url": "https://www.tax.ny.gov/pdf/current_forms/it/it2105i.pdf"
+    },
+    "local": {
+      "document": "NYS Department of Taxation and Finance, Form IT-201-I (2025) — New York City tax rate schedule, page 40 of 41",
+      "url": "https://www.tax.ny.gov/pdf/current_forms/it/it201i.pdf",
+      "checked": "2026-09-02"
+    }
+  },
+  "disclaimer": "Estimate for planning. Not tax advice. Assumes the standard deduction unless preTaxDeductions is supplied; does not model itemised deductions, capital gains or credits."
+}

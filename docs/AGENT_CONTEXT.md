@@ -17,9 +17,9 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 ## Current state
 
 - `main` is the integration branch. Pull requests target `main`.
-- Twenty-two US adapters, all keyless, each with a live fetch, a strict parse,
+- Twenty-three US adapters, all keyless, each with a live fetch, a strict parse,
   and a committed fixture
-- `packages/usa-sources` holds all 22 adapters, the registry, the shared HTTP
+- `packages/usa-sources` holds all 23 adapters, the registry, the shared HTTP
   layer (`src/http.ts`), and the fixtures
 - Every fetch goes through `httpGet`: one `User-Agent`, a 30 second timeout,
   and `retryable` set on HTTP 429, HTTP 5xx and network failures. The SEC,

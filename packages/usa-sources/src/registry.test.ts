@@ -6,6 +6,7 @@ import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { cfpbConsumerComplaintsAdapter } from './cfpbConsumerComplaints.js';
 import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
+import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
 import { clinicalTrialsStudiesAdapter } from './clinicalTrialsStudies.js';
 import { epaEnvirofactsFacilitiesAdapter } from './epaEnvirofactsFacilities.js';
@@ -170,6 +171,10 @@ const RAW_BTS_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/bts-transportation-stats-2026-10-05.json'),
   'utf8'
 );
+const RAW_ESTIMATETAX_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/estimatetax-income-tax-2026-10-18.json'),
+  'utf8'
+);
 const OPENFDA_FOOD_RECALL_FIXTURE = JSON.parse(
   readFileSync(
     path.join(process.cwd(), 'src/fixtures/openfda-food-recalls-2026-09-30.json'),
@@ -276,6 +281,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'data.bts.gov') {
     return RAW_BTS_FIXTURE;
   }
+  if (hostname === 'estimatetax.net') {
+    return RAW_ESTIMATETAX_FIXTURE;
+  }
   return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
 
@@ -310,6 +318,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('cdc-socrata-catalogue');
     expect(ids).toContain('healthdata-socrata-catalogue');
     expect(ids).toContain('bts-transportation-stats');
+    expect(ids).toContain('estimatetax-income-tax');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -349,6 +358,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('cdc-socrata-catalogue')).toBe(cdcSocrataCatalogueAdapter);
     expect(getUsDataSource('healthdata-socrata-catalogue')).toBe(healthdataSocrataCatalogueAdapter);
     expect(getUsDataSource('bts-transportation-stats')).toBe(btsTransportationStatsAdapter);
+    expect(getUsDataSource('estimatetax-income-tax')).toBe(estimatetaxIncomeTaxAdapter);
   });
 
   it('returns undefined for an unknown id', () => {

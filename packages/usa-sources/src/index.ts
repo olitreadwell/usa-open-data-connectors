@@ -405,6 +405,35 @@ export type {
   BtsCatalogueEntry,
   BtsTransportationCatalogue,
 } from './btsTransportationStats.js';
+/** EstimateTax US federal, state, and local income tax (keyless). */
+export {
+  buildEstimateTaxUrl,
+  ESTIMATETAX_API_BASE,
+  ESTIMATETAX_CALCULATE_PATH,
+  ESTIMATETAX_DEFAULT_CITY,
+  ESTIMATETAX_DEFAULT_INCOME,
+  ESTIMATETAX_DEFAULT_QUERY,
+  ESTIMATETAX_DEFAULT_STATE,
+  ESTIMATETAX_FILING_STATUSES,
+  ESTIMATETAX_INCOME_TAX_SOURCE_ID,
+  estimatetaxIncomeTaxAdapter,
+  fetchEstimateTaxCalculation,
+  parseEstimateTaxCalculation,
+} from './estimatetaxIncomeTax.js';
+/** EstimateTax income tax types. */
+export type {
+  EstimateTaxBracket,
+  EstimateTaxCalculation,
+  EstimateTaxFederal,
+  EstimateTaxFilingStatus,
+  EstimateTaxInput,
+  EstimateTaxLocal,
+  EstimateTaxQuery,
+  EstimateTaxSource,
+  EstimateTaxSources,
+  EstimateTaxState,
+  EstimateTaxTotals,
+} from './estimatetaxIncomeTax.js';
 
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
