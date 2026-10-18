@@ -24,7 +24,7 @@ describe.runIf(RUN_SMOKE)('the built stdio server', () => {
     expect(tools.map((tool) => tool.name)).toContain('us_fema_declarations');
 
     const sources = await client.callTool({ name: 'list_sources', arguments: {} });
-    expect(JSON.parse(firstText(sources)).length).toBe(22);
+    expect(JSON.parse(firstText(sources)).length).toBe(23);
 
     const probe = await client.callTool({
       name: 'probe_sources',

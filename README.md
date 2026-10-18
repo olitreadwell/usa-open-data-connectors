@@ -11,7 +11,7 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 22 US public data sources, with live probes and offline fixtures |
+| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 23 US public data sources, with live probes and offline fixtures |
 | [`@usa-open-data-connectors/usa-mcp`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-mcp) | MCP server that exposes the connectors to Claude, ChatGPT, and other MCP clients |
 | [`@usa-open-data-connectors/connectors-cli`](https://www.npmjs.com/package/@usa-open-data-connectors/connectors-cli) | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
 | `@usa-open-data-connectors/connectors-api` | Private. HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
@@ -22,16 +22,18 @@ exposed over the API or committed to the repo.
 
 ## Connectors
 
-Twenty-two adapters, all in `@usa-open-data-connectors/usa-sources`. All are
+Twenty-three adapters, all in `@usa-open-data-connectors/usa-sources`. All are
 keyless and need no environment variable.
 
 Most of this data comes from US federal agencies, and works of the US federal
 government are generally not subject to copyright in the United States, so it
-is effectively public domain there. The NCBI and NLM services attach their own
-terms to some content, and public domain in the US is not public domain
-everywhere. Check the publisher's terms before you republish: the connectors
-fetch the data, they do not relicense it. `docs/CONNECTOR_DISCOVERY.md` lists
-where each source's terms live.
+is effectively public domain there. EstimateTax is a private publisher, and
+its terms ask for attribution and the source document alongside any figure
+you display. The NCBI and NLM services attach their own terms to some content,
+and public domain in the US is not public domain everywhere. Check the
+publisher's terms before you republish: the connectors fetch the data, they do
+not relicense it. `docs/CONNECTOR_DISCOVERY.md` lists where each source's
+terms live.
 
 Three sources ask callers to identify themselves. The SEC EDGAR, National
 Weather Service and CFPB adapters send their own descriptive `User-Agent`
@@ -40,7 +42,7 @@ nothing extra. Every other adapter sends the shared `User-Agent`
 (`usa-open-data-connectors (Language=TypeScript)`), waits at most 30 seconds
 for a response, and marks rate-limited (HTTP 429), server-error (HTTP 5xx) and
 network failures as `retryable` on the thrown `UsSourceApiError`. The shared
-`httpGet` helper in `packages/usa-sources/src/http.ts` does this for all 22
+`httpGet` helper in `packages/usa-sources/src/http.ts` does this for all 23
 adapters.
 
 | id | Source | Keyless? | Example command |
@@ -67,6 +69,7 @@ adapters.
 | `cdc-socrata-catalogue` | CDC Socrata catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe cdc-socrata-catalogue` |
 | `healthdata-socrata-catalogue` | HealthData.gov Socrata catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe healthdata-socrata-catalogue` |
 | `bts-transportation-stats` | Bureau of Transportation Statistics catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe bts-transportation-stats` |
+| `estimatetax-income-tax` | EstimateTax US federal, state, and local income tax | Yes | `npx tsx packages/cli/src/cli.ts probe estimatetax-income-tax` |
 
 Each adapter knows how to fetch live data, parse the response, and load a
 committed fixture, so a build never depends on a live API.
