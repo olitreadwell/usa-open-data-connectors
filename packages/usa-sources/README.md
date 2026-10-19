@@ -143,6 +143,25 @@ const rates = await fetchTreasuryAvgInterestRates();
 console.log(rates.monthCount, rates.lastMonth.averageInterestRatePercent, rates.lowest.recordDate);
 ```
 
+`treasury-debt-to-penny`:
+
+```ts
+import {
+  buildTreasuryDebtToPennyPage,
+  fetchTreasuryDebtToPenny,
+} from '@usa-open-data-connectors/usa-sources';
+
+const page = buildTreasuryDebtToPennyPage(
+  (await fetchTreasuryDebtToPenny({ rowLimit: 10_000 })).days
+);
+console.log(
+  page.dayCount,
+  page.firstDay.recordDate,
+  page.lastDay.recordDate,
+  page.lastDay.totalPublicDebtOutstandingUsd
+);
+```
+
 `fema-disaster-declarations`:
 
 ```ts
@@ -235,6 +254,12 @@ console.log(tax.totals.totalTax, tax.totals.effectiveRate, tax.sources.federal.u
 - `treasury-avg-interest-rate`: a page holds at most 10,000 rows and the run is around 300. The adapter asks for the whole series in one request and does not page. The row limit is a named constant.
 - `treasury-avg-interest-rate`: each row is dated to the last day of its month. A month the agency could not compute arrives without a value, and the parser drops those rows.
 - `treasury-avg-interest-rate`: a request the API rejects answers with an HTTP error and a body of `{"error":"Invalid Query Param","message":"..."}`. The parser reports an API error rather than a shape error.
+- `treasury-debt-to-penny`: one keyless request covers the whole run if the row limit is raised. The file starts on 1993-04-01 and held 8,414 business-day rows on 2026-10-15, about 2.8 MB. The default `TREASURY_DEBT_TO_PENNY_ROW_LIMIT` is 10 and the API returns oldest first, so the default page is the first ten days of 1993 rather than recent debt. Pass `{ rowLimit: 10_000 }` to read the whole series in one request.
+- `treasury-debt-to-penny`: the API caps `page[size]` at 10,000 rows and the run still fits under that cap. A caller asking for more gets the cap's worth, so check `dayCount` against the API's `meta.count` when the run grows past it.
+- `treasury-debt-to-penny`: every value arrives as a string, and a figure the agency could not report arrives as the literal text `"null"`. The adapter reads that as null and drops a row with no total. The first row, 1993-04-01, has a total but no public or intragovernmental split.
+- `treasury-debt-to-penny`: `tot_pub_debt_out_amt` equals `debt_held_public_amt` plus `intragov_hold_amt` on the rows that carry all three. Keep the split fields when the story compares public debt with intragovernmental holdings, and use the total field for the headline.
+- `treasury-debt-to-penny`: rows cover business days only. A weekend or federal holiday has no row, so a daily series has gaps by design. Use the `record_date` rather than an index when aligning debt with another daily series.
+- `treasury-debt-to-penny`: `sort=-record_date` works on the API but the URL builder does not set it. The helper reads the oldest-first default, which keeps a fixture and a live response in the same order. A rejected request answers with an HTTP error and a body of `{"error":"...","message":"..."}`.
 - `usgs-peak-streamflow`: the adapter reads the `peaks` collection on the USGS Water Data OGC API. It does not read the older `waterservices.usgs.gov` endpoints. The older statistics service answers `503 Service unavailable` to about half of scripted requests, which is enough to fail a build. The daily-values service on the older host still works when a daily series is what a story needs.
 - `usgs-peak-streamflow`: every number in a row arrives as a string, including the peak itself. The parser converts once and keeps the number. A blank `value` means the agency filed no peak for that year. The parser drops that row.
 - `usgs-peak-streamflow`: the rows are dated by water year, which starts on 1 October. A peak on 1955-10-08 is filed under water year 1956, so `waterYear` and `calendarYear` are separate fields and are not always the same number.
