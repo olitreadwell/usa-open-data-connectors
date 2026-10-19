@@ -191,6 +191,35 @@ The public API is `FDIC_BANK_API_BASE`, `FDIC_BANK_ROW_LIMIT`,
 `errors`. A row missing any of the four fields throws `UsSourceParseError`; a
 body with an `errors` array throws `UsSourceApiError`.
 
+`epa-envirofacts-facilities`:
+
+```ts
+import {
+  buildEpaEnvirofactsFacilitiesUrl,
+  parseEpaEnvirofactsFacilitiesPayload,
+} from '@usa-open-data-connectors/usa-sources';
+
+const url = buildEpaEnvirofactsFacilitiesUrl({ stateAbbr: 'CA', rowWindow: '0:9999' });
+const response = await fetch(url);
+if (!response.ok) {
+  throw new Error(`HTTP ${response.status} from ${url}`);
+}
+const page = parseEpaEnvirofactsFacilitiesPayload(await response.json());
+console.log(page.facilityCount, page.openCount, page.counties[0]);
+```
+
+The public API is `EPA_ENVIROFACTS_API_BASE`, `EPA_ENVIROFACTS_TABLE`,
+`EPA_ENVIROFACTS_STATE_COLUMN`, `EPA_ENVIROFACTS_STATE_ABBR`,
+`EPA_ENVIROFACTS_ROW_WINDOW`, `buildEpaEnvirofactsFacilitiesUrl`,
+`parseEpaEnvirofactsFacilitiesPayload`, `fetchEpaEnvirofactsFacilities`, and
+`epaEnvirofactsFacilitiesAdapter`, with the `EpaEnvirofactsFacility`,
+`EpaEnvirofactsCountyCount`, and `EpaEnvirofactsFacilityPage` types. The
+parser validates a bare JSON array against a zod schema over
+`tri_facility_id`, `facility_name`, `state_abbr`, and the optional
+`street_address`, `city_name`, `county_name`, `zip_code`, `region`,
+`fac_closed_ind`, and `parent_co_name` fields. A rejected query answers with
+`{error}` rather than an array, which throws `UsSourceApiError`.
+
 `fema-disaster-declarations`:
 
 ```ts
@@ -316,6 +345,11 @@ console.log(tax.totals.totalTax, tax.totals.effectiveRate, tax.sources.federal.u
 - `fdic-bank-directory`: each row sits inside a `data` wrapper with a separate `score` field. The parser reads `row.data`, not the wrapper.
 - `fdic-bank-directory`: the active rows cover 55 state-level codes, not 50. DC, Puerto Rico, Guam, Micronesia, and the US Virgin Islands each hold active banks, so a caller that labels the counts as states will overstate the map.
 - `fdic-bank-directory`: the directory counts institutions at the state of the main office. It is not a branch count, and a bank with branches across several states appears once.
+- `epa-envirofacts-facilities`: the state filter takes the value directly after the column name, as `TRI_FACILITY/STATE_ABBR/CA/rows/0:9999/JSON`. Adding an `equals` segment is accepted but ignored, and the service then returns the first rows of the whole table instead of the state asked for.
+- `epa-envirofacts-facilities`: the default row window is the first ten rows. `fetchEpaEnvirofactsFacilities` takes a state but not a row window, so a caller that needs the whole state builds the URL with `buildEpaEnvirofactsFacilitiesUrl({ stateAbbr, rowWindow })` and parses the response with `parseEpaEnvirofactsFacilitiesPayload`.
+- `epa-envirofacts-facilities`: the table holds facility records, not release amounts. It is the Toxics Release Inventory facility register, so a row says where a site is and whether the EPA marks it closed (`fac_closed_ind` of `1`), not how much it released in a year.
+- `epa-envirofacts-facilities`: every key arrives in lower case, and the parent company is sometimes the literal text `NA`. The parser reads that as null rather than a company name.
+- `epa-envirofacts-facilities`: a state response can be large. California held 5,110 facilities on 2026-10-19, about 7.7 MB with the full record and about 1 MB after trimming to the ten fields the parser keeps.
 - `estimatetax-income-tax`: one keyless request answers the federal, state, and local income tax for one salary. The endpoint is limited to 60 requests a minute per address.
 - `estimatetax-income-tax`: the response is a calculation from the publisher's own engine, not a row from an official statistical release. Every layer cites the IRS or state document it was read from, so the source and the date are visible in the response.
 - `estimatetax-income-tax`: the engine assumes the standard deduction unless `preTaxDeductions` is supplied. It does not model itemised deductions, capital gains, or credits, and the response carries that disclaimer.
