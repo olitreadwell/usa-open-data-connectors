@@ -346,6 +346,29 @@ const tax = await fetchEstimateTaxCalculation({
 console.log(tax.totals.totalTax, tax.totals.effectiveRate, tax.sources.federal.url);
 ```
 
+`ncbi-pubmed-search`:
+
+```ts
+import { fetchNcbiPubmedSearch } from '@usa-open-data-connectors/usa-sources';
+
+const result = await fetchNcbiPubmedSearch({
+  term: '"long COVID"[tiab] AND 2025[edat]',
+  retmax: 0,
+});
+console.log(result.totalCount, result.queryTranslation);
+```
+
+The public API is `NCBI_EUTILS_API_BASE`, `NCBI_PUBMED_ESEARCH_PATH`,
+`NCBI_PUBMED_DEFAULT_TERM`, `NCBI_PUBMED_DEFAULT_RETMAX`, `buildNcbiPubmedSearchUrl`,
+`parseNcbiPubmedSearchPayload`, `fetchNcbiPubmedSearch`, and
+`ncbiPubmedSearchAdapter`, with the `NcbiPubmedSearchResult` and
+`NcbiPubmedTranslation` types. The parser validates the response with a zod
+schema over `header` and `esearchresult`, where `esearchresult` can carry
+`count`, `retmax`, `retstart`, `idlist`, `querytranslation`, `translationset`,
+`error`, and `warninglist`. The counts arrive as strings and are converted once.
+An `esearchresult.error` is thrown as `UsSourceApiError` even though the HTTP
+status is 200.
+
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
@@ -416,6 +439,11 @@ console.log(tax.totals.totalTax, tax.totals.effectiveRate, tax.sources.federal.u
 - `estimatetax-income-tax`: the response is a calculation from the publisher's own engine, not a row from an official statistical release. Every layer cites the IRS or state document it was read from, so the source and the date are visible in the response.
 - `estimatetax-income-tax`: the engine assumes the standard deduction unless `preTaxDeductions` is supplied. It does not model itemised deductions, capital gains, or credits, and the response carries that disclaimer.
 - `estimatetax-income-tax`: the default query is the $85,000 single filer in New York City recorded in the fixture. A federal-only query sets `state` to null.
+- `ncbi-pubmed-search`: the default term is `asthma` and the default page is ten ids. Pass `term` for another query and `retmax: 0` when only the match count is needed; the count still arrives.
+- `ncbi-pubmed-search`: `[dp]` means Date - Publication, and PubMed can hold both an electronic and a print date for one record. Year buckets built with `[dp]` can overlap, so their counts can add to more than the unfiltered total. Use `[edat]` (Date - Entry) when each record must fall in exactly one year.
+- `ncbi-pubmed-search`: keyless NCBI allows about three requests a second. The adapter makes one request per call and does not add a delay, so a caller reading six years must space the calls itself.
+- `ncbi-pubmed-search`: a query field tag such as `[tiab]` restricts the match to the title and abstract. Without a tag, PubMed maps the words through MeSH and searches every indexed field, which answers a wider and different count. `queryTranslation` shows what PubMed actually ran.
+- `ncbi-pubmed-search`: a bad query answers HTTP 200 with `esearchresult.error` instead of a result block. The parser turns that into `UsSourceApiError`, so a caller does not count an error as zero papers.
 - `cdc-socrata-catalogue`: the default request asks for ten rows. The discovery API answers the whole catalogue when the limit is high enough, and the CDC catalogue held 1,477 entries on 2026-10-19. Call `buildCdcSocrataCatalogueUrl({ limit: 10_000 })` or pass `limit` to `fetchCdcSocrataCatalogue` when you need every entry. A limit below the catalogue size truncates the response without an error.
 - `cdc-socrata-catalogue`: each row is a catalogue entry, not a dataset record. `assetType` can be `dataset`, `file`, `href`, `filter`, `chart`, `story`, or `map`. A category can hold one type or a mix, so count the asset type before you describe a category as a dataset collection.
 - `cdc-socrata-catalogue`: an entry without a category has `null` in the response. The adapter keeps the null on the entry and counts it under `Uncategorised` in `categories`. That bucket is an adapter label, not a category the CDC assigned.
