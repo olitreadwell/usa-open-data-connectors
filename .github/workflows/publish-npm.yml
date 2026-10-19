@@ -24,6 +24,30 @@ jobs:
       # `npm stage publish` needs npm 11.15 or later. The Node version in
       # `.nvmrc` ships npm 10, so install npm 11 for this step.
       - run: npm install -g npm@^11.15.0
-      - run: npm stage publish --workspaces --provenance
+      # --workspaces fails the whole run as soon as one workspace already has
+      # its version on the registry. The unchanged cli and mcp packages sit at
+      # 0.1.0, so every sources release died on "cannot publish over 0.1.0"
+      # and nothing was staged. Stage only the versions that are new.
+      - run: |
+          set -euo pipefail
+          for dir in packages/*/; do
+            if [ ! -f "$dir/package.json" ]; then
+              continue
+            fi
+            if [ "$(node -p "require('./$dir/package.json').private ?? false")" = "true" ]; then
+              continue
+            fi
+            name=$(node -p "require('./$dir/package.json').name")
+            version=$(node -p "require('./$dir/package.json').version")
+            if [ -z "$name" ]; then
+              continue
+            fi
+            if npm view "$name@$version" version >/dev/null 2>&1; then
+              echo "Skip $name@$version, already published"
+              continue
+            fi
+            echo "Stage $name@$version"
+            npm stage publish "./$dir" --provenance
+          done
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
