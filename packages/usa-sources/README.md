@@ -249,6 +249,34 @@ parser validates a bare JSON array against a zod schema over
 `fac_closed_ind`, and `parent_co_name` fields. A rejected query answers with
 `{error}` rather than an array, which throws `UsSourceApiError`.
 
+`cdc-socrata-catalogue`:
+
+```ts
+import {
+  buildCdcSocrataCatalogueUrl,
+  parseCdcSocrataCataloguePayload,
+} from '@usa-open-data-connectors/usa-sources';
+
+const url = buildCdcSocrataCatalogueUrl({ limit: 10_000 });
+const response = await fetch(url);
+if (!response.ok) {
+  throw new Error(`HTTP ${response.status} from ${url}`);
+}
+const catalogue = parseCdcSocrataCataloguePayload(await response.json());
+console.log(catalogue.entryCount, catalogue.datasetCount, catalogue.categories[0]);
+```
+
+The public API is `CDC_SOCRATA_CATALOGUE_API_BASE`,
+`CDC_SOCRATA_CATALOGUE_LIMIT`, `buildCdcSocrataCatalogueUrl`,
+`parseCdcSocrataCataloguePayload`, `fetchCdcSocrataCatalogue`, and
+`cdcSocrataCatalogueAdapter`, with the `CdcSocrataCatalogueEntry`,
+`CdcSocrataCategoryCount`, and `CdcSocrataCatalogue` types. The parser
+validates a bare JSON array against a zod schema over `id`, `name`,
+`assetType`, `category`, `viewType`, `createdAt`, `viewLastModified`,
+`viewCount`, and `downloadCount`. A row missing `id`, `name`, or `createdAt`
+throws `UsSourceParseError`. A response with no rows also throws, because an
+empty catalogue is not a usable answer.
+
 `fema-disaster-declarations`:
 
 ```ts
@@ -388,6 +416,11 @@ console.log(tax.totals.totalTax, tax.totals.effectiveRate, tax.sources.federal.u
 - `estimatetax-income-tax`: the response is a calculation from the publisher's own engine, not a row from an official statistical release. Every layer cites the IRS or state document it was read from, so the source and the date are visible in the response.
 - `estimatetax-income-tax`: the engine assumes the standard deduction unless `preTaxDeductions` is supplied. It does not model itemised deductions, capital gains, or credits, and the response carries that disclaimer.
 - `estimatetax-income-tax`: the default query is the $85,000 single filer in New York City recorded in the fixture. A federal-only query sets `state` to null.
+- `cdc-socrata-catalogue`: the default request asks for ten rows. The discovery API answers the whole catalogue when the limit is high enough, and the CDC catalogue held 1,477 entries on 2026-10-19. Call `buildCdcSocrataCatalogueUrl({ limit: 10_000 })` or pass `limit` to `fetchCdcSocrataCatalogue` when you need every entry. A limit below the catalogue size truncates the response without an error.
+- `cdc-socrata-catalogue`: each row is a catalogue entry, not a dataset record. `assetType` can be `dataset`, `file`, `href`, `filter`, `chart`, `story`, or `map`. A category can hold one type or a mix, so count the asset type before you describe a category as a dataset collection.
+- `cdc-socrata-catalogue`: an entry without a category has `null` in the response. The adapter keeps the null on the entry and counts it under `Uncategorised` in `categories`. That bucket is an adapter label, not a category the CDC assigned.
+- `cdc-socrata-catalogue`: the full response is large because each row carries portal metadata. The 1,477-row response was about 7.8 MB on 2026-10-19. The parser keeps nine fields, and a fixture trimmed to those fields was about 490 KB.
+- `cdc-socrata-catalogue`: the discovery API can carry rights and metadata fields, but this parser does not keep them. Check the portal entry before you reuse an item.
 - `nyc-open-data-catalogue`: the discovery API answers a bare JSON array of catalogue entries, not dataset rows. An entry can arrive without a category, which the adapter counts under `Uncategorised`.
 - `nyc-open-data-catalogue`: the page captured on 2026-10-19 mixes datasets and maps. The adapter counts both, and keeps the view and download totals for the page it read.
 - Unit tests use the committed fixtures and run offline. Run them with `npm run test --workspace @usa-open-data-connectors/usa-sources`.
@@ -421,9 +454,10 @@ The data comes from US federal agencies and the open data catalogue services the
 | HealthData.gov | `https://healthdata.gov/api/views.json` |
 | New York City Open Data | `https://data.cityofnewyork.us/api/views.json` |
 
-Each publisher sets its own terms for its data. The adapters read the publisher's own source page or
-licence field. For example, the Socrata catalogue adapters (CDC, HealthData.gov, BTS, and NYC) return each
-entry's `license` field. The fixtures in this repo record entries under these terms:
+Each publisher sets its own terms for its data. The Socrata discovery responses can carry rights and
+metadata fields, but the catalogue adapters in this package keep a subset of the entry fields and do not
+retain those terms. Check the licence on the portal entry before you reuse an item. A catalogue can list
+entries under terms such as these:
 
 - USA.gov public-domain label: `http://www.usa.gov/publicdomain/label/1.0/`
 - USA.gov government works: `https://www.usa.gov/government-works`
