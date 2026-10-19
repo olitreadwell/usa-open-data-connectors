@@ -277,6 +277,34 @@ validates a bare JSON array against a zod schema over `id`, `name`,
 throws `UsSourceParseError`. A response with no rows also throws, because an
 empty catalogue is not a usable answer.
 
+`bts-transportation-stats`:
+
+```ts
+import {
+  buildBtsTransportationStatsUrl,
+  parseBtsTransportationStatsPayload,
+} from '@usa-open-data-connectors/usa-sources';
+
+const url = buildBtsTransportationStatsUrl({ limit: 10_000 });
+const response = await fetch(url);
+if (!response.ok) {
+  throw new Error(`HTTP ${response.status} from ${url}`);
+}
+const catalogue = parseBtsTransportationStatsPayload(await response.json());
+console.log(catalogue.entryCount, catalogue.datasetCount, catalogue.categories[0]);
+```
+
+The public API is `BTS_TRANSPORTATION_STATS_API_BASE`,
+`BTS_TRANSPORTATION_STATS_LIMIT`, `buildBtsTransportationStatsUrl`,
+`parseBtsTransportationStatsPayload`, `fetchBtsTransportationStats`, and
+`btsTransportationStatsAdapter`, with the `BtsCatalogueEntry`,
+`BtsCatalogueCategoryCount`, and `BtsTransportationCatalogue` types. The parser
+validates a bare JSON array against a zod schema over `id`, `name`,
+`assetType`, `category`, `viewType`, `createdAt`, `viewLastModified`,
+`viewCount`, and `downloadCount`. A row missing `id`, `name`, or `createdAt`
+throws `UsSourceParseError`. A response with no rows also throws, because an
+empty catalogue is not a usable answer.
+
 `fema-disaster-declarations`:
 
 ```ts
@@ -448,7 +476,7 @@ the page or ask for the total separately.
 - `treasury-avg-interest-rate`: a page holds at most 10,000 rows and the run is around 300. The adapter asks for the whole series in one request and does not page. The row limit is a named constant.
 - `treasury-avg-interest-rate`: each row is dated to the last day of its month. A month the agency could not compute arrives without a value, and the parser drops those rows.
 - `treasury-avg-interest-rate`: a request the API rejects answers with an HTTP error and a body of `{"error":"Invalid Query Param","message":"..."}`. The parser reports an API error rather than a shape error.
-- `treasury-debt-to-penny`: one keyless request covers the whole run if the row limit is raised. The file starts on 1993-04-01 and held 8,414 business-day rows on 2026-10-15, about 2.8 MB. The default `TREASURY_DEBT_TO_PENNY_ROW_LIMIT` is 10 and the API returns oldest first, so the default page is the first ten days of 1993 rather than recent debt. Pass `{ rowLimit: 10_000 }` to read the whole series in one request.
+- `treasury-debt-to-penny`: one keyless request covers the whole run if the row limit is raised. The file starts on 1993-04-01 and held 8,415 business-day rows on 2026-10-16, about 2.8 MB. The default `TREASURY_DEBT_TO_PENNY_ROW_LIMIT` is 10 and the API returns oldest first, so the default page is the first ten days of 1993 rather than recent debt. Pass `{ rowLimit: 10_000 }` to read the whole series in one request.
 - `treasury-debt-to-penny`: the API caps `page[size]` at 10,000 rows and the run still fits under that cap. A caller asking for more gets the cap's worth, so check `dayCount` against the API's `meta.count` when the run grows past it.
 - `treasury-debt-to-penny`: every value arrives as a string, and a figure the agency could not report arrives as the literal text `"null"`. The adapter reads that as null and drops a row with no total. The first row, 1993-04-01, has a total but no public or intragovernmental split.
 - `treasury-debt-to-penny`: `tot_pub_debt_out_amt` equals `debt_held_public_amt` plus `intragov_hold_amt` on the rows that carry all three. Keep the split fields when the story compares public debt with intragovernmental holdings, and use the total field for the headline.
@@ -500,11 +528,16 @@ the page or ask for the total separately.
 - `ncbi-pubmed-search`: keyless NCBI allows about three requests a second. The adapter makes one request per call and does not add a delay, so a caller reading six years must space the calls itself.
 - `ncbi-pubmed-search`: a query field tag such as `[tiab]` restricts the match to the title and abstract. Without a tag, PubMed maps the words through MeSH and searches every indexed field, which answers a wider and different count. `queryTranslation` shows what PubMed actually ran.
 - `ncbi-pubmed-search`: a bad query answers HTTP 200 with `esearchresult.error` instead of a result block. The parser turns that into `UsSourceApiError`, so a caller does not count an error as zero papers.
-- `cdc-socrata-catalogue`: the default request asks for ten rows. The discovery API answers the whole catalogue when the limit is high enough, and the CDC catalogue held 1,477 entries on 2026-10-19. Call `buildCdcSocrataCatalogueUrl({ limit: 10_000 })` or pass `limit` to `fetchCdcSocrataCatalogue` when you need every entry. A limit below the catalogue size truncates the response without an error.
+- `cdc-socrata-catalogue`: the default request asks for ten rows. The discovery API answers the whole catalogue when the limit is high enough, and the CDC catalogue held 1,478 entries on 2026-10-20. Call `buildCdcSocrataCatalogueUrl({ limit: 10_000 })` or pass `limit` to `fetchCdcSocrataCatalogue` when you need every entry. A limit below the catalogue size truncates the response without an error.
 - `cdc-socrata-catalogue`: each row is a catalogue entry, not a dataset record. `assetType` can be `dataset`, `file`, `href`, `filter`, `chart`, `story`, or `map`. A category can hold one type or a mix, so count the asset type before you describe a category as a dataset collection.
 - `cdc-socrata-catalogue`: an entry without a category has `null` in the response. The adapter keeps the null on the entry and counts it under `Uncategorised` in `categories`. That bucket is an adapter label, not a category the CDC assigned.
-- `cdc-socrata-catalogue`: the full response is large because each row carries portal metadata. The 1,477-row response was about 7.8 MB on 2026-10-19. The parser keeps nine fields, and a fixture trimmed to those fields was about 490 KB.
+- `cdc-socrata-catalogue`: the full response is large because each row carries portal metadata. The 1,478-row response was about 7.9 MB on 2026-10-20. The parser keeps nine fields, and a fixture trimmed to those fields was about 491 KB.
 - `cdc-socrata-catalogue`: the discovery API can carry rights and metadata fields, but this parser does not keep them. Check the portal entry before you reuse an item.
+- `bts-transportation-stats`: the default request asks for ten rows. The story that consumed this adapter needed the whole catalogue, so it calls `buildBtsTransportationStatsUrl({ limit: 10_000 })` and parses the full response with `parseBtsTransportationStatsPayload`. A lower limit truncates the catalogue without an error.
+- `bts-transportation-stats`: each row is a catalogue entry, not a dataset record. `assetType` can be `story`, `dataset`, `chart`, `measure`, `filter`, `href`, `map`, or `file`. The story and dataset counts are different questions, and the 2026-10-20 catalogue held 177 stories against 153 datasets.
+- `bts-transportation-stats`: `viewCount` and `downloadCount` are the portal's own counters for an item page and its files. They are not unique people. Stories carry views and a zero download count because Socrata does not give a story a download counter, while 268 entries reported no downloads at all on 2026-10-20.
+- `bts-transportation-stats`: the response is large because every entry carries portal metadata. The 589-row response was about 2.2 MB on 2026-10-20. The parser keeps nine fields, and a fixture trimmed to those fields was about 172 KB.
+- `bts-transportation-stats`: an entry without a category has `null` in the response. The adapter keeps the null on the entry and counts it under `Uncategorised` in `categories`. That bucket is an adapter label, not a category the bureau assigned.
 - `nyc-open-data-catalogue`: the discovery API answers a bare JSON array of catalogue entries, not dataset rows. An entry can arrive without a category, which the adapter counts under `Uncategorised`.
 - `nyc-open-data-catalogue`: the page captured on 2026-10-19 mixes datasets and maps. The adapter counts both, and keeps the view and download totals for the page it read.
 - Unit tests use the committed fixtures and run offline. Run them with `npm run test --workspace @usa-open-data-connectors/usa-sources`.
