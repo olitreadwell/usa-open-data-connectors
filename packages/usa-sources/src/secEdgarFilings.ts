@@ -16,7 +16,7 @@ export const SEC_EDGAR_FILINGS_SOURCE_ID = 'sec-edgar-filings';
  * real deployment should override the contact with its own address.
  */
 export const SEC_EDGAR_USER_AGENT =
-  'usa-open-data-connectors (https://github.com/olitreadwell/usa-open-data-connectors)';
+  'usa-open-data-connectors oliver.treadwell@gmail.com';
 
 /** One filing in an issuer's recent submissions list. */
 export interface SecEdgarFiling {
