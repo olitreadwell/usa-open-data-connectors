@@ -191,6 +191,35 @@ The public API is `FDIC_BANK_API_BASE`, `FDIC_BANK_ROW_LIMIT`,
 `errors`. A row missing any of the four fields throws `UsSourceParseError`; a
 body with an `errors` array throws `UsSourceApiError`.
 
+`sec-edgar-filings`:
+
+```ts
+import {
+  fetchSecEdgarFilings,
+  SEC_EDGAR_APPLE_CIK,
+} from '@usa-open-data-connectors/usa-sources';
+
+const company = await fetchSecEdgarFilings({ cik: SEC_EDGAR_APPLE_CIK });
+console.log(
+  company.name,
+  company.filingCount,
+  company.newestFilingDate,
+  company.formCounts[0]
+);
+```
+
+The public API is `SEC_EDGAR_SUBMISSIONS_API_BASE`, `SEC_EDGAR_APPLE_CIK`,
+`SEC_EDGAR_USER_AGENT`, `buildSecEdgarSubmissionsUrl`,
+`parseSecEdgarFilingsPayload`, `fetchSecEdgarFilings`, and
+`secEdgarFilingsAdapter`, with the `SecEdgarFiling`, `SecEdgarFormCount`, and
+`SecEdgarCompanyFilings` types. The parser validates the response with a zod
+schema over `cik`, `name`, `tickers`, `exchanges`, `fiscalYearEnd`, and
+`filings.recent`. The `recent` block sends parallel arrays for the accession
+number, filing date, report date, form, size, XBRL flags, primary document,
+and description. The parser zips them into one row per filing and throws
+`UsSourceParseError` when the arrays do not line up or a filing date is not
+`YYYY-MM-DD`.
+
 `epa-envirofacts-facilities`:
 
 ```ts
@@ -345,6 +374,11 @@ console.log(tax.totals.totalTax, tax.totals.effectiveRate, tax.sources.federal.u
 - `fdic-bank-directory`: each row sits inside a `data` wrapper with a separate `score` field. The parser reads `row.data`, not the wrapper.
 - `fdic-bank-directory`: the active rows cover 55 state-level codes, not 50. DC, Puerto Rico, Guam, Micronesia, and the US Virgin Islands each hold active banks, so a caller that labels the counts as states will overstate the map.
 - `fdic-bank-directory`: the directory counts institutions at the state of the main office. It is not a branch count, and a bank with branches across several states appears once.
+- `sec-edgar-filings`: the SEC asks every caller to identify itself with a User-Agent header. The adapter sends `SEC_EDGAR_USER_AGENT`, which carries a placeholder contact address. A deployment should override it with its own application name and address before the request leaves a shared host.
+- `sec-edgar-filings`: the submissions file carries the last 1,000 filings, not the issuer's full history. Apple's block ran from 18 September 2015 to 16 October 2026 on 2026-10-19. A caller that needs older rows has to read the filing archive rather than this endpoint.
+- `sec-edgar-filings`: the default CIK is Apple's, `0000320193`. `fetchSecEdgarFilings({ cik })` accepts one to ten digits and zero-pads the value, so `320193` and `0000320193` ask for the same issuer.
+- `sec-edgar-filings`: the `recent` block is a set of parallel arrays, not one object per filing. A column the form does not carry arrives as an empty string. The parser turns a blank report date or document description into null, and stops rather than guessing when a column length differs from the accession list.
+- `sec-edgar-filings`: a filing's `size` is in bytes and describes the submission file. It is not the size of the main document, and it is not a count of pages.
 - `epa-envirofacts-facilities`: the state filter takes the value directly after the column name, as `TRI_FACILITY/STATE_ABBR/CA/rows/0:9999/JSON`. Adding an `equals` segment is accepted but ignored, and the service then returns the first rows of the whole table instead of the state asked for.
 - `epa-envirofacts-facilities`: the default row window is the first ten rows. `fetchEpaEnvirofactsFacilities` takes a state but not a row window, so a caller that needs the whole state builds the URL with `buildEpaEnvirofactsFacilitiesUrl({ stateAbbr, rowWindow })` and parses the response with `parseEpaEnvirofactsFacilitiesPayload`.
 - `epa-envirofacts-facilities`: the table holds facility records, not release amounts. It is the Toxics Release Inventory facility register, so a row says where a site is and whether the EPA marks it closed (`fac_closed_ind` of `1`), not how much it released in a year.
