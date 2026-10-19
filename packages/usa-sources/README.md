@@ -453,6 +453,37 @@ COVID", because keywords and related terms also match. The response has no
 total count unless the request adds `countTotal=true`, so count `studies` for
 the page or ask for the total separately.
 
+`nws-point-forecast`:
+
+```ts
+import { fetchNwsPointForecast } from '@usa-open-data-connectors/usa-sources';
+
+const point = await fetchNwsPointForecast({ latitude: 47.601, longitude: -122.33 });
+console.log(point.gridId, point.gridX, point.gridY, point.forecastUrl);
+```
+
+The public API is `NWS_API_BASE`, `NWS_POINT_FORECAST_PATH`,
+`NWS_POINT_FORECAST_SOURCE_ID`, `NWS_USER_AGENT`, `NWS_DEFAULT_LATITUDE`,
+`NWS_DEFAULT_LONGITUDE`, `buildNwsPointUrl`, `parseNwsPointForecastPayload`,
+`fetchNwsPointForecast`, and `nwsPointForecastAdapter`, with the
+`NwsForecastPoint` type. The parser validates the response with a zod schema
+over `type`, `geometry.coordinates`, and a `properties` object carrying
+`city`, `state`, `gridId`, `gridX`, `gridY`, `forecastOffice`, `forecast`,
+`forecastHourly`, `forecastGridData`, `observationStations`, `timeZone`,
+`radarStation`, `county`, `fireWeatherZone`, and the nested
+`relativeLocation.properties` place label. A response that is not a GeoJSON
+feature, has no coordinate pair, or has no grid id, grid cell, forecast URL, or
+forecast office throws `UsSourceParseError`.
+
+Three shape notes. The point lookup returns the forecast grid and the URLs that
+lead to the forecast, not the forecast periods themselves; a caller that needs
+temperatures reads `forecastUrl` or `forecastHourlyUrl` next. Grid cell numbers
+are local to an office, so `gridX` 100 in one office and `gridX` 100 in another
+point at different places; always keep `gridId` next to the cell. The place
+label is the nearest place the service knows, not the caller's own name: a
+lookup for Tacoma came back as "Seattle" on 2026-10-20, and a lookup for
+Tacoma Old City Hall landed in office SEW at cell 125,68.
+
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
@@ -542,6 +573,12 @@ the page or ask for the total separately.
 - `nyc-open-data-catalogue`: the page captured on 2026-10-19 mixes datasets and maps. The adapter counts both, and keeps the view and download totals for the page it read.
 - Unit tests use the committed fixtures and run offline. Run them with `npm run test --workspace @usa-open-data-connectors/usa-sources`.
 - Smoke tests hit the live APIs and need `RUN_SMOKE=1`. Run them with `npm run test:smoke --workspace @usa-open-data-connectors/usa-sources`.
+
+- `nws-point-forecast`: one keyless request covers one coordinate. The service asks every caller to send a User-Agent that identifies the application, and `fetchNwsPointForecast` sends `NWS_USER_AGENT` on every call.
+- `nws-point-forecast`: the response is a GeoJSON feature whose `properties` hold the grid and the links. The forecast itself is a second request to `forecastUrl` (daily periods) or `forecastHourlyUrl` (hourly periods).
+- `nws-point-forecast`: `gridX` and `gridY` are numbered inside one forecast office. The same pair in two offices is not the same place, and there is no national grid coordinate in the response.
+- `nws-point-forecast`: `relativeLocation.properties` names the nearest place the service knows, which can be a neighboring city. A Tacoma lookup returned "Seattle", so a caller that needs its own label should keep it outside the response.
+- `nws-point-forecast`: one point response is about 3.5 KB. Twenty-five lookups cost twenty-five requests and about 88 KB of committed JSON when saved as a snapshot.
 
 ## Data sources and licences
 
