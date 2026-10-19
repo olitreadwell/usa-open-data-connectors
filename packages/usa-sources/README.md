@@ -162,6 +162,35 @@ console.log(
 );
 ```
 
+`fdic-bank-directory`:
+
+```ts
+import {
+  buildFdicBankDirectoryUrl,
+  parseFdicBankDirectoryPayload,
+} from '@usa-open-data-connectors/usa-sources';
+
+const url = new URL(
+  buildFdicBankDirectoryUrl({ rowLimit: 10_000, fields: 'ID,NAME,CITY,STALP' })
+);
+url.searchParams.set('filters', 'ACTIVE:1');
+const response = await fetch(url);
+if (!response.ok) {
+  throw new Error(`HTTP ${response.status} from ${url.toString()}`);
+}
+const directory = parseFdicBankDirectoryPayload(await response.json());
+console.log(directory.bankCount, directory.totalBanks, directory.states[0]);
+```
+
+The public API is `FDIC_BANK_API_BASE`, `FDIC_BANK_ROW_LIMIT`,
+`FDIC_BANK_FIELDS`, `buildFdicBankDirectoryUrl`,
+`parseFdicBankDirectoryPayload`, `fetchFdicBankDirectory`, and
+`fdicBankDirectoryAdapter`, with the `FdicBank`, `FdicBankStateCount`, and
+`FdicBankDirectory` types. The parser validates the response with a zod schema:
+`meta.total`, `totals.count`, `data[].data.{ID,NAME,CITY,STALP}`, and
+`errors`. A row missing any of the four fields throws `UsSourceParseError`; a
+body with an `errors` array throws `UsSourceApiError`.
+
 `fema-disaster-declarations`:
 
 ```ts
@@ -280,6 +309,13 @@ console.log(tax.totals.totalTax, tax.totals.effectiveRate, tax.sources.federal.u
 - `cfpb-consumer-complaints`: the first year in the window, 2011, holds only December. The bureau published its first complaints on 1 December 2011. The adapter keeps the year, and the page's data note says the first bar covers one month.
 - `cfpb-consumer-complaints`: the product tally splits credit reporting across more than one label because the bureau changed its product taxonomy over the years. The adapter keeps whatever the API sends, so the labels in `topProducts` are not stable.
 - `cfpb-consumer-complaints`: the committed snapshot holds the folded counts, not the eighteen million raw rows.
+- `fdic-bank-directory`: the default request asks for ten rows and sets no active filter. The full file held 27,835 records on 2026-10-16, including historical institutions the FDIC marks inactive, so the first page is not a current bank count. Add `filters=ACTIVE:1` to the URL to read the active directory, which held 4,219 institutions that day.
+- `fdic-bank-directory`: the filtered count arrives in both `meta.total` and `totals.count`. Both fields describe the filtered result, not the size of the unfiltered file, so `totalBanks` is the active count when the request carries the active filter.
+- `fdic-bank-directory`: `banks.data.fdic.gov` answers with a redirect to `api.fdic.gov`. `fetch` follows it. Both hosts answer 200 to a scripted request, and neither needs a key.
+- `fdic-bank-directory`: `FDIC_BANK_FIELDS` asks for `NAME,CITY,STALP`, but the parser requires `ID` as well. The service adds `ID` to the response even when it is not in `fields`, but a caller should ask for `ID,NAME,CITY,STALP` so the request and the parser agree without relying on that behaviour.
+- `fdic-bank-directory`: each row sits inside a `data` wrapper with a separate `score` field. The parser reads `row.data`, not the wrapper.
+- `fdic-bank-directory`: the active rows cover 55 state-level codes, not 50. DC, Puerto Rico, Guam, Micronesia, and the US Virgin Islands each hold active banks, so a caller that labels the counts as states will overstate the map.
+- `fdic-bank-directory`: the directory counts institutions at the state of the main office. It is not a branch count, and a bank with branches across several states appears once.
 - `estimatetax-income-tax`: one keyless request answers the federal, state, and local income tax for one salary. The endpoint is limited to 60 requests a minute per address.
 - `estimatetax-income-tax`: the response is a calculation from the publisher's own engine, not a row from an official statistical release. Every layer cites the IRS or state document it was read from, so the source and the date are visible in the response.
 - `estimatetax-income-tax`: the engine assumes the standard deduction unless `preTaxDeductions` is supplied. It does not model itemised deductions, capital gains, or credits, and the response carries that disclaimer.
