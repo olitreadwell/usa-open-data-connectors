@@ -369,6 +369,62 @@ schema over `header` and `esearchresult`, where `esearchresult` can carry
 An `esearchresult.error` is thrown as `UsSourceApiError` even though the HTTP
 status is 200.
 
+`clinicaltrials-studies`:
+
+```ts
+import {
+  buildClinicalTrialsStudiesUrl,
+  parseClinicalTrialsStudiesPayload,
+} from '@usa-open-data-connectors/usa-sources';
+
+const url = new URL(buildClinicalTrialsStudiesUrl({ pageSize: 1000 }));
+url.searchParams.set('query.cond', 'long COVID');
+url.searchParams.set(
+  'fields',
+  'NCTId,BriefTitle,OverallStatus,StartDate,StudyType,Phase,Condition,LeadSponsorName,EnrollmentCount,EnrollmentType,LastUpdatePostDate'
+);
+const response = await fetch(url);
+if (!response.ok) {
+  throw new Error(`HTTP ${response.status} from ${url.toString()}`);
+}
+const page = parseClinicalTrialsStudiesPayload(await response.json());
+console.log(page.studyCount, page.statusCounts[0], page.nextPageToken);
+```
+
+The public API is `CLINICALTRIALS_STUDIES_API_BASE`,
+`CLINICALTRIALS_STUDIES_PAGE_SIZE`, `CLINICALTRIALS_STUDIES_SOURCE_ID`,
+`buildClinicalTrialsStudiesUrl`, `parseClinicalTrialsStudiesPayload`,
+`fetchClinicalTrialsStudies`, and `clinicalTrialsStudiesAdapter`, with the
+`ClinicalTrialStudy`, `ClinicalTrialStatusCount`, and `ClinicalTrialStudyPage`
+types. The parser validates the response with a zod schema over `studies` and
+`nextPageToken`. Each study carries an optional `protocolSection` with
+`identificationModule` (`nctId`, `briefTitle`), `statusModule`
+(`overallStatus`, `startDateStruct`, `lastUpdatePostDateStruct`),
+`sponsorCollaboratorsModule` (`leadSponsor.name`), `conditionsModule`
+(`conditions`), and `designModule` (`studyType`, `phases`, `enrollmentInfo`). A
+study without a registry id or a brief title throws `UsSourceParseError`, and an
+empty page also throws.
+
+The adapter reads one page of the register and keeps the id, title, status,
+study type, phases, conditions, lead sponsor, enrollment, start date, and last
+update date. The default page size is ten. `buildClinicalTrialsStudiesUrl` takes
+only `pageSize`, so a filtered story builds the URL and adds `query.cond`,
+`query.term`, or `filter.*` itself before calling the parser. The full protocol
+record is large: 737 long COVID studies were 12.2 MB without a field projection
+and 426 KB with the eleven fields above on 2026-10-20. The `fields` parameter
+accepts those short field names, so a caller does not need to ask for the whole
+record.
+
+Three shape notes. A start date can be day precision (`2024-12-10`) or month
+precision (`2026-05`), and the adapter keeps the string as the registry wrote
+it. A start date can be planned rather than actual, so a recent year can still
+gain studies. `query.cond` is the registry's own condition search rather than a
+filter over the `conditions` array; a long COVID search returned 737 studies on
+2026-10-20 while only 315 of them carried a condition string containing "long
+COVID", because keywords and related terms also match. The response has no
+total count unless the request adds `countTotal=true`, so count `studies` for
+the page or ask for the total separately.
+
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
