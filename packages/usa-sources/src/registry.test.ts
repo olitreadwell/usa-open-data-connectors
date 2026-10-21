@@ -7,6 +7,7 @@ import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { cfpbConsumerComplaintsAdapter } from './cfpbConsumerComplaints.js';
 import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
 import { callookCallsignsAdapter } from './callookCallsigns.js';
+import { collegeScorecardInstitutionsAdapter } from './collegeScorecardInstitutions.js';
 import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
 import { clinicalTrialsStudiesAdapter } from './clinicalTrialsStudies.js';
@@ -177,6 +178,10 @@ const RAW_NYC_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/nyc-open-data-catalogue-2026-10-19.json'),
   'utf8'
 );
+const RAW_COLLEGE_SCORECARD_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/college-scorecard-institutions-2026-10-15-sampled.csv'),
+  'utf8'
+);
 const RAW_ESTIMATETAX_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/estimatetax-income-tax-2026-10-18.json'),
   'utf8'
@@ -306,6 +311,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'callook.info') {
     return callookFixtureFor(parsed);
   }
+  if (hostname === 'ed-public-download.scorecard.network') {
+    return RAW_COLLEGE_SCORECARD_FIXTURE;
+  }
   return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
 
@@ -343,6 +351,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('nyc-open-data-catalogue');
     expect(ids).toContain('estimatetax-income-tax');
     expect(ids).toContain('callook-callsigns');
+    expect(ids).toContain('college-scorecard-institutions');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -385,6 +394,9 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('nyc-open-data-catalogue')).toBe(nycOpenDataCatalogueAdapter);
     expect(getUsDataSource('estimatetax-income-tax')).toBe(estimatetaxIncomeTaxAdapter);
     expect(getUsDataSource('callook-callsigns')).toBe(callookCallsignsAdapter);
+    expect(getUsDataSource('college-scorecard-institutions')).toBe(
+      collegeScorecardInstitutionsAdapter
+    );
   });
 
   it('returns undefined for an unknown id', () => {

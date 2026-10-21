@@ -17,11 +17,11 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 ## Current state
 
 - `main` is the integration branch. Pull requests target `main`.
-- Twenty-five US adapters, all keyless, each with a live fetch, a strict parse,
+- Twenty-six US adapters, all keyless, each with a live fetch, a strict parse,
   and a committed fixture
-- `packages/usa-sources` holds all 25 adapters, the registry, the shared HTTP
+- `packages/usa-sources` holds all 26 adapters, the registry, the shared HTTP
   layer (`src/http.ts`), and the fixtures
-- Every fetch goes through `httpGet`: one `User-Agent`, a 30 second timeout,
+- Every fetch goes through `httpGet`: one `User-Agent`, a 30 second timeout by default (two minutes for the College Scorecard archive),
   and `retryable` set on HTTP 429, HTTP 5xx and network failures. The SEC,
   NWS and CFPB adapters replace the default `User-Agent` with their own
 - The API and the CLI serve `usa-sources` through the registry. The NZ-only

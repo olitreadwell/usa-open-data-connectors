@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 25 source adapters behind one interface.
+- Exposes 26 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads a committed fixture when the network is unavailable.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -54,6 +54,7 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `estimatetax-income-tax` | EstimateTax | US federal, state, and local income tax for one salary, with the official document behind every figure. |
 | `nyc-open-data-catalogue` | New York City Open Data | The NYC Socrata catalogue, one row per published dataset or map. |
 | `callook-callsigns` | Callook.info | US amateur radio callsign records from the FCC licence file, with the licence class, location, and expiry. |
+| `college-scorecard-institutions` | College Scorecard, US Department of Education | Institution-level enrollment, cost, completion, debt, and earnings ten years after entry for US colleges. |
 
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
 `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data` as soon as it is registered.
@@ -500,6 +501,19 @@ different set. The parser keeps a lookup with status `INVALID` or `UPDATING` as
 a record with no licence fields, and counts only `VALID` records in the folded
 totals.
 
+`college-scorecard-institutions`:
+
+```ts
+import { fetchCollegeScorecardInstitutions } from '@usa-open-data-connectors/usa-sources';
+
+const snapshot = await fetchCollegeScorecardInstitutions();
+console.log(snapshot.institutionCount, snapshot.highestEarningState?.stateAbbr);
+```
+
+The adapter reads the keyless institution-level bulk download, not the keyed
+College Scorecard API. The archive is a zip that holds one wide CSV, and a live
+fetch takes about 20 seconds on a fast connection.
+
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
@@ -598,6 +612,10 @@ totals.
 - `callook-callsigns`: the service answers one callsign per request and has no bulk list endpoint. The default ten-district sample costs ten requests. The service asks for no key, and its API reference says the data comes from the FCC licence file, refreshed daily.
 - `callook-callsigns`: a lookup returns `INVALID` for a callsign with no current licence. The adapter keeps that answer as a record with status `INVALID` rather than treating it as an HTTP failure. A callsign with a current licence has status `VALID` and carries the licence fields.
 - `callook-callsigns`: coordinates and the grid square are calculated by Callook from the mailing address, not taken from the FCC file. A record can have an empty location. The adapter keeps the coordinates as null in that case and does not invent a place.
+- `college-scorecard-institutions`: the bulk archive is 24 MB and the CSV inside it is 102 MB. The adapter raises its request timeout to two minutes. The CSV has 3,379 columns, so the adapter reads only the outcome fields it exposes.
+- `college-scorecard-institutions`: `NA` and `PS` mean the Department of Education did not publish a figure. The adapter keeps those as null, so a chart does not turn a suppressed value into a zero.
+- `college-scorecard-institutions`: the state summary is a median of the institution medians, not a weighted student average. It answers "what does a typical college in this state report", not "what does a typical student earn".
+- `college-scorecard-institutions`: the earnings field is `MD_EARN_WNE_P10`, the median for graduates working and not enrolled ten years after entry. It is not a first-year salary.
 
 ## Data sources and licences
 
@@ -627,6 +645,7 @@ The data comes from US federal agencies and the open data catalogue services the
 | HealthData.gov | `https://healthdata.gov/api/views.json` |
 | New York City Open Data | `https://data.cityofnewyork.us/api/views.json` |
 | Callook.info | `https://callook.info/[callsign]/json` |
+| College Scorecard, US Department of Education | `https://ed-public-download.scorecard.network/downloads/Most-Recent-Cohorts-Institution_10152026.zip` |
 
 Each publisher sets its own terms for its data. The Socrata discovery responses can carry rights and
 metadata fields, but the catalogue adapters in this package keep a subset of the entry fields and do not

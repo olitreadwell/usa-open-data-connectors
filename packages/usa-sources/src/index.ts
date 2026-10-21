@@ -469,6 +469,25 @@ export type {
   CallookLookupStatus,
 } from './callookCallsigns.js';
 
+/** College Scorecard institution-level outcomes (keyless bulk download). */
+export {
+  COLLEGE_SCORECARD_DATA_RELEASE_DATE,
+  COLLEGE_SCORECARD_FETCH_TIMEOUT_MS,
+  COLLEGE_SCORECARD_INSTITUTION_ARCHIVE_URL,
+  COLLEGE_SCORECARD_INSTITUTION_SOURCE_ID,
+  collegeScorecardInstitutionsAdapter,
+  fetchCollegeScorecardInstitutions,
+  parseCollegeScorecardArchive,
+  parseCollegeScorecardCsv,
+} from './collegeScorecardInstitutions.js';
+/** College Scorecard institution types. */
+export type {
+  CollegeScorecardControl,
+  CollegeScorecardInstitution,
+  CollegeScorecardSnapshot,
+  CollegeScorecardStateSummary,
+} from './collegeScorecardInstitutions.js';
+
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
 
