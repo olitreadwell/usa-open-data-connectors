@@ -1,6 +1,6 @@
 {
   "name": "@usa-open-data-connectors/usa-sources",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "private": false,
   "type": "module",
   "main": "./dist/index.js",
@@ -37,6 +37,7 @@
     "vitest": "5.0.3"
   },
   "dependencies": {
+    "fflate": "0.8.3",
     "zod": "3.25.76"
   },
   "publishConfig": {

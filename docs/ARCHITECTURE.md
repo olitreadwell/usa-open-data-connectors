@@ -51,11 +51,12 @@ Adding an adapter to the registry is enough to expose it on all three routes.
 
 Live fetches go through the shared helper in
 `packages/usa-sources/src/http.ts`. It sets one `User-Agent`
-(`usa-open-data-connectors (Language=TypeScript)`), aborts after 30 seconds, and
+(`usa-open-data-connectors (Language=TypeScript)`), aborts after 30 seconds by default, and
 marks HTTP 429, HTTP 5xx and network failures as `retryable` on the thrown
 `UsSourceApiError`, with the HTTP status attached. The SEC EDGAR, National
 Weather Service and CFPB adapters pass a `User-Agent` of their own and that
-replaces the default; other headers merge over it.
+replaces the default; other headers merge over it. The College Scorecard
+adapter raises its own timeout to two minutes because its archive is 24 MB.
 
 ## Keyless first
 

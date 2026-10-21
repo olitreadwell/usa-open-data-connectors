@@ -57,7 +57,7 @@ function buildRequestHeaders(extra: Record<string, string> | undefined): Record<
  * Issues a GET through the shared HTTP layer.
  *
  * Every adapter goes through here so that three things happen the same way
- * for all 22 sources: a `user-agent` identifies the client, a timeout aborts
+ * for all registered sources: a `user-agent` identifies the client, a timeout aborts
  * a request that hangs, and a failure carries whether retrying is worthwhile.
  *
  * @param source - Source name used in the error message, e.g. "bls".

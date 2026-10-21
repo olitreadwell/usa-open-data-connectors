@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Connectors: add the keyless `college-scorecard-institutions` adapter for US college enrollment, cost, completion, debt, and ten-year earnings from the Department of Education bulk download, with a sampled fixture
 - Connectors: add the keyless `callook-callsigns` adapter for US amateur radio callsign records from the FCC licence file, read through Callook.info, with a ten-district sample and a live-verified fixture
 - Repo: renamed the npm scope to `@usa-open-data-connectors` across package names, imports, scripts, and docs
 - Repo: deleted `packages/nz-sources` and `packages/stats-nz`; the API and CLI now read `packages/usa-sources`
