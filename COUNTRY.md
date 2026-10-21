@@ -10,7 +10,7 @@ gone, and the API and CLI read the US registry. The Python and Ruby ports in
 
 ## Adapters
 
-Twenty-six adapters are registered. Every one is keyless and has a committed
+Twenty-seven adapters are registered. Every one is keyless and has a committed
 fixture captured from the live service.
 
 | Source | Adapter id | Status |
@@ -41,6 +41,7 @@ fixture captured from the live service.
 | Callook.info | `callook-callsigns` | live, keyless, fixture committed 2026-10-21 |
 | College Scorecard | `college-scorecard-institutions` | live, keyless, fixture committed 2026-10-15 (sampled) |
 | New York City Open Data | `nyc-open-data-catalogue` | live, keyless, fixture committed 2026-10-19 |
+| PublicDataHub | `publicdatahub-hospital-quality` | live, keyless, fixture committed 2026-10-21 |
 | Census Bureau Data API | - | not started |
 | api.data.gov | - | not started |
 | BEA | - | not started |

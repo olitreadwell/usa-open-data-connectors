@@ -38,6 +38,7 @@ were captured between 2026-09-23 and 2026-10-03.
 | `bts-transportation-stats` | Bureau of Transportation Statistics | `https://data.bts.gov/api/views.json` | `bts-transportation-stats-2026-10-05.json` |
 | `estimatetax-income-tax` | EstimateTax | `https://estimatetax.net/api/v1/calculate` | `estimatetax-income-tax-2026-10-18.json` |
 | `nyc-open-data-catalogue` | New York City Open Data | `https://data.cityofnewyork.us/api/views.json` | `nyc-open-data-catalogue-2026-10-19.json` |
+| `publicdatahub-hospital-quality` | PublicDataHub | `https://publicdatahub.org/api/export/hospital/{slug}.json` | `publicdatahub-hospital-quality-2026-10-21.json` |
 
 ## Exact curl commands for the 2026-10-05 additions
 

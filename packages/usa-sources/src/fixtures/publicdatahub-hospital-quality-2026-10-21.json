@@ -1,0 +1,103 @@
+{
+  "id": "cms-ccn:240010",
+  "slug": "mayo-clinic-hospital-rochester",
+  "name": "Mayo Clinic Hospital Rochester",
+  "entity_type": "hospital",
+  "hospital_type": "Acute Care Hospitals",
+  "ownership": "Voluntary non-profit - Church",
+  "emergency_services": "Yes",
+  "cms_ccn": "240010",
+  "address": {
+    "street": "1216 Second Street Southwest",
+    "city": "Rochester",
+    "state": "MN",
+    "zip": "55902",
+    "county": "Olmsted County",
+    "county_geoid": "27109"
+  },
+  "phone": "(507) 255-5123",
+  "website": null,
+  "quality_score": 1,
+  "measures": [
+    {
+      "key": "overall_rating",
+      "label": "Overall rating",
+      "period": "2026",
+      "value": 5,
+      "unit": "of 5",
+      "national_rank": 1,
+      "tied_with": 384,
+      "definition": "CMS collapses up to 46 measures into five groups, then into a single star. Two hospitals can share a rating with very different underlying profiles, so read the group counts below it before drawing a conclusion."
+    },
+    {
+      "key": "measures_reported",
+      "label": "Measures reported",
+      "period": "2026",
+      "value": 51,
+      "unit": "measures",
+      "national_rank": 71,
+      "tied_with": 178,
+      "definition": "How many of the measures CMS tracks this facility actually reported. Low-volume hospitals report fewer, which is a reporting artefact rather than a quality signal — it is shown so a sparse profile is never mistaken for a poor one."
+    },
+    {
+      "key": "measures_better",
+      "label": "Measures better than national",
+      "period": "2026",
+      "value": 16,
+      "unit": "measures",
+      "national_rank": 2,
+      "tied_with": 1,
+      "definition": "Count of measures where this facility performed statistically better than the national rate. Compare against measures reported: 3 of 4 is not the same result as 3 of 40."
+    },
+    {
+      "key": "measures_worse",
+      "label": "Measures worse than national",
+      "period": "2026",
+      "value": 0,
+      "unit": "measures",
+      "national_rank": 1,
+      "tied_with": 2223,
+      "definition": "Count of measures where this facility performed statistically worse than the national rate."
+    },
+    {
+      "key": "mortality_better",
+      "label": "Mortality measures better",
+      "period": "2026",
+      "value": 6,
+      "unit": "measures",
+      "national_rank": 4,
+      "tied_with": 8,
+      "definition": "Of the mortality measures reported, how many were better than the national rate. Risk-adjusted for how sick patients were on arrival."
+    },
+    {
+      "key": "safety_better",
+      "label": "Safety measures better",
+      "period": "2026",
+      "value": 6,
+      "unit": "measures",
+      "national_rank": 1,
+      "tied_with": 3,
+      "definition": "Of the safety-of-care measures reported (infections and complications), how many were better than the national rate."
+    },
+    {
+      "key": "readmission_better",
+      "label": "Readmission measures better",
+      "period": "2026",
+      "value": 4,
+      "unit": "measures",
+      "national_rank": 12,
+      "tied_with": 32,
+      "definition": "Of the unplanned-readmission measures reported, how many were better than the national rate. Readmission is a proxy for whether discharge was premature, and it penalises hospitals serving patients with less support at home."
+    }
+  ],
+  "provenance": {
+    "source": "Hospital General Information",
+    "agency": "Centers for Medicare & Medicaid Services",
+    "dataset_url": "https://data.cms.gov/provider-data/dataset/xubh-q36u",
+    "licence": "U.S. Public Domain",
+    "licence_url": "https://www.usa.gov/government-works",
+    "data_as_of": "2026-08-27",
+    "version_id": "cms-hospital-general-info@2026-07-22",
+    "retrieved_from": "https://publicdatahub.org/hospital/mayo-clinic-hospital-rochester"
+  }
+}
