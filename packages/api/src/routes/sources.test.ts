@@ -47,8 +47,10 @@ describe('GET /sources', () => {
       'ncbi-pubmed-search',
       'cdc-socrata-catalogue',
       'healthdata-socrata-catalogue',
+      'nyc-open-data-catalogue',
       'bts-transportation-stats',
       'estimatetax-income-tax',
+      'callook-callsigns',
     ]);
     for (const source of sources) {
       expect(Object.keys(source).sort()).toEqual(['auth', 'description', 'id', 'name']);

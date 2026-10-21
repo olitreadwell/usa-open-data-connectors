@@ -1,5 +1,6 @@
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
+import { callookCallsignsAdapter } from './callookCallsigns.js';
 import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
 import { clinicalTrialsStudiesAdapter } from './clinicalTrialsStudies.js';
@@ -51,6 +52,7 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   nycOpenDataCatalogueAdapter,
   btsTransportationStatsAdapter,
   estimatetaxIncomeTaxAdapter,
+  callookCallsignsAdapter,
 ];
 
 /** Looks up a source adapter by id. */

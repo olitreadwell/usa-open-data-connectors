@@ -1,6 +1,6 @@
 # Connector discovery notes (US)
 
-Findings from the US source passes. Twenty-four keyless adapters are built and
+Findings from the US source passes. Twenty-five keyless adapters are built and
 verified against live APIs, and each has a fixture committed from the same
 endpoint.
 
@@ -13,6 +13,7 @@ were captured between 2026-09-23 and 2026-10-03.
 | Adapter | Source | Endpoint | Fixture |
 | --- | --- | --- | --- |
 | `bls-unemployment-rate` | Bureau of Labor Statistics | `https://api.bls.gov/publicAPI/v2/timeseries/data` | `bls-unemployment-rate.json` |
+| `callook-callsigns` | Callook.info | `https://callook.info/[callsign]/json` | `callook-callsigns-2026-10-21.json` |
 | `usgs-hawaii-earthquakes` | US Geological Survey | `https://earthquake.usgs.gov/fdsnws/event/1/query` | `usgs-hawaii-earthquakes.json` |
 | `cdc-county-obesity` | CDC PLACES | `https://data.cdc.gov/resource/swc5-untb.json` | `cdc-county-obesity-2026-09-25.json` |
 | `ncei-annual-temperature` | NOAA NCEI | `https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance` | `ncei-annual-temperature-2026-09-26.csv` |
@@ -148,6 +149,7 @@ everywhere, and a few services attach their own terms on top.
 | `bts-transportation-stats` | Bureau of Transportation Statistics | US federal work, public domain in the US |
 | `nyc-open-data-catalogue` | New York City Open Data | City of New York public data, published under the portal's terms. Check the dataset page before reuse |
 | `estimatetax-income-tax` | EstimateTax | Private publisher, not a federal agency. The API terms ask for attribution and the source document alongside any displayed figure. No open licence is stated for the API output. |
+| `callook-callsigns` | Callook.info, from the FCC licence file | FCC licence records are US federal work, public domain in the US. Callook.info serves the records and calculates the coordinates and grid square. Its API reference says the data is free to use. |
 
 No adapter returns licence metadata today, and no adapter can tell you whether a
 particular dataset has terms on top. Read the publisher's page before you

@@ -450,6 +450,24 @@ export type {
   EstimateTaxState,
   EstimateTaxTotals,
 } from './estimatetaxIncomeTax.js';
+/** Callook.info US amateur radio callsign lookup (keyless). */
+export {
+  buildCallookCallsignDirectory,
+  buildCallookCallsignUrl,
+  CALLOOK_API_BASE,
+  CALLOOK_CALLSIGNS_SOURCE_ID,
+  CALLOOK_DISTRICT_CALLSIGNS,
+  callookCallsignsAdapter,
+  fetchCallookCallsigns,
+  parseCallookCallsignsPayload,
+} from './callookCallsigns.js';
+/** Callook.info callsign types. */
+export type {
+  CallookCallsign,
+  CallookCallsignDirectory,
+  CallookLabelCount,
+  CallookLookupStatus,
+} from './callookCallsigns.js';
 
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';

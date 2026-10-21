@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+- Connectors: add the keyless `callook-callsigns` adapter for US amateur radio callsign records from the FCC licence file, read through Callook.info, with a ten-district sample and a live-verified fixture
 - Repo: renamed the npm scope to `@usa-open-data-connectors` across package names, imports, scripts, and docs
 - Repo: deleted `packages/nz-sources` and `packages/stats-nz`; the API and CLI now read `packages/usa-sources`
 - API: dropped `/api/digitalnz/media` and the three `/api/stats-nz` routes. `GET /api/sources/{id}/data` serves the parsed live payload for any registered adapter
