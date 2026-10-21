@@ -17,6 +17,7 @@ import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.
 import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
 import { nycOpenDataCatalogueAdapter } from './nycOpenDataCatalogue.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
+import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
 import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
 import { treasuryDebtToPennyAdapter } from './treasuryDebtToPenny.js';
 import { usaspendingAgenciesAdapter } from './usaspendingAgencies.js';
@@ -36,6 +37,10 @@ import {
 
 // Each adapter parses its own response shape, so the stubs answer with the
 // raw fixture for the host being asked rather than with a parsed value.
+const RAW_PUBLICDATAHUB_HOSPITAL_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/publicdatahub-hospital-quality-2026-10-21.json'),
+  'utf8'
+);
 const RAW_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/bls-unemployment-rate.json'),
   'utf8'
@@ -314,6 +319,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'ed-public-download.scorecard.network') {
     return RAW_COLLEGE_SCORECARD_FIXTURE;
   }
+  if (hostname === 'publicdatahub.org') {
+    return RAW_PUBLICDATAHUB_HOSPITAL_FIXTURE;
+  }
   return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
 
@@ -352,6 +360,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('estimatetax-income-tax');
     expect(ids).toContain('callook-callsigns');
     expect(ids).toContain('college-scorecard-institutions');
+    expect(ids).toContain('publicdatahub-hospital-quality');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -397,6 +406,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('college-scorecard-institutions')).toBe(
       collegeScorecardInstitutionsAdapter
     );
+    expect(getUsDataSource('publicdatahub-hospital-quality')).toBe(publicDataHubHospitalAdapter);
   });
 
   it('returns undefined for an unknown id', () => {

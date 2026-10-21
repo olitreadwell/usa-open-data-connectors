@@ -10,6 +10,7 @@ import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
 import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
 import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
 import { nycOpenDataCatalogueAdapter } from './nycOpenDataCatalogue.js';
+import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
 import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
 import { treasuryDebtToPennyAdapter } from './treasuryDebtToPenny.js';
@@ -55,6 +56,7 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   estimatetaxIncomeTaxAdapter,
   callookCallsignsAdapter,
   collegeScorecardInstitutionsAdapter,
+  publicDataHubHospitalAdapter,
 ];
 
 /** Looks up a source adapter by id. */

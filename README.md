@@ -11,7 +11,7 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 26 US public data sources, with live probes and offline fixtures |
+| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 27 US public data sources, with live probes and offline fixtures |
 | [`@usa-open-data-connectors/usa-mcp`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-mcp) | MCP server that exposes the connectors to Claude, ChatGPT, and other MCP clients |
 | [`@usa-open-data-connectors/connectors-cli`](https://www.npmjs.com/package/@usa-open-data-connectors/connectors-cli) | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
 | `@usa-open-data-connectors/connectors-api` | Private. HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
@@ -22,7 +22,7 @@ exposed over the API or committed to the repo.
 
 ## Connectors
 
-Twenty-six adapters, all in `@usa-open-data-connectors/usa-sources`. All are
+Twenty-seven adapters, all in `@usa-open-data-connectors/usa-sources`. All are
 keyless and need no environment variable.
 
 Most of this data comes from US federal agencies, and works of the US federal
@@ -42,7 +42,7 @@ nothing extra. Every other adapter sends the shared `User-Agent`
 (`usa-open-data-connectors (Language=TypeScript)`), waits at most 30 seconds
 for a response, and marks rate-limited (HTTP 429), server-error (HTTP 5xx) and
 network failures as `retryable` on the thrown `UsSourceApiError`. The shared
-`httpGet` helper in `packages/usa-sources/src/http.ts` does this for all 26
+`httpGet` helper in `packages/usa-sources/src/http.ts` does this for all 27
 adapters.
 
 | id | Source | Keyless? | Example command |
@@ -73,6 +73,7 @@ adapters.
 | `nyc-open-data-catalogue` | New York City Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe nyc-open-data-catalogue` |
 | `callook-callsigns` | US amateur radio callsign records through Callook.info | Yes | `npx tsx packages/cli/src/cli.ts probe callook-callsigns` |
 | `college-scorecard-institutions` | College Scorecard institution outcomes, US Department of Education | Yes | `npx tsx packages/cli/src/cli.ts probe college-scorecard-institutions` |
+| `publicdatahub-hospital-quality` | CMS hospital quality measures, republished by PublicDataHub | Yes | `npx tsx packages/cli/src/cli.ts probe publicdatahub-hospital-quality` |
 
 Each adapter knows how to fetch live data, parse the response, and load a
 committed fixture, so a build never depends on a live API.

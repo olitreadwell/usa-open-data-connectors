@@ -488,6 +488,26 @@ export type {
   CollegeScorecardStateSummary,
 } from './collegeScorecardInstitutions.js';
 
+/** PublicDataHub Medicare hospital quality records (keyless). */
+export {
+  buildPublicDataHubHospitalUrl,
+  fetchPublicDataHubHospital,
+  getPublicDataHubMeasure,
+  parsePublicDataHubHospitalPayload,
+  PUBLICDATAHUB_API_BASE,
+  PUBLICDATAHUB_DEFAULT_HOSPITAL_SLUG,
+  PUBLICDATAHUB_HOSPITAL_SOURCE_ID,
+  publicDataHubHospitalAdapter,
+} from './publicDataHubHospital.js';
+/** PublicDataHub hospital quality types. */
+export type {
+  PublicDataHubHospital,
+  PublicDataHubHospitalAddress,
+  PublicDataHubHospitalQuality,
+  PublicDataHubMeasure,
+  PublicDataHubProvenance,
+} from './publicDataHubHospital.js';
+
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
 
