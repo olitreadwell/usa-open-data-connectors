@@ -1,0 +1,342 @@
+[
+  {
+    "status": "VALID",
+    "type": "PERSON",
+    "current": {
+      "callsign": "W1ABC",
+      "operClass": "GENERAL"
+    },
+    "previous": {
+      "callsign": "W5VVC",
+      "operClass": "TECHNICIAN"
+    },
+    "trustee": {
+      "callsign": "",
+      "name": ""
+    },
+    "name": "MICHAEL D SHIRRELL",
+    "address": {
+      "line1": "139 SUMTER WAY",
+      "line2": "KYLE, TX 78640",
+      "attn": ""
+    },
+    "location": {
+      "latitude": "",
+      "longitude": "",
+      "gridsquare": ""
+    },
+    "otherInfo": {
+      "grantDate": "03/24/2026",
+      "expiryDate": "03/24/2036",
+      "lastActionDate": "03/24/2026",
+      "frn": "0030799472",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=5274433"
+    }
+  },
+  {
+    "status": "VALID",
+    "type": "CLUB",
+    "current": {
+      "callsign": "W2ABC",
+      "operClass": ""
+    },
+    "previous": {
+      "callsign": "KB2UGJ",
+      "operClass": ""
+    },
+    "trustee": {
+      "callsign": "K2VHW",
+      "name": "Bronstein, Marvin S"
+    },
+    "name": "BROADCAST EMPLOYEES AMATEUR RADIO SOCIETY INC",
+    "address": {
+      "line1": "ANSONIA STATION, P.O. BOX 230931",
+      "line2": "NEW YORK CITY, NY 10023-0016",
+      "attn": "ATTN: MARVIN S BRONSTEIN"
+    },
+    "location": {
+      "latitude": "40.719159",
+      "longitude": "-73.8449635",
+      "gridsquare": "FN30br"
+    },
+    "otherInfo": {
+      "grantDate": "08/15/2016",
+      "expiryDate": "11/04/2026",
+      "lastActionDate": "03/13/2024",
+      "frn": "0022389803",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=785450"
+    }
+  },
+  {
+    "status": "VALID",
+    "type": "PERSON",
+    "current": {
+      "callsign": "W3ABC",
+      "operClass": "TECHNICIAN"
+    },
+    "previous": {
+      "callsign": "KC3CSQ",
+      "operClass": ""
+    },
+    "trustee": {
+      "callsign": "",
+      "name": ""
+    },
+    "name": "MARK A TURNBULL",
+    "address": {
+      "line1": "8811 TOWANDA ST",
+      "line2": "PHILADELPHIA, PA 19118",
+      "attn": ""
+    },
+    "location": {
+      "latitude": "40.072326",
+      "longitude": "-75.2201407",
+      "gridsquare": "FN20jb"
+    },
+    "otherInfo": {
+      "grantDate": "06/07/2025",
+      "expiryDate": "05/20/2034",
+      "lastActionDate": "06/09/2025",
+      "frn": "0023566482",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=3597033"
+    }
+  },
+  {
+    "status": "VALID",
+    "type": "PERSON",
+    "current": {
+      "callsign": "W4ABC",
+      "operClass": "EXTRA"
+    },
+    "previous": {
+      "callsign": "WA4LTX",
+      "operClass": "ADVANCED"
+    },
+    "trustee": {
+      "callsign": "",
+      "name": ""
+    },
+    "name": "JON E PEARL",
+    "address": {
+      "line1": "5881 42 AVE N",
+      "line2": "SAINT PETERSBURG, FL 33709",
+      "attn": "ATTN: Jon Pearl"
+    },
+    "location": {
+      "latitude": "27.809918",
+      "longitude": "-82.714845",
+      "gridsquare": "EL87pt"
+    },
+    "otherInfo": {
+      "grantDate": "08/11/2026",
+      "expiryDate": "11/04/2036",
+      "lastActionDate": "08/11/2026",
+      "frn": "0003142825",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=794823"
+    }
+  },
+  {
+    "status": "VALID",
+    "type": "PERSON",
+    "current": {
+      "callsign": "W5ABC",
+      "operClass": "EXTRA"
+    },
+    "previous": {
+      "callsign": "WA5VCF",
+      "operClass": "GENERAL"
+    },
+    "trustee": {
+      "callsign": "",
+      "name": ""
+    },
+    "name": "JOSEPH C POLLET, JR .",
+    "address": {
+      "line1": "127 HIGHWAY DR",
+      "line2": "NEW ORLEANS, LA 70121-3409",
+      "attn": ""
+    },
+    "location": {
+      "latitude": "29.955168",
+      "longitude": "-90.166831",
+      "gridsquare": "EL49vw"
+    },
+    "otherInfo": {
+      "grantDate": "02/08/2017",
+      "expiryDate": "04/06/2027",
+      "lastActionDate": "10/09/2026",
+      "frn": "0016149700",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=2899115"
+    }
+  },
+  {
+    "status": "VALID",
+    "type": "PERSON",
+    "current": {
+      "callsign": "W6ABC",
+      "operClass": "GENERAL"
+    },
+    "previous": {
+      "callsign": "",
+      "operClass": ""
+    },
+    "trustee": {
+      "callsign": "",
+      "name": ""
+    },
+    "name": "ROBERT J LEWALSKI",
+    "address": {
+      "line1": "1104 RICKENBACH ROAD",
+      "line2": "READING, PA 19605",
+      "attn": ""
+    },
+    "location": {
+      "latitude": "40.415645",
+      "longitude": "-75.96647",
+      "gridsquare": "FN20aj"
+    },
+    "otherInfo": {
+      "grantDate": "01/31/2018",
+      "expiryDate": "04/28/2028",
+      "lastActionDate": "09/07/2018",
+      "frn": "0007695992",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=808241"
+    }
+  },
+  {
+    "status": "VALID",
+    "type": "PERSON",
+    "current": {
+      "callsign": "W7ABC",
+      "operClass": "EXTRA"
+    },
+    "previous": {
+      "callsign": "KG7HM",
+      "operClass": "ADVANCED"
+    },
+    "trustee": {
+      "callsign": "",
+      "name": ""
+    },
+    "name": "ROBIN S MACKAY",
+    "address": {
+      "line1": "5112 NE 31ST CT",
+      "line2": "VANCOUVER, WA 98663-1911",
+      "attn": ""
+    },
+    "location": {
+      "latitude": "45.6589521",
+      "longitude": "-122.6390307",
+      "gridsquare": "CN85qp"
+    },
+    "otherInfo": {
+      "grantDate": "07/06/2017",
+      "expiryDate": "09/17/2027",
+      "lastActionDate": "01/08/2018",
+      "frn": "0016810996",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=815292"
+    }
+  },
+  {
+    "status": "VALID",
+    "type": "PERSON",
+    "current": {
+      "callsign": "W8ABC",
+      "operClass": "EXTRA"
+    },
+    "previous": {
+      "callsign": "WB8VBW",
+      "operClass": ""
+    },
+    "trustee": {
+      "callsign": "",
+      "name": ""
+    },
+    "name": "J MICHAEL VAIA",
+    "address": {
+      "line1": "800 CAMDEN AVE",
+      "line2": "SALISBURY, MD 21801",
+      "attn": ""
+    },
+    "location": {
+      "latitude": "38.355667",
+      "longitude": "-75.606496",
+      "gridsquare": "FM28ei"
+    },
+    "otherInfo": {
+      "grantDate": "03/29/2019",
+      "expiryDate": "03/10/2029",
+      "lastActionDate": "06/03/2019",
+      "frn": "0013356324",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=820638"
+    }
+  },
+  {
+    "status": "VALID",
+    "type": "PERSON",
+    "current": {
+      "callsign": "W9ABC",
+      "operClass": "EXTRA"
+    },
+    "previous": {
+      "callsign": "",
+      "operClass": ""
+    },
+    "trustee": {
+      "callsign": "",
+      "name": ""
+    },
+    "name": "WILLIAM B LILL",
+    "address": {
+      "line1": "244 NEVA AVE",
+      "line2": "GLENVIEW, IL 60025",
+      "attn": ""
+    },
+    "location": {
+      "latitude": "",
+      "longitude": "",
+      "gridsquare": ""
+    },
+    "otherInfo": {
+      "grantDate": "02/24/2017",
+      "expiryDate": "03/03/2027",
+      "lastActionDate": "02/24/2017",
+      "frn": "0002861110",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=825968"
+    }
+  },
+  {
+    "status": "VALID",
+    "type": "PERSON",
+    "current": {
+      "callsign": "W0ABC",
+      "operClass": "GENERAL"
+    },
+    "previous": {
+      "callsign": "KC0ZNK",
+      "operClass": "TECHNICIAN"
+    },
+    "trustee": {
+      "callsign": "",
+      "name": ""
+    },
+    "name": "DOUGLAS M SLAUSON",
+    "address": {
+      "line1": "73 SUMMIT AVENUE NE",
+      "line2": "SWISHER, IA 52338",
+      "attn": ""
+    },
+    "location": {
+      "latitude": "41.8483861",
+      "longitude": "-91.6919954",
+      "gridsquare": "EN41du"
+    },
+    "otherInfo": {
+      "grantDate": "01/27/2021",
+      "expiryDate": "04/08/2031",
+      "lastActionDate": "01/27/2021",
+      "frn": "0016115040",
+      "ulsUrl": "https://wireless2.fcc.gov/UlsApp/UlsSearch/license.jsp?licKey=3279177"
+    }
+  }
+]

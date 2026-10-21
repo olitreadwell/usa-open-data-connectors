@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 24 source adapters behind one interface.
+- Exposes 25 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads a committed fixture when the network is unavailable.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -53,6 +53,7 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `bts-transportation-stats` | Bureau of Transportation Statistics | The BTS Socrata catalogue, one row per dataset, chart, or story. |
 | `estimatetax-income-tax` | EstimateTax | US federal, state, and local income tax for one salary, with the official document behind every figure. |
 | `nyc-open-data-catalogue` | New York City Open Data | The NYC Socrata catalogue, one row per published dataset or map. |
+| `callook-callsigns` | Callook.info | US amateur radio callsign records from the FCC licence file, with the licence class, location, and expiry. |
 
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
 `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data` as soon as it is registered.
@@ -484,6 +485,21 @@ label is the nearest place the service knows, not the caller's own name: a
 lookup for Tacoma came back as "Seattle" on 2026-10-20, and a lookup for
 Tacoma Old City Hall landed in office SEW at cell 125,68.
 
+`callook-callsigns`:
+
+```ts
+import { fetchCallookCallsigns } from '@usa-open-data-connectors/usa-sources';
+
+const directory = await fetchCallookCallsigns({ callsigns: ['W1AW'] });
+console.log(directory.callsigns[0]?.callsign, directory.soonestExpiry?.expiryDate);
+```
+
+Callook answers one callsign per request. The default fetch reads W1ABC through
+W0ABC, one callsign for each US call district. Pass `callsigns` to read a
+different set. The parser keeps a lookup with status `INVALID` or `UPDATING` as
+a record with no licence fields, and counts only `VALID` records in the folded
+totals.
+
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
@@ -579,6 +595,9 @@ Tacoma Old City Hall landed in office SEW at cell 125,68.
 - `nws-point-forecast`: `gridX` and `gridY` are numbered inside one forecast office. The same pair in two offices is not the same place, and there is no national grid coordinate in the response.
 - `nws-point-forecast`: `relativeLocation.properties` names the nearest place the service knows, which can be a neighboring city. A Tacoma lookup returned "Seattle", so a caller that needs its own label should keep it outside the response.
 - `nws-point-forecast`: one point response is about 3.5 KB. Twenty-five lookups cost twenty-five requests and about 88 KB of committed JSON when saved as a snapshot.
+- `callook-callsigns`: the service answers one callsign per request and has no bulk list endpoint. The default ten-district sample costs ten requests. The service asks for no key, and its API reference says the data comes from the FCC licence file, refreshed daily.
+- `callook-callsigns`: a lookup returns `INVALID` for a callsign with no current licence. The adapter keeps that answer as a record with status `INVALID` rather than treating it as an HTTP failure. A callsign with a current licence has status `VALID` and carries the licence fields.
+- `callook-callsigns`: coordinates and the grid square are calculated by Callook from the mailing address, not taken from the FCC file. A record can have an empty location. The adapter keeps the coordinates as null in that case and does not invent a place.
 
 ## Data sources and licences
 
@@ -607,6 +626,7 @@ The data comes from US federal agencies and the open data catalogue services the
 | EstimateTax | `https://estimatetax.net/api/v1/calculate` |
 | HealthData.gov | `https://healthdata.gov/api/views.json` |
 | New York City Open Data | `https://data.cityofnewyork.us/api/views.json` |
+| Callook.info | `https://callook.info/[callsign]/json` |
 
 Each publisher sets its own terms for its data. The Socrata discovery responses can carry rights and
 metadata fields, but the catalogue adapters in this package keep a subset of the entry fields and do not

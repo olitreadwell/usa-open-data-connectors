@@ -6,6 +6,7 @@ import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { cfpbConsumerComplaintsAdapter } from './cfpbConsumerComplaints.js';
 import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
+import { callookCallsignsAdapter } from './callookCallsigns.js';
 import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
 import { clinicalTrialsStudiesAdapter } from './clinicalTrialsStudies.js';
@@ -180,6 +181,9 @@ const RAW_ESTIMATETAX_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/estimatetax-income-tax-2026-10-18.json'),
   'utf8'
 );
+const CALLOOK_FIXTURE = JSON.parse(
+  readFileSync(path.join(process.cwd(), 'src/fixtures/callook-callsigns-2026-10-21.json'), 'utf8')
+) as { current: { callsign: string } }[];
 const OPENFDA_FOOD_RECALL_FIXTURE = JSON.parse(
   readFileSync(
     path.join(process.cwd(), 'src/fixtures/openfda-food-recalls-2026-09-30.json'),
@@ -216,6 +220,13 @@ function openFdaFixtureFor(url: URL): string {
     return JSON.stringify({ results: OPENFDA_FOOD_RECALL_FIXTURE.voluntary });
   }
   return JSON.stringify({ meta: { results: { total: OPENFDA_FOOD_RECALL_FIXTURE.recallCount } } });
+}
+
+/** Answers a Callook lookup with the raw fixture for the callsign requested. */
+function callookFixtureFor(url: URL): string {
+  const callsign = url.pathname.split('/')[1] ?? '';
+  const record = CALLOOK_FIXTURE.find((entry) => entry.current.callsign === callsign);
+  return JSON.stringify(record ?? { status: 'INVALID' });
 }
 
 /**
@@ -292,6 +303,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'estimatetax.net') {
     return RAW_ESTIMATETAX_FIXTURE;
   }
+  if (hostname === 'callook.info') {
+    return callookFixtureFor(parsed);
+  }
   return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
 
@@ -328,6 +342,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('bts-transportation-stats');
     expect(ids).toContain('nyc-open-data-catalogue');
     expect(ids).toContain('estimatetax-income-tax');
+    expect(ids).toContain('callook-callsigns');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -369,6 +384,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('bts-transportation-stats')).toBe(btsTransportationStatsAdapter);
     expect(getUsDataSource('nyc-open-data-catalogue')).toBe(nycOpenDataCatalogueAdapter);
     expect(getUsDataSource('estimatetax-income-tax')).toBe(estimatetaxIncomeTaxAdapter);
+    expect(getUsDataSource('callook-callsigns')).toBe(callookCallsignsAdapter);
   });
 
   it('returns undefined for an unknown id', () => {

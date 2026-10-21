@@ -11,7 +11,7 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 24 US public data sources, with live probes and offline fixtures |
+| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 25 US public data sources, with live probes and offline fixtures |
 | [`@usa-open-data-connectors/usa-mcp`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-mcp) | MCP server that exposes the connectors to Claude, ChatGPT, and other MCP clients |
 | [`@usa-open-data-connectors/connectors-cli`](https://www.npmjs.com/package/@usa-open-data-connectors/connectors-cli) | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
 | `@usa-open-data-connectors/connectors-api` | Private. HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
@@ -22,7 +22,7 @@ exposed over the API or committed to the repo.
 
 ## Connectors
 
-Twenty-four adapters, all in `@usa-open-data-connectors/usa-sources`. All are
+Twenty-five adapters, all in `@usa-open-data-connectors/usa-sources`. All are
 keyless and need no environment variable.
 
 Most of this data comes from US federal agencies, and works of the US federal
@@ -71,6 +71,7 @@ adapters.
 | `bts-transportation-stats` | Bureau of Transportation Statistics catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe bts-transportation-stats` |
 | `estimatetax-income-tax` | EstimateTax US federal, state, and local income tax | Yes | `npx tsx packages/cli/src/cli.ts probe estimatetax-income-tax` |
 | `nyc-open-data-catalogue` | New York City Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe nyc-open-data-catalogue` |
+| `callook-callsigns` | US amateur radio callsign records through Callook.info | Yes | `npx tsx packages/cli/src/cli.ts probe callook-callsigns` |
 
 Each adapter knows how to fetch live data, parse the response, and load a
 committed fixture, so a build never depends on a live API.

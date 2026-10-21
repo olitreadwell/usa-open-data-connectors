@@ -15,8 +15,7 @@ export const SEC_EDGAR_FILINGS_SOURCE_ID = 'sec-edgar-filings';
  * adapter sends a descriptive name and a contact address on every call. A
  * real deployment should override the contact with its own address.
  */
-export const SEC_EDGAR_USER_AGENT =
-  'usa-open-data-connectors oliver.treadwell@gmail.com';
+export const SEC_EDGAR_USER_AGENT = 'usa-open-data-connectors oliver.treadwell@gmail.com';
 
 /** One filing in an issuer's recent submissions list. */
 export interface SecEdgarFiling {
