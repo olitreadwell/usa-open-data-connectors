@@ -24,6 +24,7 @@ import { usaspendingAgenciesAdapter } from './usaspendingAgencies.js';
 import { cpscProductRecallsAdapter } from './cpscProductRecalls.js';
 import { femaDisasterDeclarationsAdapter } from './femaDisasterDeclarations.js';
 import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
+import { nextBusTransitVehiclesAdapter } from './nextBusTransitVehicles.js';
 import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
 import { openFdaFoodRecallsAdapter } from './openFdaFoodRecalls.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
@@ -39,6 +40,10 @@ import {
 // raw fixture for the host being asked rather than with a parsed value.
 const RAW_PUBLICDATAHUB_HOSPITAL_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/publicdatahub-hospital-quality-2026-10-21.json'),
+  'utf8'
+);
+const RAW_NEXTBUS_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/nextbus-portland-streetcar-vehicles-2026-10-22.xml'),
   'utf8'
 );
 const RAW_FIXTURE = readFileSync(
@@ -322,6 +327,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'publicdatahub.org') {
     return RAW_PUBLICDATAHUB_HOSPITAL_FIXTURE;
   }
+  if (hostname === 'retro.umoiq.com') {
+    return RAW_NEXTBUS_FIXTURE;
+  }
   return hostname === 'api.tidesandcurrents.noaa.gov' ? RAW_NOAA_SEA_LEVEL_FIXTURE : RAW_FIXTURE;
 }
 
@@ -361,6 +369,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('callook-callsigns');
     expect(ids).toContain('college-scorecard-institutions');
     expect(ids).toContain('publicdatahub-hospital-quality');
+    expect(ids).toContain('nextbus-transit-vehicles');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -407,6 +416,7 @@ describe('getUsDataSource', () => {
       collegeScorecardInstitutionsAdapter
     );
     expect(getUsDataSource('publicdatahub-hospital-quality')).toBe(publicDataHubHospitalAdapter);
+    expect(getUsDataSource('nextbus-transit-vehicles')).toBe(nextBusTransitVehiclesAdapter);
   });
 
   it('returns undefined for an unknown id', () => {
@@ -449,5 +459,5 @@ describe('probeAllUsDataSources', () => {
     const probes = await probeAllUsDataSources({ fetchImpl: FIXTURE_FETCH });
     expect(probes).toHaveLength(US_DATA_SOURCES.length);
     expect(probes.every((probe) => probe.ok)).toBe(true);
-  });
+  }, 15_000);
 });

@@ -53,6 +53,7 @@ describe('GET /sources', () => {
       'callook-callsigns',
       'college-scorecard-institutions',
       'publicdatahub-hospital-quality',
+      'nextbus-transit-vehicles',
     ]);
     for (const source of sources) {
       expect(Object.keys(source).sort()).toEqual(['auth', 'description', 'id', 'name']);

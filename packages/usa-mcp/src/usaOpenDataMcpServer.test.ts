@@ -35,7 +35,7 @@ describe('createUsaOpenDataMcpServer', () => {
     const result = await client.callTool({ name: 'list_sources', arguments: {} });
 
     const sources = JSON.parse(firstText(result)) as { id: string }[];
-    expect(sources.length).toBe(27);
+    expect(sources.length).toBe(28);
     expect(sources.every((source) => source.id.length > 0)).toBe(true);
   });
 

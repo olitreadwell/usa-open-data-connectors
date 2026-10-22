@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Snapshot of Portland Streetcar route NS (tag 193) vehicle locations, retrieved 2026-10-22T05:57:42Z from https://retro.umoiq.com/service/publicXMLFeed?command=vehicleLocations&a=portland-sc&r=193&t=0 -->
+<body copyright="All data copyright Portland Streetcar 2026.">
+<vehicle id="022" routeTag="193" lat="45.5290958" lon="-122.681345" secsSinceReport="6" predictable="false" heading="-4" speedKmHr="0"/>
+<vehicle id="003" routeTag="193" dirTag="193_0_var5" lat="45.4940185" lon="-122.6717111" secsSinceReport="23" predictable="true" heading="215" speedKmHr="0"/>
+<vehicle id="004" routeTag="193" dirTag="193_1_var6" lat="45.5150626" lon="-122.6860213" secsSinceReport="8" predictable="true" heading="295" speedKmHr="0"/>
+<vehicle id="026" routeTag="193" dirTag="193_0_var4" lat="45.5264635" lon="-122.6811893" secsSinceReport="14" predictable="true" heading="359" speedKmHr="0"/>
+<vehicle id="005" routeTag="193" dirTag="193_0_var5" lat="45.512234" lon="-122.6820171" secsSinceReport="10" predictable="true" heading="341" speedKmHr="0"/>
+<lastTime time="1792648671716"/>
+</body>

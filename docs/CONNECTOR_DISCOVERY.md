@@ -39,6 +39,7 @@ were captured between 2026-09-23 and 2026-10-03.
 | `estimatetax-income-tax` | EstimateTax | `https://estimatetax.net/api/v1/calculate` | `estimatetax-income-tax-2026-10-18.json` |
 | `nyc-open-data-catalogue` | New York City Open Data | `https://data.cityofnewyork.us/api/views.json` | `nyc-open-data-catalogue-2026-10-19.json` |
 | `publicdatahub-hospital-quality` | PublicDataHub | `https://publicdatahub.org/api/export/hospital/{slug}.json` | `publicdatahub-hospital-quality-2026-10-21.json` |
+| `nextbus-transit-vehicles` | Portland Streetcar, through the NextBus XML feed | `https://retro.umoiq.com/service/publicXMLFeed?command=vehicleLocations&a=portland-sc&r=193&t=0` | `nextbus-portland-streetcar-vehicles-2026-10-22.xml` |
 
 ## Exact curl commands for the 2026-10-05 additions
 
@@ -153,6 +154,7 @@ everywhere, and a few services attach their own terms on top.
 | `estimatetax-income-tax` | EstimateTax | Private publisher, not a federal agency. The API terms ask for attribution and the source document alongside any displayed figure. No open licence is stated for the API output. |
 | `college-scorecard-institutions` | College Scorecard, US Department of Education | US federal work, public domain in the US |
 | `callook-callsigns` | Callook.info, from the FCC licence file | FCC licence records are US federal work, public domain in the US. Callook.info serves the records and calculates the coordinates and grid square. Its API reference says the data is free to use. |
+| `nextbus-transit-vehicles` | Portland Streetcar, served by Umo IQ | Transit agency data. The feed carries a copyright notice for the agency and Umo IQ, and states no open licence. Check the agency's terms before republishing. |
 
 No adapter returns licence metadata today, and no adapter can tell you whether a
 particular dataset has terms on top. Read the publisher's page before you

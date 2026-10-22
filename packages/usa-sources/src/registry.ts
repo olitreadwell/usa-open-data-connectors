@@ -21,6 +21,7 @@ import { cpscProductRecallsAdapter } from './cpscProductRecalls.js';
 import { femaDisasterDeclarationsAdapter } from './femaDisasterDeclarations.js';
 import { nceiAnnualTemperatureAdapter } from './nceiAnnualTemperature.js';
 import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
+import { nextBusTransitVehiclesAdapter } from './nextBusTransitVehicles.js';
 import { openFdaFoodRecallsAdapter } from './openFdaFoodRecalls.js';
 import { treasuryAvgInterestRateAdapter } from './treasuryAvgInterestRate.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
@@ -57,6 +58,7 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   callookCallsignsAdapter,
   collegeScorecardInstitutionsAdapter,
   publicDataHubHospitalAdapter,
+  nextBusTransitVehiclesAdapter,
 ];
 
 /** Looks up a source adapter by id. */
