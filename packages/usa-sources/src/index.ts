@@ -109,6 +109,24 @@ export {
   probeAllUsDataSources,
   probeUsDataSource,
 } from './registry.js';
+/** NextBus live transit vehicle positions (keyless). */
+export {
+  buildNextBusVehicleUrl,
+  fetchNextBusVehicles,
+  nextBusTransitVehiclesAdapter,
+  NEXTBUS_PORTLAND_STREETCAR_AGENCY_TAG,
+  NEXTBUS_PORTLAND_STREETCAR_QUERY,
+  NEXTBUS_PORTLAND_STREETCAR_ROUTE_TAG,
+  NEXTBUS_TRANSIT_VEHICLES_SOURCE_ID,
+  NEXTBUS_XML_FEED_BASE,
+  parseNextBusVehiclePayload,
+} from './nextBusTransitVehicles.js';
+/** NextBus transit vehicle types. */
+export type {
+  NextBusVehicle,
+  NextBusVehicleQuery,
+  NextBusVehicleSnapshot,
+} from './nextBusTransitVehicles.js';
 /** US Treasury average interest rate on the debt outstanding (keyless). */
 export {
   buildTreasuryAvgInterestRateSeries,

@@ -55,6 +55,7 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `nyc-open-data-catalogue` | New York City Open Data | The NYC Socrata catalogue, one row per published dataset or map. |
 | `callook-callsigns` | Callook.info | US amateur radio callsign records from the FCC licence file, with the licence class, location, and expiry. |
 | `college-scorecard-institutions` | College Scorecard, US Department of Education | Institution-level enrollment, cost, completion, debt, and earnings ten years after entry for US colleges. |
+| `nextbus-transit-vehicles` | Portland Streetcar, through the NextBus XML feed | Live positions, headings, speeds, and report ages for the streetcars on the NS line. |
 
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
 `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data` as soon as it is registered.
@@ -306,6 +307,25 @@ validates a bare JSON array against a zod schema over `id`, `name`,
 `viewCount`, and `downloadCount`. A row missing `id`, `name`, or `createdAt`
 throws `UsSourceParseError`. A response with no rows also throws, because an
 empty catalogue is not a usable answer.
+
+`nextbus-transit-vehicles`:
+
+```ts
+import { fetchNextBusVehicles } from '@usa-open-data-connectors/usa-sources';
+
+const snapshot = await fetchNextBusVehicles();
+console.log(snapshot.vehicleCount, snapshot.vehicles[0]);
+```
+
+The public API is `NEXTBUS_XML_FEED_BASE`, `NEXTBUS_PORTLAND_STREETCAR_AGENCY_TAG`,
+`NEXTBUS_PORTLAND_STREETCAR_ROUTE_TAG`, `NEXTBUS_PORTLAND_STREETCAR_QUERY`,
+`buildNextBusVehicleUrl`, `parseNextBusVehiclePayload`, `fetchNextBusVehicles`,
+and `nextBusTransitVehiclesAdapter`, with the `NextBusVehicle`,
+`NextBusVehicleQuery`, and `NextBusVehicleSnapshot` types. The parser reads
+the XML attributes as strings and validates every field with zod. An error
+body, a missing timestamp, or a position outside the map throws
+`UsSourceParseError`. A route with no vehicles is valid and returns an empty
+`vehicles` list.
 
 `fema-disaster-declarations`:
 
@@ -616,6 +636,10 @@ fetch takes about 20 seconds on a fast connection.
 - `college-scorecard-institutions`: `NA` and `PS` mean the Department of Education did not publish a figure. The adapter keeps those as null, so a chart does not turn a suppressed value into a zero.
 - `college-scorecard-institutions`: the state summary is a median of the institution medians, not a weighted student average. It answers "what does a typical college in this state report", not "what does a typical student earn".
 - `college-scorecard-institutions`: the earnings field is `MD_EARN_WNE_P10`, the median for graduates working and not enrolled ten years after entry. It is not a first-year salary.
+- `nextbus-transit-vehicles`: the adapter reads one agency route, the Portland Streetcar NS line (`portland-sc`, route `193`). The feed also serves other agencies, including non-US ones, so the adapter does not claim to cover every agency on the feed.
+- `nextbus-transit-vehicles`: `t=0` asks for every report the feed still holds for the route. The feed returns the current set of streetcars, not a history, so the snapshot describes one moment and is replaced on the next request.
+- `nextbus-transit-vehicles`: a route with no service returns a snapshot with zero vehicles and a valid timestamp. That is a real answer, not a failure, so the parser keeps it.
+- `nextbus-transit-vehicles`: the feed carries a copyright notice for the transit agency and Umo IQ, and states no open licence. Check the agency's terms before republishing the positions.
 
 ## Data sources and licences
 
