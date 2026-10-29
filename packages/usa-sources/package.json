@@ -29,17 +29,17 @@
     "test:smoke": "RUN_SMOKE=1 vitest run src/smoke.test.ts"
   },
   "devDependencies": {
-    "@types/node": "24.19.1",
+    "@types/node": "26.6.5",
     "@usa-open-data-connectors/config-eslint": "*",
     "@usa-open-data-connectors/config-typescript": "*",
-    "eslint": "9.39.5",
+    "eslint": "10.13.0",
     "typescript": "6.0.3",
-    "vitest": "5.0.3"
+    "vitest": "5.0.5"
   },
   "dependencies": {
     "fast-xml-parser": "5.11.2",
     "fflate": "0.8.3",
-    "zod": "3.25.76"
+    "zod": "4.6.7"
   },
   "publishConfig": {
     "access": "public"
