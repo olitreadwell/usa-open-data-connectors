@@ -37,7 +37,7 @@
     "start:api": "npm run start -w @usa-open-data-connectors/connectors-api"
   },
   "devDependencies": {
-    "prettier": "3.9.9",
+    "prettier": "3.9.10",
     "@vitest/coverage-v8": "5.0.3"
   },
   "dependencies": {},
