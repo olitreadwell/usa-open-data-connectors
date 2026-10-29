@@ -31,17 +31,17 @@
     "clean:all": "rm -rf dist tsconfig.tsbuildinfo tsconfig.build.tsbuildinfo coverage node_modules"
   },
   "devDependencies": {
-    "@types/node": "24.19.1",
+    "@types/node": "26.6.5",
     "eslint": "9.39.5",
     "typescript": "6.0.3",
-    "vitest": "5.0.3",
+    "vitest": "5.0.5",
     "@usa-open-data-connectors/config-eslint": "*",
     "@usa-open-data-connectors/config-typescript": "*"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "1.32.1",
+    "@modelcontextprotocol/sdk": "1.32.2",
     "@usa-open-data-connectors/usa-sources": "^0.1.0",
-    "zod": "3.25.76"
+    "zod": "4.6.7"
   },
   "publishConfig": {
     "access": "public"
