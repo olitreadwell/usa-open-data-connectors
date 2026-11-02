@@ -1,6 +1,11 @@
 # Changelog
 
-## Unreleased
+## 0.1.7 (2026-11-03)
+
+- Add the Callook callsigns, College Scorecard institutions, PublicDataHub
+  hospital quality, and NextBus transit vehicle adapters.
+- Update the transitive body-parser package to clear the high audit finding.
+- Retry NCBI PubMed searches when the API answers HTTP 429.
 
 - Connectors: add the keyless `college-scorecard-institutions` adapter for US college enrollment, cost, completion, debt, and ten-year earnings from the Department of Education bulk download, with a sampled fixture
 - Connectors: add the keyless `callook-callsigns` adapter for US amateur radio callsign records from the FCC licence file, read through Callook.info, with a ten-district sample and a live-verified fixture

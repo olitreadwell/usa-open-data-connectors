@@ -67,6 +67,38 @@ describe('httpGet', () => {
     expect((failure as UsSourceApiError).retryable).toBe(true);
   });
 
+  it('retries a 429 when the caller allows it', async () => {
+    let calls = 0;
+    const impl: typeof globalThis.fetch = async () => {
+      calls += 1;
+      return calls === 1
+        ? new Response('slow down', { status: 429 })
+        : new Response('ok', { status: 200 });
+    };
+    const response = await httpGet('Test source', URL_UNDER_TEST, {
+      fetchImpl: impl,
+      retries: 1,
+      retryDelayMs: 0,
+    });
+    expect(calls).toBe(2);
+    expect(await response.text()).toBe('ok');
+  });
+
+  it('stops after the retry budget is spent', async () => {
+    let calls = 0;
+    const impl: typeof globalThis.fetch = async () => {
+      calls += 1;
+      return new Response('slow down', { status: 429 });
+    };
+    const failure = await httpGet('Test source', URL_UNDER_TEST, {
+      fetchImpl: impl,
+      retries: 2,
+      retryDelayMs: 0,
+    }).catch((error: unknown) => error);
+    expect(calls).toBe(3);
+    expect((failure as UsSourceApiError).status).toBe(429);
+  });
+
   it('reports a 503 as retryable', async () => {
     const { impl } = recordingFetch(() => new Response('later', { status: 503 }));
     const failure = await httpGet('Test source', URL_UNDER_TEST, { fetchImpl: impl }).catch(

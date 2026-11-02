@@ -28,6 +28,10 @@ export interface HttpGetOptions {
   headers?: Record<string, string> | undefined;
   /** Overrides {@link DEFAULT_TIMEOUT_MS}. */
   timeoutMs?: number | undefined;
+  /** How many times a retryable failure is attempted again. Defaults to 0. */
+  retries?: number | undefined;
+  /** Base delay between retry attempts, doubled each time. Defaults to 1000ms. */
+  retryDelayMs?: number | undefined;
 }
 
 /**
@@ -73,31 +77,39 @@ export async function httpGet(
 ): Promise<Response> {
   const doFetch = options.fetchImpl ?? globalThis.fetch;
   const timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
-  const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), timeoutMs);
-  let response: Response;
-  try {
-    response = await doFetch(url, {
-      headers: buildRequestHeaders(options.headers),
-      signal: controller.signal,
-    });
-  } catch (error) {
-    if (controller.signal.aborted) {
-      throw new UsSourceApiError(source, `request timed out after ${timeoutMs}ms`, {
-        retryable: true,
+  const retries = options.retries ?? 0;
+  const retryDelayMs = options.retryDelayMs ?? 1000;
+  for (let attempt = 0; ; attempt += 1) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    let response: Response;
+    try {
+      response = await doFetch(url, {
+        headers: buildRequestHeaders(options.headers),
+        signal: controller.signal,
+      });
+    } catch (error) {
+      if (controller.signal.aborted) {
+        throw new UsSourceApiError(source, `request timed out after ${timeoutMs}ms`, {
+          retryable: true,
+        });
+      }
+      throw new UsSourceApiError(source, `request failed: ${String(error)}`, { retryable: true });
+    } finally {
+      clearTimeout(timer);
+    }
+
+    if (response.ok) {
+      return response;
+    }
+    const retryable =
+      response.status === HTTP_TOO_MANY_REQUESTS || response.status >= HTTP_INTERNAL_SERVER_ERROR;
+    if (!retryable || attempt >= retries) {
+      throw new UsSourceApiError(source, `HTTP ${response.status}`, {
+        status: response.status,
+        retryable,
       });
     }
-    throw new UsSourceApiError(source, `request failed: ${String(error)}`, { retryable: true });
-  } finally {
-    clearTimeout(timer);
+    await new Promise((resolve) => setTimeout(resolve, retryDelayMs * 2 ** attempt));
   }
-
-  if (!response.ok) {
-    throw new UsSourceApiError(source, `HTTP ${response.status}`, {
-      status: response.status,
-      retryable:
-        response.status === HTTP_TOO_MANY_REQUESTS || response.status >= HTTP_INTERNAL_SERVER_ERROR,
-    });
-  }
-  return response;
 }

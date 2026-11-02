@@ -40,6 +40,12 @@ export const NCBI_PUBMED_DEFAULT_TERM = 'asthma';
 /** Number of ids one request asks for. */
 export const NCBI_PUBMED_DEFAULT_RETMAX = 10;
 
+/** Attempts one search makes when NCBI answers 429, including the first. */
+export const NCBI_PUBMED_MAX_ATTEMPTS = 3;
+
+/** Base delay between search attempts, doubled after each refusal. */
+export const NCBI_PUBMED_RETRY_DELAY_MS = 1000;
+
 /** Committed snapshot, so a build works when the NCBI host is unreachable. */
 const NCBI_PUBMED_FIXTURE_FILENAME = 'ncbi-pubmed-search-2026-10-05.json';
 
@@ -155,7 +161,11 @@ export async function fetchNcbiPubmedSearch(options?: {
     ...(options?.term === undefined ? {} : { term: options.term }),
     ...(options?.retmax === undefined ? {} : { retmax: options.retmax }),
   });
-  const response = await httpGet(NCBI_PUBMED_SEARCH_SOURCE_ID, url, { fetchImpl });
+  const response = await httpGet(NCBI_PUBMED_SEARCH_SOURCE_ID, url, {
+    fetchImpl,
+    retries: NCBI_PUBMED_MAX_ATTEMPTS - 1,
+    retryDelayMs: NCBI_PUBMED_RETRY_DELAY_MS,
+  });
   return parseNcbiPubmedSearchPayload(await response.json());
 }
 
