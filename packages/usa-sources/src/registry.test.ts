@@ -482,6 +482,15 @@ describe('probeAllUsDataSources', () => {
     );
   });
 
+  it('rejects an unknown id before probing', async () => {
+    const fetchImpl = vi.fn(FIXTURE_FETCH);
+
+    await expect(probeAllUsDataSources({ ids: ['not-a-source'], fetchImpl })).rejects.toThrow(
+      'Unknown US source id "not-a-source"'
+    );
+    expect(fetchImpl).not.toHaveBeenCalled();
+  });
+
   it('returns no probes for an explicit empty id list', async () => {
     const fetchImpl = vi.fn(FIXTURE_FETCH);
 

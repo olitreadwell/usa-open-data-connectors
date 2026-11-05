@@ -135,6 +135,30 @@ describe('fetchNextBusVehicles', () => {
     );
     expect(fetchImpl).not.toHaveBeenCalled();
   });
+
+  it('refuses a blank agency or route tag before fetching', async () => {
+    const fetchImpl = vi.fn();
+    await expect(
+      fetchNextBusVehicles({ agencyTag: '  ', routeTag: '193', fetchImpl })
+    ).rejects.toThrow('agencyTag must not be empty');
+    await expect(
+      fetchNextBusVehicles({ agencyTag: 'portland-sc', routeTag: '\t', fetchImpl })
+    ).rejects.toThrow('routeTag must not be empty');
+    expect(fetchImpl).not.toHaveBeenCalled();
+  });
+
+  it('trims a tag before requesting the feed', async () => {
+    const fetchImpl = vi.fn().mockResolvedValue(new Response(FIXTURE, { status: 200 }));
+    const snapshot = await fetchNextBusVehicles({
+      agencyTag: ' portland-sc ',
+      routeTag: ' 193 ',
+      fetchImpl,
+    });
+    const url = new URL(String(fetchImpl.mock.calls[0]?.[0]));
+    expect(url.searchParams.get('a')).toBe('portland-sc');
+    expect(url.searchParams.get('r')).toBe('193');
+    expect(snapshot.agencyTag).toBe('portland-sc');
+  });
 });
 
 describe('nextBusTransitVehiclesAdapter', () => {

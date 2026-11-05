@@ -132,6 +132,22 @@ describe('fetchNwsPointForecast', () => {
     );
     expect(fetchImpl).not.toHaveBeenCalled();
   });
+
+  it('refuses a coordinate outside the map before fetching', async () => {
+    const fetchImpl = vi.fn();
+    for (const coordinates of [
+      { latitude: Number.NaN, longitude: -77.0352 },
+      { latitude: Number.POSITIVE_INFINITY, longitude: -77.0352 },
+      { latitude: 90.1, longitude: -77.0352 },
+      { latitude: 38.8894, longitude: Number.NEGATIVE_INFINITY },
+      { latitude: 38.8894, longitude: 180.1 },
+    ]) {
+      await expect(fetchNwsPointForecast({ ...coordinates, fetchImpl })).rejects.toThrow(
+        UsSourceApiError
+      );
+    }
+    expect(fetchImpl).not.toHaveBeenCalled();
+  });
 });
 
 describe('nwsPointForecastAdapter', () => {

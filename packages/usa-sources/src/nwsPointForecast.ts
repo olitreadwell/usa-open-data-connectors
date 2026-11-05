@@ -208,11 +208,22 @@ export async function fetchNwsPointForecast(options?: {
       'Pass both latitude and longitude, or neither.'
     );
   }
+  const latitude = options?.latitude ?? NWS_DEFAULT_LATITUDE;
+  const longitude = options?.longitude ?? NWS_DEFAULT_LONGITUDE;
+  if (!Number.isFinite(latitude) || latitude < -90 || latitude > 90) {
+    throw new UsSourceApiError(
+      NWS_POINT_FORECAST_SOURCE_ID,
+      'latitude must be a finite number between -90 and 90.'
+    );
+  }
+  if (!Number.isFinite(longitude) || longitude < -180 || longitude > 180) {
+    throw new UsSourceApiError(
+      NWS_POINT_FORECAST_SOURCE_ID,
+      'longitude must be a finite number between -180 and 180.'
+    );
+  }
   const fetchImpl = options?.fetchImpl ?? globalThis.fetch;
-  const url = buildNwsPointUrl(
-    options?.latitude ?? NWS_DEFAULT_LATITUDE,
-    options?.longitude ?? NWS_DEFAULT_LONGITUDE
-  );
+  const url = buildNwsPointUrl(latitude, longitude);
   const response = await httpGet(NWS_POINT_FORECAST_SOURCE_ID, url, {
     fetchImpl,
     headers: { 'User-Agent': NWS_USER_AGENT },

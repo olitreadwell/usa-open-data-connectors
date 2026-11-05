@@ -236,15 +236,29 @@ export async function fetchNextBusVehicles(options?: {
   routeTag?: string;
   fetchImpl?: typeof globalThis.fetch;
 }): Promise<NextBusVehicleSnapshot> {
-  if ((options?.agencyTag === undefined) !== (options?.routeTag === undefined)) {
+  const agencyTag = options?.agencyTag;
+  const routeTag = options?.routeTag;
+  if ((agencyTag === undefined) !== (routeTag === undefined)) {
     throw new UsSourceApiError(
       NEXTBUS_TRANSIT_VEHICLES_SOURCE_ID,
       'Pass both agencyTag and routeTag, or neither.'
     );
   }
+  if (agencyTag?.trim().length === 0) {
+    throw new UsSourceApiError(
+      NEXTBUS_TRANSIT_VEHICLES_SOURCE_ID,
+      'agencyTag must not be empty or whitespace.'
+    );
+  }
+  if (routeTag?.trim().length === 0) {
+    throw new UsSourceApiError(
+      NEXTBUS_TRANSIT_VEHICLES_SOURCE_ID,
+      'routeTag must not be empty or whitespace.'
+    );
+  }
   const query: NextBusVehicleQuery = {
-    agencyTag: options?.agencyTag ?? NEXTBUS_PORTLAND_STREETCAR_AGENCY_TAG,
-    routeTag: options?.routeTag ?? NEXTBUS_PORTLAND_STREETCAR_ROUTE_TAG,
+    agencyTag: agencyTag?.trim() ?? NEXTBUS_PORTLAND_STREETCAR_AGENCY_TAG,
+    routeTag: routeTag?.trim() ?? NEXTBUS_PORTLAND_STREETCAR_ROUTE_TAG,
   };
   const response = await httpGet(
     NEXTBUS_TRANSIT_VEHICLES_SOURCE_ID,
