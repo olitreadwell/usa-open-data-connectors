@@ -18,8 +18,6 @@ concern. Read `docs/ARCHITECTURE.md` for the plain-language map,
 - `packages/api` - HTTP wrapper (Hono), OpenAPI spec, Swagger UI
 - `packages/cli` - `usdata` command line tool
 - `packages/config-eslint`, `packages/config-typescript` - shared config
-- `python/` - Python port (`nzdata` on PyPI), still on the NZ design
-- `ruby/` - Ruby port (`nzdata` gem), still on the NZ design
 - `docs/` - architecture, security, glossary, releasing
 
 ## Commands
@@ -27,16 +25,13 @@ concern. Read `docs/ARCHITECTURE.md` for the plain-language map,
 ```sh
 npm run check          # format + lint + type-check + tests with coverage
 npm run test:smoke     # live tests against real APIs (needs RUN_SMOKE=1)
-cd python && .venv/bin/ruff check src tests && .venv/bin/mypy && .venv/bin/pytest
-cd ruby && bundle exec rake check
 ```
 
 `npm run build` compiles `usa-sources` and the CLI, in that order: the API and
 CLI type-check against `packages/usa-sources/dist`, so build before
 type-checking.
 
-Run `npm run check` before finishing any TypeScript change. Python and
-Ruby changes run their own gates.
+Run `npm run check` before finishing any change.
 
 ## Quality gates
 
@@ -45,8 +40,6 @@ Ruby changes run their own gates.
 - Every exported function has an explicit return type
 - Every export has a doc comment above it
 - 60% coverage threshold per package, enforced by `npm run check`
-- Python: `ruff` + `mypy` + pytest coverage gate, deps pinned in `uv.lock`
-- Ruby: `rubocop` + SimpleCov gate via `bundle exec rake check`
 - Never fabricate a data source, a stat, or a "this worked" claim
 - Fixtures are real snapshots from the live APIs. Each one records the window
   it covers, in a note inside the file or in its filename

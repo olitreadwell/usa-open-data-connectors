@@ -17,8 +17,6 @@ exposed over the API or committed to the repo.
 | `@usa-open-data-connectors/connectors-api` | Private. HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
 | `@usa-open-data-connectors/config-eslint` | Private. Shared ESLint flat configuration |
 | `@usa-open-data-connectors/config-typescript` | Private. Shared TypeScript compiler settings |
-| `python/` (`nzdata` on PyPI) | Python port, still on the New Zealand sources. See "Language ports" |
-| `ruby/` (`nzdata` gem) | Ruby port, still on the New Zealand sources. See "Language ports" |
 
 ## Connectors
 
@@ -76,8 +74,8 @@ adapters.
 | `publicdatahub-hospital-quality` | CMS hospital quality measures, republished by PublicDataHub | Yes | `npx tsx packages/cli/src/cli.ts probe publicdatahub-hospital-quality` |
 | `nextbus-transit-vehicles` | Portland Streetcar live vehicle positions through the NextBus XML feed | Yes | `npx tsx packages/cli/src/cli.ts probe nextbus-transit-vehicles` |
 
-Each adapter knows how to fetch live data, parse the response, and load a
-committed fixture, so a build never depends on a live API.
+Each adapter knows how to fetch live data and parse the response. Tests load
+a committed fixture; a live call throws instead of falling back to one.
 
 ### Adapter examples
 
@@ -159,15 +157,14 @@ Unit tests use committed fixture snapshots pulled from the live APIs, so they
 run offline. Smoke tests are opt-in via `RUN_SMOKE=1` and hit the real
 endpoints. They need no key.
 
-## Language ports
+## Other languages
 
-- `python/` - Python package, publishable to PyPI as `nzdata` (tag `python-v*`).
-- `ruby/` - Ruby gem, publishable to RubyGems as `nzdata` (tag `ruby-v*`).
+The repo has no Python or Ruby port. Earlier copies were carried over from
+the New Zealand origin, still fetched NZ data, and would have published as
+the `nzdata` package. They were removed on 2026-11-05.
 
-Both ports still implement the New Zealand connector design that this repo
-started from. Porting them to the US sources is follow-up work, tracked in
-`COUNTRY.md`. Each port has its own quality gates (`ruff` + `mypy` + coverage
-for Python, `rubocop` + coverage for Ruby) enforced in CI.
+Use the HTTP API or the `usdata` CLI from Python, R, Julia, or any other
+language. Both print or serve JSON.
 
 ## Run the API in Docker
 

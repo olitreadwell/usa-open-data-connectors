@@ -6,7 +6,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 - Exposes 28 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
-- Loads a committed fixture when the network is unavailable.
+- Loads committed fixtures in tests only; a live fetch never falls back.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
 - Exports named functions for each source, with that source's query parameters.
 

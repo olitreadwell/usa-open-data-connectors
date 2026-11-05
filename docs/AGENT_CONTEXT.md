@@ -7,8 +7,7 @@ the full map.
 ## What this repo is
 
 TypeScript connectors for US public data, with an HTTP API and a CLI. npm
-workspaces, one package per concern. The Python and Ruby ports in
-`python/` and `ruby/` still implement the New Zealand connector design.
+workspaces, one package per concern.
 
 The repo was copied from `nz-open-data-connectors` and is being turned into
 a US connectors repo. The npm scope is now `@usa-open-data-connectors`. The NZ
@@ -26,13 +25,13 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
   NWS and CFPB adapters replace the default `User-Agent` with their own
 - The API and the CLI serve `usa-sources` through the registry. The NZ-only
   routes and CLI commands were removed rather than re-pointed
-- Working tree clean; `npm run check` green
+- `npm run check` is green. The MCP server exposes a named tool for every
+  library query, and `probe_sources` only probes the ids it is given.
 
 ## What is left
 
-1. `python/` and `ruby/` still implement the NZ design. Port or delete them.
-2. Backlog of US sources to add: Census Bureau, BEA, EIA, and api.data.gov.
-3. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
+1. Backlog of US sources to add: Census Bureau, BEA, EIA, and api.data.gov.
+2. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
    `usa-data-lab` repos vendors one package by name and renames its scope as
    it copies. That script matches the old scope, so it needs updating before
    the rename lands there.
@@ -42,8 +41,6 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 ```sh
 npm run check          # format + lint + type-check + tests with coverage
 npm run test:smoke     # live tests against real APIs (needs RUN_SMOKE=1)
-cd python && .venv/bin/ruff check src tests && .venv/bin/mypy && .venv/bin/pytest
-cd ruby && bundle exec rake check
 ```
 
 `npm run build` compiles `usa-sources` before the CLI. The API and CLI
@@ -56,8 +53,6 @@ type-check against `packages/usa-sources/dist`, so build before type-checking.
 - Every exported function has an explicit return type
 - Every export has a doc comment above it
 - 60% coverage threshold per package, enforced by `npm run check`
-- Python: `ruff` + `mypy` + pytest coverage gate, deps pinned in `uv.lock`
-- Ruby: `rubocop` + SimpleCov gate via `bundle exec rake check`
 - Never fabricate a data source, a stat, or a "this worked" claim
 - Fixtures are real snapshots from the live APIs
 

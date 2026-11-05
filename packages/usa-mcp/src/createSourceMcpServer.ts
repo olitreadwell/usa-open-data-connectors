@@ -131,7 +131,7 @@ export function createSourceMcpServer(config: SourceMcpConfig): McpServer {
     {
       title: 'Probe data sources',
       description:
-        'Runs a live fetch against each source and reports whether it answered. Use this before quoting numbers, because a failing source silently falls back to a stale committed fixture.',
+        'Runs a live fetch against each requested source and reports whether it answered. A failing source reports the error; committed fixtures are only read by tests, never as a silent fallback.',
       inputSchema: {
         ids: z
           .array(z.string())

@@ -4,9 +4,9 @@ TypeScript connectors for US public data in `packages/usa-sources`, with an
 HTTP API and a CLI on top of them.
 
 The repo was copied from `nz-open-data-connectors`. The TypeScript side has
-been converted: the npm scope is `@usa-open-data-connectors`, the NZ packages are
-gone, and the API and CLI read the US registry. The Python and Ruby ports in
-`python/` and `ruby/` still implement the NZ design.
+been converted: the npm scope is `@usa-open-data-connectors`, the NZ packages
+are gone, and the API and CLI read the US registry. The earlier Python and
+Ruby copies were removed on 2026-11-05.
 
 ## Adapters
 
@@ -54,7 +54,6 @@ fixture captured from the live service.
       `retryable` on 429, 5xx and network failures
 - [ ] Return licence and attribution metadata per record, instead of leaving
       the publisher's page as the only source
-- [ ] Port `python/` and `ruby/` to the US sources, or delete them
 - [x] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
 - [ ] Add the remaining pending adapters (Census, api.data.gov, BEA, EIA), each verified live before commit
 - [x] Add each new adapter to the registry so the API and CLI pick it up

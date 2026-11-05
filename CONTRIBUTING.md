@@ -8,18 +8,14 @@ unclear, open an issue and ask.
 
 ## Repo map
 
-One design, three languages.
+One design, one language.
 
 - `packages/` - the TypeScript source of truth. This is where the source
   adapters, the HTTP API, and the CLI live.
-- `python/` - a Python port (package name `nzdata`), still on the New
-  Zealand connector design.
-- `ruby/` - a Ruby port (gem name `nzdata`), still on the New Zealand
-  connector design.
 
 A new US source starts in `packages/usa-sources` and is then exposed through
-the API and the CLI. See `docs/ARCHITECTURE.md` for the full map and
-`docs/GLOSSARY.md` for terms.
+the API and the CLI. There is no Python or Ruby port. See
+`docs/ARCHITECTURE.md` for the full map and `docs/GLOSSARY.md` for terms.
 
 ## Set up your machine
 
@@ -29,18 +25,6 @@ the API and the CLI. See `docs/ARCHITECTURE.md` for the full map and
    `nvm`, run `nvm use` first.
 2. Run `npm ci` to install dependencies. This installs the exact
    versions from `package-lock.json`.
-
-### Python
-
-1. Install [uv](https://docs.astral.sh/uv/).
-2. Run `cd python && uv sync`. This creates `.venv/` and installs the
-   pinned dependencies from `uv.lock`.
-
-### Ruby
-
-1. Install Ruby and [Bundler](https://bundler.io/).
-2. Run `cd ruby && bundle install`. This installs the pinned
-   dependencies from `Gemfile.lock`.
 
 ## Quality gates
 
@@ -54,18 +38,6 @@ npm run check
 ```
 
 `npm run check` runs format, lint, type-check, and tests with coverage.
-
-### Python
-
-```sh
-cd python && .venv/bin/ruff check src tests && .venv/bin/mypy && .venv/bin/pytest
-```
-
-### Ruby
-
-```sh
-cd ruby && bundle exec rake check
-```
 
 ### Rules that apply everywhere
 
@@ -118,18 +90,6 @@ TypeScript:
 
 ```sh
 npm run test:smoke
-```
-
-Python:
-
-```sh
-cd python && RUN_SMOKE=1 .venv/bin/pytest tests/test_smoke.py
-```
-
-Ruby:
-
-```sh
-cd ruby && RUN_SMOKE=1 bundle exec rake check
 ```
 
 The registered connectors are keyless, so the TypeScript smoke tests need no

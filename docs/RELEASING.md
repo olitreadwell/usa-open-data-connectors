@@ -7,10 +7,7 @@ tags; there is no separate release machine.
 
 1. Update `CHANGELOG.md` under "Unreleased". Write one line per change,
    in plain language.
-2. Run the full check for the port you are shipping:
-   - TypeScript: `npm run check`
-   - Python: `cd python && .venv/bin/ruff check src tests && .venv/bin/mypy && .venv/bin/pytest`
-   - Ruby: `cd ruby && bundle exec rake check`
+2. Run the full check: `npm run check`.
 3. Commit the version bump and changelog together.
 
 ## TypeScript / HTTP API
@@ -26,8 +23,8 @@ git push origin v0.1.1
 The `v*` tag triggers two workflows:
 
 - `.github/workflows/release.yml` creates a GitHub Release with notes.
-- `.github/workflows/publish-npm.yml` runs `npm stage publish --workspaces`,
-  which stages every public workspace but publishes nothing on its own.
+- `.github/workflows/publish-npm.yml` stages each public workspace whose
+  version is not on npm yet. It publishes nothing on its own.
 
 ### Approving a staged publish
 
@@ -45,38 +42,7 @@ Approving needs an interactive 2FA code. The `NPM_TOKEN` secret must be a
 granular access token with `Read and write (stage only)` access, which cannot
 put a version live on its own.
 
-## Python (`python/`)
-
-1. Bump `version` in `python/pyproject.toml`
-2. Commit
-3. Tag and push:
-
-```sh
-git tag python-v0.2.0
-git push origin python-v0.2.0
-```
-
-`.github/workflows/publish-python.yml` publishes to PyPI.
-
-## Ruby (`ruby/`)
-
-1. Bump `version` in `ruby/nzdata.gemspec`
-2. Commit
-3. Tag and push:
-
-```sh
-git tag ruby-v0.2.0
-git push origin ruby-v0.2.0
-```
-
-`.github/workflows/publish-ruby.yml` publishes the gem.
-
 ## Keeping tags unique
 
-Each port uses its own tag prefix:
-- TypeScript: `v*`
-- Python: `python-v*`
-- Ruby: `ruby-v*`
-
-`git tag` does not warn when a tag already exists. Check with
-`git tag --list "python-v*"` before pushing.
+TypeScript releases use the `v*` tag prefix. `git tag` does not warn when a
+tag already exists, so check `git tag --list "v*"` before pushing.

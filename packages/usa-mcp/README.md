@@ -29,7 +29,7 @@ claude mcp add usa-open-data -- node "$(pwd)/dist/stdio.js"
 | Tool | What it does |
 | --- | --- |
 | `list_sources` | Every source, with the id the other tools take. |
-| `probe_sources` | Live fetch against each source, so you know a number is real and not a stale fixture. |
+| `probe_sources` | Live fetch against each requested source, so you know a number is real and not a stale fixture. |
 | `fetch_source` | One source through its adapter. |
 | `us_bls_unemployment` | Monthly observations for one Bureau of Labor Statistics series. |
 | `us_usgs_earthquakes` | Earthquakes around the main Hawaiian islands. |
@@ -42,10 +42,31 @@ claude mcp add usa-open-data -- node "$(pwd)/dist/stdio.js"
 | `us_usgs_peak_streamflow` | Annual peak streamflow at a USGS site. |
 | `us_cpsc_product_recalls` | CPSC product recalls by year, remedy, and country. |
 | `us_cfpb_consumer_complaints` | CFPB complaint counts and top products and companies. |
+| `us_sec_edgar` | Recent SEC EDGAR filings for one CIK. |
+| `us_fdic_banks` | One row per insured institution from the FDIC directory. |
+| `us_clinicaltrials` | Registered studies from ClinicalTrials.gov. |
+| `us_nws_forecast` | National Weather Service grid point and forecast URLs. |
+| `us_pubmed_search` | PubMed article search. |
+| `us_nyc_open_data` | The New York City Open Data catalogue. |
+| `us_bts_stats` | The Bureau of Transportation Statistics catalogue. |
+| `us_college_scorecard` | Institution outcomes from the College Scorecard. |
+| `us_publicdatahub_hospital` | Hospital quality measures from PublicDataHub. |
+| `us_nextbus_vehicles` | Live NextBus vehicle positions. |
+| `us_epa_facilities` | EPA Envirofacts Toxics Release Inventory facilities. |
+| `us_usaspending_agencies` | Top-tier federal agencies from USAspending. |
+| `us_treasury_debt` | US Treasury debt to the penny. |
+| `us_cdc_socrata` | The CDC Socrata catalogue. |
+| `us_healthdata_socrata` | The HealthData.gov Socrata catalogue. |
+| `us_estimate_tax` | US federal, state, and local income tax for one salary. |
+| `us_callook_callsigns` | FCC amateur radio callsign lookups through Callook. |
 
 ## Notes and limits
 
-- `probe_sources` matters more than it looks. Every adapter falls back to a committed fixture when the upstream API is slow, so a build never fails on a flaky government host. A number can be months old without anyone noticing. Probe first when the freshness of the answer matters.
+- `probe_sources` takes optional `ids` and probes only those sources. A failed live fetch returns an error; fixtures are never a silent fallback.
+- `us_nws_forecast` takes both `latitude` and `longitude`, or neither for Washington, DC.
+- `us_nextbus_vehicles` takes both `agencyTag` and `routeTag`, or neither for the Portland Streetcar.
+- `us_epa_facilities` defaults to Rhode Island and accepts a two-letter state code.
+- The NYC, BTS, CDC, and HealthData catalogue tools cap `limit` at 10,000 entries.
 - Every source in this library is keyless. No tool needs an account.
 - Claude Desktop reads the same server block from `claude_desktop_config.json`. On macOS that file is at `~/Library/Application Support/Claude/claude_desktop_config.json`.
 - ChatGPT connectors take a remote MCP endpoint. Put a tunnel in front of the stdio server, for example `cloudflared tunnel --url http://localhost:PORT`, then point the connector at the tunnel URL.

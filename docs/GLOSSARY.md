@@ -63,8 +63,8 @@ Plain-language definitions. Terms used in this repo, in alphabetical order.
 
 ## P
 
-- **Port** - a copy of the same design in another language. `python/` and
-  `ruby/` are ports of the original connector design.
+- **Port** - a copy of the same design in another language. This repo has no
+  language port; use the HTTP API or the CLI from another language.
 
 - **Probe** - a live fetch that checks whether a source answers and parses.
 

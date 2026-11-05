@@ -80,6 +80,15 @@ describe('createSourceMcpServer', () => {
     expect(JSON.parse(firstText(result))[0].ok).toBe(true);
   });
 
+  it('passes the requested ids through to the probe', async () => {
+    const probeSources = vi.fn().mockResolvedValue([]);
+    const client = await connectClient(buildServer({ probeSources }));
+
+    await client.callTool({ name: 'probe_sources', arguments: { ids: ['alpha'] } });
+
+    expect(probeSources).toHaveBeenCalledWith(['alpha']);
+  });
+
   it('passes the api key through to the adapter fetch', async () => {
     const fetchSource = vi.fn().mockResolvedValue({ ok: true });
     const client = await connectClient(buildServer({ fetchSource }));

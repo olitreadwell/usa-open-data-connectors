@@ -9,7 +9,7 @@ Use the issue templates in `.github/ISSUE_TEMPLATE/`. A good report includes:
 - what you expected and what came back
 - the output, including the error message and, when there is one, the HTTP
   status
-- your Node version, and your Python or Ruby version if you use a port
+- your Node version
 
 Never paste an API key into an issue.
 

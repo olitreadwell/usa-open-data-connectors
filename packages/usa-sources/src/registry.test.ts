@@ -339,6 +339,13 @@ const FIXTURE_FETCH = (async (input: string | URL) =>
     status: 200,
   })) as unknown as typeof globalThis.fetch;
 
+function fetchUrl(input: string | URL | Request): string {
+  if (typeof input === 'string') {
+    return input;
+  }
+  return input instanceof URL ? input.href : input.url;
+}
+
 describe('US_DATA_SOURCES', () => {
   it('registers the unemployment adapter with a unique id', () => {
     const ids = US_DATA_SOURCES.map((source) => source.id);
@@ -460,4 +467,27 @@ describe('probeAllUsDataSources', () => {
     expect(probes).toHaveLength(US_DATA_SOURCES.length);
     expect(probes.every((probe) => probe.ok)).toBe(true);
   }, 15_000);
+
+  it('probes only the requested sources', async () => {
+    const fetchImpl = vi.fn(FIXTURE_FETCH);
+    const probes = await probeAllUsDataSources({
+      ids: ['bls-unemployment-rate'],
+      fetchImpl,
+    });
+
+    expect(probes.map((probe) => probe.id)).toEqual(['bls-unemployment-rate']);
+    expect(fetchImpl).toHaveBeenCalled();
+    expect(fetchImpl.mock.calls.every(([input]) => fetchUrl(input).includes('api.bls.gov'))).toBe(
+      true
+    );
+  });
+
+  it('returns no probes for an explicit empty id list', async () => {
+    const fetchImpl = vi.fn(FIXTURE_FETCH);
+
+    const probes = await probeAllUsDataSources({ ids: [], fetchImpl });
+
+    expect(probes).toEqual([]);
+    expect(fetchImpl).not.toHaveBeenCalled();
+  });
 });

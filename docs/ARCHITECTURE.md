@@ -9,13 +9,8 @@ TypeScript connectors for US public data, with an HTTP API and a CLI on top
 of them.
 
 - TypeScript: the source of truth. Adapters, HTTP API, CLI.
-- Python: a port (`python/`, package name `nzdata`), still on the New
-  Zealand connector design.
-- Ruby: a port (`ruby/`, gem name `nzdata`), still on the New Zealand
-  connector design.
 
-The TypeScript packages are what the repo is for right now. The two ports
-predate the move to US sources and are queued for the same treatment.
+The repo has no other language port.
 
 ## The pieces
 
@@ -25,8 +20,6 @@ predate the move to US sources and are queued for the same treatment.
 | HTTP API | `packages/api` | Exposes the registry over HTTP, with an OpenAPI spec |
 | CLI | `packages/cli` | Exposes the registry on the command line as `usdata` |
 | Config packages | `packages/config-eslint`, `packages/config-typescript` | Shared lint and TypeScript settings |
-| Python port | `python/` | The NZ adapters and client in Python |
-| Ruby port | `ruby/` | The NZ adapters and client in Ruby |
 
 ## How a request flows
 
@@ -34,7 +27,6 @@ Every adapter speaks one interface (`UsDataAdapter`). It knows how to:
 1. describe itself (`id`, `name`, `auth`, `description`)
 2. fetch live data
 3. parse a response into plain objects
-4. load a committed fixture when there is no network
 
 The HTTP API and the CLI both go through `US_DATA_SOURCES` in
 `packages/usa-sources/src/registry.ts`. They never call an agency endpoint
@@ -72,7 +64,7 @@ committed to the repo. `normalizeSourceApiKey` in
 `packages/usa-sources/src/apiKey.ts` trims a key that is set but blank, so it
 is treated as unset.
 
-## Fixtures instead of the live network
+## Tests use fixtures
 
 Tests never touch the network unless you set `RUN_SMOKE=1`.
 
@@ -81,6 +73,7 @@ snapshot of a live API response. Each fixture records the window it covers,
 either in a note inside the file or in its filename.
 
 Why: tests run fast, offline, and give the same answer on every machine.
+Fixtures are test-only; a live fetch throws instead of falling back to one.
 
 ## Testing strategy
 
@@ -97,10 +90,9 @@ routes in step. Change one without the other and it fails.
 
 ## Where quality gates live
 
-- Coverage threshold 60% per package: `vitest.config.ts` (TypeScript),
-  `pyproject.toml` (Python), `spec_helper.rb` (Ruby)
-- Lint: ESLint (TypeScript), `ruff` (Python), `rubocop` (Ruby)
-- Type check: `tsc` (TypeScript), `mypy` (Python)
+- Coverage threshold 60% per package: `vitest.config.ts`
+- Lint: ESLint
+- Type check: `tsc`
 - CI: `.github/workflows/ci.yml`, `.github/workflows/smoke.yml`
 
 `npm run build` compiles `usa-sources` before the CLI, because the API and CLI

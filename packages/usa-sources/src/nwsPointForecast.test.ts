@@ -124,6 +124,14 @@ describe('fetchNwsPointForecast', () => {
     const fetchImpl = vi.fn().mockResolvedValue(new Response('nope', { status: 500 }));
     await expect(fetchNwsPointForecast({ fetchImpl })).rejects.toThrow(UsSourceApiError);
   });
+
+  it('refuses one coordinate without the other before fetching', async () => {
+    const fetchImpl = vi.fn();
+    await expect(fetchNwsPointForecast({ latitude: 40.7, fetchImpl })).rejects.toThrow(
+      UsSourceApiError
+    );
+    expect(fetchImpl).not.toHaveBeenCalled();
+  });
 });
 
 describe('nwsPointForecastAdapter', () => {

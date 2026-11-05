@@ -60,13 +60,11 @@ export function parseUpdates(body) {
   const linkTableRe = /^\| \[([^\]]+)\]\([^)]*\) \| ([\w.+-]+) \| ([\w.+-]+) \|$/gm;
   const plainTableRe = /^\| ([^|[\]]+) \| ([\w.+-]+) \| ([\w.+-]+) \|$/gm;
   const singleRe = /\[([^\]]+)\]\([^)]*\) from ([\w.+-]+) to ([\w.+-]+)/g;
-  const pipRe = /Updates:?\s+([\w.-]+) from ([\w.+-]+) to ([\w.+-]+)/g;
   const backtickRe = /Updates?\s+`([^`]+)` from ([\w.+-]+) to ([\w.+-]+)/g;
   for (const m of body.matchAll(linkTableRe)) updates.push({ name: m[1], from: m[2], to: m[3] });
   for (const m of body.matchAll(plainTableRe))
     updates.push({ name: m[1].trim(), from: m[2], to: m[3] });
   for (const m of body.matchAll(singleRe)) updates.push({ name: m[1], from: m[2], to: m[3] });
-  for (const m of body.matchAll(pipRe)) updates.push({ name: m[1], from: m[2], to: m[3] });
   for (const m of body.matchAll(backtickRe)) updates.push({ name: m[1], from: m[2], to: m[3] });
   const clean = updates
     .map((u) => ({ name: u.name, from: versionOf(u.from), to: versionOf(u.to) }))
@@ -93,15 +91,6 @@ export async function npmReleaseDate(name, version) {
   const doc = await res.json();
   const published = doc?.time?.[version];
   return published ? new Date(published) : null;
-}
-
-export async function pypiReleaseDate(name, version) {
-  const res = await fetch(`https://pypi.org/pypi/${name}/${version}/json`);
-  if (!res.ok) return null;
-  const doc = await res.json();
-  const stamp =
-    doc?.urls?.[0]?.upload_time_iso_8601 ?? doc?.releases?.[version]?.[0]?.upload_time_iso_8601;
-  return stamp ? new Date(stamp) : null;
 }
 
 export async function githubReleaseDate(name, version) {
@@ -166,9 +155,6 @@ export function dependencyTypeOf(name, body) {
   if (group) return group[1];
   const head = body.split('\n').slice(0, 3).join('\n');
   if (head.includes('github-actions group')) return 'actions';
-  if (head.includes('Updates the requirements') || head.includes('Updates:')) {
-    return readFileSafe('requirements-dev.txt', '').includes(name) ? 'development' : 'production';
-  }
   for (const manifest of packageJsonPaths()) {
     const raw = readFileSafe(manifest, '');
     if (!raw) continue;
@@ -322,7 +308,6 @@ export function blockingCheck(prUrl) {
 }
 
 async function releaseDateFor(name, version, ecosystem) {
-  if (ecosystem === 'pip') return pypiReleaseDate(name, version);
   if (ecosystem === 'actions') return githubReleaseDate(name, version);
   return npmReleaseDate(name, version);
 }
@@ -330,7 +315,6 @@ async function releaseDateFor(name, version, ecosystem) {
 function ecosystemOf(body) {
   const head = body.split('\n').slice(0, 3).join('\n');
   if (head.includes('github-actions group')) return 'actions';
-  if (head.includes('Updates the requirements') || head.includes('Updates:')) return 'pip';
   return 'npm';
 }
 

@@ -113,48 +113,6 @@ jobs:
             packages/api/coverage/
             packages/cli/coverage/
 
-  # Blocks — the Python port must stay green.
-  python-test:
-    name: Python Tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
-        with:
-          python-version: '3.14.7'
-      - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
-        with:
-          version: '0.12.19'
-      - run: uv sync --locked --extra dev
-        working-directory: python
-      - run: .venv/bin/ruff check src tests
-        working-directory: python
-      - run: .venv/bin/mypy
-        working-directory: python
-      - run: .venv/bin/pytest
-        working-directory: python
-
-  # Blocks — the Ruby port must stay green.
-  ruby-test:
-    name: Ruby Tests
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        ruby-version: ['3.0', '3.3']
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - uses: ruby/setup-ruby@7f797815d8adceb1c412e7abefdd1ab4abc47a5f # v1.335.0
-        with:
-          ruby-version: ${{ matrix.ruby-version }}
-          bundler-cache: true
-          working-directory: ruby
-      - run: bundle exec rake check
-        working-directory: ruby
-      - name: Validate gem build
-        run: gem build nzdata.gemspec
-        working-directory: ruby
-
   codeql:
     name: CodeQL Security Scan
     runs-on: ubuntu-latest
@@ -165,6 +123,6 @@ jobs:
       - name: Initialize CodeQL
         uses: github/codeql-action/init@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1
         with:
-          languages: javascript-typescript, python, ruby
+          languages: javascript-typescript
       - name: Run CodeQL analysis
         uses: github/codeql-action/analyze@9b3254085494b55a0f7c4c2b3d2d52cc712ce370 # v4.39.1

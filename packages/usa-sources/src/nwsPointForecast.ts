@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-import { UsSourceParseError } from './errors.js';
+import { UsSourceApiError, UsSourceParseError } from './errors.js';
 import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
 import type { UsDataAdapter } from './types.js';
@@ -202,6 +202,12 @@ export async function fetchNwsPointForecast(options?: {
   longitude?: number;
   fetchImpl?: typeof globalThis.fetch;
 }): Promise<NwsForecastPoint> {
+  if ((options?.latitude === undefined) !== (options?.longitude === undefined)) {
+    throw new UsSourceApiError(
+      NWS_POINT_FORECAST_SOURCE_ID,
+      'Pass both latitude and longitude, or neither.'
+    );
+  }
   const fetchImpl = options?.fetchImpl ?? globalThis.fetch;
   const url = buildNwsPointUrl(
     options?.latitude ?? NWS_DEFAULT_LATITUDE,

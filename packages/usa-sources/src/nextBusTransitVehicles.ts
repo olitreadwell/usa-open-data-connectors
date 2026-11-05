@@ -1,7 +1,7 @@
 import { XMLParser } from 'fast-xml-parser';
 import { z } from 'zod';
 
-import { UsSourceParseError } from './errors.js';
+import { UsSourceApiError, UsSourceParseError } from './errors.js';
 import { readFixtureText } from './fixtures.js';
 import { httpGet } from './http.js';
 import type { UsDataAdapter } from './types.js';
@@ -236,6 +236,12 @@ export async function fetchNextBusVehicles(options?: {
   routeTag?: string;
   fetchImpl?: typeof globalThis.fetch;
 }): Promise<NextBusVehicleSnapshot> {
+  if ((options?.agencyTag === undefined) !== (options?.routeTag === undefined)) {
+    throw new UsSourceApiError(
+      NEXTBUS_TRANSIT_VEHICLES_SOURCE_ID,
+      'Pass both agencyTag and routeTag, or neither.'
+    );
+  }
   const query: NextBusVehicleQuery = {
     agencyTag: options?.agencyTag ?? NEXTBUS_PORTLAND_STREETCAR_AGENCY_TAG,
     routeTag: options?.routeTag ?? NEXTBUS_PORTLAND_STREETCAR_ROUTE_TAG,

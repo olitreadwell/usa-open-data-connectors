@@ -127,6 +127,14 @@ describe('fetchNextBusVehicles', () => {
     const fetchImpl = vi.fn().mockResolvedValue(new Response('nope', { status: 500 }));
     await expect(fetchNextBusVehicles({ fetchImpl })).rejects.toThrow(UsSourceApiError);
   });
+
+  it('refuses half a route pair before fetching', async () => {
+    const fetchImpl = vi.fn();
+    await expect(fetchNextBusVehicles({ agencyTag: 'portland-sc', fetchImpl })).rejects.toThrow(
+      UsSourceApiError
+    );
+    expect(fetchImpl).not.toHaveBeenCalled();
+  });
 });
 
 describe('nextBusTransitVehiclesAdapter', () => {
