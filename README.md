@@ -22,7 +22,7 @@ exposed over the API or committed to the repo.
 
 ## Connectors
 
-Twenty-seven adapters, all in `@usa-open-data-connectors/usa-sources`. All are
+Twenty-eight adapters, all in `@usa-open-data-connectors/usa-sources`. All are
 keyless and need no environment variable.
 
 Most of this data comes from US federal agencies, and works of the US federal

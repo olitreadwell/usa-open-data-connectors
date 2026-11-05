@@ -5,7 +5,7 @@ are, and what to check before shipping.
 
 ## API keys
 
-No registered connector needs a key today. Both adapters in
+No registered connector needs a key today. All adapters in
 `packages/usa-sources` are keyless. When a keyed source lands, its key gets an
 environment variable and is added to this list.
 

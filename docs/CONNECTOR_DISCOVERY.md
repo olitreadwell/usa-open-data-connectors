@@ -1,12 +1,13 @@
 # Connector discovery notes (US)
 
-Findings from the US source passes. Twenty-six keyless adapters are built and
+Findings from the US source passes. Twenty-eight keyless adapters are built and
 verified against live APIs, and each has a fixture committed from the same
 endpoint.
 
 Eleven adapters were added on 2026-10-05. Those eleven were probed live that
 day with `curl`, and their fixtures were captured then. The earlier eleven
-were captured between 2026-09-23 and 2026-10-03.
+were captured between 2026-09-23 and 2026-10-03. Six more adapters were added
+after those, through 2026-10-22.
 
 ## Adapters built
 
@@ -153,9 +154,11 @@ everywhere, and a few services attach their own terms on top.
 | `nyc-open-data-catalogue` | New York City Open Data | City of New York public data, published under the portal's terms. Check the dataset page before reuse |
 | `estimatetax-income-tax` | EstimateTax | Private publisher, not a federal agency. The API terms ask for attribution and the source document alongside any displayed figure. No open licence is stated for the API output. |
 | `college-scorecard-institutions` | College Scorecard, US Department of Education | US federal work, public domain in the US |
+| `publicdatahub-hospital-quality` | PublicDataHub, from the Centers for Medicare & Medicaid Services | CMS provider data is US federal work, public domain in the US. The response provenance names the licence as U.S. Public Domain. |
 | `callook-callsigns` | Callook.info, from the FCC licence file | FCC licence records are US federal work, public domain in the US. Callook.info serves the records and calculates the coordinates and grid square. Its API reference says the data is free to use. |
 | `nextbus-transit-vehicles` | Portland Streetcar, served by Umo IQ | Transit agency data. The feed carries a copyright notice for the agency and Umo IQ, and states no open licence. Check the agency's terms before republishing. |
 
-No adapter returns licence metadata today, and no adapter can tell you whether a
-particular dataset has terms on top. Read the publisher's page before you
-republish, and credit the publisher rather than this library.
+Only `publicdatahub-hospital-quality` returns licence metadata today, in its
+`provenance` fields. The other adapters do not. That metadata covers the record
+it comes with, not every dataset a publisher offers. Read the publisher's page
+before you republish, and credit the publisher rather than this library.

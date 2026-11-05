@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 26 source adapters behind one interface.
+- Exposes 28 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads a committed fixture when the network is unavailable.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -55,6 +55,7 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `nyc-open-data-catalogue` | New York City Open Data | The NYC Socrata catalogue, one row per published dataset or map. |
 | `callook-callsigns` | Callook.info | US amateur radio callsign records from the FCC licence file, with the licence class, location, and expiry. |
 | `college-scorecard-institutions` | College Scorecard, US Department of Education | Institution-level enrollment, cost, completion, debt, and earnings ten years after entry for US colleges. |
+| `publicdatahub-hospital-quality` | PublicDataHub, from the Centers for Medicare & Medicaid Services | Medicare-certified hospital quality measures, with national ranks and provenance. |
 | `nextbus-transit-vehicles` | Portland Streetcar, through the NextBus XML feed | Live positions, headings, speeds, and report ages for the streetcars on the NS line. |
 
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
@@ -670,6 +671,8 @@ The data comes from US federal agencies and the open data catalogue services the
 | New York City Open Data | `https://data.cityofnewyork.us/api/views.json` |
 | Callook.info | `https://callook.info/[callsign]/json` |
 | College Scorecard, US Department of Education | `https://ed-public-download.scorecard.network/downloads/Most-Recent-Cohorts-Institution_10152026.zip` |
+| PublicDataHub, from the Centers for Medicare & Medicaid Services | `https://publicdatahub.org/api/export/hospital/{slug}.json` |
+| Portland Streetcar, through the NextBus XML feed | `https://retro.umoiq.com/service/publicXMLFeed?command=vehicleLocations&a=portland-sc&r=193&t=0` |
 
 Each publisher sets its own terms for its data. The Socrata discovery responses can carry rights and
 metadata fields, but the catalogue adapters in this package keep a subset of the entry fields and do not
