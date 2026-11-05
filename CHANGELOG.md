@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Ports: add keyless Python and Ruby ports with all 28 TypeScript adapter ids,
+  each with a live fetcher, parser, committed fixture, and offline test.
 - Remove the NZ Python and Ruby copies and their publishing workflows. The repo is TypeScript only.
 - MCP: add named tools for every registered source, probe only the source ids a caller asks for, and reject unknown ids.
 - Sources: reject NextBus tags that are blank after trimming, and NWS coordinates that are not finite or outside the valid range.
