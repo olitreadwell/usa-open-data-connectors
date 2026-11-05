@@ -159,12 +159,39 @@ endpoints. They need no key.
 
 ## Other languages
 
-The repo has no Python or Ruby port. Earlier copies were carried over from
-the New Zealand origin, still fetched NZ data, and would have published as
-the `nzdata` package. They were removed on 2026-11-05.
+The repo includes Python and Ruby ports with the same 28 adapter ids as the
+TypeScript registry. Each ported adapter has a live fetcher, a parser, a
+committed fixture, and an offline test. Both ports use the shared fixtures in
+`packages/usa-sources/src/fixtures`, so a snapshot is stored once.
 
-Use the HTTP API or the `usdata` CLI from Python, R, Julia, or any other
-language. Both print or serve JSON.
+Python lives in `python/src/usadata` and Ruby lives in `ruby/lib/usadata`.
+Both are keyless and expose `US_DATA_SOURCES`, `get_us_data_source`, and
+`probe_all_us_data_sources`. Use them from a source checkout:
+
+```python
+import sys
+sys.path.insert(0, "python/src")
+
+from usadata import US_DATA_SOURCES
+print([source.id for source in US_DATA_SOURCES])
+```
+
+```ruby
+$LOAD_PATH.unshift("ruby/lib")
+require "usadata"
+
+puts Usadata::US_DATA_SOURCES.map(&:id)
+```
+
+Run the offline port tests with:
+
+```sh
+PYTHONPATH=python/src python -m pytest python/tests
+ruby -I ruby/lib -I ruby/spec ruby/spec/sources_spec.rb
+```
+
+The HTTP API and `usdata` CLI remain the simplest option from R, Julia, or any
+other language. Both print or serve JSON.
 
 ## Run the API in Docker
 
