@@ -81,6 +81,8 @@ describe('parseNycOpenDataCataloguePayload', () => {
       viewLastModifiedEpochSeconds: 200,
       viewCount: 5,
       downloadCount: 1,
+      licenceUrl: '',
+      attribution: '',
     });
   });
 
@@ -170,6 +172,8 @@ describe('the committed NYC fixture', () => {
     expect(catalogue.mapCount).toBe(5);
     expect(catalogue.totalViewCount).toBe(251_594);
     expect(catalogue.totalDownloadCount).toBe(64_174);
+    expect(catalogue.entries[0]?.licenceUrl).toBe('');
+    expect(catalogue.entries[0]?.attribution).toBe('');
     expect(catalogue.categories[0]).toEqual({ category: 'Transportation', entryCount: 17 });
   });
 
