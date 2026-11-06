@@ -9,6 +9,7 @@ import { epaEnvirofactsFacilitiesAdapter } from './epaEnvirofactsFacilities.js';
 import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
 import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
 import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
+import { nihReporterProjectsAdapter } from './nihReporterProjects.js';
 import { nycOpenDataCatalogueAdapter } from './nycOpenDataCatalogue.js';
 import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
@@ -50,6 +51,7 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   usaspendingAgenciesAdapter,
   epaEnvirofactsFacilitiesAdapter,
   ncbiPubmedSearchAdapter,
+  nihReporterProjectsAdapter,
   cdcSocrataCatalogueAdapter,
   healthdataSocrataCatalogueAdapter,
   nycOpenDataCatalogueAdapter,

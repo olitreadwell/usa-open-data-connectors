@@ -375,6 +375,24 @@ export {
 } from './ncbiPubmedSearch.js';
 /** NCBI PubMed search types. */
 export type { NcbiPubmedSearchResult, NcbiPubmedTranslation } from './ncbiPubmedSearch.js';
+/** NIH RePORTER funded projects (keyless). */
+export {
+  buildNihReporterSearchBody,
+  fetchNihReporterProjects,
+  NIH_REPORTER_DEFAULT_FISCAL_YEAR,
+  NIH_REPORTER_PAGE_SIZE,
+  NIH_REPORTER_SEARCH_URL,
+  NIH_REPORTER_SOURCE_ID,
+  nihReporterProjectsAdapter,
+  parseNihReporterProjectsPayload,
+} from './nihReporterProjects.js';
+/** NIH RePORTER project types. */
+export type {
+  NihReporterProject,
+  NihReporterProjectPage,
+  NihReporterProjectQuery,
+  NihReporterSearchBody,
+} from './nihReporterProjects.js';
 /** CDC Socrata catalogue of public health datasets (keyless). */
 export {
   buildCdcSocrataCatalogueUrl,

@@ -75,6 +75,55 @@ export async function httpGet(
   url: string | URL,
   options: HttpGetOptions = {}
 ): Promise<Response> {
+  return fetchWithRetry(
+    source,
+    url,
+    {
+      method: 'GET',
+      ...(options.headers === undefined ? {} : { headers: options.headers }),
+    },
+    options
+  );
+}
+
+/**
+ * Issues a JSON POST through the shared HTTP layer.
+ *
+ * The body is serialised as JSON, and the request carries the same identity,
+ * timeout, and retry classification as every GET.
+ *
+ * @param source - Source name used in the error message, e.g. "nih-reporter-projects".
+ * @param url - Absolute URL or URL object to fetch.
+ * @param body - JSON-serialisable value sent as the request body.
+ * @param options - Fetch override, extra headers, and timeout.
+ * @returns The response, already checked for a successful status.
+ * @throws {UsSourceApiError} On a non-2xx status, an abort, or a network error.
+ */
+export async function httpPostJson(
+  source: string,
+  url: string | URL,
+  body: unknown,
+  options: HttpGetOptions = {}
+): Promise<Response> {
+  return fetchWithRetry(
+    source,
+    url,
+    {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers: { 'content-type': 'application/json', ...options.headers },
+    },
+    options
+  );
+}
+
+/** Runs one request with the shared headers, timeout, and retry policy. */
+async function fetchWithRetry(
+  source: string,
+  url: string | URL,
+  request: Pick<RequestInit, 'method' | 'body' | 'headers'>,
+  options: HttpGetOptions
+): Promise<Response> {
   const doFetch = options.fetchImpl ?? globalThis.fetch;
   const timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
   const retries = options.retries ?? 0;
@@ -85,7 +134,8 @@ export async function httpGet(
     let response: Response;
     try {
       response = await doFetch(url, {
-        headers: buildRequestHeaders(options.headers),
+        ...request,
+        headers: buildRequestHeaders(request.headers as Record<string, string> | undefined),
         signal: controller.signal,
       });
     } catch (error) {

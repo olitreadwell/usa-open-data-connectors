@@ -1,13 +1,13 @@
 # Connector discovery notes (US)
 
-Findings from the US source passes. Twenty-eight keyless adapters are built and
+Findings from the US source passes. Twenty-nine keyless adapters are built and
 verified against live APIs, and each has a fixture committed from the same
 endpoint.
 
 Eleven adapters were added on 2026-10-05. Those eleven were probed live that
 day with `curl`, and their fixtures were captured then. The earlier eleven
 were captured between 2026-09-23 and 2026-10-03. Six more adapters were added
-after those, through 2026-10-22.
+after those, through 2026-10-22. NIH RePORTER was added on 2026-11-07.
 
 ## Adapters built
 
@@ -34,6 +34,7 @@ after those, through 2026-10-22.
 | `usaspending-agencies` | USAspending | `https://api.usaspending.gov/api/v2/references/toptier_agencies/` | `usaspending-agencies-2026-10-05.json` |
 | `epa-envirofacts-facilities` | EPA Envirofacts | `https://data.epa.gov/efservice/TRI_FACILITY/STATE_ABBR/RI/rows/0:9/JSON` | `epa-envirofacts-facilities-2026-10-05.json` |
 | `ncbi-pubmed-search` | NCBI PubMed | `https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi` | `ncbi-pubmed-search-2026-10-05.json` |
+| `nih-reporter-projects` | NIH RePORTER | `https://api.reporter.nih.gov/v2/projects/search` | `nih-reporter-projects-fy2025-2026-11-07.json` |
 | `cdc-socrata-catalogue` | CDC Socrata | `https://data.cdc.gov/api/views.json` | `cdc-socrata-catalogue-2026-10-05.json` |
 | `healthdata-socrata-catalogue` | HealthData.gov | `https://healthdata.gov/api/views.json` | `healthdata-socrata-catalogue-2026-10-05.json` |
 | `bts-transportation-stats` | Bureau of Transportation Statistics | `https://data.bts.gov/api/views.json` | `bts-transportation-stats-2026-10-05.json` |
@@ -96,6 +97,7 @@ curl -sS -A "$UA_BROWSER" 'https://data.cityofnewyork.us/api/views.json?limit=50
 | USAspending `api.usaspending.gov` | LIVE | Keyless. Returns 111 top-tier agencies for fiscal 2026 quarter 4. Some agencies have no congressional justification URL, which arrives as null. |
 | EPA Envirofacts `data.epa.gov` | LIVE | Keyless. The filter segment takes the value on its own, directly after the column: `TRI_FACILITY/STATE_ABBR/RI/rows/0:9/JSON` answers ten Rhode Island facilities. The service also accepts an `equals` operator in that position without complaining, but then returns the table's first rows regardless, so the adapter's URL builder does not emit one. |
 | NCBI `eutils.ncbi.nlm.nih.gov` | LIVE | Keyless. Every count arrives as a string. A rejected query answers HTTP 200 with an `error` key inside `esearchresult`, which the parser turns into an API error. |
+| NIH RePORTER `api.reporter.nih.gov` | LIVE | Keyless. The project search is a JSON POST. The response carries `meta` with the total match count and `results` with snake-case project rows. Sorting by `award_amount` descending works; sorting by `project_num` returned an unexpected-error body on 2026-11-07, so the adapter does not use it. |
 | CDC `data.cdc.gov` Socrata catalogue | LIVE | Keyless. The discovery API answers a bare JSON array of catalogue entries, not dataset rows. An entry can arrive without a category, which the adapter counts under `Uncategorised`. |
 | HealthData.gov `healthdata.gov` Socrata catalogue | LIVE | Keyless. Same shape as the CDC catalogue. The page captured on 2026-10-05 held no `dataset` entries: all ten were `href` records. |
 | BTS `data.bts.gov` Socrata catalogue | LIVE | Keyless. Same shape as the other two Socrata catalogues. The page mixes datasets, charts, and stories. |
@@ -106,6 +108,14 @@ curl -sS -A "$UA_BROWSER" 'https://data.cityofnewyork.us/api/views.json?limit=50
 
 ```sh
 curl -sS 'https://estimatetax.net/api/v1/calculate?income=85000&state=NY&city=new-york-city&filingStatus=single'
+```
+
+## Exact curl command for the 2026-11-07 addition
+
+```sh
+curl -sS -X POST 'https://api.reporter.nih.gov/v2/projects/search' \
+  -H 'Content-Type: application/json' \
+  --data '{"criteria":{"fiscal_years":[2025],"agencies":["NIH"]},"include_fields":["ProjectNum","CoreProjectNum","ProjectTitle","FiscalYear","AwardAmount","Organization","PrincipalInvestigators","ProjectStartDate","ProjectEndDate","AgencyIcAdmin","ProjectDetailUrl"],"offset":0,"limit":10,"sort_field":"award_amount","sort_order":"desc"}'
 ```
 
 ## Candidates not yet probed
@@ -149,6 +159,7 @@ everywhere, and a few services attach their own terms on top.
 | `usaspending-agencies` | USAspending, US Treasury | US federal work, public domain in the US |
 | `epa-envirofacts-facilities` | Environmental Protection Agency | US federal work, public domain in the US |
 | `ncbi-pubmed-search` | National Center for Biotechnology Information | US federal work, but NLM attaches its own terms to some content. Check the NLM terms before bulk reuse |
+| `nih-reporter-projects` | National Institutes of Health | US federal work, public domain in the US |
 | `healthdata-socrata-catalogue` | HealthData.gov, US Department of Health and Human Services | US federal work, public domain in the US |
 | `bts-transportation-stats` | Bureau of Transportation Statistics | US federal work, public domain in the US |
 | `nyc-open-data-catalogue` | New York City Open Data | City of New York public data, published under the portal's terms. Check the dataset page before reuse |

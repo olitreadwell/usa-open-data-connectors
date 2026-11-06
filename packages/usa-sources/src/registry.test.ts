@@ -15,6 +15,7 @@ import { epaEnvirofactsFacilitiesAdapter } from './epaEnvirofactsFacilities.js';
 import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
 import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
 import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
+import { nihReporterProjectsAdapter } from './nihReporterProjects.js';
 import { nycOpenDataCatalogueAdapter } from './nycOpenDataCatalogue.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
 import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
@@ -172,6 +173,10 @@ const RAW_PUBMED_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/ncbi-pubmed-search-2026-10-05.json'),
   'utf8'
 );
+const RAW_NIH_REPORTER_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/nih-reporter-projects-fy2025-2026-11-07.json'),
+  'utf8'
+);
 const RAW_CDC_CATALOGUE_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/cdc-socrata-catalogue-2026-10-05.json'),
   'utf8'
@@ -306,6 +311,9 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'eutils.ncbi.nlm.nih.gov') {
     return RAW_PUBMED_FIXTURE;
   }
+  if (hostname === 'api.reporter.nih.gov') {
+    return RAW_NIH_REPORTER_FIXTURE;
+  }
   if (hostname === 'healthdata.gov') {
     return RAW_HEALTHDATA_FIXTURE;
   }
@@ -368,6 +376,7 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('usaspending-agencies');
     expect(ids).toContain('epa-envirofacts-facilities');
     expect(ids).toContain('ncbi-pubmed-search');
+    expect(ids).toContain('nih-reporter-projects');
     expect(ids).toContain('cdc-socrata-catalogue');
     expect(ids).toContain('healthdata-socrata-catalogue');
     expect(ids).toContain('bts-transportation-stats');
@@ -413,6 +422,7 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('usaspending-agencies')).toBe(usaspendingAgenciesAdapter);
     expect(getUsDataSource('epa-envirofacts-facilities')).toBe(epaEnvirofactsFacilitiesAdapter);
     expect(getUsDataSource('ncbi-pubmed-search')).toBe(ncbiPubmedSearchAdapter);
+    expect(getUsDataSource('nih-reporter-projects')).toBe(nihReporterProjectsAdapter);
     expect(getUsDataSource('cdc-socrata-catalogue')).toBe(cdcSocrataCatalogueAdapter);
     expect(getUsDataSource('healthdata-socrata-catalogue')).toBe(healthdataSocrataCatalogueAdapter);
     expect(getUsDataSource('bts-transportation-stats')).toBe(btsTransportationStatsAdapter);

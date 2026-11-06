@@ -1,0 +1,444 @@
+{
+  "meta": {
+    "search_id": "qNjV3qEqh0uniERYEHzd-A",
+    "total": 73213,
+    "offset": 0,
+    "limit": 10,
+    "sort_field": "award_amount",
+    "sort_order": "desc",
+    "sorted_by_relevance": false,
+    "properties": { "URL": "https:/reporter.nih.gov/search/qNjV3qEqh0uniERYEHzd-A/projects" }
+  },
+  "results": [
+    {
+      "fiscal_year": 2025,
+      "project_num": "1ZIHLM200888-17",
+      "organization": {
+        "org_name": "NATIONAL LIBRARY OF MEDICINE",
+        "city": null,
+        "country": null,
+        "org_city": null,
+        "org_country": "UNITED STATES",
+        "org_state": null,
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": null,
+        "org_ueis": null,
+        "primary_duns": null,
+        "primary_uei": null,
+        "org_fips": null,
+        "org_ipf_code": null,
+        "org_zipcode": null,
+        "external_org_id": null
+      },
+      "award_amount": 357194999,
+      "principal_investigators": [
+        {
+          "profile_id": 80477146,
+          "first_name": "Dina",
+          "middle_name": "",
+          "last_name": "Paltoo",
+          "is_contact_pi": true,
+          "full_name": "Dina  Paltoo",
+          "title": ""
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "LM",
+        "abbreviation": "NLM",
+        "name": "National Library of Medicine",
+        "admin_org_id": "12500048",
+        "admin_funding_url": ""
+      },
+      "project_start_date": null,
+      "project_end_date": null,
+      "core_project_num": "ZIHLM200888",
+      "project_title": "National Biomedical Information Services",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11410911"
+    },
+    {
+      "fiscal_year": 2025,
+      "project_num": "1ZIFBC000001-19",
+      "organization": {
+        "org_name": "DIVISION OF BASIC SCIENCES - NCI",
+        "city": null,
+        "country": null,
+        "org_city": null,
+        "org_country": "UNITED STATES",
+        "org_state": null,
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": null,
+        "org_ueis": null,
+        "primary_duns": null,
+        "primary_uei": null,
+        "org_fips": null,
+        "org_ipf_code": null,
+        "org_zipcode": null,
+        "external_org_id": null
+      },
+      "award_amount": 209630370,
+      "principal_investigators": null,
+      "agency_ic_admin": {
+        "code": "CA",
+        "abbreviation": "NCI",
+        "name": "National Cancer Institute",
+        "admin_org_id": "12500008",
+        "admin_funding_url": ""
+      },
+      "project_start_date": null,
+      "project_end_date": null,
+      "core_project_num": "ZIFBC000001",
+      "project_title": "NCI CCMF allocation",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11416019"
+    },
+    {
+      "fiscal_year": 2025,
+      "project_num": "1ZIFAI000001-19",
+      "organization": {
+        "org_name": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+        "city": null,
+        "country": null,
+        "org_city": null,
+        "org_country": "UNITED STATES",
+        "org_state": null,
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": null,
+        "org_ueis": null,
+        "primary_duns": null,
+        "primary_uei": null,
+        "org_fips": null,
+        "org_ipf_code": null,
+        "org_zipcode": null,
+        "external_org_id": null
+      },
+      "award_amount": 118430841,
+      "principal_investigators": null,
+      "agency_ic_admin": {
+        "code": "AI",
+        "abbreviation": "NIAID",
+        "name": "National Institute of Allergy and Infectious Diseases",
+        "admin_org_id": "12500003",
+        "admin_funding_url": ""
+      },
+      "project_start_date": null,
+      "project_end_date": null,
+      "core_project_num": "ZIFAI000001",
+      "project_title": "NIAID CCMF allocation",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11416016"
+    },
+    {
+      "fiscal_year": 2025,
+      "project_num": "75N91019D00024-0-759102500016-10",
+      "organization": {
+        "org_name": "LEIDOS BIOMEDICAL RESEARCH, INC.",
+        "city": null,
+        "country": null,
+        "org_city": "FREDERICK",
+        "org_country": "UNITED STATES",
+        "org_state": "MD",
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": ["159990456"],
+        "org_ueis": ["HV8BH9BPG8Y9"],
+        "primary_duns": "159990456",
+        "primary_uei": "HV8BH9BPG8Y9",
+        "org_fips": "US",
+        "org_ipf_code": "10008928",
+        "org_zipcode": "217029242",
+        "external_org_id": 10008928
+      },
+      "award_amount": 82503495,
+      "principal_investigators": null,
+      "agency_ic_admin": {
+        "code": "CA",
+        "abbreviation": "NCI",
+        "name": "National Cancer Institute",
+        "admin_org_id": "12500008",
+        "admin_funding_url": ""
+      },
+      "project_start_date": "2025-08-31T00:00:00",
+      "project_end_date": "2026-08-30T00:00:00",
+      "core_project_num": "75N91019D00",
+      "project_title": "NCI-Frederick Operational Support",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11458272"
+    },
+    {
+      "fiscal_year": 2025,
+      "project_num": "3OT2HL158287-01SE",
+      "organization": {
+        "org_name": "WESTAT, INC.",
+        "city": null,
+        "country": null,
+        "org_city": "Bethesda",
+        "org_country": "UNITED STATES",
+        "org_state": "MD",
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": ["049508120"],
+        "org_ueis": ["NVUWAFWQ57S5"],
+        "primary_duns": "049508120",
+        "primary_uei": "NVUWAFWQ57S5",
+        "org_fips": "US",
+        "org_ipf_code": "9611701",
+        "org_zipcode": "208146527",
+        "external_org_id": 9611701
+      },
+      "award_amount": 52660898,
+      "principal_investigators": [
+        {
+          "profile_id": 77962766,
+          "first_name": "Chanza",
+          "middle_name": "",
+          "last_name": "Baytop",
+          "is_contact_pi": true,
+          "full_name": "Chanza  Baytop",
+          "title": "ASSOCIATE DIRECTOR"
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "HL",
+        "abbreviation": "NHLBI",
+        "name": "National Heart Lung and Blood Institute",
+        "admin_org_id": "12500068",
+        "admin_funding_url": ""
+      },
+      "project_start_date": "2020-09-25T00:00:00",
+      "project_end_date": "2026-08-31T00:00:00",
+      "core_project_num": "OT2HL158287",
+      "project_title": "NHLBI Community Engagement Technical Assistance Center (CETAC)",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11301946"
+    },
+    {
+      "fiscal_year": 2025,
+      "project_num": "1ZICAI009006-17",
+      "organization": {
+        "org_name": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+        "city": null,
+        "country": null,
+        "org_city": null,
+        "org_country": "UNITED STATES",
+        "org_state": null,
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": null,
+        "org_ueis": null,
+        "primary_duns": null,
+        "primary_uei": null,
+        "org_fips": null,
+        "org_ipf_code": null,
+        "org_zipcode": null,
+        "external_org_id": null
+      },
+      "award_amount": 50002282,
+      "principal_investigators": [
+        {
+          "profile_id": 80467458,
+          "first_name": "Sarah",
+          "middle_name": "",
+          "last_name": "Donahue",
+          "is_contact_pi": true,
+          "full_name": "Sarah  Donahue",
+          "title": ""
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "AI",
+        "abbreviation": "NIAID",
+        "name": "National Institute of Allergy and Infectious Diseases",
+        "admin_org_id": "12500003",
+        "admin_funding_url": ""
+      },
+      "project_start_date": null,
+      "project_end_date": null,
+      "core_project_num": "ZICAI009006",
+      "project_title": "Integrated Research Facility at Fort Detrick",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11405598"
+    },
+    {
+      "fiscal_year": 2025,
+      "project_num": "1ZIGAI001047-18",
+      "organization": {
+        "org_name": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+        "city": null,
+        "country": null,
+        "org_city": null,
+        "org_country": "UNITED STATES",
+        "org_state": null,
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": null,
+        "org_ueis": null,
+        "primary_duns": null,
+        "primary_uei": null,
+        "org_fips": null,
+        "org_ipf_code": null,
+        "org_zipcode": null,
+        "external_org_id": null
+      },
+      "award_amount": 49577192,
+      "principal_investigators": [
+        {
+          "profile_id": 9691505,
+          "first_name": "William",
+          "middle_name": "",
+          "last_name": "Elkins",
+          "is_contact_pi": true,
+          "full_name": "William  Elkins",
+          "title": ""
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "AI",
+        "abbreviation": "NIAID",
+        "name": "National Institute of Allergy and Infectious Diseases",
+        "admin_org_id": "12500003",
+        "admin_funding_url": ""
+      },
+      "project_start_date": null,
+      "project_end_date": null,
+      "core_project_num": "ZIGAI001047",
+      "project_title": "Comparative Medicine Infectious Diseases- Bethesda",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11403483"
+    },
+    {
+      "fiscal_year": 2025,
+      "project_num": "1ZIBAI005063-22",
+      "organization": {
+        "org_name": "NATIONAL INSTITUTE OF ALLERGY AND INFECTIOUS DISEASES",
+        "city": null,
+        "country": null,
+        "org_city": null,
+        "org_country": "UNITED STATES",
+        "org_state": null,
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": null,
+        "org_ueis": null,
+        "primary_duns": null,
+        "primary_uei": null,
+        "org_fips": null,
+        "org_ipf_code": null,
+        "org_zipcode": null,
+        "external_org_id": null
+      },
+      "award_amount": 48186961,
+      "principal_investigators": [
+        {
+          "profile_id": 77873541,
+          "first_name": "Jason",
+          "middle_name": "",
+          "last_name": "Gall",
+          "is_contact_pi": true,
+          "full_name": "Jason  Gall",
+          "title": ""
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "AI",
+        "abbreviation": "NIAID",
+        "name": "National Institute of Allergy and Infectious Diseases",
+        "admin_org_id": "12500003",
+        "admin_funding_url": ""
+      },
+      "project_start_date": null,
+      "project_end_date": null,
+      "core_project_num": "ZIBAI005063",
+      "project_title": "Operation of a Vaccine Pilot Plant",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11416925"
+    },
+    {
+      "fiscal_year": 2025,
+      "project_num": "1ZIFHL000001-19",
+      "organization": {
+        "org_name": "NATIONAL HEART, LUNG, AND BLOOD INSTITUTE",
+        "city": null,
+        "country": null,
+        "org_city": null,
+        "org_country": "UNITED STATES",
+        "org_state": null,
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": null,
+        "org_ueis": null,
+        "primary_duns": null,
+        "primary_uei": null,
+        "org_fips": null,
+        "org_ipf_code": null,
+        "org_zipcode": null,
+        "external_org_id": null
+      },
+      "award_amount": 42079573,
+      "principal_investigators": null,
+      "agency_ic_admin": {
+        "code": "HL",
+        "abbreviation": "NHLBI",
+        "name": "National Heart Lung and Blood Institute",
+        "admin_org_id": "12500068",
+        "admin_funding_url": ""
+      },
+      "project_start_date": null,
+      "project_end_date": null,
+      "core_project_num": "ZIFHL000001",
+      "project_title": "NHLBI CCMF allocation",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11416032"
+    },
+    {
+      "fiscal_year": 2025,
+      "project_num": "75N91019D00024-P00011-759101900139-1",
+      "organization": {
+        "org_name": "LEIDOS BIOMEDICAL RESEARCH, INC.",
+        "city": null,
+        "country": null,
+        "org_city": "FREDERICK",
+        "org_country": "UNITED STATES",
+        "org_state": "MD",
+        "org_state_name": null,
+        "dept_type": null,
+        "fips_country_code": null,
+        "org_duns": ["159990456"],
+        "org_ueis": ["HV8BH9BPG8Y9"],
+        "primary_duns": "159990456",
+        "primary_uei": "HV8BH9BPG8Y9",
+        "org_fips": "US",
+        "org_ipf_code": "10008928",
+        "org_zipcode": "217029242",
+        "external_org_id": 10008928
+      },
+      "award_amount": 41960680,
+      "principal_investigators": [
+        {
+          "profile_id": 16188228,
+          "first_name": "RALPH",
+          "middle_name": "",
+          "last_name": "PARCHMENT",
+          "is_contact_pi": true,
+          "full_name": "RALPH  PARCHMENT",
+          "title": ""
+        }
+      ],
+      "agency_ic_admin": {
+        "code": "CA",
+        "abbreviation": "NCI",
+        "name": "National Cancer Institute",
+        "admin_org_id": "12500008",
+        "admin_funding_url": ""
+      },
+      "project_start_date": "2019-09-30T00:00:00",
+      "project_end_date": "2028-09-29T00:00:00",
+      "core_project_num": "75N91019D00",
+      "project_title": "MD NET",
+      "project_detail_url": "https://reporter.nih.gov/project-details/11426490"
+    }
+  ]
+}

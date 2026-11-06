@@ -4,7 +4,7 @@ Questions that come up about this repo.
 
 ## Do I need an API key?
 
-No. All 28 adapters work keyless and need no environment variable. Three
+No. All 29 adapters work keyless and need no environment variable. Three
 sources ask callers to identify themselves: the SEC EDGAR, National Weather
 Service and CFPB adapters send their own descriptive `User-Agent` header from
 inside the adapter, replacing the default one, so callers send nothing extra.
@@ -46,8 +46,8 @@ implemented the New Zealand connectors and would have published as `nzdata`.
 ## How do I add a source?
 
 Write one adapter in `packages/usa-sources/src`, give it a live fetch through
-`httpGet`, a strict parse, and a committed fixture, then register it in
-`packages/usa-sources/src/registry.ts` and export it from
+the shared HTTP helper (`httpGet` or `httpPostJson`), a strict parse, and a
+committed fixture, then register it in `packages/usa-sources/src/registry.ts` and export it from
 `packages/usa-sources/src/index.ts`. The API and the CLI pick it up from the
 registry. `docs/ARCHITECTURE.md` describes the interface.
 

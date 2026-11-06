@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { UsSourceApiError } from './errors.js';
-import { DEFAULT_TIMEOUT_MS, httpGet, USER_AGENT } from './http.js';
+import { DEFAULT_TIMEOUT_MS, httpGet, httpPostJson, USER_AGENT } from './http.js';
 
 /** A fetch stub that records the init it was called with. */
 function recordingFetch(response: () => Response): {
@@ -134,5 +134,44 @@ describe('httpGet', () => {
 
   it('defaults the timeout to 30 seconds', () => {
     expect(DEFAULT_TIMEOUT_MS).toBe(30_000);
+  });
+});
+
+describe('httpPostJson', () => {
+  it('sends JSON with a POST and identifies the client', async () => {
+    const { impl, calls } = recordingFetch(() => new Response('{}', { status: 200 }));
+
+    await httpPostJson(
+      'Test source',
+      URL_UNDER_TEST,
+      { criteria: { fiscal_years: [2025] } },
+      { fetchImpl: impl }
+    );
+
+    expect(calls[0]?.method).toBe('POST');
+    expect(headersOf(calls)['user-agent']).toBe(USER_AGENT);
+    expect(headersOf(calls)['content-type']).toBe('application/json');
+    const body = calls[0]?.body;
+    if (typeof body !== 'string') {
+      throw new Error(`Expected a string body, got ${typeof body}`);
+    }
+    expect(JSON.parse(body)).toEqual({
+      criteria: { fiscal_years: [2025] },
+    });
+  });
+
+  it('returns the response when the status is ok', async () => {
+    const { impl } = recordingFetch(() => new Response('created', { status: 201 }));
+
+    const response = await httpPostJson(
+      'Test source',
+      URL_UNDER_TEST,
+      { ok: true },
+      {
+        fetchImpl: impl,
+      }
+    );
+
+    expect(await response.text()).toBe('created');
   });
 });

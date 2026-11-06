@@ -45,6 +45,7 @@ describe('GET /sources', () => {
       'usaspending-agencies',
       'epa-envirofacts-facilities',
       'ncbi-pubmed-search',
+      'nih-reporter-projects',
       'cdc-socrata-catalogue',
       'healthdata-socrata-catalogue',
       'nyc-open-data-catalogue',

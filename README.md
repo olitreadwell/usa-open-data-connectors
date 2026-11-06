@@ -11,7 +11,7 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 28 US public data sources, with live probes and offline fixtures |
+| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 29 US public data sources, with live probes and offline fixtures |
 | [`@usa-open-data-connectors/usa-mcp`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-mcp) | MCP server that exposes the connectors to Claude, ChatGPT, and other MCP clients |
 | [`@usa-open-data-connectors/connectors-cli`](https://www.npmjs.com/package/@usa-open-data-connectors/connectors-cli) | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
 | `@usa-open-data-connectors/connectors-api` | Private. HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
@@ -20,7 +20,7 @@ exposed over the API or committed to the repo.
 
 ## Connectors
 
-Twenty-eight adapters, all in `@usa-open-data-connectors/usa-sources`. All are
+Twenty-nine adapters, all in `@usa-open-data-connectors/usa-sources`. All are
 keyless and need no environment variable.
 
 Most of this data comes from US federal agencies, and works of the US federal
@@ -40,8 +40,8 @@ nothing extra. Every other adapter sends the shared `User-Agent`
 (`usa-open-data-connectors (Language=TypeScript)`), waits at most 30 seconds
 for a response, and marks rate-limited (HTTP 429), server-error (HTTP 5xx) and
 network failures as `retryable` on the thrown `UsSourceApiError`. The shared
-`httpGet` helper in `packages/usa-sources/src/http.ts` does this for all 28
-adapters.
+HTTP helpers (`httpGet` and `httpPostJson`) in
+`packages/usa-sources/src/http.ts` do this for all 29 adapters.
 
 | id | Source | Keyless? | Example command |
 | --- | --- | --- | --- |
@@ -64,6 +64,7 @@ adapters.
 | `usaspending-agencies` | USAspending top-tier federal agencies | Yes | `npx tsx packages/cli/src/cli.ts probe usaspending-agencies` |
 | `epa-envirofacts-facilities` | EPA Envirofacts Toxics Release Inventory facilities | Yes | `npx tsx packages/cli/src/cli.ts probe epa-envirofacts-facilities` |
 | `ncbi-pubmed-search` | NCBI PubMed literature search | Yes | `npx tsx packages/cli/src/cli.ts probe ncbi-pubmed-search` |
+| `nih-reporter-projects` | NIH RePORTER funded projects | Yes | `npx tsx packages/cli/src/cli.ts probe nih-reporter-projects` |
 | `cdc-socrata-catalogue` | CDC Socrata catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe cdc-socrata-catalogue` |
 | `healthdata-socrata-catalogue` | HealthData.gov Socrata catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe healthdata-socrata-catalogue` |
 | `bts-transportation-stats` | Bureau of Transportation Statistics catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe bts-transportation-stats` |
@@ -159,10 +160,11 @@ endpoints. They need no key.
 
 ## Other languages
 
-The repo includes Python and Ruby ports with the same 28 adapter ids as the
-TypeScript registry. Each ported adapter has a live fetcher, a parser, a
-committed fixture, and an offline test. Both ports use the shared fixtures in
-`packages/usa-sources/src/fixtures`, so a snapshot is stored once.
+The earlier Python and Ruby ports cover the 28 adapter ids they shipped with.
+The new NIH RePORTER adapter is TypeScript-only for now. Each ported adapter
+has a live fetcher, a parser, a committed fixture, and an offline test. Both
+ports use the shared fixtures in `packages/usa-sources/src/fixtures`, so a
+snapshot is stored once.
 
 Python lives in `python/src/usadata` and Ruby lives in `ruby/lib/usadata`.
 Both are keyless and expose `US_DATA_SOURCES`, `get_us_data_source`, and

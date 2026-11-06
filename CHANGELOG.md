@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Connectors: add the keyless `nih-reporter-projects` adapter for NIH-funded
+  projects, with a fiscal 2025 fixture and a JSON POST helper.
 - Ports: add keyless Python and Ruby ports with all 28 TypeScript adapter ids,
   each with a live fetcher, parser, committed fixture, and offline test.
 - Remove the NZ Python and Ruby copies and their publishing workflows.

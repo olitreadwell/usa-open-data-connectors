@@ -10,7 +10,7 @@ Ruby copies were removed on 2026-11-05.
 
 ## Adapters
 
-Twenty-eight adapters are registered. Every one is keyless and has a committed
+Twenty-nine adapters are registered. Every one is keyless and has a committed
 fixture captured from the live service.
 
 | Source | Adapter id | Status |
@@ -34,6 +34,7 @@ fixture captured from the live service.
 | USAspending | `usaspending-agencies` | live, keyless, fixture committed 2026-10-05 |
 | EPA Envirofacts | `epa-envirofacts-facilities` | live, keyless, fixture committed 2026-10-05 |
 | NCBI PubMed | `ncbi-pubmed-search` | live, keyless, fixture committed 2026-10-05 |
+| NIH RePORTER | `nih-reporter-projects` | live, keyless, fixture committed 2026-11-07 |
 | CDC Socrata catalogue | `cdc-socrata-catalogue` | live, keyless, fixture committed 2026-10-05 |
 | HealthData.gov | `healthdata-socrata-catalogue` | live, keyless, fixture committed 2026-10-05 |
 | Bureau of Transportation Statistics | `bts-transportation-stats` | live, keyless, fixture committed 2026-10-05 |

@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 28 source adapters behind one interface.
+- Exposes 29 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads committed fixtures in tests only; a live fetch never falls back.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -48,6 +48,7 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `usaspending-agencies` | USAspending | Top-tier federal agencies, with budget authority, obligations, and outlays for the active quarter. |
 | `epa-envirofacts-facilities` | Environmental Protection Agency | Toxics Release Inventory facilities, with county, address, and open or closed status. |
 | `ncbi-pubmed-search` | National Center for Biotechnology Information | PubMed literature search results, with the match count and a page of PubMed ids. |
+| `nih-reporter-projects` | National Institutes of Health | NIH-funded projects for one fiscal year, with the title, award amount, organization, principal investigators, and administering institute. |
 | `cdc-socrata-catalogue` | Centers for Disease Control and Prevention | The CDC Socrata catalogue, one row per dataset, chart, or story. |
 | `healthdata-socrata-catalogue` | HealthData.gov | The HealthData.gov Socrata catalogue, one row per dataset, chart, or story. |
 | `bts-transportation-stats` | Bureau of Transportation Statistics | The BTS Socrata catalogue, one row per dataset, chart, or story. |
@@ -419,6 +420,27 @@ schema over `header` and `esearchresult`, where `esearchresult` can carry
 `error`, and `warninglist`. The counts arrive as strings and are converted once.
 An `esearchresult.error` is thrown as `UsSourceApiError` even though the HTTP
 status is 200.
+
+`nih-reporter-projects`:
+
+```ts
+import { fetchNihReporterProjects } from '@usa-open-data-connectors/usa-sources';
+
+const page = await fetchNihReporterProjects({ fiscalYear: 2025, limit: 10 });
+console.log(page.totalCount, page.pageAwardAmountUsd, page.projects[0]);
+```
+
+The public API is `NIH_REPORTER_SEARCH_URL`, `NIH_REPORTER_SOURCE_ID`,
+`NIH_REPORTER_DEFAULT_FISCAL_YEAR`, `NIH_REPORTER_PAGE_SIZE`,
+`buildNihReporterSearchBody`, `parseNihReporterProjectsPayload`,
+`fetchNihReporterProjects`, and `nihReporterProjectsAdapter`, with the
+`NihReporterProject`, `NihReporterProjectPage`, `NihReporterProjectQuery`, and
+`NihReporterSearchBody` types. The parser validates `meta` and `results`, keeps
+the project number, core project number, title, fiscal year, award amount,
+organization, city and state, investigators, administering institute, start and
+end dates, and detail URL, and adds the agency total and the award sum for the
+page. A top-level `message` throws `UsSourceApiError` even when the HTTP status
+is 200. The default search is fiscal 2025, ten rows, largest award first.
 
 `clinicaltrials-studies`:
 
