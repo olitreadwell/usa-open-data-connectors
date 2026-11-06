@@ -29,6 +29,14 @@ const SMALL_PAYLOAD = JSON.stringify([
     viewLastModified: 200,
     viewCount: 5,
     downloadCount: 1,
+    metadata: {
+      custom_fields: {
+        'Common Core': {
+          License: 'http://opendefinition.org/licenses/odc-odbl/',
+          Publisher: 'National Library of Medicine',
+        },
+      },
+    },
   },
   {
     id: 'bbbb-2222',
@@ -71,6 +79,8 @@ describe('parseHealthdataSocrataCataloguePayload', () => {
       viewLastModifiedEpochSeconds: 200,
       viewCount: 5,
       downloadCount: 1,
+      licenceUrl: 'http://opendefinition.org/licenses/odc-odbl/',
+      attribution: 'National Library of Medicine',
     });
   });
 
@@ -149,6 +159,9 @@ describe('the committed HealthData.gov fixture', () => {
 
   it('counts the entries the fixture carries', () => {
     expect(catalogue.datasetCount).toBe(0);
+    expect(catalogue.entries[0]?.licenceUrl).toBe('https://www.usa.gov/government-works');
+    expect(catalogue.entries[0]?.attribution).toBe('Centers for Disease Control and Prevention');
+    expect(catalogue.entries[1]?.licenceUrl).toBe('http://opendefinition.org/licenses/odc-odbl/');
     expect(catalogue.categories[0]).toEqual({ category: 'CDC', entryCount: 4 });
   });
 

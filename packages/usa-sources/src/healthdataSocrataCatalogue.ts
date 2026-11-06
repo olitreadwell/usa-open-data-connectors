@@ -3,6 +3,7 @@ import { z } from 'zod';
 import { UsSourceParseError } from './errors.js';
 import { httpGet } from './http.js';
 import { readFixtureJson } from './fixtures.js';
+import { parseSocrataCatalogueMetadata } from './socrataCatalogueMetadata.js';
 import type { UsDataAdapter } from './types.js';
 
 /** Adapter id for the healthdata-socrata-catalogue source. */
@@ -28,6 +29,10 @@ export interface HealthdataSocrataCatalogueEntry {
   viewCount: number;
   /** How many times the entry has been downloaded. */
   downloadCount: number;
+  /** Licence URL the portal attaches to the entry, or "" when it supplies none. */
+  licenceUrl: string;
+  /** Publishing organisation the portal attaches to the entry, or "" when it supplies none. */
+  attribution: string;
 }
 
 /** One category and how many catalogue entries carry it. */
@@ -77,6 +82,7 @@ const HEALTHDATA_SOCRATA_CATALOGUE_ENTRY_SCHEMA = z.object({
   viewLastModified: z.number().optional(),
   viewCount: z.number().optional(),
   downloadCount: z.number().optional(),
+  metadata: z.unknown().optional(),
 });
 
 const HEALTHDATA_SOCRATA_CATALOGUE_PAYLOAD_SCHEMA = z.array(
@@ -170,6 +176,7 @@ export function parseHealthdataSocrataCataloguePayload(
       viewLastModifiedEpochSeconds: row.viewLastModified ?? row.createdAt,
       viewCount: row.viewCount ?? 0,
       downloadCount: row.downloadCount ?? 0,
+      ...parseSocrataCatalogueMetadata(row.metadata),
     };
   });
 

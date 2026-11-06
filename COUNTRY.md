@@ -53,8 +53,13 @@ fixture captured from the live service.
 
 - [x] Shared HTTP layer (`httpGet`): one User-Agent, 30 second timeout,
       `retryable` on 429, 5xx and network failures
-- [ ] Return licence and attribution metadata per record, instead of leaving
-      the publisher's page as the only source
+- [x] Return source-supplied licence and attribution metadata per record: the
+      Socrata catalogue entries carry `licenceUrl` and `attribution`, and
+      `publicdatahub-hospital-quality` carries licence, agency, and dataset
+      provenance
+- [ ] Add licence and attribution metadata to the other adapters. No other
+      committed fixture carries a per-record licence field; most publishers
+      state terms for the whole service, so each source needs its own decision
 - [x] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
 - [ ] Add the remaining pending adapters (Census, api.data.gov, BEA, EIA), each verified live before commit
 - [x] Add each new adapter to the registry so the API and CLI pick it up

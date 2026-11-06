@@ -27,13 +27,19 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
   replace the default `User-Agent` with their own
 - The API and the CLI serve `usa-sources` through the registry. The NZ-only
   routes and CLI commands were removed rather than re-pointed
+- Socrata catalogue entries carry the portal's `licenceUrl` and `attribution`
+  values, and PublicDataHub records carry licence and agency provenance. An
+  empty value means the source supplied none
 - `npm run check` is green. The MCP server exposes a named tool for every
   library query, and `probe_sources` only probes the ids it is given.
 
 ## What is left
 
 1. Backlog of US sources to add: Census Bureau, BEA, EIA, and api.data.gov.
-2. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
+2. Decide per-source licence metadata for the adapters whose APIs do not
+   supply per-record terms. Most publishers state terms for the whole service;
+   `COUNTRY.md` tracks the narrowed item.
+3. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
    `usa-data-lab` repos vendors one package by name and renames its scope as
    it copies. That script matches the old scope, so it needs updating before
    the rename lands there.

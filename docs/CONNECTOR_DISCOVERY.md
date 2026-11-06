@@ -145,7 +145,8 @@ everywhere, and a few services attach their own terms on top.
 | --- | --- | --- |
 | `bls-unemployment-rate` | Bureau of Labor Statistics | US federal work, public domain in the US |
 | `usgs-hawaii-earthquakes`, `usgs-peak-streamflow` | US Geological Survey | US federal work, public domain in the US |
-| `cdc-county-obesity`, `cdc-socrata-catalogue` | Centers for Disease Control and Prevention | US federal work, public domain in the US |
+| `cdc-county-obesity` | Centers for Disease Control and Prevention | US federal work, public domain in the US |
+| `cdc-socrata-catalogue` | Centers for Disease Control and Prevention | Portal entry terms. The adapter returns `licenceUrl` and `attribution`; on the captured page no entry named a licence URL and six named a publisher |
 | `ncei-annual-temperature`, `noaa-sea-level` | NOAA | US federal work, public domain in the US |
 | `treasury-avg-interest-rate`, `treasury-debt-to-penny` | US Treasury | US federal work, public domain in the US |
 | `fema-disaster-declarations` | FEMA | US federal work, public domain in the US |
@@ -160,16 +161,20 @@ everywhere, and a few services attach their own terms on top.
 | `epa-envirofacts-facilities` | Environmental Protection Agency | US federal work, public domain in the US |
 | `ncbi-pubmed-search` | National Center for Biotechnology Information | US federal work, but NLM attaches its own terms to some content. Check the NLM terms before bulk reuse |
 | `nih-reporter-projects` | National Institutes of Health | US federal work, public domain in the US |
-| `healthdata-socrata-catalogue` | HealthData.gov, US Department of Health and Human Services | US federal work, public domain in the US |
-| `bts-transportation-stats` | Bureau of Transportation Statistics | US federal work, public domain in the US |
-| `nyc-open-data-catalogue` | New York City Open Data | City of New York public data, published under the portal's terms. Check the dataset page before reuse |
+| `healthdata-socrata-catalogue` | HealthData.gov, US Department of Health and Human Services, plus each portal publisher | Portal entry terms. The adapter returns `licenceUrl` and `attribution`; the captured page carries the USA.gov government-works label, ODbL, and PDDL |
+| `bts-transportation-stats` | Bureau of Transportation Statistics | Portal entry terms. The adapter returns `licenceUrl` and `attribution`; every entry on the captured page names the USA.gov public-domain label and the bureau |
+| `nyc-open-data-catalogue` | New York City Open Data | City of New York public data, published under the portal's terms. The adapter returns `licenceUrl` and `attribution`, but the captured page supplied neither |
 | `estimatetax-income-tax` | EstimateTax | Private publisher, not a federal agency. The API terms ask for attribution and the source document alongside any displayed figure. No open licence is stated for the API output. |
 | `college-scorecard-institutions` | College Scorecard, US Department of Education | US federal work, public domain in the US |
 | `publicdatahub-hospital-quality` | PublicDataHub, from the Centers for Medicare & Medicaid Services | CMS provider data is US federal work, public domain in the US. The response provenance names the licence as U.S. Public Domain. |
 | `callook-callsigns` | Callook.info, from the FCC licence file | FCC licence records are US federal work, public domain in the US. Callook.info serves the records and calculates the coordinates and grid square. Its API reference says the data is free to use. |
 | `nextbus-transit-vehicles` | Portland Streetcar, served by Umo IQ | Transit agency data. The feed carries a copyright notice for the agency and Umo IQ, and states no open licence. Check the agency's terms before republishing. |
 
-Only `publicdatahub-hospital-quality` returns licence metadata today, in its
-`provenance` fields. The other adapters do not. That metadata covers the record
-it comes with, not every dataset a publisher offers. Read the publisher's page
-before you republish, and credit the publisher rather than this library.
+The Socrata catalogue adapters return `licenceUrl` and `attribution` on each
+entry, and `publicdatahub-hospital-quality` returns licence, agency, and
+dataset provenance. An empty value means the source supplied none. The other
+adapters' committed responses carry no per-record licence field; most
+publishers state terms for the whole service. That is the narrowed open item in
+`COUNTRY.md`. The metadata covers the record it comes with, not every dataset a
+publisher offers. Read the publisher's page before you republish, and credit
+the publisher rather than this library.

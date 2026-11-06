@@ -49,11 +49,11 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `epa-envirofacts-facilities` | Environmental Protection Agency | Toxics Release Inventory facilities, with county, address, and open or closed status. |
 | `ncbi-pubmed-search` | National Center for Biotechnology Information | PubMed literature search results, with the match count and a page of PubMed ids. |
 | `nih-reporter-projects` | National Institutes of Health | NIH-funded projects for one fiscal year, with the title, award amount, organization, principal investigators, and administering institute. |
-| `cdc-socrata-catalogue` | Centers for Disease Control and Prevention | The CDC Socrata catalogue, one row per dataset, chart, or story. |
-| `healthdata-socrata-catalogue` | HealthData.gov | The HealthData.gov Socrata catalogue, one row per dataset, chart, or story. |
-| `bts-transportation-stats` | Bureau of Transportation Statistics | The BTS Socrata catalogue, one row per dataset, chart, or story. |
+| `cdc-socrata-catalogue` | Centers for Disease Control and Prevention | The CDC Socrata catalogue, one row per dataset, chart, or story, with the portal's licence and attribution values when present. |
+| `healthdata-socrata-catalogue` | HealthData.gov | The HealthData.gov Socrata catalogue, one row per dataset, chart, or story, with the portal's licence and attribution values. |
+| `bts-transportation-stats` | Bureau of Transportation Statistics | The BTS Socrata catalogue, one row per dataset, chart, or story, with the portal's licence and attribution values. |
 | `estimatetax-income-tax` | EstimateTax | US federal, state, and local income tax for one salary, with the official document behind every figure. |
-| `nyc-open-data-catalogue` | New York City Open Data | The NYC Socrata catalogue, one row per published dataset or map. |
+| `nyc-open-data-catalogue` | New York City Open Data | The NYC Socrata catalogue, one row per published dataset or map, with licence and attribution fields that are empty when the portal supplies none. |
 | `callook-callsigns` | Callook.info | US amateur radio callsign records from the FCC licence file, with the licence class, location, and expiry. |
 | `college-scorecard-institutions` | College Scorecard, US Department of Education | Institution-level enrollment, cost, completion, debt, and earnings ten years after entry for US colleges. |
 | `publicdatahub-hospital-quality` | PublicDataHub, from the Centers for Medicare & Medicaid Services | Medicare-certified hospital quality measures, with national ranks and provenance. |
@@ -278,9 +278,11 @@ The public API is `CDC_SOCRATA_CATALOGUE_API_BASE`,
 `CdcSocrataCategoryCount`, and `CdcSocrataCatalogue` types. The parser
 validates a bare JSON array against a zod schema over `id`, `name`,
 `assetType`, `category`, `viewType`, `createdAt`, `viewLastModified`,
-`viewCount`, and `downloadCount`. A row missing `id`, `name`, or `createdAt`
-throws `UsSourceParseError`. A response with no rows also throws, because an
-empty catalogue is not a usable answer.
+`viewCount`, `downloadCount`, and `metadata`. Every entry carries `licenceUrl`
+and `attribution`, copied from the entry's `License` and `Publisher` metadata
+and empty when the portal supplies none. A row missing `id`, `name`, or
+`createdAt` throws `UsSourceParseError`. A response with no rows also throws,
+because an empty catalogue is not a usable answer.
 
 `bts-transportation-stats`:
 
@@ -306,9 +308,11 @@ The public API is `BTS_TRANSPORTATION_STATS_API_BASE`,
 `BtsCatalogueCategoryCount`, and `BtsTransportationCatalogue` types. The parser
 validates a bare JSON array against a zod schema over `id`, `name`,
 `assetType`, `category`, `viewType`, `createdAt`, `viewLastModified`,
-`viewCount`, and `downloadCount`. A row missing `id`, `name`, or `createdAt`
-throws `UsSourceParseError`. A response with no rows also throws, because an
-empty catalogue is not a usable answer.
+`viewCount`, `downloadCount`, and `metadata`. Every entry carries `licenceUrl`
+and `attribution`, copied from the entry's `License` and `Publisher` metadata
+and empty when the portal supplies none. A row missing `id`, `name`, or
+`createdAt` throws `UsSourceParseError`. A response with no rows also throws,
+because an empty catalogue is not a usable answer.
 
 `nextbus-transit-vehicles`:
 
@@ -635,15 +639,18 @@ fetch takes about 20 seconds on a fast connection.
 - `cdc-socrata-catalogue`: the default request asks for ten rows. The discovery API answers the whole catalogue when the limit is high enough, and the CDC catalogue held 1,478 entries on 2026-10-20. Call `buildCdcSocrataCatalogueUrl({ limit: 10_000 })` or pass `limit` to `fetchCdcSocrataCatalogue` when you need every entry. A limit below the catalogue size truncates the response without an error.
 - `cdc-socrata-catalogue`: each row is a catalogue entry, not a dataset record. `assetType` can be `dataset`, `file`, `href`, `filter`, `chart`, `story`, or `map`. A category can hold one type or a mix, so count the asset type before you describe a category as a dataset collection.
 - `cdc-socrata-catalogue`: an entry without a category has `null` in the response. The adapter keeps the null on the entry and counts it under `Uncategorised` in `categories`. That bucket is an adapter label, not a category the CDC assigned.
-- `cdc-socrata-catalogue`: the full response is large because each row carries portal metadata. The 1,478-row response was about 7.9 MB on 2026-10-20. The parser keeps nine fields, and a fixture trimmed to those fields was about 491 KB.
-- `cdc-socrata-catalogue`: the discovery API can carry rights and metadata fields, but this parser does not keep them. Check the portal entry before you reuse an item.
+- `cdc-socrata-catalogue`: the full response is large because each row carries portal metadata. The 1,478-row response was about 7.9 MB on 2026-10-20. The parser keeps eleven fields, and a fixture trimmed to those fields was about 491 KB.
+- `cdc-socrata-catalogue`: the entry carries `licenceUrl` and `attribution` when the portal supplies a `License` and `Publisher` value. On the captured page no entry named a licence URL and six named a publisher. An empty value means the portal supplied none; check the entry before reuse.
 - `bts-transportation-stats`: the default request asks for ten rows. The story that consumed this adapter needed the whole catalogue, so it calls `buildBtsTransportationStatsUrl({ limit: 10_000 })` and parses the full response with `parseBtsTransportationStatsPayload`. A lower limit truncates the catalogue without an error.
 - `bts-transportation-stats`: each row is a catalogue entry, not a dataset record. `assetType` can be `story`, `dataset`, `chart`, `measure`, `filter`, `href`, `map`, or `file`. The story and dataset counts are different questions, and the 2026-10-20 catalogue held 177 stories against 153 datasets.
 - `bts-transportation-stats`: `viewCount` and `downloadCount` are the portal's own counters for an item page and its files. They are not unique people. Stories carry views and a zero download count because Socrata does not give a story a download counter, while 268 entries reported no downloads at all on 2026-10-20.
-- `bts-transportation-stats`: the response is large because every entry carries portal metadata. The 589-row response was about 2.2 MB on 2026-10-20. The parser keeps nine fields, and a fixture trimmed to those fields was about 172 KB.
+- `bts-transportation-stats`: the response is large because every entry carries portal metadata. The 589-row response was about 2.2 MB on 2026-10-20. The parser keeps eleven fields, and a fixture trimmed to those fields was about 172 KB.
+- `bts-transportation-stats`: every entry carries `licenceUrl` and `attribution` from the portal's Common Core metadata. The captured page names the USA.gov public-domain label and the Bureau of Transportation Statistics for every entry.
 - `bts-transportation-stats`: an entry without a category has `null` in the response. The adapter keeps the null on the entry and counts it under `Uncategorised` in `categories`. That bucket is an adapter label, not a category the bureau assigned.
+- `healthdata-socrata-catalogue`: each entry carries `licenceUrl` and `attribution` from the portal's Common Core metadata. The captured page uses the USA.gov government-works label, ODbL, and PDDL, with publishers including federal agencies and state and city governments.
 - `nyc-open-data-catalogue`: the discovery API answers a bare JSON array of catalogue entries, not dataset rows. An entry can arrive without a category, which the adapter counts under `Uncategorised`.
 - `nyc-open-data-catalogue`: the page captured on 2026-10-19 mixes datasets and maps. The adapter counts both, and keeps the view and download totals for the page it read.
+- `nyc-open-data-catalogue`: entries carry `licenceUrl` and `attribution`, but the captured page supplied neither, so both are empty. Check the portal entry before reusing an item.
 - Unit tests use the committed fixtures and run offline. Run them with `npm run test --workspace @usa-open-data-connectors/usa-sources`.
 - Smoke tests hit the live APIs and need `RUN_SMOKE=1`. Run them with `npm run test:smoke --workspace @usa-open-data-connectors/usa-sources`.
 
@@ -696,10 +703,10 @@ The data comes from US federal agencies and the open data catalogue services the
 | PublicDataHub, from the Centers for Medicare & Medicaid Services | `https://publicdatahub.org/api/export/hospital/{slug}.json` |
 | Portland Streetcar, through the NextBus XML feed | `https://retro.umoiq.com/service/publicXMLFeed?command=vehicleLocations&a=portland-sc&r=193&t=0` |
 
-Each publisher sets its own terms for its data. The Socrata discovery responses can carry rights and
-metadata fields, but the catalogue adapters in this package keep a subset of the entry fields and do not
-retain those terms. Check the licence on the portal entry before you reuse an item. A catalogue can list
-entries under terms such as these:
+Each publisher sets its own terms for its data. The Socrata catalogue adapters keep the `License` and
+`Publisher` values from an entry's Common Core metadata as `licenceUrl` and `attribution`. An empty
+value means the portal supplied none. Check the licence on the portal entry before you reuse an item.
+A catalogue can list entries under terms such as these:
 
 - USA.gov public-domain label: `http://www.usa.gov/publicdomain/label/1.0/`
 - USA.gov government works: `https://www.usa.gov/government-works`

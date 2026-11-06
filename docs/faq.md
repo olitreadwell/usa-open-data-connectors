@@ -17,7 +17,9 @@ not subject to copyright in the United States, so it is effectively public
 domain there. Two caveats. The NCBI and NLM services attach their own terms to
 some content. And public domain in the US is not the same as public domain
 everywhere, so check your own jurisdiction before republishing. Credit the
-publisher rather than this library.
+publisher rather than this library. Socrata catalogue entries carry the
+portal's `licenceUrl` and `attribution` values, and PublicDataHub records carry
+licence and agency provenance. An empty value means the source supplied none.
 
 ## Why do the tests use fixtures instead of the live APIs?
 

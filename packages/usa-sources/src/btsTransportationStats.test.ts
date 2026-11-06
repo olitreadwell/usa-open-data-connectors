@@ -29,6 +29,14 @@ const SMALL_PAYLOAD = JSON.stringify([
     viewLastModified: 200,
     viewCount: 5,
     downloadCount: 1,
+    metadata: {
+      custom_fields: {
+        'Common Core': {
+          License: 'http://www.usa.gov/publicdomain/label/1.0/',
+          Publisher: 'Bureau of Transportation Statistics',
+        },
+      },
+    },
   },
   {
     id: 'bbbb-2222',
@@ -71,6 +79,8 @@ describe('parseBtsTransportationStatsPayload', () => {
       viewLastModifiedEpochSeconds: 200,
       viewCount: 5,
       downloadCount: 1,
+      licenceUrl: 'http://www.usa.gov/publicdomain/label/1.0/',
+      attribution: 'Bureau of Transportation Statistics',
     });
   });
 
@@ -151,6 +161,8 @@ describe('the committed BTS fixture', () => {
 
   it('counts the entries the fixture carries', () => {
     expect(catalogue.datasetCount).toBe(4);
+    expect(catalogue.entries[0]?.licenceUrl).toBe('http://www.usa.gov/publicdomain/label/1.0/');
+    expect(catalogue.entries[0]?.attribution).toBe('Bureau of Transportation Statistics');
     expect(catalogue.categories[0]).toEqual({ category: 'Aviation', entryCount: 5 });
   });
 

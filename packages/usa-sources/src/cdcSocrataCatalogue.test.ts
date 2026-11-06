@@ -29,6 +29,13 @@ const SMALL_PAYLOAD = JSON.stringify([
     viewLastModified: 200,
     viewCount: 5,
     downloadCount: 1,
+    metadata: {
+      custom_fields: {
+        'Common Core': {
+          Publisher: 'Centers for Disease Control and Prevention',
+        },
+      },
+    },
   },
   {
     id: 'bbbb-2222',
@@ -71,6 +78,8 @@ describe('parseCdcSocrataCataloguePayload', () => {
       viewLastModifiedEpochSeconds: 200,
       viewCount: 5,
       downloadCount: 1,
+      licenceUrl: '',
+      attribution: 'Centers for Disease Control and Prevention',
     });
   });
 
@@ -147,6 +156,9 @@ describe('the committed CDC fixture', () => {
 
   it('counts the entries the fixture carries', () => {
     expect(catalogue.datasetCount).toBe(9);
+    expect(catalogue.entries[0]?.licenceUrl).toBe('');
+    expect(catalogue.entries[0]?.attribution).toBe('');
+    expect(catalogue.entries[2]?.attribution).toBe('National Center for Environmental Health');
     expect(catalogue.categories[0]).toEqual({
       category: 'National Center for Environmental Health',
       entryCount: 4,

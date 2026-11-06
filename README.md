@@ -31,7 +31,9 @@ you display. The NCBI and NLM services attach their own terms to some content,
 and public domain in the US is not public domain everywhere. Check the
 publisher's terms before you republish: the connectors fetch the data, they do
 not relicense it. `docs/CONNECTOR_DISCOVERY.md` lists where each source's
-terms live.
+terms live. Socrata catalogue entries carry the portal's `licenceUrl` and
+`attribution` values, and PublicDataHub records carry licence and agency
+provenance. An empty value means the source supplied none.
 
 Three sources ask callers to identify themselves. The SEC EDGAR, National
 Weather Service and CFPB adapters send their own descriptive `User-Agent`
