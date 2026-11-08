@@ -10,7 +10,7 @@ Ruby copies were removed on 2026-11-05.
 
 ## Adapters
 
-Thirty-three adapters are registered. Every one is keyless and has a committed
+Thirty-six adapters are registered. Every one is keyless and has a committed
 fixture captured from the live service.
 
 | Source | Adapter id | Status |
@@ -48,6 +48,9 @@ fixture captured from the live service.
 | NHTSA | `nhtsa-vehicle-models` | live, keyless, fixture committed 2026-11-08 |
 | Federal Communications Commission | `fcc-socrata-catalogue` | live, keyless, fixture committed 2026-11-08 |
 | New York State Open Data | `ny-state-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Chicago Data Portal | `chicago-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Seattle Open Data | `seattle-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Texas Open Data | `texas-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
 | Census Bureau Data API | - | keyed as of 2026-11-08; skipped |
 | api.data.gov | - | not started |
 | BEA | - | not started |
@@ -65,5 +68,5 @@ fixture captured from the live service.
       committed fixture carries a per-record licence field; most publishers
       state terms for the whole service, so each source needs its own decision
 - [x] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
-- [ ] Add the remaining keyless adapters. Census answered with a missing-key redirect on 2026-11-08, and BEA, EIA, and api.data.gov remain keyed
+- [ ] Add the remaining keyless adapters. Census answered with a missing-key redirect on 2026-11-08, California's Socrata discovery endpoint answered 404, and BEA, EIA, and api.data.gov remain keyed
 - [x] Add each new adapter to the registry so the API and CLI pick it up

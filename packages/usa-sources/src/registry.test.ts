@@ -7,6 +7,7 @@ import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { cfpbConsumerComplaintsAdapter } from './cfpbConsumerComplaints.js';
 import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
 import { callookCallsignsAdapter } from './callookCallsigns.js';
+import { chicagoOpenDataCatalogueAdapter } from './chicagoOpenDataCatalogue.js';
 import { collegeScorecardInstitutionsAdapter } from './collegeScorecardInstitutions.js';
 import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
@@ -24,6 +25,8 @@ import { nyStateOpenDataCatalogueAdapter } from './nyStateOpenDataCatalogue.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
 import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
 import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
+import { seattleOpenDataCatalogueAdapter } from './seattleOpenDataCatalogue.js';
+import { texasOpenDataCatalogueAdapter } from './texasOpenDataCatalogue.js';
 import { treasuryDebtToPennyAdapter } from './treasuryDebtToPenny.js';
 import { usaspendingAgenciesAdapter } from './usaspendingAgencies.js';
 import { cpscProductRecallsAdapter } from './cpscProductRecalls.js';
@@ -213,6 +216,18 @@ const RAW_NY_STATE_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/ny-state-open-data-catalogue-2026-11-08.json'),
   'utf8'
 );
+const RAW_CHICAGO_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/chicago-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_SEATTLE_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/seattle-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_TEXAS_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/texas-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
 const RAW_COLLEGE_SCORECARD_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/college-scorecard-institutions-2026-10-15-sampled.csv'),
   'utf8'
@@ -355,6 +370,15 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'data.ny.gov') {
     return RAW_NY_STATE_FIXTURE;
   }
+  if (hostname === 'data.cityofchicago.org') {
+    return RAW_CHICAGO_FIXTURE;
+  }
+  if (hostname === 'data.seattle.gov') {
+    return RAW_SEATTLE_FIXTURE;
+  }
+  if (hostname === 'data.texas.gov') {
+    return RAW_TEXAS_FIXTURE;
+  }
   if (hostname === 'estimatetax.net') {
     return RAW_ESTIMATETAX_FIXTURE;
   }
@@ -422,6 +446,9 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('nhtsa-vehicle-models');
     expect(ids).toContain('fcc-socrata-catalogue');
     expect(ids).toContain('ny-state-open-data-catalogue');
+    expect(ids).toContain('chicago-open-data-catalogue');
+    expect(ids).toContain('seattle-open-data-catalogue');
+    expect(ids).toContain('texas-open-data-catalogue');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -474,6 +501,9 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('nhtsa-vehicle-models')).toBe(nhtsaVehicleModelsAdapter);
     expect(getUsDataSource('fcc-socrata-catalogue')).toBe(fccSocrataCatalogueAdapter);
     expect(getUsDataSource('ny-state-open-data-catalogue')).toBe(nyStateOpenDataCatalogueAdapter);
+    expect(getUsDataSource('chicago-open-data-catalogue')).toBe(chicagoOpenDataCatalogueAdapter);
+    expect(getUsDataSource('seattle-open-data-catalogue')).toBe(seattleOpenDataCatalogueAdapter);
+    expect(getUsDataSource('texas-open-data-catalogue')).toBe(texasOpenDataCatalogueAdapter);
   });
 
   it('returns undefined for an unknown id', () => {

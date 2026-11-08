@@ -1,6 +1,7 @@
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
 import { callookCallsignsAdapter } from './callookCallsigns.js';
+import { chicagoOpenDataCatalogueAdapter } from './chicagoOpenDataCatalogue.js';
 import { collegeScorecardInstitutionsAdapter } from './collegeScorecardInstitutions.js';
 import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
@@ -18,6 +19,8 @@ import { nyStateOpenDataCatalogueAdapter } from './nyStateOpenDataCatalogue.js';
 import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
 import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
+import { seattleOpenDataCatalogueAdapter } from './seattleOpenDataCatalogue.js';
+import { texasOpenDataCatalogueAdapter } from './texasOpenDataCatalogue.js';
 import { treasuryDebtToPennyAdapter } from './treasuryDebtToPenny.js';
 import { usaspendingAgenciesAdapter } from './usaspendingAgencies.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
@@ -69,6 +72,9 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   nhtsaVehicleModelsAdapter,
   fccSocrataCatalogueAdapter,
   nyStateOpenDataCatalogueAdapter,
+  chicagoOpenDataCatalogueAdapter,
+  seattleOpenDataCatalogueAdapter,
+  texasOpenDataCatalogueAdapter,
 ];
 
 /** Looks up a source adapter by id. */

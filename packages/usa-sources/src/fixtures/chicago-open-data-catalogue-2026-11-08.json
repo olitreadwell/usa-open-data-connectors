@@ -1,0 +1,1012 @@
+[
+  {
+    "id": "at9p-zwgd",
+    "name": "Change Notice: Building Permits - 10/27/2026",
+    "assetType": "story",
+    "averageRating": 0,
+    "category": "Buildings",
+    "createdAt": 1793053588,
+    "description": "Added a RESIDENTIAL_UNIT_CHANGE column.",
+    "diciBackend": false,
+    "displayType": "story",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42699036,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793053848,
+    "publicationGroup": 20692762,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793053588,
+    "tableId": 20692762,
+    "totalTimesRated": 0,
+    "viewCount": 1251,
+    "viewLastModified": 1793055593,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1793135168,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7827044,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793135152,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793135168,
+          "failureCount": 0,
+          "startedAt": 1793135168,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "tileConfig": {
+        "description": "Read about changes to the Building Permits dataset.",
+        "title": "Change Notice: Building Permits - 9/13/2024"
+      },
+      "custom_fields": {
+        "Metadata": {
+          "Data Owner": "Department of Technology and Innovation"
+        }
+      },
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["article", "change notice", "permits", "buildings"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "676k-wsuu",
+    "name": "Budget - 2027 Budget Recommendations - Positions and Salaries - Chart",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Administration & Finance",
+    "createdAt": 1792530638,
+    "description": "2027 Budget Recommendations - Positions and Salaries bar chart by department.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 17,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "t952-rj49",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42692523,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792782003,
+    "publicationGroup": 20683921,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1792521546,
+    "rowsUpdatedBy": "vewm-vupz",
+    "tableId": 20683921,
+    "totalTimesRated": 0,
+    "viewCount": 131,
+    "viewLastModified": 1792782003,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792782299,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7821722,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792782156,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792782299,
+          "failureCount": 0,
+          "startedAt": 1792782299,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Metadata": {
+          "Time Period": "2027",
+          "Frequency": "Data are updated annually",
+          "Data Owner": "Budget & Management"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["budget", "2027"],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "cjq2-yu3r",
+    "name": "Budget - 2027 Budget Recommendations - Appropriations - Graph",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Administration & Finance",
+    "createdAt": 1792529017,
+    "description": "2027 Budget Recommendations - Appropriations bar chart by department.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 17,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "pptx-hhw3",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42692524,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792782047,
+    "publicationGroup": 20683920,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1792521465,
+    "rowsUpdatedBy": "vewm-vupz",
+    "tableId": 20683920,
+    "totalTimesRated": 0,
+    "viewCount": 83,
+    "viewLastModified": 1792782047,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792782296,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7821723,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792782166,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792782296,
+          "failureCount": 0,
+          "startedAt": 1792782296,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Metadata": {
+          "Time Period": "2027",
+          "Frequency": "Data are updated annually",
+          "Data Owner": "Budget & Management"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["budget", "2027"],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "wnza-ywhb",
+    "name": "Financial Incentive Projects - Property Tax Abatement - 2021-Current - Map",
+    "assetType": "map",
+    "averageRating": 0,
+    "category": "Community & Economic Development",
+    "createdAt": 1792449268,
+    "description": "Map of the Financial Incentive Projects - Property Tax Abatement - 2021-Current dataset.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_map",
+    "downloadCount": 15,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "wy5s-xrw5",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42684425,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792603757,
+    "publicationGroup": 20347002,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1792512973,
+    "rowsUpdatedBy": "xdg5-2w64",
+    "tableId": 20683933,
+    "totalTimesRated": 0,
+    "viewCount": 111,
+    "viewLastModified": 1792603757,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792608010,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7816104,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792608004,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "xdg5-2w64",
+          "displayName": "Maria Fiorillo"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792608010,
+          "failureCount": 0,
+          "startedAt": 1792608010,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "xdg5-2w64",
+          "displayName": "Maria Fiorillo"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Metadata": {
+          "Time Period": "See source dataset",
+          "Frequency": "See source dataset",
+          "Data Owner": "Department of Planning and Development"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "scy9-9wg4",
+      "displayName": "cocadmin",
+      "profileImageUrlLarge": "/api/users/scy9-9wg4/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/scy9-9wg4/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/scy9-9wg4/profile_images/TINY",
+      "screenName": "cocadmin",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["financial", "financial incentive", "incentive", "abatement"],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "p4pq-bxn9",
+    "name": "Budget - 2027 Budget Recommendations - Revenue",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Administration & Finance",
+    "createdAt": 1792446227,
+    "description": "This dataset contains the revenue detail portion of the 2027 Budget Recommendations for Local funds.  “Local” funds are all funds, other than grant funds, used by the City for non-capital operations - including, but not limited to, the Corporate Fund, Water Fund, Midway and O’Hare Airport funds, Vehicle Tax Fund, and the Library Fund.\n\nFor more information about the budget process, visit the Budget Documents page: https://www.chicago.gov/city/en/depts/obm/provdrs/budget.html.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 89,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42679071,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792446230,
+    "publicationGroup": 20683924,
+    "publicationStage": "published",
+    "rowClass": "",
+    "rowsUpdatedAt": 1792521576,
+    "rowsUpdatedBy": "vewm-vupz",
+    "tableId": 20683924,
+    "totalTimesRated": 0,
+    "viewCount": 307,
+    "viewLastModified": 1792521575,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792601681,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7816043,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792601654,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792601681,
+          "failureCount": 0,
+          "startedAt": 1792601681,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "rdfSubject": "0",
+      "rdfClass": "",
+      "custom_fields": {
+        "Metadata": {
+          "Time Period": "2027",
+          "Frequency": "Data are updated annually",
+          "Data Owner": "Budget & Management"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["budget", "revenue", "2027"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "t952-rj49",
+    "name": "Budget - 2027 Budget Recommendations - Positions and Salaries",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Administration & Finance",
+    "createdAt": 1792446114,
+    "description": "This dataset includes recommended positions and salaries for 2027 by title (without names) and salary. The dataset is excerpted from the 2027 Budget Recommendations, which is the line-item budget proposed by the Mayor to the City Council for approval. Disclaimer: the “Total Budgeted Unit” column displays either A) the number of employees AND vacancies associated with a given position, or B) the number of budgeted units (ie. hours/months) for that position. “Position Control” determines whether Total Budgeted Units column will count employees and vacancies or hours/months. If a Position Control is 1, then employees and vacancies are displayed; if a Position Control is 0, then the total number of hours/months recorded is displayed.\n\nThis dataset follows the format of the equivalent datasets from past years except that  Division Code, Section Code, Subsection Code, and Position Control have changed from Number to Text (not all in the same year) in order to accommodate non-numeric values.\n\nFor more information about the budget process, visit the Budget Documents page: https://www.chicago.gov/city/en/depts/obm/provdrs/budget.html.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 99,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42679068,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792446119,
+    "publicationGroup": 20683921,
+    "publicationStage": "published",
+    "rowClass": "",
+    "rowsUpdatedAt": 1792521546,
+    "rowsUpdatedBy": "vewm-vupz",
+    "tableId": 20683921,
+    "totalTimesRated": 0,
+    "viewCount": 531,
+    "viewLastModified": 1792521540,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792601683,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7816042,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792601647,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792601683,
+          "failureCount": 0,
+          "startedAt": 1792601683,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "rdfSubject": "0",
+      "rdfClass": "",
+      "custom_fields": {
+        "Metadata": {
+          "Time Period": "2027",
+          "Frequency": "Data are updated annually",
+          "Data Owner": "Budget & Management"
+        }
+      },
+      "rowLabel": "Row",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["budget", "2027"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "pptx-hhw3",
+    "name": "Budget - 2027 Budget Recommendations - Appropriations",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Administration & Finance",
+    "createdAt": 1792446066,
+    "description": "The dataset details 2027 Budget Recommendations, which is the line-item budget document proposed by the Mayor to the City Council for approval. Budgeted expenditures are identified by department, appropriation account, and funding type: Local, Community Development Block Grant Program (CDBG), and other Grants. “Local” funds refer to those line items that are balanced with locally-generated revenue sources, including but not limited to the Corporate Fund, Water Fund, Midway and O’Hare Airport funds, Vehicle Tax Fund, and Library Fund.\n\nThis dataset follows the format of the equivalent datasets from past years except that Appropriation Authority and Appropriation Account have changed from Number to Text in order to accommodate non-numeric values.\n\n For more information about the budget process, visit the Budget Documents page: https://www.chicago.gov/city/en/depts/obm/provdrs/budget.html.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 140,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42679067,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792446070,
+    "publicationGroup": 20683920,
+    "publicationStage": "published",
+    "rowClass": "",
+    "rowsUpdatedAt": 1792521465,
+    "rowsUpdatedBy": "vewm-vupz",
+    "tableId": 20683920,
+    "totalTimesRated": 0,
+    "viewCount": 489,
+    "viewLastModified": 1792521463,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792601685,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7816041,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792601640,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792601685,
+          "failureCount": 0,
+          "startedAt": 1792601685,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "rdfSubject": "0",
+      "rdfClass": "",
+      "custom_fields": {
+        "Metadata": {
+          "Time Period": "2027",
+          "Frequency": "Data are updated annually",
+          "Data Owner": "Budget & Management"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["budget", "2027"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "a8j4-79c9",
+    "name": "Marathon 2026 - Map",
+    "assetType": "map",
+    "averageRating": 0,
+    "category": "Events",
+    "createdAt": 1791405180,
+    "description": "The course map with mile markers for the October 11, 2026 Bank of America Chicago Marathon.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_map",
+    "downloadCount": 25,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "dk34-a4qh",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42645634,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791405682,
+    "publicationGroup": 20662350,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791406308,
+    "rowsUpdatedBy": "vewm-vupz",
+    "tableId": 20662350,
+    "totalTimesRated": 0,
+    "viewCount": 1664,
+    "viewLastModified": 1791405682,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791412791,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7789318,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791412779,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791412791,
+          "failureCount": 0,
+          "startedAt": 1791412791,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Metadata": {
+          "Time Period": "October 11, 2026",
+          "Data Owner": "Bank of America Chicago Marathon"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["marathon"],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "8uap-v9hc",
+    "name": "Marathon 2026 - Mile Markers",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Events",
+    "createdAt": 1791401393,
+    "description": "Mile markers for the October 11, 2026 Bank of America Chicago Marathon.\n\nThis dataset is sourced from the marathon organizers and believed to be correct. However, since errors are possible, including during our processing and loading of the source data, please validate directly with the organizers for any purposes where there would be financial, legal, or other serious consequences to any such errors.\n\nThis dataset is in a format for spatial datasets that is inherently tabular but allows for a map as a derived view. Please click the indicated link below for such a map. \n\nTo export the data in either tabular or geographic format, please use the Export button on this dataset.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 64,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42645574,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791401961,
+    "publicationGroup": 20662355,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791406255,
+    "rowsUpdatedBy": "vewm-vupz",
+    "tableId": 20662355,
+    "totalTimesRated": 0,
+    "viewCount": 295,
+    "viewLastModified": 1791406254,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791412765,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7789317,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791412755,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791412765,
+          "failureCount": 0,
+          "startedAt": 1791412765,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "jsonQuery": {
+        "order": [
+          {
+            "columnFieldName": "sort",
+            "ascending": true
+          }
+        ]
+      },
+      "custom_fields": {
+        "Metadata": {
+          "Time Period": "October 11, 2026",
+          "Data Owner": "Bank of America Chicago Marathon"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["marathon", "geo_layer"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "dk34-a4qh",
+    "name": "Marathon 2026 - Course Route",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Events",
+    "createdAt": 1791401200,
+    "description": "The course for the October 11, 2026 Bank of America Chicago Marathon.\n\nThis dataset is sourced from the marathon organizers and believed to be correct. However, since errors are possible, including during our processing and loading of the source data, please validate directly with the organizers for any purposes where there would be financial, legal, or other serious consequences to any such errors.\n\nThis dataset is in a format for spatial datasets that is inherently tabular but allows for a map as a derived view. Please click the indicated link below for such a map. \n\nTo export the data in either tabular or geographic format, please use the Export button on this dataset.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 104,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42645569,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791401383,
+    "publicationGroup": 20662350,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791406308,
+    "rowsUpdatedBy": "vewm-vupz",
+    "tableId": 20662350,
+    "totalTimesRated": 0,
+    "viewCount": 352,
+    "viewLastModified": 1791406307,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791412763,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7789316,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791412747,
+        "targetAudience": "public",
+        "workflowId": 2226,
+        "reviewer": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791412763,
+          "failureCount": 0,
+          "startedAt": 1791412763,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vewm-vupz",
+          "displayName": "Jonathan Levy"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Metadata": {
+          "Time Period": "October 11, 2026",
+          "Data Owner": "Bank of America Chicago Marathon"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vewm-vupz",
+      "displayName": "Jonathan Levy",
+      "screenName": "Jonathan Levy",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["marathon", "geo_layer"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

@@ -1,0 +1,1517 @@
+[
+  {
+    "id": "evhv-7f58",
+    "name": "Temporary No Parking Reservations (All)",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1791054866,
+    "description": "<p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Temporary No Parking Reservations layer is maintained by Seattle Department of Transportation. Due to the complex definition queries, source aprx required layers with definition queries to be exported as FGDB and then published.</span></span></p><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Definition Queries applied to the following layers:</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><ul><li><u>Temporary No Parking Reservations (Current)</u></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NULL AND ACTUAL_END_TIME IS NULL) AND (TRUNC (END_DATE_TIME ) &gt;= TRUNC (SYSDATE) AND TRUNC (START_DATE_TIME) &lt;= TRUNC (SYSDATE)))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NULL AND ACTUAL_END_TIME IS NOT NULL) AND (TRUNC (ACTUAL_END_TIME) &gt;= TRUNC (SYSDATE) AND TRUNC (START_DATE_TIME) &lt;= TRUNC (SYSDATE)))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NOT NULL AND ACTUAL_END_TIME IS NULL) AND (TRUNC (END_DATE_TIME) &gt;= TRUNC (SYSDATE) AND TRUNC (ACTUAL_START_TIME) &lt;= TRUNC (SYSDATE)))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NOT NULL AND ACTUAL_END_TIME IS NOT NULL) AND (TRUNC (ACTUAL_END_TIME) &gt;= TRUNC (SYSDATE) AND TRUNC (ACTUAL_START_TIME) &lt;= TRUNC (SYSDATE)))</font></span></li></ul><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><ul><li><u>Temporary No Parking Reservations (Past, Current, and Future)</u></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NULL AND ACTUAL_END_TIME IS NULL) AND (TRUNC (END_DATE_TIME ) &gt;= TRUNC (SYSDATE) - 15 AND TRUNC (START_DATE_TIME) &lt;= TRUNC (SYSDATE) + 30))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NULL AND ACTUAL_END_TIME IS NOT NULL) AND (TRUNC (ACTUAL_END_TIME) &gt;= TRUNC (SYSDATE) - 15 AND TRUNC (START_DATE_TIME) &lt;= TRUNC (SYSDATE) + 30))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NOT NULL AND ACTUAL_END_TIME IS NULL) AND (TRUNC (END_DATE_TIME) &gt;= TRUNC (SYSDATE) - 15 AND TRUNC (ACTUAL_START_TIME) &lt;= TRUNC (SYSDATE) + 30))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NOT NULL AND ACTUAL_END_TIME IS NOT NULL) AND (TRUNC (ACTUAL_END_TIME) &gt;= TRUNC (SYSDATE) - 15 AND TRUNC (ACTUAL_START_TIME) &lt;= TRUNC (SYSDATE) + 30))</font></span></li></ul><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Feature Class: V_TEMP_NOPARK_RESERVATIONS</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Refresh Cycle: Nightly</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Contact: SDOT Parking team</div>",
+    "diciBackend": false,
+    "displayType": "federated",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42636850,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791054866,
+    "publicationGroup": 20657829,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791054866,
+    "tableId": 20657829,
+    "totalTimesRated": 0,
+    "viewCount": 16,
+    "viewLastModified": 1793992422,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1791181948,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7783660,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791054866,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791181948,
+          "failureCount": 0,
+          "startedAt": 1791181948,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "kxwt-ugr6",
+          "displayName": "Allen Grissom"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 544712,
+      "name": "Temporary No Parking Reservations (All)",
+      "createdAt": 1791054866,
+      "description": "<p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Temporary No Parking Reservations layer is maintained by Seattle Department of Transportation. Due to the complex definition queries, source aprx required layers with definition queries to be exported as FGDB and then published.</span></span></p><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Definition Queries applied to the following layers:</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><ul><li><u>Temporary No Parking Reservations (Current)</u></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NULL AND ACTUAL_END_TIME IS NULL) AND (TRUNC (END_DATE_TIME ) &gt;= TRUNC (SYSDATE) AND TRUNC (START_DATE_TIME) &lt;= TRUNC (SYSDATE)))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NULL AND ACTUAL_END_TIME IS NOT NULL) AND (TRUNC (ACTUAL_END_TIME) &gt;= TRUNC (SYSDATE) AND TRUNC (START_DATE_TIME) &lt;= TRUNC (SYSDATE)))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NOT NULL AND ACTUAL_END_TIME IS NULL) AND (TRUNC (END_DATE_TIME) &gt;= TRUNC (SYSDATE) AND TRUNC (ACTUAL_START_TIME) &lt;= TRUNC (SYSDATE)))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NOT NULL AND ACTUAL_END_TIME IS NOT NULL) AND (TRUNC (ACTUAL_END_TIME) &gt;= TRUNC (SYSDATE) AND TRUNC (ACTUAL_START_TIME) &lt;= TRUNC (SYSDATE)))</font></span></li></ul><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><ul><li><u>Temporary No Parking Reservations (Past, Current, and Future)</u></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NULL AND ACTUAL_END_TIME IS NULL) AND (TRUNC (END_DATE_TIME ) &gt;= TRUNC (SYSDATE) - 15 AND TRUNC (START_DATE_TIME) &lt;= TRUNC (SYSDATE) + 30))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NULL AND ACTUAL_END_TIME IS NOT NULL) AND (TRUNC (ACTUAL_END_TIME) &gt;= TRUNC (SYSDATE) - 15 AND TRUNC (START_DATE_TIME) &lt;= TRUNC (SYSDATE) + 30))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NOT NULL AND ACTUAL_END_TIME IS NULL) AND (TRUNC (END_DATE_TIME) &gt;= TRUNC (SYSDATE) - 15 AND TRUNC (ACTUAL_START_TIME) &lt;= TRUNC (SYSDATE) + 30))</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>OR</font></span></li><li><span style='font-size:small;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>((ACTUAL_START_TIME IS NOT NULL AND ACTUAL_END_TIME IS NOT NULL) AND (TRUNC (ACTUAL_END_TIME) &gt;= TRUNC (SYSDATE) - 15 AND TRUNC (ACTUAL_START_TIME) &lt;= TRUNC (SYSDATE) + 30))</font></span></li></ul><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Feature Class: V_TEMP_NOPARK_RESERVATIONS</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Refresh Cycle: Nightly</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Contact: SDOT Parking team</div>",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=dd379f4f60294aea9d813185fb5144a4&sublayer=2",
+      "federatedCatalogSelectionId": 564187,
+      "federatedCatalogSourceId": 19908,
+      "tags": "parking,sdot,seattle gis open data",
+      "viewId": 42636850,
+      "viewUid": "evhv-7f58"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::temporary-no-parking-reservations-all"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/Temporary_No_Parking_1/FeatureServer/2"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/dd379f4f60294aea9d813185fb5144a4/csv?layers=2"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/dd379f4f60294aea9d813185fb5144a4/shapefile?layers=2"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/dd379f4f60294aea9d813185fb5144a4/geojson?layers=2"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/dd379f4f60294aea9d813185fb5144a4/kml?layers=2"
+          },
+          "title": "KML"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "mailto:mapgis.mapgis@seattle.gov",
+          "Homepage": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::temporary-no-parking-reservations-all",
+          "Contact Name": "Transportation_SeattleCityGIS",
+          "Issued": "2025-07-25T16:20:26.000Z",
+          "License": "The City of Seattle makes no representation or warranty as to its accuracy, and in particular, its accuracy as to labeling, dimensions, contours, property boundaries, or placement or location of any map feature thereof.",
+          "Last Update": "2026-11-06T16:22:31.288Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=dd379f4f60294aea9d813185fb5144a4&sublayer=2",
+          "Geographic Coverage": "-122.3947,47.5557,-122.2873,47.6813",
+          "Publisher": "City of Seattle ArcGIS Online",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::temporary-no-parking-reservations-all"
+      }
+    },
+    "owner": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["parking", "sdot", "seattle gis open data"],
+    "flags": ["default", "federated", "internalToPublicFederatedView", "ownerMayBeContacted"]
+  },
+  {
+    "id": "arwg-tb5h",
+    "name": "SDOT Traffic Cameras",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1791054866,
+    "description": "<p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Displays traffic cameras owned by Seattle Department of Transportation. The GIS data is maintained by Seattle Department of Transportation.</span></span></p><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>Refresh Cycle: Daily</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>Feature Class: TrafCam</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div></div><p>Contact: SDOT Transportation Operations Center</p><p>Collaboration: None, Not established<br />&nbsp;</p>",
+    "diciBackend": false,
+    "displayType": "federated",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42636849,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791054866,
+    "publicationGroup": 20657828,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791054866,
+    "tableId": 20657828,
+    "totalTimesRated": 0,
+    "viewCount": 53,
+    "viewLastModified": 1793906216,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1791181942,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7783659,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791054866,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791181942,
+          "failureCount": 0,
+          "startedAt": 1791181942,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "kxwt-ugr6",
+          "displayName": "Allen Grissom"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 544711,
+      "name": "SDOT Traffic Cameras",
+      "createdAt": 1791054866,
+      "description": "<p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Displays traffic cameras owned by Seattle Department of Transportation. The GIS data is maintained by Seattle Department of Transportation.</span></span></p><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>Refresh Cycle: Daily</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>Feature Class: TrafCam</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div></div><p>Contact: SDOT Transportation Operations Center</p><p>Collaboration: None, Not established<br />&nbsp;</p>",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=45a7e9f4d9584dbd9fdce1b951a7c4f6&sublayer=0",
+      "federatedCatalogSelectionId": 564186,
+      "federatedCatalogSourceId": 19908,
+      "tags": "common data layer,gis,sdot,seattle gis open data,traffic cameras",
+      "viewId": 42636849,
+      "viewUid": "arwg-tb5h"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sdot-traffic-cameras"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/SDOT_Traffic_Cameras/FeatureServer/0"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/45a7e9f4d9584dbd9fdce1b951a7c4f6/csv?layers=0"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/45a7e9f4d9584dbd9fdce1b951a7c4f6/shapefile?layers=0"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/45a7e9f4d9584dbd9fdce1b951a7c4f6/geojson?layers=0"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/45a7e9f4d9584dbd9fdce1b951a7c4f6/kml?layers=0"
+          },
+          "title": "KML"
+        },
+        {
+          "urls": {
+            "application/zip": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/45a7e9f4d9584dbd9fdce1b951a7c4f6/filegdb?layers=0"
+          },
+          "title": "File Geodatabase"
+        },
+        {
+          "urls": {
+            "text/plain": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/45a7e9f4d9584dbd9fdce1b951a7c4f6/featureCollection?layers=0"
+          },
+          "title": "Feature Collection"
+        },
+        {
+          "urls": {
+            "application/vnd.ms-excel": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/45a7e9f4d9584dbd9fdce1b951a7c4f6/excel?layers=0"
+          },
+          "title": "Excel"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/45a7e9f4d9584dbd9fdce1b951a7c4f6/geoPackage?layers=0"
+          },
+          "title": "GeoPackage"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/45a7e9f4d9584dbd9fdce1b951a7c4f6/sqlite?layers=0"
+          },
+          "title": "SQLite Geodatabase"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "mailto:mapgis.mapgis@seattle.gov",
+          "Homepage": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sdot-traffic-cameras",
+          "Contact Name": "Transportation_SeattleCityGIS",
+          "Issued": "2026-10-02T17:51:56.000Z",
+          "License": "<p>The City of Seattle makes no representation or warranty as to its accuracy, and in particular, its accuracy as to labeling, dimensions, contours, property boundaries, or placement or location of any map feature thereof.</p>",
+          "Last Update": "2026-11-04T22:25:45.078Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=45a7e9f4d9584dbd9fdce1b951a7c4f6&sublayer=0",
+          "Geographic Coverage": "-122.3854,47.2801,-122.0521,48.1538",
+          "Publisher": "City of Seattle ArcGIS Online",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sdot-traffic-cameras"
+      }
+    },
+    "owner": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["common data layer", "gis", "sdot", "seattle gis open data", "traffic cameras"],
+    "flags": ["default", "federated", "internalToPublicFederatedView", "ownerMayBeContacted"]
+  },
+  {
+    "id": "k8z7-3feg",
+    "name": "Permit Fees",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Built Environment",
+    "createdAt": 1788295523,
+    "description": "Fee information for all construction and construction related permits within the City of Seattle.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 3849,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42490952,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789056891,
+    "publicationGroup": 20554312,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794103912,
+    "rowsUpdatedBy": "2866-np2t",
+    "tableId": 20575498,
+    "totalTimesRated": 0,
+    "viewCount": 31143,
+    "viewLastModified": 1794103613,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1789057361,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7680351,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789057217,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789057361,
+          "failureCount": 0,
+          "startedAt": 1789057361,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department": {
+          "Department": "Seattle Department of Construction & Inspections"
+        },
+        "Common Core": {
+          "Contact Email": "open.data@seattle.gov",
+          "Publisher": "data.seattle.gov"
+        },
+        "Refresh Frequency": {
+          "Frequency": "Daily"
+        }
+      },
+      "rowLabel": "Fee",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "itw4-gqi9",
+      "displayName": "Dev.Nambi@seattle.gov",
+      "screenName": "Dev.Nambi@seattle.gov",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "itw4-gqi9",
+      "displayName": "Dev.Nambi@seattle.gov",
+      "screenName": "Dev.Nambi@seattle.gov",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "building permits",
+      "permit applications",
+      "land use permits",
+      "sdci",
+      "seattle department of construction and inspections",
+      "construction permits",
+      "permit fees",
+      "fees"
+    ],
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "xkas-9n43",
+    "name": "Paid Parking Occupancy (Last 30 Days)",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Transportation",
+    "createdAt": 1787863225,
+    "description": "The City of Seattle has created an on-street paid parking occupancy data set and is providing access to this data set for public use for research and entrepreneurial purposes under the City’s Open Data Program. This data set contains the last 30 days of paid occupancy records (after the seven day data delay).",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 20,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42448790,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787870710,
+    "publicationGroup": 20547834,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794066464,
+    "rowsUpdatedBy": "2866-np2t",
+    "tableId": 20547834,
+    "totalTimesRated": 0,
+    "viewCount": 3308,
+    "viewLastModified": 1794064936,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787929380,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7651557,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787929259,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787929380,
+          "failureCount": 0,
+          "startedAt": 1787929380,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department": {
+          "Department": "Seattle Department of Transportation"
+        },
+        "Common Core": {
+          "Contact Email": "open.data@seattle.gov",
+          "Publisher": "data.seattle.gov"
+        },
+        "Refresh Frequency": {
+          "Frequency": "Daily"
+        }
+      },
+      "rowLabel": "Rate",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "2866-np2t",
+      "displayName": "Wang, Xinbao",
+      "profileImageUrlLarge": "/api/users/2866-np2t/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/2866-np2t/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/2866-np2t/profile_images/TINY",
+      "screenName": "Wang, Xinbao",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "2866-np2t",
+      "displayName": "Wang, Xinbao",
+      "profileImageUrlLarge": "/api/users/2866-np2t/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/2866-np2t/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/2866-np2t/profile_images/TINY",
+      "screenName": "Wang, Xinbao",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "jzyn-cn4n",
+    "name": "Paid Parking (Last 48 Hours)",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Transportation",
+    "createdAt": 1787854603,
+    "description": "The City of Seattle has created an on-street paid parking occupancy data set and is providing access to this data set for public use for research and entrepreneurial purposes under the City’s Open Data Program.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 21,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42447935,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787855271,
+    "publicationGroup": 20547286,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794060597,
+    "rowsUpdatedBy": "2866-np2t",
+    "tableId": 20547286,
+    "totalTimesRated": 0,
+    "viewCount": 2592,
+    "viewLastModified": 1794060543,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787929378,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7651594,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787929325,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787929378,
+          "failureCount": 0,
+          "startedAt": 1787929378,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department": {
+          "Department": "Seattle Department of Transportation"
+        },
+        "Common Core": {
+          "Contact Email": "open.data@seattle.gov",
+          "Publisher": "data.seattle.gov"
+        },
+        "Refresh Frequency": {
+          "Frequency": "Daily"
+        }
+      },
+      "rowLabel": "Paid parking occupancy (rate of payment)",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "2866-np2t",
+      "displayName": "Wang, Xinbao",
+      "profileImageUrlLarge": "/api/users/2866-np2t/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/2866-np2t/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/2866-np2t/profile_images/TINY",
+      "screenName": "Wang, Xinbao",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "2866-np2t",
+      "displayName": "Wang, Xinbao",
+      "profileImageUrlLarge": "/api/users/2866-np2t/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/2866-np2t/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/2866-np2t/profile_images/TINY",
+      "screenName": "Wang, Xinbao",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["pay stations", "parking", "curbspace", "sdot"],
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "nwze-dxwb",
+    "name": "Major Transit Service Area",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1779995881,
+    "description": "<div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>A polygon feature layer representing ½ mile (2640 feet) distance walksheds from Major Transit Stops. Derived as a View from SDCI Transit Stop Walksheds layer.</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>As per Ordinance 127376, “Transit service area, major” means an area within 2,640 feet walking distance of a stop served by a major transit service, as shown on a map adopted by Director's Rule (DR 01-2026).&nbsp;<br /><br />“Transit stop, major” means a stop on a major transit service.&nbsp;<br />&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>“Transit service, major” means the following transit services: &nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>1. Commuter rail;&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>2. Light rail or street car systems; and&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>3. Bus rapid transit routes that are in operation or are funded for development and projected for construction within an applicable six-year transit plan under RCW 35.58.2795</div></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><strong>Resources</strong></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a target='_blank' href='https://seattle.legistar.com/LegislationDetail.aspx?ID=7423062&amp;GUID=BE94A92B-AE2B-4714-B644-1DEFBE30E86B&amp;Options=ID|Text|&amp;Search=CB+120993' rel='nofollow ugc noopener noreferrer'>Ordinance 127376</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.54QUDESTACOREPASOWAST_23.54.015REPAMAPALI' rel='nofollow ugc noopener noreferrer'>Seattle Municipal Code section 23.54.015&nbsp;Table B</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.44NERE_SUBCHAPTER_IPRUSPEOU_23.44.017DELI' rel='nofollow ugc noopener noreferrer'>Seattle Municipal Code section 23.44.017</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IVAD_CH23.84ADE_23.84A.038T' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:medium;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>Seattle Municipal Code section&nbsp;23.84A.038 \"T\"</span></font></span></a></div>",
+    "diciBackend": false,
+    "displayType": "federated",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42176327,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779995881,
+    "publicationGroup": 20401311,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779995881,
+    "tableId": 20401311,
+    "totalTimesRated": 0,
+    "viewCount": 97,
+    "viewLastModified": 1779995881,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1779999071,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7499370,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779995881,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779999071,
+          "failureCount": 0,
+          "startedAt": 1779999071,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "kxwt-ugr6",
+          "displayName": "Allen Grissom"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 492920,
+      "name": "Major Transit Service Area",
+      "createdAt": 1779995881,
+      "description": "<div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>A polygon feature layer representing ½ mile (2640 feet) distance walksheds from Major Transit Stops. Derived as a View from SDCI Transit Stop Walksheds layer.</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>As per Ordinance 127376, “Transit service area, major” means an area within 2,640 feet walking distance of a stop served by a major transit service, as shown on a map adopted by Director's Rule (DR 01-2026).&nbsp;<br /><br />“Transit stop, major” means a stop on a major transit service.&nbsp;<br />&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>“Transit service, major” means the following transit services: &nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>1. Commuter rail;&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>2. Light rail or street car systems; and&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>3. Bus rapid transit routes that are in operation or are funded for development and projected for construction within an applicable six-year transit plan under RCW 35.58.2795</div></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><strong>Resources</strong></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a target='_blank' href='https://seattle.legistar.com/LegislationDetail.aspx?ID=7423062&amp;GUID=BE94A92B-AE2B-4714-B644-1DEFBE30E86B&amp;Options=ID|Text|&amp;Search=CB+120993' rel='nofollow ugc noopener noreferrer'>Ordinance 127376</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.54QUDESTACOREPASOWAST_23.54.015REPAMAPALI' rel='nofollow ugc noopener noreferrer'>Seattle Municipal Code section 23.54.015&nbsp;Table B</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.44NERE_SUBCHAPTER_IPRUSPEOU_23.44.017DELI' rel='nofollow ugc noopener noreferrer'>Seattle Municipal Code section 23.44.017</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IVAD_CH23.84ADE_23.84A.038T' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:medium;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>Seattle Municipal Code section&nbsp;23.84A.038 \"T\"</span></font></span></a></div>",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=968012558da042b3abf24b78ac220352&sublayer=0",
+      "federatedCatalogSelectionId": 512322,
+      "federatedCatalogSourceId": 19908,
+      "tags": "major transit,sdci,seattle gis open data",
+      "viewId": 42176327,
+      "viewUid": "nwze-dxwb"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::major-transit-service-area"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/SDCI_Transit_Stop_Walksheds/FeatureServer/0"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/968012558da042b3abf24b78ac220352/csv?layers=0"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/968012558da042b3abf24b78ac220352/shapefile?layers=0"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/968012558da042b3abf24b78ac220352/geojson?layers=0"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/968012558da042b3abf24b78ac220352/kml?layers=0"
+          },
+          "title": "KML"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "mailto:mapgis.mapgis@seattle.gov",
+          "Homepage": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::major-transit-service-area",
+          "Contact Name": "SDCI_SeattleCityGIS",
+          "Issued": "2025-12-10T22:39:52.000Z",
+          "License": "<p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>The City of Seattle makes no representation or warranty as to its accuracy, and in particular, its accuracy as to labeling, dimensions, contours, property boundaries, or placement or location of any map feature thereof.</span></span></p>",
+          "Last Update": "2025-12-10T20:19:42.523Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=968012558da042b3abf24b78ac220352&sublayer=0",
+          "Geographic Coverage": "-122.3976,47.4938,-122.2471,47.7356",
+          "Publisher": "City of Seattle ArcGIS Online",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::major-transit-service-area"
+      }
+    },
+    "owner": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["major transit", "sdci", "seattle gis open data"],
+    "flags": ["default", "federated", "internalToPublicFederatedView", "ownerMayBeContacted"]
+  },
+  {
+    "id": "nkji-sfe5",
+    "name": "Major Transit Stop Quarter Mile Walksheds",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1779995881,
+    "description": "<div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>A polygon feature layer representing ¼ mile (1320 feet) distance walksheds from Major Transit Stops. <span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Derived as a View from SDCI Transit Stop Walksheds layer.</span></span></div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>As per Ordinance 127376, “Transit stop, major” means a stop on a major transit service.&nbsp;<br />&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>“Transit service, major” means the following transit services: &nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>1. Commuter rail;&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>2. Light rail or street car systems; and&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>3. Bus rapid transit routes that are in operation or are funded for development and projected for construction within an applicable six-year transit plan under RCW 35.58.2795<br /><br />&nbsp;</div></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><strong>Resources</strong></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a target='_blank' href='https://seattle.legistar.com/LegislationDetail.aspx?ID=7423062&amp;GUID=BE94A92B-AE2B-4714-B644-1DEFBE30E86B&amp;Options=ID|Text|&amp;Search=CB+120993' rel='nofollow ugc noopener noreferrer'>Ordinance 127376</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.54QUDESTACOREPASOWAST_23.54.015REPAMAPALI' rel='nofollow ugc noopener noreferrer'>Seattle Municipal Code section 23.54.015&nbsp;Table B</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.44NERE_SUBCHAPTER_IPRUSPEOU_23.44.017DELI' rel='nofollow ugc noopener noreferrer'>Seattle Municipal Code section 23.44.017</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IVAD_CH23.84ADE_23.84A.038T' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:medium;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>Seattle Municipal Code section&nbsp;23.84A.038 \"T\"</span></font></span></a></div>",
+    "diciBackend": false,
+    "displayType": "federated",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42176326,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779995881,
+    "publicationGroup": 20401310,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779995881,
+    "tableId": 20401310,
+    "totalTimesRated": 0,
+    "viewCount": 95,
+    "viewLastModified": 1779995881,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1779999069,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7499369,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779995881,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779999069,
+          "failureCount": 0,
+          "startedAt": 1779999069,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "kxwt-ugr6",
+          "displayName": "Allen Grissom"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 492919,
+      "name": "Major Transit Stop Quarter Mile Walksheds",
+      "createdAt": 1779995881,
+      "description": "<div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>A polygon feature layer representing ¼ mile (1320 feet) distance walksheds from Major Transit Stops. <span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>Derived as a View from SDCI Transit Stop Walksheds layer.</span></span></div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>As per Ordinance 127376, “Transit stop, major” means a stop on a major transit service.&nbsp;<br />&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>“Transit service, major” means the following transit services: &nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>1. Commuter rail;&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>2. Light rail or street car systems; and&nbsp;</div><div style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'>3. Bus rapid transit routes that are in operation or are funded for development and projected for construction within an applicable six-year transit plan under RCW 35.58.2795<br /><br />&nbsp;</div></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>&nbsp;</div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><strong>Resources</strong></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a target='_blank' href='https://seattle.legistar.com/LegislationDetail.aspx?ID=7423062&amp;GUID=BE94A92B-AE2B-4714-B644-1DEFBE30E86B&amp;Options=ID|Text|&amp;Search=CB+120993' rel='nofollow ugc noopener noreferrer'>Ordinance 127376</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.54QUDESTACOREPASOWAST_23.54.015REPAMAPALI' rel='nofollow ugc noopener noreferrer'>Seattle Municipal Code section 23.54.015&nbsp;Table B</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IIILAUSRE_CH23.44NERE_SUBCHAPTER_IPRUSPEOU_23.44.017DELI' rel='nofollow ugc noopener noreferrer'>Seattle Municipal Code section 23.44.017</a></div><div style='background-color:rgb(255, 255, 255); border:0px solid currentcolor; box-sizing:border-box; color:rgb(74, 74, 74); font-family:&quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; line-height:1.5; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'><a style='border:0px solid currentcolor; box-sizing:border-box; color:rgb(0, 97, 155); font-family:inherit; line-height:1.5; text-decoration:none;' target='_blank' href='https://library.municode.com/wa/seattle/codes/municipal_code?nodeId=TIT23LAUSCO_SUBTITLE_IVAD_CH23.84ADE_23.84A.038T' rel='nofollow ugc noopener noreferrer'><span style='font-family:inherit; font-size:medium;'><font style='border:0px solid currentcolor; box-sizing:border-box; font-family:inherit; line-height:1.5;'><span style='border:0px solid currentcolor; box-sizing:border-box; line-height:1.5;'>Seattle Municipal Code section&nbsp;23.84A.038 \"T\"</span></font></span></a></div>",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=701977008dd5436faf16feb8bcb99e9a&sublayer=0",
+      "federatedCatalogSelectionId": 512323,
+      "federatedCatalogSourceId": 19908,
+      "tags": "major transit,sdci,seattle gis open data",
+      "viewId": 42176326,
+      "viewUid": "nkji-sfe5"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::major-transit-stop-quarter-mile-walksheds"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/SDCI_Transit_Stop_Walksheds/FeatureServer/0"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/701977008dd5436faf16feb8bcb99e9a/csv?layers=0"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/701977008dd5436faf16feb8bcb99e9a/shapefile?layers=0"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/701977008dd5436faf16feb8bcb99e9a/geojson?layers=0"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/701977008dd5436faf16feb8bcb99e9a/kml?layers=0"
+          },
+          "title": "KML"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "mailto:mapgis.mapgis@seattle.gov",
+          "Homepage": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::major-transit-stop-quarter-mile-walksheds",
+          "Contact Name": "SDCI_SeattleCityGIS",
+          "Issued": "2025-12-10T22:42:16.000Z",
+          "License": "<p><span style='background-color:rgb(255,255,255); color:rgb(74,74,74); font-family:&quot;Avenir Next W01&quot;, &quot;Avenir Next W00&quot;, &quot;Avenir Next&quot;, Avenir, &quot;Helvetica Neue&quot;, sans-serif; font-size:16px;'><span style='display:inline !important; float:none; font-style:normal; font-variant-caps:normal; font-variant-ligatures:normal; font-weight:400; letter-spacing:normal; text-align:start; text-decoration-color:initial; text-decoration-style:initial; text-indent:0px; text-transform:none; word-spacing:0px;'>The City of Seattle makes no representation or warranty as to its accuracy, and in particular, its accuracy as to labeling, dimensions, contours, property boundaries, or placement or location of any map feature thereof.</span></span></p>",
+          "Last Update": "2025-12-10T20:19:42.523Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=701977008dd5436faf16feb8bcb99e9a&sublayer=0",
+          "Geographic Coverage": "-122.3976,47.4938,-122.2471,47.7356",
+          "Publisher": "City of Seattle ArcGIS Online",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::major-transit-stop-quarter-mile-walksheds"
+      }
+    },
+    "owner": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["major transit", "sdci", "seattle gis open data"],
+    "flags": ["default", "federated", "internalToPublicFederatedView", "ownerMayBeContacted"]
+  },
+  {
+    "id": "mbji-6egb",
+    "name": "Seattle Bus Volumes",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1779995881,
+    "description": "<p>A line feature layer derived from the <a target='_blank' href='https://gis-kingcounty.opendata.arcgis.com/datasets/kingcounty::metro-transportation-network-tnet-in-king-county/about' rel='nofollow ugc noopener noreferrer'>Metro Transportation Network (TNET) King County</a>. Each line segment represents a unique link in the King County transportation network. More information about TNET, including field metadata can be found in the <a target='_blank' href='https://www5.kingcounty.gov/sdc/?Layer=trans_network' rel='nofollow ugc noopener noreferrer'>King County GIS Catalogue</a>.</p><p>This layer is a simplified version of the TNET that is filtered for segments in Seattle where public bus transit service operates. Five fields are joined to the TNET layer representing the number of daily in-service buses that are scheduled to travel on the segment each weekday.&nbsp;</p><p>Joined fields:</p><ul><li><span>CHANGE_NUM - Unique integer that identifies service change period. 157 = Fall 2024</span></li><li><span>TRIP_KIND_CD - S = service trip</span></li><li><span>SCHED_DAY_TYPE_CODED_NUM - 0 = weekday</span></li><li><span>DAILY_TRIP_CNT - The number of times per day the given t-link is traversed by buses meeting all criteria in the given row.</span></li><li><span>ROUTES – Bus routes included in the DAILY_TRIP_CNT</span></li></ul><p><span style='font-size:12.0pt;'>This data can be used to view scheduled in-service weekday bus volumes in Seattle by street segment and is reported in SDOT’s&nbsp;</span><a target='_blank' href='https://www.seattle.gov/transportation/document-library/reports-and-studies' rel='nofollow ugc noopener noreferrer'><span style='font-size:12.0pt;'>Annual Traffic Report</span></a><span style='font-size:12.0pt;'>. The current published layer represents bus volume data from the Fall 2024 service change (September 2024 – March 2025) and may be out of date with current service levels. Data will be refreshed annually with the update of the Annual Traffic Report.&nbsp;If you need more recent data, please contact King County.</span></p><p>Maintained by Seattle Department of Transportation</p><p>Refresh Cycle: Static, manually updated as required</p><p>Contact: SDOT Transit and Mobility team</p>",
+    "diciBackend": false,
+    "displayType": "federated",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42176325,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779995881,
+    "publicationGroup": 20401309,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779995881,
+    "tableId": 20401309,
+    "totalTimesRated": 0,
+    "viewCount": 41,
+    "viewLastModified": 1780341895,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1779999073,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7499368,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779995881,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779999073,
+          "failureCount": 0,
+          "startedAt": 1779999073,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "kxwt-ugr6",
+          "displayName": "Allen Grissom"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 492918,
+      "name": "Seattle Bus Volumes",
+      "createdAt": 1779995881,
+      "description": "<p>A line feature layer derived from the <a target='_blank' href='https://gis-kingcounty.opendata.arcgis.com/datasets/kingcounty::metro-transportation-network-tnet-in-king-county/about' rel='nofollow ugc noopener noreferrer'>Metro Transportation Network (TNET) King County</a>. Each line segment represents a unique link in the King County transportation network. More information about TNET, including field metadata can be found in the <a target='_blank' href='https://www5.kingcounty.gov/sdc/?Layer=trans_network' rel='nofollow ugc noopener noreferrer'>King County GIS Catalogue</a>.</p><p>This layer is a simplified version of the TNET that is filtered for segments in Seattle where public bus transit service operates. Five fields are joined to the TNET layer representing the number of daily in-service buses that are scheduled to travel on the segment each weekday.&nbsp;</p><p>Joined fields:</p><ul><li><span>CHANGE_NUM - Unique integer that identifies service change period. 157 = Fall 2024</span></li><li><span>TRIP_KIND_CD - S = service trip</span></li><li><span>SCHED_DAY_TYPE_CODED_NUM - 0 = weekday</span></li><li><span>DAILY_TRIP_CNT - The number of times per day the given t-link is traversed by buses meeting all criteria in the given row.</span></li><li><span>ROUTES – Bus routes included in the DAILY_TRIP_CNT</span></li></ul><p><span style='font-size:12.0pt;'>This data can be used to view scheduled in-service weekday bus volumes in Seattle by street segment and is reported in SDOT’s&nbsp;</span><a target='_blank' href='https://www.seattle.gov/transportation/document-library/reports-and-studies' rel='nofollow ugc noopener noreferrer'><span style='font-size:12.0pt;'>Annual Traffic Report</span></a><span style='font-size:12.0pt;'>. The current published layer represents bus volume data from the Fall 2024 service change (September 2024 – March 2025) and may be out of date with current service levels. Data will be refreshed annually with the update of the Annual Traffic Report.&nbsp;If you need more recent data, please contact King County.</span></p><p>Maintained by Seattle Department of Transportation</p><p>Refresh Cycle: Static, manually updated as required</p><p>Contact: SDOT Transit and Mobility team</p>",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=0cedd1fd239c45139199bd074c5b5c19&sublayer=0",
+      "federatedCatalogSelectionId": 512321,
+      "federatedCatalogSourceId": 19908,
+      "tags": "bus volumes,gis,sdot,seattle gis open data",
+      "viewId": 42176325,
+      "viewUid": "mbji-6egb"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::seattle-bus-volumes"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/Seattle_Bus_Volumes/FeatureServer/0"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/0cedd1fd239c45139199bd074c5b5c19/csv?layers=0"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/0cedd1fd239c45139199bd074c5b5c19/shapefile?layers=0"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/0cedd1fd239c45139199bd074c5b5c19/geojson?layers=0"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/0cedd1fd239c45139199bd074c5b5c19/kml?layers=0"
+          },
+          "title": "KML"
+        },
+        {
+          "urls": {
+            "application/zip": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/0cedd1fd239c45139199bd074c5b5c19/filegdb?layers=0"
+          },
+          "title": "File Geodatabase"
+        },
+        {
+          "urls": {
+            "text/plain": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/0cedd1fd239c45139199bd074c5b5c19/featureCollection?layers=0"
+          },
+          "title": "Feature Collection"
+        },
+        {
+          "urls": {
+            "application/vnd.ms-excel": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/0cedd1fd239c45139199bd074c5b5c19/excel?layers=0"
+          },
+          "title": "Excel"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/0cedd1fd239c45139199bd074c5b5c19/geoPackage?layers=0"
+          },
+          "title": "GeoPackage"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/0cedd1fd239c45139199bd074c5b5c19/sqlite?layers=0"
+          },
+          "title": "SQLite Geodatabase"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "mailto:mapgis.mapgis@seattle.gov",
+          "Homepage": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::seattle-bus-volumes",
+          "Contact Name": "Transportation_SeattleCityGIS",
+          "Issued": "2026-05-11T18:03:54.000Z",
+          "License": "<p>The City of Seattle makes no representation or warranty as to its accuracy, and in particular, its accuracy as to labeling, dimensions, contours, property boundaries, or placement or location of any map feature thereof.</p>",
+          "Last Update": "2026-05-11T18:04:10.672Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=0cedd1fd239c45139199bd074c5b5c19&sublayer=0",
+          "Geographic Coverage": "-122.4133,47.4933,-122.2408,47.7799",
+          "Publisher": "City of Seattle ArcGIS Online",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::seattle-bus-volumes"
+      }
+    },
+    "owner": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["bus volumes", "gis", "sdot", "seattle gis open data"],
+    "flags": ["default", "federated", "internalToPublicFederatedView", "ownerMayBeContacted"]
+  },
+  {
+    "id": "m2gh-xvu5",
+    "name": "SP1 Community Food Security",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1779477561,
+    "description": "<p><span style='background-color:transparent; color:rgb(0,0,0); font-family:Avenir Next; font-size:14px;'>Contains information about Community Meal Sites, Food Banks, Food Systems, Fresh Bucks Program, Farm Stands, Summer Meal Sites, and Fresh Fruit Programs. Build community food security through culturally relevant, equitable, nutritious food access. </span><a target='_blank' href='https://www.seattle.gov/documents/Departments/OSE/FoodAccess/Food%20Action%20Plan/FoodActionPlan_FullReport_2024.pdf#page=59' rel='nofollow ugc noopener noreferrer'><span style='font-size:14px;'><u>Learn more.</u></span></a><span style='background-color:transparent; color:rgb(0,0,0); font-family:Avenir Next; font-size:14px;'>&nbsp;&nbsp;</span></p>",
+    "diciBackend": false,
+    "displayType": "federated",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42165082,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779477561,
+    "publicationGroup": 20395986,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779477561,
+    "tableId": 20395986,
+    "totalTimesRated": 0,
+    "viewCount": 70,
+    "viewLastModified": 1780859850,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1780943243,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7492105,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779477561,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1780943243,
+          "failureCount": 0,
+          "startedAt": 1780943243,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "kxwt-ugr6",
+          "displayName": "Allen Grissom"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 492872,
+      "name": "SP1 Community Food Security",
+      "createdAt": 1779477561,
+      "description": "<p><span style='background-color:transparent; color:rgb(0,0,0); font-family:Avenir Next; font-size:14px;'>Contains information about Community Meal Sites, Food Banks, Food Systems, Fresh Bucks Program, Farm Stands, Summer Meal Sites, and Fresh Fruit Programs. Build community food security through culturally relevant, equitable, nutritious food access. </span><a target='_blank' href='https://www.seattle.gov/documents/Departments/OSE/FoodAccess/Food%20Action%20Plan/FoodActionPlan_FullReport_2024.pdf#page=59' rel='nofollow ugc noopener noreferrer'><span style='font-size:14px;'><u>Learn more.</u></span></a><span style='background-color:transparent; color:rgb(0,0,0); font-family:Avenir Next; font-size:14px;'>&nbsp;&nbsp;</span></p>",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=1251acf18d544dd08868c98e569c9dde&sublayer=0",
+      "federatedCatalogSelectionId": 512261,
+      "federatedCatalogSourceId": 19908,
+      "tags": "food action plan,seattle gis open data",
+      "viewId": 42165082,
+      "viewUid": "m2gh-xvu5"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sp1-community-food-security-2"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/SP1_CommunityFoodSecurity/FeatureServer/0"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/1251acf18d544dd08868c98e569c9dde/csv?layers=0"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/1251acf18d544dd08868c98e569c9dde/shapefile?layers=0"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/1251acf18d544dd08868c98e569c9dde/geojson?layers=0"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/1251acf18d544dd08868c98e569c9dde/kml?layers=0"
+          },
+          "title": "KML"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "mailto:mapgis.mapgis@seattle.gov",
+          "Homepage": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sp1-community-food-security-2",
+          "Contact Name": "City_Seattle_GIS",
+          "Issued": "2023-07-27T22:15:32.000Z",
+          "License": "<p>The City of Seattle makes no representation or warranty, express or implied, as to its accuracy, completeness, timeliness fitness or merchantability and in particular, its accuracy as to labeling, dimensions, contours, property boundaries, or placement or location of any map feature thereof.</p>",
+          "Last Update": "2026-04-08T16:33:49.121Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=1251acf18d544dd08868c98e569c9dde&sublayer=0",
+          "Geographic Coverage": "-122.4115,47.4530,-122.2474,47.7342",
+          "Publisher": "City of Seattle ArcGIS Online",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sp1-community-food-security-2"
+      }
+    },
+    "owner": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["food action plan", "seattle gis open data"],
+    "flags": ["default", "federated", "internalToPublicFederatedView", "ownerMayBeContacted"]
+  },
+  {
+    "id": "kkac-fahy",
+    "name": "SP5 Local Supply Chains",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1779477560,
+    "description": "<p><span style='background-color:transparent; color:windowtext; font-family:Avenir Next;'>Foster equitable, environmentally sustainable, and strengthened local supply chains. </span><a target='_blank' href='https://www.seattle.gov/documents/Departments/OSE/FoodAccess/Food%20Action%20Plan/FoodActionPlan_FullReport_2024.pdf#page=92' rel='nofollow ugc noopener noreferrer'><u>Learn more.</u></a></p>",
+    "diciBackend": false,
+    "displayType": "federated",
+    "domainCName": "data.seattle.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42165078,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779477560,
+    "publicationGroup": 20395982,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779477560,
+    "tableId": 20395982,
+    "totalTimesRated": 0,
+    "viewCount": 33,
+    "viewLastModified": 1780859849,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1780943276,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7492101,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779477560,
+        "targetAudience": "public",
+        "workflowId": 3127,
+        "reviewer": {
+          "id": "2866-np2t",
+          "displayName": "Wang, Xinbao"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1780943276,
+          "failureCount": 0,
+          "startedAt": 1780943276,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "kxwt-ugr6",
+          "displayName": "Allen Grissom"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 492868,
+      "name": "SP5 Local Supply Chains",
+      "createdAt": 1779477560,
+      "description": "<p><span style='background-color:transparent; color:windowtext; font-family:Avenir Next;'>Foster equitable, environmentally sustainable, and strengthened local supply chains. </span><a target='_blank' href='https://www.seattle.gov/documents/Departments/OSE/FoodAccess/Food%20Action%20Plan/FoodActionPlan_FullReport_2024.pdf#page=92' rel='nofollow ugc noopener noreferrer'><u>Learn more.</u></a></p>",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=3cf7122d37ae416788b80f28b638e2b8&sublayer=0",
+      "federatedCatalogSelectionId": 512260,
+      "federatedCatalogSourceId": 19908,
+      "tags": "food action plan,seattle gis open data",
+      "viewId": 42165078,
+      "viewUid": "kkac-fahy"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sp5-local-supply-chains"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/ZOyb2t4B0UYuYNYH/arcgis/rest/services/SP5LocalSupplyChains/FeatureServer/0"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/3cf7122d37ae416788b80f28b638e2b8/csv?layers=0"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/3cf7122d37ae416788b80f28b638e2b8/shapefile?layers=0"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/3cf7122d37ae416788b80f28b638e2b8/geojson?layers=0"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://data-seattlecitygis.opendata.arcgis.com/api/download/v1/items/3cf7122d37ae416788b80f28b638e2b8/kml?layers=0"
+          },
+          "title": "KML"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "mailto:mapgis.mapgis@seattle.gov",
+          "Homepage": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sp5-local-supply-chains",
+          "Contact Name": "City_Seattle_GIS",
+          "Issued": "2025-06-03T17:24:07.000Z",
+          "License": "<p>The City of Seattle makes no representation or warranty, express or implied, as to its accuracy, completeness, timeliness fitness or merchantability and in particular, its accuracy as to labeling, dimensions, contours, property boundaries, or placement or location of any map feature thereof.</p>",
+          "Last Update": "2026-04-09T15:36:52.156Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=3cf7122d37ae416788b80f28b638e2b8&sublayer=0",
+          "Geographic Coverage": "-123.9710,45.6416,-116.9178,48.9491",
+          "Publisher": "City of Seattle ArcGIS Online",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://data-seattlecitygis.opendata.arcgis.com/datasets/SeattleCityGIS::sp5-local-supply-chains"
+      }
+    },
+    "owner": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "kxwt-ugr6",
+      "displayName": "Allen Grissom",
+      "screenName": "Allen Grissom",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["food action plan", "seattle gis open data"],
+    "flags": ["default", "federated", "internalToPublicFederatedView", "ownerMayBeContacted"]
+  }
+]

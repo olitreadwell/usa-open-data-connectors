@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Connectors: add keyless `chicago-open-data-catalogue`,
+  `seattle-open-data-catalogue`, and `texas-open-data-catalogue` Socrata
+  catalogue adapters, each with a dated live fixture and a live registry probe.
 - Connectors: add keyless `federal-register-documents`, `nhtsa-vehicle-models`,
   `fcc-socrata-catalogue`, and `ny-state-open-data-catalogue` adapters, each
   with a dated live fixture and a live registry probe.

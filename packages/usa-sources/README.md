@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 33 source adapters behind one interface.
+- Exposes 36 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads committed fixtures in tests only; a live fetch never falls back.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -62,6 +62,9 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `nhtsa-vehicle-models` | National Highway Traffic Safety Administration | Vehicle models for one model year and make, with the service total and next-page URL. |
 | `fcc-socrata-catalogue` | Federal Communications Commission | The FCC Open Data Socrata catalogue, one row per dataset, chart, or story, with category, view count, and download count. |
 | `ny-state-open-data-catalogue` | New York State Open Data | The New York State Socrata catalogue, one row per dataset or file, with state topic, view count, and download count. |
+| `chicago-open-data-catalogue` | City of Chicago | The Chicago Data Portal Socrata catalogue, one row per dataset, chart, map, or story, with city topic, view count, and download count. |
+| `seattle-open-data-catalogue` | City of Seattle | The Seattle Open Data Socrata catalogue, one row per dataset, map, chart, or story, with city topic, view count, and download count. |
+| `texas-open-data-catalogue` | State of Texas | The Texas Open Data Socrata catalogue, one row per dataset, map, chart, or linked resource, with state topic, view count, and download count. |
 
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
 `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data` as soon as it is registered.
@@ -640,6 +643,57 @@ The public API is `NY_STATE_OPEN_DATA_API_BASE`,
 `NyStateOpenDataCatalogue` types. The parser follows the same Socrata catalogue
 shape as the FCC adapter.
 
+`chicago-open-data-catalogue`:
+
+```ts
+import { fetchChicagoOpenDataCatalogue } from '@usa-open-data-connectors/usa-sources';
+
+const catalogue = await fetchChicagoOpenDataCatalogue({ limit: 10 });
+console.log(catalogue.entryCount, catalogue.datasetCount, catalogue.categories[0]);
+```
+
+The public API is `CHICAGO_OPEN_DATA_API_BASE`,
+`CHICAGO_OPEN_DATA_CATALOGUE_LIMIT`, `CHICAGO_OPEN_DATA_CATALOGUE_SOURCE_ID`,
+`buildChicagoOpenDataCatalogueUrl`, `parseChicagoOpenDataCataloguePayload`,
+`fetchChicagoOpenDataCatalogue`, and `chicagoOpenDataCatalogueAdapter`, with the
+`ChicagoOpenDataCatalogueEntry`, `ChicagoOpenDataCategoryCount`, and
+`ChicagoOpenDataCatalogue` types. The parser folds the entries into a dataset
+count, the newest entry, and category counts.
+
+`seattle-open-data-catalogue`:
+
+```ts
+import { fetchSeattleOpenDataCatalogue } from '@usa-open-data-connectors/usa-sources';
+
+const catalogue = await fetchSeattleOpenDataCatalogue({ limit: 10 });
+console.log(catalogue.entryCount, catalogue.datasetCount, catalogue.categories[0]);
+```
+
+The public API is `SEATTLE_OPEN_DATA_API_BASE`,
+`SEATTLE_OPEN_DATA_CATALOGUE_LIMIT`, `SEATTLE_OPEN_DATA_CATALOGUE_SOURCE_ID`,
+`buildSeattleOpenDataCatalogueUrl`, `parseSeattleOpenDataCataloguePayload`,
+`fetchSeattleOpenDataCatalogue`, and `seattleOpenDataCatalogueAdapter`, with the
+`SeattleOpenDataCatalogueEntry`, `SeattleOpenDataCategoryCount`, and
+`SeattleOpenDataCatalogue` types. The parser follows the same Socrata catalogue
+shape as the Chicago adapter.
+
+`texas-open-data-catalogue`:
+
+```ts
+import { fetchTexasOpenDataCatalogue } from '@usa-open-data-connectors/usa-sources';
+
+const catalogue = await fetchTexasOpenDataCatalogue({ limit: 10 });
+console.log(catalogue.entryCount, catalogue.datasetCount, catalogue.categories[0]);
+```
+
+The public API is `TEXAS_OPEN_DATA_API_BASE`,
+`TEXAS_OPEN_DATA_CATALOGUE_LIMIT`, `TEXAS_OPEN_DATA_CATALOGUE_SOURCE_ID`,
+`buildTexasOpenDataCatalogueUrl`, `parseTexasOpenDataCataloguePayload`,
+`fetchTexasOpenDataCatalogue`, and `texasOpenDataCatalogueAdapter`, with the
+`TexasOpenDataCatalogueEntry`, `TexasOpenDataCategoryCount`, and
+`TexasOpenDataCatalogue` types. The parser follows the same Socrata catalogue
+shape as the Chicago and Seattle adapters.
+
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
@@ -757,6 +811,12 @@ shape as the FCC adapter.
 - `fcc-socrata-catalogue`: the captured page supplied no Common Core `License` or `Publisher` value, so `licenceUrl` and `attribution` are empty. Check each portal entry before reuse.
 - `ny-state-open-data-catalogue`: the ten-entry page captured on 2026-11-08 mixed nine datasets with one file. The adapter counts only `assetType` values equal to `dataset` in `datasetCount`.
 - `ny-state-open-data-catalogue`: the captured page supplied no Common Core `License` or `Publisher` value, so `licenceUrl` and `attribution` are empty. Check each portal entry before reuse.
+- `chicago-open-data-catalogue`: the ten-entry page captured on 2026-11-08 mixed five datasets with charts, maps, and stories. The adapter counts only `assetType` values equal to `dataset` in `datasetCount`.
+- `chicago-open-data-catalogue`: the captured page supplied no Common Core `License` or `Publisher` value, so `licenceUrl` and `attribution` are empty. Check each portal entry before reuse.
+- `seattle-open-data-catalogue`: the ten-entry page captured on 2026-11-08 held three datasets and seven `federated_href` entries. The adapter counts only `assetType` values equal to `dataset` in `datasetCount`.
+- `seattle-open-data-catalogue`: the first captured entry supplied licence text that begins "The City of Seattle makes no representation or warranty" and publisher `City of Seattle ArcGIS Online`. The adapter keeps both values per entry; other entries can supply neither.
+- `texas-open-data-catalogue`: the ten-entry page captured on 2026-11-08 held five datasets, three linked resources, one map, and one measure. The adapter counts only `assetType` values equal to `dataset` in `datasetCount`.
+- `texas-open-data-catalogue`: the captured page supplied no Common Core `License` or `Publisher` value, so `licenceUrl` and `attribution` are empty. Check each portal entry before reuse.
 
 ## Data sources and licences
 
@@ -793,6 +853,9 @@ The data comes from US federal agencies and the open data catalogue services the
 | National Highway Traffic Safety Administration | `https://api.nhtsa.gov/vehicles/models` |
 | Federal Communications Commission | `https://opendata.fcc.gov/api/views.json` |
 | New York State Open Data | `https://data.ny.gov/api/views.json` |
+| City of Chicago | `https://data.cityofchicago.org/api/views.json` |
+| City of Seattle | `https://data.seattle.gov/api/views.json` |
+| State of Texas | `https://data.texas.gov/api/views.json` |
 
 Each publisher sets its own terms for its data. The Socrata catalogue adapters keep the `License` and
 `Publisher` values from an entry's Common Core metadata as `licenceUrl` and `attribution`. An empty

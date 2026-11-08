@@ -1,0 +1,1001 @@
+[
+  {
+    "id": "nqfs-mwbh",
+    "name": "Water Service Boundary Viewer",
+    "assetType": "href",
+    "averageRating": 0,
+    "createdAt": 1793129342,
+    "description": "Water Service Boundary Viewer is an interactive Texas Water Development Board mapping application that allows users to view and explore public water utility service area boundaries across Texas. It helps identify which water provider serves a specific location and supports water planning, infrastructure coordination, and utility service research.",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42702250,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793740793,
+    "publicationGroup": 20693887,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793129342,
+    "tableId": 20693887,
+    "totalTimesRated": 0,
+    "viewCount": 16,
+    "viewLastModified": 1793740793,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793984293,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7851051,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793984293,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793984293,
+          "failureCount": 0,
+          "startedAt": 1793984293,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rg2s-zyfk",
+          "displayName": "Behzad"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "html": "https://www3.twdb.texas.gov/apps/waterserviceboundaries"
+          },
+          "description": "Water Service Boundary Viewer is an interactive Texas Water Development Board mapping application that allows users to view and explore public water utility service area boundaries across Texas. It helps identify which water provider serves a specific location and supports water planning, infrastructure coordination, and utility service research.",
+          "title": "Water Service Boundary Viewer  "
+        }
+      ],
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Water Development Board",
+          "Category Tile": "Energy and Environment"
+        }
+      },
+      "accessPoints": {
+        "html": "https://www3.twdb.texas.gov/apps/waterserviceboundaries"
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "rg2s-zyfk",
+      "displayName": "Behzad",
+      "screenName": "Behzad",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "rg2s-zyfk",
+      "displayName": "Behzad",
+      "screenName": "Behzad",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["water utilities", "service boundaries", "gis mapping"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "mui3-md6r",
+    "name": "Water Data for Texas",
+    "assetType": "href",
+    "averageRating": 0,
+    "createdAt": 1793129213,
+    "description": "Water Data for Texas is the Texas Water Development Board (TWDB) Statewide Reservoir Conditions dashboard. It provides near real-time and historical information on Texas",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42702249,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793740978,
+    "publicationGroup": 20693886,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793129213,
+    "tableId": 20693886,
+    "totalTimesRated": 0,
+    "viewCount": 11,
+    "viewLastModified": 1793740978,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793984271,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7851050,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793984271,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793984271,
+          "failureCount": 0,
+          "startedAt": 1793984271,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rg2s-zyfk",
+          "displayName": "Behzad"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "html": "https://waterdatafortexas.org/reservoirs/statewide"
+          },
+          "description": "Water Data for Texas is the Texas Water Development Board (TWDB) Statewide Reservoir Conditions dashboard. It provides near real-time and historical information on Texas",
+          "title": "Water Data for Texas"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Water Development Board",
+          "Category Tile": "Energy and Environment"
+        }
+      },
+      "accessPoints": {
+        "html": "https://waterdatafortexas.org/reservoirs/statewide"
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "rg2s-zyfk",
+      "displayName": "Behzad",
+      "screenName": "Behzad",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "rg2s-zyfk",
+      "displayName": "Behzad",
+      "screenName": "Behzad",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["reservoir conditions", "water data", "hydrologic monitoring"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "3fk6-4uhz",
+    "name": "TexMesonet",
+    "assetType": "href",
+    "averageRating": 0,
+    "createdAt": 1793043282,
+    "description": "TexMesonet is the Texas Water Development Board (TWDB) statewide weather and environmental monitoring network. It collects and shares near real-time data from weather stations across Texas, including rainfall, temperature, wind, humidity, soil moisture, and other hydrometeorological measurements.",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42698135,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793741000,
+    "publicationGroup": 20692649,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793043282,
+    "tableId": 20692649,
+    "totalTimesRated": 0,
+    "viewCount": 18,
+    "viewLastModified": 1793741000,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793984252,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7851049,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793984252,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793984252,
+          "failureCount": 0,
+          "startedAt": 1793984252,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rg2s-zyfk",
+          "displayName": "Behzad"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "html": "https://www.texmesonet.org"
+          },
+          "description": "TexMesonet is the Texas Water Development Board (TWDB) statewide weather and environmental monitoring network. It collects and shares near real-time data from weather stations across Texas, including rainfall, temperature, wind, humidity, soil moisture, and other hydrometeorological measurements.",
+          "title": "TexMesonet"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Water Development Board",
+          "Category Tile": "Energy and Environment"
+        }
+      },
+      "accessPoints": {
+        "html": "https://www.texmesonet.org"
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "rg2s-zyfk",
+      "displayName": "Behzad",
+      "screenName": "Behzad",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "rg2s-zyfk",
+      "displayName": "Behzad",
+      "screenName": "Behzad",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["weather monitoring", "environmental data", "hydrometeorological data"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "hvxs-nxwv",
+    "name": "High Value Dataset: September 2026",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1792614992,
+    "description": "Currently incarcerated inmate population with relevant demographic, offense, and parole information.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 51,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42685728,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792615744,
+    "publicationGroup": 20687316,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1792615657,
+    "rowsUpdatedBy": "j4nc-4txg",
+    "tableId": 20687316,
+    "totalTimesRated": 0,
+    "viewCount": 226,
+    "viewLastModified": 1792615744,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792615744,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7816974,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792615744,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792615744,
+          "failureCount": 0,
+          "startedAt": 1792615744,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "j4nc-4txg",
+          "displayName": "Robert Crist"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Department of Criminal Justice",
+          "Category Tile": "Public Safety"
+        },
+        "Publishing Information": {
+          "Update Frequency": "Monthly",
+          "Publishing Notes": "Data will be uploaded each month with the previous month's data. Only six months of the High Value Dataset will remain published on the ODP."
+        }
+      },
+      "rowLabel": "TDCJ Inmate record.",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "j4nc-4txg",
+      "displayName": "Robert Crist",
+      "profileImageUrlLarge": "/api/users/j4nc-4txg/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/j4nc-4txg/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/j4nc-4txg/profile_images/TINY",
+      "screenName": "Robert Crist",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "j4nc-4txg",
+      "displayName": "Robert Crist",
+      "profileImageUrlLarge": "/api/users/j4nc-4txg/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/j4nc-4txg/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/j4nc-4txg/profile_images/TINY",
+      "screenName": "Robert Crist",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "tdcj",
+      "texas inmates",
+      "incarcerated",
+      "texas department of criminal justice",
+      "prison"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "wrzc-mwf2",
+    "name": "Change of Location Application",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1792512757,
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 27,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42681047,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792513420,
+    "publicationGroup": 20684911,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794057003,
+    "rowsUpdatedBy": "xj2x-64gj",
+    "tableId": 20684911,
+    "totalTimesRated": 0,
+    "viewCount": 113,
+    "viewLastModified": 1792595205,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792597949,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7815995,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792597949,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792597949,
+          "failureCount": 0,
+          "startedAt": 1792597949,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "xj2x-64gj",
+          "displayName": "Charles Zoch"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Alcoholic Beverage Commission",
+          "Category Tile": "Permits and Licensing"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "xj2x-64gj",
+      "displayName": "Charles Zoch",
+      "screenName": "Charles Zoch",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "xj2x-64gj",
+      "displayName": "Charles Zoch",
+      "screenName": "Charles Zoch",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "jrm5-pjax",
+    "name": "Contract Bonding",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "See Category Tile",
+    "createdAt": 1791575102,
+    "description": "Contract Bonding dataset provides information on awarded TxDOT contracts and associated bonding details, including contract number, contractor, award amount, project information, letting details, county, district, and surety company. The data supports transparency into contract awards and contractor bonding for maintenance and transportation projects across Texas.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 79,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42661347,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791925535,
+    "publicationGroup": 20668180,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793973776,
+    "rowsUpdatedBy": "3rur-zpbm",
+    "tableId": 20670913,
+    "totalTimesRated": 0,
+    "viewCount": 263,
+    "viewLastModified": 1793973774,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792696058,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7819278,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792696058,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792696059,
+          "failureCount": 0,
+          "startedAt": 1792696058,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "3rur-zpbm",
+          "displayName": "BA&Reporting"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Department of Transportation",
+          "Category Tile": "Transportation"
+        },
+        "Publishing Information": {
+          "Update Frequency": "Daily"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "ehqi-9itj",
+      "displayName": "Angela",
+      "screenName": "Angela",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "ehqi-9itj",
+      "displayName": "Angela",
+      "screenName": "Angela",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["contracts", "transportation", "contract awards", "ccsj", "letting"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "ps2v-yiz9",
+    "name": "89R HB 2067 - Vehicle Counts",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1791309519,
+    "description": "This dataset shows the number of actively insured vehicles for liability coverage as of the effective date.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 35,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42642720,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791310000,
+    "publicationGroup": 20660864,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793192238,
+    "rowsUpdatedBy": "vene-u957",
+    "tableId": 20660864,
+    "totalTimesRated": 0,
+    "viewCount": 241,
+    "viewLastModified": 1793192237,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791379512,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7789056,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791379512,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791379512,
+          "failureCount": 0,
+          "startedAt": 1791379512,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "vene-u957",
+          "displayName": "TDI Batch"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Department of Insurance",
+          "Category Tile": "Business and Economy"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "vene-u957",
+      "displayName": "TDI Batch",
+      "screenName": "TDI Batch",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "vene-u957",
+      "displayName": "TDI Batch",
+      "screenName": "TDI Batch",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "8v6z-ni96",
+    "name": "High Value Dataset: August 2026",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1791198448,
+    "description": "Currently incarcerated inmate population with relevant demographic, offense, and parole information.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 73,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42638935,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791199145,
+    "publicationGroup": 20659004,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791199018,
+    "rowsUpdatedBy": "j4nc-4txg",
+    "tableId": 20659004,
+    "totalTimesRated": 0,
+    "viewCount": 171,
+    "viewLastModified": 1791199145,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791199146,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7784870,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791199146,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791199146,
+          "failureCount": 0,
+          "startedAt": 1791199146,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "j4nc-4txg",
+          "displayName": "Robert Crist"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Department of Criminal Justice",
+          "Category Tile": "Public Safety"
+        },
+        "Publishing Information": {
+          "Update Frequency": "Monthly",
+          "Publishing Notes": "Data will be uploaded each month with the previous month's data. Only six months of the High Value Dataset will remain published on the ODP."
+        }
+      },
+      "rowLabel": "TDCJ Inmate record.",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "j4nc-4txg",
+      "displayName": "Robert Crist",
+      "profileImageUrlLarge": "/api/users/j4nc-4txg/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/j4nc-4txg/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/j4nc-4txg/profile_images/TINY",
+      "screenName": "Robert Crist",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "j4nc-4txg",
+      "displayName": "Robert Crist",
+      "profileImageUrlLarge": "/api/users/j4nc-4txg/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/j4nc-4txg/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/j4nc-4txg/profile_images/TINY",
+      "screenName": "Robert Crist",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "tdcj",
+      "texas inmates",
+      "incarcerated",
+      "texas department of criminal justice",
+      "prison"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "w8vh-es67",
+    "name": "CACFP Day Care Homes - Site Map - 2026-2027",
+    "assetType": "map",
+    "averageRating": 0,
+    "createdAt": 1790966308,
+    "description": "<b><a href=https://form.jotform.com/212794867706167 target=\"_blank\">Help us provide the most useful data by completing our ODP User Feedback Survey for Child and Adult Care Food Program (CACFP) Data</a></b><p>\n\n<b>About the Dataset</b><br>\nThis dataset contains <b>contact and program participation information for Day Care Home (DCH) providers approved to operate under the Child and Adult Care Food Program (CACFP) during program year 2026-2027.</b> Contracting Entity (CE) sponsors can participate in more than one CACFP program. The CACFP program year begins October 1 and ends September 30.<p>\n\nThis dataset only includes information for Texas Day Care Home providers participating in CACFP.  <b>For data on CEs and sites participating as Adult Day Care Centers (ADC), Child Care Centers (CCC), At-Risk Afterschool Centers (At-Risk), Head Start Centers, emergency shelters, and centers providing care for students outside school hours, please refer to the “Child and Adult Care Food Programs (CACFP) – Centers – Contact and Program Participation” dataset, also on the State of Texas Open Data Portal.</b><p>\n\n\nAn overview of <b>all CACFP data available</b> on the Texas Open Data Portal can be found at our <b><a href=https://data.texas.gov/stories/s/iekx-7mdi target=\"\"_blank\"\">TDA Data Overview - Child and Adult Care Food Programs</a></b> page.<p>\n\nAn overview of <b>all TDA Food and Nutrition data available</b> on the Texas Open Data Portal can be found at our <b><a href=https://data.texas.gov/stories/s/TDA-Data-Overview-Food-and-Nutrition-Programs-Open/nk79-w2cs/ target=\"\"_blank\"\">TDA Data Overview - Food and Nutrition Open Data</a></b> page. <p>\n\n<b>More information about accessing and working with TDA data on the Texas Open Data Portal</b> can be found on the SquareMeals.org website on the <b><a href=http://squaremeals.org/FandNResources/PublicInformationRequests.aspx target=\"\"_blank\"\">TDA Food and Nutrition Open Data</a> </b>page.<p>\n\n<b>About Dataset Updates</b><br>\nTDA aims to post new program year data by December 15 of the active program year. Updates will occur quarterly and end 90 days after the close of the program year. Any data posted during the active update period is subject to change. After 90 days from the close of the program year, the dataset will remain published but will no longer be updated.<p>\n\n\n<b>About the Agency</b><br>\nThe Texas Department of Agriculture administers 12 U.S. Department of Agriculture nutrition programs in Texas including the National School Lunch and School Breakfast Programs, the Child and Adult Care Food Programs (CACFP), and summer meal programs. TDA’s Food and Nutrition division provides technical assistance and training resources to partners operating the programs and oversees the USDA reimbursements they receive to cover part of the cost associated with serving food in their facilities. By working to ensure these partners serve nutritious meals and snacks, the division adheres to its mission — <i>Feeding the Hungry and Promoting Healthy Lifestyles.</i><p>\n\n<i><b>For more information on these programs, please visit our <a href=http://www.SquareMeals.org target=\"\"_blank\"\">SquareMeal.org website</a>.</b></i>",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_map",
+    "downloadCount": 4,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "4av6-6ihb",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42625959,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790966389,
+    "publicationGroup": 20642407,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794060018,
+    "rowsUpdatedBy": "gfz9-himg",
+    "tableId": 20642407,
+    "totalTimesRated": 0,
+    "viewCount": 53,
+    "viewLastModified": 1790966389,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790966389,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7773260,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790966389,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790966389,
+          "failureCount": 0,
+          "startedAt": 1790966389,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ewjm-ee9m",
+          "displayName": "Sneha Agrawal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Department of Agriculture",
+          "Category Tile": "Agriculture"
+        },
+        "Publishing Information": {
+          "Update Frequency": "Daily",
+          "Publishing Notes": "Daily updates will end 90 days after the close of the program year, after which this dataset will remain published but will no longer be updated"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "ewjm-ee9m",
+      "displayName": "Sneha Agrawal",
+      "screenName": "Sneha Agrawal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "ewjm-ee9m",
+      "displayName": "Sneha Agrawal",
+      "screenName": "Sneha Agrawal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "ey5t-8cf3",
+    "name": "2026-2027 CACFP Day Care Home Approved Providers",
+    "assetType": "measure",
+    "averageRating": 0,
+    "createdAt": 1790963528,
+    "description": "Count of day care home providers approved to participate in CACFP for 2026-2027. May include providers that cancelled participation after initial approval. Provider count is based on CE's Application Effective Date for program year.",
+    "diciBackend": false,
+    "displayType": "measure",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42625395,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790963852,
+    "publicationGroup": 20647023,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790963528,
+    "tableId": 20647023,
+    "totalTimesRated": 0,
+    "viewCount": 52,
+    "viewLastModified": 1790963852,
+    "viewType": "measure",
+    "approvals": [
+      {
+        "reviewedAt": 1790963852,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7772796,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790963852,
+        "targetAudience": "public",
+        "workflowId": 1858,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790963852,
+          "failureCount": 0,
+          "startedAt": 1790963852,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ewjm-ee9m",
+          "displayName": "Sneha Agrawal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Category": {
+          "Agency": "Texas Department of Agriculture",
+          "Category Tile": "Agriculture"
+        },
+        "Publishing Information": {
+          "Update Frequency": "Daily",
+          "Publishing Notes": "Data will be updated daily until 90 days after the end of the program period."
+        }
+      },
+      "availableDisplayTypes": ["measure"],
+      "renderTypeConfig": {
+        "visible": {
+          "measure": true
+        }
+      }
+    },
+    "owner": {
+      "id": "ewjm-ee9m",
+      "displayName": "Sneha Agrawal",
+      "screenName": "Sneha Agrawal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "ewjm-ee9m",
+      "displayName": "Sneha Agrawal",
+      "screenName": "Sneha Agrawal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted"]
+  }
+]

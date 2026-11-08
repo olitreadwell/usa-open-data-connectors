@@ -617,6 +617,57 @@ export type {
   NyStateOpenDataCategoryCount,
 } from './nyStateOpenDataCatalogue.js';
 
+/** Chicago Data Portal catalogue (keyless). */
+export {
+  buildChicagoOpenDataCatalogueUrl,
+  CHICAGO_OPEN_DATA_API_BASE,
+  CHICAGO_OPEN_DATA_CATALOGUE_LIMIT,
+  CHICAGO_OPEN_DATA_CATALOGUE_SOURCE_ID,
+  chicagoOpenDataCatalogueAdapter,
+  fetchChicagoOpenDataCatalogue,
+  parseChicagoOpenDataCataloguePayload,
+} from './chicagoOpenDataCatalogue.js';
+/** Chicago Data Portal catalogue types. */
+export type {
+  ChicagoOpenDataCatalogue,
+  ChicagoOpenDataCatalogueEntry,
+  ChicagoOpenDataCategoryCount,
+} from './chicagoOpenDataCatalogue.js';
+
+/** Seattle Open Data catalogue (keyless). */
+export {
+  buildSeattleOpenDataCatalogueUrl,
+  fetchSeattleOpenDataCatalogue,
+  parseSeattleOpenDataCataloguePayload,
+  SEATTLE_OPEN_DATA_API_BASE,
+  SEATTLE_OPEN_DATA_CATALOGUE_LIMIT,
+  SEATTLE_OPEN_DATA_CATALOGUE_SOURCE_ID,
+  seattleOpenDataCatalogueAdapter,
+} from './seattleOpenDataCatalogue.js';
+/** Seattle Open Data catalogue types. */
+export type {
+  SeattleOpenDataCatalogue,
+  SeattleOpenDataCatalogueEntry,
+  SeattleOpenDataCategoryCount,
+} from './seattleOpenDataCatalogue.js';
+
+/** Texas Open Data catalogue (keyless). */
+export {
+  buildTexasOpenDataCatalogueUrl,
+  fetchTexasOpenDataCatalogue,
+  parseTexasOpenDataCataloguePayload,
+  TEXAS_OPEN_DATA_API_BASE,
+  TEXAS_OPEN_DATA_CATALOGUE_LIMIT,
+  TEXAS_OPEN_DATA_CATALOGUE_SOURCE_ID,
+  texasOpenDataCatalogueAdapter,
+} from './texasOpenDataCatalogue.js';
+/** Texas Open Data catalogue types. */
+export type {
+  TexasOpenDataCatalogue,
+  TexasOpenDataCatalogueEntry,
+  TexasOpenDataCategoryCount,
+} from './texasOpenDataCatalogue.js';
+
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
 

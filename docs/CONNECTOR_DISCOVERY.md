@@ -1,6 +1,6 @@
 # Connector discovery notes (US)
 
-Findings from the US source passes. Thirty-three keyless adapters are built and
+Findings from the US source passes. Thirty-six keyless adapters are built and
 verified against live APIs, and each has a fixture committed from the same
 endpoint.
 
@@ -10,6 +10,8 @@ were captured between 2026-09-23 and 2026-10-03. Six more adapters were added
 after those, through 2026-10-22. NIH RePORTER was added on 2026-11-07. Four
 adapters were added on 2026-11-08: Federal Register documents, NHTSA vehicle
 models, the FCC Socrata catalogue, and the New York State Open Data catalogue.
+Three more were added the same day: the Chicago Data Portal, Seattle Open Data,
+and Texas Open Data Socrata catalogues.
 
 ## Adapters built
 
@@ -48,6 +50,9 @@ models, the FCC Socrata catalogue, and the New York State Open Data catalogue.
 | `nhtsa-vehicle-models` | NHTSA | `https://api.nhtsa.gov/vehicles/models` | `nhtsa-vehicle-models-2025-honda-2026-11-08.json` |
 | `fcc-socrata-catalogue` | Federal Communications Commission | `https://opendata.fcc.gov/api/views.json` | `fcc-socrata-catalogue-2026-11-08.json` |
 | `ny-state-open-data-catalogue` | New York State Open Data | `https://data.ny.gov/api/views.json` | `ny-state-open-data-catalogue-2026-11-08.json` |
+| `chicago-open-data-catalogue` | City of Chicago | `https://data.cityofchicago.org/api/views.json` | `chicago-open-data-catalogue-2026-11-08.json` |
+| `seattle-open-data-catalogue` | City of Seattle | `https://data.seattle.gov/api/views.json` | `seattle-open-data-catalogue-2026-11-08.json` |
+| `texas-open-data-catalogue` | State of Texas | `https://data.texas.gov/api/views.json` | `texas-open-data-catalogue-2026-11-08.json` |
 
 ## Exact curl commands for the 2026-10-05 additions
 
@@ -113,6 +118,9 @@ curl -sS -A "$UA_BROWSER" 'https://data.cityofnewyork.us/api/views.json?limit=50
 | NHTSA `api.nhtsa.gov` | LIVE | Keyless. The 2025 Honda query answered HTTP 200 with `pagination.total` 50 and 50 rows. The service echoes the make in upper case (`HONDA`) even when the request sends `Honda`, so the adapter keeps the response value. |
 | FCC `opendata.fcc.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and mixed one story with nine datasets. The captured page supplied no Common Core `License` or `Publisher` value, so both adapter fields are empty. |
 | New York State `data.ny.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and mixed nine datasets with one file. The captured page supplied no Common Core `License` or `Publisher` value, so both adapter fields are empty. |
+| Chicago `data.cityofchicago.org` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held five datasets, two charts, two maps, and one story. The captured page supplied no Common Core `License` or `Publisher` value, so both adapter fields are empty. |
+| Seattle `data.seattle.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held three datasets and seven `federated_href` entries. The first entry supplied licence text beginning "The City of Seattle makes no representation or warranty" and publisher `City of Seattle ArcGIS Online`. |
+| Texas `data.texas.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held five datasets, three `href` entries, one map, and one measure. The captured page supplied no Common Core `License` or `Publisher` value, so both adapter fields are empty. |
 
 ## Exact curl command for the 2026-10-18 addition
 
@@ -148,6 +156,15 @@ curl -sS -A "$UA" 'https://opendata.fcc.gov/api/views.json?limit=10'
 
 # New York State Open Data catalogue, ten entries
 curl -sS -A "$UA" 'https://data.ny.gov/api/views.json?limit=10'
+
+# Chicago Data Portal catalogue, ten entries
+curl -sS -A "$UA" 'https://data.cityofchicago.org/api/views.json?limit=10'
+
+# Seattle Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.seattle.gov/api/views.json?limit=10'
+
+# Texas Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.texas.gov/api/views.json?limit=10'
 ```
 
 ## Live adapter probes on 2026-11-08
@@ -168,6 +185,22 @@ Observed result: all four probes returned `"ok": true` and `"status": "ok"` with
 | `nhtsa-vehicle-models` | Model year 2025, make `HONDA`, model `ACCORD HYBRID` |
 | `fcc-socrata-catalogue` | Entry `wgq8-eb5c`, "Pirate Radio Broadcasting Database", asset type `story` |
 | `ny-state-open-data-catalogue` | Entry `sa8q-nq2h`, "SPARCS Ambulatory Surgery Encounters by Facility: Beginning 2018", asset type `dataset` |
+
+The three city and state catalogue adapters added later that day were probed
+through the same built registry:
+
+```sh
+node --input-type=module -e "import { probeAllUsDataSources } from './dist/index.js'; const ids=['chicago-open-data-catalogue','seattle-open-data-catalogue','texas-open-data-catalogue']; console.log(JSON.stringify(await probeAllUsDataSources({ids}),null,2));"
+```
+
+Observed result: all three probes returned `"ok": true`, `"status": "ok"`, and
+`"auth": "none"`. The returned samples began with:
+
+| Adapter | First record in the probe sample |
+| --- | --- |
+| `chicago-open-data-catalogue` | Entry `at9p-zwgd`, "Change Notice: Building Permits - 10/27/2026", asset type `story` |
+| `seattle-open-data-catalogue` | Entry `evhv-7f58`, "Temporary No Parking Reservations (All)", asset type `federated_href` |
+| `texas-open-data-catalogue` | Entry `nqfs-mwbh`, "Water Service Boundary Viewer", asset type `href` |
 
 ## Candidates checked and skipped on 2026-11-08
 
@@ -236,6 +269,9 @@ everywhere, and a few services attach their own terms on top.
 | `nhtsa-vehicle-models` | National Highway Traffic Safety Administration | US federal work, public domain in the US |
 | `fcc-socrata-catalogue` | Federal Communications Commission, through its Socrata portal | Portal entry terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
 | `ny-state-open-data-catalogue` | New York State, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `chicago-open-data-catalogue` | City of Chicago, through its Socrata portal | City portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `seattle-open-data-catalogue` | City of Seattle, through its Socrata portal | City portal terms. The adapter returns `licenceUrl` and `attribution`; the first captured entry supplied licence text and `City of Seattle ArcGIS Online` as publisher, while other entries supplied neither |
+| `texas-open-data-catalogue` | State of Texas, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
 
 The Socrata catalogue adapters return `licenceUrl` and `attribution` on each
 entry, and `publicdatahub-hospital-quality` returns licence, agency, and
