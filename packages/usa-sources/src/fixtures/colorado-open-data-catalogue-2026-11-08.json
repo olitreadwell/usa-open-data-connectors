@@ -1,0 +1,1893 @@
+[
+  {
+    "id": "kmes-av87",
+    "name": "NAIP 2023 Infrared",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793732539,
+    "description": "DRAPP and NAIP layers used in the public imagery downloader",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42728148,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793732539,
+    "publicationGroup": 20705031,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793732539,
+    "tableId": 20705031,
+    "totalTimesRated": 0,
+    "viewCount": 12,
+    "viewLastModified": 1793818996,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793845233,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7842454,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793732539,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793845233,
+          "failureCount": 0,
+          "startedAt": 1793845233,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551379,
+      "name": "NAIP 2023 Infrared",
+      "createdAt": 1793732539,
+      "description": "DRAPP and NAIP layers used in the public imagery downloader",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=1dcd739d424c4c599841bde86df28cac&sublayer=59",
+      "federatedCatalogSelectionId": 570935,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "imagery,imagery downloader",
+      "viewId": 42728148,
+      "viewUid": "kmes-av87"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/datasets/COOIT::naip-2023-infrared"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services3.arcgis.com/DgjqnJA1rgO92Soi/arcgis/rest/services/Public_imagery/FeatureServer/59"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://geodata.colorado.gov/api/download/v1/items/1dcd739d424c4c599841bde86df28cac/csv?layers=59"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/1dcd739d424c4c599841bde86df28cac/shapefile?layers=59"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://geodata.colorado.gov/api/download/v1/items/1dcd739d424c4c599841bde86df28cac/geojson?layers=59"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://geodata.colorado.gov/api/download/v1/items/1dcd739d424c4c599841bde86df28cac/kml?layers=59"
+          },
+          "title": "KML"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "mailto:oit_gis@state.co.us",
+          "Homepage": "https://geodata.colorado.gov/datasets/COOIT::naip-2023-infrared",
+          "Contact Name": "oit_gis_COOIT",
+          "Issued": "2025-09-23T13:36:01.000Z",
+          "License": "<p><span><span style='font-size: 12pt; font-family: &quot;Trebuchet MS&quot;, sans-serif; color: rgb(34, 34, 34); background-color: transparent; font-style: italic; font-variant: normal; vertical-align: baseline; white-space: pre-wrap;'>The data made available here has been modified for use from its original source, which is the State of Colorado. </span><span style='font-size: 12pt; font-family: &quot;Trebuchet MS&quot;, sans-serif; color: rgb(34, 34, 34); background-color: transparent; font-weight: 700; font-style: italic; font-variant: normal; vertical-align: baseline; white-space: pre-wrap;'>The State of Colorado makes no representations or warranty as to the completeness, accuracy, timeliness, or content of any data made available through this site. The State of Colorado expressly disclaims all warranties, whether express or implied, including any implied warranties of merchantability, or fitness for a particular purpose.</span><span style='font-size: 12pt; font-family: &quot;Trebuchet MS&quot;, sans-serif; color: rgb(34, 34, 34); background-color: transparent; font-style: italic; font-variant: normal; vertical-align: baseline; white-space: pre-wrap;'> The data is subject to change as modifications and updates are complete. It is understood that the information contained in the Web feed is being used at one's own risk.</span></span></p>",
+          "Last Update": "2026-11-03T15:15:37.341Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=1dcd739d424c4c599841bde86df28cac&sublayer=59",
+          "Geographic Coverage": "-109.1113,36.9100,-101.9550,41.1080",
+          "Publisher": "State of Colorado",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/datasets/COOIT::naip-2023-infrared"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["imagery", "imagery downloader"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "hken-46wv",
+    "name": "NAIP 2023 Natural Color",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793732538,
+    "description": "DRAPP and NAIP layers used in the public imagery downloader",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42728147,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793732538,
+    "publicationGroup": 20705030,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793732538,
+    "tableId": 20705030,
+    "totalTimesRated": 0,
+    "viewCount": 12,
+    "viewLastModified": 1793819005,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793845231,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7842453,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793732538,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793845231,
+          "failureCount": 0,
+          "startedAt": 1793845231,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551378,
+      "name": "NAIP 2023 Natural Color",
+      "createdAt": 1793732538,
+      "description": "DRAPP and NAIP layers used in the public imagery downloader",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=1dcd739d424c4c599841bde86df28cac&sublayer=58",
+      "federatedCatalogSelectionId": 570936,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "imagery,imagery downloader",
+      "viewId": 42728147,
+      "viewUid": "hken-46wv"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/datasets/COOIT::naip-2023-natural-color"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services3.arcgis.com/DgjqnJA1rgO92Soi/arcgis/rest/services/Public_imagery/FeatureServer/58"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://geodata.colorado.gov/api/download/v1/items/1dcd739d424c4c599841bde86df28cac/csv?layers=58"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/1dcd739d424c4c599841bde86df28cac/shapefile?layers=58"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://geodata.colorado.gov/api/download/v1/items/1dcd739d424c4c599841bde86df28cac/geojson?layers=58"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://geodata.colorado.gov/api/download/v1/items/1dcd739d424c4c599841bde86df28cac/kml?layers=58"
+          },
+          "title": "KML"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "mailto:oit_gis@state.co.us",
+          "Homepage": "https://geodata.colorado.gov/datasets/COOIT::naip-2023-natural-color",
+          "Contact Name": "oit_gis_COOIT",
+          "Issued": "2025-09-23T13:36:01.000Z",
+          "License": "<p><span><span style='font-size: 12pt; font-family: &quot;Trebuchet MS&quot;, sans-serif; color: rgb(34, 34, 34); background-color: transparent; font-style: italic; font-variant: normal; vertical-align: baseline; white-space: pre-wrap;'>The data made available here has been modified for use from its original source, which is the State of Colorado. </span><span style='font-size: 12pt; font-family: &quot;Trebuchet MS&quot;, sans-serif; color: rgb(34, 34, 34); background-color: transparent; font-weight: 700; font-style: italic; font-variant: normal; vertical-align: baseline; white-space: pre-wrap;'>The State of Colorado makes no representations or warranty as to the completeness, accuracy, timeliness, or content of any data made available through this site. The State of Colorado expressly disclaims all warranties, whether express or implied, including any implied warranties of merchantability, or fitness for a particular purpose.</span><span style='font-size: 12pt; font-family: &quot;Trebuchet MS&quot;, sans-serif; color: rgb(34, 34, 34); background-color: transparent; font-style: italic; font-variant: normal; vertical-align: baseline; white-space: pre-wrap;'> The data is subject to change as modifications and updates are complete. It is understood that the information contained in the Web feed is being used at one's own risk.</span></span></p>",
+          "Last Update": "2026-11-03T15:15:37.638Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=1dcd739d424c4c599841bde86df28cac&sublayer=58",
+          "Geographic Coverage": "-109.1113,36.9100,-101.9550,41.1080",
+          "Publisher": "State of Colorado",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/datasets/COOIT::naip-2023-natural-color"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["imagery", "imagery downloader"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "cr5a-e2u4",
+    "name": "Maximum",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793559772,
+    "description": "Daily Min and Max Temperature forecast for the next 3 days across the Contiguous United States, Alaska, Hawaii, Guam, and Puerto Rico.",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42720312,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793559772,
+    "publicationGroup": 20700361,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793559772,
+    "tableId": 20700361,
+    "totalTimesRated": 0,
+    "viewCount": 16,
+    "viewLastModified": 1794078170,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793652298,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7838609,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793559772,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793652298,
+          "failureCount": 0,
+          "startedAt": 1793652298,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551377,
+      "name": "Maximum",
+      "createdAt": 1793559772,
+      "description": "Daily Min and Max Temperature forecast for the next 3 days across the Contiguous United States, Alaska, Hawaii, Guam, and Puerto Rico.",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=0ae7cf18df0a4b4d9e7eea665f00500d&sublayer=1",
+      "federatedCatalogSelectionId": 570934,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "alf,esri,forecast,live feeds,ncep,ndfd,ndfd_temperature,noaa,nws,temperature,earth observations,esri_environment,hosted,livefeeds",
+      "viewId": 42720312,
+      "viewUid": "cr5a-e2u4"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/datasets/esri2::maximum"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/NDFD_DailyTemperature_v1/FeatureServer/1"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://geodata.colorado.gov/api/download/v1/items/0ae7cf18df0a4b4d9e7eea665f00500d/csv?layers=1"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/0ae7cf18df0a4b4d9e7eea665f00500d/shapefile?layers=1"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://geodata.colorado.gov/api/download/v1/items/0ae7cf18df0a4b4d9e7eea665f00500d/geojson?layers=1"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://geodata.colorado.gov/api/download/v1/items/0ae7cf18df0a4b4d9e7eea665f00500d/kml?layers=1"
+          },
+          "title": "KML"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/0ae7cf18df0a4b4d9e7eea665f00500d/filegdb?layers=1"
+          },
+          "title": "File Geodatabase"
+        },
+        {
+          "urls": {
+            "text/plain": "https://geodata.colorado.gov/api/download/v1/items/0ae7cf18df0a4b4d9e7eea665f00500d/featureCollection?layers=1"
+          },
+          "title": "Feature Collection"
+        },
+        {
+          "urls": {
+            "application/vnd.ms-excel": "https://geodata.colorado.gov/api/download/v1/items/0ae7cf18df0a4b4d9e7eea665f00500d/excel?layers=1"
+          },
+          "title": "Excel"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/0ae7cf18df0a4b4d9e7eea665f00500d/geoPackage?layers=1"
+          },
+          "title": "GeoPackage"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/0ae7cf18df0a4b4d9e7eea665f00500d/sqlite?layers=1"
+          },
+          "title": "SQLite Geodatabase"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "{{orgContactEmail}}",
+          "Homepage": "https://geodata.colorado.gov/datasets/esri2::maximum",
+          "Contact Name": "esri_livefeeds2",
+          "Issued": "2021-12-31T19:01:55.000Z",
+          "License": "This work is licensed under the Esri Master License Agreement.<br /><div><a href='https://goto.arcgis.com/termsofuse/viewsummary' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Terms of Use</b></a></div>",
+          "Last Update": "2026-11-07T18:09:16.705Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=0ae7cf18df0a4b4d9e7eea665f00500d&sublayer=1",
+          "Geographic Coverage": "-180.0000,12.3379,180.0000,72.6249",
+          "Publisher": "Esri",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/datasets/esri2::maximum"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "alf",
+      "esri",
+      "forecast",
+      "live feeds",
+      "ncep",
+      "ndfd",
+      "ndfd_temperature",
+      "noaa",
+      "nws",
+      "temperature",
+      "earth observations",
+      "esri_environment",
+      "hosted",
+      "livefeeds"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "bjpi-xtit",
+    "name": "CAN Current Perimeters",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793214170,
+    "description": "These layers represent wildfires that have been updated within the past 7 days in the United States and Canada. U.S. wildfires are sourced from IRWIN and NIFC. Canadian wildfires are sourced from the Canadian Forest Service (CFS) Canadian Wildland Fire Information System (CWFIS).",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42705591,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793214170,
+    "publicationGroup": 20695875,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793214170,
+    "tableId": 20695875,
+    "totalTimesRated": 0,
+    "viewCount": 29,
+    "viewLastModified": 1794078167,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793312585,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7829330,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793214170,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793312585,
+          "failureCount": 0,
+          "startedAt": 1793312585,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551359,
+      "name": "CAN Current Perimeters",
+      "createdAt": 1793214170,
+      "description": "These layers represent wildfires that have been updated within the past 7 days in the United States and Canada. U.S. wildfires are sourced from IRWIN and NIFC. Canadian wildfires are sourced from the Canadian Forest Service (CFS) Canadian Wildland Fire Information System (CWFIS).",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=d957997ccee7408287a963600a77f61f&sublayer=3",
+      "federatedCatalogSelectionId": 570916,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "fire,fires,forest service,hazards,hazardst,irwin,incident,incidentfire,landscape,live feed,nifc,nifc open data,perimeter,risk,wildfire,wildfires,wildland fire,earth_observations,environment,esri_environment",
+      "viewId": 42705591,
+      "viewUid": "bjpi-xtit"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/datasets/esri2::can-current-perimeters"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/USA_Wildfires_v1/FeatureServer/3"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/csv?layers=3"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/shapefile?layers=3"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/geojson?layers=3"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/kml?layers=3"
+          },
+          "title": "KML"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/filegdb?layers=3"
+          },
+          "title": "File Geodatabase"
+        },
+        {
+          "urls": {
+            "text/plain": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/featureCollection?layers=3"
+          },
+          "title": "Feature Collection"
+        },
+        {
+          "urls": {
+            "application/vnd.ms-excel": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/excel?layers=3"
+          },
+          "title": "Excel"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/geoPackage?layers=3"
+          },
+          "title": "GeoPackage"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/sqlite?layers=3"
+          },
+          "title": "SQLite Geodatabase"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "{{orgContactEmail}}",
+          "Homepage": "https://geodata.colorado.gov/datasets/esri2::can-current-perimeters",
+          "Contact Name": "esri_livefeeds2",
+          "Issued": "2020-05-01T01:43:09.000Z",
+          "License": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' /> This work is licensed under the Esri Master License Agreement.<br /><div><a href='https://goto.arcgis.com/termsofuse/viewsummary' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Terms of Use</b></a></div>",
+          "Last Update": "2026-11-07T12:58:02.803Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=d957997ccee7408287a963600a77f61f&sublayer=3",
+          "Geographic Coverage": "-145.5122,42.7657,-39.9818,72.2727",
+          "Publisher": "Esri",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/datasets/esri2::can-current-perimeters"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "fire",
+      "fires",
+      "forest service",
+      "hazards",
+      "hazardst",
+      "irwin",
+      "incident",
+      "incidentfire",
+      "landscape",
+      "live feed",
+      "nifc",
+      "nifc open data",
+      "perimeter",
+      "risk",
+      "wildfire",
+      "wildfires",
+      "wildland fire",
+      "earth_observations",
+      "environment",
+      "esri_environment"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "xkuz-776j",
+    "name": "CAN Current Incidents",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793214169,
+    "description": "These layers represent wildfires that have been updated within the past 7 days in the United States and Canada. U.S. wildfires are sourced from IRWIN and NIFC. Canadian wildfires are sourced from the Canadian Forest Service (CFS) Canadian Wildland Fire Information System (CWFIS).",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42705590,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793214169,
+    "publicationGroup": 20695874,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793214169,
+    "tableId": 20695874,
+    "totalTimesRated": 0,
+    "viewCount": 29,
+    "viewLastModified": 1794078166,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793312587,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7829329,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793214169,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793312587,
+          "failureCount": 0,
+          "startedAt": 1793312587,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551358,
+      "name": "CAN Current Incidents",
+      "createdAt": 1793214169,
+      "description": "These layers represent wildfires that have been updated within the past 7 days in the United States and Canada. U.S. wildfires are sourced from IRWIN and NIFC. Canadian wildfires are sourced from the Canadian Forest Service (CFS) Canadian Wildland Fire Information System (CWFIS).",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=d957997ccee7408287a963600a77f61f&sublayer=2",
+      "federatedCatalogSelectionId": 570915,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "fire,fires,forest service,hazards,hazardst,irwin,incident,incidentfire,landscape,live feed,nifc,nifc open data,perimeter,risk,wildfire,wildfires,wildland fire,earth_observations,environment,esri_environment",
+      "viewId": 42705590,
+      "viewUid": "xkuz-776j"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/datasets/esri2::can-current-incidents"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services9.arcgis.com/RHVPKKiFTONKtxq3/arcgis/rest/services/USA_Wildfires_v1/FeatureServer/2"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/csv?layers=2"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/shapefile?layers=2"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/geojson?layers=2"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/kml?layers=2"
+          },
+          "title": "KML"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/filegdb?layers=2"
+          },
+          "title": "File Geodatabase"
+        },
+        {
+          "urls": {
+            "text/plain": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/featureCollection?layers=2"
+          },
+          "title": "Feature Collection"
+        },
+        {
+          "urls": {
+            "application/vnd.ms-excel": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/excel?layers=2"
+          },
+          "title": "Excel"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/geoPackage?layers=2"
+          },
+          "title": "GeoPackage"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/d957997ccee7408287a963600a77f61f/sqlite?layers=2"
+          },
+          "title": "SQLite Geodatabase"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "{{orgContactEmail}}",
+          "Homepage": "https://geodata.colorado.gov/datasets/esri2::can-current-incidents",
+          "Contact Name": "esri_livefeeds2",
+          "Issued": "2020-05-01T01:43:09.000Z",
+          "License": "<img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' /> This work is licensed under the Esri Master License Agreement.<br /><div><a href='https://goto.arcgis.com/termsofuse/viewsummary' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Summary</b></a> | <a href='https://goto.arcgis.com/termsofuse/viewtermsofuse' target='_blank' rel='nofollow ugc noopener noreferrer'><b>View Terms of Use</b></a></div>",
+          "Last Update": "2026-11-07T12:58:02.803Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=d957997ccee7408287a963600a77f61f&sublayer=2",
+          "Geographic Coverage": "-139.1000,46.1188,-61.4905,64.0820",
+          "Publisher": "Esri",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/datasets/esri2::can-current-incidents"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "fire",
+      "fires",
+      "forest service",
+      "hazards",
+      "hazardst",
+      "irwin",
+      "incident",
+      "incidentfire",
+      "landscape",
+      "live feed",
+      "nifc",
+      "nifc open data",
+      "perimeter",
+      "risk",
+      "wildfire",
+      "wildfires",
+      "wildland fire",
+      "earth_observations",
+      "environment",
+      "esri_environment"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "czsr-snw2",
+    "name": "Baseline Monthly",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793127763,
+    "description": "Water risk baseline and projections per watershed from Aqueduct 4.0 by the World Resources Institute (Data vintage 2023).",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42702174,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793127763,
+    "publicationGroup": 20693840,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793127763,
+    "tableId": 20693840,
+    "totalTimesRated": 0,
+    "viewCount": 23,
+    "viewLastModified": 1793300590,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793312575,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7826967,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793127764,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793312575,
+          "failureCount": 0,
+          "startedAt": 1793312575,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551332,
+      "name": "Baseline Monthly",
+      "createdAt": 1793127764,
+      "description": "Water risk baseline and projections per watershed from Aqueduct 4.0 by the World Resources Institute (Data vintage 2023).",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=c784f4ebddaf43c8b816612fb62e7e5b&sublayer=2",
+      "federatedCatalogSelectionId": 570878,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "wri,water,water risk atlas,environment,esri_environment,fresh water,hydro,hydrology,water depletion,water management,water risk,water stress",
+      "viewId": 42702174,
+      "viewUid": "czsr-snw2"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/datasets/esri::baseline-monthly"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/aqueduct_water_risk/FeatureServer/2"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/csv?layers=2"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/shapefile?layers=2"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/geojson?layers=2"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/kml?layers=2"
+          },
+          "title": "KML"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/filegdb?layers=2"
+          },
+          "title": "File Geodatabase"
+        },
+        {
+          "urls": {
+            "text/plain": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/featureCollection?layers=2"
+          },
+          "title": "Feature Collection"
+        },
+        {
+          "urls": {
+            "application/vnd.ms-excel": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/excel?layers=2"
+          },
+          "title": "Excel"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/geoPackage?layers=2"
+          },
+          "title": "GeoPackage"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/sqlite?layers=2"
+          },
+          "title": "SQLite Geodatabase"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "{{orgContactEmail}}",
+          "Homepage": "https://geodata.colorado.gov/datasets/esri::baseline-monthly",
+          "Contact Name": "esri_environment",
+          "Issued": "2025-10-20T16:44:16.000Z",
+          "License": "https://creativecommons.org/licenses/by/4.0",
+          "Last Update": "2026-03-04T02:08:14.185Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=c784f4ebddaf43c8b816612fb62e7e5b&sublayer=2",
+          "Geographic Coverage": "-179.0000,-66.6878,179.0000,80.7335",
+          "Publisher": "Esri",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/datasets/esri::baseline-monthly"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "wri",
+      "water",
+      "water risk atlas",
+      "environment",
+      "esri_environment",
+      "fresh water",
+      "hydro",
+      "hydrology",
+      "water depletion",
+      "water management",
+      "water risk",
+      "water stress"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "dwh7-yskf",
+    "name": "Baseline Annual",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793127763,
+    "description": "Water risk baseline and projections per watershed from Aqueduct 4.0 by the World Resources Institute (Data vintage 2023).",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42702173,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793127763,
+    "publicationGroup": 20693839,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793127763,
+    "tableId": 20693839,
+    "totalTimesRated": 0,
+    "viewCount": 25,
+    "viewLastModified": 1793300591,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793312574,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7826966,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793127763,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793312574,
+          "failureCount": 0,
+          "startedAt": 1793312574,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551331,
+      "name": "Baseline Annual",
+      "createdAt": 1793127763,
+      "description": "Water risk baseline and projections per watershed from Aqueduct 4.0 by the World Resources Institute (Data vintage 2023).",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=c784f4ebddaf43c8b816612fb62e7e5b&sublayer=1",
+      "federatedCatalogSelectionId": 570876,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "wri,water,water risk atlas,environment,esri_environment,fresh water,hydro,hydrology,water depletion,water management,water risk,water stress",
+      "viewId": 42702173,
+      "viewUid": "dwh7-yskf"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/datasets/esri::baseline-annual"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/aqueduct_water_risk/FeatureServer/1"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/csv?layers=1"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/shapefile?layers=1"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/geojson?layers=1"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/kml?layers=1"
+          },
+          "title": "KML"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/filegdb?layers=1"
+          },
+          "title": "File Geodatabase"
+        },
+        {
+          "urls": {
+            "text/plain": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/featureCollection?layers=1"
+          },
+          "title": "Feature Collection"
+        },
+        {
+          "urls": {
+            "application/vnd.ms-excel": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/excel?layers=1"
+          },
+          "title": "Excel"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/geoPackage?layers=1"
+          },
+          "title": "GeoPackage"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/sqlite?layers=1"
+          },
+          "title": "SQLite Geodatabase"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "{{orgContactEmail}}",
+          "Homepage": "https://geodata.colorado.gov/datasets/esri::baseline-annual",
+          "Contact Name": "esri_environment",
+          "Issued": "2025-10-20T16:44:16.000Z",
+          "License": "https://creativecommons.org/licenses/by/4.0",
+          "Last Update": "2026-03-04T02:08:14.185Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=c784f4ebddaf43c8b816612fb62e7e5b&sublayer=1",
+          "Geographic Coverage": "-179.0000,-66.6878,179.0000,80.7335",
+          "Publisher": "Esri",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/datasets/esri::baseline-annual"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "wri",
+      "water",
+      "water risk atlas",
+      "environment",
+      "esri_environment",
+      "fresh water",
+      "hydro",
+      "hydrology",
+      "water depletion",
+      "water management",
+      "water risk",
+      "water stress"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "wmfm-t82c",
+    "name": "Future Annual",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793127762,
+    "description": "Water risk baseline and projections per watershed from Aqueduct 4.0 by the World Resources Institute (Data vintage 2023).",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42702172,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793127762,
+    "publicationGroup": 20693838,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793127762,
+    "tableId": 20693838,
+    "totalTimesRated": 0,
+    "viewCount": 23,
+    "viewLastModified": 1793300589,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793312577,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7826965,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793127762,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793312577,
+          "failureCount": 0,
+          "startedAt": 1793312577,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551330,
+      "name": "Future Annual",
+      "createdAt": 1793127762,
+      "description": "Water risk baseline and projections per watershed from Aqueduct 4.0 by the World Resources Institute (Data vintage 2023).",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=c784f4ebddaf43c8b816612fb62e7e5b&sublayer=0",
+      "federatedCatalogSelectionId": 570874,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "wri,water,water risk atlas,environment,esri_environment,fresh water,hydro,hydrology,water depletion,water management,water risk,water stress",
+      "viewId": 42702172,
+      "viewUid": "wmfm-t82c"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/datasets/esri::future-annual"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/aqueduct_water_risk/FeatureServer/0"
+          },
+          "title": "ArcGIS GeoService"
+        },
+        {
+          "urls": {
+            "text/csv": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/csv?layers=0"
+          },
+          "title": "CSV"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/shapefile?layers=0"
+          },
+          "title": "Shapefile"
+        },
+        {
+          "urls": {
+            "application/vnd.geo+json": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/geojson?layers=0"
+          },
+          "title": "GeoJSON"
+        },
+        {
+          "urls": {
+            "application/vnd.google-earth.kml+xml": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/kml?layers=0"
+          },
+          "title": "KML"
+        },
+        {
+          "urls": {
+            "application/zip": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/filegdb?layers=0"
+          },
+          "title": "File Geodatabase"
+        },
+        {
+          "urls": {
+            "text/plain": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/featureCollection?layers=0"
+          },
+          "title": "Feature Collection"
+        },
+        {
+          "urls": {
+            "application/vnd.ms-excel": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/excel?layers=0"
+          },
+          "title": "Excel"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/geoPackage?layers=0"
+          },
+          "title": "GeoPackage"
+        },
+        {
+          "urls": {
+            "application/geopackage+sqlite3": "https://geodata.colorado.gov/api/download/v1/items/c784f4ebddaf43c8b816612fb62e7e5b/sqlite?layers=0"
+          },
+          "title": "SQLite Geodatabase"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "{{orgContactEmail}}",
+          "Homepage": "https://geodata.colorado.gov/datasets/esri::future-annual",
+          "Contact Name": "esri_environment",
+          "Issued": "2025-10-20T16:44:16.000Z",
+          "License": "https://creativecommons.org/licenses/by/4.0",
+          "Last Update": "2026-03-04T02:08:14.185Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=c784f4ebddaf43c8b816612fb62e7e5b&sublayer=0",
+          "Geographic Coverage": "-179.0000,-66.6878,179.0000,80.7335",
+          "Publisher": "Esri",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/datasets/esri::future-annual"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "wri",
+      "water",
+      "water risk atlas",
+      "environment",
+      "esri_environment",
+      "fresh water",
+      "hydro",
+      "hydrology",
+      "water depletion",
+      "water management",
+      "water risk",
+      "water stress"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "uprs-85jx",
+    "name": "Aqueduct 4.0 Water Risk",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793127762,
+    "description": "Water risk baseline and projections per watershed from Aqueduct 4.0 by the World Resources Institute (Data vintage 2023).",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42702171,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793127762,
+    "publicationGroup": 20693837,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793127762,
+    "tableId": 20693837,
+    "totalTimesRated": 0,
+    "viewCount": 24,
+    "viewLastModified": 1793300589,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793312580,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7826964,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793127762,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793312580,
+          "failureCount": 0,
+          "startedAt": 1793312580,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551329,
+      "name": "Aqueduct 4.0 Water Risk",
+      "createdAt": 1793127762,
+      "description": "Water risk baseline and projections per watershed from Aqueduct 4.0 by the World Resources Institute (Data vintage 2023).",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=c784f4ebddaf43c8b816612fb62e7e5b",
+      "federatedCatalogSelectionId": 570877,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "wri,water,water risk atlas,environment,esri_environment,fresh water,hydro,hydrology,water depletion,water management,water risk,water stress",
+      "viewId": 42702171,
+      "viewUid": "uprs-85jx"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/maps/esri::aqueduct-4-0-water-risk"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://services.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/aqueduct_water_risk/FeatureServer"
+          },
+          "title": "ArcGIS GeoService"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "{{orgContactEmail}}",
+          "Homepage": "https://geodata.colorado.gov/maps/esri::aqueduct-4-0-water-risk",
+          "Contact Name": "esri_environment",
+          "Issued": "2025-10-20T16:44:16.000Z",
+          "License": "https://creativecommons.org/licenses/by/4.0",
+          "Last Update": "2026-10-27T17:25:28.000Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=c784f4ebddaf43c8b816612fb62e7e5b",
+          "Geographic Coverage": "-179.0000,-66.6878,179.0000,80.7335",
+          "Publisher": "Esri",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/maps/esri::aqueduct-4-0-water-risk"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "wri",
+      "water",
+      "water risk atlas",
+      "environment",
+      "esri_environment",
+      "fresh water",
+      "hydro",
+      "hydrology",
+      "water depletion",
+      "water management",
+      "water risk",
+      "water stress"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "av9z-2t9f",
+    "name": "CHELSA Bioclimate Projections - Snow Cover Days",
+    "assetType": "federated_href",
+    "averageRating": 0,
+    "createdAt": 1793127761,
+    "description": "Global CHELSA bioclimate projections of snow cover days for historical and three future time periods, and three Shared Socioeconomic Pathway (SSP) climate scenarios. The data is derived from CMIP6 ISIMIP3b data by the Swiss Federal Institute for Forest, Snow, and Landscape Research WSL. (Beta)",
+    "diciBackend": false,
+    "displayType": "federated",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42702170,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793127761,
+    "publicationGroup": 20693836,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793127761,
+    "tableId": 20693836,
+    "totalTimesRated": 0,
+    "viewCount": 24,
+    "viewLastModified": 1793300585,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1793312582,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7826963,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793127761,
+        "targetAudience": "public",
+        "workflowId": 1726,
+        "reviewer": {
+          "id": "bzru-y32e",
+          "displayName": "Timothy Andrews"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793312582,
+          "failureCount": 0,
+          "startedAt": 1793312582,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "d6g4-ka5e",
+          "displayName": "Colorado Geospatial Data Portal"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "federatedCatalogEntry": {
+      "id": 551328,
+      "name": "CHELSA Bioclimate Projections - Snow Cover Days",
+      "createdAt": 1793127761,
+      "description": "Global CHELSA bioclimate projections of snow cover days for historical and three future time periods, and three Shared Socioeconomic Pathway (SSP) climate scenarios. The data is derived from CMIP6 ISIMIP3b data by the Swiss Federal Institute for Forest, Snow, and Landscape Research WSL. (Beta)",
+      "federatedCatalogSelectionExternalId": "https://www.arcgis.com/home/item.html?id=2395e25c09ec4944b6e54ba36bf668dd",
+      "federatedCatalogSelectionId": 570875,
+      "federatedCatalogSource": "https://geodata.colorado.gov/data.json",
+      "federatedCatalogSourceId": 21215,
+      "federatedCatalogSourceType": "open_data_metadata_v1_1",
+      "tags": "bioclimate,chelsa,climate,environment,image service,precipitation,temperature,world,esri_environment",
+      "viewId": 42702170,
+      "viewUid": "av9z-2t9f"
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "text/html": "https://geodata.colorado.gov/content/esri::chelsa-bioclimate-projections-snow-cover-days"
+          },
+          "title": "ArcGIS Hub Dataset"
+        },
+        {
+          "urls": {
+            "application/json": "https://tiledimageservices.arcgis.com/P3ePLMYs2RVChkJx/arcgis/rest/services/CHELSA_Bioclimate_Projections___Snow_Cover_Days/ImageServer"
+          },
+          "title": "ArcGIS GeoService"
+        }
+      ],
+      "custom_fields": {
+        "Common Core": {
+          "Contact Email": "{{orgContactEmail}}",
+          "Homepage": "https://geodata.colorado.gov/content/esri::chelsa-bioclimate-projections-snow-cover-days",
+          "Contact Name": "esri_environment",
+          "Issued": "2025-10-16T02:26:27.000Z",
+          "License": "<div><div><p><img src='https://downloads.esri.com/blogs/arcgisonline/esrilogo_new.png' /> &nbsp;This work is licensed under the Esri Master License Agreement.</p><div><a target='_blank' href='https://goto.arcgis.com/termsofuse/viewsummary' rel='nofollow ugc noopener noreferrer'><strong>View Summary</strong></a>&nbsp;|&nbsp;<a target='_blank' href='https://goto.arcgis.com/termsofuse/viewtermsofuse' rel='nofollow ugc noopener noreferrer'><strong>View Terms of Use</strong></a></div></div></div>",
+          "Last Update": "2026-10-27T17:26:40.000Z",
+          "Theme": "geospatial",
+          "Unique Identifier": "https://www.arcgis.com/home/item.html?id=2395e25c09ec4944b6e54ba36bf668dd",
+          "Geographic Coverage": "-179.0000,-78.5132,179.0000,85.0082",
+          "Publisher": "Esri",
+          "Public Access Level": "public"
+        }
+      },
+      "accessPoints": {
+        "text/html": "https://geodata.colorado.gov/content/esri::chelsa-bioclimate-projections-snow-cover-days"
+      }
+    },
+    "owner": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "d6g4-ka5e",
+      "displayName": "Colorado Geospatial Data Portal",
+      "profileImageUrlLarge": "/api/users/d6g4-ka5e/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/d6g4-ka5e/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/d6g4-ka5e/profile_images/TINY",
+      "screenName": "Colorado Geospatial Data Portal",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "bioclimate",
+      "chelsa",
+      "climate",
+      "environment",
+      "image service",
+      "precipitation",
+      "temperature",
+      "world",
+      "esri_environment"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  }
+]

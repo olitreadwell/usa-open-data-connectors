@@ -62,6 +62,17 @@ describe('GET /sources', () => {
       'chicago-open-data-catalogue',
       'seattle-open-data-catalogue',
       'texas-open-data-catalogue',
+      'colorado-open-data-catalogue',
+      'washington-state-open-data-catalogue',
+      'michigan-open-data-catalogue',
+      'oregon-open-data-catalogue',
+      'pennsylvania-open-data-catalogue',
+      'illinois-open-data-catalogue',
+      'new-jersey-open-data-catalogue',
+      'vermont-open-data-catalogue',
+      'los-angeles-open-data-catalogue',
+      'san-francisco-open-data-catalogue',
+      'california-open-data-catalogue',
     ]);
     for (const source of sources) {
       expect(Object.keys(source).sort()).toEqual(['auth', 'description', 'id', 'name']);

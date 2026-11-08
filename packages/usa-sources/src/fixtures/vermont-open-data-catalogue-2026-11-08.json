@@ -1,0 +1,929 @@
+[
+  {
+    "id": "6h48-n97g",
+    "name": "SFY 2027 Vendor Payments",
+    "assetType": "filter",
+    "averageRating": 0,
+    "category": "Finance",
+    "createdAt": 1793297962,
+    "description": "The payments displayed in this dataset exclude direct payments to State employees for salaries, benefits, and, prior to May 2013, employee reimbursement expenses. The dataset also excludes payments that are confidential under applicable state or federal laws, regulations, or policies, as well as payments for which disclosure could compromise the confidentiality of recipients, such as certain direct benefit payments. Approximately one percent of all non-employee payments are excluded under these criteria.\n\nPayment information is derived from the State of Vermont's VISION statewide financial management system. State agencies and departments are responsible for entering and maintaining their financial transactions within VISION. Although VISION serves as the State's primary financial system, certain financial activities may be managed through other authorized systems and therefore may not be reflected in this dataset.\n\nThe information provided is intended solely for informational and transparency purposes. It does not constitute legal, financial, investment, accounting, or other professional advice and should not be relied upon as such. While reasonable efforts are made to ensure the accuracy and completeness of the information presented, the State of Vermont makes no representations or warranties regarding its accuracy, reliability, or completeness and assumes no liability for any errors, omissions, or decisions made based on the information contained herein.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 1,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "786x-sbp3",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42712154,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793298268,
+    "publicationGroup": 13724822,
+    "publicationStage": "published",
+    "queryString": "SELECT\n  `qtrending`,\n  `govtunit`,\n  `unitno`,\n  `vno`,\n  `vendor`,\n  `city`,\n  `state`,\n  `description`,\n  `objcode`,\n  `amt`,\n  `account`,\n  `acctno`,\n  `fund_description`,\n  `fund`\nWHERE\n  `qtrending`\n    BETWEEN \"2026-06-30T14:22:38\" :: floating_timestamp\n    AND \"2026-09-30T14:47:26\" :: floating_timestamp",
+    "rowsUpdatedAt": 1793299012,
+    "rowsUpdatedBy": "jnd5-9mch",
+    "tableId": 15440197,
+    "totalTimesRated": 0,
+    "viewCount": 26,
+    "viewLastModified": 1793299677,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793298269,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7832688,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793298269,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793298269,
+          "failureCount": 0,
+          "startedAt": 1793298269,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "jnd5-9mch",
+          "displayName": "KBaker"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "jnd5-9mch",
+      "displayName": "KBaker",
+      "screenName": "KBaker",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "mv7g-442c",
+      "displayName": "Jordan Black-Deegan",
+      "screenName": "Jordan Black-Deegan",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "flags": [
+      "calculatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "u4te-7p3s",
+    "name": "Chronic Absenteeism Download",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Education",
+    "createdAt": 1784295206,
+    "description": "Below is a downloadable data file of Chronic Absenteeism including race and ethnicity. Please note, the data in this file is heavily suppressed, as required by FERPA to protect student privacy. Due to this significant suppression, Chronic Absenteeism by race and ethnicity is not displayed on the VED at this time.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 78,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42299765,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1784569602,
+    "publicationGroup": 20469757,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1784569586,
+    "rowsUpdatedBy": "iuss-xwrm",
+    "tableId": 20469757,
+    "totalTimesRated": 0,
+    "viewCount": 269,
+    "viewLastModified": 1784569602,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1784569603,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7576896,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1784569603,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1784569603,
+          "failureCount": 0,
+          "startedAt": 1784569603,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "iuss-xwrm",
+          "displayName": "Emma Pearson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["vermont education dashboard", "chronic absenteeism"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "fjrz-5mmw",
+    "name": "Vermont Education Dashboard: Student Information",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Education",
+    "createdAt": 1784050738,
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 128,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42286683,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1784053474,
+    "publicationGroup": 20463159,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1784053453,
+    "rowsUpdatedBy": "iuss-xwrm",
+    "tableId": 20463159,
+    "totalTimesRated": 0,
+    "viewCount": 551,
+    "viewLastModified": 1784053474,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1784053474,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7569542,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1784053474,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1784053474,
+          "failureCount": 0,
+          "startedAt": 1784053474,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "iuss-xwrm",
+          "displayName": "Emma Pearson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "vermont education dashboard",
+      "student information",
+      "graduation rate",
+      "truancy",
+      "attendance rate",
+      "promotion rate"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "6vwq-m84d",
+    "name": "SFY2026 Vendor Payments",
+    "assetType": "filter",
+    "averageRating": 0,
+    "category": "Finance",
+    "createdAt": 1783524573,
+    "description": "The payments displayed in this dataset exclude direct payments to State employees for salaries, benefits, and, prior to May 2013, employee reimbursement expenses. The dataset also excludes payments that are confidential under applicable state or federal laws, regulations, or policies, as well as payments for which disclosure could compromise the confidentiality of recipients, such as certain direct benefit payments. Approximately one percent of all non-employee payments are excluded under these criteria.\n\nPayment information is derived from the State of Vermont's VISION statewide financial management system. State agencies and departments are responsible for entering and maintaining their financial transactions within VISION. Although VISION serves as the State's primary financial system, certain financial activities may be managed through other authorized systems and therefore may not be reflected in this dataset.\n\nThe information provided is intended solely for informational and transparency purposes. It does not constitute legal, financial, investment, accounting, or other professional advice and should not be relied upon as such. While reasonable efforts are made to ensure the accuracy and completeness of the information presented, the State of Vermont makes no representations or warranties regarding its accuracy, reliability, or completeness and assumes no liability for any errors, omissions, or decisions made based on the information contained herein.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 6,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "786x-sbp3",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42271804,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1783524819,
+    "publicationGroup": 13724822,
+    "publicationStage": "published",
+    "queryString": "SELECT\n  `qtrending`,\n  `govtunit`,\n  `unitno`,\n  `vno`,\n  `vendor`,\n  `city`,\n  `state`,\n  `description`,\n  `objcode`,\n  `amt`,\n  `account`,\n  `acctno`,\n  `fund_description`,\n  `fund`\nWHERE\n  `qtrending`\n    BETWEEN \"2025-06-30T11:29:57\" :: floating_timestamp\n    AND \"2026-09-30T11:31:11\" :: floating_timestamp",
+    "rowsUpdatedAt": 1793299012,
+    "rowsUpdatedBy": "jnd5-9mch",
+    "tableId": 15440197,
+    "totalTimesRated": 0,
+    "viewCount": 101,
+    "viewLastModified": 1793299550,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1783525052,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7560973,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1783525052,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1783525052,
+          "failureCount": 0,
+          "startedAt": 1783525052,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "jnd5-9mch",
+          "displayName": "KBaker"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "jnd5-9mch",
+      "displayName": "KBaker",
+      "screenName": "KBaker",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "mv7g-442c",
+      "displayName": "Jordan Black-Deegan",
+      "screenName": "Jordan Black-Deegan",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "flags": [
+      "calculatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "9uwi-evpg",
+    "name": "Vermont Education Dashboard: Organization Information",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Education",
+    "createdAt": 1778866835,
+    "description": "Organization information from 2004-2025",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 93,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42133712,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779287266,
+    "publicationGroup": 20377603,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779287254,
+    "rowsUpdatedBy": "iuss-xwrm",
+    "tableId": 20377603,
+    "totalTimesRated": 0,
+    "viewCount": 385,
+    "viewLastModified": 1779287371,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1779287267,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7483105,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779287267,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779287267,
+          "failureCount": 0,
+          "startedAt": 1779287267,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "iuss-xwrm",
+          "displayName": "Emma Pearson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "vermont education dashboard",
+      "organization",
+      "school names",
+      "supervisory union names"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "c874-7tma",
+    "name": "Vermont Education Dashboard: General Assessment 2025",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Education",
+    "createdAt": 1776178288,
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 249,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42073876,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1776261367,
+    "publicationGroup": 20345881,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1776261300,
+    "rowsUpdatedBy": "iuss-xwrm",
+    "tableId": 20345881,
+    "totalTimesRated": 0,
+    "viewCount": 759,
+    "viewLastModified": 1776261367,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1776261367,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7434104,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1776261367,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1776261368,
+          "failureCount": 0,
+          "startedAt": 1776261367,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "iuss-xwrm",
+          "displayName": "Emma Pearson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["vermont education dashboard", "assessment"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "bcmk-98qw",
+    "name": "Vermont Education Dashboard: Alternate Assessment 2025",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Education",
+    "createdAt": 1773840250,
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 73,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42011749,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1774556102,
+    "publicationGroup": 20311129,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1774556091,
+    "rowsUpdatedBy": "iuss-xwrm",
+    "tableId": 20311129,
+    "totalTimesRated": 0,
+    "viewCount": 282,
+    "viewLastModified": 1774556102,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1774556103,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7404132,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1774556103,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1774556103,
+          "failureCount": 0,
+          "startedAt": 1774556103,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "iuss-xwrm",
+          "displayName": "Emma Pearson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "iuss-xwrm",
+      "displayName": "Emma Pearson",
+      "screenName": "Emma Pearson",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["vermont education dashboard", "assessment"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "nf9b-kwcd",
+    "name": "FY2025 Vermont Grants Issued",
+    "assetType": "filter",
+    "averageRating": 0,
+    "category": "Finance",
+    "createdAt": 1769694852,
+    "description": "Beginning January 31, 2010, pursuant to 32 V.S.A. § 314, the Department of Finance and Management is required to issue an annual report of all grants awarded. In 2012, the Department began a pilot program to include non-federal grants in its database; this effort continues today, and those grants are included in the dataset.\n\nAwards included in this dataset reflect grants authorized by a State of Vermont department to a grantee during the applicable report year. Funds may or may not have been expended or received by the grantee during that year. For multi-year grants, the full award amount is reported only in the year the grant was initially issued and is not reported in subsequent years. Any subsequent amendments to a grant are not reflected in this report.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 51,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "xifk-zskz",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 41898764,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1769695057,
+    "publicationGroup": 14761071,
+    "publicationStage": "published",
+    "queryString": "SELECT\n  `granting_department`,\n  `grant_number`,\n  `grant_description`,\n  `funding_source`,\n  `cfda`,\n  `start_date`,\n  `end_date`,\n  `fiscal_year_issued`,\n  `award_amount`,\n  `grantee_name`,\n  `address_line_1`,\n  `address_line_2`,\n  `city`,\n  `st`,\n  `zip`\nWHERE caseless_one_of(`fiscal_year_issued`, \"2025\")",
+    "rowsUpdatedAt": 1769694248,
+    "rowsUpdatedBy": "jnd5-9mch",
+    "tableId": 14820234,
+    "totalTimesRated": 0,
+    "viewCount": 517,
+    "viewLastModified": 1769695193,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1769695058,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7319745,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1769695058,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1769695058,
+          "failureCount": 0,
+          "startedAt": 1769695058,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "jnd5-9mch",
+          "displayName": "KBaker"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "jnd5-9mch",
+      "displayName": "KBaker",
+      "screenName": "KBaker",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "mv7g-442c",
+      "displayName": "Jordan Black-Deegan",
+      "screenName": "Jordan Black-Deegan",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "flags": [
+      "calculatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "3jjz-fvwu",
+    "name": "SFY2026 Vendor Payments",
+    "assetType": "filter",
+    "averageRating": 0,
+    "category": "Finance",
+    "createdAt": 1760721014,
+    "description": "A list of all State of Vermont payments to vendors.\nThe payments shown here are exclusive of direct payments to state employees for salaries, benefits, and, prior to May 2013, employee reimbursable expenses. The payments are also exclusive of any payments deemed confidential by state and/or federal statutes and rules, or the confidential nature of the recipients of certain payments, like direct program benefit payments. (Approximately 1% of all non-employee payments are excluded under these guidelines.)\nPayments are made through the VISION statewide financial system. Agencies and departments are responsible for entering their transactions into VISION. While VISION is the state’s principal financial system, it is not the sole financial system in use by the state.\nThis data is not intended to be legal advice nor is it designed or intended to be relied upon as authoritative financial, investment, or professional advice. No entity affiliated with, employed by, or constituting part of the state of Vermont warrants, endorses, assures the accuracy of, or accepts liability for the content of any information on this site.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 169,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "786x-sbp3",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 41683063,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1760721236,
+    "publicationGroup": 13724822,
+    "publicationStage": "published",
+    "queryString": "SELECT\n  `qtrending`,\n  `govtunit`,\n  `unitno`,\n  `vno`,\n  `vendor`,\n  `city`,\n  `state`,\n  `description`,\n  `objcode`,\n  `amt`,\n  `account`,\n  `acctno`,\n  `fund_description`,\n  `fund`\nWHERE\n  `qtrending`\n    BETWEEN \"2025-06-30T13:10:32\" :: floating_timestamp\n    AND \"2025-12-31T13:10:32\" :: floating_timestamp",
+    "rowsUpdatedAt": 1793299012,
+    "rowsUpdatedBy": "jnd5-9mch",
+    "tableId": 15440197,
+    "totalTimesRated": 0,
+    "viewCount": 725,
+    "viewLastModified": 1769193387,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1769193846,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7313231,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1769193846,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1769193846,
+          "failureCount": 0,
+          "startedAt": 1769193846,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "jnd5-9mch",
+          "displayName": "KBaker"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "jnd5-9mch",
+      "displayName": "KBaker",
+      "screenName": "KBaker",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "mv7g-442c",
+      "displayName": "Jordan Black-Deegan",
+      "screenName": "Jordan Black-Deegan",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "flags": [
+      "calculatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "8ewu-igdm",
+    "name": "Purchase Orders with Vendor Information",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Finance",
+    "createdAt": 1757959353,
+    "description": "Provides procurement information on a Statewide level that is often requested individually by department.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 771,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 41623621,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1757960655,
+    "publicationGroup": 20093986,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793643911,
+    "rowsUpdatedBy": "qxyh-dxyr",
+    "tableId": 20093986,
+    "totalTimesRated": 0,
+    "viewCount": 1425,
+    "viewLastModified": 1793643907,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1757960655,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7122872,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1757960655,
+        "targetAudience": "public",
+        "workflowId": 1917,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1757960655,
+          "failureCount": 0,
+          "startedAt": 1757960655,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "qxyh-dxyr",
+          "displayName": "Joe Harris"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "rowLabel": "Purchase Order Information",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "qxyh-dxyr",
+      "displayName": "Joe Harris",
+      "screenName": "Joe Harris",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "qxyh-dxyr",
+      "displayName": "Joe Harris",
+      "screenName": "Joe Harris",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

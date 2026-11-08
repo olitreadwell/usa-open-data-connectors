@@ -6,8 +6,10 @@ import { blsUnemploymentAdapter } from './blsSeries.js';
 import { cdcCountyObesityAdapter } from './cdcCountyObesity.js';
 import { cfpbConsumerComplaintsAdapter } from './cfpbConsumerComplaints.js';
 import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
+import { californiaOpenDataCatalogueAdapter } from './californiaOpenDataCatalogue.js';
 import { callookCallsignsAdapter } from './callookCallsigns.js';
 import { chicagoOpenDataCatalogueAdapter } from './chicagoOpenDataCatalogue.js';
+import { coloradoOpenDataCatalogueAdapter } from './coloradoOpenDataCatalogue.js';
 import { collegeScorecardInstitutionsAdapter } from './collegeScorecardInstitutions.js';
 import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
@@ -17,15 +19,22 @@ import { fccSocrataCatalogueAdapter } from './fccSocrataCatalogue.js';
 import { federalRegisterDocumentsAdapter } from './federalRegisterDocuments.js';
 import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
 import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
+import { illinoisOpenDataCatalogueAdapter } from './illinoisOpenDataCatalogue.js';
+import { losAngelesOpenDataCatalogueAdapter } from './losAngelesOpenDataCatalogue.js';
+import { michiganOpenDataCatalogueAdapter } from './michiganOpenDataCatalogue.js';
 import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
+import { newJerseyOpenDataCatalogueAdapter } from './newJerseyOpenDataCatalogue.js';
 import { nihReporterProjectsAdapter } from './nihReporterProjects.js';
 import { nhtsaVehicleModelsAdapter } from './nhtsaVehicleModels.js';
 import { nycOpenDataCatalogueAdapter } from './nycOpenDataCatalogue.js';
 import { nyStateOpenDataCatalogueAdapter } from './nyStateOpenDataCatalogue.js';
+import { oregonOpenDataCatalogueAdapter } from './oregonOpenDataCatalogue.js';
+import { pennsylvaniaOpenDataCatalogueAdapter } from './pennsylvaniaOpenDataCatalogue.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
 import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
 import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
 import { seattleOpenDataCatalogueAdapter } from './seattleOpenDataCatalogue.js';
+import { sanFranciscoOpenDataCatalogueAdapter } from './sanFranciscoOpenDataCatalogue.js';
 import { texasOpenDataCatalogueAdapter } from './texasOpenDataCatalogue.js';
 import { treasuryDebtToPennyAdapter } from './treasuryDebtToPenny.js';
 import { usaspendingAgenciesAdapter } from './usaspendingAgencies.js';
@@ -37,6 +46,8 @@ import { noaaSeaLevelAdapter } from './noaaSeaLevel.js';
 import { openFdaFoodRecallsAdapter } from './openFdaFoodRecalls.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import { usgsPeakStreamflowAdapter } from './usgsPeakStreamflow.js';
+import { vermontOpenDataCatalogueAdapter } from './vermontOpenDataCatalogue.js';
+import { washingtonStateOpenDataCatalogueAdapter } from './washingtonStateOpenDataCatalogue.js';
 import {
   getUsDataSource,
   probeAllUsDataSources,
@@ -228,6 +239,50 @@ const RAW_TEXAS_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/texas-open-data-catalogue-2026-11-08.json'),
   'utf8'
 );
+const RAW_COLORADO_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/colorado-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_WASHINGTON_STATE_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/washington-state-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_MICHIGAN_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/michigan-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_OREGON_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/oregon-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_PENNSYLVANIA_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/pennsylvania-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_ILLINOIS_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/illinois-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_NEW_JERSEY_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/new-jersey-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_VERMONT_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/vermont-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_LOS_ANGELES_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/los-angeles-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_SAN_FRANCISCO_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/san-francisco-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_CALIFORNIA_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/california-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
 const RAW_COLLEGE_SCORECARD_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/college-scorecard-institutions-2026-10-15-sampled.csv'),
   'utf8'
@@ -379,6 +434,39 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'data.texas.gov') {
     return RAW_TEXAS_FIXTURE;
   }
+  if (hostname === 'data.colorado.gov') {
+    return RAW_COLORADO_FIXTURE;
+  }
+  if (hostname === 'data.wa.gov') {
+    return RAW_WASHINGTON_STATE_FIXTURE;
+  }
+  if (hostname === 'data.michigan.gov') {
+    return RAW_MICHIGAN_FIXTURE;
+  }
+  if (hostname === 'data.oregon.gov') {
+    return RAW_OREGON_FIXTURE;
+  }
+  if (hostname === 'data.pa.gov') {
+    return RAW_PENNSYLVANIA_FIXTURE;
+  }
+  if (hostname === 'data.illinois.gov') {
+    return RAW_ILLINOIS_FIXTURE;
+  }
+  if (hostname === 'data.nj.gov') {
+    return RAW_NEW_JERSEY_FIXTURE;
+  }
+  if (hostname === 'data.vermont.gov') {
+    return RAW_VERMONT_FIXTURE;
+  }
+  if (hostname === 'data.lacity.org') {
+    return RAW_LOS_ANGELES_FIXTURE;
+  }
+  if (hostname === 'data.sf.gov') {
+    return RAW_SAN_FRANCISCO_FIXTURE;
+  }
+  if (hostname === 'data.ca.gov') {
+    return RAW_CALIFORNIA_FIXTURE;
+  }
   if (hostname === 'estimatetax.net') {
     return RAW_ESTIMATETAX_FIXTURE;
   }
@@ -449,6 +537,17 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('chicago-open-data-catalogue');
     expect(ids).toContain('seattle-open-data-catalogue');
     expect(ids).toContain('texas-open-data-catalogue');
+    expect(ids).toContain('colorado-open-data-catalogue');
+    expect(ids).toContain('washington-state-open-data-catalogue');
+    expect(ids).toContain('michigan-open-data-catalogue');
+    expect(ids).toContain('oregon-open-data-catalogue');
+    expect(ids).toContain('pennsylvania-open-data-catalogue');
+    expect(ids).toContain('illinois-open-data-catalogue');
+    expect(ids).toContain('new-jersey-open-data-catalogue');
+    expect(ids).toContain('vermont-open-data-catalogue');
+    expect(ids).toContain('los-angeles-open-data-catalogue');
+    expect(ids).toContain('san-francisco-open-data-catalogue');
+    expect(ids).toContain('california-open-data-catalogue');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -504,6 +603,29 @@ describe('getUsDataSource', () => {
     expect(getUsDataSource('chicago-open-data-catalogue')).toBe(chicagoOpenDataCatalogueAdapter);
     expect(getUsDataSource('seattle-open-data-catalogue')).toBe(seattleOpenDataCatalogueAdapter);
     expect(getUsDataSource('texas-open-data-catalogue')).toBe(texasOpenDataCatalogueAdapter);
+    expect(getUsDataSource('colorado-open-data-catalogue')).toBe(coloradoOpenDataCatalogueAdapter);
+    expect(getUsDataSource('washington-state-open-data-catalogue')).toBe(
+      washingtonStateOpenDataCatalogueAdapter
+    );
+    expect(getUsDataSource('michigan-open-data-catalogue')).toBe(michiganOpenDataCatalogueAdapter);
+    expect(getUsDataSource('oregon-open-data-catalogue')).toBe(oregonOpenDataCatalogueAdapter);
+    expect(getUsDataSource('pennsylvania-open-data-catalogue')).toBe(
+      pennsylvaniaOpenDataCatalogueAdapter
+    );
+    expect(getUsDataSource('illinois-open-data-catalogue')).toBe(illinoisOpenDataCatalogueAdapter);
+    expect(getUsDataSource('new-jersey-open-data-catalogue')).toBe(
+      newJerseyOpenDataCatalogueAdapter
+    );
+    expect(getUsDataSource('vermont-open-data-catalogue')).toBe(vermontOpenDataCatalogueAdapter);
+    expect(getUsDataSource('los-angeles-open-data-catalogue')).toBe(
+      losAngelesOpenDataCatalogueAdapter
+    );
+    expect(getUsDataSource('san-francisco-open-data-catalogue')).toBe(
+      sanFranciscoOpenDataCatalogueAdapter
+    );
+    expect(getUsDataSource('california-open-data-catalogue')).toBe(
+      californiaOpenDataCatalogueAdapter
+    );
   });
 
   it('returns undefined for an unknown id', () => {

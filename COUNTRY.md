@@ -10,7 +10,7 @@ Ruby copies were removed on 2026-11-05.
 
 ## Adapters
 
-Thirty-six adapters are registered. Every one is keyless and has a committed
+Forty-seven adapters are registered. Every one is keyless and has a committed
 fixture captured from the live service.
 
 | Source | Adapter id | Status |
@@ -51,6 +51,17 @@ fixture captured from the live service.
 | Chicago Data Portal | `chicago-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
 | Seattle Open Data | `seattle-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
 | Texas Open Data | `texas-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Colorado Open Data | `colorado-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Washington State Open Data | `washington-state-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Michigan Open Data | `michigan-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Oregon Open Data | `oregon-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Pennsylvania Open Data | `pennsylvania-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Illinois Open Data | `illinois-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| New Jersey Open Data | `new-jersey-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Vermont Open Data | `vermont-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| Los Angeles Open Data | `los-angeles-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| San Francisco Open Data | `san-francisco-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
+| California Open Data | `california-open-data-catalogue` | live, keyless CKAN, fixture committed 2026-11-08 |
 | Census Bureau Data API | - | keyed as of 2026-11-08; skipped |
 | api.data.gov | - | not started |
 | BEA | - | not started |
@@ -61,12 +72,12 @@ fixture captured from the live service.
 - [x] Shared HTTP layer (`httpGet`): one User-Agent, 30 second timeout,
       `retryable` on 429, 5xx and network failures
 - [x] Return source-supplied licence and attribution metadata per record: the
-      Socrata catalogue entries carry `licenceUrl` and `attribution`, and
+      Socrata and CKAN catalogue entries carry `licenceUrl` and `attribution`, and
       `publicdatahub-hospital-quality` carries licence, agency, and dataset
       provenance
 - [ ] Add licence and attribution metadata to the other adapters. No other
       committed fixture carries a per-record licence field; most publishers
       state terms for the whole service, so each source needs its own decision
 - [x] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
-- [ ] Add the remaining keyless adapters. Census answered with a missing-key redirect on 2026-11-08, California's Socrata discovery endpoint answered 404, and BEA, EIA, and api.data.gov remain keyed
+- [ ] Add the remaining keyless adapters. Census answered with a missing-key redirect on 2026-11-08, California's Socrata discovery endpoint answered 404 so its CKAN search endpoint is used instead, and BEA, EIA, and api.data.gov remain keyed
 - [x] Add each new adapter to the registry so the API and CLI pick it up

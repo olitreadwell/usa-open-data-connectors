@@ -4,7 +4,7 @@ Questions that come up about this repo.
 
 ## Do I need an API key?
 
-No. All 36 adapters work keyless and need no environment variable. Three
+No. All 47 adapters work keyless and need no environment variable. Three
 sources ask callers to identify themselves: the SEC EDGAR, National Weather
 Service and CFPB adapters send their own descriptive `User-Agent` header from
 inside the adapter, replacing the default one, so callers send nothing extra.
@@ -17,7 +17,7 @@ not subject to copyright in the United States, so it is effectively public
 domain there. Two caveats. The NCBI and NLM services attach their own terms to
 some content. And public domain in the US is not the same as public domain
 everywhere, so check your own jurisdiction before republishing. Credit the
-publisher rather than this library. Socrata catalogue entries carry the
+publisher rather than this library. Socrata and CKAN catalogue entries carry the
 portal's `licenceUrl` and `attribution` values, and PublicDataHub records carry
 licence and agency provenance. An empty value means the source supplied none.
 

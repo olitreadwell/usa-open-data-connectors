@@ -1,0 +1,1141 @@
+[
+  {
+    "id": "xdae-a7y7",
+    "name": "Map of Historical Police Districts (2015 - 2026)",
+    "assetType": "map",
+    "averageRating": 0,
+    "category": "Public Safety",
+    "createdAt": 1790881973,
+    "description": "<strong>A. SUMMARY</strong>\nThis dataset shows the historical geographic boundaries of the San Francisco Police Department (SFPD) police districts from 2015-2026.\n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nThe dataset is based on the approved SFPD district boundaries and is maintained as geographic (GIS) data.\n\n<strong>C. UPDATE PROCESS</strong>\nThe dataset will not be updated.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\nUsers can use this dataset to identify and map historical SFPD district boundaries.\n\n<strong>E. RELATED DATASETS</strong>\n<u><a href=\"https://data.sf.gov/d/d4vc-q76h\">Current Police Districts</a></u>",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_map",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 18,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "bj3n-hmgf",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42623344,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790882076,
+    "publicationGroup": 20645894,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790877038,
+    "rowsUpdatedBy": "efbz-x735",
+    "tableId": 20645894,
+    "totalTimesRated": 0,
+    "viewCount": 56,
+    "viewLastModified": 1793899073,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790889966,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7771480,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790882099,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "reviewer": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790889966,
+          "failureCount": 0,
+          "startedAt": 1790889966,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Police Department"
+        },
+        "Internal Management": {
+          "Inventory ID": "POL-0011"
+        },
+        "Publishing Details": {
+          "Data change frequency": "As needed",
+          "Publishing frequency": "As needed"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "bj3n-hmgf",
+    "name": "Historical Police Districts (2015 - 2026)",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Public Safety",
+    "createdAt": 1790876787,
+    "description": "<strong>A. SUMMARY</strong>\nThis dataset shows the historical geographic boundaries of the San Francisco Police Department (SFPD) police districts from 2015-2026.\n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nThe dataset is based on the approved SFPD district boundaries and is maintained as geographic (GIS) data.\n\n<strong>C. UPDATE PROCESS</strong>\nThe dataset will not be updated.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\nUsers can use this dataset to identify and map historical SFPD district boundaries.\n\n<strong>E. RELATED DATASETS</strong>\n<u><a href=\"https://data.sf.gov/d/d4vc-q76h\">Current Police Districts</a></u>",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 55,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42623095,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790877054,
+    "publicationGroup": 20645894,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790877038,
+    "rowsUpdatedBy": "efbz-x735",
+    "tableId": 20645894,
+    "totalTimesRated": 0,
+    "viewCount": 131,
+    "viewLastModified": 1790881030,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790881643,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7771352,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790881039,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "reviewer": {
+          "id": "95z8-r5hw",
+          "displayName": "Cody Xuereb"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790881643,
+          "failureCount": 0,
+          "startedAt": 1790881643,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "95z8-r5hw",
+          "displayName": "Cody Xuereb"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Police Department"
+        },
+        "Internal Management": {
+          "Inventory ID": "POL-0011"
+        },
+        "Publishing Details": {
+          "Data change frequency": "As needed",
+          "Publishing frequency": "As needed"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "8kn2-p6vj",
+    "name": "Street & Sidewalk Maintenance Standards Results, FY26",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "City Infrastructure",
+    "createdAt": 1790284237,
+    "description": "<strong>A. SUMMARY</strong>\nThe Controller’s Office (CON) Streets and Sidewalks Maintenance Standards Program measures street and sidewalk cleanliness using standardized criteria. The data shows how an average pedestrian might experience a block on a given day. They do not measure how much cleaning work City departments, property owners, or community groups performed.\n \nThis file covers Fiscal Year 2026 (July 2025–June 2026). Unlike prior years, FY26 is not a citywide random sample. Because of budget constraints, and because citywide results had been relatively stable, CON evaluated commercial and mixed-use blocks in priority areas with historically low scores and high 311 demand. Each selected route was evaluated twice (once per half of the fiscal year), except where a route was inaccessible. The file includes 735 evaluations on 368 routes.\n \nThe associated annual report focuses on the Tenderloin, Mission, South of Market, and Bayview. CON also evaluated smaller commercial clusters in other neighborhoods, but those samples are too small for neighborhood-level findings. The Tenderloin sample is the most representative of that neighborhood as a whole. Mission, SoMa, and Bayview results describe selected commercial corridors, not every block in those neighborhoods.\n\nProgram page and reports: <u><a href=\"https://www.sf.gov/street-and-sidewalk-maintenance-standards\">Street and Sidewalk Maintenance Standards</a></u>\nDashboards: <u><a href=\"https://www.sf.gov/data--street-and-sidewalk-maintenance-standards\">Street and Sidewalk Maintenance Standards data</a></u>\n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nTrained evaluators walk one- to two-block route segments and record litter, dumping, graffiti, feces, and other conditions via ArcGIS Survey123. CON then structures the data in R and exports it to Excel.\n\n<strong>C. UPDATE PROCESS</strong>\nThis dataset will be updated annually after evaluations are complete and the annual report is finalized.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\nThis data cannot be used to calculate a citywide average. The FY26 sample is focused on commercial and mixed-use corridors where evaluation results have historically been worse. This data also cannot be used to calculate neighborhood-level averages outside of Tenderloin, South of Market, and Mission. Other neighborhoods did not have a sufficient sample size, and in the Bayview, specific clusters were chosen that do not reflect the neighborhood as a whole. Neighborhood-level findings should also not be compared to previous years, as the previous sample was a random sample of residential and commercial blocks, while this year’s was a targeted sample of commercial and mixed-use blocks.\n\n<strong>E. RELATED DATASETS</strong>\n<u><a href=\"https://data.sf.gov/d/83ki-hu3p\">DPW Street & Sidewalk Evaluation Results, 7-1-2013 to 6-30-2018 (FY13-FY18)</a></u><br><u><a href=\"https://data.sf.gov/d/qya8-uhsz\">Street & Sidewalk Maintenance Standards Results, Jan 2022 - Jun 2025</a></u><br><u><a href=\"https://data.sf.gov/d/i8y7-m763\">FY07-11 Street Evaluation Results</a></u><br><u><a href=\"https://data.sf.gov/d/j2bu-swwd\">Analysis Neighborhoods</a></u>",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 56,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42605056,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790284686,
+    "publicationGroup": 20636970,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791232813,
+    "rowsUpdatedBy": "efbz-x735",
+    "tableId": 20636970,
+    "totalTimesRated": 0,
+    "viewCount": 175,
+    "viewLastModified": 1791232812,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791236494,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7785008,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791232838,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "reviewer": {
+          "id": "95z8-r5hw",
+          "displayName": "Cody Xuereb"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791236494,
+          "failureCount": 0,
+          "startedAt": 1791236494,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "Streets and Sidewalks Maintenance Standards Column Crosswalk.xlsx",
+          "assetId": "017ef9fc-a13a-48b4-85aa-a11cd4a810c7",
+          "name": "Streets and Sidewalks Maintenance Standards Column Crosswalk.xlsx"
+        }
+      ],
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Controller"
+        },
+        "Internal Management": {
+          "Inventory ID": "CON-0020"
+        },
+        "Detailed Descriptive": {
+          "Geographic unit": "Neighborhood"
+        },
+        "Publishing Details": {
+          "Data change frequency": "Annually",
+          "Publishing frequency": "Annually"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "qf4b-pv4d",
+    "name": "Capital Budget for General Fund Departments (2005-06 to present)",
+    "assetType": "filter",
+    "averageRating": 0,
+    "category": "City Infrastructure",
+    "createdAt": 1787961874,
+    "description": "<strong>A. SUMMARY</strong>\nThis dataset includes the City's capital budgets (also called the Pay-As-You-Go Program) from 2006 to present day. Prior to 2006, capital budgets were drafted by individual City departments. In 2006, the Capital Planning Program within the City Administrator's Office started to manage a more coordinated process for all general fund departments. This centralized process aims to prioritize projects citywide and advocate for responsible capital budgeting. The Capital Planning Program is now within the City’s <u><a href=\"https://www.sf.gov/department-office-of-resilience-and-capital-planning\">Office of Resilience and Capital Planning (ORCP)</a></u>. \n \nGeneral fund departments are departments that do not collect revenues and are instead reliant on the City's General Fund (tax revenues). For these departments, all their capital projects (funded by both General Fund and other sources like grants and state funds) are included in this dataset. For enterprise departments (departments that generate their own revenue, like PUC, MTA, PORT), this dataset only includes a few projects that have certain citywide funding sources, like the Planning Department's Area Plan Impact Fees (IPIC). \n \nThis dataset represents the City's investments in capital projects for general fund departments through ORCP's budget process. It is important to note that many large-scale capital projects are funded with other sources outside of the budget process, like general obligation bonds and revenue bonds. Those are not included in this dataset. \n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nEach year after a budget is approved, the Controller's Office loads the budget into the City's financial system. Then, the Controller's Office pulls a report from the financial system of the capital appropriations included in the budget that went through ORCP's budget process. This financial report data is the basis of this dataset.\n\n<strong>C. UPDATE PROCESS</strong>\nThe Controller's Office pulls a financial report after the budget is approved, and this report is cleaned and appended to existing historical budget data. This dataset will be updated each summer with the new capital budget.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\nAn analyst can use this dataset to explore the capital projects and investments funded through the Capital Budget (Pay-As-You-Go Program) over the past 20+ years. While this is not a complete picture of all capital investments (it doesn't include bond-funded capital projects for example), it does show projects included in the budget for general fund departments, including several ongoing programs like street resurfacing. \n\nThere are a few characteristics of capital projects an analyst may want to summarize and explore. For example, the dataset includes an “expenditure type” category that groups similar types of capital improvements together, like ADA-related projects or enhancements/upgrades. See full details in the column descriptions below.  \n \nAn analyst could also filter for a department and look at the specific capital projects budgeted for that department's facilities in a given year. \n\nRows with negative values in the \"Dollar Amount\" column are de-appropriations or re-allocations. This means those project funds were removed from that project and fund code in that fiscal year. All are flagged in the Reallocations column. See more information on reallocations in the column description.\n \nAll dollar amounts here are the exact dollars appropriated in the listed budget year. The value of those dollars has decreased with inflation every year. Therefore, be wary of tracking totals over time, as the real value of each dollar changes over time.\n\n<strong>E. RELATED DATASETS</strong>\n<u><a href=\"https://data.sfgov.org/d/m793-kis4\">General Obligation (GO) Bonds</a></u><br><u><a href=\"https://data.sfgov.org/d/xdgd-c79v\">Citywide Budget Data</a></u>",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 76,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "hbp2-efqd",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42470533,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787962371,
+    "publicationGroup": 20524052,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1792599296,
+    "rowsUpdatedBy": "dbag-6qd9",
+    "tableId": 20559806,
+    "totalTimesRated": 0,
+    "viewCount": 179,
+    "viewLastModified": 1788556520,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1788999282,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7675761,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1788984235,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "reviewer": {
+          "id": "95z8-r5hw",
+          "displayName": "Cody Xuereb"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1788999282,
+          "failureCount": 0,
+          "startedAt": 1788999282,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Office of Resilience and Capital Planning"
+        },
+        "Internal Management": {
+          "Inventory ID": "ADM-0118"
+        },
+        "Publishing Details": {
+          "Data change frequency": "Annually",
+          "Publishing frequency": "Annually"
+        }
+      },
+      "rowLabel": "A budget appropriation (for a specific capital project and funding source within a budget year)",
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": [
+      "capital assets",
+      "capital program",
+      "capital budget",
+      "budget",
+      "facility",
+      "public facilities",
+      "capital projects"
+    ],
+    "flags": [
+      "calculatedView",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "4crk-b3wu",
+    "name": "Map of United States Congressional Districts 2012-2022",
+    "assetType": "map",
+    "averageRating": 0,
+    "category": "Geographic Locations and Boundaries",
+    "createdAt": 1787786061,
+    "description": "<strong>A. SUMMARY</strong>\nThis dataset contains the historical U.S. Congressional District boundaries for San Francisco as they existed from 2012 to 2022 (based on the 2010 Census redistricting cycle). It includes Districts 12, 13, and 14. This is an archival/reference dataset for historical analysis.\n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nCongressional district boundaries are established through the redistricting process following each decennial U.S. Census. In California, the Citizens Redistricting Commission draws the boundaries. The source geographic data is referenced on UCLA's Political Science Department's website, https://cdmaps.polisci.ucla.edu/, downloaded as GeoJson from https://github.com/JeffreyBLewis/congressional-district-boundaries/tree/master/GeoJson and then clipped in FME to the City and County of San Francisco's non-water boundary by the City's GIS team (SF Department of Technology).\n\n<strong>C. UPDATE PROCESS</strong>\nThis is a historical/archival dataset and is not expected to change. It was last loaded on 2026-08-19.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\n<ul><li>Contains 3 rows representing Districts 12, 13, and 14.\n<li>Use this dataset for historical analysis or to compare how district lines shifted between the 2010-cycle and 2020-cycle redistricting.\n<li>Note that district numbers changed between cycles, so do not assume the same number refers to the same geographic area across time periods.</ul>\n\n<strong>E. RELATED DATASETS</strong>\n<u><a href=\"https://data.sfgov.org/d/ufwv-2vjd\">United States Congressional Districts 2002-2012</a></u>\n<u><a href=\"https://data.sfgov.org/d/qczv-wabc\">United States Congressional Districts 2022-2032</a></u>",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_map",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 57,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "p6ba-sq3u",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42444504,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787786067,
+    "publicationGroup": 20545452,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1787785564,
+    "rowsUpdatedBy": "efbz-x735",
+    "tableId": 20545452,
+    "totalTimesRated": 0,
+    "viewCount": 69,
+    "viewLastModified": 1788198016,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787952466,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7651962,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787952444,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "reviewer": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787952467,
+          "failureCount": 0,
+          "startedAt": 1787952466,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Technology"
+        },
+        "Internal Management": {
+          "Inventory ID": "TIS-0040"
+        },
+        "Detailed Descriptive": {
+          "Geographic unit": "Other"
+        },
+        "Publishing Details": {
+          "Data change frequency": "Daily",
+          "Publishing frequency": "Daily"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "tzrk-npew",
+    "name": "Map of United States Congressional Districts 2022-2032",
+    "assetType": "map",
+    "averageRating": 0,
+    "category": "Geographic Locations and Boundaries",
+    "createdAt": 1787785982,
+    "description": "<strong>A. SUMMARY</strong>\nThis dataset contains the current U.S. Congressional District boundaries that overlap San Francisco. Each row represents one congressional district with its district number and geographic boundary. Congressional districts are used for electing members to the U.S. House of Representatives. The current boundaries (post-2022 redistricting) include Districts 11, 12, and 15. For more information, see the San Francisco Department of Elections website.\n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nCongressional district boundaries are established through the redistricting process following each decennial U.S. Census. In California, the Citizens Redistricting Commission draws the boundaries. The source geographic data is referenced on UCLA's Political Science Department's website, https://cdmaps.polisci.ucla.edu/, downloaded as GeoJson from https://github.com/JeffreyBLewis/congressional-district-boundaries/tree/master/GeoJson and then clipped in FME to the City and County of San Francisco's non-water boundary by the City's GIS team (SF Department of Technology).\n\n<strong>C. UPDATE PROCESS</strong>\nThis is a historical/archival dataset and is not expected to change. It was last loaded on 2026-08-19.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\n<ul><li>Contains 3 rows representing Districts 8, 12, and 13.\n<li>Use this dataset for historical analysis or to compare how district lines shifted across redistricting cycles.\n<li>Note that district numbers changed between cycles, so do not assume the same number refers to the same geographic area across time periods.</ul>\n\n<strong>E. RELATED DATASETS</strong>\n<u><a href=\"https://data.sfgov.org/d/ufwv-2vjd\">United States Congressional Districts 2002-2012</a></u>\n<u><a href=\"https://data.sfgov.org/d/p6ba-sq3u\">United States Congressional Districts 2012-2022</a></u>",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_map",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 57,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "qczv-wabc",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42444503,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787785992,
+    "publicationGroup": 20545451,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1787784543,
+    "rowsUpdatedBy": "efbz-x735",
+    "tableId": 20545451,
+    "totalTimesRated": 0,
+    "viewCount": 77,
+    "viewLastModified": 1788198024,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787952468,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7651963,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787952456,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "reviewer": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787952468,
+          "failureCount": 0,
+          "startedAt": 1787952468,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Technology"
+        },
+        "Internal Management": {
+          "Inventory ID": "TIS-0038"
+        },
+        "Detailed Descriptive": {
+          "Geographic unit": "Other"
+        },
+        "Publishing Details": {
+          "Data change frequency": "Daily",
+          "Publishing frequency": "Daily"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "p6ba-sq3u",
+    "name": "United States Congressional Districts 2012-2022",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Geographic Locations and Boundaries",
+    "createdAt": 1787784521,
+    "description": "<strong>A. SUMMARY</strong>\nThis dataset contains the historical U.S. Congressional District boundaries for San Francisco as they existed from 2012 to 2022 (based on the 2010 Census redistricting cycle). It includes Districts 12, 13, and 14. This is an archival/reference dataset for historical analysis.\n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nCongressional district boundaries are established through the redistricting process following each decennial U.S. Census. In California, the Citizens Redistricting Commission draws the boundaries. The source geographic data is referenced on UCLA's Political Science Department's website, https://cdmaps.polisci.ucla.edu/, downloaded as GeoJson from https://github.com/JeffreyBLewis/congressional-district-boundaries/tree/master/GeoJson and then clipped in FME to the City and County of San Francisco's non-water boundary by the City's GIS team (SF Department of Technology).\n\n<strong>C. UPDATE PROCESS</strong>\nThis is a historical/archival dataset and is not expected to change. It was last loaded on 2026-08-19.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\n<ul><li>Contains 3 rows representing Districts 12, 13, and 14.\n<li>Use this dataset for historical analysis or to compare how district lines shifted between the 2010-cycle and 2020-cycle redistricting.\n<li>Note that district numbers changed between cycles, so do not assume the same number refers to the same geographic area across time periods.</ul>\n\n<strong>E. RELATED DATASETS</strong>\n<u><a href=\"https://data.sfgov.org/d/ufwv-2vjd\">United States Congressional Districts 2002-2012</a></u>\n<u><a href=\"https://data.sfgov.org/d/qczv-wabc\">United States Congressional Districts 2022-2032</a></u>",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 118,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42444501,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787785575,
+    "publicationGroup": 20545452,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1787785564,
+    "rowsUpdatedBy": "efbz-x735",
+    "tableId": 20545452,
+    "totalTimesRated": 0,
+    "viewCount": 177,
+    "viewLastModified": 1787785575,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787879114,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7646814,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787785908,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "reviewer": {
+          "id": "95z8-r5hw",
+          "displayName": "Cody Xuereb"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787879114,
+          "failureCount": 0,
+          "startedAt": 1787879114,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Technology"
+        },
+        "Internal Management": {
+          "Inventory ID": "TIS-0040"
+        },
+        "Detailed Descriptive": {
+          "Geographic unit": "Other"
+        },
+        "Publishing Details": {
+          "Data change frequency": "Daily",
+          "Publishing frequency": "Daily"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "qczv-wabc",
+    "name": "United States Congressional Districts 2022-2032",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Geographic Locations and Boundaries",
+    "createdAt": 1787784351,
+    "description": "<strong>A. SUMMARY</strong>\nThis dataset contains the current U.S. Congressional District boundaries that overlap San Francisco. Each row represents one congressional district with its district number and geographic boundary. Congressional districts are used for electing members to the U.S. House of Representatives. The current boundaries (post-2022 redistricting) include Districts 11, 12, and 15. For more information, see the San Francisco Department of Elections website.\n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nCongressional district boundaries are established through the redistricting process following each decennial U.S. Census. In California, the Citizens Redistricting Commission draws the boundaries. The source geographic data is referenced on UCLA's Political Science Department's website, https://cdmaps.polisci.ucla.edu/, downloaded as GeoJson from https://github.com/JeffreyBLewis/congressional-district-boundaries/tree/master/GeoJson and then clipped in FME to the City and County of San Francisco's non-water boundary by the City's GIS team (SF Department of Technology).\n\n<strong>C. UPDATE PROCESS</strong>\nThis is a historical/archival dataset and is not expected to change. It was last loaded on 2026-08-19.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\n<ul><li>Contains 3 rows representing Districts 8, 12, and 13.\n<li>Use this dataset for historical analysis or to compare how district lines shifted across redistricting cycles.\n<li>Note that district numbers changed between cycles, so do not assume the same number refers to the same geographic area across time periods.</ul>\n\n<strong>E. RELATED DATASETS</strong>\n<u><a href=\"https://data.sfgov.org/d/ufwv-2vjd\">United States Congressional Districts 2002-2012</a></u>\n<u><a href=\"https://data.sfgov.org/d/p6ba-sq3u\">United States Congressional Districts 2012-2022</a></u>",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 140,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42444500,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787784554,
+    "publicationGroup": 20545451,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1787784543,
+    "rowsUpdatedBy": "efbz-x735",
+    "tableId": 20545451,
+    "totalTimesRated": 0,
+    "viewCount": 165,
+    "viewLastModified": 1787785537,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787879116,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7646815,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787785914,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "reviewer": {
+          "id": "95z8-r5hw",
+          "displayName": "Cody Xuereb"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787879117,
+          "failureCount": 0,
+          "startedAt": 1787879116,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "efbz-x735",
+          "displayName": "Matthew Smith"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Technology"
+        },
+        "Internal Management": {
+          "Inventory ID": "TIS-0038"
+        },
+        "Detailed Descriptive": {
+          "Geographic unit": "Other"
+        },
+        "Publishing Details": {
+          "Data change frequency": "Daily",
+          "Publishing frequency": "Daily"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "tkzw-k3nq",
+    "name": "San Francisco Street Tree Inventory",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "City Infrastructure",
+    "createdAt": 1787780954,
+    "description": "<strong><i>Note 9/9/2026: This dataset was updated in place to correct outstanding data issues, following our migration to a new asset management system in December 2024. You can access the previous version of the dataset <u><a href=\"https://data.sf.gov/City-Infrastructure/-ARCHIVED-Street-Tree-List/uzd4-f6yf/about_data\">here</a></u>.</i></strong>\n\n<strong>A. SUMMARY</strong>\nThis dataset contains all street trees recorded in the City’s street tree inventory. Each row represents a single street tree. The dataset is filtered from a broader asset inventory and includes only assets designated specifically as trees (excluding empty basins, landscaping areas, and potential planting sites). It does not include Street Trees that have been removed. You can find most trees that have been removed in the <u><a href=\"https://data.sfgov.org/d/qrwx-q4gg\">Street Tree Removal Notifications dataset</a></u>.\n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nThe dataset is extracted from the Public Works asset management system (CMMS) and filtered to include only assets classified as street trees. Non‑tree assets such as empty basins, landscaping areas, and potential planting sites are excluded to ensure each record represents a single street tree.\n\n<strong>C. UPDATE PROCESS</strong>\nThe dataset is updated on a daily basis by automatically extracting the latest street tree records from the Public Works asset management system.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\nNot all street trees in the dataset have coordinates; for records that do include coordinates, the precision may vary, so users should review spatial accuracy before performing location‑based analysis. Tree information is updated as part of normal operational workflows: typically when inspectors or field staff interact with a tree for maintenance, inspection, or other actions. As a result, while the dataset is refreshed on a scheduled basis, individual tree records may not always reflect the most current conditions.\n\nPlease note that trees removed on an emergency basis (e.g. storm or life hazard) may not appear in this dataset or in the Street Trees Removal Notifications dataset. The Street Trees Removal Notifications dataset is only for the formal removal process where a tree removal permit is issued and the tree was recommended for removal.\n\n<strong>E. RELATED DATASETS</strong>\n<u><a href=\"https://data.sfgov.org/d/qrwx-q4gg\">Street Tree Removal Notifications</a></u>",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 27093,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42491022,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789058859,
+    "publicationGroup": 20545429,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794073120,
+    "rowsUpdatedBy": "dbag-6qd9",
+    "tableId": 20575513,
+    "totalTimesRated": 0,
+    "viewCount": 60641,
+    "viewLastModified": 1794073105,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1464988035,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7680404,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1464988035,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "failureCount": 0,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rcpp-nrjq",
+          "displayName": "Public Works"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Public Works"
+        },
+        "Internal Management": {
+          "Inventory ID": "DPW-0019"
+        },
+        "Detailed Descriptive": {
+          "Geographic unit": "Latitude/longitude"
+        },
+        "Publishing Details": {
+          "Data change frequency": "Daily",
+          "Publishing frequency": "Daily"
+        }
+      },
+      "rowLabel": "Street tree",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["trees"],
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "xtu7-vn3r",
+    "name": "Respiratory Virus Test Results Reported over Time",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health and Social Services",
+    "createdAt": 1786666161,
+    "description": "<strong>A. SUMMARY</strong>\nThis dataset includes a weekly count of test results reported, and how many of those were positive, negative, and indeterminate for Influenza, Respiratory syncytial virus (RSV) and COVID-19 amongst San Francisco residents. The <u><a href=\"https://www.cdph.ca.gov/Programs/CID/DCDC/CDPH%20Document%20Library/LabReportableDiseases_June2025.pdf\">California Code of Regulations, Title 17, Section 2505</a></u> requires all laboratories in San Francisco to report all COVID-19, Influenza, and RSV test results to the San Francisco Department of Public Health via electronic lab reporting (ELR). Reported tests include tests with a positive, negative or indeterminate result. Indeterminate results, which could not conclusively determine whether the respiratory virus was present, are not included in the calculation of percent positive.\n\nTests are de-duplicated by an individual, date, and virus. This means that if a person gets tested multiple times on different dates in the last 30 days, all of those individual tests will be included in this data as individual tests (on each specimen collection date).\n\nData are reported from 6/29/2025 onward, aligning with CDPH’s start of the 2025-2026 respiratory season. \n\nPlease note that the number of total positive test results is not equal to the total number of respiratory virus cases in San Francisco. Not all respiratory virus cases will be identified from lab testing.\n\nFor information on services related to respiratory viruses, <u><a href=\"https://www.sf.gov/topics--respiratory-viruses-covid-19-flu-rsv\">please visit our online resource page.</a></u> \n\n<strong>B. HOW THE DATASET IS CREATED</strong>\nLaboratory test volume and positivity for Influenza, RSV, and COVID-19 are based on electronic laboratory test reports. Deduplication, quality assurance measures and other data verification processes maximize accuracy of laboratory test information.\n\n<strong>C. UPDATE PROCESS</strong>\nThe dataset is updated every Friday and includes data from the previous Sunday through Saturday. For example, the update on Friday, October 17th will include data through Saturday, October 11th. Historic data may change as more current information becomes available.\n\n<strong>D. HOW TO USE THIS DATASET</strong>\nWeekly data represent a count of Influenza, RSV, and COVID-19 tests reported amongst San Francisco residents. The data also displays how many of those tests resulted as positive, negative, or indeterminate. Test positivity for each respiratory virus is calculated by summing the number of positive tests reported each week and dividing by the total number of positive and negative tests reported for a given week.\n \nRespiratory virus activity levels for test positivity are based on a <u><a href=\"https://www.cdph.ca.gov/Programs/CID/DCDC/Pages/RespiratoryVirusReport.aspx\">CDPH definition</a></u> which uses 5 prior seasons of test-positivity data. Definitions are shown below:\n<UL><LI>COVID-19: Very Low <2%, Low 2-7%, Moderate 7-11%, High 11-16%, Very High >16%\n<LI>Influenza: Very Low <2%, Low 2-5%, Moderate 5-9%, High 9-13%, Very High >13%\n<LI>RSV: Very Low <1%, Low 1-4%, Moderate 4-6%, High 6-9%, Very High >9%</UL>\nTrend indicators are also included to describe whether the positivity rate for each respiratory virus is increasing, decreasing, or stable compared to the previous week. Increasing and decreasing values indicate a change of at least 0.5 percentage points (0.5%) in the percentage of specimens positive for Influenza, COVID‑19, or RSV compared to the previous week reported. Stable represents a change less than 0.5 percentage points (0.5%).\n\n<strong>E. RELATED DATASETS</strong>\nA previous version of COVID‑19 Testing Over Time dataset was archived. For historical purposes, you can access the archived dataset <u><a href=\"https://data.sfgov.org/Health-and-Social-Services/COVID-19-Testing-Over-Time/nfpa-mg4g/data_preview\">here</a></u>.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.sf.gov",
+    "downloadCount": 324,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42538435,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789515923,
+    "publicationGroup": 20521724,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793986524,
+    "rowsUpdatedBy": "dbag-6qd9",
+    "tableId": 20601232,
+    "totalTimesRated": 0,
+    "viewCount": 287,
+    "viewLastModified": 1793986523,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790295161,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7760934,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790295150,
+        "targetAudience": "public",
+        "workflowId": 2546,
+        "reviewer": {
+          "id": "95z8-r5hw",
+          "displayName": "Cody Xuereb"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790295161,
+          "failureCount": 0,
+          "startedAt": 1790295161,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "95z8-r5hw",
+          "displayName": "Cody Xuereb"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Department Metrics": {
+          "Publishing Department": "Public Health"
+        },
+        "Internal Management": {
+          "Inventory ID": "DPH-0074"
+        },
+        "Publishing Details": {
+          "Data change frequency": "Weekly",
+          "Publishing frequency": "Weekly"
+        }
+      },
+      "rowLabel": "test results for a given week",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dbag-6qd9",
+      "displayName": "OpenData",
+      "screenName": "OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  }
+]

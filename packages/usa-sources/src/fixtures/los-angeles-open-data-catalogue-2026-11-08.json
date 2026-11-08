@@ -1,0 +1,1132 @@
+[
+  {
+    "id": "dqq4-799r",
+    "name": "Building and Safety - Soft-Story Compliance (P)",
+    "assetType": "filter",
+    "averageRating": 0,
+    "category": "Public Safety",
+    "createdAt": 1788367370,
+    "description": "Soft-Story (P)\n\nFrom past earthquakes, multi-story buildings with weak and/or open front wall lines creating a “soft-story” (i.e. buildings with tuck-under-parking) performed poorly and collapsed. The goal of the mandatory retrofit program, under Ordinance 183893 and Ordinance 184081, is to reduce structural deficiencies by the most economical and feasible method. Without proper strengthening, these vulnerable buildings may be subjected to structural failure during and/or after an earthquake.\n\nBuildings that are most vulnerable have been identified with the following criteria:\n\nConsist of 2 or more stories wood frame construction\nBuilt under building code standards enacted before January 1, 1978\nContains ground floor parking or other similar open floor space\nThe program does not apply to residential buildings with 3 or less units.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 82,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "fmjk-vxfc",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42462898,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1788367776,
+    "publicationGroup": 19669499,
+    "publicationStage": "published",
+    "queryString": "SELECT\n  `otc_date`,\n  `address`,\n  `zip`,\n  `permit`,\n  `submitted`,\n  `issued`,\n  `cofc_issued`,\n  `permit_finaled`,\n  `step_1_compl_date`,\n  `step_1_tolling_extension`,\n  `step_2_compl_date`,\n  `step2_tollingextdate`,\n  `step_3_compl_date`,\n  `step3_tollingextdate`\nWHERE `permit` IS NOT NULL OR `otc_date` IS NOT NULL",
+    "rowsUpdatedAt": 1794065505,
+    "rowsUpdatedBy": "tdwf-cih6",
+    "tableId": 19669499,
+    "totalTimesRated": 0,
+    "viewCount": 368,
+    "viewLastModified": 1788456727,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1788888851,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7662280,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1788459270,
+        "targetAudience": "public",
+        "workflowId": 2212,
+        "reviewer": {
+          "id": "i82j-kncg",
+          "displayName": "Calvin"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1788888851,
+          "failureCount": 0,
+          "startedAt": 1788888851,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "tdwf-cih6",
+          "displayName": "Building and Safety OpenData"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Committed Update Frequency": {
+          "Refresh rate": "Daily"
+        },
+        "Automated?": {
+          "Automated?": "Yes"
+        },
+        "Location Specified": {
+          "Does this data have a Location column? (Yes or No)": "Yes",
+          "What geographic unit is the data collected?": "Street address"
+        },
+        "Data Owner": {
+          "Department": "Building and Safety"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "tdwf-cih6",
+      "displayName": "Building and Safety OpenData",
+      "profileImageUrlLarge": "/api/users/tdwf-cih6/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/tdwf-cih6/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/tdwf-cih6/profile_images/TINY",
+      "screenName": "Building and Safety OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "tdwf-cih6",
+      "displayName": "Building and Safety OpenData",
+      "profileImageUrlLarge": "/api/users/tdwf-cih6/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/tdwf-cih6/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/tdwf-cih6/profile_images/TINY",
+      "screenName": "Building and Safety OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["soft-story"],
+    "flags": [
+      "calculatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "ke3z-xgni",
+    "name": "Building and Safety  - NDC Building Level (P)",
+    "assetType": "filter",
+    "averageRating": 0,
+    "category": "Public Safety",
+    "createdAt": 1787870081,
+    "description": "List of Non-Ductile Concrete buildings",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 71,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "6a6g-3vxm",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42449172,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787870288,
+    "publicationGroup": 19536368,
+    "publicationStage": "published",
+    "queryString": "SELECT\n  `otc_date`,\n  `address`,\n  `zip`,\n  `city`,\n  `phase_2_permit`,\n  `phase_3_permit`,\n  `checklist`,\n  `plan_submittal`,\n  `work_completion`,\n  `step_1_due_date`,\n  `step_1_toll_order_ext_date`,\n  `step_2_due_date`,\n  `step_2_toll_order_ext_date`,\n  `step_3_due_date`,\n  `step_3_toll_order_ext_date`\nWHERE caseless_eq(`in_scope`, \"Y\")",
+    "rowsUpdatedAt": 1793979104,
+    "rowsUpdatedBy": "tdwf-cih6",
+    "tableId": 20269334,
+    "totalTimesRated": 0,
+    "viewCount": 316,
+    "viewLastModified": 1787870289,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1788888858,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7662063,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1788445904,
+        "targetAudience": "public",
+        "workflowId": 2212,
+        "reviewer": {
+          "id": "i82j-kncg",
+          "displayName": "Calvin"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1788888858,
+          "failureCount": 0,
+          "startedAt": 1788888858,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "tdwf-cih6",
+          "displayName": "Building and Safety OpenData"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Committed Update Frequency": {
+          "Refresh rate": "Daily"
+        },
+        "Automated?": {
+          "Automated?": "Yes"
+        },
+        "Location Specified": {
+          "Does this data have a Location column? (Yes or No)": "Yes",
+          "What geographic unit is the data collected?": "Street address"
+        },
+        "Data Owner": {
+          "Department": "Building and Safety"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "tdwf-cih6",
+      "displayName": "Building and Safety OpenData",
+      "profileImageUrlLarge": "/api/users/tdwf-cih6/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/tdwf-cih6/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/tdwf-cih6/profile_images/TINY",
+      "screenName": "Building and Safety OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "tdwf-cih6",
+      "displayName": "Building and Safety OpenData",
+      "profileImageUrlLarge": "/api/users/tdwf-cih6/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/tdwf-cih6/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/tdwf-cih6/profile_images/TINY",
+      "screenName": "Building and Safety OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["ndc", "non-ductile concrete retrofit"],
+    "flags": [
+      "calculatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "hiwe-xzrt",
+    "name": "2025 Walk & Bike Count Data",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Transportation",
+    "createdAt": 1785269839,
+    "description": "2025 Walk and Bike Count data, of people walking, biking, riding motorized scooters, and using other active travel modes in the city.\n\nWeekday Counts are 7 am - 10 am and 3 pm - 6 pm\nWeekend Counts are 11 am - 1 pm",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 149,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42364761,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787081263,
+    "publicationGroup": 20500301,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1787081242,
+    "rowsUpdatedBy": "ixbi-jqek",
+    "tableId": 20500301,
+    "totalTimesRated": 0,
+    "viewCount": 182,
+    "viewLastModified": 1789160560,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787783862,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7627055,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787081263,
+        "targetAudience": "public",
+        "workflowId": 2212,
+        "reviewer": {
+          "id": "i82j-kncg",
+          "displayName": "Calvin"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787783862,
+          "failureCount": 0,
+          "startedAt": 1787783862,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "ixbi-jqek",
+          "displayName": "Jaclyn.garcia_LADOT"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Committed Update Frequency": {
+          "Refresh rate": "Other - See Description"
+        },
+        "Location Specified": {
+          "Does this data have a Location column? (Yes or No)": "Yes",
+          "What geographic unit is the data collected?": "Street address"
+        },
+        "Data Owner": {
+          "Department": "Transportation"
+        }
+      },
+      "rowLabel": "Count Location",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "ixbi-jqek",
+      "displayName": "Jaclyn.garcia_LADOT",
+      "screenName": "Jaclyn.garcia_LADOT",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "ixbi-jqek",
+      "displayName": "Jaclyn.garcia_LADOT",
+      "screenName": "Jaclyn.garcia_LADOT",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "g268-xe4i",
+    "name": "Idle_Funds",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Audits and Reports",
+    "createdAt": 1782337429,
+    "description": "Idle Funds are Los Angeles City Special Funds with no expenditure activity for two or more years from the latest financial records available updated monthly, as identified by LA Controller Kenneth Mejia.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "controllerdata.lacity.org",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42235134,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1782337915,
+    "publicationGroup": 20432775,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1782337894,
+    "rowsUpdatedBy": "tnxe-g5ww",
+    "sourceDomainCName": "controllerdata.lacity.org",
+    "tableId": 20432775,
+    "totalTimesRated": 0,
+    "viewCount": 0,
+    "viewLastModified": 1784735222,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1782337916,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7536690,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1782337916,
+        "targetAudience": "public",
+        "workflowId": 2096,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1782337916,
+          "failureCount": 0,
+          "startedAt": 1782337916,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "tnxe-g5ww",
+          "displayName": "Riad"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Update Information": {
+          "Refresh Rate": "Monthly"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "tnxe-g5ww",
+      "displayName": "Riad",
+      "screenName": "Riad",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "tnxe-g5ww",
+      "displayName": "Riad",
+      "screenName": "Riad",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": [
+      "idle",
+      "idle funds",
+      "special",
+      "special funds",
+      "los angeles",
+      "unspent",
+      "unspent funds",
+      "old funds",
+      "dormant funds"
+    ],
+    "flags": [
+      "catalogFederatedView",
+      "default",
+      "federated",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "9i2j-jx7u",
+    "name": "Building and Safety - Pressure Vessel (R)",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "City Infrastructure & Service Requests",
+    "createdAt": 1778614224,
+    "description": "Pressure Vessel Contact Data",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 250,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42128141,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1778615717,
+    "publicationGroup": 20374688,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794128560,
+    "rowsUpdatedBy": "tdwf-cih6",
+    "tableId": 20374694,
+    "totalTimesRated": 0,
+    "viewCount": 495,
+    "viewLastModified": 1778622926,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1781029465,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7517842,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1781023825,
+        "targetAudience": "public",
+        "workflowId": 2212,
+        "reviewer": {
+          "id": "i82j-kncg",
+          "displayName": "Calvin"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1781029465,
+          "failureCount": 0,
+          "startedAt": 1781029465,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "i82j-kncg",
+          "displayName": "Calvin"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Committed Update Frequency": {
+          "Refresh rate": "Weekly"
+        },
+        "Automated?": {
+          "Automated?": "Yes"
+        },
+        "Location Specified": {
+          "Does this data have a Location column? (Yes or No)": "Yes",
+          "What geographic unit is the data collected?": "Street address"
+        },
+        "Data Owner": {
+          "Department": "Building and Safety"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "tdwf-cih6",
+      "displayName": "Building and Safety OpenData",
+      "profileImageUrlLarge": "/api/users/tdwf-cih6/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/tdwf-cih6/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/tdwf-cih6/profile_images/TINY",
+      "screenName": "Building and Safety OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "tdwf-cih6",
+      "displayName": "Building and Safety OpenData",
+      "profileImageUrlLarge": "/api/users/tdwf-cih6/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/tdwf-cih6/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/tdwf-cih6/profile_images/TINY",
+      "screenName": "Building and Safety OpenData",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["pressure vessel"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "5ypd-kwbn",
+    "name": "2026 LAHD Registered Foreclosure properties map",
+    "assetType": "map",
+    "averageRating": 0,
+    "category": "Community & Economic Development",
+    "createdAt": 1778524765,
+    "description": "2026 Foreclosure Properties registered with the LAHD from January 1, 2026 through December 31, 2026.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_map",
+    "downloadCount": 69,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "5nzp-isg9",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42302905,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1785796148,
+    "publicationGroup": 20244658,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793032729,
+    "rowsUpdatedBy": "dqgh-u6z8",
+    "tableId": 20373416,
+    "totalTimesRated": 0,
+    "viewCount": 608,
+    "viewLastModified": 1785796148,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1778617454,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7603058,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1778524915,
+        "targetAudience": "public",
+        "workflowId": 2212,
+        "reviewer": {
+          "id": "i82j-kncg",
+          "displayName": "Calvin"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1778617454,
+          "failureCount": 0,
+          "startedAt": 1778617454,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "dqgh-u6z8",
+          "displayName": "Diana Wong"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Committed Update Frequency": {
+          "Refresh rate": "Quarterly"
+        },
+        "Automated?": {
+          "Automated?": "No"
+        },
+        "Location Specified": {
+          "Does this data have a Location column? (Yes or No)": "Yes",
+          "What geographic unit is the data collected?": "Latitude/longitude"
+        },
+        "Data Owner": {
+          "Department": "Los Angeles Housing"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "dqgh-u6z8",
+      "displayName": "Diana Wong",
+      "screenName": "Diana Wong",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dqgh-u6z8",
+      "displayName": "Diana Wong",
+      "screenName": "Diana Wong",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "5nzp-isg9",
+    "name": "LAHD Property Look-Up for 2026 Registered Foreclosure Properties",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Community & Economic Development",
+    "createdAt": 1769549772,
+    "description": "2026 Foreclosure Properties registered with the LAHD from January 1, 2026 through December 31, 2026.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 659,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42125443,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1778523935,
+    "publicationGroup": 20244658,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793032729,
+    "rowsUpdatedBy": "dqgh-u6z8",
+    "tableId": 20373416,
+    "totalTimesRated": 0,
+    "viewCount": 1582,
+    "viewLastModified": 1793032728,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1777917518,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7465618,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1776696947,
+        "targetAudience": "public",
+        "workflowId": 2212,
+        "reviewer": {
+          "id": "i82j-kncg",
+          "displayName": "Calvin"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1777917518,
+          "failureCount": 0,
+          "startedAt": 1777917518,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "dqgh-u6z8",
+          "displayName": "Diana Wong"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Committed Update Frequency": {
+          "Refresh rate": "Quarterly"
+        },
+        "Automated?": {
+          "Automated?": "No"
+        },
+        "Location Specified": {
+          "Does this data have a Location column? (Yes or No)": "Yes",
+          "What geographic unit is the data collected?": "Latitude/longitude"
+        },
+        "Data Owner": {
+          "Department": "Los Angeles Housing"
+        }
+      },
+      "rowLabel": "Foreclosure property",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "dqgh-u6z8",
+      "displayName": "Diana Wong",
+      "screenName": "Diana Wong",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dqgh-u6z8",
+      "displayName": "Diana Wong",
+      "screenName": "Diana Wong",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["affordable housing", "lahd", "foreclosure"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "2cy6-i7zn",
+    "name": "MyLA311 Cases 2026",
+    "assetType": "filter",
+    "averageRating": 0,
+    "category": "City Infrastructure & Service Requests",
+    "createdAt": 1768264190,
+    "description": "Case data from MyLA311 for 2026. This includes requests submitted via 3-1-1, call centers, email, mobile apps, website, and other sources.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 426,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "qdp3-rdjj",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 41872683,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1768264311,
+    "publicationGroup": 19894543,
+    "publicationStage": "published",
+    "queryString": "SELECT\n  `casenumber`,\n  `createddate`,\n  `systemmodstamp`,\n  `action_taken__c`,\n  `department_name__c`,\n  `type`,\n  `status`,\n  `origin`,\n  `created_by_user_organization`,\n  `reported_anonymously__c`,\n  `assigned_to__c`,\n  `service_date__c`,\n  `closeddate`,\n  `date_service_was_rendered`,\n  `reason_code__c`,\n  `resolution_code__c`,\n  `locator_gis_returned_address`,\n  `locator_sr_house_number_`,\n  `locator_direction_suffix`,\n  `locator_sr_street_name__c`,\n  `locator_service_request_suffix`,\n  `zipcode__c`,\n  `geolocation__latitude__s`,\n  `geolocation__longitude__s`,\n  `location`,\n  `locator_sr_tb_map_grid_page`,\n  `locator_sr_tb_column__c`,\n  `locator_sr_tb_row__c`,\n  `locator_sr_area_planning`,\n  `locator_council_district`,\n  `locator_sr_council_district`,\n  `locator_sr_neigborhood_council`,\n  `locator_sr_neigborhood_council_1`,\n  `locator_sr_community_police`\nWHERE\n  `createddate`\n    BETWEEN \"2026-01-01T00:00:00\" :: floating_timestamp\n    AND \"2026-12-31T23:59:59\" :: floating_timestamp\n  AND caseless_one_of(\n    `type`,\n    \"Accessible Bus Stop Issues\",\n    \"Animal Complaint/Violation\",\n    \"Animal Confined\",\n    \"Animal Loose\",\n    \"Barricade Removal\",\n    \"Bees or Beehive\",\n    \"Bicycle Facilities Issues\",\n    \"Bus Pad/Landing\",\n    \"Bus Stop Furniture\",\n    \"Bus Stop Parking Sign & Markings\",\n    \"Curb Issues\",\n    \"Dead Animal Removal\",\n    \"Dockless Mobility Enforcement\",\n    \"Feedback\",\n    \"Flooding\",\n    \"General Street Inspection\",\n    \"Graffiti Removal\",\n    \"Guard/Warning Rail Maintenance\",\n    \"Homeless Encampment\",\n    \"Illegal Activities (Non-Emergency)\",\n    \"Illegal Auto Repair or Construction, and Leaf Blower Violations\",\n    \"Illegal Discharge of Water\",\n    \"Illegal Dumping Food Waste\",\n    \"Illegal Dumping Item Pickup\",\n    \"Illegal Sign Removal, News Rack Issues\",\n    \"Information-Only\",\n    \"Item Pickups\",\n    \"LADOT Council & Interagency Support\",\n    \"Land/Mud Slide\",\n    \"Landscape Maintenance\",\n    \"Median Island Maintenance\",\n    \"Nuisance Barking Dogs\",\n    \"Obstructions\",\n    \"Other\",\n    \"Park Amenity and Facilities Repair\",\n    \"Park Cleanliness, Trash and Ground Maintenance\",\n    \"Parking Issues\",\n    \"Parking Meter Maintenance\",\n    \"Private Property Violation\",\n    \"Program Research\",\n    \"Public Right-of-Way Cleanup\",\n    \"Public Street Receptacles\",\n    \"Report a Sidewalk Problem\",\n    \"Report Water Wasting\",\n    \"Searchlight & Generator Permits\",\n    \"Service Not Complete\",\n    \"Sewer or Sidewalk Rebates\",\n    \"Sidewalk Repair Access Request Program\",\n    \"Streetlight ADA Repair Services\",\n    \"Streetlight Non-Repair Services\",\n    \"Streetlight Repair Services\",\n    \"Street Pavement Issues\",\n    \"Street Sweeping\",\n    \"Street Tree Inspection\",\n    \"Street Tree Violations\",\n    \"Taxi Complaints\",\n    \"Traffic Safety\",\n    \"Traffic Signal Issues\",\n    \"Traffic Sign Issues\",\n    \"Tree Emergency\",\n    \"Tree Obstruction\",\n    \"Trees or Pests in the Park\",\n    \"Watershed Protection Division (WPD) Enforcement\"\n  )",
+    "rowsUpdatedAt": 1794129602,
+    "rowsUpdatedBy": "y943-nqst",
+    "tableId": 19894543,
+    "totalTimesRated": 0,
+    "viewCount": 1653,
+    "viewLastModified": 1768264311,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1768267381,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7303144,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1768264312,
+        "targetAudience": "public",
+        "workflowId": 2212,
+        "reviewer": {
+          "id": "ri63-g4dj",
+          "displayName": "Eduardo Magos"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1768267381,
+          "failureCount": 0,
+          "startedAt": 1768267381,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "en5e-tzun",
+          "displayName": "wilsony"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Committed Update Frequency": {
+          "Refresh rate": "Daily"
+        },
+        "Location Specified": {
+          "Does this data have a Location column? (Yes or No)": "Yes"
+        },
+        "Data Owner": {
+          "Department": "Information Technology"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "en5e-tzun",
+      "displayName": "wilsony",
+      "screenName": "wilsony",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "en5e-tzun",
+      "displayName": "wilsony",
+      "screenName": "wilsony",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "calculatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "rwwd-gr2c",
+    "name": "City of Los Angeles Youth Programs 2023-2024",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1767820920,
+    "description": "This is data collected for programs over the 2023-2024 Fiscal Year (July 2023 - June 2024). The data was collected and compiled by the Youth Development Department with support from all City departments. \n\nThe Youth Development Department defines youth programs and services as any that a) are created with youth (ages 0 to 25) in mind and can contribute to positive youth development or b) a service, program, or activity which includes a substantive proportion of youth. Funding amounts largely exclude direct and indirect salaries for staff involved in youth programming.\n\nWhenever available, data is represented. Otherwise, cells are empty.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 2785,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 41866077,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1767998695,
+    "publicationGroup": 20229765,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1767998678,
+    "rowsUpdatedBy": "54ks-dqce",
+    "tableId": 20229765,
+    "totalTimesRated": 0,
+    "viewCount": 446,
+    "viewLastModified": 1767998695,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1768343519,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7301272,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1767998695,
+        "targetAudience": "public",
+        "workflowId": 2212,
+        "reviewer": {
+          "id": "hy2d-g6g8",
+          "displayName": "Julien"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1768343519,
+          "failureCount": 0,
+          "startedAt": 1768343519,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "54ks-dqce",
+          "displayName": "Youth Development Department"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "Data Collection on 2023-24 Youth Services - Guidelines.pdf",
+          "assetId": "952cd72e-e9a9-406f-824b-b41e3d5084a7",
+          "name": "Data Collection on 2023-24 Youth Services - Guidelines.pdf"
+        },
+        {
+          "filename": "Data Collection Sheet 2023-24 Youth Services.xlsx",
+          "assetId": "8d0f336f-07a5-4d7e-8b14-6e2b18a2aca2",
+          "name": "Data Collection Sheet 2023-24 Youth Services.xlsx"
+        }
+      ],
+      "custom_fields": {
+        "Committed Update Frequency": {
+          "Refresh rate": "Annual"
+        },
+        "Automated?": {
+          "Automated?": "No"
+        },
+        "Location Specified": {
+          "Does this data have a Location column? (Yes or No)": "No"
+        },
+        "Data Owner": {
+          "Department": "Other"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "54ks-dqce",
+      "displayName": "Youth Development Department",
+      "profileImageUrlLarge": "/api/users/54ks-dqce/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/54ks-dqce/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/54ks-dqce/profile_images/TINY",
+      "screenName": "Youth Development Department",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "54ks-dqce",
+      "displayName": "Youth Development Department",
+      "profileImageUrlLarge": "/api/users/54ks-dqce/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/54ks-dqce/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/54ks-dqce/profile_images/TINY",
+      "screenName": "Youth Development Department",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "cr8f-uc4j",
+    "name": "LAHD Propery Look-Up for Violations",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Community & Economic Development",
+    "createdAt": 1762530168,
+    "description": "Property Look-Up is information provided to the Los Angeles Housing Department (LAHD) for properties that are located within the City of Los Angeles. Although we strive to provide information that is accurate, reliable, and complete, information provided to the Department may not be up-to-date or the information reported to the Department is incorrect. If you do not find what you are looking for, please visit LAHD Online Services or submit an email inquiry to ASK HOUSING. Data is being provided for informational purposes only. The data does not indicate an application was approved or that a violation was found by LAHD.\n\nThe date range from November 2025 through July 2026 and illustrates the average number of cited violations per case, with\neach case labeled by the Case Type categories defined below. For each case, the total number of violations cited is divided by the number of units inspected, producing an average number of violations per unit. For SCEP, TIER 2, Task Force, and Residential Hotel cases, which inspect every unit, this average indicates the property’s overall condition at the time of inspection. Complaint cases in general inspect only the unit(s) named in the complaint, so their average reflects those units, not the property as a whole.\n\nCase Types Defined\n\nSCEP = Systematic Code Enforcement Program where all units are inspected on a targeted periodic schedule of once every 4 years.\n\nComplaint = Generally an inspection of specific unit(s) based on a complaint being filed and can be conducted at any time.\n\nResidential Hotel = Systematic Code Enforcement Program inspections of designated Residential Hotels where all units are inspected on a targeted periodic schedule of every 2 to 4 years as are SCEP cases.\n\nTask Force = Systematic Code Enforcement Program inspections for properties found in very poor condition where all units are inspected on a targeted periodic schedule of every 2 years.\n\nTIER 2 = Systematic Code Enforcement Program where all units are inspected on a targeted periodic schedule of every 2 years based on the properties performance during the previous Cycle of inspection.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 1555,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42379359,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1785794798,
+    "publicationGroup": 20153948,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1785794777,
+    "rowsUpdatedBy": "dqgh-u6z8",
+    "tableId": 20508178,
+    "totalTimesRated": 0,
+    "viewCount": 2700,
+    "viewLastModified": 1789072745,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1788889016,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7674205,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1788888970,
+        "targetAudience": "public",
+        "workflowId": 2212,
+        "reviewer": {
+          "id": "i82j-kncg",
+          "displayName": "Calvin"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1788889016,
+          "failureCount": 0,
+          "startedAt": 1788889016,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "i82j-kncg",
+          "displayName": "Calvin"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Committed Update Frequency": {
+          "Refresh rate": "Quarterly"
+        },
+        "Automated?": {
+          "Automated?": "No"
+        },
+        "Location Specified": {
+          "Does this data have a Location column? (Yes or No)": "No",
+          "What geographic unit is the data collected?": "Street address"
+        },
+        "Data Owner": {
+          "Department": "Los Angeles Housing"
+        }
+      },
+      "rowLabel": "Violation",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "dqgh-u6z8",
+      "displayName": "Diana Wong",
+      "screenName": "Diana Wong",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "dqgh-u6z8",
+      "displayName": "Diana Wong",
+      "screenName": "Diana Wong",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

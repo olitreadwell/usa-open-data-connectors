@@ -11,7 +11,7 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 36 US public data sources, with live probes and offline fixtures |
+| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 47 US public data sources, with live probes and offline fixtures |
 | [`@usa-open-data-connectors/usa-mcp`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-mcp) | MCP server that exposes the connectors to Claude, ChatGPT, and other MCP clients |
 | [`@usa-open-data-connectors/connectors-cli`](https://www.npmjs.com/package/@usa-open-data-connectors/connectors-cli) | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
 | `@usa-open-data-connectors/connectors-api` | Private. HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
@@ -20,7 +20,7 @@ exposed over the API or committed to the repo.
 
 ## Connectors
 
-Thirty-six adapters, all in `@usa-open-data-connectors/usa-sources`. All are
+Forty-seven adapters, all in `@usa-open-data-connectors/usa-sources`. All are
 keyless and need no environment variable.
 
 Most of this data comes from US federal agencies, and works of the US federal
@@ -31,7 +31,7 @@ you display. The NCBI and NLM services attach their own terms to some content,
 and public domain in the US is not public domain everywhere. Check the
 publisher's terms before you republish: the connectors fetch the data, they do
 not relicense it. `docs/CONNECTOR_DISCOVERY.md` lists where each source's
-terms live. Socrata catalogue entries carry the portal's `licenceUrl` and
+terms live. Socrata and CKAN catalogue entries carry the portal's `licenceUrl` and
 `attribution` values, and PublicDataHub records carry licence and agency
 provenance. An empty value means the source supplied none.
 
@@ -43,7 +43,7 @@ nothing extra. Every other adapter sends the shared `User-Agent`
 for a response, and marks rate-limited (HTTP 429), server-error (HTTP 5xx) and
 network failures as `retryable` on the thrown `UsSourceApiError`. The shared
 HTTP helpers (`httpGet` and `httpPostJson`) in
-`packages/usa-sources/src/http.ts` do this for all 36 adapters.
+`packages/usa-sources/src/http.ts` do this for all 47 adapters.
 
 | id | Source | Keyless? | Example command |
 | --- | --- | --- | --- |
@@ -83,6 +83,17 @@ HTTP helpers (`httpGet` and `httpPostJson`) in
 | `chicago-open-data-catalogue` | Chicago Data Portal catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe chicago-open-data-catalogue` |
 | `seattle-open-data-catalogue` | Seattle Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe seattle-open-data-catalogue` |
 | `texas-open-data-catalogue` | Texas Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe texas-open-data-catalogue` |
+| `colorado-open-data-catalogue` | Colorado Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe colorado-open-data-catalogue` |
+| `washington-state-open-data-catalogue` | Washington State Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe washington-state-open-data-catalogue` |
+| `michigan-open-data-catalogue` | Michigan Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe michigan-open-data-catalogue` |
+| `oregon-open-data-catalogue` | Oregon Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe oregon-open-data-catalogue` |
+| `pennsylvania-open-data-catalogue` | Pennsylvania Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe pennsylvania-open-data-catalogue` |
+| `illinois-open-data-catalogue` | Illinois Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe illinois-open-data-catalogue` |
+| `new-jersey-open-data-catalogue` | New Jersey Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe new-jersey-open-data-catalogue` |
+| `vermont-open-data-catalogue` | Vermont Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe vermont-open-data-catalogue` |
+| `los-angeles-open-data-catalogue` | Los Angeles Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe los-angeles-open-data-catalogue` |
+| `san-francisco-open-data-catalogue` | San Francisco Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe san-francisco-open-data-catalogue` |
+| `california-open-data-catalogue` | California Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe california-open-data-catalogue` |
 
 Each adapter knows how to fetch live data and parse the response. Tests load
 a committed fixture; a live call throws instead of falling back to one.

@@ -1,0 +1,1091 @@
+[
+  {
+    "id": "w7g5-zeds",
+    "name": "Oregon Arts & Culture Programs",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Revenue & Expense",
+    "createdAt": 1793660679,
+    "description": "Oregon’s arts & culture program includes the Oregon Arts Commission and Oregon Cultural Trust and administers key programs to strengthen arts, heritage, and humanities across the state. They are designed to support artists, creative small businesses, nonprofit groups, and communities working to build connection and resilience.\n\nFor more information, please visit: https://www.oregon.gov/biz/aboutus/artscommission/pages/default.aspx or https://www.culturaltrust.org/\n\nThis dataset contains information for Fiscal Years 2021 - 2026.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 9,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42723426,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793661311,
+    "publicationGroup": 20702352,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793661305,
+    "rowsUpdatedBy": "j3nq-6jqm",
+    "tableId": 20702352,
+    "totalTimesRated": 0,
+    "viewCount": 49,
+    "viewLastModified": 1793663167,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793661312,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7840200,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793661312,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793661312,
+          "failureCount": 0,
+          "startedAt": 1793661312,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "j3nq-6jqm",
+          "displayName": "Jill Cuyler"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "No",
+          "Geographic Coverage": "Statewide",
+          "Data Publishing Frequency": "Annually",
+          "Data Change Frequency": "Annually",
+          "Agency Name": "Oregon Arts Commission / Business Oregon",
+          "Agency URL": "https://www.oregon.gov/biz/aboutus/artscommission/pages/default.aspx",
+          "Geographic Granularity": "Statewide"
+        }
+      },
+      "rowLabel": "Organization ",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["oregon arts commisssion", "oregon cultural trust", "art", "artists", "oct"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "3zar-i7k8",
+    "name": "IMESD Board Meeting",
+    "assetType": "file",
+    "averageRating": 0,
+    "blobFilename": "IMESDBoardMtgNotice_October 21, 2026.pdf",
+    "blobFileSize": 34788,
+    "blobId": "0d8380ae-a18b-45f8-adc3-4cf0dca5c088",
+    "blobMimeType": "application/pdf",
+    "category": "education",
+    "createdAt": 1792429014,
+    "description": "InterMountain Education Service District will meet for a Regular Board Meeting at 5:00 pm on Wednesday, October 21, 2026, at IMESD, 2001 SW Nye Avenue, Pendleton, OR 97801. The board will hold an Executive Session Pursuant to ORS 192.660(2)(a) to consider the hiring of a new superintendent.\nPlease go to the InterMountain ESD website for the agenda and virtual link information: Board Meetings | InterMountain ESD",
+    "diciBackend": false,
+    "displayType": "blob",
+    "downloadCount": 6,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42678616,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792429194,
+    "publicationGroup": 20683674,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1792429014,
+    "tableId": 20683674,
+    "totalTimesRated": 0,
+    "viewCount": 52,
+    "viewLastModified": 1792429194,
+    "viewType": "blobby",
+    "approvals": [
+      {
+        "reviewedAt": 1792429194,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7812197,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792429194,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792429194,
+          "failureCount": 0,
+          "startedAt": 1792429194,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "x8bw-4uf5",
+          "displayName": "Danielle Sackett"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "Board Agenda October 21, 2026 (Media).pdf",
+          "assetId": "ced94767-86bd-4879-ac0d-04372b241bf0",
+          "name": "Board Agenda October 21, 2026 (Media).pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "Yes",
+          "Data Publishing Frequency": "As needed",
+          "Data Change Frequency": "As needed",
+          "Agency Name": "InterMountain ESD",
+          "Agency URL": "https://www.imesd.k12.or.us/"
+        }
+      },
+      "rowLabel": "Education ",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "x8bw-4uf5",
+      "displayName": "Danielle Sackett",
+      "screenName": "Danielle Sackett",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "x8bw-4uf5",
+      "displayName": "Danielle Sackett",
+      "screenName": "Danielle Sackett",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "y3gh-jac9",
+    "name": "Pigeon Fever Cases",
+    "assetType": "filter",
+    "averageRating": 0,
+    "createdAt": 1791567470,
+    "description": "Oregon pigeon fever cases in horses and other equine species",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "reg6-7yra",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42656330,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791567699,
+    "publicationGroup": 19383343,
+    "publicationStage": "published",
+    "queryString": "SELECT `disease`, `confirmation_date`, `species`, `county`\nWHERE\n  caseless_one_of(\n    `disease`,\n    \"Pigeon Fever / Ulcerative Lymphangitis / Caseous Lymphadenitis (Corynebacterium pseudotuberculosis)\"\n  )\n  AND caseless_one_of(`species`, \"Horse/Equine\")\nORDER BY `confirmation_date` DESC NULL LAST",
+    "rowsUpdatedAt": 1794099727,
+    "rowsUpdatedBy": "m4bq-hr2k",
+    "tableId": 19778156,
+    "totalTimesRated": 0,
+    "viewCount": 65,
+    "viewLastModified": 1791567700,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791567700,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7796574,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791567700,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791567700,
+          "failureCount": 0,
+          "startedAt": 1791567700,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "m4bq-hr2k",
+          "displayName": "Ryan Scholz, DVM MPH"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "No",
+          "Data Publishing Frequency": "As needed",
+          "Data Change Frequency": "As needed",
+          "Agency Name": "Oregon Department of Agriculture"
+        }
+      },
+      "rowLabel": "Case",
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "m4bq-hr2k",
+      "displayName": "Ryan Scholz, DVM MPH",
+      "screenName": "Ryan Scholz, DVM MPH",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "m4bq-hr2k",
+      "displayName": "Ryan Scholz, DVM MPH",
+      "screenName": "Ryan Scholz, DVM MPH",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "calculatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "p6n9-nugb",
+    "name": "Affordable Rental Housing Funding Dashboard Data",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1791493522,
+    "description": "The following dataset shows the overall outputs of OHCS Affordable Rental Housing (ARH) programs from January 1, 2016 through June 30, 2026. This dashboard shows data on rental homes that have been approved for funding by the Oregon Housing Stability Council (HSC) and OHCS Finance Committee (Finance) in that time period.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 58,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42653264,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791601578,
+    "publicationGroup": 20666564,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791756901,
+    "rowsUpdatedBy": "x2mh-ibw7",
+    "tableId": 20666564,
+    "totalTimesRated": 0,
+    "viewCount": 201,
+    "viewLastModified": 1792019341,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791601578,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7796711,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791601578,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791601578,
+          "failureCount": 0,
+          "startedAt": 1791601578,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "x2mh-ibw7",
+          "displayName": "Megan Bolton"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "jsonQuery": {
+        "order": [
+          {
+            "columnFieldName": "county",
+            "ascending": true
+          },
+          {
+            "columnFieldName": "hsc_finance_approval_date",
+            "ascending": true
+          }
+        ]
+      },
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "Yes",
+          "Data Publishing Frequency": "As needed",
+          "Data Change Frequency": "Quarterly",
+          "Agency Name": "Oregon Housing and Community Services",
+          "Agency URL": "https://experience.arcgis.com/experience/7b9c9b842c6c446197c184b99c2e5a3c"
+        }
+      },
+      "rowLabel": "Each row is an individual project funded by Oregon Housing and Community Services (OHCS).",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "x2mh-ibw7",
+      "displayName": "Megan Bolton",
+      "screenName": "Megan Bolton",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "x2mh-ibw7",
+      "displayName": "Megan Bolton",
+      "screenName": "Megan Bolton",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["ohcs", "arh"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "airs-kr94",
+    "name": "Oregon Fire Agency Demographics",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Public Safety",
+    "createdAt": 1791328682,
+    "description": "This dataset represents basic demographic information about responding structural firefighting agencies in Oregon. Included in this dataset are the square mileage within the jurisdictional boundaries of fire agencies, estimated population residing within that jurisdiction, agency type, and staffing type. Also included are the number of career and volunteer firefighters, summary incident information, and additional services provided.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 65,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42643413,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791330960,
+    "publicationGroup": 20661255,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791330949,
+    "rowsUpdatedBy": "wwtb-kuh8",
+    "tableId": 20661255,
+    "totalTimesRated": 0,
+    "viewCount": 86,
+    "viewLastModified": 1791330999,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791330960,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7787785,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791330960,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791330960,
+          "failureCount": 0,
+          "startedAt": 1791330960,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "wwtb-kuh8",
+          "displayName": "Sydney Smith"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "Yes",
+          "Data Limitations": "Data reflects the structural fire agencies that are active and respond to requests for service as of 2026.",
+          "Geographic Coverage": "Statewide",
+          "Data Publishing Frequency": "Annually",
+          "Data Change Frequency": "Annually",
+          "Agency Name": "Oregon State Fire Marshal",
+          "Agency URL": "www.oregon.gov/osfm",
+          "Geographic Granularity": "Structural Fire Agency Jurisdiction"
+        }
+      },
+      "rowLabel": "Responding Structural Fire Agency",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "wwtb-kuh8",
+      "displayName": "Sydney Smith",
+      "screenName": "Sydney Smith",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "wwtb-kuh8",
+      "displayName": "Sydney Smith",
+      "screenName": "Sydney Smith",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["osfm", "fire department", "fire district", "rural fire protection district"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "gcp2-fzwd",
+    "name": "Part D – Enterprise Zone Businesses - Authorized for Future Exemption(s) on Qualified Property, 2026",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Revenue & Expense",
+    "createdAt": 1790621710,
+    "description": "This report includes data from Enterprise Zone Business Projects - with exemptions on qualified property. This is Part D of a four (4) part report. A data dictionary and additional notes document are attached as resources; column header numbers can be located in the notes document for additional information.\n\nFor miscellaneous local Enterprise Zone information, please visit\nhttps://data.oregon.gov/Revenue-Expense/Local-Enterprise-Zone-Reports-Miscellaneous-/bx8i-r869/about_data\n\nFor more information on the Enterprise Zone program, visit https://www.oregon.gov/biz/programs/enterprisezones",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 115,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42613240,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790622381,
+    "publicationGroup": 20640598,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790622365,
+    "rowsUpdatedBy": "j3nq-6jqm",
+    "tableId": 20640598,
+    "totalTimesRated": 0,
+    "viewCount": 169,
+    "viewLastModified": 1790622381,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790622382,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7764916,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790622382,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790622382,
+          "failureCount": 0,
+          "startedAt": 1790622382,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "j3nq-6jqm",
+          "displayName": "Jill Cuyler"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "2026-Data-Dictionary-Enterprise-Zone_EZ-Reports.pdf",
+          "assetId": "77b36936-60fa-4da7-ab5f-333b53fa7e59",
+          "name": "2026-Data-Dictionary-Enterprise-Zone_EZ-Reports.pdf"
+        },
+        {
+          "filename": "2026-EZ-Business-Report-_Notes_-Part-A-B-C-D.pdf",
+          "assetId": "3c8e3456-f3eb-4ca5-ba51-b5a1fabc7575",
+          "name": "2026-EZ-Business-Report-_Notes_-Part-A-B-C-D.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "Yes",
+          "Data Publishing Frequency": "Annually",
+          "Data Change Frequency": "Annually",
+          "Agency Name": "Business Oregon ",
+          "Agency URL": "https://www.oregon.gov/biz/Pages/default.aspx"
+        }
+      },
+      "rowLabel": "Establishments",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": [
+      "enterprise zone",
+      "part d",
+      "ez",
+      "assessor reports",
+      "exemptions",
+      "qualified property"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "rh8n-kwp7",
+    "name": "Part C – Now Taxable Property of Former Enterprise Zone Exemptions, 2026",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Revenue & Expense",
+    "createdAt": 1790620735,
+    "description": "This report includes data from Enterprise Zone Business Projects - with exemptions on qualified property. This is Part C of a four (4) part report. A data dictionary and additional notes document are attached as resources; column header numbers (1-5) can be located in the notes document for additional information.\n\nFor miscellaneous local Enterprise Zone information, please visit\nhttps://data.oregon.gov/Revenue-Expense/Local-Enterprise-Zone-Reports-Miscellaneous-/bx8i-r869/about_data\n\nFor more information on the Enterprise Zone program, visit\nhttps://www.oregon.gov/biz/programs/enterprisezones",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 68,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42613220,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790621403,
+    "publicationGroup": 20640585,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790621392,
+    "rowsUpdatedBy": "j3nq-6jqm",
+    "tableId": 20640585,
+    "totalTimesRated": 0,
+    "viewCount": 169,
+    "viewLastModified": 1790621403,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790621403,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7764875,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790621403,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790621404,
+          "failureCount": 0,
+          "startedAt": 1790621403,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "j3nq-6jqm",
+          "displayName": "Jill Cuyler"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "2026-Data-Dictionary-Enterprise-Zone_EZ-Reports.pdf",
+          "assetId": "d041240c-45c0-410f-90f2-c0c45e405576",
+          "name": "2026-Data-Dictionary-Enterprise-Zone_EZ-Reports.pdf"
+        },
+        {
+          "filename": "2026-EZ-Business-Report-_Notes_-Part-A-B-C-D.pdf",
+          "assetId": "72d7f720-8e1c-4e1a-ad71-74ab10712eaf",
+          "name": "2026-EZ-Business-Report-_Notes_-Part-A-B-C-D.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "Yes",
+          "Data Publishing Frequency": "Annually",
+          "Data Change Frequency": "Annually",
+          "Agency Name": "Business Oregon",
+          "Agency URL": "https://www.oregon.gov/biz/Pages/default.aspx"
+        }
+      },
+      "rowLabel": "Establishments",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": [
+      "ez",
+      "part c",
+      "enterprise zones",
+      "assessor reports",
+      "exemptions",
+      "former exemptions",
+      "qualified property"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "25ak-kqzh",
+    "name": "Part B – Enterprise Zone Businesses-Begin Exemption-Qualified Property 2026",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Revenue & Expense",
+    "createdAt": 1790619767,
+    "description": "This report includes data from Enterprise Zone Business Projects - with exemptions on qualified property. This is Part B of a four (4) part report. A data dictionary and additional notes document are attached as resources; column header numbers (1-6) can be located in the notes document for additional information.\n\nFor miscellaneous local Enterprise Zone information, please visit\nhttps://data.oregon.gov/Revenue-Expense/Local-Enterprise-Zone-Reports-Miscellaneous-/bx8i-r869/about_data\n\nFor more information on the Enterprise Zone program, visit https://www.oregon.gov/biz/programs/enterprisezones",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 143,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42639381,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791242343,
+    "publicationGroup": 20640574,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791244484,
+    "rowsUpdatedBy": "j3nq-6jqm",
+    "tableId": 20659290,
+    "totalTimesRated": 0,
+    "viewCount": 198,
+    "viewLastModified": 1791244484,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790620164,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7785072,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790620164,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790620165,
+          "failureCount": 0,
+          "startedAt": 1790620164,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "j3nq-6jqm",
+          "displayName": "Jill Cuyler"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "2026-Data-Dictionary-Enterprise-Zone_EZ-Reports.pdf",
+          "assetId": "c626a0b5-4fe5-42e1-a502-60b840249f23",
+          "name": "2026-Data-Dictionary-Enterprise-Zone_EZ-Reports.pdf"
+        },
+        {
+          "filename": "2026-EZ-Business-Report-_Notes_-Part-A-B-C-D.pdf",
+          "assetId": "ee8a3dba-53db-4258-9e98-24190b7eef58",
+          "name": "2026-EZ-Business-Report-_Notes_-Part-A-B-C-D.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "Yes",
+          "Data Publishing Frequency": "Annually",
+          "Data Change Frequency": "Annually",
+          "Agency Name": "Business Oregon",
+          "Agency URL": "https://www.oregon.gov/biz/Pages/default.aspx"
+        }
+      },
+      "rowLabel": "Establishments",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": [
+      "part b",
+      "ez",
+      "enterprise zone",
+      "2026",
+      "fiscal year 2026",
+      "exemption",
+      "assessor report"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "dw6g-iym3",
+    "name": "Part A – Enterprise Zone Business Projects - 2026 Exemptions on Qualified Property",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Revenue & Expense",
+    "createdAt": 1790618742,
+    "description": "This report includes data from Enterprise Zone Business Projects - with exemptions on qualified property. This is Part A of a four (4) part report. A data dictionary and additional notes document are attached as resources; column header numbers (1-8) can be located in the notes document for additional information.\n\n\nFor miscellaneous local Enterprise Zone information, please visit\nhttps://data.oregon.gov/Revenue-Expense/Local-Enterprise-Zone-Reports-Miscellaneous-/bx8i-r869/about_data\n\nFor more information on Enterprise Zones, visit Business Oregon https://www.oregon.gov/biz/programs/enterprisezones",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 120,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42639389,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791243348,
+    "publicationGroup": 20640410,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791390609,
+    "rowsUpdatedBy": "j3nq-6jqm",
+    "tableId": 20659297,
+    "totalTimesRated": 0,
+    "viewCount": 274,
+    "viewLastModified": 1791394217,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790619412,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7785076,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790619412,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790619412,
+          "failureCount": 0,
+          "startedAt": 1790619412,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "j3nq-6jqm",
+          "displayName": "Jill Cuyler"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "2026-Data-Dictionary-Enterprise-Zone_EZ-Reports.pdf",
+          "assetId": "ea993f9a-05e0-4818-b8f6-011f09db7e4a",
+          "name": "2026-Data-Dictionary-Enterprise-Zone_EZ-Reports.pdf"
+        },
+        {
+          "filename": "2026-EZ-Business-Report-_Notes_-Part-A-B-C-D.pdf",
+          "assetId": "e46e8fc4-fbd4-43d0-8f58-ec76dc8d63e9",
+          "name": "2026-EZ-Business-Report-_Notes_-Part-A-B-C-D.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "Yes",
+          "Data Publishing Frequency": "Annually",
+          "Data Change Frequency": "Annually",
+          "Agency Name": "Business Oregon ",
+          "Agency URL": "https://www.oregon.gov/biz/Pages/default.aspx"
+        }
+      },
+      "rowLabel": "Establishments",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "j3nq-6jqm",
+      "displayName": "Jill Cuyler",
+      "screenName": "Jill Cuyler",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": [
+      "enterprise zone",
+      "ez",
+      "part a",
+      "2026",
+      "fiscal year 2026",
+      "assessor reports",
+      "county",
+      "counties",
+      "exemptions",
+      "qualified property"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "wjjs-yvfx",
+    "name": "Smoke Alarm Installation Program (SAIP)",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Public Safety",
+    "createdAt": 1790278464,
+    "description": "The Oregon State Fire Marshal's Smoke Alarm Installation Program provides smoke alarms to Oregon fire agencies to install in homes that do not have adequate protection. This dataset represents installations that occurred between 1/1/2019 and 1/27/2026, as of 1/27/2026.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 65,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42604303,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790279461,
+    "publicationGroup": 20636587,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790279450,
+    "rowsUpdatedBy": "wwtb-kuh8",
+    "tableId": 20636587,
+    "totalTimesRated": 0,
+    "viewCount": 79,
+    "viewLastModified": 1790279461,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790279461,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7759969,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790279461,
+        "targetAudience": "public",
+        "workflowId": 1508,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790279461,
+          "failureCount": 0,
+          "startedAt": 1790279461,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "wwtb-kuh8",
+          "displayName": "Sydney Smith"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Information": {
+          "Data Dictionary": "Yes",
+          "Geographic Coverage": "Statewide",
+          "Data Publishing Frequency": "Annually",
+          "Data Change Frequency": "Daily",
+          "Agency Name": "Oregon State Fire Marshal",
+          "Agency URL": "www.oregon.gov/osfm",
+          "Geographic Granularity": "Zip Code"
+        }
+      },
+      "rowLabel": "Smoke Alarm Installation Location",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "wwtb-kuh8",
+      "displayName": "Sydney Smith",
+      "screenName": "Sydney Smith",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "wwtb-kuh8",
+      "displayName": "Sydney Smith",
+      "screenName": "Sydney Smith",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["osfm", "saip", "smoke alarms"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

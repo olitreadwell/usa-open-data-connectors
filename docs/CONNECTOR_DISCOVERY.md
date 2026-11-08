@@ -1,6 +1,6 @@
 # Connector discovery notes (US)
 
-Findings from the US source passes. Thirty-six keyless adapters are built and
+Findings from the US source passes. Forty-seven keyless adapters are built and
 verified against live APIs, and each has a fixture committed from the same
 endpoint.
 
@@ -11,7 +11,8 @@ after those, through 2026-10-22. NIH RePORTER was added on 2026-11-07. Four
 adapters were added on 2026-11-08: Federal Register documents, NHTSA vehicle
 models, the FCC Socrata catalogue, and the New York State Open Data catalogue.
 Three more were added the same day: the Chicago Data Portal, Seattle Open Data,
-and Texas Open Data Socrata catalogues.
+and Texas Open Data Socrata catalogues. Eleven more were added in a state and
+city batch: ten Socrata catalogues plus California through its CKAN search.
 
 ## Adapters built
 
@@ -53,6 +54,17 @@ and Texas Open Data Socrata catalogues.
 | `chicago-open-data-catalogue` | City of Chicago | `https://data.cityofchicago.org/api/views.json` | `chicago-open-data-catalogue-2026-11-08.json` |
 | `seattle-open-data-catalogue` | City of Seattle | `https://data.seattle.gov/api/views.json` | `seattle-open-data-catalogue-2026-11-08.json` |
 | `texas-open-data-catalogue` | State of Texas | `https://data.texas.gov/api/views.json` | `texas-open-data-catalogue-2026-11-08.json` |
+| `colorado-open-data-catalogue` | State of Colorado | `https://data.colorado.gov/api/views.json` | `colorado-open-data-catalogue-2026-11-08.json` |
+| `washington-state-open-data-catalogue` | State of Washington | `https://data.wa.gov/api/views.json` | `washington-state-open-data-catalogue-2026-11-08.json` |
+| `michigan-open-data-catalogue` | State of Michigan | `https://data.michigan.gov/api/views.json` | `michigan-open-data-catalogue-2026-11-08.json` |
+| `oregon-open-data-catalogue` | State of Oregon | `https://data.oregon.gov/api/views.json` | `oregon-open-data-catalogue-2026-11-08.json` |
+| `pennsylvania-open-data-catalogue` | Commonwealth of Pennsylvania | `https://data.pa.gov/api/views.json` | `pennsylvania-open-data-catalogue-2026-11-08.json` |
+| `illinois-open-data-catalogue` | State of Illinois | `https://data.illinois.gov/api/views.json` | `illinois-open-data-catalogue-2026-11-08.json` |
+| `new-jersey-open-data-catalogue` | State of New Jersey | `https://data.nj.gov/api/views.json` | `new-jersey-open-data-catalogue-2026-11-08.json` |
+| `vermont-open-data-catalogue` | State of Vermont | `https://data.vermont.gov/api/views.json` | `vermont-open-data-catalogue-2026-11-08.json` |
+| `los-angeles-open-data-catalogue` | City of Los Angeles | `https://data.lacity.org/api/views.json` | `los-angeles-open-data-catalogue-2026-11-08.json` |
+| `san-francisco-open-data-catalogue` | City and County of San Francisco | `https://data.sf.gov/api/views.json` | `san-francisco-open-data-catalogue-2026-11-08.json` |
+| `california-open-data-catalogue` | State of California | `https://data.ca.gov/api/3/action/package_search` | `california-open-data-catalogue-2026-11-08.json` |
 
 ## Exact curl commands for the 2026-10-05 additions
 
@@ -121,6 +133,17 @@ curl -sS -A "$UA_BROWSER" 'https://data.cityofnewyork.us/api/views.json?limit=50
 | Chicago `data.cityofchicago.org` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held five datasets, two charts, two maps, and one story. The captured page supplied no Common Core `License` or `Publisher` value, so both adapter fields are empty. |
 | Seattle `data.seattle.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held three datasets and seven `federated_href` entries. The first entry supplied licence text beginning "The City of Seattle makes no representation or warranty" and publisher `City of Seattle ArcGIS Online`. |
 | Texas `data.texas.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held five datasets, three `href` entries, one map, and one measure. The captured page supplied no Common Core `License` or `Publisher` value, so both adapter fields are empty. |
+| Colorado `data.colorado.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held ten `federated_href` entries, all without a category. Every entry supplied licence text and publisher `State of Colorado`. |
+| Washington State `data.wa.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held seven datasets, one chart, and two stories. The captured page supplied no Common Core `License` or `Publisher` value. |
+| Michigan `data.michigan.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held three datasets, four charts, one map, one measure, and one story. Nine entries had no category, and the page supplied no Common Core `License` or `Publisher` value. |
+| Oregon `data.oregon.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held eight datasets, one file, and one filtered view. The page supplied no Common Core `License` or `Publisher` value. |
+| Pennsylvania `data.pa.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held two datasets, three charts, and five linked `href` entries. The page supplied no Common Core `License` or `Publisher` value. |
+| Illinois `data.illinois.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held three datasets, four charts, two stories, and one filtered view. The page supplied no Common Core `License` or `Publisher` value. |
+| New Jersey `data.nj.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held five datasets, two files, and three stories. All ten entries named a publisher, and the page supplied no Common Core `License` value. |
+| Vermont `data.vermont.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held six datasets and four filtered views. The page supplied no Common Core `License` or `Publisher` value. |
+| Los Angeles `data.lacity.org` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held six datasets, three filtered views, and one map. The page supplied no Common Core `License` or `Publisher` value. |
+| San Francisco `data.sf.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and held six datasets, one filtered view, and three maps. The old `data.sfgov.org` host redirects here, and the page supplied no Common Core `License` or `Publisher` value. |
+| California `data.ca.gov` CKAN catalogue | LIVE | Keyless. `/api/views.json` answered HTTP 404, but `/api/3/action/package_search?rows=10` answered HTTP 200 with `count` 4696. The page held ten datasets, nine without a CKAN group and one in Health and Human Services. |
 
 ## Exact curl command for the 2026-10-18 addition
 
@@ -167,6 +190,48 @@ curl -sS -A "$UA" 'https://data.seattle.gov/api/views.json?limit=10'
 curl -sS -A "$UA" 'https://data.texas.gov/api/views.json?limit=10'
 ```
 
+## Exact curl commands for the 2026-11-08 state and city batch
+
+Each command answered HTTP 200 without a key on 2026-11-08. California uses
+CKAN because the Socrata discovery endpoint on the same host answers HTTP 404.
+
+```sh
+UA='usa-open-data-connectors (Language=TypeScript)'
+
+# Colorado Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.colorado.gov/api/views.json?limit=10'
+
+# Washington State Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.wa.gov/api/views.json?limit=10'
+
+# Michigan Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.michigan.gov/api/views.json?limit=10'
+
+# Oregon Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.oregon.gov/api/views.json?limit=10'
+
+# Pennsylvania Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.pa.gov/api/views.json?limit=10'
+
+# Illinois Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.illinois.gov/api/views.json?limit=10'
+
+# New Jersey Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.nj.gov/api/views.json?limit=10'
+
+# Vermont Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.vermont.gov/api/views.json?limit=10'
+
+# Los Angeles Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.lacity.org/api/views.json?limit=10'
+
+# San Francisco Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.sf.gov/api/views.json?limit=10'
+
+# California Open Data catalogue, ten CKAN packages
+curl -sS -A "$UA" 'https://data.ca.gov/api/3/action/package_search?rows=10'
+```
+
 ## Live adapter probes on 2026-11-08
 
 The four adapters were also probed through the built registry, not just with
@@ -202,6 +267,29 @@ Observed result: all three probes returned `"ok": true`, `"status": "ok"`, and
 | `seattle-open-data-catalogue` | Entry `evhv-7f58`, "Temporary No Parking Reservations (All)", asset type `federated_href` |
 | `texas-open-data-catalogue` | Entry `nqfs-mwbh`, "Water Service Boundary Viewer", asset type `href` |
 
+The state and city batch was probed through the built registry with:
+
+```sh
+node --input-type=module -e "import { probeAllUsDataSources } from './dist/index.js'; const ids=['colorado-open-data-catalogue','washington-state-open-data-catalogue','michigan-open-data-catalogue','oregon-open-data-catalogue','pennsylvania-open-data-catalogue','illinois-open-data-catalogue','new-jersey-open-data-catalogue','vermont-open-data-catalogue','los-angeles-open-data-catalogue','san-francisco-open-data-catalogue','california-open-data-catalogue']; console.log(JSON.stringify(await probeAllUsDataSources({ids}),null,2));"
+```
+
+Observed result: all eleven probes returned `"ok": true`, `"status": "ok"`, and
+`"auth": "none"`. The returned samples began with:
+
+| Adapter | First record in the probe sample |
+| --- | --- |
+| `colorado-open-data-catalogue` | Entry `kmes-av87`, "NAIP 2023 Infrared", asset type `federated_href` |
+| `washington-state-open-data-catalogue` | Entry `jgjp-9nhw`, "Earnings for Graduates by Strategic Sectors", asset type `dataset` |
+| `michigan-open-data-catalogue` | Entry `4qfe-hfck`, "MI_PREVAILING_WAGES", asset type `dataset` |
+| `oregon-open-data-catalogue` | Entry `w7g5-zeds`, "Oregon Arts & Culture Programs", asset type `dataset` |
+| `pennsylvania-open-data-catalogue` | Entry `85a7-fr6c`, "Mine Subsidence Insurance Risk (Possible) Current Statewide Environmental Protection", asset type `href` |
+| `illinois-open-data-catalogue` | Entry `hswm-jvu8`, "Pest Control Approved CEU", asset type `dataset` |
+| `new-jersey-open-data-catalogue` | Entry `k7zf-axmq`, "2025 Pinelands Commission Annual Report", asset type `file` |
+| `vermont-open-data-catalogue` | Entry `6h48-n97g`, "SFY 2027 Vendor Payments", asset type `filter` |
+| `los-angeles-open-data-catalogue` | Entry `dqq4-799r`, "Building and Safety - Soft-Story Compliance (P)", asset type `filter` |
+| `san-francisco-open-data-catalogue` | Entry `xdae-a7y7`, "Map of Historical Police Districts (2015 - 2026)", asset type `map` |
+| `california-open-data-catalogue` | Package `14aca9b5-d384-43eb-ba8e-81fc94aea432`, "California Grants Portal Grant Awards 2024-2025", asset type `dataset` |
+
 ## Candidates checked and skipped on 2026-11-08
 
 These were checked live before writing any adapter. None was added because the
@@ -213,7 +301,7 @@ service requires a key or the endpoint is not a usable public API.
 | FBI Crime Data Explorer API | HTTP 403 with `{"error":{"code":"API_KEY_MISSING","message":"An API key was not provided. Please get one at https://api.data.gov/signup/"}}`. Keyed; skipped. |
 | Data.gov CKAN API | `https://catalog.data.gov/api/3/action/package_search?rows=3` answered HTTP 404 on 2026-11-08. No adapter added. |
 | CMS Provider Data catalogue | The metastore API answered HTTP 403 Access Denied on 2026-11-08. No adapter added. |
-| California Open Data catalogue | `https://data.ca.gov/api/views.json?limit=2` answered HTTP 404 on 2026-11-08. No adapter added. |
+| California Open Data Socrata discovery | `https://data.ca.gov/api/views.json?limit=2` answered HTTP 404 on 2026-11-08. The keyless CKAN `package_search` endpoint answered, so the California adapter uses that instead. |
 
 ## Candidates not yet probed
 
@@ -272,8 +360,19 @@ everywhere, and a few services attach their own terms on top.
 | `chicago-open-data-catalogue` | City of Chicago, through its Socrata portal | City portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
 | `seattle-open-data-catalogue` | City of Seattle, through its Socrata portal | City portal terms. The adapter returns `licenceUrl` and `attribution`; the first captured entry supplied licence text and `City of Seattle ArcGIS Online` as publisher, while other entries supplied neither |
 | `texas-open-data-catalogue` | State of Texas, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `colorado-open-data-catalogue` | State of Colorado, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; every captured entry supplied licence text and `State of Colorado` as publisher |
+| `washington-state-open-data-catalogue` | State of Washington, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `michigan-open-data-catalogue` | State of Michigan, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `oregon-open-data-catalogue` | State of Oregon, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `pennsylvania-open-data-catalogue` | Commonwealth of Pennsylvania, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `illinois-open-data-catalogue` | State of Illinois, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `new-jersey-open-data-catalogue` | State of New Jersey, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; all captured entries named a publisher and none named a licence URL |
+| `vermont-open-data-catalogue` | State of Vermont, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `los-angeles-open-data-catalogue` | City of Los Angeles, through its Socrata portal | City portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `san-francisco-open-data-catalogue` | City and County of San Francisco, through its Socrata portal | City portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `california-open-data-catalogue` | State of California, through its CKAN portal | Portal entry terms. The adapter returns `licenceUrl` and `attribution`; seven of ten captured packages supplied `License not specified`, and every package named a publishing organisation |
 
-The Socrata catalogue adapters return `licenceUrl` and `attribution` on each
+The Socrata and California CKAN catalogue adapters return `licenceUrl` and `attribution` on each
 entry, and `publicdatahub-hospital-quality` returns licence, agency, and
 dataset provenance. An empty value means the source supplied none. The other
 adapters' committed responses carry no per-record licence field; most

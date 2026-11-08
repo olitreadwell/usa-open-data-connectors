@@ -1,0 +1,1116 @@
+[
+  {
+    "id": "k7zf-axmq",
+    "name": "2025 Pinelands Commission Annual Report",
+    "assetType": "file",
+    "averageRating": 0,
+    "blobFilename": "Annual Report 2025 (Final).pdf",
+    "blobFileSize": 35006724,
+    "blobId": "699f14a5-cdad-4fc6-b03a-96557cb523cc",
+    "blobMimeType": "application/pdf",
+    "category": "Government & Finance",
+    "createdAt": 1793647274,
+    "description": "This report provides information Pinelands Commission for the year 2023.",
+    "diciBackend": false,
+    "displayType": "blob",
+    "downloadCount": 1,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42723275,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793647389,
+    "publicationGroup": 20702225,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793647274,
+    "tableId": 20702225,
+    "totalTimesRated": 0,
+    "viewCount": 14,
+    "viewLastModified": 1793647389,
+    "viewType": "blobby",
+    "approvals": [
+      {
+        "reviewedAt": 1793647557,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7840133,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793647389,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793647557,
+          "failureCount": 0,
+          "startedAt": 1793647557,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Initiatives": {
+          "Governor's Transparency": "Other/Annual Data"
+        },
+        "Asset Details": {
+          "Asset Posting Frequency": "Annually Calendar Year",
+          "Geographic Coverage": "State",
+          "Asset Collection Frequency": "Annually Calendar Year",
+          "Asset End Date": "2025",
+          "Asset Provider Organization": "Treasury",
+          "Asset Start Date": "2025"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "u7rr-pxrd",
+      "displayName": "OIT-DataNJAdminSK",
+      "screenName": "OIT-DataNJAdminSK",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "u7rr-pxrd",
+      "displayName": "OIT-DataNJAdminSK",
+      "screenName": "OIT-DataNJAdminSK",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["annual", "pinelands", "2025", "report"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "kxbw-tex7",
+    "name": "2024 Pinelands Commission Annual Report",
+    "assetType": "file",
+    "averageRating": 0,
+    "blobFilename": "Annual Report 2024 (Final).pdf",
+    "blobFileSize": 26637584,
+    "blobId": "1aa6e6d0-1504-4159-9105-b1aa7a0f619f",
+    "blobMimeType": "application/pdf",
+    "category": "Government & Finance",
+    "createdAt": 1793647050,
+    "description": "This report provides information Pinelands Commission for the year 2024.",
+    "diciBackend": false,
+    "displayType": "blob",
+    "downloadCount": 1,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42723270,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793647225,
+    "publicationGroup": 20702221,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793647050,
+    "tableId": 20702221,
+    "totalTimesRated": 0,
+    "viewCount": 14,
+    "viewLastModified": 1793647225,
+    "viewType": "blobby",
+    "approvals": [
+      {
+        "reviewedAt": 1793647559,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7840132,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793647225,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793647559,
+          "failureCount": 0,
+          "startedAt": 1793647559,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Initiatives": {
+          "Governor's Transparency": "Other/Annual Data"
+        },
+        "Asset Details": {
+          "Asset Posting Frequency": "Annually Calendar Year",
+          "Geographic Coverage": "State",
+          "Asset Collection Frequency": "Annually Calendar Year",
+          "Asset Provider Organization": "Treasury",
+          "Asset Start Date": "2024"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "u7rr-pxrd",
+      "displayName": "OIT-DataNJAdminSK",
+      "screenName": "OIT-DataNJAdminSK",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "u7rr-pxrd",
+      "displayName": "OIT-DataNJAdminSK",
+      "screenName": "OIT-DataNJAdminSK",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["2024", "pinelands", "report", "annual"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "ts75-sevp",
+    "name": "Executive Order 166 COVID-19 Master Contracts with Engagements",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Government & Finance",
+    "createdAt": 1785254372,
+    "description": "This represents all state contracts funded by COVID-19 funds, subject to the transparency requirements of EO 166 (Murphy), which were procured as master contracts with individual task order engagements awarded off of the master contract.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 28,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42408000,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1786719792,
+    "publicationGroup": 20499954,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1788461982,
+    "rowsUpdatedBy": "u7rr-pxrd",
+    "tableId": 20522621,
+    "totalTimesRated": 0,
+    "viewCount": 227,
+    "viewLastModified": 1790272678,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790273320,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7758281,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790272788,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "fxsg-nfyq",
+          "displayName": "Padma Chikkala"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790273320,
+          "failureCount": 0,
+          "startedAt": 1790273320,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Asset Details": {
+          "Asset Posting Frequency": "On-Demand/As-Needed",
+          "Asset Collection Frequency": "On-Demand/As-Needed",
+          "Asset End Date": "Ongoing",
+          "Asset Provider Organization": "Treasury",
+          "Asset Start Date": "2026"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9np-jemm",
+      "displayName": "Ianna Khan",
+      "screenName": "Ianna Khan",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9np-jemm",
+      "displayName": "Ianna Khan",
+      "screenName": "Ianna Khan",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": [
+      "comptroller",
+      "state comptroller",
+      "office of the state comptroller",
+      "public contracting oversight",
+      "public contracting",
+      "covid-19",
+      "covid",
+      "contracts",
+      "fiscal operations"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "wcg4-8jtz",
+    "name": "Executive Order 166 COVID-19 Contracts",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Government & Finance",
+    "createdAt": 1784744565,
+    "description": "This represents all state contracts funded by COVID-19 funds, and subject to the transparency requirements of EO 166 (Murphy).",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 33,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42408001,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1786719844,
+    "publicationGroup": 20486273,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1792972904,
+    "rowsUpdatedBy": "98td-fzx7",
+    "tableId": 20522622,
+    "totalTimesRated": 0,
+    "viewCount": 276,
+    "viewLastModified": 1792972903,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790273322,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7758282,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790272795,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "fxsg-nfyq",
+          "displayName": "Padma Chikkala"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790273322,
+          "failureCount": 0,
+          "startedAt": 1790273322,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Asset Details": {
+          "Asset Posting Frequency": "On-Demand/As-Needed",
+          "Asset Collection Frequency": "On-Demand/As-Needed",
+          "Asset End Date": "Ongoing",
+          "Asset Provider Organization": "Treasury",
+          "Asset Start Date": "2026"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9np-jemm",
+      "displayName": "Ianna Khan",
+      "screenName": "Ianna Khan",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9np-jemm",
+      "displayName": "Ianna Khan",
+      "screenName": "Ianna Khan",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": [
+      "comptroller",
+      "state comptroller",
+      "office of the state comptroller",
+      "public contracting oversight",
+      "public contracting",
+      "covid-19",
+      "covid",
+      "contracts",
+      "fiscal operations"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "wy74-g2zu",
+    "name": "NJBIDE by County",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Government & Finance",
+    "createdAt": 1777487821,
+    "description": "A county-level summary of NJBIDE grant data showing areas that lacked adequate internet service, progress in expanding access, and key project details.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 33,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42110301,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1777903913,
+    "publicationGroup": 20361663,
+    "publicationStage": "published",
+    "resourceName": "Tina",
+    "rowsUpdatedAt": 1777903897,
+    "rowsUpdatedBy": "u7rr-pxrd",
+    "tableId": 20365402,
+    "totalTimesRated": 0,
+    "viewCount": 675,
+    "viewLastModified": 1777903913,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1777570208,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7455914,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1777570002,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "fxsg-nfyq",
+          "displayName": "Padma Chikkala"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1777570208,
+          "failureCount": 0,
+          "startedAt": 1777570208,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Asset Details": {
+          "Asset Posting Frequency": "On-Demand/As-Needed",
+          "Geographic Coverage": "State",
+          "Asset Collection Frequency": "On-Demand/As-Needed",
+          "Asset Provider Organization": "Public Utilities",
+          "Asset Start Date": "12/23/2023"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "rowLabel": "County",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "g326-hg5k",
+      "displayName": "Tina Gupta",
+      "screenName": "Tina Gupta",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "g326-hg5k",
+      "displayName": "Tina Gupta",
+      "screenName": "Tina Gupta",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["njbide", "broadband nj", "obc", "unserved bsls", "internet"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "237p-gehp",
+    "name": "NJDOC Incarcerated Persons Census",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Public Safety",
+    "createdAt": 1774290345,
+    "description": "Dataset includes characteristics of state incarcerated persons under the jurisdiction of the New Jersey Department of Corrections on January 1, 2026.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 221,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42019846,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1774291908,
+    "publicationGroup": 20315804,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1774291892,
+    "rowsUpdatedBy": "5py8-gcgb",
+    "tableId": 20315804,
+    "totalTimesRated": 0,
+    "viewCount": 1560,
+    "viewLastModified": 1774294331,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1774295310,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7397279,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1774295104,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "fxsg-nfyq",
+          "displayName": "Padma Chikkala"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1774295310,
+          "failureCount": 0,
+          "startedAt": 1774295310,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Initiatives": {
+          "Governor's Transparency": "Other/Annual Data"
+        },
+        "Asset Details": {
+          "Asset Posting Frequency": "Annually Calendar Year",
+          "Geographic Coverage": "State",
+          "Asset Collection Frequency": "Annually Calendar Year",
+          "Asset Provider Organization": "Corrections",
+          "Geographic Unit": "New Jersey",
+          "Asset Start Date": "January 1, 2026"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "rowLabel": "Person",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "5py8-gcgb",
+      "displayName": "deborah.odea@doc.nj.gov",
+      "screenName": "deborah.odea@doc.nj.gov",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "5py8-gcgb",
+      "displayName": "deborah.odea@doc.nj.gov",
+      "screenName": "deborah.odea@doc.nj.gov",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["njdoc", "incarcerated", "persons", "census"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "gvur-kt7q",
+    "name": "Vehicle Inspection Data",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Transportation",
+    "createdAt": 1772830123,
+    "description": "Vehicle Inspection Data for Vehicles registered in the state of New Jersey",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 131,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 41988798,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1773342941,
+    "publicationGroup": 20298773,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1773340852,
+    "rowsUpdatedBy": "5awh-r7dy",
+    "tableId": 20298773,
+    "totalTimesRated": 0,
+    "viewCount": 2651,
+    "viewLastModified": 1773349086,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1773408989,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7388487,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1773349130,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "fxsg-nfyq",
+          "displayName": "Padma Chikkala"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1773408989,
+          "failureCount": 0,
+          "startedAt": 1773408989,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "5awh-r7dy",
+          "displayName": "New Jersey Motor Vehicle Commission"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Initiatives": {
+          "Governor's Transparency": "Other/Annual Data"
+        },
+        "Asset Details": {
+          "Asset Posting Frequency": "Annually Calendar Year",
+          "Geographic Coverage": "State",
+          "Asset Collection Frequency": "Annually Calendar Year",
+          "Asset Provider Organization": "Motor Vehicles Commission",
+          "Asset Start Date": "1/1/2000"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "5awh-r7dy",
+      "displayName": "New Jersey Motor Vehicle Commission",
+      "profileImageUrlLarge": "/api/users/5awh-r7dy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/5awh-r7dy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/5awh-r7dy/profile_images/TINY",
+      "screenName": "New Jersey Motor Vehicle Commission",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "5awh-r7dy",
+      "displayName": "New Jersey Motor Vehicle Commission",
+      "profileImageUrlLarge": "/api/users/5awh-r7dy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/5awh-r7dy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/5awh-r7dy/profile_images/TINY",
+      "screenName": "New Jersey Motor Vehicle Commission",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["vehicle", "motor vehicle commission", "mvc", "inspection"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "tm2x-hyum",
+    "name": "State Ethics Commission : Publications Archive",
+    "assetType": "story",
+    "averageRating": 0,
+    "category": "Government & Finance",
+    "createdAt": 1772133149,
+    "description": "The Commission's Newsletter, “Compass” is published periodically throughout the year. Specific questions regarding a particular situation should be addressed directly to the agency’s Ethics Liaison Officer or the Commission.",
+    "diciBackend": false,
+    "displayType": "story",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 41976193,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1772133379,
+    "publicationGroup": 20292197,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1772133149,
+    "tableId": 20292197,
+    "totalTimesRated": 0,
+    "viewCount": 1232,
+    "viewLastModified": 1773861030,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1772199347,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7372472,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1772199037,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "fxsg-nfyq",
+          "displayName": "Padma Chikkala"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1772199347,
+          "failureCount": 0,
+          "startedAt": 1772199347,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "custom_fields": {
+        "Asset Details": {
+          "Asset Posting Frequency": "Quarterly",
+          "Asset Collection Frequency": "Quarterly",
+          "Asset Provider Organization": "Law & Public Safety",
+          "Asset Start Date": "2022"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "djj4-s8ju",
+      "displayName": "Victor K",
+      "screenName": "Victor K",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "djj4-s8ju",
+      "displayName": "Victor K",
+      "screenName": "Victor K",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["ethics", "publication", "newsletter"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "xwg8-6m8h",
+    "name": "State Ethics Commission: Minutes Archive",
+    "assetType": "story",
+    "averageRating": 0,
+    "category": "Government & Finance",
+    "createdAt": 1772130913,
+    "description": "This dataset provides a list with links to all Commission meeting minutes issued by the State Ethics Commission from June 2022 to the present.",
+    "diciBackend": false,
+    "displayType": "story",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 41976151,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1772131721,
+    "publicationGroup": 20292169,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1772130913,
+    "tableId": 20292169,
+    "totalTimesRated": 0,
+    "viewCount": 834,
+    "viewLastModified": 1772197862,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1772199345,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7372470,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1772199021,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "fxsg-nfyq",
+          "displayName": "Padma Chikkala"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1772199345,
+          "failureCount": 0,
+          "startedAt": 1772199345,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "custom_fields": {
+        "Asset Details": {
+          "Asset Posting Frequency": "Monthly",
+          "Asset Collection Frequency": "Monthly",
+          "Asset Provider Organization": "Law & Public Safety",
+          "Asset Start Date": "2022"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "djj4-s8ju",
+      "displayName": "Victor K",
+      "screenName": "Victor K",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "djj4-s8ju",
+      "displayName": "Victor K",
+      "screenName": "Victor K",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["ethics", "minutes"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "hssu-6pgx",
+    "name": "State Ethics Commission: Agenda Archive",
+    "assetType": "story",
+    "averageRating": 0,
+    "category": "Government & Finance",
+    "createdAt": 1772118468,
+    "description": "This dataset provides a list with links to all Commission meeting agendas issued by the State Ethics Commission from September 2022 to the present.",
+    "diciBackend": false,
+    "displayType": "story",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 41976021,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1772118900,
+    "publicationGroup": 20292071,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1772118468,
+    "tableId": 20292071,
+    "totalTimesRated": 0,
+    "viewCount": 830,
+    "viewLastModified": 1772198259,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1772199341,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7372471,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1772199030,
+        "targetAudience": "public",
+        "workflowId": 2286,
+        "reviewer": {
+          "id": "fxsg-nfyq",
+          "displayName": "Padma Chikkala"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1772199342,
+          "failureCount": 0,
+          "startedAt": 1772199341,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "u7rr-pxrd",
+          "displayName": "OIT-DataNJAdminSK"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "custom_fields": {
+        "Asset Details": {
+          "Asset Posting Frequency": "Monthly",
+          "Asset Collection Frequency": "Monthly",
+          "Asset Provider Organization": "Law & Public Safety",
+          "Asset Start Date": "1/1/2022"
+        },
+        "Common Core": {
+          "Contact Email": "ContactDataNJ@tech.nj.gov",
+          "Contact Name": "Data NJ Team",
+          "Publisher": "NJ OIT Open Data Center"
+        }
+      },
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "djj4-s8ju",
+      "displayName": "Victor K",
+      "screenName": "Victor K",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "djj4-s8ju",
+      "displayName": "Victor K",
+      "screenName": "Victor K",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["commission", "meeting", "ethics", "agenda"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

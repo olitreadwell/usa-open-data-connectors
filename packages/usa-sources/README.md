@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 36 source adapters behind one interface.
+- Exposes 47 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads committed fixtures in tests only; a live fetch never falls back.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -65,6 +65,17 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `chicago-open-data-catalogue` | City of Chicago | The Chicago Data Portal Socrata catalogue, one row per dataset, chart, map, or story, with city topic, view count, and download count. |
 | `seattle-open-data-catalogue` | City of Seattle | The Seattle Open Data Socrata catalogue, one row per dataset, map, chart, or story, with city topic, view count, and download count. |
 | `texas-open-data-catalogue` | State of Texas | The Texas Open Data Socrata catalogue, one row per dataset, map, chart, or linked resource, with state topic, view count, and download count. |
+| `colorado-open-data-catalogue` | State of Colorado | The Colorado Open Data Socrata catalogue, one row per dataset, map, chart, or linked resource, with state topic, view count, and download count. |
+| `washington-state-open-data-catalogue` | State of Washington | The Washington State Open Data Socrata catalogue, one row per dataset, chart, story, or other resource, with state topic, view count, and download count. |
+| `michigan-open-data-catalogue` | State of Michigan | The Michigan Open Data Socrata catalogue, one row per dataset, map, chart, story, or other resource, with state topic, view count, and download count. |
+| `oregon-open-data-catalogue` | State of Oregon | The Oregon Open Data Socrata catalogue, one row per dataset, file, or filtered view, with state topic, view count, and download count. |
+| `pennsylvania-open-data-catalogue` | Commonwealth of Pennsylvania | The Pennsylvania Open Data Socrata catalogue, one row per dataset, chart, or linked resource, with state topic, view count, and download count. |
+| `illinois-open-data-catalogue` | State of Illinois | The Illinois Open Data Socrata catalogue, one row per dataset, chart, story, or filtered view, with state topic, view count, and download count. |
+| `new-jersey-open-data-catalogue` | State of New Jersey | The New Jersey Open Data Socrata catalogue, one row per dataset, file, story, or other resource, with state topic, view count, and download count. |
+| `vermont-open-data-catalogue` | State of Vermont | The Vermont Open Data Socrata catalogue, one row per dataset or filtered view, with state topic, view count, and download count. |
+| `los-angeles-open-data-catalogue` | City of Los Angeles | The Los Angeles Open Data Socrata catalogue, one row per dataset, map, or filtered view, with city topic, view count, and download count. |
+| `san-francisco-open-data-catalogue` | City and County of San Francisco | The San Francisco Open Data Socrata catalogue, one row per dataset, map, or filtered view, with city topic, view count, and download count. |
+| `california-open-data-catalogue` | State of California | The California Open Data CKAN catalogue, one row per dataset package, with title, groups, resources, licence, and publishing organisation. |
 
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
 `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data` as soon as it is registered.
@@ -857,7 +868,7 @@ The data comes from US federal agencies and the open data catalogue services the
 | City of Seattle | `https://data.seattle.gov/api/views.json` |
 | State of Texas | `https://data.texas.gov/api/views.json` |
 
-Each publisher sets its own terms for its data. The Socrata catalogue adapters keep the `License` and
+Each publisher sets its own terms for its data. The Socrata and CKAN catalogue adapters keep the `License` and
 `Publisher` values from an entry's Common Core metadata as `licenceUrl` and `attribution`. An empty
 value means the portal supplied none. Check the licence on the portal entry before you reuse an item.
 A catalogue can list entries under terms such as these:

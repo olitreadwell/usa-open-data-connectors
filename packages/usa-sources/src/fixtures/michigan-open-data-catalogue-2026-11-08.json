@@ -1,0 +1,1221 @@
+[
+  {
+    "id": "4qfe-hfck",
+    "name": "MI_PREVAILING_WAGES",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1781619394,
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 37,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42245596,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1782756905,
+    "publicationGroup": 20421721,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1782757886,
+    "rowsUpdatedBy": "3kz5-f8rh",
+    "tableId": 20438207,
+    "totalTimesRated": 0,
+    "viewCount": 116,
+    "viewLastModified": 1782757872,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1782398201,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7543555,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1782398201,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1782398201,
+          "failureCount": 0,
+          "startedAt": 1782398201,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "3kz5-f8rh",
+          "displayName": "Jeff Hayton"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "3kz5-f8rh",
+      "displayName": "Jeff Hayton",
+      "screenName": "Jeff Hayton",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "3kz5-f8rh",
+      "displayName": "Jeff Hayton",
+      "screenName": "Jeff Hayton",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "8p73-a6i5",
+    "name": "MVAA Agency Dashboard",
+    "assetType": "story",
+    "averageRating": 0,
+    "createdAt": 1779904523,
+    "diciBackend": false,
+    "displayType": "story",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42172799,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779914158,
+    "publicationGroup": 20399922,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779904523,
+    "tableId": 20399922,
+    "totalTimesRated": 0,
+    "viewCount": 166,
+    "viewLastModified": 1781102171,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1779914159,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7497223,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779914159,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779914159,
+          "failureCount": 0,
+          "startedAt": 1779914159,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "mzbk-xdn8",
+          "displayName": "DillingerZ"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "mzbk-xdn8",
+      "displayName": "DillingerZ",
+      "screenName": "DillingerZ",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "mzbk-xdn8",
+      "displayName": "DillingerZ",
+      "screenName": "DillingerZ",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "6msi-b75p",
+    "name": "MVAA Agency Dashboard",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "createdAt": 1779903803,
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 46,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42172791,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779903916,
+    "publicationGroup": 20399915,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779910669,
+    "rowsUpdatedBy": "mzbk-xdn8",
+    "tableId": 20399915,
+    "totalTimesRated": 0,
+    "viewCount": 42,
+    "viewLastModified": 1779910668,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1779903917,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7497155,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779903917,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779903917,
+          "failureCount": 0,
+          "startedAt": 1779903917,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "mzbk-xdn8",
+          "displayName": "DillingerZ"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "mzbk-xdn8",
+      "displayName": "DillingerZ",
+      "screenName": "DillingerZ",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "mzbk-xdn8",
+      "displayName": "DillingerZ",
+      "screenName": "DillingerZ",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "tf5h-3h43",
+    "name": "MVRSC Total Cases By FY",
+    "assetType": "chart",
+    "averageRating": 0,
+    "createdAt": 1778527673,
+    "description": "",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 1,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "k8ab-m4hd",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42381460,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779892396,
+    "publicationGroup": 20304337,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791229488,
+    "rowsUpdatedBy": "9bsj-heb7",
+    "tableId": 20509323,
+    "totalTimesRated": 0,
+    "viewCount": 63,
+    "viewLastModified": 1779892396,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1778527695,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7604449,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1778527695,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1778527695,
+          "failureCount": 0,
+          "startedAt": 1778527695,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "9bsj-heb7",
+          "displayName": "OchoaR1@michigan.gov"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": ["restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "jv5q-yp8x",
+    "name": "IT Commodity Code List: State of Michigan Procurement",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Government",
+    "createdAt": 1777925494,
+    "description": "A subset list of IT commodity codes used by the State of Michigan.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 38,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42110524,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1777925859,
+    "publicationGroup": 20365528,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1777992335,
+    "rowsUpdatedBy": "km93-db3n",
+    "tableId": 20365528,
+    "totalTimesRated": 0,
+    "viewCount": 54,
+    "viewLastModified": 1777992334,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1777925859,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7456051,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1777925859,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1777925859,
+          "failureCount": 0,
+          "startedAt": 1777925859,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "km93-db3n",
+          "displayName": "Craig Terrill"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "km93-db3n",
+      "displayName": "Craig Terrill",
+      "screenName": "Craig Terrill",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "km93-db3n",
+      "displayName": "Craig Terrill",
+      "screenName": "Craig Terrill",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["commodity codes", "nigp", "procurement"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "j2tm-brek",
+    "name": "Natural Change, July 2024-July 2025",
+    "assetType": "map",
+    "averageRating": 0,
+    "createdAt": 1774622342,
+    "description": "",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_map",
+    "downloadCount": 1,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "uut9-9hra",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42032491,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1774622371,
+    "publicationGroup": 20321974,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1774621528,
+    "tableId": 20321975,
+    "totalTimesRated": 0,
+    "viewCount": 28,
+    "viewLastModified": 1774623303,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1774622372,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7405451,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1774622372,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1774622372,
+          "failureCount": 0,
+          "startedAt": 1774622372,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "wuhe-zkbq",
+          "displayName": "Hailey Barrus"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "7z9v-r76b",
+      "createdAt": 1600099751,
+      "displayName": "MCDA Team",
+      "screenName": "MCDA Team",
+      "type": "team",
+      "members": [
+        {
+          "id": "wuhe-zkbq",
+          "createdAt": 1698868267,
+          "displayName": "Hailey Barrus",
+          "screenName": "Hailey Barrus",
+          "teamId": 1308686,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "wxep-hnxn",
+          "createdAt": 1697562752,
+          "displayName": "Kevin Doyle",
+          "screenName": "Kevin Doyle",
+          "teamId": 1308686,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "xubg-acn8",
+          "createdAt": 1560945134,
+          "displayName": "Nick Gandhi",
+          "screenName": "Nick Gandhi",
+          "teamId": 1308686,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "k329-2ucu",
+          "createdAt": 1708723701,
+          "displayName": "Reima Nasser",
+          "screenName": "Reima Nasser",
+          "teamId": 1308686,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "29vf-2472",
+          "createdAt": 1490715637,
+          "disabledAt": 1693946977,
+          "displayName": "LMISI",
+          "screenName": "LMISI",
+          "teamId": 1308686,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "7z9v-r76b",
+      "createdAt": 1600099751,
+      "displayName": "MCDA Team",
+      "screenName": "MCDA Team",
+      "type": "team",
+      "members": [
+        {
+          "id": "wuhe-zkbq",
+          "createdAt": 1698868267,
+          "displayName": "Hailey Barrus",
+          "screenName": "Hailey Barrus",
+          "teamId": 1308686,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "wxep-hnxn",
+          "createdAt": 1697562752,
+          "displayName": "Kevin Doyle",
+          "screenName": "Kevin Doyle",
+          "teamId": 1308686,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "xubg-acn8",
+          "createdAt": 1560945134,
+          "displayName": "Nick Gandhi",
+          "screenName": "Nick Gandhi",
+          "teamId": 1308686,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "k329-2ucu",
+          "createdAt": 1708723701,
+          "displayName": "Reima Nasser",
+          "screenName": "Reima Nasser",
+          "teamId": 1308686,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "29vf-2472",
+          "createdAt": 1490715637,
+          "disabledAt": 1693946977,
+          "displayName": "LMISI",
+          "screenName": "LMISI",
+          "teamId": 1308686,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": ["restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "hci3-q693",
+    "name": "MVRSC FY TEST VERSION",
+    "assetType": "measure",
+    "averageRating": 0,
+    "createdAt": 1774029218,
+    "description": "",
+    "diciBackend": false,
+    "displayType": "measure",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42107615,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1777640793,
+    "publicationGroup": 20314517,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1774029218,
+    "tableId": 20363921,
+    "totalTimesRated": 0,
+    "viewCount": 25,
+    "viewLastModified": 1777640946,
+    "viewType": "measure",
+    "approvals": [
+      {
+        "reviewedAt": 1777641363,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7454420,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1777641363,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1777641363,
+          "failureCount": 0,
+          "startedAt": 1777641363,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "9bsj-heb7",
+          "displayName": "OchoaR1@michigan.gov"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["measure"],
+      "renderTypeConfig": {
+        "visible": {
+          "measure": true
+        }
+      }
+    },
+    "owner": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": ["default"]
+  },
+  {
+    "id": "que2-w46a",
+    "name": "MVRSC FY26 Data",
+    "assetType": "chart",
+    "averageRating": 0,
+    "createdAt": 1773344091,
+    "description": "",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "k8ab-m4hd",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42381461,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1777645013,
+    "publicationGroup": 20304337,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791229488,
+    "rowsUpdatedBy": "9bsj-heb7",
+    "tableId": 20509323,
+    "totalTimesRated": 0,
+    "viewCount": 65,
+    "viewLastModified": 1777645014,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1777641328,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7604450,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1777641328,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1777641328,
+          "failureCount": 0,
+          "startedAt": 1777641328,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "9bsj-heb7",
+          "displayName": "OchoaR1@michigan.gov"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": ["restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "dh47-yqhc",
+    "name": "MVRSC DD214 Requests by FY",
+    "assetType": "chart",
+    "averageRating": 0,
+    "createdAt": 1773260333,
+    "description": "",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "k8ab-m4hd",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42381459,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1782483730,
+    "publicationGroup": 20304337,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791229488,
+    "rowsUpdatedBy": "9bsj-heb7",
+    "tableId": 20509323,
+    "totalTimesRated": 0,
+    "viewCount": 46,
+    "viewLastModified": 1782483730,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1777641349,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7604448,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1777641349,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1777641349,
+          "failureCount": 0,
+          "startedAt": 1777641349,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "9bsj-heb7",
+          "displayName": "OchoaR1@michigan.gov"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": ["restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "46dc-aq3a",
+    "name": "MVRSC Total Calls By FY",
+    "assetType": "chart",
+    "averageRating": 0,
+    "createdAt": 1773257875,
+    "description": "",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "k8ab-m4hd",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42381463,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779379232,
+    "publicationGroup": 20304337,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1791229488,
+    "rowsUpdatedBy": "9bsj-heb7",
+    "tableId": 20509323,
+    "totalTimesRated": 0,
+    "viewCount": 48,
+    "viewLastModified": 1779379232,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1777641358,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7604452,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1777641358,
+        "targetAudience": "public",
+        "workflowId": 1739,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1777641358,
+          "failureCount": 0,
+          "startedAt": 1777641358,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "9bsj-heb7",
+          "displayName": "OchoaR1@michigan.gov"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "3wzq-2tw6",
+      "createdAt": 1773257956,
+      "displayName": "MVAA COMMS TEAM",
+      "screenName": "MVAA COMMS TEAM",
+      "type": "team",
+      "members": [
+        {
+          "id": "mzbk-xdn8",
+          "createdAt": 1582043933,
+          "displayName": "DillingerZ",
+          "screenName": "DillingerZ",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "9bsj-heb7",
+          "createdAt": 1763672538,
+          "displayName": "OchoaR1@michigan.gov",
+          "profileImageUrlLarge": "/api/users/9bsj-heb7/profile_images/LARGE",
+          "profileImageUrlMedium": "/api/users/9bsj-heb7/profile_images/THUMB",
+          "profileImageUrlSmall": "/api/users/9bsj-heb7/profile_images/TINY",
+          "screenName": "OchoaR1@michigan.gov",
+          "teamId": 1787119,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": ["restorable", "restorePossibleForType"]
+  }
+]

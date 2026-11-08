@@ -1,0 +1,1097 @@
+[
+  {
+    "id": "jgjp-9nhw",
+    "name": "Earnings for Graduates by Strategic Sectors",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "education",
+    "createdAt": 1793993377,
+    "description": "This dataset provides the median earnings for graduates of postsecondary institutions in WA State, grouped by degree type, major, and strategic sector.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42741603,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793993842,
+    "publicationGroup": 20712045,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793993826,
+    "rowsUpdatedBy": "bvsx-y3xv",
+    "tableId": 20712045,
+    "totalTimesRated": 0,
+    "viewCount": 9,
+    "viewLastModified": 1793993842,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793993843,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7851450,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793993843,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793993843,
+          "failureCount": 0,
+          "startedAt": 1793993843,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "bvsx-y3xv",
+          "displayName": "Andrew Weller"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "Annual",
+          "Period of Time": "2007-2024"
+        },
+        "Notes": {
+          "1. ": "For a full list of FAQ, Terms/Definitions, please visit the source link.",
+          "2. ": "Key Industries: https://www.commerce.wa.gov/key-sectors/  (not all sectors available in this dataset)",
+          "3. ": "\tEarnings are inflation adjusted and reported in 2024 dollars."
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "bvsx-y3xv",
+      "displayName": "Andrew Weller",
+      "profileImageUrlLarge": "/api/users/bvsx-y3xv/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/bvsx-y3xv/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/bvsx-y3xv/profile_images/TINY",
+      "screenName": "Andrew Weller",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "bvsx-y3xv",
+      "displayName": "Andrew Weller",
+      "profileImageUrlLarge": "/api/users/bvsx-y3xv/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/bvsx-y3xv/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/bvsx-y3xv/profile_images/TINY",
+      "screenName": "Andrew Weller",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["p20w"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "nq2s-xxhe",
+    "name": "Earnings for Graduates by Industry",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "education",
+    "createdAt": 1793992722,
+    "description": "This dataset provides the median earnings for graduates of postsecondary institutions in WA State, grouped by degree type, major, and industry of employment.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42741538,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793993313,
+    "publicationGroup": 20712001,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793993292,
+    "rowsUpdatedBy": "bvsx-y3xv",
+    "tableId": 20712001,
+    "totalTimesRated": 0,
+    "viewCount": 13,
+    "viewLastModified": 1793993805,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793993314,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7851076,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793993314,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793993314,
+          "failureCount": 0,
+          "startedAt": 1793993314,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "bvsx-y3xv",
+          "displayName": "Andrew Weller"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "Annual",
+          "Period of Time": "2007-2024"
+        },
+        "Notes": {
+          "1. ": "For a full list of FAQ, Terms/Definitions, please visit the source link.",
+          "2. ": "Earnings are inflation adjusted and reported in 2024 dollars."
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "bvsx-y3xv",
+      "displayName": "Andrew Weller",
+      "profileImageUrlLarge": "/api/users/bvsx-y3xv/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/bvsx-y3xv/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/bvsx-y3xv/profile_images/TINY",
+      "screenName": "Andrew Weller",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "bvsx-y3xv",
+      "displayName": "Andrew Weller",
+      "profileImageUrlLarge": "/api/users/bvsx-y3xv/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/bvsx-y3xv/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/bvsx-y3xv/profile_images/TINY",
+      "screenName": "Andrew Weller",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["p20w"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "gmgy-gm47",
+    "name": "Earnings for Graduates by Institution",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "education",
+    "createdAt": 1793992058,
+    "description": "This dataset provides the median earnings for graduates of postsecondary institutions in WA State, grouped by degree type, major, and awarding institution.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 4,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42741525,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793992581,
+    "publicationGroup": 20711993,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793992566,
+    "rowsUpdatedBy": "bvsx-y3xv",
+    "tableId": 20711993,
+    "totalTimesRated": 0,
+    "viewCount": 17,
+    "viewLastModified": 1793993936,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793992582,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7851072,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793992582,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793992582,
+          "failureCount": 0,
+          "startedAt": 1793992582,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "bvsx-y3xv",
+          "displayName": "Andrew Weller"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "Annual",
+          "Period of Time": "2007-2024"
+        },
+        "Notes": {
+          "1. ": "For a full list of FAQ, Terms/Definitions, please visit the source link.",
+          "2. ": "Earnings are inflation adjusted and reported in 2024 dollars."
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "bvsx-y3xv",
+      "displayName": "Andrew Weller",
+      "profileImageUrlLarge": "/api/users/bvsx-y3xv/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/bvsx-y3xv/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/bvsx-y3xv/profile_images/TINY",
+      "screenName": "Andrew Weller",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "bvsx-y3xv",
+      "displayName": "Andrew Weller",
+      "profileImageUrlLarge": "/api/users/bvsx-y3xv/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/bvsx-y3xv/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/bvsx-y3xv/profile_images/TINY",
+      "screenName": "Andrew Weller",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["p20w"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "adxc-jmfp",
+    "name": "WaKIDS Data - Detailed Race and Ethnicity (2025-26)",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "education",
+    "createdAt": 1793836241,
+    "description": "This file includes statewide WaKIDS data by detailed race and detailed ethnicity from the 2025-26 school year. Data is at the state level and includes information the following student group types: all students, detailed race, and detailed ethnicity. Please review the notes below for more information. \n\nWaKIDS, the Washington Kindergarten Inventory of Developing Skills, includes an assessment that is administered during the first two months of kindergarten. Teachers observe students across six areas of development and learning; Social-Emotional, Physical, Language, Cognitive, Literacy and Math. While the only requirement for kindergarten is to be five years of age by August 31, children who demonstrate readiness in all six areas have a greater likelihood of success in kindergarten and beyond.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 4,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42732850,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793915550,
+    "publicationGroup": 20707433,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793915539,
+    "rowsUpdatedBy": "2dfp-z2i3",
+    "tableId": 20707433,
+    "totalTimesRated": 0,
+    "viewCount": 18,
+    "viewLastModified": 1793915550,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793915550,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7849174,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793915550,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793915550,
+          "failureCount": 0,
+          "startedAt": 1793915550,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "2dfp-z2i3",
+          "displayName": "Michelle Rogers"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "Detailed Race and Ethnicity Data Notes - WaKIDS.xlsx",
+          "assetId": "10b8915b-0f0d-431f-8c92-0cad0f192f8b",
+          "name": "Detailed Race and Ethnicity Data Notes - WaKIDS.xlsx"
+        },
+        {
+          "filename": "protecting-student-privacy-public-reporting_adav3_92023[1].pdf",
+          "assetId": "94638344-5585-4d3d-a9fe-b95d63aa5255",
+          "name": "protecting-student-privacy-public-reporting_adav3_92023[1].pdf"
+        }
+      ],
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "Once",
+          "Period of Time": "2025-26 School Year"
+        },
+        "Notes": {
+          "1. ": "To download data, please select the \"Export\" button on the top right of the screen and then select which format you'd like to save the data in.",
+          "2. ": "Please view the attached Detailed Race and Ethnicity Data Notes - WaKIDS for more detailed notes."
+        }
+      },
+      "rowLabel": "organization metric for a particular school year and student group",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "2dfp-z2i3",
+      "displayName": "Michelle Rogers",
+      "screenName": "Michelle Rogers",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "2dfp-z2i3",
+      "displayName": "Michelle Rogers",
+      "screenName": "Michelle Rogers",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "wakids",
+      "kindergarten",
+      "2026",
+      "ospi",
+      "k12",
+      "k-12",
+      "education",
+      "detailed race",
+      "detailed ethnicity"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "xmpd-gtrd",
+    "name": "Graduation Data - Detailed Race and Ethnicity (2024-25)",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "education",
+    "createdAt": 1793834566,
+    "description": "This file includes statewide Graduation data by detailed race and detailed ethnicity for the 2024-25 school year. This data is at the state level and includes counts and graduation rates of students by the following groups: all students, detailed race, and detailed ethnicity. Please review the notes below for more information and notes for downloading this data.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 5,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42732820,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793915442,
+    "publicationGroup": 20707407,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793915421,
+    "rowsUpdatedBy": "2dfp-z2i3",
+    "tableId": 20707407,
+    "totalTimesRated": 0,
+    "viewCount": 26,
+    "viewLastModified": 1793915442,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793915443,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7849168,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793915443,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793915443,
+          "failureCount": 0,
+          "startedAt": 1793915443,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "2dfp-z2i3",
+          "displayName": "Michelle Rogers"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "Detailed Race and Ethnicity Data Notes - Graduation.xlsx",
+          "assetId": "075ee9ad-c746-42e4-8737-6e46d9f1a09c",
+          "name": "Detailed Race and Ethnicity Data Notes - Graduation.xlsx"
+        },
+        {
+          "filename": "protecting-student-privacy-public-reporting_adav3_92023[1].pdf",
+          "assetId": "b310d11b-e261-429a-80c7-8b8d015bb0a8",
+          "name": "protecting-student-privacy-public-reporting_adav3_92023[1].pdf"
+        }
+      ],
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "Once",
+          "Period of Time": "2024-25 School Year"
+        },
+        "Notes": {
+          "1. ": "To download data, please select the \"Export\" button on the top right of the screen and then select which format you'd like to save the data in.",
+          "2. ": "Please view the attached Detailed Race and Ethnicity Data Notes - Graduation for more detailed notes."
+        }
+      },
+      "rowLabel": "organization by student group and cohort",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "2dfp-z2i3",
+      "displayName": "Michelle Rogers",
+      "screenName": "Michelle Rogers",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "2dfp-z2i3",
+      "displayName": "Michelle Rogers",
+      "screenName": "Michelle Rogers",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "graduation",
+      "2025",
+      "ospi",
+      "k12",
+      "k-12",
+      "education",
+      "detailed race",
+      "detailed ethnicity"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "s48z-66eq",
+    "name": "Assessment Data - Detailed Race and Ethnicity (2025-26)",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "education",
+    "createdAt": 1793833668,
+    "description": "This file includes statewide assessment data by detailed race and detailed ethnicity from the 2025-26 school year. Data is at the state level and includes counts of students by the following groups: all students, detailed race, and detailed ethnicity. Please review the notes below for more information.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 5,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42732804,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793915354,
+    "publicationGroup": 20707392,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793915343,
+    "rowsUpdatedBy": "2dfp-z2i3",
+    "tableId": 20707392,
+    "totalTimesRated": 0,
+    "viewCount": 31,
+    "viewLastModified": 1793915354,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793915354,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7849166,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793915355,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793915355,
+          "failureCount": 0,
+          "startedAt": 1793915355,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "2dfp-z2i3",
+          "displayName": "Michelle Rogers"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "Detailed Race and Ethnicity Data Notes - Assessment.xlsx",
+          "assetId": "fe0ea8c6-d4cd-4aae-9ef9-fb46fcdad129",
+          "name": "Detailed Race and Ethnicity Data Notes - Assessment.xlsx"
+        },
+        {
+          "filename": "protecting-student-privacy-public-reporting_adav3_92023[1].pdf",
+          "assetId": "5742b768-41cc-4cc1-9b5a-0d334aa30158",
+          "name": "protecting-student-privacy-public-reporting_adav3_92023[1].pdf"
+        },
+        {
+          "filename": "2026-report-card-assessment-change-qa[1].pdf",
+          "assetId": "f1897956-7154-4647-8aca-c67e3754ece7",
+          "name": "2026-report-card-assessment-change-qa[1].pdf"
+        }
+      ],
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "Once",
+          "Period of Time": "2025-26 School Year"
+        },
+        "Notes": {
+          "1. ": "To download data, please select the \"Export\" button on the top right of the screen and then select which format you'd like to save the data in.",
+          "2. ": "Please view the attached Detailed Race and Ethnicity Data Notes - Assessment for more detailed notes.",
+          "3. ": "Please review the 2026-report-card-assessment-change-qa.pdf to learn about the changes to assessment reporting."
+        }
+      },
+      "rowLabel": "single organization (state) by grade level and student group",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "2dfp-z2i3",
+      "displayName": "Michelle Rogers",
+      "screenName": "Michelle Rogers",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "2dfp-z2i3",
+      "displayName": "Michelle Rogers",
+      "screenName": "Michelle Rogers",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "assessment",
+      "2026",
+      "ospi",
+      "k12",
+      "k-12",
+      "education",
+      "detailed race",
+      "detailed ethnicity"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "qwhg-k47s",
+    "name": "Status",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Public Safety",
+    "createdAt": 1792020384,
+    "description": "As a condition of employment, all Washington peace and corrections officers are required to obtain certification. The commission may deny, suspend, or revoke the certification of an officer who has been found of misconduct outlined in RCW 43.101.105.\n\nReports of misconduct come to the attention of commission. The certification division reviews the case, conducts an investigation, and if the alleged misconduct meets the burden of proof, the commission shall provide the officer with written notice and a hearing. \n\nOutcomes of all cases are presented here as mandated by RCW 43.101.400 (4). The dataset is searchable, machine readable and exportable. Supporting documents are viewable for each closed case.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 6,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "r5ki-dmfz",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42665294,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792020497,
+    "publicationGroup": 18694058,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793810449,
+    "rowsUpdatedBy": "xym5-3zty",
+    "tableId": 20673361,
+    "totalTimesRated": 0,
+    "viewCount": 76,
+    "viewLastModified": 1792020497,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1792020497,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7801606,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792020497,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792020498,
+          "failureCount": 0,
+          "startedAt": 1792020497,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "xym5-3zty",
+          "displayName": "Washington State Criminal Justice Training Commission"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "Twice Monthly",
+          "Period of Time": "2002 to present "
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "xym5-3zty",
+      "displayName": "Washington State Criminal Justice Training Commission",
+      "profileImageUrlLarge": "/api/users/xym5-3zty/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/xym5-3zty/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/xym5-3zty/profile_images/TINY",
+      "screenName": "Washington State Criminal Justice Training Commission",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "xym5-3zty",
+      "displayName": "Washington State Criminal Justice Training Commission",
+      "profileImageUrlLarge": "/api/users/xym5-3zty/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/xym5-3zty/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/xym5-3zty/profile_images/TINY",
+      "screenName": "Washington State Criminal Justice Training Commission",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["police"],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "pffd-a724",
+    "name": "Checklist for Assembling a List of Your Agency’s Public Data",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Open Data Program Documentation",
+    "createdAt": 1790644191,
+    "description": "Agency Open Data Advisor's can download this checklist to track their progress with looking for their agency's already-published open data to comply with state IT Policy DATA-01. This checklist accompanies the story https://data.wa.gov/stories/s/5ywn-9pdj.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 71,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42613723,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790644920,
+    "publicationGroup": 20640848,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790644909,
+    "rowsUpdatedBy": "4cxz-92zj",
+    "tableId": 20640848,
+    "totalTimesRated": 0,
+    "viewCount": 88,
+    "viewLastModified": 1790644920,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1790645694,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7765137,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790645694,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790645694,
+          "failureCount": 0,
+          "startedAt": 1790645694,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "4cxz-92zj",
+          "displayName": "Open Data Program"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "as needed",
+          "Period of Time": "N/A"
+        },
+        "Identification": {
+          "Originator": "State of Washington Open Data Program",
+          "Metadata Language": "English"
+        }
+      },
+      "rowLabel": "step",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "4cxz-92zj",
+      "displayName": "Open Data Program",
+      "profileImageUrlLarge": "/api/users/4cxz-92zj/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/4cxz-92zj/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/4cxz-92zj/profile_images/TINY",
+      "screenName": "Open Data Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "4cxz-92zj",
+      "displayName": "Open Data Program",
+      "profileImageUrlLarge": "/api/users/4cxz-92zj/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/4cxz-92zj/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/4cxz-92zj/profile_images/TINY",
+      "screenName": "Open Data Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["publishing guidance"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "5ywn-9pdj",
+    "name": "Steps for Assembling a List of Your Agency’s Public Data",
+    "assetType": "story",
+    "averageRating": 0,
+    "category": "Open Data Program Documentation",
+    "createdAt": 1790637302,
+    "description": "Directions for agency Open Data Stewards to create a list of their agencies' already published data that cannot be found on data.wa.gov, geo.wa.gov, or fiscal.wa.gov. Creating and publishing this list meets the state IT Policy DATA-01 requirement to publish a list of already-published data by October 1, 2027.",
+    "diciBackend": false,
+    "displayType": "story",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42613678,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790644138,
+    "publicationGroup": 20640809,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790637302,
+    "tableId": 20640809,
+    "totalTimesRated": 0,
+    "viewCount": 118,
+    "viewLastModified": 1792437352,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1790645738,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7765138,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790645738,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790645738,
+          "failureCount": 0,
+          "startedAt": 1790645738,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "4cxz-92zj",
+          "displayName": "Open Data Program"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "as needed",
+          "Period of Time": "N/A"
+        },
+        "Identification": {
+          "Originator": "State of Washington Open Data Program",
+          "Metadata Language": "English"
+        }
+      },
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "4cxz-92zj",
+      "displayName": "Open Data Program",
+      "profileImageUrlLarge": "/api/users/4cxz-92zj/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/4cxz-92zj/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/4cxz-92zj/profile_images/TINY",
+      "screenName": "Open Data Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "4cxz-92zj",
+      "displayName": "Open Data Program",
+      "profileImageUrlLarge": "/api/users/4cxz-92zj/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/4cxz-92zj/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/4cxz-92zj/profile_images/TINY",
+      "screenName": "Open Data Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["publishing guidance", "cataloging guidance"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "isap-fnma",
+    "name": "Tags Guidance for Data.wa.gov Publishers",
+    "assetType": "story",
+    "averageRating": 0,
+    "category": "Open Data Program Documentation",
+    "createdAt": 1789576943,
+    "description": "This page provides tips to data.wa.gov publishers for choosing the most effective tags for data publications. It includes specific guidance for External Links, where tags play an especially important role in anticipating search terms.",
+    "diciBackend": false,
+    "displayType": "story",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42540426,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1789577635,
+    "publicationGroup": 20602266,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1789576943,
+    "tableId": 20602266,
+    "totalTimesRated": 0,
+    "viewCount": 129,
+    "viewLastModified": 1792437868,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1789596167,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7714857,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789596167,
+        "targetAudience": "public",
+        "workflowId": 2106,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789596167,
+          "failureCount": 0,
+          "startedAt": 1789596167,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "v4iv-qfyh",
+          "displayName": "Washington State Open Data Program"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "custom_fields": {
+        "Temporal": {
+          "Posting Frequency": "as needed",
+          "Period of Time": "20260916 to present"
+        },
+        "Identification": {
+          "Metadata Language": "English"
+        }
+      },
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "v4iv-qfyh",
+      "displayName": "Washington State Open Data Program",
+      "profileImageUrlLarge": "/api/users/v4iv-qfyh/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/v4iv-qfyh/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/v4iv-qfyh/profile_images/TINY",
+      "screenName": "Washington State Open Data Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "v4iv-qfyh",
+      "displayName": "Washington State Open Data Program",
+      "profileImageUrlLarge": "/api/users/v4iv-qfyh/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/v4iv-qfyh/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/v4iv-qfyh/profile_images/TINY",
+      "screenName": "Washington State Open Data Program",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["publishing guidance", "external links", "cataloging guidance"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

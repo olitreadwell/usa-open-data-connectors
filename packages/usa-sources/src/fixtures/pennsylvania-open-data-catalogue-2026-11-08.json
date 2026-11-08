@@ -1,0 +1,1218 @@
+[
+  {
+    "id": "85a7-fr6c",
+    "name": "Mine Subsidence Insurance Risk (Possible) Current Statewide Environmental Protection",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "Energy and the Environment",
+    "createdAt": 1790882559,
+    "description": "Represents areas in Pennsylvania that are located over or near known deposits of mineable coal. The Department does not have easily accessible records confirming whether or not these areas have been mined.\n\nThis layer represents areas in Pennsylvania that are located over or near known deposits of mineable coal. However, the Department does not have easily accessible records confirming whether or not these areas have been mined. Locations where mining has been determined not to have occurred may have been removed from this layer.\n\nThe Department offers Mine Subsidence Insurance coverage for any structures located within these areas, provided the structure meets other program requirements. More information is available at: www.dep.pa.gov/msi.\n\nThis layer was developed for use in the MSI Risk Webmap: https://gis.dep.pa.gov/msiRisk/.• View the data dictionary here: https://gis.dep.pa.gov/datadictionary/Mine%20Subsidence%20Insurance%20(MSI)/MSI%20Mine%20Subsidence%20Insurance%20Risk%20Mining%20(Possible).pdf",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42623357,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790882723,
+    "publicationGroup": 20645972,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790882559,
+    "tableId": 20645972,
+    "totalTimesRated": 0,
+    "viewCount": 66,
+    "viewLastModified": 1790882723,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790882748,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7771494,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790882739,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790882748,
+          "failureCount": 0,
+          "startedAt": 1790882748,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "Click here for Mine Subsidence Risk (Possible) data": "https://newdata-padep-1.opendata.arcgis.com/datasets/c21ec1d8a6fd4584836e50040012f84c/about"
+          },
+          "title": "Mine Subsidence Insurance Risk (Possible)"
+        }
+      ],
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Daily",
+          "Business Owner": "Department of Environmental Protection (DEP)"
+        }
+      },
+      "accessPoints": {
+        "Click here for Mine Subsidence Risk (Possible) data": "https://newdata-padep-1.opendata.arcgis.com/datasets/c21ec1d8a6fd4584836e50040012f84c/about"
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "mine",
+      "coal",
+      "mining",
+      "subsidence",
+      "environmental",
+      "protection",
+      "dep",
+      "insurance",
+      "gis",
+      "geo",
+      "spatial",
+      "geospatial"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "6j2t-mkrs",
+    "name": "Mine Subsidence Insurance Risk (Confirmed) Current Statewide Environmental Protection",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "Energy and the Environment",
+    "createdAt": 1790882204,
+    "description": "Areas in Pennsylvania that are known to have been undermined/near an undermined area due to coal/clay mining activity in the general vicinity. These areas are currently considered susceptible to mine subsidence.\n\nThis layer represents areas in Pennsylvania that are known to have been undermined or are near an undermined area due to coal and/or clay mining activity in the general vicinity. Additionally, the layer includes locations beneath mined outcrops that may be vulnerable to mine water outbreaks.\n\nMining activity in these areas has been confirmed through a mine map depicting underground workings, a reference source indicating the area was mined, or a subsidence investigation determining the area was mined.\n\nThe Department recommends Mine Subsidence Insurance coverage for any structures located within these areas, provided the structure meets other program requirements. More information is available at: www.dep.pa.gov/msi.\n\nThis layer was developed for use in the MSI Risk Webmap: https://gis.dep.pa.gov/msiRisk/",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42623348,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790882474,
+    "publicationGroup": 20645964,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790882204,
+    "tableId": 20645964,
+    "totalTimesRated": 0,
+    "viewCount": 58,
+    "viewLastModified": 1793818047,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790882517,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7771493,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790882484,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790882518,
+          "failureCount": 0,
+          "startedAt": 1790882518,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "Click here for Mine Subsidence Risk (Confirmed) data": "https://newdata-padep-1.opendata.arcgis.com/datasets/a27ea281fa4e4b8f859074156490a837/about"
+          },
+          "title": "MSI Mine Subsidence Risk (Confirmed)"
+        }
+      ],
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Daily",
+          "Business Owner": "Department of Environmental Protection (DEP)"
+        }
+      },
+      "accessPoints": {
+        "Click here for Mine Subsidence Risk (Confirmed) data": "https://newdata-padep-1.opendata.arcgis.com/datasets/a27ea281fa4e4b8f859074156490a837/about"
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "mine",
+      "susidence",
+      "coal",
+      "mining",
+      "dep",
+      "environmental",
+      "protection",
+      "gis",
+      "geospatial",
+      "spatial",
+      "geo",
+      "insurance"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "xsw2-kfdv",
+    "name": "Mining Permits Bituminous Underground Active Current Statewide Environmental Protection",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "Energy and the Environment",
+    "createdAt": 1790881767,
+    "description": "The purpose of this dataset is to provide DEP staff and other environmental professionals with a spatially referenced dataset of underground permit area boundaries of active bituminous coal mines in Pennsylvania. \n\nPennsylvania state law requires those who wish to conduct mining activities within the Commonwealth submit and get approval by the Pennsylvania Department of Environmental Protection (DEP) for permits related to those activities. \nThese permits are written to cover various aspects of the mining operations, such as: reclamation, water quality protection, air quality protection, waste disposal and mine subsidence control. \nThe DEP California District Office reviews permit applications related to Bituminous coal underground mining. Module 6.1 of the Application for a Bituminous Underground Mine requires a Location Map be submitted with the permit. \nThe Location Map should be a 7.5 Minute USGS map covering the area within one (1) mile of the underground permit area boundaries. This dataset contains the digitized underground permit area boundaries of the active underground bituminous mines.",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42623327,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790882128,
+    "publicationGroup": 20645961,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790881767,
+    "tableId": 20645961,
+    "totalTimesRated": 0,
+    "viewCount": 74,
+    "viewLastModified": 1790882128,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790882169,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7771489,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790882159,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790882169,
+          "failureCount": 0,
+          "startedAt": 1790882169,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "Click here for Mining Permits Bituminous Underground data": "https://newdata-padep-1.opendata.arcgis.com/datasets/PADEP-1::dmo-mining-permits-bituminous-underground-active/about"
+          },
+          "title": "Mining Permits Bituminous Underground"
+        }
+      ],
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Daily",
+          "Business Owner": "Department of Environmental Protection (DEP)"
+        }
+      },
+      "accessPoints": {
+        "Click here for Mining Permits Bituminous Underground data": "https://newdata-padep-1.opendata.arcgis.com/datasets/PADEP-1::dmo-mining-permits-bituminous-underground-active/about"
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "mine",
+      "mining",
+      "permit",
+      "bituminous",
+      "underground",
+      "dep",
+      "air",
+      "quality",
+      "waste",
+      "disposal",
+      "subsidence",
+      "environment",
+      "coal"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "i7k8-fce3",
+    "name": "Mine Shaft Entries Coal Underground Current Statewide Environmental Protection",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "Energy and the Environment",
+    "createdAt": 1790881342,
+    "description": "This dataset identifies the known shafts and entries of underground coal mines in Pennsylvania.\n\nCoal mining has occurred in Pennsylvania for over a century. This dataset tries to identify the location of shafts and entries into underground coal mines in Pennsylvania. \nThis information can be used for many environmental related issues, including mine land reclamation and determination of needs for Mine Subsidence Insurance. \nThe information in this dataset was gathered from digitizing the location of shafts and entries identified on historic and modern underground mine maps. The maps to these coal mines are stored at many various public and private locations (if they still exist at all) throughout the commonwealth, they have been scanned to create a digital archive, and georeferenced to their approximate location for use in a geographic information system (GIS). \nThe dataset is continuously updated as new maps are processed and is not considered “completed”, i.e. just because a mine entry in Pennsylvania is not identified in this dataset, does not mean one does not exist.",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42623315,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790881581,
+    "publicationGroup": 20645949,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790881342,
+    "tableId": 20645949,
+    "totalTimesRated": 0,
+    "viewCount": 64,
+    "viewLastModified": 1790881581,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790881692,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7771467,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790881685,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790881692,
+          "failureCount": 0,
+          "startedAt": 1790881692,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "Click here for DMO Coal MIne Shaft Entries data": "https://newdata-padep-1.opendata.arcgis.com/datasets/PADEP-1::dmo-coal-mine-shaft-entries/about"
+          },
+          "title": "Coal Mine Shaft Entries"
+        }
+      ],
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Daily",
+          "Business Owner": "Department of Environmental Protection (DEP)"
+        }
+      },
+      "accessPoints": {
+        "Click here for DMO Coal MIne Shaft Entries data": "https://newdata-padep-1.opendata.arcgis.com/datasets/PADEP-1::dmo-coal-mine-shaft-entries/about"
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "mine",
+      "shaft",
+      "environment",
+      "protection",
+      "dep",
+      "underground",
+      "mining",
+      "gis",
+      "geo",
+      "geospatial",
+      "spatial",
+      "subsidence",
+      "insurance"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "836u-f79e",
+    "name": "Mined Out Area Coal Underground Current Statewide Environmental Protection",
+    "assetType": "href",
+    "averageRating": 0,
+    "category": "Energy and the Environment",
+    "createdAt": 1790880925,
+    "description": "This dataset identifies the known extent of the area within underground mines where coal has been extracted in Pennsylvania.\n\nCoal mining has occurred in Pennsylvania for over a century. This dataset tries to identify the areas of the various coal seams in Pennsylvania that have been extracted by various underground mining techniques. \nThis information can be used for many environmental related issues, including mine land reclamation and determination of needs for Mine Subsidence Insurance. \nThe information in this dataset was gathered from digitizing the area of extracted coal identified on historic and modern underground mine maps. The maps to these coal mines are stored at many various public and private locations (if they still exist at all) throughout the commonwealth, they have been scanned to create a digital archive, and georeferenced to their approximate location for use in a geographic information system (GIS). \nThe dataset is continuously updated as new maps are processed and is not considered “completed”, i.e. just because an area in Pennsylvania is not identified in this dataset as mined, does not mean the area was not mined.",
+    "diciBackend": false,
+    "displayType": "href",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42623186,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1790881250,
+    "publicationGroup": 20645948,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1790880925,
+    "tableId": 20645948,
+    "totalTimesRated": 0,
+    "viewCount": 55,
+    "viewLastModified": 1790881250,
+    "viewType": "href",
+    "approvals": [
+      {
+        "reviewedAt": 1790881295,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7771463,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1790881276,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1790881295,
+          "failureCount": 0,
+          "startedAt": 1790881295,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "additionalAccessPoints": [
+        {
+          "urls": {
+            "Click here for Mined out Area Coal Underground data": "https://newdata-padep-1.opendata.arcgis.com/datasets/PADEP-1::dmo-mined-out-area-coal-underground-moa/about"
+          },
+          "title": "Mined Out Area Coal Underground"
+        }
+      ],
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Daily",
+          "Business Owner": "Department of Environmental Protection (DEP)"
+        }
+      },
+      "accessPoints": {
+        "Click here for Mined out Area Coal Underground data": "https://newdata-padep-1.opendata.arcgis.com/datasets/PADEP-1::dmo-mined-out-area-coal-underground-moa/about"
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "energy",
+      "environment",
+      "mining",
+      "mine",
+      "coal",
+      "underground",
+      "dep",
+      "moa",
+      "subsidence",
+      "insurance",
+      "geo",
+      "gis",
+      "geospatial",
+      "spatial"
+    ],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "nbwd-pfn4",
+    "name": "2026 General Election Mail Ballot Requests Department of State",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Government Efficiency & Citizen Engagement",
+    "createdAt": 1788957024,
+    "description": "This dataset describes the current state of mail ballot requests for the 2026 General Election. It’s a <B>snapshot in time</B> of the current volume of ballot requests across the Commonwealth. The file contains all mail ballot requests except ballot applications that are declined as duplicate. \n\nThis point-in-time transactional data is being published for informational purposes to provide detailed data pertaining to the processing of absentee and mail-in ballots by county election offices. This data is extracted once per day from the Statewide Uniform Registry of Electors (SURE system), and it reflects activity recorded by the counties in the SURE system at the time of the data extraction.\n\nPlease note that county election offices will continue to process ballot applications (as applicable), record ballots, reconcile ballot data, and make corrections when necessary, and this will continue through, and even after, Election Day. Administrative practices for recording transactions in the system will vary by county. For example, some counties record individual transactions as they occur, while others record transactions in batches at specific intervals. These activities may result in substantial changes to a county's reported data from one day to the next. County practices also differ on when cancelled ballot data is entered into the database (i.e., before or after the election). Some counties do not enter cancelled ballot data entirely.\n\n<B>Additional notes specific to this dataset:</B>\n• Counties can enter cancellation codes without entering a ballot returned date.\n• Some cancellation codes are a result of administrative processes, meaning the ballot was never mailed to the voter before it was cancelled (e.g., there was an error when the label was printed).\n• Confidential and protected voters are not included in this file.\n• Counties can only enter one cancel code per ballot, even if there are multiple errors. Different counties may vary in what code they choose to use when this arises, or they may choose to use the catch-all category of 'CANC - OTHER'.\n• Counties may use ‘PEND’ codes as part of their notice and cure practice. These are usually converted to ‘CANC’ codes after the election. However, in situations where PEND codes remain after the election, these should be considered cancelled.\n• Columns and data codes included in this file have evolved over time. For example, for past elections (e.g., 2020), cancelled ballots were not included in the file. This may make it difficult to compare data from election to election. \n\n<B>Type of data included in this file:</B>\nThis data includes all mail ballot applications processed by counties, which includes voters on the permanent mail-in and absentee ballot lists. Multiple rows in this data may correspond to the same voter if they submitted more than one application or had a cancelled ballot(s). A deidentified voter ID has been provided to allow data users to identify when rows correspond to the same voter. This ID is randomized and cannot be used to match to SURE, the Full Voter Export, previous iterations of the Statewide Mail Ballot File.\n\nAll application types in this file are considered a type of mail ballot. Some of the applications are considered UOCAVA (Uniformed and Overseas Citizens Absentee Voting Act) or UMOVA (Uniform Military and Overseas Voters Act) ballots. These are listed below:\n\n• CRI - Civilian - Remote/Isolated\n• CVO - Civilian Overseas\n• F - Federal (Unregistered)\n• M - Military\n• MRI - Military - Remote/Isolated\n• V - Veteran\n• BV - Bedridden Veteran\n• BVRI - Bedridden Veteran - Remote/Isolated\n*We may not have all application types in the file for every election.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 683,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42484992,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1788960840,
+    "publicationGroup": 20571348,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793973957,
+    "rowsUpdatedBy": "jj6s-88tv",
+    "tableId": 20571348,
+    "totalTimesRated": 0,
+    "viewCount": 3227,
+    "viewLastModified": 1793730338,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1789067492,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7680495,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1789067387,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1789067492,
+          "failureCount": 0,
+          "startedAt": 1789067492,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Daily",
+          "Business Owner": "Department of State (DOS)"
+        }
+      },
+      "rowLabel": "Mail Ballot Request for 2026 General Election",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": ["ballot", "election", "geo", "dos", "state", "general", "mail", "vote", "gis"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "7p3d-7krv",
+    "name": "Chart - ACT 150 Program and OBRA Waiver Participants Employment CY2025 Human Services",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Employment First",
+    "createdAt": 1787770952,
+    "description": "This chart shows the Total Act 150 Program and OBRA Waiver participants counts are as defined in OLTL Standard Annual Legacy report  logic.\n\nParticipants Employed are those having earned income and number of hours worked during any singular month during 2025.\n\n<B>OBRA Waiver (Omnibus Budget Reconciliation Act Waiver)</B>\nThe OBRA Waiver is a Medicaid Home and Community-Based Services (HCBS) waiver that supports Pennsylvanians ages 18–59 with developmental physical disabilities, allowing them to live in the community rather than in institutional settings. Eligibility requires an Intermediate Care Facility/Other Related Conditions (ICF/ORC) level of care and meeting Medical Assistance financial criteria. Services may include employment support, personal assistance, habilitation, therapy, and other supports.\n\n<B>Key Details</B>\nOperated by the Pennsylvania Department of Human Services, Office of Long-Term Living (OLTL).\nServes individuals with severe developmental or physical disabilities, including some individuals with autism.\n\nProvides services such as: \n- job coaching\n- community integration\n- home modifications\n- therapy\n- transportation, and more.\n\n<B>Act 150 Program (Attendant Care Program)</B>\nThe Act 150 Program is a state-funded program providing in‑home care and support to Pennsylvanians aged 18–59 with physical disabilities who meet nursing facility clinical eligibility but are financially ineligible for Medicaid. It enables participants to live independently in their homes and communities, rather than institutional settings.\n\n<B>Key Details</B>\nAdministered by the Pennsylvania Department of Human Services, Office of Long‑Term Living (OLTL).\n\nParticipants must:\n- Be Pennsylvania residents\n- Be ages 18–59\n- Be clinically eligible for nursing facility level of care\n- Have a medically determinable physical disability lasting at least 12 months or longer\n- Be capable of hiring, firing, supervising attendant care workers, and managing their own care, legal, and financial affairs\n- Be financially ineligible for Medicaid HCBS waivers\n\nOffers services such as: \n- Personal assistance services (PAS)\n- Personal Emergency Response System (PERS)\n- Service coordination\n- Consumer-directed PAS and fiscal management services",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "jpvv-fghd",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42452265,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787945022,
+    "publicationGroup": 20544925,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1787770638,
+    "rowsUpdatedBy": "6jh9-ydjy",
+    "tableId": 20544925,
+    "totalTimesRated": 0,
+    "viewCount": 79,
+    "viewLastModified": 1787945022,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787945037,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7651913,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787945029,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787945037,
+          "failureCount": 0,
+          "startedAt": 1787945037,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Annually",
+          "Business Owner": "Department of Human Services (DHS)"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "employment",
+      "first",
+      "workforce",
+      "disability",
+      "human",
+      "services",
+      "oltl",
+      "dhs",
+      "living",
+      "long",
+      "term",
+      "obra",
+      "act",
+      "waiver"
+    ],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "jpvv-fghd",
+    "name": "ACT 150 and OBRA Participants Employment CY 2025 Human Services",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Employment First",
+    "createdAt": 1787770029,
+    "description": "Total Act 150 Program and OBRA Waiver participants counts are as defined in OLTL Standard Annual Legacy report  logic.\n\nParticipants Employed are those having earned income and number of hours worked during any singular month during 2025.\n\n<B>OBRA Waiver (Omnibus Budget Reconciliation Act Waiver)</B>\nThe OBRA Waiver is a Medicaid Home and Community-Based Services (HCBS) waiver that supports Pennsylvanians ages 18–59 with developmental physical disabilities, allowing them to live in the community rather than in institutional settings. Eligibility requires an Intermediate Care Facility/Other Related Conditions (ICF/ORC) level of care and meeting Medical Assistance financial criteria. Services may include employment support, personal assistance, habilitation, therapy, and other supports.\n\n<B>Key Details</B>\nOperated by the Pennsylvania Department of Human Services, Office of Long-Term Living (OLTL).\nServes individuals with severe developmental or physical disabilities, including some individuals with autism.\n\nProvides services such as: \n- job coaching\n- community integration\n- home modifications\n- therapy\n- transportation, and more.\n\n<B>Act 150 Program (Attendant Care Program)</B>\nThe Act 150 Program is a state-funded program providing in‑home care and support to Pennsylvanians aged 18–59 with physical disabilities who meet nursing facility clinical eligibility but are financially ineligible for Medicaid. It enables participants to live independently in their homes and communities, rather than institutional settings.\n\n<B>Key Details</B>\nAdministered by the Pennsylvania Department of Human Services, Office of Long‑Term Living (OLTL).\n\nParticipants must:\n- Be Pennsylvania residents\n- Be ages 18–59\n- Be clinically eligible for nursing facility level of care\n- Have a medically determinable physical disability lasting at least 12 months or longer\n- Be capable of hiring, firing, supervising attendant care workers, and managing their own care, legal, and financial affairs\n- Be financially ineligible for Medicaid HCBS waivers\n\nOffers services such as: \n- Personal assistance services (PAS)\n- Personal Emergency Response System (PERS)\n- Service coordination\n- Consumer-directed PAS and fiscal management services",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 8,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42443271,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787770650,
+    "publicationGroup": 20544925,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1787770638,
+    "rowsUpdatedBy": "6jh9-ydjy",
+    "tableId": 20544925,
+    "totalTimesRated": 0,
+    "viewCount": 87,
+    "viewLastModified": 1787855713,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787944888,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7651910,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787944870,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787944888,
+          "failureCount": 0,
+          "startedAt": 1787944888,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Annually",
+          "Business Owner": "Department of Human Services (DHS)"
+        }
+      },
+      "rowLabel": "Total Act 150 and OSP/OBRA Waiver participants counts",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "employment",
+      "first",
+      "commission",
+      "disability",
+      "workforce",
+      "oltl",
+      "human",
+      "services",
+      "dhs",
+      "long",
+      "term",
+      "living"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "rgjm-fcqy",
+    "name": "Chart - Barriers to Non - Working Participants Survey 2024 - Current Statewide Human Services",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Employment First",
+    "createdAt": 1787765282,
+    "description": "One of the EFOC 2025 report objectives for OLTL was to ask why participants choose not to work. \nThe objective is stated as follows:\n<B>Connection between Care Workers and Employment</B>\nDuring 2025-26, OLTL will conduct a study of HCBS participants to identify the key reasons they are not pursuing employment. \nThe EFOC will be involved in the study development, methodologies, goals, participant recruitment, etc.\n\nThis information was pulled from the Home and Community-Based Services (HCBS) Consumer Assessment of Healthcare Providers and Systems (CAHPS) survey. \n\n<B>Note:</B> The Employment First Oversight Commission (EFOC) is a state advisory group that ensures competitive, paying jobs in the regular workforce are the first and preferred choice for people with disabilities",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "mt8m-c75a",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42448303,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787856335,
+    "publicationGroup": 20544856,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1787763504,
+    "rowsUpdatedBy": "6jh9-ydjy",
+    "tableId": 20544856,
+    "totalTimesRated": 0,
+    "viewCount": 79,
+    "viewLastModified": 1787856335,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787945041,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7651911,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787944914,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787945041,
+          "failureCount": 0,
+          "startedAt": 1787945041,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Annually",
+          "Business Owner": "Department of Human Services (DHS)"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "employment",
+      "first",
+      "disability",
+      "workforce",
+      "recruitment",
+      "home",
+      "community",
+      "hcbs",
+      "consumer",
+      "health",
+      "care",
+      "provider",
+      "oltl",
+      "job",
+      "cahps",
+      "survey"
+    ],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "k3eu-bcic",
+    "name": "Chart - Barriers to Working Participants Survey 2024 - Current Statewide Human Services",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Employment First",
+    "createdAt": 1787765004,
+    "description": "One of the EFOC 2025 report objectives for OLTL was to ask why participants choose not to work. \nThe objective is stated as follows:\n<B>Connection between Care Workers and Employment</B>\nDuring 2025-26, OLTL will conduct a study of HCBS participants to identify the key reasons they are not pursuing employment. \nThe EFOC will be involved in the study development, methodologies, goals, participant recruitment, etc.\n\nThis information was pulled from the Home and Community-Based Services (HCBS) Consumer Assessment of Healthcare Providers and Systems (CAHPS) survey. \n\n<B>Note:</B> The Employment First Oversight Commission (EFOC) is a state advisory group that ensures competitive, paying jobs in the regular workforce are the first and preferred choice for people with disabilities.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "mt8m-c75a",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42448310,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1787856372,
+    "publicationGroup": 20544856,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1787763504,
+    "rowsUpdatedBy": "6jh9-ydjy",
+    "tableId": 20544856,
+    "totalTimesRated": 0,
+    "viewCount": 63,
+    "viewLastModified": 1787856372,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1787945039,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7651912,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1787944921,
+        "targetAudience": "public",
+        "workflowId": 2176,
+        "reviewer": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1787945039,
+          "failureCount": 0,
+          "startedAt": 1787945039,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "6jh9-ydjy",
+          "displayName": "Jere Matthews"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Data Management": {
+          "Update Frequency": "Annually",
+          "Business Owner": "Department of Human Services (DHS)"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "6jh9-ydjy",
+      "displayName": "Jere Matthews",
+      "profileImageUrlLarge": "/api/users/6jh9-ydjy/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/6jh9-ydjy/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/6jh9-ydjy/profile_images/TINY",
+      "screenName": "Jere Matthews",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "tags": [
+      "employment",
+      "first",
+      "workforce",
+      "disability",
+      "efoc",
+      "oltl",
+      "cahps",
+      "survey",
+      "care",
+      "workers",
+      "recruitment",
+      "health",
+      "provider",
+      "consumer",
+      "hcbs",
+      "job"
+    ],
+    "flags": ["ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

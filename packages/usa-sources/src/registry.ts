@@ -1,7 +1,9 @@
 import { blsUnemploymentAdapter } from './blsSeries.js';
 import { btsTransportationStatsAdapter } from './btsTransportationStats.js';
+import { californiaOpenDataCatalogueAdapter } from './californiaOpenDataCatalogue.js';
 import { callookCallsignsAdapter } from './callookCallsigns.js';
 import { chicagoOpenDataCatalogueAdapter } from './chicagoOpenDataCatalogue.js';
+import { coloradoOpenDataCatalogueAdapter } from './coloradoOpenDataCatalogue.js';
 import { collegeScorecardInstitutionsAdapter } from './collegeScorecardInstitutions.js';
 import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
@@ -11,15 +13,22 @@ import { fccSocrataCatalogueAdapter } from './fccSocrataCatalogue.js';
 import { federalRegisterDocumentsAdapter } from './federalRegisterDocuments.js';
 import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
 import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
+import { illinoisOpenDataCatalogueAdapter } from './illinoisOpenDataCatalogue.js';
+import { losAngelesOpenDataCatalogueAdapter } from './losAngelesOpenDataCatalogue.js';
+import { michiganOpenDataCatalogueAdapter } from './michiganOpenDataCatalogue.js';
 import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
+import { newJerseyOpenDataCatalogueAdapter } from './newJerseyOpenDataCatalogue.js';
 import { nihReporterProjectsAdapter } from './nihReporterProjects.js';
 import { nhtsaVehicleModelsAdapter } from './nhtsaVehicleModels.js';
 import { nycOpenDataCatalogueAdapter } from './nycOpenDataCatalogue.js';
 import { nyStateOpenDataCatalogueAdapter } from './nyStateOpenDataCatalogue.js';
+import { oregonOpenDataCatalogueAdapter } from './oregonOpenDataCatalogue.js';
+import { pennsylvaniaOpenDataCatalogueAdapter } from './pennsylvaniaOpenDataCatalogue.js';
 import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
 import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
 import { seattleOpenDataCatalogueAdapter } from './seattleOpenDataCatalogue.js';
+import { sanFranciscoOpenDataCatalogueAdapter } from './sanFranciscoOpenDataCatalogue.js';
 import { texasOpenDataCatalogueAdapter } from './texasOpenDataCatalogue.js';
 import { treasuryDebtToPennyAdapter } from './treasuryDebtToPenny.js';
 import { usaspendingAgenciesAdapter } from './usaspendingAgencies.js';
@@ -34,6 +43,8 @@ import { openFdaFoodRecallsAdapter } from './openFdaFoodRecalls.js';
 import { treasuryAvgInterestRateAdapter } from './treasuryAvgInterestRate.js';
 import { usgsHawaiiEarthquakesAdapter } from './usgsEarthquakes.js';
 import { usgsPeakStreamflowAdapter } from './usgsPeakStreamflow.js';
+import { vermontOpenDataCatalogueAdapter } from './vermontOpenDataCatalogue.js';
+import { washingtonStateOpenDataCatalogueAdapter } from './washingtonStateOpenDataCatalogue.js';
 import { normalizeSourceApiKey } from './apiKey.js';
 import type { UsDataAdapter, UsFetchOptions, UsSourceProbe } from './types.js';
 
@@ -75,6 +86,17 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   chicagoOpenDataCatalogueAdapter,
   seattleOpenDataCatalogueAdapter,
   texasOpenDataCatalogueAdapter,
+  coloradoOpenDataCatalogueAdapter,
+  washingtonStateOpenDataCatalogueAdapter,
+  michiganOpenDataCatalogueAdapter,
+  oregonOpenDataCatalogueAdapter,
+  pennsylvaniaOpenDataCatalogueAdapter,
+  illinoisOpenDataCatalogueAdapter,
+  newJerseyOpenDataCatalogueAdapter,
+  vermontOpenDataCatalogueAdapter,
+  losAngelesOpenDataCatalogueAdapter,
+  sanFranciscoOpenDataCatalogueAdapter,
+  californiaOpenDataCatalogueAdapter,
 ];
 
 /** Looks up a source adapter by id. */

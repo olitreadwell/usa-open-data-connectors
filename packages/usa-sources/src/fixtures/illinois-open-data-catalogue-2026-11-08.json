@@ -1,0 +1,1446 @@
+[
+  {
+    "id": "hswm-jvu8",
+    "name": "Pest Control Approved CEU",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health and Human Services",
+    "createdAt": 1783528796,
+    "description": "Approved Continuing Education Courses for Structural Pest Control",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 20,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42271854,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1783536285,
+    "publicationGroup": 20454369,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1783536938,
+    "rowsUpdatedBy": "gfzi-8zzm",
+    "tableId": 20454369,
+    "totalTimesRated": 0,
+    "viewCount": 62,
+    "viewLastModified": 1783536938,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1783536421,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7561017,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1783536368,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1783536421,
+          "failureCount": 0,
+          "startedAt": 1783536421,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "gfzi-8zzm",
+          "displayName": "Ryan Rebbe"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Organizations": {
+          "Organization": "Department of Public Health"
+        },
+        "Data Management": {
+          "Maintainer": "IDPH Environmental Health",
+          "Maintainer Email": "dph.pestcontrol@illinois.gov"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "chex-8xrr",
+      "createdAt": 1783451590,
+      "displayName": "DPH - Structural Pest Control",
+      "screenName": "DPH - Structural Pest Control",
+      "type": "team",
+      "members": [
+        {
+          "id": "gfzi-8zzm",
+          "createdAt": 1783441895,
+          "displayName": "Ryan Rebbe",
+          "screenName": "Ryan Rebbe",
+          "teamId": 1814293,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "chex-8xrr",
+      "createdAt": 1783451590,
+      "displayName": "DPH - Structural Pest Control",
+      "screenName": "DPH - Structural Pest Control",
+      "type": "team",
+      "members": [
+        {
+          "id": "gfzi-8zzm",
+          "createdAt": 1783441895,
+          "displayName": "Ryan Rebbe",
+          "screenName": "Ryan Rebbe",
+          "teamId": 1814293,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["pest control", "continuing education"],
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "vrj6-s5en",
+    "name": "Pest Control Exam Calendar",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health and Human Services",
+    "createdAt": 1783452855,
+    "description": "Licensing exam schedule for General Use and Restricted.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 13,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42269658,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1783453760,
+    "publicationGroup": 20453128,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1783453999,
+    "rowsUpdatedBy": "gfzi-8zzm",
+    "tableId": 20453128,
+    "totalTimesRated": 0,
+    "viewCount": 71,
+    "viewLastModified": 1783536764,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1783454074,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7559545,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1783454045,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1783454074,
+          "failureCount": 0,
+          "startedAt": 1783454074,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "gfzi-8zzm",
+          "displayName": "Ryan Rebbe"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Organizations": {
+          "Organization": "Department of Public Health"
+        },
+        "Data Management": {
+          "Maintainer": "IDPH Environmental Health",
+          "Maintainer Email": "dph.pestcontrol@illinois.gov"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "chex-8xrr",
+      "createdAt": 1783451590,
+      "displayName": "DPH - Structural Pest Control",
+      "screenName": "DPH - Structural Pest Control",
+      "type": "team",
+      "members": [
+        {
+          "id": "gfzi-8zzm",
+          "createdAt": 1783441895,
+          "displayName": "Ryan Rebbe",
+          "screenName": "Ryan Rebbe",
+          "teamId": 1814293,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "chex-8xrr",
+      "createdAt": 1783451590,
+      "displayName": "DPH - Structural Pest Control",
+      "screenName": "DPH - Structural Pest Control",
+      "type": "team",
+      "members": [
+        {
+          "id": "gfzi-8zzm",
+          "createdAt": 1783441895,
+          "displayName": "Ryan Rebbe",
+          "screenName": "Ryan Rebbe",
+          "teamId": 1814293,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "tags": ["pest control", "test dates"],
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "avh8-5dny",
+    "name": "Non-Cook County Real Estate Transfer Declarations",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Government and Public Employees",
+    "createdAt": 1779472503,
+    "description": "Contains all PTAX-203, -203-A, and -203-B records filed with the Illinois Department of Revenue since January 1, 2025, updated weekly.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 112,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "kpdj-zmhb",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42165114,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779478859,
+    "publicationGroup": 19908244,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793534525,
+    "rowsUpdatedBy": "rrdi-inip",
+    "tableId": 20389504,
+    "totalTimesRated": 0,
+    "viewCount": 207,
+    "viewLastModified": 1779478859,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1779472773,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7492117,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779472753,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779472773,
+          "failureCount": 0,
+          "startedAt": 1779472773,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Organizations": {
+          "Organization": "Department of Revenue"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "mku9-hpku",
+      "createdAt": 1779472930,
+      "displayName": "State Data Practice",
+      "screenName": "State Data Practice",
+      "type": "team",
+      "members": [
+        {
+          "id": "rrdi-inip",
+          "createdAt": 1702669670,
+          "displayName": "Kyri Kalpakidis",
+          "screenName": "Kyri Kalpakidis",
+          "teamId": 1805034,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "r8f2-d2f5",
+      "createdAt": 1726769441,
+      "displayName": "Department of Revenue",
+      "screenName": "Department of Revenue",
+      "type": "team",
+      "members": [
+        {
+          "id": "xynw-4hr2",
+          "createdAt": 1743515955,
+          "displayName": "Darren Hackett",
+          "screenName": "Darren Hackett",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "ea7e-mmau",
+          "createdAt": 1723487056,
+          "displayName": "David B",
+          "screenName": "David B",
+          "teamId": 1679010,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "dzhj-t7sg",
+          "createdAt": 1743514877,
+          "displayName": "Mark.Franklin",
+          "screenName": "Mark.Franklin",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "327i-sqr8",
+          "createdAt": 1744921763,
+          "displayName": "Scott Larson",
+          "screenName": "Scott Larson",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "f429-64sr",
+          "createdAt": 1723488283,
+          "displayName": "ShirishB",
+          "screenName": "ShirishB",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": ["federated", "internalToPublicFederatedView", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "dsw8-xt6c",
+    "name": "Top Personal Property Transfers",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Government and Public Employees",
+    "createdAt": 1779311140,
+    "description": "Personal property (jewelry, collectibles, etc.) whose value is included as part of the Full Actual Consideration listed on a PTAX-203, -203A, or -203B declaration in the PTAX-203 data set.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 4,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "b46z-jwev",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42158213,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779378946,
+    "publicationGroup": 19849150,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793534407,
+    "rowsUpdatedBy": "rrdi-inip",
+    "tableId": 19981200,
+    "totalTimesRated": 0,
+    "viewCount": 86,
+    "viewLastModified": 1779477344,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1779316462,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7487364,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779311427,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779316462,
+          "failureCount": 0,
+          "startedAt": 1779316462,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Organizations": {
+          "Organization": "Department of Revenue"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "mku9-hpku",
+      "createdAt": 1779472930,
+      "displayName": "State Data Practice",
+      "screenName": "State Data Practice",
+      "type": "team",
+      "members": [
+        {
+          "id": "rrdi-inip",
+          "createdAt": 1702669670,
+          "displayName": "Kyri Kalpakidis",
+          "screenName": "Kyri Kalpakidis",
+          "teamId": 1805034,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "r8f2-d2f5",
+      "createdAt": 1726769441,
+      "displayName": "Department of Revenue",
+      "screenName": "Department of Revenue",
+      "type": "team",
+      "members": [
+        {
+          "id": "xynw-4hr2",
+          "createdAt": 1743515955,
+          "displayName": "Darren Hackett",
+          "screenName": "Darren Hackett",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "ea7e-mmau",
+          "createdAt": 1723487056,
+          "displayName": "David B",
+          "screenName": "David B",
+          "teamId": 1679010,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "dzhj-t7sg",
+          "createdAt": 1743514877,
+          "displayName": "Mark.Franklin",
+          "screenName": "Mark.Franklin",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "327i-sqr8",
+          "createdAt": 1744921763,
+          "displayName": "Scott Larson",
+          "screenName": "Scott Larson",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "f429-64sr",
+          "createdAt": 1723488283,
+          "displayName": "ShirishB",
+          "screenName": "ShirishB",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": ["federated", "internalToPublicFederatedView", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "cbfz-rpb7",
+    "name": "PTAX 203 Stories",
+    "assetType": "story",
+    "averageRating": 0,
+    "category": "Government and Public Employees",
+    "createdAt": 1779310435,
+    "description": "IDOR Datasets",
+    "diciBackend": false,
+    "displayType": "story",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42154815,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779311259,
+    "publicationGroup": 20388520,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779310435,
+    "tableId": 20388520,
+    "totalTimesRated": 0,
+    "viewCount": 70,
+    "viewLastModified": 1779478737,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1779379911,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7487377,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779379898,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779379911,
+          "failureCount": 0,
+          "startedAt": 1779379911,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "custom_fields": {
+        "Organizations": {
+          "Organization": "Department of Revenue"
+        },
+        "Data Management": {
+          "Maintainer": "Department of Revenue"
+        }
+      },
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "mku9-hpku",
+      "createdAt": 1779472930,
+      "displayName": "State Data Practice",
+      "screenName": "State Data Practice",
+      "type": "team",
+      "members": [
+        {
+          "id": "rrdi-inip",
+          "createdAt": 1702669670,
+          "displayName": "Kyri Kalpakidis",
+          "screenName": "Kyri Kalpakidis",
+          "teamId": 1805034,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "mku9-hpku",
+      "createdAt": 1779472930,
+      "displayName": "State Data Practice",
+      "screenName": "State Data Practice",
+      "type": "team",
+      "members": [
+        {
+          "id": "rrdi-inip",
+          "createdAt": 1702669670,
+          "displayName": "Kyri Kalpakidis",
+          "screenName": "Kyri Kalpakidis",
+          "teamId": 1805034,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "yekt-4cra",
+    "name": "School Vaccinations",
+    "assetType": "story",
+    "averageRating": 0,
+    "category": "Education",
+    "createdAt": 1779299750,
+    "diciBackend": false,
+    "displayType": "story",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42153724,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779301900,
+    "publicationGroup": 20387973,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1779299750,
+    "tableId": 20387973,
+    "totalTimesRated": 0,
+    "viewCount": 121,
+    "viewLastModified": 1779477368,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1779308718,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7484901,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779308705,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779308718,
+          "failureCount": 0,
+          "startedAt": 1779308718,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "custom_fields": {
+        "Organizations": {
+          "Organization": "Illinois State Board of Education"
+        }
+      },
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "mku9-hpku",
+      "createdAt": 1779472930,
+      "displayName": "State Data Practice",
+      "screenName": "State Data Practice",
+      "type": "team",
+      "members": [
+        {
+          "id": "rrdi-inip",
+          "createdAt": 1702669670,
+          "displayName": "Kyri Kalpakidis",
+          "screenName": "Kyri Kalpakidis",
+          "teamId": 1805034,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "mku9-hpku",
+      "createdAt": 1779472930,
+      "displayName": "State Data Practice",
+      "screenName": "State Data Practice",
+      "type": "team",
+      "members": [
+        {
+          "id": "rrdi-inip",
+          "createdAt": 1702669670,
+          "displayName": "Kyri Kalpakidis",
+          "screenName": "Kyri Kalpakidis",
+          "teamId": 1805034,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "6txz-xn2k",
+    "name": "Top 20 Dispatch Calls by Type and Reporting District for the Last 72 Hours",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Local Government",
+    "createdAt": 1779216155,
+    "description": "Winnebago County Sheriff’s Office Open Data Disclaimer:\n\nThe purpose of this dataset is to display a continuing dispatched Call for Service (CFS) log for the previous 72 hours. Only CFS that have been dispatched for at least one hour will display and the log will be refreshed once every hour. Some CFS have been suppressed from this log due to the sensitivity of the type of call. Primarily, any CFS involving sexual, domestic related or sensitive juvenile incidents have been suppressed.\n\nAll data contained on this site has been gathered through legitimate means and with the knowledge and approval of the Winnebago County Sheriff’s Office. All data has been extracted, processed and presented through appropriate channels.\n\nData and Information: All CFS data is obtained from the Police/911 Computer Aided Dispatch (CAD) system as reported. Information is preliminary and subject to change as police reports are submitted. Media outlets are advised to confirm any information not already verified through department issued press releases. Data is illustrative, not an official crime report, and should not be used for comparative reporting. The Winnebago County Sheriff’s Office is not responsible for any error or omission, misuse, or results obtained from the use of this information. Although no personal information is disseminated through data.illinois.gov, remember that all subjects are presumed innocent until proven guilty in a court of law.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 5,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "i96m-iu3n",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42149754,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779218596,
+    "publicationGroup": 19750845,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794128668,
+    "rowsUpdatedBy": "xph9-z7ij",
+    "tableId": 19750864,
+    "totalTimesRated": 0,
+    "viewCount": 335,
+    "viewLastModified": 1779477319,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1779218247,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7481803,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779218227,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779218247,
+          "failureCount": 0,
+          "startedAt": 1779218247,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Organizations": {
+          "Organization": "Winnebago County"
+        },
+        "Data Management": {
+          "Maintainer Email": "opendata@rockfordil.gov"
+        }
+      },
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "mku9-hpku",
+      "createdAt": 1779472930,
+      "displayName": "State Data Practice",
+      "screenName": "State Data Practice",
+      "type": "team",
+      "members": [
+        {
+          "id": "rrdi-inip",
+          "createdAt": 1702669670,
+          "displayName": "Kyri Kalpakidis",
+          "screenName": "Kyri Kalpakidis",
+          "teamId": 1805034,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "xph9-z7ij",
+      "displayName": "Open Data Rockford",
+      "profileImageUrlLarge": "/api/users/xph9-z7ij/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/xph9-z7ij/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/xph9-z7ij/profile_images/TINY",
+      "screenName": "Open Data Rockford",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "flags": ["federated", "internalToPublicFederatedView", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "exe5-irz5",
+    "name": "Most Popular Real Property Transfer Declarations by Zip Code",
+    "assetType": "chart",
+    "averageRating": 0,
+    "category": "Government and Public Employees",
+    "createdAt": 1779205775,
+    "description": "Contains all PTAX-203, -203-A, and -203-B records filed with the Illinois Department of Revenue since January 1, 2025, updated weekly.",
+    "diciBackend": false,
+    "displayType": "visualization_canvas_chart",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 3,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "kpdj-zmhb",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42165097,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779478044,
+    "publicationGroup": 19908244,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793534525,
+    "rowsUpdatedBy": "rrdi-inip",
+    "tableId": 20389504,
+    "totalTimesRated": 0,
+    "viewCount": 150,
+    "viewLastModified": 1779478044,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1779206907,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7492113,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779206725,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779206907,
+          "failureCount": 0,
+          "startedAt": 1779206907,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "availableDisplayTypes": ["visualization"]
+    },
+    "owner": {
+      "id": "mku9-hpku",
+      "createdAt": 1779472930,
+      "displayName": "State Data Practice",
+      "screenName": "State Data Practice",
+      "type": "team",
+      "members": [
+        {
+          "id": "rrdi-inip",
+          "createdAt": 1702669670,
+          "displayName": "Kyri Kalpakidis",
+          "screenName": "Kyri Kalpakidis",
+          "teamId": 1805034,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "r8f2-d2f5",
+      "createdAt": 1726769441,
+      "displayName": "Department of Revenue",
+      "screenName": "Department of Revenue",
+      "type": "team",
+      "members": [
+        {
+          "id": "xynw-4hr2",
+          "createdAt": 1743515955,
+          "displayName": "Darren Hackett",
+          "screenName": "Darren Hackett",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "ea7e-mmau",
+          "createdAt": 1723487056,
+          "displayName": "David B",
+          "screenName": "David B",
+          "teamId": 1679010,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "dzhj-t7sg",
+          "createdAt": 1743514877,
+          "displayName": "Mark.Franklin",
+          "screenName": "Mark.Franklin",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "327i-sqr8",
+          "createdAt": 1744921763,
+          "displayName": "Scott Larson",
+          "screenName": "Scott Larson",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "f429-64sr",
+          "createdAt": 1723488283,
+          "displayName": "ShirishB",
+          "screenName": "ShirishB",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": ["federated", "internalToPublicFederatedView", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "kpdj-zmhb",
+    "name": "PTAX 203, A, AND B Records Since January 2024",
+    "assetType": "filter",
+    "averageRating": 0,
+    "category": "Government and Public Employees",
+    "createdAt": 1779199490,
+    "description": "Contains all PTAX-203, -203-A, and -203-B records filed with the Illinois Department of Revenue since January 1, 2024, updated weekly.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 37,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "modifyingViewUid": "it54-y4c6",
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42156058,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1779199537,
+    "publicationGroup": 19908244,
+    "publicationStage": "published",
+    "queryString": "SELECT\n  `date_recorded`,\n  floating_timestamp_month(`date_recorded` :: floating_timestamp) AS `month`,\n  floating_timestamp_year(`date_recorded` :: floating_timestamp) AS `year`,\n  `line_1_county`,\n  substring(`line_1_zip_code`, 1, 5) AS `zip_code_5`,\n  `line_1_city`,\n  `line_9_new_construction`,\n  `line_5_instrument_type`,\n  `line_1_lot_size_or_acreage`,\n  `line_11_full_consideration`,\n  `line_13_net_consideration`,\n  `line_17_net_consideration`\nWHERE `date_recorded` > \"2024-01-01T00:00:00\" :: floating_timestamp",
+    "rowsUpdatedAt": 1793534525,
+    "rowsUpdatedBy": "rrdi-inip",
+    "tableId": 20389504,
+    "totalTimesRated": 0,
+    "viewCount": 248,
+    "viewLastModified": 1779477787,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1779206710,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7485748,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779206698,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "read"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779206710,
+          "failureCount": 0,
+          "startedAt": 1779206710,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Organizations": {
+          "Organization": "Department of Revenue"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"],
+      "renderTypeConfig": {
+        "visible": {
+          "table": true
+        }
+      }
+    },
+    "owner": {
+      "id": "r8f2-d2f5",
+      "createdAt": 1726769441,
+      "displayName": "Department of Revenue",
+      "screenName": "Department of Revenue",
+      "type": "team",
+      "members": [
+        {
+          "id": "xynw-4hr2",
+          "createdAt": 1743515955,
+          "displayName": "Darren Hackett",
+          "screenName": "Darren Hackett",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "ea7e-mmau",
+          "createdAt": 1723487056,
+          "displayName": "David B",
+          "screenName": "David B",
+          "teamId": 1679010,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "dzhj-t7sg",
+          "createdAt": 1743514877,
+          "displayName": "Mark.Franklin",
+          "screenName": "Mark.Franklin",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "327i-sqr8",
+          "createdAt": 1744921763,
+          "displayName": "Scott Larson",
+          "screenName": "Scott Larson",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "f429-64sr",
+          "createdAt": 1723488283,
+          "displayName": "ShirishB",
+          "screenName": "ShirishB",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "r8f2-d2f5",
+      "createdAt": 1726769441,
+      "displayName": "Department of Revenue",
+      "screenName": "Department of Revenue",
+      "type": "team",
+      "members": [
+        {
+          "id": "xynw-4hr2",
+          "createdAt": 1743515955,
+          "displayName": "Darren Hackett",
+          "screenName": "Darren Hackett",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "ea7e-mmau",
+          "createdAt": 1723487056,
+          "displayName": "David B",
+          "screenName": "David B",
+          "teamId": 1679010,
+          "teamRole": "owner",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "dzhj-t7sg",
+          "createdAt": 1743514877,
+          "displayName": "Mark.Franklin",
+          "screenName": "Mark.Franklin",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "327i-sqr8",
+          "createdAt": 1744921763,
+          "displayName": "Scott Larson",
+          "screenName": "Scott Larson",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        },
+        {
+          "id": "f429-64sr",
+          "createdAt": 1723488283,
+          "displayName": "ShirishB",
+          "screenName": "ShirishB",
+          "teamId": 1679010,
+          "teamRole": "member",
+          "type": "interactive",
+          "flags": ["siteMember"]
+        }
+      ]
+    },
+    "flags": [
+      "calculatedView",
+      "federated",
+      "internalToPublicFederatedView",
+      "restorable",
+      "restorePossibleForType",
+      "soqlBasedView"
+    ]
+  },
+  {
+    "id": "6rb8-ntpm",
+    "name": "Future Solicitations",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Government and Public Employees",
+    "createdAt": 1778526859,
+    "description": "These construction contract solicitations are anticipated for a future date, but have not been posted yet.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "data.illinois.gov",
+    "downloadCount": 86,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42125502,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1778527099,
+    "publicationGroup": 20373461,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794054685,
+    "rowsUpdatedBy": "rrdi-inip",
+    "tableId": 20373461,
+    "totalTimesRated": 0,
+    "viewCount": 182,
+    "viewLastModified": 1794054684,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1779135294,
+        "reviewedAutomatically": false,
+        "state": "approved",
+        "submissionId": 7476091,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1779135243,
+        "targetAudience": "public",
+        "workflowId": 3886,
+        "reviewer": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        },
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1779135294,
+          "failureCount": 0,
+          "startedAt": 1779135294,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rrdi-inip",
+          "displayName": "Kyri Kalpakidis"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Organizations": {
+          "Organization": "Capital Development Board"
+        },
+        "Data Management": {
+          "Maintainer": "Capital Development Board"
+        }
+      },
+      "rowLabel": "A project that may bid in the future",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "iz9e-s6ba",
+      "displayName": "Allen Bergschneider",
+      "screenName": "Allen Bergschneider",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "iz9e-s6ba",
+      "displayName": "Allen Bergschneider",
+      "screenName": "Allen Bergschneider",
+      "type": "interactive",
+      "flags": ["acceptedEula", "mayBeStoriesCoOwner"]
+    },
+    "flags": [
+      "default",
+      "federated",
+      "internalToPublicFederatedView",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  }
+]

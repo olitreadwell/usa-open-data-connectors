@@ -16,9 +16,9 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 ## Current state
 
 - `main` is the integration branch. Pull requests target `main`.
-- Thirty-six US adapters, all keyless, each with a live fetch, a strict parse,
+- Forty-seven US adapters, all keyless, each with a live fetch, a strict parse,
   and a committed fixture
-- `packages/usa-sources` holds all 36 adapters, the registry, the shared HTTP
+- `packages/usa-sources` holds all 47 adapters, the registry, the shared HTTP
   layer (`src/http.ts`), and the fixtures
 - Every request goes through the shared HTTP helpers (`httpGet` for GET and
   `httpPostJson` for JSON POST): one `User-Agent`, a 30 second timeout by
@@ -27,7 +27,7 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
   replace the default `User-Agent` with their own
 - The API and the CLI serve `usa-sources` through the registry. The NZ-only
   routes and CLI commands were removed rather than re-pointed
-- Socrata catalogue entries carry the portal's `licenceUrl` and `attribution`
+- Socrata and CKAN catalogue entries carry the portal's `licenceUrl` and `attribution`
   values, and PublicDataHub records carry licence and agency provenance. An
   empty value means the source supplied none
 - `npm run check` is green. The MCP server exposes named tools for the original
