@@ -16,9 +16,9 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 ## Current state
 
 - `main` is the integration branch. Pull requests target `main`.
-- Twenty-nine US adapters, all keyless, each with a live fetch, a strict parse,
+- Thirty-three US adapters, all keyless, each with a live fetch, a strict parse,
   and a committed fixture
-- `packages/usa-sources` holds all 29 adapters, the registry, the shared HTTP
+- `packages/usa-sources` holds all 33 adapters, the registry, the shared HTTP
   layer (`src/http.ts`), and the fixtures
 - Every request goes through the shared HTTP helpers (`httpGet` for GET and
   `httpPostJson` for JSON POST): one `User-Agent`, a 30 second timeout by
@@ -30,12 +30,15 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 - Socrata catalogue entries carry the portal's `licenceUrl` and `attribution`
   values, and PublicDataHub records carry licence and agency provenance. An
   empty value means the source supplied none
-- `npm run check` is green. The MCP server exposes a named tool for every
-  library query, and `probe_sources` only probes the ids it is given.
+- `npm run check` is green. The MCP server exposes named tools for the original
+  library queries plus the generic `fetch_source` tool for any registered
+  source, and `probe_sources` only probes the ids it is given.
 
 ## What is left
 
-1. Backlog of US sources to add: Census Bureau, BEA, EIA, and api.data.gov.
+1. Backlog of US sources to add: api.data.gov, BEA, and EIA. Census answered
+   with a missing-key redirect on 2026-11-08, so it needs a key before an
+   adapter can stay keyless.
 2. Decide per-source licence metadata for the adapters whose APIs do not
    supply per-record terms. Most publishers state terms for the whole service;
    `COUNTRY.md` tracks the narrowed item.

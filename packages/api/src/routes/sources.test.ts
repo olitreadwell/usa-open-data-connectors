@@ -55,6 +55,10 @@ describe('GET /sources', () => {
       'college-scorecard-institutions',
       'publicdatahub-hospital-quality',
       'nextbus-transit-vehicles',
+      'federal-register-documents',
+      'nhtsa-vehicle-models',
+      'fcc-socrata-catalogue',
+      'ny-state-open-data-catalogue',
     ]);
     for (const source of sources) {
       expect(Object.keys(source).sort()).toEqual(['auth', 'description', 'id', 'name']);

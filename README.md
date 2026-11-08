@@ -11,7 +11,7 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 29 US public data sources, with live probes and offline fixtures |
+| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 33 US public data sources, with live probes and offline fixtures |
 | [`@usa-open-data-connectors/usa-mcp`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-mcp) | MCP server that exposes the connectors to Claude, ChatGPT, and other MCP clients |
 | [`@usa-open-data-connectors/connectors-cli`](https://www.npmjs.com/package/@usa-open-data-connectors/connectors-cli) | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
 | `@usa-open-data-connectors/connectors-api` | Private. HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
@@ -20,7 +20,7 @@ exposed over the API or committed to the repo.
 
 ## Connectors
 
-Twenty-nine adapters, all in `@usa-open-data-connectors/usa-sources`. All are
+Thirty-three adapters, all in `@usa-open-data-connectors/usa-sources`. All are
 keyless and need no environment variable.
 
 Most of this data comes from US federal agencies, and works of the US federal
@@ -43,7 +43,7 @@ nothing extra. Every other adapter sends the shared `User-Agent`
 for a response, and marks rate-limited (HTTP 429), server-error (HTTP 5xx) and
 network failures as `retryable` on the thrown `UsSourceApiError`. The shared
 HTTP helpers (`httpGet` and `httpPostJson`) in
-`packages/usa-sources/src/http.ts` do this for all 29 adapters.
+`packages/usa-sources/src/http.ts` do this for all 33 adapters.
 
 | id | Source | Keyless? | Example command |
 | --- | --- | --- | --- |
@@ -76,6 +76,10 @@ HTTP helpers (`httpGet` and `httpPostJson`) in
 | `college-scorecard-institutions` | College Scorecard institution outcomes, US Department of Education | Yes | `npx tsx packages/cli/src/cli.ts probe college-scorecard-institutions` |
 | `publicdatahub-hospital-quality` | CMS hospital quality measures, republished by PublicDataHub | Yes | `npx tsx packages/cli/src/cli.ts probe publicdatahub-hospital-quality` |
 | `nextbus-transit-vehicles` | Portland Streetcar live vehicle positions through the NextBus XML feed | Yes | `npx tsx packages/cli/src/cli.ts probe nextbus-transit-vehicles` |
+| `federal-register-documents` | Office of the Federal Register, published documents | Yes | `npx tsx packages/cli/src/cli.ts probe federal-register-documents` |
+| `nhtsa-vehicle-models` | NHTSA vehicle models by model year and make | Yes | `npx tsx packages/cli/src/cli.ts probe nhtsa-vehicle-models` |
+| `fcc-socrata-catalogue` | FCC Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe fcc-socrata-catalogue` |
+| `ny-state-open-data-catalogue` | New York State Open Data catalogue | Yes | `npx tsx packages/cli/src/cli.ts probe ny-state-open-data-catalogue` |
 
 Each adapter knows how to fetch live data and parse the response. Tests load
 a committed fixture; a live call throws instead of falling back to one.

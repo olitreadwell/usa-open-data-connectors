@@ -1,0 +1,271 @@
+{
+  "meta": {
+    "status": 200,
+    "messages": [],
+    "pagination": {
+      "count": 50,
+      "max": 100,
+      "offset": 0,
+      "sort": "id",
+      "order": null,
+      "total": 50,
+      "currentUrl": "https://api.nhtsa.gov/vehicles/models?offset=0&max=100&sort=id&make=Honda&modelYear=2025",
+      "nextUrl": null,
+      "previousUrl": null
+    },
+    "filters": null,
+    "decoder": []
+  },
+  "results": [
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "ACCORD HYBRID"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "ACCORD SEDAN"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "ADV160"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CB1000SP"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CB300R"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CB500F"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CB750 HORNET"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CBR1000RR"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CBR500R"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CBR600RR"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CBR650R"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CIVIC HATCHBACK"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CIVIC HATCHBACK HYBRID"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CIVIC HATCHBACK TYPE R"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CIVIC SEDAN"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CIVIC SEDAN HYBRID"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CIVIC SEDAN SI"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CMX1100"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CMX300"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CMX500"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CR-V"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CR-V FCEV"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CR-V HYBRID"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CRF1100"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CRF300L"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "CRF450L"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "DAX125"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "GL1800"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "GROM125"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "HR-V"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "METROPOLITAN"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "MONKEY125"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "NAVI"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "NT1100"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "NX500"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "ODYSSEY"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "PASSPORT"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "PCX160"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "PILOT"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "PROLOGUE EV"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "REDUNDANT CB1000 HORNET"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "REDUNDANT CB300"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "RIDGELINE"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "SCL500"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "SHADOW PHANTOM"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "TRAIL125"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "VT1300CX"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "VT13CX"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "XR150L"
+    },
+    {
+      "modelYear": 2025,
+      "make": "HONDA",
+      "vehicleModel": "XR650L"
+    }
+  ]
+}

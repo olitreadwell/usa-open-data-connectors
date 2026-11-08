@@ -12,11 +12,15 @@ import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
 import { clinicalTrialsStudiesAdapter } from './clinicalTrialsStudies.js';
 import { epaEnvirofactsFacilitiesAdapter } from './epaEnvirofactsFacilities.js';
+import { fccSocrataCatalogueAdapter } from './fccSocrataCatalogue.js';
+import { federalRegisterDocumentsAdapter } from './federalRegisterDocuments.js';
 import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
 import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
 import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
 import { nihReporterProjectsAdapter } from './nihReporterProjects.js';
+import { nhtsaVehicleModelsAdapter } from './nhtsaVehicleModels.js';
 import { nycOpenDataCatalogueAdapter } from './nycOpenDataCatalogue.js';
+import { nyStateOpenDataCatalogueAdapter } from './nyStateOpenDataCatalogue.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
 import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
 import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
@@ -193,6 +197,22 @@ const RAW_NYC_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/nyc-open-data-catalogue-2026-10-19.json'),
   'utf8'
 );
+const RAW_FEDERAL_REGISTER_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/federal-register-documents-2026-11-08.json'),
+  'utf8'
+);
+const RAW_NHTSA_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/nhtsa-vehicle-models-2025-honda-2026-11-08.json'),
+  'utf8'
+);
+const RAW_FCC_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/fcc-socrata-catalogue-2026-11-08.json'),
+  'utf8'
+);
+const RAW_NY_STATE_FIXTURE = readFileSync(
+  path.join(process.cwd(), 'src/fixtures/ny-state-open-data-catalogue-2026-11-08.json'),
+  'utf8'
+);
 const RAW_COLLEGE_SCORECARD_FIXTURE = readFileSync(
   path.join(process.cwd(), 'src/fixtures/college-scorecard-institutions-2026-10-15-sampled.csv'),
   'utf8'
@@ -323,6 +343,18 @@ function rawFixtureForUrl(url: string): string {
   if (hostname === 'data.cityofnewyork.us') {
     return RAW_NYC_FIXTURE;
   }
+  if (hostname === 'www.federalregister.gov') {
+    return RAW_FEDERAL_REGISTER_FIXTURE;
+  }
+  if (hostname === 'api.nhtsa.gov') {
+    return RAW_NHTSA_FIXTURE;
+  }
+  if (hostname === 'opendata.fcc.gov') {
+    return RAW_FCC_FIXTURE;
+  }
+  if (hostname === 'data.ny.gov') {
+    return RAW_NY_STATE_FIXTURE;
+  }
   if (hostname === 'estimatetax.net') {
     return RAW_ESTIMATETAX_FIXTURE;
   }
@@ -386,6 +418,10 @@ describe('US_DATA_SOURCES', () => {
     expect(ids).toContain('college-scorecard-institutions');
     expect(ids).toContain('publicdatahub-hospital-quality');
     expect(ids).toContain('nextbus-transit-vehicles');
+    expect(ids).toContain('federal-register-documents');
+    expect(ids).toContain('nhtsa-vehicle-models');
+    expect(ids).toContain('fcc-socrata-catalogue');
+    expect(ids).toContain('ny-state-open-data-catalogue');
     expect(new Set(ids).size).toBe(ids.length);
   });
 
@@ -434,6 +470,10 @@ describe('getUsDataSource', () => {
     );
     expect(getUsDataSource('publicdatahub-hospital-quality')).toBe(publicDataHubHospitalAdapter);
     expect(getUsDataSource('nextbus-transit-vehicles')).toBe(nextBusTransitVehiclesAdapter);
+    expect(getUsDataSource('federal-register-documents')).toBe(federalRegisterDocumentsAdapter);
+    expect(getUsDataSource('nhtsa-vehicle-models')).toBe(nhtsaVehicleModelsAdapter);
+    expect(getUsDataSource('fcc-socrata-catalogue')).toBe(fccSocrataCatalogueAdapter);
+    expect(getUsDataSource('ny-state-open-data-catalogue')).toBe(nyStateOpenDataCatalogueAdapter);
   });
 
   it('returns undefined for an unknown id', () => {

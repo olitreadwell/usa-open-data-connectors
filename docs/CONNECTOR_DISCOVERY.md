@@ -1,13 +1,15 @@
 # Connector discovery notes (US)
 
-Findings from the US source passes. Twenty-nine keyless adapters are built and
+Findings from the US source passes. Thirty-three keyless adapters are built and
 verified against live APIs, and each has a fixture committed from the same
 endpoint.
 
 Eleven adapters were added on 2026-10-05. Those eleven were probed live that
 day with `curl`, and their fixtures were captured then. The earlier eleven
 were captured between 2026-09-23 and 2026-10-03. Six more adapters were added
-after those, through 2026-10-22. NIH RePORTER was added on 2026-11-07.
+after those, through 2026-10-22. NIH RePORTER was added on 2026-11-07. Four
+adapters were added on 2026-11-08: Federal Register documents, NHTSA vehicle
+models, the FCC Socrata catalogue, and the New York State Open Data catalogue.
 
 ## Adapters built
 
@@ -42,6 +44,10 @@ after those, through 2026-10-22. NIH RePORTER was added on 2026-11-07.
 | `nyc-open-data-catalogue` | New York City Open Data | `https://data.cityofnewyork.us/api/views.json` | `nyc-open-data-catalogue-2026-10-19.json` |
 | `publicdatahub-hospital-quality` | PublicDataHub | `https://publicdatahub.org/api/export/hospital/{slug}.json` | `publicdatahub-hospital-quality-2026-10-21.json` |
 | `nextbus-transit-vehicles` | Portland Streetcar, through the NextBus XML feed | `https://retro.umoiq.com/service/publicXMLFeed?command=vehicleLocations&a=portland-sc&r=193&t=0` | `nextbus-portland-streetcar-vehicles-2026-10-22.xml` |
+| `federal-register-documents` | Office of the Federal Register | `https://www.federalregister.gov/api/v1/documents.json` | `federal-register-documents-2026-11-08.json` |
+| `nhtsa-vehicle-models` | NHTSA | `https://api.nhtsa.gov/vehicles/models` | `nhtsa-vehicle-models-2025-honda-2026-11-08.json` |
+| `fcc-socrata-catalogue` | Federal Communications Commission | `https://opendata.fcc.gov/api/views.json` | `fcc-socrata-catalogue-2026-11-08.json` |
+| `ny-state-open-data-catalogue` | New York State Open Data | `https://data.ny.gov/api/views.json` | `ny-state-open-data-catalogue-2026-11-08.json` |
 
 ## Exact curl commands for the 2026-10-05 additions
 
@@ -103,6 +109,10 @@ curl -sS -A "$UA_BROWSER" 'https://data.cityofnewyork.us/api/views.json?limit=50
 | BTS `data.bts.gov` Socrata catalogue | LIVE | Keyless. Same shape as the other two Socrata catalogues. The page mixes datasets, charts, and stories. |
 | NYC `data.cityofnewyork.us` Socrata catalogue | LIVE | Keyless. Same discovery shape as the other Socrata catalogues. The 50-entry page captured on 2026-10-19 mixes datasets and maps, and three entries arrive without a category. |
 | EstimateTax `estimatetax.net` | LIVE | Keyless, with a 60 request per minute limit per address. One request returns federal, state, and local income tax for one salary. The response cites the IRS or state document behind each layer and the date it was checked. The default fixture is the $85,000 single filer in New York City for tax year 2026. |
+| Federal Register `www.federalregister.gov` | LIVE | Keyless. The newest-documents page answered HTTP 200 with ten documents, a reported `count` of 10,000, and `total_pages` 50 on 2026-11-08. The adapter keeps both service values as `reportedCount` and `totalPages` rather than treating either as the page size. |
+| NHTSA `api.nhtsa.gov` | LIVE | Keyless. The 2025 Honda query answered HTTP 200 with `pagination.total` 50 and 50 rows. The service echoes the make in upper case (`HONDA`) even when the request sends `Honda`, so the adapter keeps the response value. |
+| FCC `opendata.fcc.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and mixed one story with nine datasets. The captured page supplied no Common Core `License` or `Publisher` value, so both adapter fields are empty. |
+| New York State `data.ny.gov` Socrata catalogue | LIVE | Keyless. The ten-entry page answered HTTP 200 and mixed nine datasets with one file. The captured page supplied no Common Core `License` or `Publisher` value, so both adapter fields are empty. |
 
 ## Exact curl command for the 2026-10-18 addition
 
@@ -118,15 +128,68 @@ curl -sS -X POST 'https://api.reporter.nih.gov/v2/projects/search' \
   --data '{"criteria":{"fiscal_years":[2025],"agencies":["NIH"]},"include_fields":["ProjectNum","CoreProjectNum","ProjectTitle","FiscalYear","AwardAmount","Organization","PrincipalInvestigators","ProjectStartDate","ProjectEndDate","AgencyIcAdmin","ProjectDetailUrl"],"offset":0,"limit":10,"sort_field":"award_amount","sort_order":"desc"}'
 ```
 
+## Exact curl commands for the 2026-11-08 additions
+
+Each command answered HTTP 200 without a key on 2026-11-08. The Federal
+Register and NHTSA commands are the default queries the adapters send. The
+Socrata commands ask for the ten-entry pages saved as fixtures.
+
+```sh
+UA='usa-open-data-connectors (Language=TypeScript)'
+
+# Federal Register, ten newest documents
+curl -sS -A "$UA" 'https://www.federalregister.gov/api/v1/documents.json?per_page=10&order=newest'
+
+# NHTSA, the 2025 Honda model list
+curl -sS -A "$UA" 'https://api.nhtsa.gov/vehicles/models?modelYear=2025&make=Honda&max=100'
+
+# FCC Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://opendata.fcc.gov/api/views.json?limit=10'
+
+# New York State Open Data catalogue, ten entries
+curl -sS -A "$UA" 'https://data.ny.gov/api/views.json?limit=10'
+```
+
+## Live adapter probes on 2026-11-08
+
+The four adapters were also probed through the built registry, not just with
+`curl`. Run this from `packages/usa-sources` after `npm run build`:
+
+```sh
+node --input-type=module -e "import { probeAllUsDataSources } from './dist/index.js'; const ids=['federal-register-documents','nhtsa-vehicle-models','fcc-socrata-catalogue','ny-state-open-data-catalogue']; const probes=await probeAllUsDataSources({ids}); console.log(JSON.stringify(probes,null,2));"
+```
+
+Observed result: all four probes returned `"ok": true` and `"status": "ok"` with
+`"auth": "none"`. The returned samples began with:
+
+| Adapter | First record in the probe sample |
+| --- | --- |
+| `federal-register-documents` | Document `2026-22789`, "The American Declaration of Freedom in Space", type `Presidential Document` |
+| `nhtsa-vehicle-models` | Model year 2025, make `HONDA`, model `ACCORD HYBRID` |
+| `fcc-socrata-catalogue` | Entry `wgq8-eb5c`, "Pirate Radio Broadcasting Database", asset type `story` |
+| `ny-state-open-data-catalogue` | Entry `sa8q-nq2h`, "SPARCS Ambulatory Surgery Encounters by Facility: Beginning 2018", asset type `dataset` |
+
+## Candidates checked and skipped on 2026-11-08
+
+These were checked live before writing any adapter. None was added because the
+service requires a key or the endpoint is not a usable public API.
+
+| Source | Result |
+| --- | --- |
+| Census Bureau Data API | HTTP 302 to `https://api.census.gov/data/missing_key.html` with `x-datawebapi-keyerror: 1`. Keyed; skipped. |
+| FBI Crime Data Explorer API | HTTP 403 with `{"error":{"code":"API_KEY_MISSING","message":"An API key was not provided. Please get one at https://api.data.gov/signup/"}}`. Keyed; skipped. |
+| Data.gov CKAN API | `https://catalog.data.gov/api/3/action/package_search?rows=3` answered HTTP 404 on 2026-11-08. No adapter added. |
+| CMS Provider Data catalogue | The metastore API answered HTTP 403 Access Denied on 2026-11-08. No adapter added. |
+| California Open Data catalogue | `https://data.ca.gov/api/views.json?limit=2` answered HTTP 404 on 2026-11-08. No adapter added. |
+
 ## Candidates not yet probed
 
-These sit on the backlog in `COUNTRY.md`. None has been checked live, so no
-status is claimed here. EPA, CDC, and NOAA now have adapters, so they are no
-longer on this list.
+These sit on the backlog in `COUNTRY.md`. Census was checked on 2026-11-08
+and answered with a missing-key redirect; the rest are still unprobed. EPA,
+CDC, and NOAA already have adapters, so they are not on this list.
 
 | Source | What it would cover |
 | --- | --- |
-| Census Bureau Data API | Population, housing, and business statistics |
 | api.data.gov | Shared key and catalogue across several federal APIs |
 | Bureau of Economic Analysis | GDP and regional accounts |
 | Energy Information Administration | Energy production and prices |
@@ -169,6 +232,10 @@ everywhere, and a few services attach their own terms on top.
 | `publicdatahub-hospital-quality` | PublicDataHub, from the Centers for Medicare & Medicaid Services | CMS provider data is US federal work, public domain in the US. The response provenance names the licence as U.S. Public Domain. |
 | `callook-callsigns` | Callook.info, from the FCC licence file | FCC licence records are US federal work, public domain in the US. Callook.info serves the records and calculates the coordinates and grid square. Its API reference says the data is free to use. |
 | `nextbus-transit-vehicles` | Portland Streetcar, served by Umo IQ | Transit agency data. The feed carries a copyright notice for the agency and Umo IQ, and states no open licence. Check the agency's terms before republishing. |
+| `federal-register-documents` | Office of the Federal Register | US federal work, public domain in the US |
+| `nhtsa-vehicle-models` | National Highway Traffic Safety Administration | US federal work, public domain in the US |
+| `fcc-socrata-catalogue` | Federal Communications Commission, through its Socrata portal | Portal entry terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
+| `ny-state-open-data-catalogue` | New York State, through its Socrata portal | State portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
 
 The Socrata catalogue adapters return `licenceUrl` and `attribution` on each
 entry, and `publicdatahub-hospital-quality` returns licence, agency, and

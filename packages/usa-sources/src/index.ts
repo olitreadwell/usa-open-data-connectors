@@ -544,6 +544,79 @@ export type {
   PublicDataHubProvenance,
 } from './publicDataHubHospital.js';
 
+/** Federal Register published documents (keyless). */
+export {
+  buildFederalRegisterDocumentsUrl,
+  FEDERAL_REGISTER_API_BASE,
+  FEDERAL_REGISTER_DEFAULT_ORDER,
+  FEDERAL_REGISTER_DEFAULT_PAGE_SIZE,
+  FEDERAL_REGISTER_DOCUMENTS_SOURCE_ID,
+  federalRegisterDocumentsAdapter,
+  fetchFederalRegisterDocuments,
+  parseFederalRegisterDocumentsPayload,
+} from './federalRegisterDocuments.js';
+/** Federal Register document types. */
+export type {
+  FederalRegisterDocument,
+  FederalRegisterDocumentsPage,
+  FederalRegisterDocumentsQuery,
+} from './federalRegisterDocuments.js';
+
+/** NHTSA vehicle models for one model year and make (keyless). */
+export {
+  buildNhtsaVehicleModelsUrl,
+  fetchNhtsaVehicleModels,
+  NHTSA_DEFAULT_MAKE,
+  NHTSA_DEFAULT_MODEL_YEAR,
+  NHTSA_MAX_MODEL_YEAR,
+  NHTSA_MIN_MODEL_YEAR,
+  NHTSA_MODEL_PAGE_SIZE,
+  NHTSA_VEHICLE_MODELS_API_BASE,
+  NHTSA_VEHICLE_MODELS_SOURCE_ID,
+  nhtsaVehicleModelsAdapter,
+  parseNhtsaVehicleModelsPayload,
+} from './nhtsaVehicleModels.js';
+/** NHTSA vehicle model types. */
+export type {
+  NhtsaVehicleModel,
+  NhtsaVehicleModelPage,
+  NhtsaVehicleModelsQuery,
+} from './nhtsaVehicleModels.js';
+
+/** Federal Communications Commission catalogue (keyless). */
+export {
+  buildFccSocrataCatalogueUrl,
+  FCC_SOCRATA_CATALOGUE_API_BASE,
+  FCC_SOCRATA_CATALOGUE_LIMIT,
+  FCC_SOCRATA_CATALOGUE_SOURCE_ID,
+  fccSocrataCatalogueAdapter,
+  fetchFccSocrataCatalogue,
+  parseFccSocrataCataloguePayload,
+} from './fccSocrataCatalogue.js';
+/** FCC catalogue types. */
+export type {
+  FccSocrataCatalogue,
+  FccSocrataCatalogueEntry,
+  FccSocrataCategoryCount,
+} from './fccSocrataCatalogue.js';
+
+/** New York State Open Data catalogue (keyless). */
+export {
+  buildNyStateOpenDataCatalogueUrl,
+  fetchNyStateOpenDataCatalogue,
+  NY_STATE_OPEN_DATA_API_BASE,
+  NY_STATE_OPEN_DATA_CATALOGUE_LIMIT,
+  NY_STATE_OPEN_DATA_CATALOGUE_SOURCE_ID,
+  nyStateOpenDataCatalogueAdapter,
+  parseNyStateOpenDataCataloguePayload,
+} from './nyStateOpenDataCatalogue.js';
+/** New York State catalogue types. */
+export type {
+  NyStateOpenDataCatalogue,
+  NyStateOpenDataCatalogueEntry,
+  NyStateOpenDataCategoryCount,
+} from './nyStateOpenDataCatalogue.js';
+
 /** Shared adapter contract types. */
 export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
 

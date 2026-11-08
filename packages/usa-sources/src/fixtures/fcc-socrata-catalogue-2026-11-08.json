@@ -1,0 +1,931 @@
+[
+  {
+    "id": "wgq8-eb5c",
+    "name": "Pirate Radio Broadcasting Database",
+    "assetType": "story",
+    "averageRating": 0,
+    "createdAt": 1674472926,
+    "diciBackend": false,
+    "displayType": "story",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 39239728,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1674473469,
+    "publicationGroup": 19025745,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1674472926,
+    "tableId": 19025745,
+    "totalTimesRated": 0,
+    "viewCount": 78408,
+    "viewLastModified": 1675097611,
+    "viewType": "story",
+    "approvals": [
+      {
+        "reviewedAt": 1692725972,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 5718004,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1692725972,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1692725972,
+          "failureCount": 0,
+          "startedAt": 1692725972,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rpvy-7zdc",
+          "displayName": "Jared Dickson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "isStorytellerAsset": true,
+      "initialized": false,
+      "availableDisplayTypes": ["story"],
+      "renderTypeConfig": {
+        "visible": {
+          "story": true
+        }
+      }
+    },
+    "owner": {
+      "id": "x4kh-z3dd",
+      "displayName": "Jon",
+      "screenName": "Jon",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "x4kh-z3dd",
+      "displayName": "Jon",
+      "screenName": "Jon",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "xqgr-24et",
+    "name": "Pirate Radio Broadcasting Database",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Pirate Radio Enforcement",
+    "createdAt": 1674472381,
+    "description": "In accordance with section 511(g) of the PIRATE Act, the following database is provided to identify each entity against whom an enforcement action for pirate radio broadcasting, has been issued.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 3116,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 41512494,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1754422309,
+    "publicationGroup": 19025743,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1784922301,
+    "rowsUpdatedBy": "q32j-k76j",
+    "tableId": 20006737,
+    "totalTimesRated": 0,
+    "viewCount": 12554,
+    "viewLastModified": 1784922300,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1692801816,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7025653,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1692801816,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1692801816,
+          "failureCount": 0,
+          "startedAt": 1692801816,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rpvy-7zdc",
+          "displayName": "Jared Dickson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Program Code": "000:000",
+          "Bureau Code": "356:00"
+        }
+      },
+      "rowLabel": "Action",
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "x4kh-z3dd",
+      "displayName": "Jon",
+      "screenName": "Jon",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "x4kh-z3dd",
+      "displayName": "Jon",
+      "screenName": "Jon",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["fcc", "eb", "pirate radio", "interference", "unlicensed/unauthorized operations"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "jdr4-3q4p",
+    "name": "Fixed Broadband Deployment Data: June 2021 Status V1",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Wireline",
+    "createdAt": 1660664462,
+    "description": "<b>The data collected to create this dataset was in place through data as of June, 2021.  For more recent broadband availability data, please see https://broadbandmap.fcc.gov; for more information about the related data collection, please see https://www.fcc.gov/BroadbandData. </b> \n\nAll facilities-based broadband providers are required to file data with the FCC twice a year (Form 477) on where they offer Internet access service at speeds exceeding 200 kbps in at least one direction. Fixed providers file lists of census blocks in which they can or do offer service to at least one location, with additional information about the service. Data Download Page: (https://www.fcc.gov/general/broadband-deployment-data-fcc-form-477. Resources page: https://www.fcc.gov/general/form-477-resources-filers",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 10216,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 38770427,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1660664891,
+    "publicationGroup": 18818895,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1660679902,
+    "tableId": 18818895,
+    "totalTimesRated": 0,
+    "viewCount": 32595,
+    "viewLastModified": 1690491605,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1660758410,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 4908413,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1660758410,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1660758410,
+          "failureCount": 0,
+          "startedAt": 1660758410,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rpvy-7zdc",
+          "displayName": "Jared Dickson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Name": "Steven Rosenberg",
+          "Program Code": "000:000",
+          "Contact Point": "Steven.Rosenberg@fcc.gov",
+          "Bureau Code": "356:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["fcc", "wcb", "broadband", "2022"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "yd9y-6jqe",
+    "name": "Provider Table June 2021 Status V1",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Wireline",
+    "createdAt": 1660663094,
+    "description": "<b>The data collected to create this dataset was in place through data as of June, 2021. For more recent broadband availability data, please see https://broadbandmap.fcc.gov; for more information about the related data collection, please see https://www.fcc.gov/BroadbandData.</b>\n\nSummary data of fixed broadband coverage by geographic area",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 3721,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 38770415,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1660663380,
+    "publicationGroup": 18818885,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1660663374,
+    "tableId": 18818885,
+    "totalTimesRated": 0,
+    "viewCount": 19817,
+    "viewLastModified": 1690897542,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1660664084,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 4906337,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1660664084,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1660664084,
+          "failureCount": 0,
+          "startedAt": 1660664084,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rpvy-7zdc",
+          "displayName": "Jared Dickson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Program Code": "000:000",
+          "Contact Point": "Steven.Rosenberg@fcc.gov",
+          "Bureau Code": "356:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["broadband", "form 477", "fixed", "map"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "xvwq-qtaj",
+    "name": "Area Table June 2021 Status V1",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Wireline",
+    "createdAt": 1660652956,
+    "description": "<b>The data collected to create this dataset was in place through data as of June, 2021. For more recent broadband availability data, please see https://broadbandmap.fcc.gov; for more information about the related data collection, please see https://www.fcc.gov/BroadbandData.</b>\n\nSummary data of fixed broadband coverage by geographic area",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 9427,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 38770150,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1660660589,
+    "publicationGroup": 18818774,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1660655547,
+    "tableId": 18818774,
+    "totalTimesRated": 0,
+    "viewCount": 14709,
+    "viewLastModified": 1690896687,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1660758421,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 4908414,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1660758421,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1660758421,
+          "failureCount": 0,
+          "startedAt": 1660758421,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "rpvy-7zdc",
+          "displayName": "Jared Dickson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Program Code": "000:000",
+          "Bureau Code": "356:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["broadband", "form 477", "fixed", "map"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "wxit-5xtm",
+    "name": "Area Table June 2020 Status V2",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Wireline",
+    "createdAt": 1636131115,
+    "description": "<b>The data collected to create this dataset was in place through data as of June, 2021. For more recent broadband availability data, please see https://broadbandmap.fcc.gov; for more information about the related data collection, please see https://www.fcc.gov/BroadbandData.</b>\n\nSummary data of fixed broadband coverage by geographic area",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 5070,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 37911977,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1636139814,
+    "publicationGroup": 18499490,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1636138025,
+    "tableId": 18499490,
+    "totalTimesRated": 0,
+    "viewCount": 5750,
+    "viewLastModified": 1690896786,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1636142197,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 4204324,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1636142197,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1636142198,
+          "failureCount": 0,
+          "startedAt": 1636142197,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "dxch-pd6x",
+          "displayName": "Matthew Wilson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Program Code": "000:000",
+          "Bureau Code": "356:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["broadband", "form 477", "fixed", "map"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "bzun-59r8",
+    "name": "Provider Table June 2020 Status V2",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Wireline",
+    "createdAt": 1636129607,
+    "description": "<b>The data collected to create this dataset was in place through data as of June, 2021. For more recent broadband availability data, please see https://broadbandmap.fcc.gov; for more information about the related data collection, please see https://www.fcc.gov/BroadbandData.</b>\n\nSummary data of fixed broadband coverage by geographic area",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 4139,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 37911938,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1636141238,
+    "publicationGroup": 18499459,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1636141232,
+    "tableId": 18499459,
+    "totalTimesRated": 0,
+    "viewCount": 6066,
+    "viewLastModified": 1690897694,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1636142203,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 4204325,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1636142203,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1636142203,
+          "failureCount": 0,
+          "startedAt": 1636142203,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "dxch-pd6x",
+          "displayName": "Matthew Wilson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Name": "Steven Rosenberg",
+          "Program Code": "000:000",
+          "Contact Point": "Steven.Rosenberg@fcc.gov",
+          "Bureau Code": "356:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["broadband", "form 477", "fixed", "map"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "pp56-kd4g",
+    "name": "Fixed Broadband Deployment Data: June 2020 Status V2",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Wireline",
+    "createdAt": 1635875580,
+    "description": "<b>The data collected to create this dataset was in place through data as of June, 2021. For more recent broadband availability data, please see https://broadbandmap.fcc.gov; for more information about the related data collection, please see https://www.fcc.gov/BroadbandData.</b>\n\nAll facilities-based broadband providers are required to file data with the FCC twice a year (Form 477) on where they offer Internet access service at speeds exceeding 200 kbps in at least one direction. Fixed providers file lists of census blocks in which they can or do offer service to at least one location, with additional information about the service. Data Download Page: https://www.fcc.gov/general/broadband-deployment-data-fcc-form-477. Resources page: https://www.fcc.gov/general/form-477-resources-filers.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 3970,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 37895798,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1635911566,
+    "publicationGroup": 18495390,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1635903441,
+    "tableId": 18495390,
+    "totalTimesRated": 0,
+    "viewCount": 8558,
+    "viewLastModified": 1690895527,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1635974362,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 4196603,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1635974361,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1635974362,
+          "failureCount": 0,
+          "startedAt": 1635974362,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "dxch-pd6x",
+          "displayName": "Matthew Wilson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Name": "Steven Rosenberg",
+          "Program Code": "000:000",
+          "Contact Point": "Steven.Rosenberg@fcc.gov",
+          "Bureau Code": "356:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["fcc", "wcb", "broadband", "2020"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "hicn-aujz",
+    "name": "Fixed Broadband Deployment Data: December 2020",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Wireline",
+    "createdAt": 1634132998,
+    "description": "<b>The data collected to create this dataset was in place through data as of June, 2021. For more recent broadband availability data, please see https://broadbandmap.fcc.gov; for more information about the related data collection, please see https://www.fcc.gov/BroadbandData.</b>\n\nAll facilities-based broadband providers are required to file data with the FCC twice a year (Form 477) on where they offer Internet access service at speeds exceeding 200 kbps in at least one direction. Fixed providers file lists of census blocks in which they can or do offer service to at least one location, with additional information about the service. Data Download Page: (https://www.fcc.gov/general/broadband-deployment-data-fcc-form-477. Resources page: https://www.fcc.gov/general/form-477-resources-filers",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 19863,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 37809100,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1634140642,
+    "publicationGroup": 18478022,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1634173499,
+    "tableId": 18478022,
+    "totalTimesRated": 0,
+    "viewCount": 61382,
+    "viewLastModified": 1690895444,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1634223337,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 4120757,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1634223337,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1634223337,
+          "failureCount": 0,
+          "startedAt": 1634223337,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "dxch-pd6x",
+          "displayName": "Matthew Wilson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Contact Name": "Steven Rosenberg",
+          "Program Code": "000:000",
+          "Contact Point": "Steven.Rosenberg@fcc.gov",
+          "Bureau Code": "356:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["fcc", "wcb", "broadband", "2020"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "ymd4-xaiz",
+    "name": "Area Table December 2020",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Wireline",
+    "createdAt": 1634070029,
+    "description": "<b>The data collected to create this dataset was in place through data as of June, 2021. For more recent broadband availability data, please see https://broadbandmap.fcc.gov; for more information about the related data collection, please see https://www.fcc.gov/BroadbandData.</b>\n\nSummary data of fixed broadband coverage by geographic area",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 6412,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 37804075,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1634239376,
+    "publicationGroup": 18477519,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1634191678,
+    "tableId": 18477519,
+    "totalTimesRated": 0,
+    "viewCount": 32118,
+    "viewLastModified": 1690896741,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1634239701,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 4121352,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1634239701,
+        "targetAudience": "public",
+        "workflowId": 2288,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1634239701,
+          "failureCount": 0,
+          "startedAt": 1634239701,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "dxch-pd6x",
+          "displayName": "Matthew Wilson"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Common Core": {
+          "Program Code": "000:000",
+          "Bureau Code": "356:00"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "sacx-w3ce",
+      "displayName": "Steven Rosenberg",
+      "screenName": "Steven Rosenberg",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["broadband", "form 477", "fixed", "map"],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  }
+]

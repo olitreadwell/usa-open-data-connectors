@@ -4,7 +4,7 @@ Questions that come up about this repo.
 
 ## Do I need an API key?
 
-No. All 29 adapters work keyless and need no environment variable. Three
+No. All 33 adapters work keyless and need no environment variable. Three
 sources ask callers to identify themselves: the SEC EDGAR, National Weather
 Service and CFPB adapters send their own descriptive `User-Agent` header from
 inside the adapter, replacing the default one, so callers send nothing extra.

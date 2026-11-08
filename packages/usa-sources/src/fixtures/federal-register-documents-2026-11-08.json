@@ -1,0 +1,291 @@
+{
+  "description": "All Documents",
+  "count": 10000,
+  "total_pages": 50,
+  "next_page_url": "https://www.federalregister.gov/api/v1/documents?format=json&order=newest&page=2&per_page=10&search_after_cursor=WzE3OTM5MjMyMDAwMDAsIjIwMjYtMjI3MjQiXQ",
+  "results": [
+    {
+      "title": "The American Declaration of Freedom in Space",
+      "type": "Presidential Document",
+      "abstract": null,
+      "document_number": "2026-22789",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22789/the-american-declaration-of-freedom-in-space",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22789.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22789.pdf?1793895308",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "EXECUTIVE OFFICE OF THE PRESIDENT",
+          "name": "Executive Office of the President",
+          "id": 538,
+          "url": "https://www.federalregister.gov/agencies/executive-office-of-the-president",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/538",
+          "parent_id": null,
+          "slug": "executive-office-of-the-president"
+        }
+      ],
+      "excerpts": null
+    },
+    {
+      "title": "Anti-Communism Week, 2026",
+      "type": "Presidential Document",
+      "abstract": null,
+      "document_number": "2026-22787",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22787/anti-communism-week-2026",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22787.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22787.pdf?1793895307",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "EXECUTIVE OFFICE OF THE PRESIDENT",
+          "name": "Executive Office of the President",
+          "id": 538,
+          "url": "https://www.federalregister.gov/agencies/executive-office-of-the-president",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/538",
+          "parent_id": null,
+          "slug": "executive-office-of-the-president"
+        }
+      ],
+      "excerpts": null
+    },
+    {
+      "title": "Amendments to the “Small Business” and “Small Organization” Definitions for Investment Companies and Investment Advisers for Purposes of the Regulatory Flexibility Act",
+      "type": "Rule",
+      "abstract": "The Securities and Exchange Commission (the \"Commission\" or the \"SEC\") is amending the definitions of \"small business\" and \"small organization\" (collectively, \"small entities\") that are used in connection with Commission rulemaking under the Investment Company Act of 1940 (the \"Investment Company Act\") and the Investment Advisers Act of 1940 (the \"Advisers Act\"). These definitions concern regulatory requirements applicable to registered investment companies and business development companies (collectively, \"funds\") as well as investment advisers. The definitions are used specifically for purposes of the Regulatory Flexibility Act (the \"RFA\"), which requires the Commission to consider the impact of its regulations on small entities. The amendments are designed to modernize the definitions, by increasing certain asset-based thresholds, including a mechanism for periodic future inflation adjustments, and eliminating the threshold based on total assets for advisers. In connection with these amendments, the Commission is making conforming amendments to Form ADV as well as the rule that allows certain small SEC-registered advisers to apply for a continuing hardship exemption from making Advisers Act filings electronically.",
+      "document_number": "2026-22741",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22741/amendments-to-the-small-business-and-small-organization-definitions-for-investment-companies-and",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22741.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22741.pdf?1793886317",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "SECURITIES AND EXCHANGE COMMISSION",
+          "name": "Securities and Exchange Commission",
+          "id": 466,
+          "url": "https://www.federalregister.gov/agencies/securities-and-exchange-commission",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/466",
+          "parent_id": null,
+          "slug": "securities-and-exchange-commission"
+        }
+      ],
+      "excerpts": "The Securities and Exchange Commission (the \"Commission\" or the \"SEC\") is amending the definitions of \"small business\" and \"small organization\" (collectively, \"small entities\") that are used in connection with Commission rulemaking under the Investment..."
+    },
+    {
+      "title": "Medicare Program: Hospital Outpatient Prospective Payment and Ambulatory Surgical Center Payment Systems; and Quality Reporting Programs; including the Hospital Outpatient Quality Reporting Program and Ambulatory Surgical Center Quality Program; Request for Information on Strengthening the Standardization and Comparability of Hospital Price Transparency (HPT) Data; Prior Authorization; Accrediting Organization (AO) Deeming for Emergency Medical Treatment and Labor Act (EMTALA); and Notices of Closure of Teaching Hospitals and Opportunities To Apply for Available Slots",
+      "type": "Rule",
+      "abstract": "This final rule with comment period revises the Medicare Hospital Outpatient Prospective Payment System (OPPS) and the Medicare Ambulatory Surgical Center (ASC) payment system for calendar year 2027 based on our continuing experience with these systems. We also describe the changes to the amounts and factors used to determine the payment rates for Medicare services paid under the OPPS and those paid under the ASC payment systems. In addition, this final rule with comment period updates and refines the requirements for the Hospital Outpatient Quality Reporting Program and the Ambulatory Surgical Center Quality Reporting Program. There are no changes to the Rural Emergency Hospital Quality Reporting Program. We finalized the expansion of the prior authorization requirement to include additional Botulinum Toxin Injection services. We also finalized implementation of certain provisions of the Consolidated Appropriations Act, 2026, for off-campus outpatient departments of a provider. In addition, this final rule with comment period announces notices of closure of teaching hospitals and opportunities to apply for available slots. Additionally, we finalized the policy that hospital accrediting organizations (AOs) with deeming authority may assess compliance with certain Emergency Medical Treatment and Labor Act (EMTALA) administrative requirements under 42 CFR 489.20 during accreditation and reaccreditation surveys.",
+      "document_number": "2026-22739",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22739/medicare-program-hospital-outpatient-prospective-payment-and-ambulatory-surgical-center-payment",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22739.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22739.pdf?1793829611",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HEALTH AND HUMAN SERVICES",
+          "name": "Health and Human Services Department",
+          "id": 221,
+          "url": "https://www.federalregister.gov/agencies/health-and-human-services-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/221",
+          "parent_id": null,
+          "slug": "health-and-human-services-department"
+        },
+        {
+          "raw_name": "Centers for Medicare & Medicaid Services",
+          "name": "Centers for Medicare & Medicaid Services",
+          "id": 45,
+          "url": "https://www.federalregister.gov/agencies/centers-for-medicare-medicaid-services",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/45",
+          "parent_id": 221,
+          "slug": "centers-for-medicare-medicaid-services"
+        }
+      ],
+      "excerpts": "This final rule with comment period revises the Medicare Hospital Outpatient Prospective Payment System (OPPS) and the Medicare Ambulatory Surgical Center (ASC) payment system for calendar year 2027 based on our continuing experience with these..."
+    },
+    {
+      "title": "Heightened Requirements for Foreign Importers of Record",
+      "type": "Rule",
+      "abstract": "This document amends the U.S. Customs and Border Protection (CBP) regulations, consistent with Section 2 of Executive Order 14411, \"Strengthening Customs Enforcement,\" by establishing new requirements for foreign importers of record (IORs) when making entry, and corresponding responsibilities for licensed customs brokers with regard to their clients. The new regulations also set forth consequences for foreign IORs and customs brokers who fail to comply with the new requirements.",
+      "document_number": "2026-22735",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22735/heightened-requirements-for-foreign-importers-of-record",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22735.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22735.pdf?1793886317",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "U.S. Customs and Border Protection",
+          "name": "U.S. Customs and Border Protection",
+          "id": 501,
+          "url": "https://www.federalregister.gov/agencies/u-s-customs-and-border-protection",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/501",
+          "parent_id": 227,
+          "slug": "u-s-customs-and-border-protection"
+        }
+      ],
+      "excerpts": "This document amends the U.S. Customs and Border Protection (CBP) regulations, consistent with Section 2 of Executive Order 14411, \"Strengthening Customs Enforcement,\" by establishing new requirements for foreign importers of record (IORs) when making..."
+    },
+    {
+      "title": "Drawbridge Operation Regulation; Harlem River, Between the Boroughs of Manhattan and the Bronx, New York City, New York",
+      "type": "Proposed Rule",
+      "abstract": "The Coast Guard proposes to temporarily modify the operating regulation that governs the Macombs Dam Bridge across the Harlem River, mile 3.2, between the Boroughs of Manhattan and the Bronx, New York City, New York. The bridge owner, New York City Department of Transportation (NYCDOT), submitted a request on August 31, 2026, to allow the bridge to remain in the closed position from February 1, 2027, through November 30, 2027, and facilitate rehabilitation of the bridge structure. We invite your comments on this proposed rulemaking.",
+      "document_number": "2026-22734",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22734/drawbridge-operation-regulation-harlem-river-between-the-boroughs-of-manhattan-and-the-bronx-new",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22734.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22734.pdf?1793886317",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "Coast Guard",
+          "name": "Coast Guard",
+          "id": 53,
+          "url": "https://www.federalregister.gov/agencies/coast-guard",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/53",
+          "parent_id": 227,
+          "slug": "coast-guard"
+        }
+      ],
+      "excerpts": "The Coast Guard proposes to temporarily modify the operating regulation that governs the Macombs Dam Bridge across the Harlem River, mile 3.2, between the Boroughs of Manhattan and the Bronx, New York City, New York. The bridge owner, New York City..."
+    },
+    {
+      "title": "Document Image System (DIS) Pilot for Used Self-Propelled Vehicles Export Document Submission: Renewal of Test",
+      "type": "Notice",
+      "abstract": "This notice announces that U.S. Customs and Border Protection (CBP) is renewing the Document Image System (DIS) Pilot for Used Self- Propelled Vehicles (USPV) Export Document Submission (DIS USPV Test) for an additional two years. This voluntary pilot evaluates the feasibility of using the DIS to allow participants to submit the required vehicle ownership documentation for USPVs to CBP. This notice includes a description of the pilot, the eligibility requirements for participation, and invites public comment on any aspect of the pilot.",
+      "document_number": "2026-22728",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22728/document-image-system-dis-pilot-for-used-self-propelled-vehicles-export-document-submission-renewal",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22728.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22728.pdf?1793886317",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF HOMELAND SECURITY",
+          "name": "Homeland Security Department",
+          "id": 227,
+          "url": "https://www.federalregister.gov/agencies/homeland-security-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/227",
+          "parent_id": null,
+          "slug": "homeland-security-department"
+        },
+        {
+          "raw_name": "U.S. Customs & Border Protection",
+          "name": "U.S. Customs and Border Protection",
+          "id": 501,
+          "url": "https://www.federalregister.gov/agencies/u-s-customs-and-border-protection",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/501",
+          "parent_id": 227,
+          "slug": "u-s-customs-and-border-protection"
+        }
+      ],
+      "excerpts": "This notice announces that U.S. Customs and Border Protection (CBP) is renewing the Document Image System (DIS) Pilot for Used Self- Propelled Vehicles (USPV) Export Document Submission (DIS USPV Test) for an additional two years. This voluntary pilot..."
+    },
+    {
+      "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Application Process To Waive the Import Qualification Criteria Measures To Restrict Stockpiling of Polysilicon and Polysilicon Derivatives",
+      "type": "Notice",
+      "abstract": "The Department of Commerce, in accordance with the Paperwork Reduction Act of 1995 (PRA), invites the general public and other Federal agencies to comment on proposed, and continuing information collections, which helps us assess the impact of our information collection requirements and minimize the public's reporting burden. The purpose of this notice is to allow for 60 days of public comment on the OMB approved emergency collection for the Temporary Final Rule \"Measures To Restrict Stockpiling of Polysilicon and Polysilicon Derivatives Under Proclamation 11052\" (September 24, 2026, 91 FR 60505).",
+      "document_number": "2026-22726",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22726/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-omb-for",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22726.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22726.pdf?1793886317",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "Bureau of Industry and Security",
+          "name": "Industry and Security Bureau",
+          "id": 241,
+          "url": "https://www.federalregister.gov/agencies/industry-and-security-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/241",
+          "parent_id": 54,
+          "slug": "industry-and-security-bureau"
+        }
+      ],
+      "excerpts": "The Department of Commerce, in accordance with the Paperwork Reduction Act of 1995 (PRA), invites the general public and other Federal agencies to comment on proposed, and continuing information collections, which helps us assess the impact of our..."
+    },
+    {
+      "title": "Agency Information Collection Activities; Submission to the Office of Management and Budget (OMB) for Review and Approval; Comment Request; Section 232 National Security Adjustments to Imports of Specialty Pharmaceuticals and Associated Ingredients",
+      "type": "Notice",
+      "abstract": "The Department of Commerce, in accordance with the Paperwork Reduction Act of 1995 (PRA), invites the general public and other Federal agencies to comment on proposed, and continuing information collections, which helps us assess the impact of our information collection requirements and minimize the public's reporting burden. The purpose of this notice is to allow for 60 days of public comment on the OMB approved emergency collection for the Temporary Final Rule \"Section 232 National Security Adjustments to Imports of Specialty Pharmaceuticals and Associated Ingredients\" September 23, 2026, (91 FR 60360).",
+      "document_number": "2026-22725",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22725/agency-information-collection-activities-submission-to-the-office-of-management-and-budget-omb-for",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22725.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22725.pdf?1793886317",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF COMMERCE",
+          "name": "Commerce Department",
+          "id": 54,
+          "url": "https://www.federalregister.gov/agencies/commerce-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/54",
+          "parent_id": null,
+          "slug": "commerce-department"
+        },
+        {
+          "raw_name": "Bureau of Industry and Security",
+          "name": "Industry and Security Bureau",
+          "id": 241,
+          "url": "https://www.federalregister.gov/agencies/industry-and-security-bureau",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/241",
+          "parent_id": 54,
+          "slug": "industry-and-security-bureau"
+        }
+      ],
+      "excerpts": "The Department of Commerce, in accordance with the Paperwork Reduction Act of 1995 (PRA), invites the general public and other Federal agencies to comment on proposed, and continuing information collections, which helps us assess the impact of our..."
+    },
+    {
+      "title": "Records Governing Off-the-Record Communications; Public Notice",
+      "type": "Notice",
+      "abstract": null,
+      "document_number": "2026-22724",
+      "html_url": "https://www.federalregister.gov/documents/2026/11/06/2026-22724/records-governing-off-the-record-communications-public-notice",
+      "pdf_url": "https://www.govinfo.gov/content/pkg/FR-2026-11-06/pdf/2026-22724.pdf",
+      "public_inspection_pdf_url": "https://public-inspection.federalregister.gov/2026-22724.pdf?1793886316",
+      "publication_date": "2026-11-06",
+      "agencies": [
+        {
+          "raw_name": "DEPARTMENT OF ENERGY",
+          "name": "Energy Department",
+          "id": 136,
+          "url": "https://www.federalregister.gov/agencies/energy-department",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/136",
+          "parent_id": null,
+          "slug": "energy-department"
+        },
+        {
+          "raw_name": "Federal Energy Regulatory Commission",
+          "name": "Federal Energy Regulatory Commission",
+          "id": 167,
+          "url": "https://www.federalregister.gov/agencies/federal-energy-regulatory-commission",
+          "json_url": "https://www.federalregister.gov/api/v1/agencies/167",
+          "parent_id": 136,
+          "slug": "federal-energy-regulatory-commission"
+        }
+      ],
+      "excerpts": null
+    }
+  ]
+}

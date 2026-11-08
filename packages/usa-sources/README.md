@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 29 source adapters behind one interface.
+- Exposes 33 source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads committed fixtures in tests only; a live fetch never falls back.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -58,6 +58,10 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 | `college-scorecard-institutions` | College Scorecard, US Department of Education | Institution-level enrollment, cost, completion, debt, and earnings ten years after entry for US colleges. |
 | `publicdatahub-hospital-quality` | PublicDataHub, from the Centers for Medicare & Medicaid Services | Medicare-certified hospital quality measures, with national ranks and provenance. |
 | `nextbus-transit-vehicles` | Portland Streetcar, through the NextBus XML feed | Live positions, headings, speeds, and report ages for the streetcars on the NS line. |
+| `federal-register-documents` | Office of the Federal Register | Documents published in the Federal Register, with type, publication date, agencies, abstract, and public HTML and PDF links. |
+| `nhtsa-vehicle-models` | National Highway Traffic Safety Administration | Vehicle models for one model year and make, with the service total and next-page URL. |
+| `fcc-socrata-catalogue` | Federal Communications Commission | The FCC Open Data Socrata catalogue, one row per dataset, chart, or story, with category, view count, and download count. |
+| `ny-state-open-data-catalogue` | New York State Open Data | The New York State Socrata catalogue, one row per dataset or file, with state topic, view count, and download count. |
 
 The HTTP API and the CLI read this package's registry. A new adapter is exposed on
 `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data` as soon as it is registered.
@@ -561,6 +565,81 @@ The adapter reads the keyless institution-level bulk download, not the keyed
 College Scorecard API. The archive is a zip that holds one wide CSV, and a live
 fetch takes about 20 seconds on a fast connection.
 
+`federal-register-documents`:
+
+```ts
+import { fetchFederalRegisterDocuments } from '@usa-open-data-connectors/usa-sources';
+
+const page = await fetchFederalRegisterDocuments({ perPage: 10, order: 'newest' });
+console.log(page.documentCount, page.reportedCount, page.documents[0]?.documentNumber);
+```
+
+The public API is `FEDERAL_REGISTER_API_BASE`,
+`FEDERAL_REGISTER_DEFAULT_PAGE_SIZE`, `FEDERAL_REGISTER_DEFAULT_ORDER`,
+`FEDERAL_REGISTER_DOCUMENTS_SOURCE_ID`, `buildFederalRegisterDocumentsUrl`,
+`parseFederalRegisterDocumentsPayload`, `fetchFederalRegisterDocuments`, and
+`federalRegisterDocumentsAdapter`, with the `FederalRegisterDocument`,
+`FederalRegisterDocumentsPage`, and `FederalRegisterDocumentsQuery` types. The
+parser keeps the document number, title, type, publication date, abstract,
+agency names, and HTML and PDF links. It also keeps the service's `count` and
+`total_pages` as `reportedCount` and `totalPages`. A document without its
+number, title, type, HTML page, or a readable `YYYY-MM-DD` publication date
+throws `UsSourceParseError`.
+
+`nhtsa-vehicle-models`:
+
+```ts
+import { fetchNhtsaVehicleModels } from '@usa-open-data-connectors/usa-sources';
+
+const page = await fetchNhtsaVehicleModels({ modelYear: 2025, make: 'Honda' });
+console.log(page.modelCount, page.totalCount, page.models[0]?.vehicleModel);
+```
+
+The public API is `NHTSA_VEHICLE_MODELS_API_BASE`,
+`NHTSA_VEHICLE_MODELS_SOURCE_ID`, `NHTSA_DEFAULT_MODEL_YEAR`,
+`NHTSA_DEFAULT_MAKE`, `NHTSA_MODEL_PAGE_SIZE`, `NHTSA_MIN_MODEL_YEAR`,
+`NHTSA_MAX_MODEL_YEAR`, `buildNhtsaVehicleModelsUrl`,
+`parseNhtsaVehicleModelsPayload`, `fetchNhtsaVehicleModels`, and
+`nhtsaVehicleModelsAdapter`, with the `NhtsaVehicleModel`,
+`NhtsaVehicleModelPage`, and `NhtsaVehicleModelsQuery` types. A blank make or a
+model year outside 1900-2100 throws `UsSourceApiError` before a request leaves.
+A non-200 service status in the body also throws `UsSourceApiError`.
+
+`fcc-socrata-catalogue`:
+
+```ts
+import { fetchFccSocrataCatalogue } from '@usa-open-data-connectors/usa-sources';
+
+const catalogue = await fetchFccSocrataCatalogue({ limit: 10 });
+console.log(catalogue.entryCount, catalogue.datasetCount, catalogue.categories[0]);
+```
+
+The public API is `FCC_SOCRATA_CATALOGUE_API_BASE`,
+`FCC_SOCRATA_CATALOGUE_LIMIT`, `FCC_SOCRATA_CATALOGUE_SOURCE_ID`,
+`buildFccSocrataCatalogueUrl`, `parseFccSocrataCataloguePayload`,
+`fetchFccSocrataCatalogue`, and `fccSocrataCatalogueAdapter`, with the
+`FccSocrataCatalogueEntry`, `FccSocrataCategoryCount`, and
+`FccSocrataCatalogue` types. The parser folds the entries into a dataset count,
+the newest entry, and category counts. A missing id, name, or creation time
+throws `UsSourceParseError`, and so does an empty page.
+
+`ny-state-open-data-catalogue`:
+
+```ts
+import { fetchNyStateOpenDataCatalogue } from '@usa-open-data-connectors/usa-sources';
+
+const catalogue = await fetchNyStateOpenDataCatalogue({ limit: 10 });
+console.log(catalogue.entryCount, catalogue.datasetCount, catalogue.categories[0]);
+```
+
+The public API is `NY_STATE_OPEN_DATA_API_BASE`,
+`NY_STATE_OPEN_DATA_CATALOGUE_LIMIT`, `NY_STATE_OPEN_DATA_CATALOGUE_SOURCE_ID`,
+`buildNyStateOpenDataCatalogueUrl`, `parseNyStateOpenDataCataloguePayload`,
+`fetchNyStateOpenDataCatalogue`, and `nyStateOpenDataCatalogueAdapter`, with the
+`NyStateOpenDataCatalogueEntry`, `NyStateOpenDataCategoryCount`, and
+`NyStateOpenDataCatalogue` types. The parser follows the same Socrata catalogue
+shape as the FCC adapter.
+
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
@@ -670,6 +749,14 @@ fetch takes about 20 seconds on a fast connection.
 - `nextbus-transit-vehicles`: `t=0` asks for every report the feed still holds for the route. The feed returns the current set of streetcars, not a history, so the snapshot describes one moment and is replaced on the next request.
 - `nextbus-transit-vehicles`: a route with no service returns a snapshot with zero vehicles and a valid timestamp. That is a real answer, not a failure, so the parser keeps it.
 - `nextbus-transit-vehicles`: the feed carries a copyright notice for the transit agency and Umo IQ, and states no open licence. Check the agency's terms before republishing the positions.
+- `federal-register-documents`: the newest-documents query answered `count` 10,000 and `total_pages` 50 on 2026-11-08 even though the request asked for ten rows. The adapter preserves both values as the service reported them and does not treat either as the page size.
+- `federal-register-documents`: a document can have several agencies, and a Presidential Document can have an empty abstract. Both are valid and the parser keeps them.
+- `nhtsa-vehicle-models`: the service echoes the make in upper case, so a request for `Honda` returns rows whose `make` is `HONDA`. The adapter keeps the response value.
+- `nhtsa-vehicle-models`: the default query is the 2025 Honda list, which returned 50 models in one page with `max=100` on 2026-11-08. A model year or page window outside the validator's range is refused before a request leaves.
+- `fcc-socrata-catalogue`: the ten-entry page captured on 2026-11-08 mixed one story with nine datasets. The adapter counts only `assetType` values equal to `dataset` in `datasetCount`.
+- `fcc-socrata-catalogue`: the captured page supplied no Common Core `License` or `Publisher` value, so `licenceUrl` and `attribution` are empty. Check each portal entry before reuse.
+- `ny-state-open-data-catalogue`: the ten-entry page captured on 2026-11-08 mixed nine datasets with one file. The adapter counts only `assetType` values equal to `dataset` in `datasetCount`.
+- `ny-state-open-data-catalogue`: the captured page supplied no Common Core `License` or `Publisher` value, so `licenceUrl` and `attribution` are empty. Check each portal entry before reuse.
 
 ## Data sources and licences
 
@@ -702,6 +789,10 @@ The data comes from US federal agencies and the open data catalogue services the
 | College Scorecard, US Department of Education | `https://ed-public-download.scorecard.network/downloads/Most-Recent-Cohorts-Institution_10152026.zip` |
 | PublicDataHub, from the Centers for Medicare & Medicaid Services | `https://publicdatahub.org/api/export/hospital/{slug}.json` |
 | Portland Streetcar, through the NextBus XML feed | `https://retro.umoiq.com/service/publicXMLFeed?command=vehicleLocations&a=portland-sc&r=193&t=0` |
+| Office of the Federal Register | `https://www.federalregister.gov/api/v1/documents.json` |
+| National Highway Traffic Safety Administration | `https://api.nhtsa.gov/vehicles/models` |
+| Federal Communications Commission | `https://opendata.fcc.gov/api/views.json` |
+| New York State Open Data | `https://data.ny.gov/api/views.json` |
 
 Each publisher sets its own terms for its data. The Socrata catalogue adapters keep the `License` and
 `Publisher` values from an entry's Common Core metadata as `licenceUrl` and `attribution`. An empty

@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Connectors: add keyless `federal-register-documents`, `nhtsa-vehicle-models`,
+  `fcc-socrata-catalogue`, and `ny-state-open-data-catalogue` adapters, each
+  with a dated live fixture and a live registry probe.
 - Connectors: add the keyless `nih-reporter-projects` adapter for NIH-funded
   projects, with a fiscal 2025 fixture and a JSON POST helper.
 - Ports: add keyless Python and Ruby ports with all 28 TypeScript adapter ids,

@@ -6,11 +6,15 @@ import { estimatetaxIncomeTaxAdapter } from './estimatetaxIncomeTax.js';
 import { cdcSocrataCatalogueAdapter } from './cdcSocrataCatalogue.js';
 import { clinicalTrialsStudiesAdapter } from './clinicalTrialsStudies.js';
 import { epaEnvirofactsFacilitiesAdapter } from './epaEnvirofactsFacilities.js';
+import { fccSocrataCatalogueAdapter } from './fccSocrataCatalogue.js';
+import { federalRegisterDocumentsAdapter } from './federalRegisterDocuments.js';
 import { fdicBankDirectoryAdapter } from './fdicBankDirectory.js';
 import { healthdataSocrataCatalogueAdapter } from './healthdataSocrataCatalogue.js';
 import { ncbiPubmedSearchAdapter } from './ncbiPubmedSearch.js';
 import { nihReporterProjectsAdapter } from './nihReporterProjects.js';
+import { nhtsaVehicleModelsAdapter } from './nhtsaVehicleModels.js';
 import { nycOpenDataCatalogueAdapter } from './nycOpenDataCatalogue.js';
+import { nyStateOpenDataCatalogueAdapter } from './nyStateOpenDataCatalogue.js';
 import { publicDataHubHospitalAdapter } from './publicDataHubHospital.js';
 import { nwsPointForecastAdapter } from './nwsPointForecast.js';
 import { secEdgarFilingsAdapter } from './secEdgarFilings.js';
@@ -61,6 +65,10 @@ export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   collegeScorecardInstitutionsAdapter,
   publicDataHubHospitalAdapter,
   nextBusTransitVehiclesAdapter,
+  federalRegisterDocumentsAdapter,
+  nhtsaVehicleModelsAdapter,
+  fccSocrataCatalogueAdapter,
+  nyStateOpenDataCatalogueAdapter,
 ];
 
 /** Looks up a source adapter by id. */

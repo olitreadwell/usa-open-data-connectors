@@ -1,0 +1,1348 @@
+[
+  {
+    "id": "sa8q-nq2h",
+    "name": "SPARCS Ambulatory Surgery Encounters by Facility: Beginning 2018",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health",
+    "createdAt": 1793818354,
+    "description": "This dataset is a summary of the ambulatory surgery encounters reported in SPARCS data, summarized by facility and quarter of visit.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "health.data.ny.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42732724,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793824101,
+    "publicationGroup": 20707303,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793824085,
+    "rowsUpdatedBy": "a9xd-f5um",
+    "sourceDomainCName": "health.data.ny.gov",
+    "tableId": 20707334,
+    "totalTimesRated": 0,
+    "viewCount": 0,
+    "viewLastModified": 1793908021,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793908031,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7848944,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793908031,
+        "targetAudience": "public",
+        "workflowId": 1966,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793908031,
+          "failureCount": 0,
+          "startedAt": 1793908031,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9xd-f5um",
+          "displayName": "R. Staniek"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "HDNY_SPARCS_AS_By PFI_Visit_Type_DataDictionary.pdf",
+          "assetId": "7e29e156-3e52-4b19-a27f-f2b4c239ab39",
+          "name": "NYSDOH_SPARCS_AS_By_PFI_Visit_Type_Data_Dictionary.pdf"
+        },
+        {
+          "filename": "HDNY_SPARCS_AS_By PFI_Visit_Type_Overview.pdf",
+          "assetId": "5f142315-2472-43e9-9ba1-c190bdc3fdba",
+          "name": "NYSDOH_SPARCS_AS_By_PFI_Visit_Type_Overview.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Summary": {
+          "Posting Frequency": "Bi-Annually",
+          "Program Owner": "Center for Applied Research and Evaluation",
+          "Time Period": "Beginning 2018",
+          "Office/Division": "Office of Health Services Quality and Analytics ",
+          "Coverage": "Statewide",
+          "Granularity": "Facility",
+          "Units": "Facility"
+        },
+        "Disclaimers": {
+          "Limitations": "SPARCS data is continually submitted and updated and facility submission timeframes may vary.  The counts reflected in this dataset are subject to change as the data matures.  Facility name, operator, and type reflect current attributes at the time the data was compiled and might not reflect historical facility type or affiliations. Ambulatory surgery encounters are defined by revenue code reporting and do not necessarily reflect  ambulatory surgery certification on the facility operating certificates. Facilities with less than 10 ambulatory surgery encounters reported within a calendar year are removed. "
+        },
+        "Notes": {
+          "Notes": "Statewide Planning and Research Cooperative System (SPARCS) is a comprehensive all payer data reporting system established in 1979 as a result of cooperation between the healthcare industry and government. The system was initially created to collect information on discharges from hospitals. SPARCS currently collects patient-level detail on patient characteristics, diagnoses and treatments, services, and charges for each hospital inpatient stay and outpatient (ambulatory surgery, emergency department, and outpatient services) visit; and each ambulatory surgery and outpatient services visit to a hospital extension clinic and diagnostic and treatment center licensed to provide ambulatory surgery services."
+        },
+        "Dataset Information": {
+          "Agency": "Health, Department of"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "tags": ["ambulatory surgery", "sparcs", "all payer", "hospital", "facility"],
+    "flags": [
+      "catalogFederatedView",
+      "default",
+      "federated",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "jf8m-t7x9",
+    "name": "Open NY Quarterly Report October 2026",
+    "assetType": "file",
+    "averageRating": 0,
+    "blobFilename": "October2026QuarterlyUpdate.pdf",
+    "blobFileSize": 330084,
+    "blobId": "e0f6b054-d4b6-43b8-82d1-609d2544df8c",
+    "blobMimeType": "application/pdf",
+    "createdAt": 1792095170,
+    "description": "Having trouble viewing the report in the Preview pane? Just click the Download button below to download a copy of the report.",
+    "diciBackend": false,
+    "displayType": "blob",
+    "downloadCount": 193,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": false,
+    "numberOfComments": 0,
+    "oid": 42667414,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1792095923,
+    "publicationGroup": 20674507,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1792095170,
+    "tableId": 20674507,
+    "totalTimesRated": 0,
+    "viewCount": 5262,
+    "viewLastModified": 1792095935,
+    "viewType": "blobby",
+    "approvals": [
+      {
+        "reviewedAt": 1792095946,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7802949,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1792095946,
+        "targetAudience": "public",
+        "workflowId": 2254,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1792095946,
+          "failureCount": 0,
+          "startedAt": 1792095946,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "28jg-4c4u",
+          "displayName": "Open Data Administrator 1"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "custom_fields": {
+        "Dataset Summary": {
+          "Contact Information": "opendata@its.ny.gov",
+          "Dataset Owner": "NY Open Data"
+        },
+        "Dataset Information": {
+          "Agency": "Open Data Reports"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "xzik-pf59",
+      "displayName": "NY Open Data",
+      "profileImageUrlLarge": "/api/users/xzik-pf59/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/xzik-pf59/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/xzik-pf59/profile_images/TINY",
+      "screenName": "NY Open Data",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "xzik-pf59",
+      "displayName": "NY Open Data",
+      "profileImageUrlLarge": "/api/users/xzik-pf59/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/xzik-pf59/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/xzik-pf59/profile_images/TINY",
+      "screenName": "NY Open Data",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": ["openny report"],
+    "flags": ["default", "ownerMayBeContacted"]
+  },
+  {
+    "id": "f2ea-9n3x",
+    "name": "Temporary Elevator Mechanics License",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Government & Finance",
+    "createdAt": 1791578577,
+    "description": "The dataset includes a comprehensive list of temporary elevator mechanics licenses that have been issued to individuals for the purpose of performing elevator work during a verifiable shortage of licensed mechanics. The dataset includes the individual’s name and license information, such as license number, license type, issue date, expiration date, and status.",
+    "diciBackend": false,
+    "displayType": "table",
+    "downloadCount": 71,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42656534,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1791579273,
+    "publicationGroup": 20668270,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1794047487,
+    "rowsUpdatedBy": "xzik-pf59",
+    "tableId": 20668270,
+    "totalTimesRated": 0,
+    "viewCount": 666,
+    "viewLastModified": 1794047486,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1791914089,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7799365,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1791914089,
+        "targetAudience": "public",
+        "workflowId": 2254,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1791914089,
+          "failureCount": 0,
+          "startedAt": 1791914089,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "28jg-4c4u",
+          "displayName": "Open Data Administrator 1"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "jsonQuery": {
+        "order": [
+          {
+            "columnFieldName": "last_name",
+            "ascending": true
+          }
+        ]
+      },
+      "attachments": [
+        {
+          "filename": "DOL_TemporaryElevatorMechanicsLicense_Overview.pdf",
+          "assetId": "5eb78abe-1096-43bd-ba17-f01aa6f3e31c",
+          "name": "DOL_TemporaryElevatorMechanicsLicense_Overview.pdf"
+        },
+        {
+          "filename": "DOL_TemporaryElevatorMechanicsLicense_DataDictionary.pdf",
+          "assetId": "558a27d0-ec04-4d35-8b1d-e5f407e036d1",
+          "name": "DOL_TemporaryElevatorMechanicsLicense_DataDictionary.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Summary": {
+          "Posting Frequency": "Daily",
+          "Organization": "Division of Safety and Health",
+          "Contact Information": "license&certificate@labor.ny.gov",
+          "Time Period": "Current - The data includes all active licenses and licenses that have expired within the last year. The license is active for 90 days as long as the temporary elevator mechanic is employed by the licensed elevator contractor.",
+          "Coverage": "Statewide",
+          "Granularity": "City",
+          "Dataset Owner": "New York State Department of Labor"
+        },
+        "Additional Resources": {
+          "See Also": "https://dol.ny.gov/"
+        },
+        "Disclaimers": {
+          "Limitations": "Licenses that have expired over a year ago will not be available in the dataset."
+        },
+        "Dataset Information": {
+          "Agency": "Labor, Department of"
+        }
+      },
+      "rowIdentifier": 648551456,
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "xzik-pf59",
+      "displayName": "NY Open Data",
+      "profileImageUrlLarge": "/api/users/xzik-pf59/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/xzik-pf59/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/xzik-pf59/profile_images/TINY",
+      "screenName": "NY Open Data",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "xzik-pf59",
+      "displayName": "NY Open Data",
+      "profileImageUrlLarge": "/api/users/xzik-pf59/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/xzik-pf59/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/xzik-pf59/profile_images/TINY",
+      "screenName": "NY Open Data",
+      "type": "interactive",
+      "flags": ["acceptedEula"]
+    },
+    "tags": [
+      "elevator",
+      "temporary license",
+      "mechanic",
+      "inspector",
+      "accessibility",
+      "lift",
+      "technician"
+    ],
+    "flags": ["default", "ownerMayBeContacted", "restorable", "restorePossibleForType"]
+  },
+  {
+    "id": "sp9t-e36z",
+    "name": "RSV Hospitalizations: Beginning October 2025",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health",
+    "createdAt": 1791573202,
+    "description": "This dataset includes weekly aggregate counts of persons hospitalized with laboratory-confirmed RSV, by county beginning with the 2025-26 season. The primary goal of this dataset is to provide timely information about RSV-associated hospitalizations throughout the respiratory season. Although each respiratory season is unique, historical data is provided for trend comparison.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "health.data.ny.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42656364,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793544562,
+    "publicationGroup": 20668166,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793544556,
+    "rowsUpdatedBy": "a9xd-f5um",
+    "sourceDomainCName": "health.data.ny.gov",
+    "tableId": 20668166,
+    "totalTimesRated": 0,
+    "viewCount": 0,
+    "viewLastModified": 1793546168,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793735978,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7843491,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793735978,
+        "targetAudience": "public",
+        "workflowId": 1966,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793735978,
+          "failureCount": 0,
+          "startedAt": 1793735978,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9xd-f5um",
+          "displayName": "R. Staniek"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "NYSDOH_RSV_Hospitalizations_Overview.pdf",
+          "assetId": "72fcf3ec-a4c9-466e-a9d3-ff0003d929d6",
+          "name": "NYSDOH_RSV_Hospitalizations_Overview.pdf"
+        },
+        {
+          "filename": "NYSDOH_RSV_Hospitalizations_Dictionary.pdf",
+          "assetId": "660e39ba-c8b7-4378-908d-44116480688d",
+          "name": "NYSDOH_RSV_Hospitalizations_Dictionary.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Summary": {
+          "Posting Frequency": "Weekly",
+          "Program Owner": "Bureau of Communicable Disease Control",
+          "Office/Division": "Division of Epidemiology, Center for Community Health, Office of Public Health",
+          "Coverage": "Statewide",
+          "Granularity": "Age Group, County, and  Region"
+        },
+        "Additional Resources": {
+          "See Also   ": "https://www.cdc.gov/rsv/hcp/clinical-overview/index.html",
+          "See Also ": "https://www.cdc.gov/rsv/about/index.html",
+          "See Also  ": "https://www.cdc.gov/rsv/php/surveillance/index.html",
+          "See Also    ": "https://www.wadsworth.org/regulatory/clep",
+          "See Also": "https://health.ny.gov/diseases/communicable/respiratory_viruses/"
+        },
+        "Notes": {
+          "Notes": "Data are posted weekly during the season (MMWR week 40-week 39 of the next year; October-September)"
+        },
+        "Dataset Information": {
+          "Agency": "Health, Department of"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "tags": ["community health and chronic disease", "rsv", "flu", "surveillance", "ari"],
+    "flags": [
+      "catalogFederatedView",
+      "default",
+      "federated",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "xbwj-hrbe",
+    "name": "Influenza Hospitalizations: Beginning October 2025",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health",
+    "createdAt": 1791573171,
+    "description": "This dataset includes weekly aggregate counts of persons hospitalized with laboratory-confirmed influenza (flu), by county beginning with the 2025-26 season. The primary goal of this dataset is to provide timely information about influenza-associated hospitalizations throughout the respiratory season. Although each respiratory season is unique, historical data is provided for trend comparison.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "health.data.ny.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42656363,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793544613,
+    "publicationGroup": 20668165,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793544597,
+    "rowsUpdatedBy": "a9xd-f5um",
+    "sourceDomainCName": "health.data.ny.gov",
+    "tableId": 20668165,
+    "totalTimesRated": 0,
+    "viewCount": 0,
+    "viewLastModified": 1793546195,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793735954,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7843489,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793735954,
+        "targetAudience": "public",
+        "workflowId": 1966,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793735954,
+          "failureCount": 0,
+          "startedAt": 1793735954,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9xd-f5um",
+          "displayName": "R. Staniek"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "NYSDOH_Influenza_Hospitalizations_Overview.pdf",
+          "assetId": "d18211b3-402b-4c5f-b42e-3fb659b6d3ce",
+          "name": "NYSDOH_Influenza_Hospitalizations_Overview.pdf"
+        },
+        {
+          "filename": "NYSDOH_Influenza_Hospitalizations_Data_Dictionary.pdf",
+          "assetId": "deb97c45-13c1-4684-9ac3-9fe022685bca",
+          "name": "NYSDOH_Influenza_Hospitalizations_Data_Dictionary.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Summary": {
+          "Posting Frequency": "Weekly",
+          "Program Owner": "Bureau of Communicable Disease Control",
+          "Office/Division": "Division of Epidemiology, Center for Community Health, Office of Public Health",
+          "Coverage": "Statewide",
+          "Granularity": "Age Group, County, and Region"
+        },
+        "Notes": {
+          "Notes": "Data are posted weekly during the season (MMWR weeks 40-week 39 of the next year; October-September)."
+        },
+        "Dataset Information": {
+          "Agency": "Health, Department of"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "tags": ["community health and chronic disease", "influenza", "flu", "surveillance", "ari"],
+    "flags": [
+      "catalogFederatedView",
+      "default",
+      "federated",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "t4bd-a2nv",
+    "name": "RSV Laboratory Confirmed Cases by County: Beginning October 2025",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health",
+    "createdAt": 1791572836,
+    "description": "This dataset includes weekly counts of persons with laboratory-confirmed Respiratory syncytial virus (RSV), by county and virus type, beginning with the 2025-2026 season. The primary goal of this dataset is to provide timely information about RSV virus activity throughout the respiratory season. Although each season is unique, historical data is also provided for trend comparison.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "health.data.ny.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42656362,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793544504,
+    "publicationGroup": 20668164,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793544493,
+    "rowsUpdatedBy": "a9xd-f5um",
+    "sourceDomainCName": "health.data.ny.gov",
+    "tableId": 20668164,
+    "totalTimesRated": 0,
+    "viewCount": 0,
+    "viewLastModified": 1793546157,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793736007,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7843492,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793736007,
+        "targetAudience": "public",
+        "workflowId": 1966,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793736007,
+          "failureCount": 0,
+          "startedAt": 1793736007,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9xd-f5um",
+          "displayName": "R. Staniek"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "NYSDOH_RSV_Cases_by_County_Overview.pdf",
+          "assetId": "a9fec6e0-bf6a-4a14-ac99-429ffb8de191",
+          "name": "NYSDOH_RSV_Cases_by_County_Overview.pdf"
+        },
+        {
+          "filename": "NYSDOH_RSV_Cases_by_County_Data_Dictionary.pdf",
+          "assetId": "a65ed44d-021a-48e1-929d-ff4c7fa0ec04",
+          "name": "NYSDOH_RSV_Cases_by_County_Data_Dictionary.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Summary": {
+          "Posting Frequency": "Weekly",
+          "Program Owner": "Division of Epidemiology Bureau of Communicable Disease Control and Bureau of Surveillance and Disease Systems",
+          "Time Period": "Beginning with the 2025-2026 Respiratory Virus Season (October 2025 onward)",
+          "Office/Division": "Division of Epidemiology, Center for Community Health, Office of Public Health",
+          "Coverage": "Statewide",
+          "Granularity": "County",
+          "Units": "Laboratory confirmed RSV cases"
+        },
+        "Additional Resources": {
+          "See Also   ": "https://www.cdc.gov/rsv/hcp/clinical-overview/index.html",
+          "See Also ": "https://www.cdc.gov/rsv/about/index.html",
+          "See Also  ": "https://www.cdc.gov/rsv/php/surveillance/index.html",
+          "See Also    ": "https://www.wadsworth.org/regulatory/clep",
+          "See Also": "https://health.ny.gov/diseases/communicable/respiratory_viruses/",
+          "See Also     ": "https://www.wadsworth.org/regulatory/polep"
+        },
+        "Disclaimers": {
+          "Limitations": "These data are an undercount of the true number of RSV cases because they only represent illnesses where 1) an ill patient seeks medical care, 2) an appropriate specimen is collected for diagnostic testing, 3) such testing is performed in a clinical laboratory that reports results to ECLRS, and 4) test results are positive. It is unknown how many patients do not seek medical care, are not tested by a reliable assay, or are tested in settings that do not report results to ECLRS. Further, certain tests such as RDTs have limited accuracy; false negative and false positive results do occur. The number of laboratories reporting data to ECLRS has increased over time. However, it is not known how RSV virus testing practices or the proportion of all tests being performed in clinical laboratory settings have changed over time or how they vary geographically. Thus, caution should be used when comparing data such as absolute numbers of cases between seasons or counties. Despite these limitations, the data can provide useful situational awareness (e.g., trend) information during a respiratory virus season. Data may also be used to compare epidemic characteristics, e.g., timing or proportion of virus types, between seasons. However, comparing absolute numbers of cases between seasons should be approached with caution, as noted above."
+        },
+        "Notes": {
+          "Notes": "Data are posted weekly during the season, beginning with the 2025-2026 season (MMWR weeks 40-week 39 of the next year; October-September)"
+        },
+        "Dataset Information": {
+          "Agency": "Health, Department of"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "tags": ["community health and chronic disease", "rsv", "surveillance", "ari"],
+    "flags": [
+      "catalogFederatedView",
+      "default",
+      "federated",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "6abd-hwwt",
+    "name": "Respiratory Syncytial Virus (RSV) Laboratory-Confirmed Cases By Age Group: Beginning 2025-26 Season",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health",
+    "createdAt": 1791572770,
+    "description": "This dataset includes weekly counts of persons with laboratory-confirmed Respiratory syncytial virus (RSV), by age group (0-4, 5-17, 18-49, 50-64 and 65-74, and 75 and older, and age unknown), beginning with the 2025-2026 season. The primary goal of this dataset is to provide timely information about RSV virus activity throughout the respiratory season. Although each season is unique, historical data is also provided for trend comparison.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "health.data.ny.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42656361,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793544589,
+    "publicationGroup": 20668163,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793544578,
+    "rowsUpdatedBy": "a9xd-f5um",
+    "sourceDomainCName": "health.data.ny.gov",
+    "tableId": 20668163,
+    "totalTimesRated": 0,
+    "viewCount": 0,
+    "viewLastModified": 1793546182,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793735965,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7843490,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793735965,
+        "targetAudience": "public",
+        "workflowId": 1966,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793735965,
+          "failureCount": 0,
+          "startedAt": 1793735965,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9xd-f5um",
+          "displayName": "R. Staniek"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "NYSDOH_RSV_Cases_by_Age_Group_Overview.pdf",
+          "assetId": "8c94c3d8-b5a1-4129-8a59-6d3bb923b055",
+          "name": "NYSDOH_RSV_Cases_by_Age_Group_Overview.pdf"
+        },
+        {
+          "filename": "NYSDOH_RSV_Cases_by_Age_Group_Data_Dictionary.pdf",
+          "assetId": "d0939745-7074-401e-a1f2-5a5fe0b2d726",
+          "name": "NYSDOH_RSV_Cases_by_Age_Group_Data_Dictionary.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Summary": {
+          "Posting Frequency": "Weekly",
+          "Program Owner": "Bureau of Communicable Disease Control and  Bureau of Surveillance and Disease Systems",
+          "Time Period": "Beginning with the 2025-2026 Respiratory Virus Season (October 2025 onward)",
+          "Office/Division": "Division of Epidemiology, Center for Community Health, Office of Public Health",
+          "Coverage": "Statewide",
+          "Granularity": "County",
+          "Units": "Laboratory confirmed RSV cases"
+        },
+        "Additional Resources": {
+          "See Also   ": "https://www.cdc.gov/rsv/hcp/clinical-overview/index.html",
+          "See Also ": "https://www.cdc.gov/rsv/about/index.html",
+          "See Also  ": "https://www.cdc.gov/rsv/php/surveillance/index.html",
+          "See Also    ": "https://www.wadsworth.org/regulatory/clep",
+          "See Also": "https://health.ny.gov/diseases/communicable/respiratory_viruses/"
+        },
+        "Disclaimers": {
+          "Limitations": "These data are an undercount of the true number of RSV cases because they only represent illnesses where 1) an ill patient seeks medical care, 2) an appropriate specimen is collected for diagnostic testing, 3) such testing is performed in a clinical laboratory that reports results to ECLRS, and 4) test results are positive. It is unknown how many patients do not seek medical care, are not tested by a reliable assay, or are tested in settings that do not report results to ECLRS. Further, certain tests such as RDTs have limited accuracy; false negative and false positive results do occur. The number of laboratories reporting data to ECLRS has increased over time. However, it is not known how RSV virus testing practices or the proportion of all tests being performed in clinical laboratory settings have changed over time or how they vary geographically. Thus, caution should be used when comparing data such as absolute numbers of cases between seasons or counties. Despite these limitations, the data can provide useful situational awareness (e.g., trend) information during a respiratory virus season. Data may also be used to compare epidemic characteristics, e.g., timing or proportion cases by age group, between seasons. However, comparing absolute numbers of cases between seasons should be approached with caution, as noted above."
+        },
+        "Notes": {
+          "Notes": "Data are posted weekly during the season beginning with the 2025-2026 season (MMWR weeks 40-week 39 of the next year; October-September)"
+        },
+        "Dataset Information": {
+          "Agency": "Health, Department of"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "tags": ["community health and chronic disease", "rsv", "surveillance", "ari"],
+    "flags": [
+      "catalogFederatedView",
+      "default",
+      "federated",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "q9gy-p34h",
+    "name": "Influenza Laboratory Confirmed Cases by County: Beginning October 2025",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health",
+    "createdAt": 1791572750,
+    "description": "This dataset includes weekly counts of persons with laboratory-confirmed influenza, by county and virus type, beginning with the 2025-2026 season. The primary goal of this dataset is to provide timely information about influenza virus activity throughout the respiratory season. Although each season is unique, historical data is also provided for trend comparison.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "health.data.ny.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42656360,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793544463,
+    "publicationGroup": 20668162,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793544442,
+    "rowsUpdatedBy": "a9xd-f5um",
+    "sourceDomainCName": "health.data.ny.gov",
+    "tableId": 20668162,
+    "totalTimesRated": 0,
+    "viewCount": 0,
+    "viewLastModified": 1793546144,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793736044,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7843493,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793736044,
+        "targetAudience": "public",
+        "workflowId": 1966,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793736044,
+          "failureCount": 0,
+          "startedAt": 1793736044,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9xd-f5um",
+          "displayName": "R. Staniek"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "NYSDOH_Influenza_Cases_by_County_Overview.pdf",
+          "assetId": "bfad451b-ed2e-476c-ace1-0150758c1af5",
+          "name": "NYSDOH_Influenza_Cases_by_County_Overview.pdf"
+        },
+        {
+          "filename": "NYSDOH_Influenza_Cases_by_County_Data_Dictionary.pdf",
+          "assetId": "01fbb424-4c22-4c08-987a-60b40d10044a",
+          "name": "NYSDOH_Influenza_Cases_by_County_Data_Dictionary.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Summary": {
+          "Posting Frequency": "Weekly",
+          "Program Owner": "Bureau of Communicable Disease Control and  Bureau of Surveillance and Disease Systems",
+          "Time Period": "Beginning with the 2025-2026 Respiratory Virus Season (October 2025 onward)",
+          "Office/Division": "Division of Epidemiology, Center for Community Health, Office of Public Health",
+          "Coverage": "Statewide",
+          "Granularity": "County",
+          "Units": "Laboratory confirmed influenza cases"
+        },
+        "Additional Resources": {
+          "See Also   ": "http://www.cdc.gov/flu/professionals/diagnosis/index.htm",
+          "See Also ": "http://www.cdc.gov/flu/about/disease/index.htm",
+          "See Also  ": "http://www.cdc.gov/flu/weekly/overview.htm",
+          "See Also    ": "https://www.wadsworth.org/regulatory/clep",
+          "See Also": "https://health.ny.gov/diseases/communicable/respiratory_viruses/"
+        },
+        "Disclaimers": {
+          "Limitations": "These data are an undercount of the true number of influenza cases because they only represent illnesses where 1) an ill patient seeks medical care, 2) an appropriate specimen is collected for diagnostic testing, 3) such testing is performed in a clinical laboratory that reports results to ECLRS, and 4) test results are positive. It is unknown how many patients do not seek medical care, are not tested by a reliable assay, or are tested in settings that do not report results to ECLRS. Further, certain tests such as RDTs have limited accuracy; false negative and false positive results do occur. The number of laboratories reporting data to ECLRS has increased over time. However, it is not known how influenza virus testing practices or the proportion of all tests being performed in clinical laboratory settings have changed over time or how they vary geographically. Thus, caution should be used when comparing data such as absolute numbers of cases between seasons or counties. Despite these limitations, the data can provide useful situational awareness (e.g., trend) information during a respiratory virus season. Data may also be used to compare epidemic characteristics, e.g., timing or proportion of virus types, between seasons. However, comparing absolute numbers of cases between seasons should be approached with caution, as noted above."
+        },
+        "Notes": {
+          "Notes": "Data are posted weekly during the season, beginning with the 2025-2026 season (MMWR weeks 40-week 39 of the next year; October-September)"
+        },
+        "Dataset Information": {
+          "Agency": "Health, Department of"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "tags": ["community health and chronic disease", "influenza", "flu", "surveillance", "ari"],
+    "flags": [
+      "catalogFederatedView",
+      "default",
+      "federated",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "ev3t-hgz5",
+    "name": "Influenza Laboratory-Confirmed Cases By Age Group: Beginning 2025-26 Season",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health",
+    "createdAt": 1791572730,
+    "description": "This dataset includes weekly counts of persons with laboratory-confirmed influenza, by age group (0-4, 5-17, 18-49, 50-64 and 65-74, and 75 and older, and age unknown), beginning with the 2025-2026 season. The primary goal of this dataset is to provide timely information about influenza virus activity throughout the respiratory season. Although each season is unique, historical data is also provided for trend comparison.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "health.data.ny.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42656359,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793544630,
+    "publicationGroup": 20668161,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793544614,
+    "rowsUpdatedBy": "a9xd-f5um",
+    "sourceDomainCName": "health.data.ny.gov",
+    "tableId": 20668161,
+    "totalTimesRated": 0,
+    "viewCount": 0,
+    "viewLastModified": 1793546206,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793735942,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7843488,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793735942,
+        "targetAudience": "public",
+        "workflowId": 1966,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793735942,
+          "failureCount": 0,
+          "startedAt": 1793735942,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9xd-f5um",
+          "displayName": "R. Staniek"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "NYSDOH_Influenza_Cases_by_Age_Group_Overview.pdf",
+          "assetId": "0e4abeeb-cff5-454c-a3b8-eb971f914ac2",
+          "name": "NYSDOH_Influenza_Cases_by_Age_Group_Overview.pdf"
+        },
+        {
+          "filename": "NYSDOH_Influenza_Cases_by_Age_Group_Data_Dictionary.pdf",
+          "assetId": "9a47c8e6-98c2-4408-8f2c-be2c0d5db7bd",
+          "name": "NYSDOH_Influenza_Cases_by_Age_Group_Data_Dictionary.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Summary": {
+          "Posting Frequency": "Weekly",
+          "Program Owner": "Bureau of Communicable Disease Control and  Bureau of Surveillance and Disease Systems",
+          "Time Period": "Beginning with the 2025-2026 Respiratory Virus Season (October 2025 onward)",
+          "Office/Division": "Division of Epidemiology, Center for Community Health, Office of Public Health",
+          "Coverage": "Statewide",
+          "Granularity": "County",
+          "Units": "Laboratory confirmed influenza cases"
+        },
+        "Additional Resources": {
+          "See Also   ": "http://www.cdc.gov/flu/professionals/diagnosis/index.htm",
+          "See Also ": "http://www.cdc.gov/flu/about/disease/index.htm",
+          "See Also  ": "http://www.cdc.gov/flu/weekly/overview.htm",
+          "See Also    ": "https://www.wadsworth.org/regulatory/clep",
+          "See Also": "https://health.ny.gov/diseases/communicable/respiratory_viruses/"
+        },
+        "Disclaimers": {
+          "Limitations": "These data are an undercount of the true number of influenza cases because they only represent illnesses where 1) an ill patient seeks medical care, 2) an appropriate specimen is collected for diagnostic testing, 3) such testing is performed in a clinical laboratory that reports results to ECLRS, and 4) test results are positive. It is unknown how many patients do not seek medical care, are not tested by a reliable assay, or are tested in settings that do not report results to ECLRS. Further, certain tests such as RDTs have limited accuracy; false negative and false positive results do occur. The number of laboratories reporting data to ECLRS has increased over time. However, it is not known how influenza virus testing practices or the proportion of all tests being performed in clinical laboratory settings have changed over time or how they vary geographically. Thus, caution should be used when comparing data such as absolute numbers of cases between seasons or counties. Despite these limitations, the data can provide useful situational awareness (e.g., trend) information during a respiratory virus season. Data may also be used to compare epidemic characteristics, e.g., timing or proportion cases by age group, between seasons. However, comparing absolute numbers of cases between seasons should be approached with caution, as noted above."
+        },
+        "Notes": {
+          "Notes": "Data are posted weekly during the season beginning with the 2025-2026 season (MMWR weeks 40-week 39 of the next year; October-September)"
+        },
+        "Dataset Information": {
+          "Agency": "Health, Department of"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "tags": ["community health and chronic disease", "influenza", "flu", "surveillance", "ari"],
+    "flags": [
+      "catalogFederatedView",
+      "default",
+      "federated",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  },
+  {
+    "id": "94ir-x8bh",
+    "name": "COVID-19 Hospitalizations: Beginning October 2025",
+    "assetType": "dataset",
+    "averageRating": 0,
+    "category": "Health",
+    "createdAt": 1791572705,
+    "description": "This dataset includes weekly aggregate counts of persons hospitalized with laboratory-confirmed COVID-19, by county beginning with the 2025-26 season. The primary goal of this dataset is to provide timely information about COVID-19-associated hospitalizations throughout the respiratory season. Although each respiratory season is unique, historical data is provided for trend comparison.",
+    "diciBackend": false,
+    "displayType": "table",
+    "domainCName": "health.data.ny.gov",
+    "downloadCount": 0,
+    "hideFromCatalog": false,
+    "hideFromDataJson": false,
+    "locked": false,
+    "newBackend": true,
+    "numberOfComments": 0,
+    "oid": 42656355,
+    "provenance": "official",
+    "publicationAppendEnabled": false,
+    "publicationDate": 1793544675,
+    "publicationGroup": 20668157,
+    "publicationStage": "published",
+    "rowsUpdatedAt": 1793544659,
+    "rowsUpdatedBy": "a9xd-f5um",
+    "sourceDomainCName": "health.data.ny.gov",
+    "tableId": 20668157,
+    "totalTimesRated": 0,
+    "viewCount": 0,
+    "viewLastModified": 1793546216,
+    "viewType": "tabular",
+    "approvals": [
+      {
+        "reviewedAt": 1793735932,
+        "reviewedAutomatically": true,
+        "state": "approved",
+        "submissionId": 7843487,
+        "submissionObject": "public_audience_request",
+        "submissionOutcome": "change_audience",
+        "submittedAt": 1793735932,
+        "targetAudience": "public",
+        "workflowId": 1966,
+        "submissionDetails": {
+          "permissionType": "READ"
+        },
+        "submissionOutcomeApplication": {
+          "endedAt": 1793735932,
+          "failureCount": 0,
+          "startedAt": 1793735932,
+          "status": "success"
+        },
+        "submitter": {
+          "id": "a9xd-f5um",
+          "displayName": "R. Staniek"
+        }
+      }
+    ],
+    "clientContext": {
+      "clientContextVariables": [],
+      "inheritedVariables": {}
+    },
+    "grants": [
+      {
+        "inherited": false,
+        "type": "viewer",
+        "flags": ["public"]
+      }
+    ],
+    "metadata": {
+      "attachments": [
+        {
+          "filename": "NYSDOH_COVID19_Hospitalizations_Overview.pdf",
+          "assetId": "6fcf85e1-9c95-4adc-86b6-63e16c2267a3",
+          "name": "NYSDOH_COVID19_Hospitalizations_Overview.pdf"
+        },
+        {
+          "filename": "NYSDOH_COVID19_Hospitalizations_Data_Dictionary.pdf",
+          "assetId": "59fe4b90-5116-41b2-bd46-f2cb2b5b645a",
+          "name": "NYSDOH_COVID19_Hospitalizations_Data_Dictionary.pdf"
+        }
+      ],
+      "custom_fields": {
+        "Dataset Summary": {
+          "Posting Frequency": "Weekly",
+          "Time Period": "Beginning with the 2025-2026 COVID-19 season (October 2025 onward)",
+          "Coverage": "Statewide",
+          "Granularity": "Age Group, County, and Region",
+          "Dataset Owner": "Division of Epidemiology Bureau of Communicable Disease Control, Division of Epidemiology"
+        },
+        "Additional Resources": {
+          "See Also   ": "https://www.cdc.gov/covid/hcp/clinical-care/index.html",
+          "See Also ": "https://www.cdc.gov/covid/index.html",
+          "See Also  ": "https://www.cdc.gov/covid/php/surveillance/index.html",
+          "See Also    ": "https://www.wadsworth.org/regulatory/clep",
+          "See Also": "http://www.health.ny.gov/diseases/communicable/influenza/surveillance/"
+        },
+        "Notes": {
+          "Notes": "Data are posted weekly during the season (MMWR week 40-week 39 of the next year; October-September)"
+        },
+        "Dataset Information": {
+          "Agency": "Health, Department of"
+        }
+      },
+      "availableDisplayTypes": ["table", "fatrow", "page"]
+    },
+    "owner": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "rights": ["read"],
+    "tableAuthor": {
+      "id": "s9j2-nqmr",
+      "displayName": "Open Data NY - DOH",
+      "profileImageUrlLarge": "/api/users/s9j2-nqmr/profile_images/LARGE",
+      "profileImageUrlMedium": "/api/users/s9j2-nqmr/profile_images/THUMB",
+      "profileImageUrlSmall": "/api/users/s9j2-nqmr/profile_images/TINY",
+      "screenName": "Open Data NY - DOH",
+      "type": "interactive",
+      "flags": ["mayBeStoriesCoOwner"]
+    },
+    "tags": ["community health and chronic disease", "influenza", "flu", "surveillance", "ari"],
+    "flags": [
+      "catalogFederatedView",
+      "default",
+      "federated",
+      "ownerMayBeContacted",
+      "restorable",
+      "restorePossibleForType"
+    ]
+  }
+]
