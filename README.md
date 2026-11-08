@@ -11,7 +11,7 @@ exposed over the API or committed to the repo.
 
 | Package | What it is |
 | ------- | ---------- |
-| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for 47 US public data sources, with live probes and offline fixtures |
+| [`@usa-open-data-connectors/usa-sources`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-sources) | Uniform adapters for US public data sources, with live probes and offline fixtures |
 | [`@usa-open-data-connectors/usa-mcp`](https://www.npmjs.com/package/@usa-open-data-connectors/usa-mcp) | MCP server that exposes the connectors to Claude, ChatGPT, and other MCP clients |
 | [`@usa-open-data-connectors/connectors-cli`](https://www.npmjs.com/package/@usa-open-data-connectors/connectors-cli) | `usdata` command line tool that prints JSON to stdout, so any language can shell out to it |
 | `@usa-open-data-connectors/connectors-api` | Private. HTTP wrapper with an OpenAPI spec and Swagger UI, so any language can call the connectors over HTTP |
@@ -20,8 +20,8 @@ exposed over the API or committed to the repo.
 
 ## Connectors
 
-Forty-seven adapters, all in `@usa-open-data-connectors/usa-sources`. All are
-keyless and need no environment variable.
+Adapters, all in `@usa-open-data-connectors/usa-sources`. All are keyless and
+need no environment variable.
 
 Most of this data comes from US federal agencies, and works of the US federal
 government are generally not subject to copyright in the United States, so it
@@ -35,15 +35,15 @@ terms live. Socrata and CKAN catalogue entries carry the portal's `licenceUrl` a
 `attribution` values, and PublicDataHub records carry licence and agency
 provenance. An empty value means the source supplied none.
 
-Three sources ask callers to identify themselves. The SEC EDGAR, National
-Weather Service and CFPB adapters send their own descriptive `User-Agent`
-header from inside the adapter, which replaces the default one, so callers send
-nothing extra. Every other adapter sends the shared `User-Agent`
+The SEC EDGAR, National Weather Service and CFPB adapters ask callers to
+identify themselves. They send their own descriptive `User-Agent` header from
+inside the adapter, which replaces the default one, so callers send nothing
+extra. Other adapters send the shared `User-Agent`
 (`usa-open-data-connectors (Language=TypeScript)`), waits at most 30 seconds
 for a response, and marks rate-limited (HTTP 429), server-error (HTTP 5xx) and
 network failures as `retryable` on the thrown `UsSourceApiError`. The shared
 HTTP helpers (`httpGet` and `httpPostJson`) in
-`packages/usa-sources/src/http.ts` do this for all 47 adapters.
+`packages/usa-sources/src/http.ts` do this for every adapter.
 
 | id | Source | Keyless? | Example command |
 | --- | --- | --- | --- |
@@ -180,7 +180,7 @@ endpoints. They need no key.
 
 ## Other languages
 
-The earlier Python and Ruby ports cover the 28 adapter ids they shipped with.
+The earlier Python and Ruby ports cover the adapter ids they shipped with.
 The new NIH RePORTER adapter is TypeScript-only for now. Each ported adapter
 has a live fetcher, a parser, a committed fixture, and an offline test. Both
 ports use the shared fixtures in `packages/usa-sources/src/fixtures`, so a

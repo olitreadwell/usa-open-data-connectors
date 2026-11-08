@@ -4,7 +4,7 @@ Findings from the US source passes. Forty-seven keyless adapters are built and
 verified against live APIs, and each has a fixture committed from the same
 endpoint.
 
-Eleven adapters were added on 2026-10-05. Those eleven were probed live that
+Adapters were added on 2026-10-05. Those adapters were probed live that
 day with `curl`, and their fixtures were captured then. The earlier eleven
 were captured between 2026-09-23 and 2026-10-03. Six more adapters were added
 after those, through 2026-10-22. NIH RePORTER was added on 2026-11-07. Four

@@ -10,7 +10,7 @@ Ruby copies were removed on 2026-11-05.
 
 ## Adapters
 
-Forty-seven adapters are registered. Every one is keyless and has a committed
+Adapters are registered. Every one is keyless and has a committed
 fixture captured from the live service.
 
 | Source | Adapter id | Status |

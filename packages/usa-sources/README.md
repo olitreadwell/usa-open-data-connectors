@@ -4,7 +4,7 @@ Uniform TypeScript adapters for US public data sources, with live probes and off
 
 ## What this package does
 
-- Exposes 47 source adapters behind one interface.
+- Exposes source adapters behind one interface.
 - Fetches live data from each source and parses it into plain objects.
 - Loads committed fixtures in tests only; a live fetch never falls back.
 - Publishes the `US_DATA_SOURCES` registry for the API and the CLI.
@@ -514,11 +514,11 @@ Three shape notes. A start date can be day precision (`2024-12-10`) or month
 precision (`2026-05`), and the adapter keeps the string as the registry wrote
 it. A start date can be planned rather than actual, so a recent year can still
 gain studies. `query.cond` is the registry's own condition search rather than a
-filter over the `conditions` array; a long COVID search returned 737 studies on
-2026-10-20 while only 315 of them carried a condition string containing "long
-COVID", because keywords and related terms also match. The response has no
-total count unless the request adds `countTotal=true`, so count `studies` for
-the page or ask for the total separately.
+filter over the `conditions` array; a long COVID search returns more studies
+than the subset whose condition string contains "long COVID", because keywords
+and related terms also match. The response has no total count unless the
+request adds `countTotal=true`, so count `studies` for the page or ask for the
+total separately.
 
 `nws-point-forecast`:
 
@@ -753,13 +753,13 @@ shape as the Chicago and Seattle adapters.
 - `cfpb-consumer-complaints`: the API answers one question per request and has no date sort. The window costs one request per year plus one for the tallies plus one or two to find the newest day. `findNewestCfpComplaintDate` walks back from today. It stops at the first day with a complaint.
 - `cfpb-consumer-complaints`: the first year in the window, 2011, holds only December. The bureau published its first complaints on 1 December 2011. The adapter keeps the year, and the page's data note says the first bar covers one month.
 - `cfpb-consumer-complaints`: the product tally splits credit reporting across more than one label because the bureau changed its product taxonomy over the years. The adapter keeps whatever the API sends, so the labels in `topProducts` are not stable.
-- `cfpb-consumer-complaints`: the committed snapshot holds the folded counts, not the eighteen million raw rows.
-- `fdic-bank-directory`: the default request asks for ten rows and sets no active filter. The full file held 27,835 records on 2026-10-16, including historical institutions the FDIC marks inactive, so the first page is not a current bank count. Add `filters=ACTIVE:1` to the URL to read the active directory, which held 4,219 institutions that day.
+- `cfpb-consumer-complaints`: the committed snapshot holds the folded counts, not the raw complaint rows.
+- `fdic-bank-directory`: the default request asks for ten rows and sets no active filter. The full file includes historical institutions the FDIC marks inactive, so the first page is not a current bank count. Add `filters=ACTIVE:1` to the URL to read the active directory.
 - `fdic-bank-directory`: the filtered count arrives in both `meta.total` and `totals.count`. Both fields describe the filtered result, not the size of the unfiltered file, so `totalBanks` is the active count when the request carries the active filter.
 - `fdic-bank-directory`: `banks.data.fdic.gov` answers with a redirect to `api.fdic.gov`. `fetch` follows it. Both hosts answer 200 to a scripted request, and neither needs a key.
 - `fdic-bank-directory`: `FDIC_BANK_FIELDS` asks for `NAME,CITY,STALP`, but the parser requires `ID` as well. The service adds `ID` to the response even when it is not in `fields`, but a caller should ask for `ID,NAME,CITY,STALP` so the request and the parser agree without relying on that behaviour.
 - `fdic-bank-directory`: each row sits inside a `data` wrapper with a separate `score` field. The parser reads `row.data`, not the wrapper.
-- `fdic-bank-directory`: the active rows cover 55 state-level codes, not 50. DC, Puerto Rico, Guam, Micronesia, and the US Virgin Islands each hold active banks, so a caller that labels the counts as states will overstate the map.
+- `fdic-bank-directory`: the active rows cover state-level codes beyond the 50 states. DC, Puerto Rico, Guam, Micronesia, and the US Virgin Islands each hold active banks, so a caller that labels the counts as states will overstate the map.
 - `fdic-bank-directory`: the directory counts institutions at the state of the main office. It is not a branch count, and a bank with branches across several states appears once.
 - `sec-edgar-filings`: the SEC asks every caller to identify itself with a User-Agent header. The adapter sends `SEC_EDGAR_USER_AGENT`, which carries a placeholder contact address. A deployment should override it with its own application name and address before the request leaves a shared host.
 - `sec-edgar-filings`: the submissions file carries the last 1,000 filings, not the issuer's full history. Apple's block ran from 18 September 2015 to 16 October 2026 on 2026-10-19. A caller that needs older rows has to read the filing archive rather than this endpoint.
@@ -770,7 +770,7 @@ shape as the Chicago and Seattle adapters.
 - `epa-envirofacts-facilities`: the default row window is the first ten rows. `fetchEpaEnvirofactsFacilities` takes a state but not a row window, so a caller that needs the whole state builds the URL with `buildEpaEnvirofactsFacilitiesUrl({ stateAbbr, rowWindow })` and parses the response with `parseEpaEnvirofactsFacilitiesPayload`.
 - `epa-envirofacts-facilities`: the table holds facility records, not release amounts. It is the Toxics Release Inventory facility register, so a row says where a site is and whether the EPA marks it closed (`fac_closed_ind` of `1`), not how much it released in a year.
 - `epa-envirofacts-facilities`: every key arrives in lower case, and the parent company is sometimes the literal text `NA`. The parser reads that as null rather than a company name.
-- `epa-envirofacts-facilities`: a state response can be large. California held 5,110 facilities on 2026-10-19, about 7.7 MB with the full record and about 1 MB after trimming to the ten fields the parser keeps.
+- `epa-envirofacts-facilities`: a state response can be large. A full California response runs to several megabytes, and trimming it to the ten fields the parser keeps reduces it to about a megabyte.
 - `estimatetax-income-tax`: one keyless request answers the federal, state, and local income tax for one salary. The endpoint is limited to 60 requests a minute per address.
 - `estimatetax-income-tax`: the response is a calculation from the publisher's own engine, not a row from an official statistical release. Every layer cites the IRS or state document it was read from, so the source and the date are visible in the response.
 - `estimatetax-income-tax`: the engine assumes the standard deduction unless `preTaxDeductions` is supplied. It does not model itemised deductions, capital gains, or credits, and the response carries that disclaimer.
@@ -780,15 +780,15 @@ shape as the Chicago and Seattle adapters.
 - `ncbi-pubmed-search`: keyless NCBI allows about three requests a second. The adapter makes one request per call and does not add a delay, so a caller reading six years must space the calls itself.
 - `ncbi-pubmed-search`: a query field tag such as `[tiab]` restricts the match to the title and abstract. Without a tag, PubMed maps the words through MeSH and searches every indexed field, which answers a wider and different count. `queryTranslation` shows what PubMed actually ran.
 - `ncbi-pubmed-search`: a bad query answers HTTP 200 with `esearchresult.error` instead of a result block. The parser turns that into `UsSourceApiError`, so a caller does not count an error as zero papers.
-- `cdc-socrata-catalogue`: the default request asks for ten rows. The discovery API answers the whole catalogue when the limit is high enough, and the CDC catalogue held 1,478 entries on 2026-10-20. Call `buildCdcSocrataCatalogueUrl({ limit: 10_000 })` or pass `limit` to `fetchCdcSocrataCatalogue` when you need every entry. A limit below the catalogue size truncates the response without an error.
+- `cdc-socrata-catalogue`: the default request asks for ten rows. The discovery API answers the whole catalogue when the limit is high enough. Call `buildCdcSocrataCatalogueUrl({ limit: 10_000 })` or pass `limit` to `fetchCdcSocrataCatalogue` when you need every entry. A limit below the catalogue size truncates the response without an error.
 - `cdc-socrata-catalogue`: each row is a catalogue entry, not a dataset record. `assetType` can be `dataset`, `file`, `href`, `filter`, `chart`, `story`, or `map`. A category can hold one type or a mix, so count the asset type before you describe a category as a dataset collection.
 - `cdc-socrata-catalogue`: an entry without a category has `null` in the response. The adapter keeps the null on the entry and counts it under `Uncategorised` in `categories`. That bucket is an adapter label, not a category the CDC assigned.
-- `cdc-socrata-catalogue`: the full response is large because each row carries portal metadata. The 1,478-row response was about 7.9 MB on 2026-10-20. The parser keeps eleven fields, and a fixture trimmed to those fields was about 491 KB.
-- `cdc-socrata-catalogue`: the entry carries `licenceUrl` and `attribution` when the portal supplies a `License` and `Publisher` value. On the captured page no entry named a licence URL and six named a publisher. An empty value means the portal supplied none; check the entry before reuse.
+- `cdc-socrata-catalogue`: the full response is large because each row carries portal metadata. The parser keeps eleven fields, and a fixture trimmed to those fields is much smaller.
+- `cdc-socrata-catalogue`: the entry carries `licenceUrl` and `attribution` when the portal supplies a `License` and `Publisher` value. On the captured page no entry named a licence URL and only some named a publisher. An empty value means the portal supplied none; check the entry before reuse.
 - `bts-transportation-stats`: the default request asks for ten rows. The story that consumed this adapter needed the whole catalogue, so it calls `buildBtsTransportationStatsUrl({ limit: 10_000 })` and parses the full response with `parseBtsTransportationStatsPayload`. A lower limit truncates the catalogue without an error.
-- `bts-transportation-stats`: each row is a catalogue entry, not a dataset record. `assetType` can be `story`, `dataset`, `chart`, `measure`, `filter`, `href`, `map`, or `file`. The story and dataset counts are different questions, and the 2026-10-20 catalogue held 177 stories against 153 datasets.
-- `bts-transportation-stats`: `viewCount` and `downloadCount` are the portal's own counters for an item page and its files. They are not unique people. Stories carry views and a zero download count because Socrata does not give a story a download counter, while 268 entries reported no downloads at all on 2026-10-20.
-- `bts-transportation-stats`: the response is large because every entry carries portal metadata. The 589-row response was about 2.2 MB on 2026-10-20. The parser keeps eleven fields, and a fixture trimmed to those fields was about 172 KB.
+- `bts-transportation-stats`: each row is a catalogue entry, not a dataset record. `assetType` can be `story`, `dataset`, `chart`, `measure`, `filter`, `href`, `map`, or `file`. The story and dataset counts are different questions, and the catalogue carries both.
+- `bts-transportation-stats`: `viewCount` and `downloadCount` are the portal's own counters for an item page and its files. They are not unique people. Stories carry views and a zero download count because Socrata does not give a story a download counter, while many entries report no downloads at all.
+- `bts-transportation-stats`: the response is large because every entry carries portal metadata. The parser keeps eleven fields, and a fixture trimmed to those fields is much smaller.
 - `bts-transportation-stats`: every entry carries `licenceUrl` and `attribution` from the portal's Common Core metadata. The captured page names the USA.gov public-domain label and the Bureau of Transportation Statistics for every entry.
 - `bts-transportation-stats`: an entry without a category has `null` in the response. The adapter keeps the null on the entry and counts it under `Uncategorised` in `categories`. That bucket is an adapter label, not a category the bureau assigned.
 - `healthdata-socrata-catalogue`: each entry carries `licenceUrl` and `attribution` from the portal's Common Core metadata. The captured page uses the USA.gov government-works label, ODbL, and PDDL, with publishers including federal agencies and state and city governments.
