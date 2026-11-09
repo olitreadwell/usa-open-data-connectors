@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Connectors: add keyless Socrata catalogue adapters for California, Colorado,
+  Illinois, Los Angeles, Michigan, New Jersey, Oregon, Pennsylvania, San
+  Francisco, Vermont, and Washington State.
 - Connectors: add keyless `chicago-open-data-catalogue`,
   `seattle-open-data-catalogue`, and `texas-open-data-catalogue` Socrata
   catalogue adapters, each with a dated live fixture and a live registry probe.
