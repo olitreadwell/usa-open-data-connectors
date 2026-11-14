@@ -42,8 +42,8 @@
     "start:api": "npm run start -w @usa-open-data-connectors/connectors-api"
   },
   "devDependencies": {
-    "prettier": "3.9.10",
-    "@vitest/coverage-v8": "5.0.3"
+    "prettier": "3.10.0",
+    "@vitest/coverage-v8": "5.1.0"
   },
   "dependencies": {},
   "description": "USA open data connectors: TypeScript adapters, HTTP API, and CLI for US public data",
