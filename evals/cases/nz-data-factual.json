@@ -1,0 +1,10 @@
+{
+  "description": "Answers a numeric question without inventing a figure that was not in the input",
+  "system": "You answer questions about New Zealand public data. Use only the figures supplied. If a figure is missing, say so.",
+  "prompt": "Flock size was 49.5 million in 1994 and 23.3 million in 2026. How much did the national sheep flock fall, in millions?",
+  "expect": {
+    "mustInclude": ["26.2"],
+    "mustNotInclude": ["approximately 30", "I cannot"],
+    "maxChars": 600
+  }
+}

@@ -2,13 +2,6 @@ name: Security
 
 on:
   push:
-    # Bot branches get the same coverage from their pull_request run. Running
-    # both legs doubled the scan on every dependabot and renovate push.
-    branches:
-      - main
-      - master
-      - dev
-      - development
   pull_request:
 
 permissions:
@@ -19,28 +12,31 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  security:
-    # Audit and secrets scan ran as two jobs. Each billed a minute of runner
-    # time minimum, so they share one job now.
-    name: Security checks (audit and secrets)
+  audit:
+    name: Dependency audit
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v6
         if: hashFiles('pnpm-lock.yaml') != ''
-      - uses: actions/setup-node@v7.1.0
+      - uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
-          cache: ${{ hashFiles('pnpm-lock.yaml') != '' && 'pnpm' || (hashFiles('package-lock.json') != '' && 'npm' || '') }}
-      - name: Install dependencies and audit (advisory)
+      - name: Install dependencies and audit
         run: |
           if [ -f pnpm-lock.yaml ]; then
             pnpm install --frozen-lockfile
-            pnpm audit --audit-level=high || true
+            pnpm audit --audit-level=high
           else
             npm ci
-            npm audit --audit-level=high || true
+            npm audit --audit-level=high
           fi
-      - name: Scan for committed secrets
-        run: bash scripts/security-checks.sh
+
+  secrets:
+    name: Committed secrets scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash scripts/security-checks.sh

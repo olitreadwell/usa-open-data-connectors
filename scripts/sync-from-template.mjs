@@ -12,7 +12,7 @@ import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
 import { mkdir, mkdtemp, readFile, writeFile, copyFile, readdir, rm } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { basename, dirname, join, resolve } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 
 const args = process.argv.slice(2);
 const apply = args.includes('--apply');
@@ -68,23 +68,56 @@ function globToRegExp(glob) {
   return new RegExp(`^${glob.replace(/[.+^${}()|[\]\\]/g, '\\$&').replace(/\*/g, '.*')}$`);
 }
 
-// A condition is matched against the target repo, so manifests can opt a file
-// into only the repos that need it. A condition with a slash ("Dockerfile" vs
-// ".github/dependabot.yml") is resolved as a path relative to the repo root;
-// a bare name is matched against the top level.
 async function conditionMet(condition, targetDir) {
   if (!condition) return true;
-  const nested = condition.includes('/');
-  const dir = nested ? join(targetDir, dirname(condition)) : targetDir;
-  const pattern = nested ? basename(condition) : condition;
-  let entries;
-  try {
-    entries = await readdir(dir);
-  } catch {
-    return false;
-  }
-  const re = globToRegExp(pattern);
+  const entries = await readdir(targetDir);
+  const re = globToRegExp(condition);
   return entries.some((name) => re.test(name));
+}
+
+/**
+ * List every file under a template directory, as paths relative to it.
+ *
+ * @param rootDir - Directory to walk inside the template clone
+ * @param prefix - Relative path accumulated so far
+ * @returns Relative file paths, sorted by the walk order
+ */
+async function listFilesRecursive(rootDir, prefix = '') {
+  const found = [];
+  for (const entry of await readdir(rootDir, { withFileTypes: true })) {
+    if (entry.name === 'node_modules' || entry.name === '.git') continue;
+    const rel = prefix ? `${prefix}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) {
+      found.push(...(await listFilesRecursive(join(rootDir, entry.name), rel)));
+    } else {
+      found.push(rel);
+    }
+  }
+  return found;
+}
+
+/**
+ * Expand a policy list into one entry per file. A path ending in `/` means the
+ * whole directory, so a new skill, eval, or library folder is one line in the
+ * manifest instead of one line per file.
+ *
+ * @param policies - Entries from the manifest, path strings or { path, if }
+ * @param templateDir - Root of the template clone
+ * @returns Flat list of { path, condition } entries
+ */
+async function expandPolicyEntries(policies, templateDir) {
+  const expanded = [];
+  for (const entry of policies) {
+    const path = entryPath(entry).replace(/\/+$/, '');
+    const condition = entryCondition(entry);
+    if (entryPath(entry).endsWith('/')) {
+      const files = await listFilesRecursive(join(templateDir, path));
+      for (const file of files) expanded.push({ path: `${path}/${file}`, condition });
+    } else {
+      expanded.push({ path, condition });
+    }
+  }
+  return expanded;
 }
 
 async function main() {
@@ -102,11 +135,18 @@ async function main() {
     const tmpl = join(cacheDir, 'tmpl');
     const manifest = readJson(join(tmpl, 'template-manifest.json'));
 
+    // Switch to the base branch before copying. Copying first leaves the
+    // working tree dirty, and git then refuses the checkout in any repo that
+    // is not already on its default branch.
+    const base = defaultBranch();
+    if (apply) run(['git', 'checkout', '-q', base]);
+
     const changes = [];
     for (const policy of ['copy', 'copyIfAbsent']) {
-      for (const rel of manifest.policies[policy]) {
-        const path = entryPath(rel);
-        const condition = entryCondition(rel);
+      for (const { path, condition } of await expandPolicyEntries(
+        manifest.policies[policy],
+        tmpl
+      )) {
         if (!(await conditionMet(condition, repoDir))) {
           continue; // target repo does not match the condition
         }
@@ -172,7 +212,6 @@ async function main() {
       }
     }
 
-    const base = defaultBranch();
     console.log(`\ntarget: ${repoDir} (base: ${base})`);
     if (changes.length === 0) {
       console.log('in sync — nothing to do');
@@ -185,7 +224,6 @@ async function main() {
       return;
     }
 
-    run(['git', 'checkout', '-q', base]);
     const branch = 'chore/template-sync';
     try {
       run(['git', 'branch', '-D', branch]);
