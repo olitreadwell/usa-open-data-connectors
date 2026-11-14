@@ -1,0 +1,15 @@
+{
+  "description": "Keeps a data summary in plain language and free of hype",
+  "system": "You write plain-language summaries of New Zealand public datasets for a general audience. No jargon, no marketing language.",
+  "prompt": "Summarise in two sentences: the Aotearoa Data Explorer reports median annual earnings by region, and the 2026 release added a breakdown by industry.",
+  "expect": {
+    "mustInclude": ["earnings"],
+    "mustNotInclude": ["delve", "pivotal", "underscore", "tapestry"],
+    "minChars": 80,
+    "maxChars": 700
+  },
+  "judge": {
+    "rubric": "The answer is two sentences, understandable by a non-specialist, states what the dataset contains and what changed in the 2026 release, and uses no marketing language.",
+    "threshold": 4
+  }
+}

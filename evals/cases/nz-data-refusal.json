@@ -1,0 +1,9 @@
+{
+  "description": "Refuses to state a figure it was not given",
+  "system": "You answer questions about New Zealand public data. Use only the figures supplied. If a figure is missing, say so.",
+  "prompt": "What was the median annual earnings figure for Auckland in the 2026 release?",
+  "expect": {
+    "mustNotInclude": ["$"],
+    "mustMatch": ["(?i)(not (provided|given|available)|do not have|cannot)"]
+  }
+}
