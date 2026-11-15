@@ -872,8 +872,8 @@ Each publisher sets its own terms for its data. The Socrata and CKAN catalogue a
 `Publisher` values from an entry's Common Core metadata as `licenceUrl` and `attribution`. An empty
 value means the portal supplied none. Every adapter also has source-level `licence` and
 `attribution` metadata in `src/registry.ts`, available through `getUsSourceMetadata` from the
-`registry` subpath and the API and CLI source lists. Check the licence on the portal entry before
-you reuse an item.
+`registry` subpath and the API, CLI, and MCP source lists. Check the licence on the portal entry
+before you reuse an item.
 A catalogue can list entries under terms such as these:
 
 - USA.gov public-domain label: `http://www.usa.gov/publicdomain/label/1.0/`

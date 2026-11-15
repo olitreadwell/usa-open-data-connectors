@@ -34,8 +34,8 @@ not relicense it. `docs/CONNECTOR_DISCOVERY.md` lists where each source's
 terms live. Socrata and CKAN catalogue entries carry the portal's `licenceUrl` and
 `attribution` values, and PublicDataHub records carry licence and agency
 provenance. Every adapter also has source-level `licence` and `attribution`
-metadata, returned by `usdata sources` and `/api/sources`. An empty per-record
-value means the source supplied none.
+metadata, returned by `/api/sources`, `usdata sources`, and MCP `list_sources`.
+An empty per-record value means the source supplied none.
 
 The SEC EDGAR, National Weather Service and CFPB adapters ask callers to
 identify themselves. They send their own descriptive `User-Agent` header from

@@ -48,6 +48,8 @@ import { washingtonStateOpenDataCatalogueAdapter } from './washingtonStateOpenDa
 import { normalizeSourceApiKey } from './apiKey.js';
 import type { UsDataAdapter, UsFetchOptions, UsSourceMetadata, UsSourceProbe } from './types.js';
 
+export type { UsSourceMetadata } from './types.js';
+
 /** Every US data source behind the uniform adapter interface. */
 export const US_DATA_SOURCES: UsDataAdapter<unknown>[] = [
   blsUnemploymentAdapter,
@@ -188,7 +190,7 @@ const PORTAL_ENTRY_TERMS = 'Per-entry portal terms; see licenceUrl on each recor
  * still carry their own per-record licence fields when the source supplies
  * them.
  */
-export const US_SOURCE_METADATA: Record<string, UsSourceMetadata> = {
+const US_SOURCE_METADATA: Record<string, UsSourceMetadata> = {
   'bls-unemployment-rate': {
     licence: FEDERAL_PUBLIC_DOMAIN,
     attribution: 'Bureau of Labor Statistics',
@@ -389,5 +391,25 @@ export const US_SOURCE_METADATA: Record<string, UsSourceMetadata> = {
  * @returns the source metadata, or undefined when no adapter has that id
  */
 export function getUsSourceMetadata(id: string): UsSourceMetadata | undefined {
-  return US_SOURCE_METADATA[id];
+  if (!Object.hasOwn(US_SOURCE_METADATA, id)) {
+    return undefined;
+  }
+  const metadata = US_SOURCE_METADATA[id];
+  return metadata === undefined ? undefined : { ...metadata };
+}
+
+/**
+ * Reads the licence and attribution for one registered source, failing loudly
+ * when an adapter was added without metadata.
+ *
+ * @param id - the adapter id from the registry
+ * @returns the source metadata
+ * @throws Error when no metadata is registered for the id
+ */
+export function requireUsSourceMetadata(id: string): UsSourceMetadata {
+  const metadata = getUsSourceMetadata(id);
+  if (metadata === undefined) {
+    throw new Error(`No licence metadata registered for US source "${id}".`);
+  }
+  return metadata;
 }

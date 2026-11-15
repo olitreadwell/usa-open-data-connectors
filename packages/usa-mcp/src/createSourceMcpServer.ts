@@ -8,8 +8,8 @@ export interface SourceSummary {
   name: string;
   auth: string;
   description: string;
-  licence?: string;
-  attribution?: string;
+  licence: string;
+  attribution: string;
 }
 
 /** Outcome of one live probe against a source. */
@@ -122,7 +122,7 @@ export function createSourceMcpServer(config: SourceMcpConfig): McpServer {
     {
       title: 'List data sources',
       description:
-        "Lists every source in this country's open data connector library, with the id to pass to the other tools, whether it needs a key, and what it returns.",
+        "Lists every source in this country's open data connector library, with the id to pass to the other tools, whether it needs a key, what it returns, and its source-level licence and attribution.",
       inputSchema: {},
     },
     () => toTextResult(config.listSources())

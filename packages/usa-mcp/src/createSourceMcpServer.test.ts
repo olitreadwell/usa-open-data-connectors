@@ -26,7 +26,14 @@ function buildServer(overrides: Partial<SourceMcpConfig> = {}): McpServer {
     serverName: 'test-country-open-data',
     serverVersion: '0.0.0',
     listSources: () => [
-      { id: 'alpha', name: 'Alpha source', auth: 'none', description: 'First test source.' },
+      {
+        id: 'alpha',
+        name: 'Alpha source',
+        auth: 'none',
+        description: 'First test source.',
+        licence: 'Test licence',
+        attribution: 'Test publisher',
+      },
     ],
     probeSources: async () => [
       { id: 'alpha', name: 'Alpha source', auth: 'none', ok: true, status: 'ok', sample: '{}' },
@@ -65,7 +72,14 @@ describe('createSourceMcpServer', () => {
     const result = await client.callTool({ name: 'list_sources', arguments: {} });
 
     expect(JSON.parse(firstText(result))).toEqual([
-      { id: 'alpha', name: 'Alpha source', auth: 'none', description: 'First test source.' },
+      {
+        id: 'alpha',
+        name: 'Alpha source',
+        auth: 'none',
+        description: 'First test source.',
+        licence: 'Test licence',
+        attribution: 'Test publisher',
+      },
     ]);
   });
 

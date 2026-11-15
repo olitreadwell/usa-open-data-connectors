@@ -51,7 +51,7 @@ describe('createRateLimiter', () => {
   });
 
   it('resets the budget when the window elapses', async () => {
-    const app = createRateLimiterApp({ maxRequests: 2, windowMs: 200 });
+    const app = createRateLimiterApp({ maxRequests: 2, windowMs: 20 });
     await app.request('/api/thing', { headers: withClientIp('1.2.3.4') });
     await app.request('/api/thing', { headers: withClientIp('1.2.3.4') });
     const limited = await app.request('/api/thing', {
@@ -60,7 +60,7 @@ describe('createRateLimiter', () => {
 
     expect(limited.status).toBe(429);
 
-    await new Promise((resolve) => setTimeout(resolve, 250));
+    await new Promise((resolve) => setTimeout(resolve, 30));
     const afterWindow = await app.request('/api/thing', {
       headers: withClientIp('1.2.3.4'),
     });
@@ -68,11 +68,11 @@ describe('createRateLimiter', () => {
   });
 
   it('purges expired windows when a new client arrives', async () => {
-    const app = createRateLimiterApp({ maxRequests: 2, windowMs: 200 });
+    const app = createRateLimiterApp({ maxRequests: 2, windowMs: 20 });
     await app.request('/api/thing', { headers: withClientIp('1.2.3.4') });
     await app.request('/api/thing', { headers: withClientIp('1.2.3.4') });
 
-    await new Promise((resolve) => setTimeout(resolve, 250));
+    await new Promise((resolve) => setTimeout(resolve, 30));
 
     const newClient = await app.request('/api/thing', {
       headers: withClientIp('5.6.7.8'),

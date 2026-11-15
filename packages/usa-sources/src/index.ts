@@ -106,8 +106,10 @@ export type {
 export {
   US_DATA_SOURCES,
   getUsDataSource,
+  getUsSourceMetadata,
   probeAllUsDataSources,
   probeUsDataSource,
+  requireUsSourceMetadata,
 } from './registry.js';
 /** NextBus live transit vehicle positions (keyless). */
 export {
@@ -856,7 +858,13 @@ export type {
 } from './californiaOpenDataCatalogue.js';
 
 /** Shared adapter contract types. */
-export type { UsDataAdapter, UsFetchOptions, UsSourceAuth, UsSourceProbe } from './types.js';
+export type {
+  UsDataAdapter,
+  UsFetchOptions,
+  UsSourceAuth,
+  UsSourceMetadata,
+  UsSourceProbe,
+} from './types.js';
 
 /** API key normalization shared by adapters, the API, and the CLI. */
 export { normalizeSourceApiKey } from './apiKey.js';

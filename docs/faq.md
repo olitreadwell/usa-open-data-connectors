@@ -20,8 +20,8 @@ everywhere, so check your own jurisdiction before republishing. Credit the
 publisher rather than this library. Socrata and CKAN catalogue entries carry the
 portal's `licenceUrl` and `attribution` values, and PublicDataHub records carry
 licence and agency provenance. Every adapter also has source-level `licence`
-and `attribution` metadata, returned by the API and CLI source lists. An empty
-per-record value means the source supplied none.
+and `attribution` metadata, returned by the API, CLI, and MCP source lists. An
+empty per-record value means the source supplied none.
 
 ## Why do the tests use fixtures instead of the live APIs?
 

@@ -373,8 +373,8 @@ everywhere, and a few services attach their own terms on top.
 | `california-open-data-catalogue` | State of California, through its CKAN portal | Portal entry terms. The adapter returns `licenceUrl` and `attribution`; seven of ten captured packages supplied `License not specified`, and every package named a publishing organisation |
 
 Every registered adapter has source-level `licence` and `attribution` metadata
-in `packages/usa-sources/src/registry.ts`, keyed by adapter id. The API
-and CLI source lists return it. The Socrata and California CKAN catalogue
+in `packages/usa-sources/src/registry.ts`, keyed by adapter id. The API, CLI,
+and MCP source lists return it. The Socrata and California CKAN catalogue
 adapters also return `licenceUrl` and `attribution` on each entry, and
 `publicdatahub-hospital-quality` returns licence, agency, and dataset
 provenance. An empty per-record value means the source supplied none. The

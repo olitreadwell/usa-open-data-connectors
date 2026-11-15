@@ -50,8 +50,10 @@ import { vermontOpenDataCatalogueAdapter } from './vermontOpenDataCatalogue.js';
 import { washingtonStateOpenDataCatalogueAdapter } from './washingtonStateOpenDataCatalogue.js';
 import {
   getUsDataSource,
+  getUsSourceMetadata,
   probeAllUsDataSources,
   probeUsDataSource,
+  requireUsSourceMetadata,
   US_DATA_SOURCES,
 } from './registry.js';
 
@@ -700,5 +702,57 @@ describe('probeAllUsDataSources', () => {
 
     expect(probes).toEqual([]);
     expect(fetchImpl).not.toHaveBeenCalled();
+  });
+});
+
+describe('US source metadata', () => {
+  it('gives every registered adapter a licence and attribution', () => {
+    for (const source of US_DATA_SOURCES) {
+      const metadata = getUsSourceMetadata(source.id);
+      expect(metadata).toBeDefined();
+      expect(metadata?.licence.trim().length).toBeGreaterThan(0);
+      expect(metadata?.attribution.trim().length).toBeGreaterThan(0);
+    }
+  });
+
+  it('records the federal public-domain licence and publisher for BLS', () => {
+    expect(getUsSourceMetadata('bls-unemployment-rate')).toEqual({
+      licence: 'Public domain in the US (17 U.S.C. 105)',
+      attribution: 'Bureau of Labor Statistics',
+    });
+  });
+
+  it('records portal entry terms for the Socrata catalogue', () => {
+    const metadata = getUsSourceMetadata('cdc-socrata-catalogue');
+    expect(metadata?.licence).toContain('Per-entry portal terms');
+    expect(metadata?.attribution).toBe('Centers for Disease Control and Prevention');
+  });
+
+  it('returns undefined for an unknown id', () => {
+    expect(getUsSourceMetadata('not-a-source')).toBeUndefined();
+  });
+
+  it('returns undefined for inherited object keys', () => {
+    expect(getUsSourceMetadata('constructor')).toBeUndefined();
+    expect(getUsSourceMetadata('__proto__')).toBeUndefined();
+    expect(getUsSourceMetadata('toString')).toBeUndefined();
+  });
+
+  it('returns a copy rather than the registry entry', () => {
+    const metadata = getUsSourceMetadata('bls-unemployment-rate');
+    if (metadata === undefined) {
+      throw new Error('BLS metadata missing');
+    }
+    metadata.licence = 'changed';
+
+    expect(getUsSourceMetadata('bls-unemployment-rate')?.licence).toBe(
+      'Public domain in the US (17 U.S.C. 105)'
+    );
+  });
+
+  it('throws when required metadata is missing', () => {
+    expect(() => requireUsSourceMetadata('not-a-source')).toThrow(
+      'No licence metadata registered for US source "not-a-source".'
+    );
   });
 });

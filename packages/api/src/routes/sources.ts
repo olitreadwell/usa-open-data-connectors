@@ -3,7 +3,7 @@ import { zValidator } from '@hono/zod-validator';
 import { z } from 'zod';
 
 import { US_DATA_SOURCES, probeUsDataSource } from '@usa-open-data-connectors/usa-sources';
-import { getUsSourceMetadata } from '@usa-open-data-connectors/usa-sources/registry';
+import { requireUsSourceMetadata } from '@usa-open-data-connectors/usa-sources/registry';
 import type { UsDataAdapter, UsFetchOptions } from '@usa-open-data-connectors/usa-sources';
 
 const sourceIdParamSchema = z.object({
@@ -57,15 +57,14 @@ export function createSourcesRoutes(options: SourcesRouteOptions = {}): Hono {
 
   app.get('/sources', (c) => {
     const sources = US_DATA_SOURCES.map((source) => {
-      const metadata = getUsSourceMetadata(source.id);
+      const metadata = requireUsSourceMetadata(source.id);
       return {
         id: source.id,
         name: source.name,
         auth: source.auth,
         description: source.description,
-        ...(metadata === undefined
-          ? {}
-          : { licence: metadata.licence, attribution: metadata.attribution }),
+        licence: metadata.licence,
+        attribution: metadata.attribution,
       };
     });
     return c.json(sources);
