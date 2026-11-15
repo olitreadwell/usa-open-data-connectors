@@ -58,7 +58,8 @@ curl 'http://localhost:8787/api/sources/bls-unemployment-rate/data'
 
 The API reads the same US federal sources as `@usa-open-data-connectors/usa-sources`. That package's
 README lists every publisher, source URL, and data licence. The API stores no data. Each request returns
-whatever the source answers at call time.
+whatever the source answers at call time. `GET /api/sources` also returns each adapter's source-level
+`licence` and `attribution` metadata.
 
 ## Package licence
 

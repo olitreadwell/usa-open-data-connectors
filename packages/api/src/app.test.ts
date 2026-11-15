@@ -44,7 +44,7 @@ describe('createConnectorsApp', () => {
     expect(await res.text()).toContain('swagger');
   });
 
-  it('lists every adapter with id, name, auth, and description', async () => {
+  it('lists every adapter with its licence metadata', async () => {
     const app = createTestApp();
     const res = await app.request('/api/sources');
     expect(res.status).toBe(200);
@@ -53,6 +53,8 @@ describe('createConnectorsApp', () => {
       name: string;
       auth: string;
       description: string;
+      licence: string;
+      attribution: string;
     }>;
     expect(sources.length).toBeGreaterThanOrEqual(2);
     expect(sources.map((source) => source.id)).toContain('bls-unemployment-rate');
@@ -62,6 +64,8 @@ describe('createConnectorsApp', () => {
       expect(source.name.length).toBeGreaterThan(0);
       expect(['none', 'key']).toContain(source.auth);
       expect(source.description.length).toBeGreaterThan(0);
+      expect(source.licence.length).toBeGreaterThan(0);
+      expect(source.attribution.length).toBeGreaterThan(0);
     }
   });
 

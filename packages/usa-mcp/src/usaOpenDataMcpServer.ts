@@ -35,6 +35,7 @@ import {
   US_UNEMPLOYMENT_SERIES_ID,
   usgsHawaiiRollingWindow,
 } from '@usa-open-data-connectors/usa-sources';
+import { getUsSourceMetadata } from '@usa-open-data-connectors/usa-sources/registry';
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js';
 import { z } from 'zod';
 
@@ -553,12 +554,18 @@ export function createUsaOpenDataMcpServer(): McpServer {
     serverName: USA_MCP_SERVER_NAME,
     serverVersion: USA_MCP_SERVER_VERSION,
     listSources: () =>
-      US_DATA_SOURCES.map((source) => ({
-        id: source.id,
-        name: source.name,
-        auth: source.auth,
-        description: source.description,
-      })),
+      US_DATA_SOURCES.map((source) => {
+        const metadata = getUsSourceMetadata(source.id);
+        return {
+          id: source.id,
+          name: source.name,
+          auth: source.auth,
+          description: source.description,
+          ...(metadata === undefined
+            ? {}
+            : { licence: metadata.licence, attribution: metadata.attribution }),
+        };
+      }),
     probeSources: async (ids) => {
       const probes = await probeAllUsDataSources(ids === undefined ? {} : { ids });
       return probes.map((probe) => ({

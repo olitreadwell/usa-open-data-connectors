@@ -7,6 +7,14 @@ export interface UsFetchOptions {
   fetchImpl?: typeof globalThis.fetch;
 }
 
+/** Licence and attribution metadata for one registered US source adapter. */
+export interface UsSourceMetadata {
+  /** Licence or terms statement for the source as a whole. */
+  licence: string;
+  /** Publisher to credit when the data is reused. */
+  attribution: string;
+}
+
 /**
  * One US data source behind a uniform interface: a live fetch, a strict
  * parse, and a committed fixture for tests. A live fetch never falls back

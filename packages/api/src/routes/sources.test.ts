@@ -75,7 +75,16 @@ describe('GET /sources', () => {
       'california-open-data-catalogue',
     ]);
     for (const source of sources) {
-      expect(Object.keys(source).sort()).toEqual(['auth', 'description', 'id', 'name']);
+      expect(Object.keys(source).sort()).toEqual([
+        'attribution',
+        'auth',
+        'description',
+        'id',
+        'licence',
+        'name',
+      ]);
+      expect(String(source.licence).length).toBeGreaterThan(0);
+      expect(String(source.attribution).length).toBeGreaterThan(0);
     }
   });
 });
