@@ -48,7 +48,8 @@ usdata probe bls-unemployment-rate
 
 The CLI reads the same US federal sources as `@usa-open-data-connectors/usa-sources`. That package's
 README lists every publisher, source URL, and data licence. The CLI stores no data. Each command returns
-whatever the source answers at call time.
+whatever the source answers at call time. `usdata sources` also returns each adapter's source-level
+`licence` and `attribution` metadata.
 
 ## Package licence
 

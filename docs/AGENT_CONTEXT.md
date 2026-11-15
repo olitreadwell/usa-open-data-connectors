@@ -30,6 +30,8 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 - Socrata and CKAN catalogue entries carry the portal's `licenceUrl` and `attribution`
   values, and PublicDataHub records carry licence and agency provenance. An
   empty value means the source supplied none
+- Every adapter also has source-level `licence` and `attribution` metadata in
+  `src/registry.ts`, returned by the API, CLI, and MCP source lists
 - `npm run check` is green. The MCP server exposes named tools for the original
   library queries plus the generic `fetch_source` tool for any registered
   source, and `probe_sources` only probes the ids it is given.
@@ -39,10 +41,7 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 1. Backlog of US sources to add: api.data.gov, BEA, and EIA. Census answered
    with a missing-key redirect on 2026-11-08, so it needs a key before an
    adapter can stay keyless.
-2. Decide per-source licence metadata for the adapters whose APIs do not
-   supply per-record terms. Most publishers state terms for the whole service;
-   `COUNTRY.md` tracks the narrowed item.
-3. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
+2. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
    `usa-data-lab` repos vendors one package by name and renames its scope as
    it copies. That script matches the old scope, so it needs updating before
    the rename lands there.

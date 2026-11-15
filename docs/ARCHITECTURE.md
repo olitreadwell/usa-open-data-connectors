@@ -41,11 +41,14 @@ The API exposes three generic routes over the registry:
 
 Adding an adapter to the registry is enough to expose it on all three routes.
 
-Where a source supplies licence or attribution metadata in its response, the
-adapter keeps it on each record. Socrata and CKAN catalogue entries carry `licenceUrl`
-and `attribution`, and PublicDataHub records carry licence and agency
-provenance. The values are copied from the source, not inferred. An empty value
-means the source supplied none.
+Every registered adapter has source-level `licence` and `attribution` metadata
+in `packages/usa-sources/src/registry.ts`, keyed by adapter id. The API
+and CLI source lists return it. Where a source also supplies licence or
+attribution metadata in its response, the adapter keeps it on each record.
+Socrata and CKAN catalogue entries carry `licenceUrl` and `attribution`, and
+PublicDataHub records carry licence and agency provenance. The values are
+copied from the source, not inferred. An empty per-record value means the
+source supplied none.
 
 Live fetches go through the shared helpers in
 `packages/usa-sources/src/http.ts`: `httpGet` for GET requests and

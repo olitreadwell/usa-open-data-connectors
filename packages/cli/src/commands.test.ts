@@ -55,9 +55,17 @@ describe('runCli', () => {
     const { out, output } = createCapture();
     const exitCode = await runCli(['sources'], output, createDeps());
     expect(exitCode).toBe(0);
-    const sources = JSON.parse(out.join('\n')) as Array<{ id: string }>;
+    const sources = JSON.parse(out.join('\n')) as Array<{
+      id: string;
+      licence: string;
+      attribution: string;
+    }>;
     expect(sources.length).toBeGreaterThanOrEqual(2);
     expect(sources.map((source) => source.id)).toContain('bls-unemployment-rate');
+    for (const source of sources) {
+      expect(source.licence.length).toBeGreaterThan(0);
+      expect(source.attribution.length).toBeGreaterThan(0);
+    }
   });
 
   it('probes a known source', async () => {

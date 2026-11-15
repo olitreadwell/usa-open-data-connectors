@@ -5,6 +5,7 @@ import {
   probeUsDataSource,
   US_DATA_SOURCES,
 } from '@usa-open-data-connectors/usa-sources';
+import { getUsSourceMetadata } from '@usa-open-data-connectors/usa-sources/registry';
 
 /** Where the CLI writes its output. Injectable for tests. */
 export interface CliOutput {
@@ -55,12 +56,18 @@ export async function runCli(
     const probeSource = deps.probeSource ?? probeUsDataSource;
 
     if (command === 'sources') {
-      const sources = US_DATA_SOURCES.map((source) => ({
-        id: source.id,
-        name: source.name,
-        auth: source.auth,
-        description: source.description,
-      }));
+      const sources = US_DATA_SOURCES.map((source) => {
+        const metadata = getUsSourceMetadata(source.id);
+        return {
+          id: source.id,
+          name: source.name,
+          auth: source.auth,
+          description: source.description,
+          ...(metadata === undefined
+            ? {}
+            : { licence: metadata.licence, attribution: metadata.attribution }),
+        };
+      });
       output.writeOut(JSON.stringify(sources, null, 2));
       return 0;
     }

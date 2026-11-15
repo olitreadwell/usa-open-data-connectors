@@ -372,11 +372,11 @@ everywhere, and a few services attach their own terms on top.
 | `san-francisco-open-data-catalogue` | City and County of San Francisco, through its Socrata portal | City portal terms. The adapter returns `licenceUrl` and `attribution`; the captured page supplied neither |
 | `california-open-data-catalogue` | State of California, through its CKAN portal | Portal entry terms. The adapter returns `licenceUrl` and `attribution`; seven of ten captured packages supplied `License not specified`, and every package named a publishing organisation |
 
-The Socrata and California CKAN catalogue adapters return `licenceUrl` and `attribution` on each
-entry, and `publicdatahub-hospital-quality` returns licence, agency, and
-dataset provenance. An empty value means the source supplied none. The other
-adapters' committed responses carry no per-record licence field; most
-publishers state terms for the whole service. That is the narrowed open item in
-`COUNTRY.md`. The metadata covers the record it comes with, not every dataset a
-publisher offers. Read the publisher's page before you republish, and credit
-the publisher rather than this library.
+Every registered adapter has source-level `licence` and `attribution` metadata
+in `packages/usa-sources/src/registry.ts`, keyed by adapter id. The API
+and CLI source lists return it. The Socrata and California CKAN catalogue
+adapters also return `licenceUrl` and `attribution` on each entry, and
+`publicdatahub-hospital-quality` returns licence, agency, and dataset
+provenance. An empty per-record value means the source supplied none. The
+source-level metadata covers the service as a whole; read the publisher's page
+before you republish, and credit the publisher rather than this library.

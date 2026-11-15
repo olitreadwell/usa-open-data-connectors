@@ -8,6 +8,8 @@ export interface SourceSummary {
   name: string;
   auth: string;
   description: string;
+  licence?: string;
+  attribution?: string;
 }
 
 /** Outcome of one live probe against a source. */

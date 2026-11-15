@@ -96,9 +96,15 @@ describe('createUsaOpenDataMcpServer', () => {
 
     const result = await client.callTool({ name: 'list_sources', arguments: {} });
 
-    const sources = JSON.parse(firstText(result)) as { id: string }[];
+    const sources = JSON.parse(firstText(result)) as Array<{
+      id: string;
+      licence?: string;
+      attribution?: string;
+    }>;
     expect(sources.length).toBe(47);
     expect(sources.every((source) => source.id.length > 0)).toBe(true);
+    expect(sources.every((source) => (source.licence ?? '').length > 0)).toBe(true);
+    expect(sources.every((source) => (source.attribution ?? '').length > 0)).toBe(true);
   });
 
   it('rejects one-sided NWS and NextBus pairs before fetching', async () => {

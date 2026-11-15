@@ -75,9 +75,12 @@ fixture captured from the live service.
       Socrata and CKAN catalogue entries carry `licenceUrl` and `attribution`, and
       `publicdatahub-hospital-quality` carries licence, agency, and dataset
       provenance
-- [ ] Add licence and attribution metadata to the other adapters. No other
-      committed fixture carries a per-record licence field; most publishers
-      state terms for the whole service, so each source needs its own decision
+- [x] Add licence and attribution metadata to the other adapters: every
+      registered adapter now has source-level `licence` and `attribution` in
+      `packages/usa-sources/src/registry.ts`, returned by `/api/sources`,
+      `usdata sources`, and MCP `list_sources`. The Socrata, CKAN, and
+      PublicDataHub adapters still carry per-record values where the source
+      supplies them
 - [x] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
 - [ ] Add the remaining keyless adapters. Census answered with a missing-key redirect on 2026-11-08, California's Socrata discovery endpoint answered 404 so its CKAN search endpoint is used instead, and BEA, EIA, and api.data.gov remain keyed
 - [x] Add each new adapter to the registry so the API and CLI pick it up
