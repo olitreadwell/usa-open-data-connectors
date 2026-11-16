@@ -303,17 +303,17 @@ service requires a key or the endpoint is not a usable public API.
 | CMS Provider Data catalogue | The metastore API answered HTTP 403 Access Denied on 2026-11-08. No adapter added. |
 | California Open Data Socrata discovery | `https://data.ca.gov/api/views.json?limit=2` answered HTTP 404 on 2026-11-08. The keyless CKAN `package_search` endpoint answered, so the California adapter uses that instead. |
 
-## Backlog sources that need a key
+## Backlog sources checked for a key requirement
 
-These sit on the backlog in `COUNTRY.md`. None can be added while the library
-stays keyless. EPA, CDC, and NOAA already have adapters, so they are not on
-this list.
+These sit on the backlog in `COUNTRY.md`. The checks below cover the named
+URLs and terms only. They do not cover every endpoint at each agency. EPA,
+CDC, and NOAA already have adapters, so they are not on this list.
 
-| Source | What it would cover | Why it is not built |
+| Source | What it would cover | Check |
 | --- | --- | --- |
-| Census Bureau Data API | Population, housing, and economic tables | `https://api.census.gov/data/2023/acs/acs5?get=NAME&for=state:06` answered HTTP 302 to `https://api.census.gov/data/missing_key.html` without a key. Rechecked on 2026-11-17. |
-| Bureau of Economic Analysis | GDP and regional accounts | The API documentation says users must obtain a unique 36-character UserID. A request without one answered HTTP 200 with an empty body on 2026-11-17. |
-| Energy Information Administration | Energy production and prices | A request without `api_key` answers HTTP 403 `API_KEY_MISSING`. Rechecked on 2026-11-17. |
+| Census Bureau Data API | Population, housing, and economic tables | `https://api.census.gov/data/2023/acs/acs5?get=NAME&for=state:06` answered HTTP 302 to `https://api.census.gov/data/missing_key.html` with `x-datawebapi-keyerror: 1` on 2026-11-17. This covers only the ACS 5-year endpoint. |
+| Bureau of Economic Analysis | GDP and regional accounts | The API documentation at `https://apps.bea.gov/API/docs/index.htm` says users must obtain a unique 36-character UserID. A request to `https://apps.bea.gov/api/data/?method=GetDataSetList&ResultFormat=JSON` without one returned HTTP 200 and a zero-byte body on 2026-11-17. The empty body alone does not show why. |
+| Energy Information Administration | Energy production and prices | `https://api.eia.gov/v2/electricity/rto/region-data/data/?frequency=hourly&data[0]=value` answered HTTP 403 with `{"error":{"code":"API_KEY_MISSING","message":"No api_key was supplied.  Please register for one at https://www.eia.gov/opendata/register.php"}}` on 2026-11-17. |
 
 `api.data.gov` is a shared key and catalogue service for federal APIs, not a
 dataset source. It does not serve a dataset of its own, so no adapter is planned.

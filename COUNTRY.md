@@ -82,10 +82,14 @@ fixture captured from the live service.
       PublicDataHub adapters still carry per-record values where the source
       supplies them
 - [x] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
-- [x] Add the remaining keyless adapters. California is registered as
-      `california-open-data-catalogue` through its keyless CKAN search endpoint.
-      Census, BEA, and EIA require a key, so no keyless adapter remains
-- [ ] Decide whether to support keyed sources. Census, BEA, and EIA need an
-      environment-read key before an adapter can ship. The library is
+- [x] Add the remaining keyless adapter identified in this pass: California is
+      registered as `california-open-data-catalogue` through its keyless CKAN
+      search endpoint. The checked Census ACS endpoint, the BEA API, and the
+      EIA API v2 stay on the keyed-source backlog. The evidence in
+      `docs/CONNECTOR_DISCOVERY.md` does not cover every endpoint at those
+      agencies
+- [ ] Decide whether to support keyed sources. The checked Census ACS
+      endpoint, BEA's API terms, and the EIA API v2 require a key before an
+      adapter can ship. Other Census endpoints were not tested. The library is
       keyless-first, so this change did not add one
 - [x] Add each new adapter to the registry so the API and CLI pick it up
