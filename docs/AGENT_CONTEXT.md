@@ -38,9 +38,9 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 
 ## What is left
 
-1. Backlog of US sources to add: api.data.gov, BEA, and EIA. Census answered
-   with a missing-key redirect on 2026-11-08, so it needs a key before an
-   adapter can stay keyless.
+1. No keyless source remains on the backlog. Census, BEA, EIA, and
+   api.data.gov need a key before an adapter can ship. The library is
+   keyless-first, so a keyed-source policy decision comes before any of them.
 2. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
    `usa-data-lab` repos vendors one package by name and renames its scope as
    it copies. That script matches the old scope, so it needs updating before
@@ -88,6 +88,6 @@ type-check against `packages/usa-sources/dist`, so build before type-checking.
 - `docs/ARCHITECTURE.md` - how the pieces fit together
 - `docs/SECURITY.md` - key handling and security checklist
 - `docs/GLOSSARY.md` - plain-language terms
-- `docs/CONNECTOR_DISCOVERY.md` - the US adapters and the sources not yet probed
+- `docs/CONNECTOR_DISCOVERY.md` - the US adapters and the keyed sources left out
 - `docs/RELEASING.md` - versioning and tags
 - `docs/AGENT_CONTEXT.md` - this file

@@ -303,17 +303,18 @@ service requires a key or the endpoint is not a usable public API.
 | CMS Provider Data catalogue | The metastore API answered HTTP 403 Access Denied on 2026-11-08. No adapter added. |
 | California Open Data Socrata discovery | `https://data.ca.gov/api/views.json?limit=2` answered HTTP 404 on 2026-11-08. The keyless CKAN `package_search` endpoint answered, so the California adapter uses that instead. |
 
-## Candidates not yet probed
+## Backlog sources that need a key
 
-These sit on the backlog in `COUNTRY.md`. Census was checked on 2026-11-08
-and answered with a missing-key redirect; the rest are still unprobed. EPA,
-CDC, and NOAA already have adapters, so they are not on this list.
+These sit on the backlog in `COUNTRY.md`. None can be added while the library
+stays keyless. EPA, CDC, and NOAA already have adapters, so they are not on
+this list.
 
-| Source | What it would cover |
-| --- | --- |
-| api.data.gov | Shared key and catalogue across several federal APIs |
-| Bureau of Economic Analysis | GDP and regional accounts |
-| Energy Information Administration | Energy production and prices |
+| Source | What it would cover | Why it is not built |
+| --- | --- | --- |
+| Census Bureau Data API | Population, housing, and economic tables | A request without a key answers HTTP 302 to `https://api.census.gov/data/missing_key.html`. Rechecked on 2026-11-17. |
+| Bureau of Economic Analysis | GDP and regional accounts | The API documentation says users must obtain a unique 36-character UserID. A request without one answered HTTP 200 with an empty body on 2026-11-17. |
+| Energy Information Administration | Energy production and prices | A request without `api_key` answers HTTP 403 `API_KEY_MISSING`. Rechecked on 2026-11-17. |
+| api.data.gov | Shared key, catalogue, and analytics across federal APIs | The service page describes an API key and analytics service used by 25 agencies for over 450 APIs. It does not serve a dataset of its own. |
 
 ## Licences and attribution
 

@@ -112,7 +112,7 @@ type-check against the built package.
 
 - `README.md` - quickstart and commands
 - `docs/ARCHITECTURE.md` - this file
-- `docs/CONNECTOR_DISCOVERY.md` - what has been checked live, and what is left to probe
+- `docs/CONNECTOR_DISCOVERY.md` - what has been checked live, and what needs a key
 - `docs/SECURITY.md` - keys, audits, and the security checklist
 - `docs/GLOSSARY.md` - plain-language terms
 - `docs/RELEASING.md` - how versions and tags work

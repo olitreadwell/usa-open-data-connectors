@@ -233,7 +233,7 @@ keyless.
 ## Documentation
 
 - `docs/ARCHITECTURE.md` - how the pieces fit together, in plain language
-- `docs/CONNECTOR_DISCOVERY.md` - every adapter, the live check behind it, and the sources not yet probed
+- `docs/CONNECTOR_DISCOVERY.md` - every adapter, the live check behind it, and the keyed sources left out
 - `docs/SECURITY.md` - key handling and the security checklist
 - `docs/GLOSSARY.md` - plain-language definitions of every term
 - `docs/RELEASING.md` - how versions, tags, and publishing work
