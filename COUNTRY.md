@@ -63,7 +63,7 @@ fixture captured from the live service.
 | San Francisco Open Data | `san-francisco-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
 | California Open Data | `california-open-data-catalogue` | live, keyless CKAN, fixture committed 2026-11-08 |
 | Census Bureau Data API | - | keyed; skipped (missing-key redirect on 2026-11-17) |
-| api.data.gov | - | keyed; skipped (shared key and catalogue service) |
+| api.data.gov | - | not a dataset source; shared key and catalogue service |
 | BEA | - | keyed; skipped (36-character UserID required) |
 | EIA | - | keyed; skipped (403 API_KEY_MISSING on 2026-11-17) |
 
@@ -84,9 +84,8 @@ fixture captured from the live service.
 - [x] Replace the NZ entries in `docs/CONNECTOR_DISCOVERY.md` with US ones
 - [x] Add the remaining keyless adapters. California is registered as
       `california-open-data-catalogue` through its keyless CKAN search endpoint.
-      Census, BEA, EIA, and api.data.gov require a key, so no keyless adapter
-      remains
-- [ ] Decide whether to support keyed sources. Census, BEA, EIA, and
-      api.data.gov need an environment-read key before an adapter can ship. The
-      library is keyless-first, so this change did not add one
+      Census, BEA, and EIA require a key, so no keyless adapter remains
+- [ ] Decide whether to support keyed sources. Census, BEA, and EIA need an
+      environment-read key before an adapter can ship. The library is
+      keyless-first, so this change did not add one
 - [x] Add each new adapter to the registry so the API and CLI pick it up

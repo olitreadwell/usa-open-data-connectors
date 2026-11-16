@@ -311,10 +311,12 @@ this list.
 
 | Source | What it would cover | Why it is not built |
 | --- | --- | --- |
-| Census Bureau Data API | Population, housing, and economic tables | A request without a key answers HTTP 302 to `https://api.census.gov/data/missing_key.html`. Rechecked on 2026-11-17. |
+| Census Bureau Data API | Population, housing, and economic tables | `https://api.census.gov/data/2023/acs/acs5?get=NAME&for=state:06` answered HTTP 302 to `https://api.census.gov/data/missing_key.html` without a key. Rechecked on 2026-11-17. |
 | Bureau of Economic Analysis | GDP and regional accounts | The API documentation says users must obtain a unique 36-character UserID. A request without one answered HTTP 200 with an empty body on 2026-11-17. |
 | Energy Information Administration | Energy production and prices | A request without `api_key` answers HTTP 403 `API_KEY_MISSING`. Rechecked on 2026-11-17. |
-| api.data.gov | Shared key, catalogue, and analytics across federal APIs | The service page describes an API key and analytics service used by 25 agencies for over 450 APIs. It does not serve a dataset of its own. |
+
+`api.data.gov` is a shared key and catalogue service for federal APIs, not a
+dataset source. It does not serve a dataset of its own, so no adapter is planned.
 
 ## Licences and attribution
 
