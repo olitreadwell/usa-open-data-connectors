@@ -1,10 +1,11 @@
-"""FEMA, USAspending, and SEC adapters."""
+"""FEMA, USAspending, SEC, and Federal Register adapters."""
 
 from __future__ import annotations
 
 import re
 from collections.abc import Mapping
 from typing import Any
+from urllib.parse import urlencode
 
 from .common import UsDataAdapter, as_number, require_dict, require_list
 from .errors import UsSourceApiError, UsSourceParseError
@@ -14,6 +15,7 @@ from .http import get_json
 FEMA_OPEN_DATA_API_BASE = "https://www.fema.gov/api/open/v1"
 USASPENDING_API_BASE = "https://api.usaspending.gov/api/v2"
 SEC_EDGAR_SUBMISSIONS_API_BASE = "https://data.sec.gov/submissions"
+FEDERAL_REGISTER_API_BASE = "https://www.federalregister.gov/api/v1/documents.json"
 
 
 def _count_named(values: list[str]) -> list[dict[str, Any]]:
@@ -296,5 +298,117 @@ sec_edgar_filings_adapter = UsDataAdapter(
     parse=parse_sec_edgar_filings_payload,
     load_fixture=lambda: parse_sec_edgar_filings_payload(
         read_fixture_json("sec-edgar-filings-2026-10-05.json")
+    ),
+)
+
+
+def _is_non_negative_int(value: Any) -> bool:
+    """Returns whether a value is a whole number of at least zero."""
+    return isinstance(value, int) and not isinstance(value, bool) and value >= 0
+
+
+def _required_text(value: Any, source: str, field: str) -> str:
+    """Returns a non-empty string or raises a parse error."""
+    if not isinstance(value, str) or value == "":
+        raise UsSourceParseError(source, f"A document arrived without its {field}")
+    return value
+
+
+def build_federal_register_documents_url(
+    query: Mapping[str, Any] | None = None,
+) -> str:
+    """Builds the request URL for one page of Federal Register documents."""
+    options = query or {}
+    params = urlencode(
+        {
+            "per_page": str(options.get("perPage", 10)),
+            "page": str(options.get("page", 1)),
+            "order": str(options.get("order", "newest")),
+        }
+    )
+    return f"{FEDERAL_REGISTER_API_BASE}?{params}"
+
+
+def parse_federal_register_documents_payload(payload: Any) -> dict[str, Any]:
+    """Parses one page of Federal Register documents."""
+    source = "federal-register-documents"
+    parsed = require_dict(payload, source)
+    count = parsed.get("count")
+    total_pages = parsed.get("total_pages")
+    if not _is_non_negative_int(count) or not _is_non_negative_int(total_pages):
+        raise UsSourceParseError(source, "The response carried no valid page counts")
+    rows = require_list(parsed.get("results"), source)
+    documents: list[dict[str, Any]] = []
+    for row in rows:
+        if not isinstance(row, dict):
+            raise UsSourceParseError(source, "A document is not an object")
+        number = _required_text(row.get("document_number"), source, "document number")
+        publication_date = _required_text(
+            row.get("publication_date"), source, "publication date"
+        )
+        if re.fullmatch(r"\d{4}-\d{2}-\d{2}", publication_date) is None:
+            raise UsSourceParseError(
+                source,
+                f"Document {number} carried an unreadable publication date: {publication_date}",
+            )
+        abstract = row.get("abstract")
+        if abstract is not None and not isinstance(abstract, str):
+            raise UsSourceParseError(source, "A document carried an unreadable abstract")
+        agencies_raw = row.get("agencies")
+        if agencies_raw is None:
+            agencies_raw = []
+        if not isinstance(agencies_raw, list):
+            raise UsSourceParseError(source, "A document carried an unreadable agency list")
+        agencies: list[str] = []
+        for agency in agencies_raw:
+            if not isinstance(agency, dict):
+                raise UsSourceParseError(source, "An agency entry is not an object")
+            name = agency.get("name")
+            if name is None:
+                continue
+            if not isinstance(name, str):
+                raise UsSourceParseError(source, "An agency entry carried an unreadable name")
+            if name.strip() != "":
+                agencies.append(name)
+        pdf_url = row.get("pdf_url")
+        if pdf_url is not None and not isinstance(pdf_url, str):
+            raise UsSourceParseError(source, "A document carried an unreadable PDF URL")
+        documents.append(
+            {
+                "documentNumber": number,
+                "title": _required_text(row.get("title"), source, "title"),
+                "type": _required_text(row.get("type"), source, "type"),
+                "publicationDate": publication_date,
+                "abstract": abstract,
+                "agencies": agencies,
+                "htmlUrl": _required_text(row.get("html_url"), source, "HTML URL"),
+                "pdfUrl": pdf_url or "",
+            }
+        )
+
+    next_page_url = parsed.get("next_page_url")
+    if next_page_url is not None and not isinstance(next_page_url, str):
+        raise UsSourceParseError(source, "The response carried an unreadable next-page URL")
+    return {
+        "documents": documents,
+        "documentCount": len(documents),
+        "reportedCount": count,
+        "totalPages": total_pages,
+        "nextPageUrl": next_page_url,
+    }
+
+
+federal_register_documents_adapter = UsDataAdapter(
+    id="federal-register-documents",
+    name="Federal Register documents",
+    auth="none",
+    description="Documents published in the Federal Register, one row per document, with its type, publication date, agencies, abstract, and public HTML and PDF links.",
+    fetch_live=_json_fetcher(
+        build_federal_register_documents_url(),
+        parse_federal_register_documents_payload,
+    ),
+    parse=parse_federal_register_documents_payload,
+    load_fixture=lambda: parse_federal_register_documents_payload(
+        read_fixture_json("federal-register-documents-2026-11-08.json")
     ),
 )

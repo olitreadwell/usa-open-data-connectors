@@ -182,11 +182,10 @@ endpoints. They need no key.
 
 ## Other languages
 
-The earlier Python and Ruby ports cover the adapter ids they shipped with.
-The new NIH RePORTER adapter is TypeScript-only for now. Each ported adapter
-has a live fetcher, a parser, a committed fixture, and an offline test. Both
-ports use the shared fixtures in `packages/usa-sources/src/fixtures`, so a
-snapshot is stored once.
+The Python and Ruby ports cover every adapter id in the TypeScript registry.
+Each ported adapter has a live fetcher, a parser, a committed fixture, and an
+offline test. Both ports use the shared fixtures in
+`packages/usa-sources/src/fixtures`, so a snapshot is stored once.
 
 Python lives in `python/src/usadata` and Ruby lives in `ruby/lib/usadata`.
 Both are keyless and expose `US_DATA_SOURCES`, `get_us_data_source`, and

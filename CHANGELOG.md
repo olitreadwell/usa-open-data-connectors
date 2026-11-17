@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Ports: close the remaining Python and Ruby adapter gap. Both registries now
+  match the 47 TypeScript ids, including the catalogue, Federal Register,
+  NHTSA, and NIH RePORTER adapters.
 - Connectors: add keyless Socrata catalogue adapters for California, Colorado,
   Illinois, Los Angeles, Michigan, New Jersey, Oregon, Pennsylvania, San
   Francisco, Vermont, and Washington State.
@@ -13,8 +16,8 @@
   with a dated live fixture and a live registry probe.
 - Connectors: add the keyless `nih-reporter-projects` adapter for NIH-funded
   projects, with a fiscal 2025 fixture and a JSON POST helper.
-- Ports: add keyless Python and Ruby ports with all 28 TypeScript adapter ids,
-  each with a live fetcher, parser, committed fixture, and offline test.
+- Ports: add keyless Python and Ruby ports, each with a live fetcher, parser,
+  committed fixture, and offline test.
 - Remove the NZ Python and Ruby copies and their publishing workflows.
 - MCP: add named tools for every registered source, probe only the source ids a caller asks for, and reject unknown ids.
 - Sources: reject NextBus tags that are blank after trimming, and NWS coordinates that are not finite or outside the valid range.

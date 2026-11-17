@@ -2,19 +2,44 @@
 
 from __future__ import annotations
 
+import re
 from collections.abc import Mapping
 from typing import Any
 
-from .common import UsDataAdapter, require_dict, require_list
+from .common import (
+    UsDataAdapter,
+    as_number,
+    normalize_number,
+    require_dict,
+    require_list,
+    sequential_sum,
+)
 from .errors import UsSourceApiError, UsSourceParseError
 from .fixtures import read_fixture_json
-from .http import get_json
+from .http import get_json, post_json
 
 CLINICALTRIALS_STUDIES_API_BASE = "https://clinicaltrials.gov/api/v2/studies"
 NCBI_EUTILS_API_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 EPA_ENVIROFACTS_API_BASE = "https://data.epa.gov/efservice"
 FDIC_BANK_API_BASE = "https://banks.data.fdic.gov/api/institutions"
 PUBLICDATAHUB_API_BASE = "https://publicdatahub.org"
+NIH_REPORTER_SEARCH_URL = "https://api.reporter.nih.gov/v2/projects/search"
+NIH_REPORTER_DEFAULT_FISCAL_YEAR = 2025
+NIH_REPORTER_PAGE_SIZE = 10
+
+NIH_REPORTER_INCLUDE_FIELDS = [
+    "ProjectNum",
+    "CoreProjectNum",
+    "ProjectTitle",
+    "FiscalYear",
+    "AwardAmount",
+    "Organization",
+    "PrincipalInvestigators",
+    "ProjectStartDate",
+    "ProjectEndDate",
+    "AgencyIcAdmin",
+    "ProjectDetailUrl",
+]
 
 
 def parse_clinical_trials_studies_payload(payload: Any) -> dict[str, Any]:
@@ -378,5 +403,214 @@ publicdatahub_hospital_adapter = UsDataAdapter(
     parse=parse_publicdatahub_hospital_payload,
     load_fixture=lambda: parse_publicdatahub_hospital_payload(
         read_fixture_json("publicdatahub-hospital-quality-2026-10-21.json")
+    ),
+)
+
+
+def build_nih_reporter_search_body(
+    query: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Builds the JSON body for one NIH RePORTER project search."""
+    options = query or {}
+    return {
+        "criteria": {
+            "fiscal_years": [
+                options.get("fiscalYear", NIH_REPORTER_DEFAULT_FISCAL_YEAR)
+            ],
+            "agencies": ["NIH"],
+        },
+        "include_fields": NIH_REPORTER_INCLUDE_FIELDS,
+        "offset": options.get("offset", 0),
+        "limit": options.get("limit", NIH_REPORTER_PAGE_SIZE),
+        "sort_field": "award_amount",
+        "sort_order": "desc",
+    }
+
+
+def _nih_number(value: Any, source: str, field: str) -> Any:
+    """Reads a required number or raises a parse error."""
+    number = as_number(value)
+    if number is None:
+        raise UsSourceParseError(source, f"A project carried an unreadable {field}")
+    return number
+
+
+def _nih_optional_number(value: Any, source: str, field: str) -> Any | None:
+    """Reads an optional number, keeping null as None."""
+    if value is None:
+        return None
+    return _nih_number(value, source, field)
+
+
+def _nih_required_string(value: Any, source: str, field: str) -> str:
+    """Reads a required string or raises a parse error."""
+    if not isinstance(value, str):
+        raise UsSourceParseError(source, f"A project carried an unreadable {field}")
+    return value
+
+
+def _nih_optional_string(value: Any, source: str, field: str) -> str | None:
+    """Reads an optional string, keeping null as None."""
+    if value is None:
+        return None
+    return _nih_required_string(value, source, field)
+
+
+def _normalize_nih_date(value: Any, source: str, field: str) -> str | None:
+    """Converts an ISO timestamp or date to YYYY-MM-DD."""
+    if value is None:
+        return None
+    text = _nih_required_string(value, source, field)
+    match = re.match(r"^(\d{4}-\d{2}-\d{2})", text)
+    if match is None:
+        raise UsSourceParseError(source, f"Unreadable {field}: {text}")
+    return match.group(1)
+
+
+def _normalize_investigator_name(name: str) -> str:
+    """Collapses repeated spaces inside an investigator name."""
+    return " ".join(name.split())
+
+
+def _nih_administering_institute(value: Any, source: str) -> str | None:
+    """Reads the NIH institute abbreviation, falling back to its name."""
+    if value is None:
+        return None
+    if not isinstance(value, dict):
+        raise UsSourceParseError(source, "A project carried a malformed administering institute")
+    abbreviation = value.get("abbreviation")
+    if abbreviation is not None and not isinstance(abbreviation, str):
+        raise UsSourceParseError(source, "A project carried an unreadable institute abbreviation")
+    if isinstance(abbreviation, str) and abbreviation != "":
+        return abbreviation
+    name = value.get("name")
+    if name is None:
+        return None
+    if not isinstance(name, str):
+        raise UsSourceParseError(source, "A project carried an unreadable institute name")
+    return name
+
+
+def _nih_investigators(value: Any, source: str) -> list[str]:
+    """Reads and normalises the principal investigator names."""
+    if value is None:
+        return []
+    if not isinstance(value, list):
+        raise UsSourceParseError(source, "A project carried a malformed investigator list")
+    names: list[str] = []
+    for investigator in value:
+        if not isinstance(investigator, dict):
+            raise UsSourceParseError(source, "An investigator entry is not an object")
+        full_name = investigator.get("full_name")
+        if full_name is None:
+            continue
+        if not isinstance(full_name, str):
+            raise UsSourceParseError(source, "An investigator carried an unreadable name")
+        name = _normalize_investigator_name(full_name)
+        if name != "":
+            names.append(name)
+    return names
+
+
+def parse_nih_reporter_projects_payload(payload: Any) -> dict[str, Any]:
+    """Parses one page of NIH RePORTER project search results."""
+    source = "nih-reporter-projects"
+    parsed = require_dict(payload, source)
+    message = parsed.get("message")
+    if message is not None:
+        if not isinstance(message, str):
+            raise UsSourceParseError(source, "The response carried an unreadable message")
+        raise UsSourceApiError(source, message)
+    meta = parsed.get("meta")
+    rows = parsed.get("results")
+    if not isinstance(meta, dict) or not isinstance(rows, list):
+        raise UsSourceParseError(
+            source, "The response carried no meta block or results array"
+        )
+    total = _nih_number(meta.get("total"), source, "total")
+    offset = _nih_number(meta.get("offset"), source, "offset")
+    limit = _nih_number(meta.get("limit"), source, "limit")
+
+    projects: list[dict[str, Any]] = []
+    for row in rows:
+        if not isinstance(row, dict):
+            raise UsSourceParseError(source, "A project is not an object")
+        organization = row.get("organization")
+        if not isinstance(organization, dict):
+            raise UsSourceParseError(source, "A project arrived without its organization")
+        projects.append(
+            {
+                "projectNumber": _nih_required_string(
+                    row.get("project_num"), source, "project number"
+                ),
+                "coreProjectNumber": _nih_optional_string(
+                    row.get("core_project_num"), source, "core project number"
+                ),
+                "projectTitle": _nih_required_string(
+                    row.get("project_title"), source, "project title"
+                ),
+                "fiscalYear": _nih_number(
+                    row.get("fiscal_year"), source, "fiscal year"
+                ),
+                "awardAmount": _nih_optional_number(
+                    row.get("award_amount"), source, "award amount"
+                ),
+                "organizationName": _nih_required_string(
+                    organization.get("org_name"), source, "organization name"
+                ),
+                "organizationCity": _nih_optional_string(
+                    organization.get("org_city"), source, "organization city"
+                ),
+                "organizationState": _nih_optional_string(
+                    organization.get("org_state"), source, "organization state"
+                ),
+                "principalInvestigators": _nih_investigators(
+                    row.get("principal_investigators"), source
+                ),
+                "administeringInstitute": _nih_administering_institute(
+                    row.get("agency_ic_admin"), source
+                ),
+                "projectStartDate": _normalize_nih_date(
+                    row.get("project_start_date"), source, "project start date"
+                ),
+                "projectEndDate": _normalize_nih_date(
+                    row.get("project_end_date"), source, "project end date"
+                ),
+                "projectDetailUrl": _nih_optional_string(
+                    row.get("project_detail_url"), source, "project detail URL"
+                ),
+            }
+        )
+
+    return {
+        "projects": projects,
+        "projectCount": len(projects),
+        "totalCount": total,
+        "offset": offset,
+        "limit": limit,
+        "pageAwardAmountUsd": normalize_number(
+            sequential_sum(project["awardAmount"] or 0 for project in projects)
+        ),
+    }
+
+
+def _fetch_nih_reporter_projects(
+    options: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Reads one page of NIH-funded projects through RePORTER."""
+    return parse_nih_reporter_projects_payload(
+        post_json(NIH_REPORTER_SEARCH_URL, build_nih_reporter_search_body(options))
+    )
+
+
+nih_reporter_projects_adapter = UsDataAdapter(
+    id="nih-reporter-projects",
+    name="NIH RePORTER funded projects",
+    auth="none",
+    description="NIH RePORTER funded projects for one fiscal year, with the project title, award amount, organization, principal investigators, and administering institute.",
+    fetch_live=_fetch_nih_reporter_projects,
+    parse=parse_nih_reporter_projects_payload,
+    load_fixture=lambda: parse_nih_reporter_projects_payload(
+        read_fixture_json("nih-reporter-projects-fy2025-2026-11-07.json")
     ),
 )

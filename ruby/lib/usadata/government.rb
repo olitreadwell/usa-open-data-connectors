@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
+require 'uri'
+
 module Usadata
   FEMA_OPEN_DATA_API_BASE = 'https://www.fema.gov/api/open/v1'
   USASPENDING_API_BASE = 'https://api.usaspending.gov/api/v2'
   SEC_EDGAR_SUBMISSIONS_API_BASE = 'https://data.sec.gov/submissions'
+  FEDERAL_REGISTER_API_BASE = 'https://www.federalregister.gov/api/v1/documents.json'
 
   module_function
 
@@ -244,7 +247,116 @@ module Usadata
     -> { parse_sec_edgar_filings_payload(fixture_json('sec-edgar-filings-2026-10-05.json')) }
   )
 
+  def non_negative_integer?(value)
+    value.is_a?(Integer) && value >= 0
+  end
+
+  def required_text(value, source, field)
+    unless value.is_a?(String) && !value.empty?
+      raise UsSourceParseError.new(source, "A document arrived without its #{field}")
+    end
+
+    value
+  end
+
+  def build_federal_register_documents_url(query = nil)
+    options = query || {}
+    params = URI.encode_www_form(
+      'per_page' => (options[:perPage] || 10).to_s,
+      'page' => (options[:page] || 1).to_s,
+      'order' => (options[:order] || 'newest').to_s
+    )
+    "#{FEDERAL_REGISTER_API_BASE}?#{params}"
+  end
+
+  def parse_federal_register_documents_payload(payload)
+    source = 'federal-register-documents'
+    parsed = require_hash(payload, source)
+    count = parsed['count']
+    total_pages = parsed['total_pages']
+    unless non_negative_integer?(count) && non_negative_integer?(total_pages)
+      raise UsSourceParseError.new(source, 'The response carried no valid page counts')
+    end
+
+    rows = require_array(parsed['results'], source)
+    documents = rows.map do |row|
+      unless row.is_a?(Hash)
+        raise UsSourceParseError.new(source, 'A document is not an object')
+      end
+
+      number = required_text(row['document_number'], source, 'document number')
+      publication_date = required_text(row['publication_date'], source, 'publication date')
+      unless publication_date.match?(/\A\d{4}-\d{2}-\d{2}\z/)
+        raise UsSourceParseError.new(
+          source,
+          "Document #{number} carried an unreadable publication date: #{publication_date}"
+        )
+      end
+      abstract = row['abstract']
+      unless abstract.nil? || abstract.is_a?(String)
+        raise UsSourceParseError.new(source, 'A document carried an unreadable abstract')
+      end
+
+      agencies_raw = row['agencies'] || []
+      agencies = require_array(agencies_raw, source).map do |agency|
+        unless agency.is_a?(Hash)
+          raise UsSourceParseError.new(source, 'An agency entry is not an object')
+        end
+        name = agency['name']
+        next nil if name.nil?
+        unless name.is_a?(String)
+          raise UsSourceParseError.new(source, 'An agency entry carried an unreadable name')
+        end
+
+        name.strip.empty? ? nil : name
+      end.compact
+      pdf_url = row['pdf_url']
+      unless pdf_url.nil? || pdf_url.is_a?(String)
+        raise UsSourceParseError.new(source, 'A document carried an unreadable PDF URL')
+      end
+      {
+        'documentNumber' => number,
+        'title' => required_text(row['title'], source, 'title'),
+        'type' => required_text(row['type'], source, 'type'),
+        'publicationDate' => publication_date,
+        'abstract' => abstract,
+        'agencies' => agencies,
+        'htmlUrl' => required_text(row['html_url'], source, 'HTML URL'),
+        'pdfUrl' => pdf_url || ''
+      }
+    end
+
+    next_page_url = parsed['next_page_url']
+    unless next_page_url.nil? || next_page_url.is_a?(String)
+      raise UsSourceParseError.new(source, 'The response carried an unreadable next-page URL')
+    end
+    {
+      'documents' => documents,
+      'documentCount' => documents.length,
+      'reportedCount' => count,
+      'totalPages' => total_pages,
+      'nextPageUrl' => next_page_url
+    }
+  end
+
+  federal_register_documents_adapter = Adapter.new(
+    'federal-register-documents',
+    'Federal Register documents',
+    'none',
+    'Documents published in the Federal Register, one row per document, with its type, ' \
+    'publication date, agencies, abstract, and public HTML and PDF links.',
+    json_fetcher(build_federal_register_documents_url,
+                 method(:parse_federal_register_documents_payload)),
+    method(:parse_federal_register_documents_payload),
+    lambda {
+      parse_federal_register_documents_payload(
+        fixture_json('federal-register-documents-2026-11-08.json')
+      )
+    }
+  )
+
   FEMA_DISASTER_DECLARATIONS_ADAPTER = fema_disaster_declarations_adapter
   USASPENDING_AGENCIES_ADAPTER = usaspending_agencies_adapter
   SEC_EDGAR_FILINGS_ADAPTER = sec_edgar_filings_adapter
+  FEDERAL_REGISTER_DOCUMENTS_ADAPTER = federal_register_documents_adapter
 end

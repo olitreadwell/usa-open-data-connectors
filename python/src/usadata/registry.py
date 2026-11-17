@@ -8,9 +8,25 @@ from typing import Any
 
 from .catalogues import (
     bts_transportation_stats_adapter,
+    california_open_data_catalogue_adapter,
     cdc_socrata_catalogue_adapter,
+    chicago_open_data_catalogue_adapter,
+    colorado_open_data_catalogue_adapter,
+    fcc_socrata_catalogue_adapter,
     healthdata_socrata_catalogue_adapter,
+    illinois_open_data_catalogue_adapter,
+    los_angeles_open_data_catalogue_adapter,
+    michigan_open_data_catalogue_adapter,
+    new_jersey_open_data_catalogue_adapter,
+    ny_state_open_data_catalogue_adapter,
     nyc_open_data_catalogue_adapter,
+    oregon_open_data_catalogue_adapter,
+    pennsylvania_open_data_catalogue_adapter,
+    san_francisco_open_data_catalogue_adapter,
+    seattle_open_data_catalogue_adapter,
+    texas_open_data_catalogue_adapter,
+    vermont_open_data_catalogue_adapter,
+    washington_state_open_data_catalogue_adapter,
 )
 from .common import UsDataAdapter
 from .environment import (
@@ -28,6 +44,7 @@ from .finance import (
     treasury_debt_to_penny_adapter,
 )
 from .government import (
+    federal_register_documents_adapter,
     fema_disaster_declarations_adapter,
     sec_edgar_filings_adapter,
     usaspending_agencies_adapter,
@@ -37,6 +54,7 @@ from .health import (
     epa_envirofacts_facilities_adapter,
     fdic_bank_directory_adapter,
     ncbi_pubmed_search_adapter,
+    nih_reporter_projects_adapter,
     publicdatahub_hospital_adapter,
 )
 from .people import (
@@ -44,6 +62,7 @@ from .people import (
     college_scorecard_institutions_adapter,
     estimatetax_income_tax_adapter,
 )
+from .vehicles import nhtsa_vehicle_models_adapter
 from .weather import (
     ncei_annual_temperature_adapter,
     nextbus_transit_vehicles_adapter,
@@ -71,6 +90,7 @@ US_DATA_SOURCES: list[UsDataAdapter] = [
     usaspending_agencies_adapter,
     epa_envirofacts_facilities_adapter,
     ncbi_pubmed_search_adapter,
+    nih_reporter_projects_adapter,
     cdc_socrata_catalogue_adapter,
     healthdata_socrata_catalogue_adapter,
     nyc_open_data_catalogue_adapter,
@@ -80,6 +100,24 @@ US_DATA_SOURCES: list[UsDataAdapter] = [
     college_scorecard_institutions_adapter,
     publicdatahub_hospital_adapter,
     nextbus_transit_vehicles_adapter,
+    federal_register_documents_adapter,
+    nhtsa_vehicle_models_adapter,
+    fcc_socrata_catalogue_adapter,
+    ny_state_open_data_catalogue_adapter,
+    chicago_open_data_catalogue_adapter,
+    seattle_open_data_catalogue_adapter,
+    texas_open_data_catalogue_adapter,
+    colorado_open_data_catalogue_adapter,
+    washington_state_open_data_catalogue_adapter,
+    michigan_open_data_catalogue_adapter,
+    oregon_open_data_catalogue_adapter,
+    pennsylvania_open_data_catalogue_adapter,
+    illinois_open_data_catalogue_adapter,
+    new_jersey_open_data_catalogue_adapter,
+    vermont_open_data_catalogue_adapter,
+    los_angeles_open_data_catalogue_adapter,
+    san_francisco_open_data_catalogue_adapter,
+    california_open_data_catalogue_adapter,
 ]
 
 PROBE_FAILURES = (UsSourceError, OSError, ValueError, TypeError, KeyError, IndexError)

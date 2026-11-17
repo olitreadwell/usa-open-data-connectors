@@ -23,6 +23,7 @@ class SourcesSpec < Minitest::Test
     usaspending-agencies
     epa-envirofacts-facilities
     ncbi-pubmed-search
+    nih-reporter-projects
     cdc-socrata-catalogue
     healthdata-socrata-catalogue
     nyc-open-data-catalogue
@@ -32,6 +33,24 @@ class SourcesSpec < Minitest::Test
     college-scorecard-institutions
     publicdatahub-hospital-quality
     nextbus-transit-vehicles
+    federal-register-documents
+    nhtsa-vehicle-models
+    fcc-socrata-catalogue
+    ny-state-open-data-catalogue
+    chicago-open-data-catalogue
+    seattle-open-data-catalogue
+    texas-open-data-catalogue
+    colorado-open-data-catalogue
+    washington-state-open-data-catalogue
+    michigan-open-data-catalogue
+    oregon-open-data-catalogue
+    pennsylvania-open-data-catalogue
+    illinois-open-data-catalogue
+    new-jersey-open-data-catalogue
+    vermont-open-data-catalogue
+    los-angeles-open-data-catalogue
+    san-francisco-open-data-catalogue
+    california-open-data-catalogue
   ].freeze
 
   EXPECTED_FIXTURE_VALUES = {
@@ -54,6 +73,7 @@ class SourcesSpec < Minitest::Test
     'usaspending-agencies' => ['agencyCount', 111],
     'epa-envirofacts-facilities' => ['facilityCount', 10],
     'ncbi-pubmed-search' => ['returnedCount', 10],
+    'nih-reporter-projects' => ['projectCount', 10],
     'cdc-socrata-catalogue' => ['entryCount', 10],
     'healthdata-socrata-catalogue' => ['entryCount', 10],
     'nyc-open-data-catalogue' => ['entryCount', 50],
@@ -62,7 +82,25 @@ class SourcesSpec < Minitest::Test
     'callook-callsigns' => ['callsignCount', 10],
     'college-scorecard-institutions' => ['institutionCount', 6],
     'publicdatahub-hospital-quality' => ['measureCount', 7],
-    'nextbus-transit-vehicles' => ['vehicleCount', 5]
+    'nextbus-transit-vehicles' => ['vehicleCount', 5],
+    'federal-register-documents' => ['documentCount', 10],
+    'nhtsa-vehicle-models' => ['modelCount', 50],
+    'fcc-socrata-catalogue' => ['entryCount', 10],
+    'ny-state-open-data-catalogue' => ['entryCount', 10],
+    'chicago-open-data-catalogue' => ['entryCount', 10],
+    'seattle-open-data-catalogue' => ['entryCount', 10],
+    'texas-open-data-catalogue' => ['entryCount', 10],
+    'colorado-open-data-catalogue' => ['entryCount', 10],
+    'washington-state-open-data-catalogue' => ['entryCount', 10],
+    'michigan-open-data-catalogue' => ['entryCount', 10],
+    'oregon-open-data-catalogue' => ['entryCount', 10],
+    'pennsylvania-open-data-catalogue' => ['entryCount', 10],
+    'illinois-open-data-catalogue' => ['entryCount', 10],
+    'new-jersey-open-data-catalogue' => ['entryCount', 10],
+    'vermont-open-data-catalogue' => ['entryCount', 10],
+    'los-angeles-open-data-catalogue' => ['entryCount', 10],
+    'san-francisco-open-data-catalogue' => ['entryCount', 10],
+    'california-open-data-catalogue' => ['entryCount', 10]
   }.freeze
 
   def test_registry_matches_typescript_adapter_ids
