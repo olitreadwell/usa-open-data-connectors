@@ -38,11 +38,11 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 
 ## What is left
 
-1. California's keyless CKAN adapter is shipped. The checked Census ACS
-   endpoint, the BEA API, and the EIA API v2 remain candidates because they
-   require a key. Those checks do not cover every Census endpoint, so they do
-   not prove that no keyless source remains. The library is keyless-first, so
-   a keyed-source policy decision comes before any keyed adapter.
+1. The keyed-source decision is closed: the registered library stays keyless-only.
+   Every registered adapter declares `auth: 'none'`, and no adapter reads the
+   optional `apiKey` seam. The checked Census ACS 5-year endpoint, the BEA API,
+   and the EIA API v2 require a key. The narrow follow-up is to check the Census
+   Bureau endpoints that have not been tested for keyless access.
 2. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
    `usa-data-lab` repos vendors one package by name and renames its scope as
    it copies. That script matches the old scope, so it needs updating before

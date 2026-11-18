@@ -6,8 +6,9 @@ are, and what to check before shipping.
 ## API keys
 
 No registered connector needs a key today. All adapters in
-`packages/usa-sources` are keyless. When a keyed source lands, its key gets an
-environment variable and is added to this list.
+`packages/usa-sources` are keyless, and no keyed adapter is planned. If a keyed
+source is approved, its key gets an environment variable and is added to this
+list.
 
 Rules:
 - Keys come from the environment only, server-side

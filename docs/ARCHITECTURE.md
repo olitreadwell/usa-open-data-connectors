@@ -60,7 +60,7 @@ Weather Service and CFPB adapters pass a `User-Agent` of their own and that
 replaces the default; other headers merge over it. The College Scorecard
 adapter raises its own timeout to two minutes because its archive is 24 MB.
 
-## Keyless first
+## Keyless adapters only
 
 Every registered source works without an API key:
 
@@ -68,10 +68,11 @@ No adapter needs a key today, and none reads an environment variable. The one
 published limit is BLS: 25 series queries a day keyless, 500 with a registered
 key, and the adapter does not send a key.
 
-When a keyed source lands, the key is read from the environment at process
-start, the API and the CLI never accept keys from callers, and keys are never
-committed to the repo. `normalizeSourceApiKey` in
-`packages/usa-sources/src/apiKey.ts` trims a key that is set but blank, so it
+No keyed adapter is planned. The interface keeps an optional `apiKey` seam, but
+no registered adapter reads it. If a keyed source is approved, the key is read
+from the environment at process start, the HTTP API and CLI never accept keys
+from callers, and keys are never committed to the repo. `normalizeSourceApiKey`
+in `packages/usa-sources/src/apiKey.ts` trims a key that is set but blank, so it
 is treated as unset.
 
 ## Tests use fixtures

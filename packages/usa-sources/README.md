@@ -708,7 +708,7 @@ shape as the Chicago and Seattle adapters.
 ## Notes and limits
 
 - `bls-unemployment-rate`: the public API refuses a window longer than ten years. `fetchBlsSeries` splits a longer range into windows, so two decades cost three calls once the range reaches the current year.
-- `bls-unemployment-rate`: keyless access allows 25 series queries a day. A registered key allows 500, and the adapter takes `apiKey` for the day that matters.
+- `bls-unemployment-rate`: keyless access allows 25 series queries a day. A registered key allows 500, but no adapter sends a key today.
 - `bls-unemployment-rate`: the agency uses `-` for a month it could not publish and `M13` for an annual average. The parser drops both, so one year holds twelve monthly values.
 - `usgs-hawaii-earthquakes`: the event query answers a window of any length, one request per window. The caller sets the box, the magnitude floor, and the dates.
 - `usgs-hawaii-earthquakes`: the feed mixes tectonic earthquakes with quarry blasts, explosions, and ice quakes. A row can arrive without a magnitude. The parser keeps only tectonic earthquakes that carry a magnitude and a depth.

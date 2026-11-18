@@ -62,10 +62,10 @@ fixture captured from the live service.
 | Los Angeles Open Data | `los-angeles-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
 | San Francisco Open Data | `san-francisco-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
 | California Open Data | `california-open-data-catalogue` | live, keyless CKAN, fixture committed 2026-11-08 |
-| Census Bureau Data API | - | keyed; skipped (missing-key redirect on 2026-11-17) |
+| Census Bureau Data API | - | keyed; not supported (missing-key redirect on 2026-11-17) |
 | api.data.gov | - | not a dataset source; shared key and catalogue service |
-| BEA | - | keyed; skipped (36-character UserID required) |
-| EIA | - | keyed; skipped (403 API_KEY_MISSING on 2026-11-17) |
+| BEA | - | keyed; not supported (36-character UserID required) |
+| EIA | - | keyed; not supported (403 API_KEY_MISSING on 2026-11-17) |
 
 ## Remaining work
 
@@ -85,11 +85,46 @@ fixture captured from the live service.
 - [x] Add the remaining keyless adapter identified in this pass: California is
       registered as `california-open-data-catalogue` through its keyless CKAN
       search endpoint. The checked Census ACS endpoint, the BEA API, and the
-      EIA API v2 stay on the keyed-source backlog. The evidence in
-      `docs/CONNECTOR_DISCOVERY.md` does not cover every endpoint at those
-      agencies
-- [ ] Decide whether to support keyed sources. The checked Census ACS
-      endpoint, BEA's API terms, and the EIA API v2 require a key before an
-      adapter can ship. Other Census endpoints were not tested. The library is
-      keyless-first, so this change did not add one
+      EIA API v2 stay off the adapter list because they require a key. The
+      evidence in `docs/CONNECTOR_DISCOVERY.md` does not cover every endpoint at
+      those agencies
+- [x] Decide whether to support keyed sources: the library stays keyless-only.
+      Every registered adapter declares `auth: 'none'`, and no adapter reads the
+      optional `apiKey` seam. See "Keyed sources" below
+- [ ] Check the remaining Census Bureau endpoints for keyless access. The only
+      Census check so far is the ACS 5-year endpoint, which answered with a
+      missing-key redirect on 2026-11-17. Other Census endpoints were not
+      tested. Reason: the keyed-source decision is closed. This item only checks
+      whether the Census agency has a keyless endpoint that was missed
 - [x] Add each new adapter to the registry so the API and CLI pick it up
+
+## Keyed sources
+
+Decision on 2026-11-19: the registered library stays keyless-only. No keyed
+adapter ships, and none is planned. A keyed source needs a separate decision and
+a key-handling design before any adapter work starts.
+
+Evidence:
+
+- Every entry in `US_DATA_SOURCES` in
+  `packages/usa-sources/src/registry.ts` declares `auth: 'none'`.
+- No adapter reads the optional `UsFetchOptions.apiKey`; only the registry
+  forwards it. `packages/usa-sources/src/apiKey.ts` trims a key that is set but
+  blank, so an empty value is treated as unset.
+- The checked Census ACS 5-year endpoint, the BEA API, and the EIA API v2
+  require a key. The checks are in `docs/CONNECTOR_DISCOVERY.md`. They cover the
+  named URLs only.
+
+Why this is the decision:
+
+- A keyed adapter needs an environment variable at process start and a secret
+  in every deployment that runs it. That is a separate operational change.
+- The repo has no key material in its tests. A live smoke test for a keyed
+  adapter needs the secret on the machine that runs it, so the default offline
+  suite cannot prove the key path.
+
+What remains:
+
+- Check the other Census Bureau endpoints for keyless access. The only check so
+  far is the ACS 5-year endpoint. That is source discovery, not a change to the
+  keyed-source policy.

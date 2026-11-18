@@ -4,10 +4,11 @@ Questions that come up about this repo.
 
 ## Do I need an API key?
 
-No. All adapters work keyless and need no environment variable. The SEC EDGAR,
-National Weather Service and CFPB adapters ask callers to identify themselves:
-they send their own descriptive `User-Agent` header from inside the adapter,
-replacing the default one, so callers send nothing extra.
+No. All adapters work keyless and need no environment variable. Keyed adapters
+are not supported today. The SEC EDGAR, National Weather Service and CFPB
+adapters ask callers to identify themselves: they send their own descriptive
+`User-Agent` header from inside the adapter, replacing the default one, so
+callers send nothing extra.
 
 ## Can I reuse the data?
 
