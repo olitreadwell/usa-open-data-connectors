@@ -44,7 +44,7 @@ curl 'http://localhost:8787/api/sources/bls-unemployment-rate/data'
 ## Notes and limits
 
 - The server listens on port 8787 by default. Set `PORT` to change it.
-- Keys come from the server options at process start. The API never accepts keys from callers, and no key is committed to the repo.
+- Keys come from the server options at process start. No registered adapter reads one today. The API never accepts keys from callers, and no key is committed to the repo.
 - The `/api` routes allow every origin by default. Set `CORS_ORIGIN` to restrict browser access to one origin.
 - The `/api` routes allow 60 requests per minute per IP by default. Set `RATE_LIMIT_MAX` and `RATE_LIMIT_WINDOW_MS` to change that.
 - The rate limiter keeps its counters in memory. Multi-instance deploys must limit at a proxy instead.

@@ -69,11 +69,13 @@ published limit is BLS: 25 series queries a day keyless, 500 with a registered
 key, and the adapter does not send a key.
 
 No keyed adapter is planned. The interface keeps an optional `apiKey` seam, but
-no registered adapter reads it. If a keyed source is approved, the key is read
-from the environment at process start, the HTTP API and CLI never accept keys
-from callers, and keys are never committed to the repo. `normalizeSourceApiKey`
-in `packages/usa-sources/src/apiKey.ts` trims a key that is set but blank, so it
-is treated as unset.
+no registered adapter reads it. The registry and the API's server-side options
+can pass a key, but the MCP fetch tool takes only a source id. A registry test
+fails if a registered adapter declares `auth: 'key'`. If a keyed source is
+approved, the key is read from the environment at process start, the HTTP API,
+CLI, and MCP server never accept keys from callers, and keys are never committed
+to the repo. `normalizeSourceApiKey` in `packages/usa-sources/src/apiKey.ts`
+trims a key that is set but blank, so it is treated as unset.
 
 ## Tests use fixtures
 

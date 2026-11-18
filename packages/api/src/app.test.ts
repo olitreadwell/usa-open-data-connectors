@@ -62,7 +62,7 @@ describe('createConnectorsApp', () => {
     for (const source of sources) {
       expect(source.id.length).toBeGreaterThan(0);
       expect(source.name.length).toBeGreaterThan(0);
-      expect(['none', 'key']).toContain(source.auth);
+      expect(source.auth).toBe('none');
       expect(source.description.length).toBeGreaterThan(0);
       expect(source.licence.length).toBeGreaterThan(0);
       expect(source.attribution.length).toBeGreaterThan(0);

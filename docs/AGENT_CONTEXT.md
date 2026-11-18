@@ -39,10 +39,13 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 ## What is left
 
 1. The keyed-source decision is closed: the registered library stays keyless-only.
-   Every registered adapter declares `auth: 'none'`, and no adapter reads the
-   optional `apiKey` seam. The checked Census ACS 5-year endpoint, the BEA API,
-   and the EIA API v2 require a key. The narrow follow-up is to check the Census
-   Bureau endpoints that have not been tested for keyless access.
+   Every registered adapter declares `auth: 'none'`, a registry test enforces
+   that, and no adapter reads the optional `apiKey` seam. The MCP `fetch_source`
+   tool does not accept a key. Census has two checks: the 2026-11-08 note has no
+   URL, and the 2026-11-17 note covers the ACS 5-year endpoint. EIA answered with
+   `API_KEY_MISSING`; BEA's docs require a UserID and its no-key probe was an
+   empty HTTP 200. The checks cover named URLs only. The narrow follow-up is to
+   resolve the missing Census URL and recheck that endpoint keyless.
 2. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
    `usa-data-lab` repos vendors one package by name and renames its scope as
    it copies. That script matches the old scope, so it needs updating before
@@ -76,7 +79,7 @@ type-check against `packages/usa-sources/dist`, so build before type-checking.
 - `/api/sources`, `/api/sources/{id}/probe`, and `/api/sources/{id}/data`
   are the generic routes. Prefer extending those to adding a source-specific
   route
-- Keys are read from env only, server-side. API and CLI never accept keys
+- Keys are read from env only, server-side. API, CLI, and MCP never accept keys
   from callers
 - Tests never hit the network unless `RUN_SMOKE=1` is set
 - Test files sit next to their source file (`registry.test.ts` tests

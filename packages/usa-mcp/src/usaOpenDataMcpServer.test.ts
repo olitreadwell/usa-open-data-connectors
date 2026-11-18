@@ -201,7 +201,7 @@ const REQUIRED_ARGS: Record<string, Record<string, unknown>> = {
 /** Every tool called with every optional argument filled in. */
 const FULL_ARGS: Record<string, Record<string, unknown>> = {
   probe_sources: { ids: ['fema-disaster-declarations'] },
-  fetch_source: { id: 'fema-disaster-declarations', apiKey: 'k' },
+  fetch_source: { id: 'fema-disaster-declarations' },
   us_bls_unemployment: { seriesId: 'LNS14000000', startYear: 2020, endYear: 2021 },
   us_usgs_earthquakes: { startDate: '2026-01-01', endDate: '2026-02-01', minMagnitude: 3 },
   us_ncei_annual_temperature: { startYear: 2000, endYear: 2001 },

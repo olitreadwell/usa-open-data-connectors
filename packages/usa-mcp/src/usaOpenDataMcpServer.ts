@@ -576,12 +576,12 @@ export function createUsaOpenDataMcpServer(): McpServer {
         ...(probe.sample === undefined ? {} : { sample: probe.sample }),
       }));
     },
-    fetchSource: async (id, options) => {
+    fetchSource: async (id) => {
       const adapter = getUsDataSource(id);
       if (adapter === undefined) {
         throw new Error(`No US source with id "${id}". Call list_sources for the ids.`);
       }
-      return adapter.fetchLive(options?.apiKey === undefined ? {} : { apiKey: options.apiKey });
+      return adapter.fetchLive();
     },
     queryTools: US_QUERY_TOOLS,
   });

@@ -67,7 +67,7 @@ claude mcp add usa-open-data -- node "$(pwd)/dist/stdio.js"
 - `us_nextbus_vehicles` takes both `agencyTag` and `routeTag`, or neither for the Portland Streetcar.
 - `us_epa_facilities` defaults to Rhode Island and accepts a two-letter state code.
 - The NYC, BTS, CDC, and HealthData catalogue tools cap `limit` at 10,000 entries.
-- Every source in this library is keyless. No tool needs an account.
+- Every source in this library is keyless. No tool needs an account, and `fetch_source` takes only a source id.
 - Claude Desktop reads the same server block from `claude_desktop_config.json`. On macOS that file is at `~/Library/Application Support/Claude/claude_desktop_config.json`.
 - ChatGPT connectors take a remote MCP endpoint. Put a tunnel in front of the stdio server, for example `cloudflared tunnel --url http://localhost:PORT`, then point the connector at the tunnel URL.
 - Test the server locally with the MCP inspector before you wire it into a client.

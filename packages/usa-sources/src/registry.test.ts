@@ -553,9 +553,9 @@ describe('US_DATA_SOURCES', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('marks every source as keyless or keyed', () => {
+  it('keeps every registered source keyless', () => {
     for (const source of US_DATA_SOURCES) {
-      expect(['none', 'key']).toContain(source.auth);
+      expect(source.auth).toBe('none');
     }
   });
 

@@ -12,7 +12,7 @@ list.
 
 Rules:
 - Keys come from the environment only, server-side
-- The HTTP API and CLI never accept keys from callers
+- The HTTP API, CLI, and MCP server never accept keys from callers
 - Real keys are never committed; `.env` is gitignored
 - Commit only `.env.example` (empty values)
 
@@ -23,6 +23,7 @@ Rules:
 | npm audit | `npm audit --audit-level=high` | Known npm vulnerabilities |
 | CodeQL | CI workflow | Security patterns in the TypeScript packages |
 | Lint | `npm run lint` | Suspicious code patterns |
+| Keyless registry | `npm run test` | A registered adapter that declares `auth: 'key'` |
 
 CI blocks on critical and high npm audit findings. CodeQL runs on every
 push.

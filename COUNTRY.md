@@ -64,7 +64,7 @@ fixture captured from the live service.
 | California Open Data | `california-open-data-catalogue` | live, keyless CKAN, fixture committed 2026-11-08 |
 | Census Bureau Data API | - | keyed; not supported (missing-key redirect on 2026-11-17) |
 | api.data.gov | - | not a dataset source; shared key and catalogue service |
-| BEA | - | keyed; not supported (36-character UserID required) |
+| BEA | - | not supported; BEA docs require a 36-character UserID; no-key probe was inconclusive (empty HTTP 200 on 2026-11-17) |
 | EIA | - | keyed; not supported (403 API_KEY_MISSING on 2026-11-17) |
 
 ## Remaining work
@@ -89,13 +89,13 @@ fixture captured from the live service.
       evidence in `docs/CONNECTOR_DISCOVERY.md` does not cover every endpoint at
       those agencies
 - [x] Decide whether to support keyed sources: the library stays keyless-only.
-      Every registered adapter declares `auth: 'none'`, and no adapter reads the
-      optional `apiKey` seam. See "Keyed sources" below
-- [ ] Check the remaining Census Bureau endpoints for keyless access. The only
-      Census check so far is the ACS 5-year endpoint, which answered with a
-      missing-key redirect on 2026-11-17. Other Census endpoints were not
-      tested. Reason: the keyed-source decision is closed. This item only checks
-      whether the Census agency has a keyless endpoint that was missed
+      Every registered adapter declares `auth: 'none'`, a registry test enforces
+      that, and no adapter reads the optional `apiKey` seam. The MCP fetch tool
+      takes no key. See "Keyed sources" below
+- [ ] Resolve and recheck the Census endpoint recorded on 2026-11-08. That note
+      has no URL. The later ACS 5-year check on 2026-11-17 is a different check.
+      Reason: this is the only Census check that cannot be identified from the
+      record. No exhaustive keyless search at Census, BEA, or EIA is planned
 - [x] Add each new adapter to the registry so the API and CLI pick it up
 
 ## Keyed sources
@@ -107,24 +107,36 @@ a key-handling design before any adapter work starts.
 Evidence:
 
 - Every entry in `US_DATA_SOURCES` in
-  `packages/usa-sources/src/registry.ts` declares `auth: 'none'`.
-- No adapter reads the optional `UsFetchOptions.apiKey`; only the registry
-  forwards it. `packages/usa-sources/src/apiKey.ts` trims a key that is set but
-  blank, so an empty value is treated as unset.
-- The checked Census ACS 5-year endpoint, the BEA API, and the EIA API v2
-  require a key. The checks are in `docs/CONNECTOR_DISCOVERY.md`. They cover the
-  named URLs only.
+  `packages/usa-sources/src/registry.ts` declares `auth: 'none'`, and
+  `packages/usa-sources/src/registry.test.ts` fails if a registered adapter is
+  keyed.
+- No adapter reads the optional `UsFetchOptions.apiKey`. The registry and the
+  API's server-side per-source key options can pass it, but no registered
+  adapter consumes it. The MCP `fetch_source` tool does not accept a key.
+  `packages/usa-sources/src/apiKey.ts` trims a key that is set but blank, so an
+  empty value is treated as unset.
+- Census has two checks. The 2026-11-08 check recorded a missing-key redirect
+  but no URL. The 2026-11-17 check named the ACS 5-year endpoint and got the
+  same redirect.
+- The FBI Crime Data Explorer check answered HTTP 403 with `API_KEY_MISSING` on
+  2026-11-08.
+- The EIA API v2 answered HTTP 403 with `API_KEY_MISSING` on 2026-11-17.
+- BEA's API documentation requires a 36-character UserID. The no-key request on
+  2026-11-17 returned an empty HTTP 200, which does not show why. The key
+  requirement rests on BEA's documentation, not on that probe.
+- The checks in `docs/CONNECTOR_DISCOVERY.md` cover the named URLs and terms
+  only. They do not cover every endpoint at each agency.
 
 Why this is the decision:
 
 - A keyed adapter needs an environment variable at process start and a secret
   in every deployment that runs it. That is a separate operational change.
-- The repo has no key material in its tests. A live smoke test for a keyed
-  adapter needs the secret on the machine that runs it, so the default offline
-  suite cannot prove the key path.
+- The offline suite can prove that a configured key reaches an adapter by using
+  a fake key and a fetch stub. It cannot prove that the live service accepts the
+  key without a real secret on the test machine.
 
 What remains:
 
-- Check the other Census Bureau endpoints for keyless access. The only check so
-  far is the ACS 5-year endpoint. That is source discovery, not a change to the
-  keyed-source policy.
+- Resolve the missing URL in the 2026-11-08 Census note and recheck that endpoint
+  without a key. That is source discovery, not a change to the keyed-source
+  policy.

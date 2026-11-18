@@ -42,7 +42,7 @@ export interface SourceMcpConfig {
   serverVersion: string;
   listSources: () => SourceSummary[];
   probeSources: (ids?: string[]) => Promise<SourceProbeResult[]>;
-  fetchSource: (id: string, options?: { apiKey?: string }) => Promise<unknown>;
+  fetchSource: (id: string) => Promise<unknown>;
   queryTools: SourceQueryTool[];
 }
 
@@ -155,17 +155,14 @@ export function createSourceMcpServer(config: SourceMcpConfig): McpServer {
     {
       title: 'Fetch a data source',
       description:
-        'Fetches one source through its adapter and returns the parsed data. Sources that need a key return an error unless you pass apiKey.',
+        'Fetches one source through its adapter and returns the parsed data. Every registered source is keyless, so no API key is accepted.',
       inputSchema: {
         id: z.string().describe('Source id from list_sources.'),
-        apiKey: z.string().optional().describe('API key, for sources whose auth is "key".'),
       },
     },
-    async ({ id, apiKey }) => {
+    async ({ id }) => {
       try {
-        return toTextResult(
-          await config.fetchSource(id, apiKey === undefined ? undefined : { apiKey })
-        );
+        return toTextResult(await config.fetchSource(id));
       } catch (error) {
         return toErrorResult(error);
       }

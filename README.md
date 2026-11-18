@@ -5,7 +5,8 @@ can use them from any language (Python, R, Julia, curl, whatever you like).
 
 Keyless-first: every connector works without an API key. No keyed adapter is
 planned. If one is approved, its key comes from the environment and stays
-server-side. Keys are never exposed over the API or committed to the repo.
+server-side. The HTTP API, CLI, and MCP server never accept keys from callers.
+Keys are never exposed over the API or committed to the repo.
 
 ## Packages
 
@@ -168,7 +169,8 @@ console.log(probes.map((probe) => `${probe.id}: ${probe.ok ? 'ok' : probe.status
 
 No registered connector needs a key. Keyed adapters are not supported today. If
 one is approved, it reads its key from an environment variable at process
-start, server-side.
+start, server-side. Callers cannot pass a key through the HTTP API, CLI, or MCP
+tools.
 
 ## Testing
 
