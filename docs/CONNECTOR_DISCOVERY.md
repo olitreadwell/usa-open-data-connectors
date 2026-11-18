@@ -319,10 +319,12 @@ not on this list.
 
 Decision on 2026-11-19: the registered library stays keyless-only. These sources
 are not planned as adapters. The checks are not exhaustive. The open evidence gap
-is the 2026-11-08 Census check: it recorded no URL. `COUNTRY.md` tracks a narrower
-follow-up to resolve that endpoint and recheck it without a key. Other untested
-endpoints at Census, BEA, and EIA are not claimed to be keyed. Finding a keyless
-endpoint there would be new source discovery, not a reason to support keys.
+is the 2026-11-08 Census record: it has no URL. The 2026-11-17 ACS check has a
+URL, but the record does not show whether the two checks used the same endpoint.
+`COUNTRY.md` tracks a narrower follow-up to resolve that endpoint and recheck it
+without a key. Other untested endpoints at Census, BEA, and EIA are not claimed
+to be keyed. Finding a keyless endpoint there would be new source discovery, not
+a reason to support keys.
 
 `api.data.gov` is a shared key and catalogue service for federal APIs, not a
 dataset source. It does not serve a dataset of its own, so no adapter is planned.

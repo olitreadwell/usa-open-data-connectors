@@ -41,8 +41,9 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 1. The keyed-source decision is closed: the registered library stays keyless-only.
    Every registered adapter declares `auth: 'none'`, a registry test enforces
    that, and no adapter reads the optional `apiKey` seam. The MCP `fetch_source`
-   tool does not accept a key. Census has two checks: the 2026-11-08 note has no
-   URL, and the 2026-11-17 note covers the ACS 5-year endpoint. EIA answered with
+   tool does not accept a key. Census has two records: the 2026-11-08 note has no
+   URL, and the 2026-11-17 check covers the ACS 5-year endpoint. The record does
+   not show whether the 11-08 check used the same endpoint. EIA answered with
    `API_KEY_MISSING`; BEA's docs require a UserID and its no-key probe was an
    empty HTTP 200. The checks cover named URLs only. The narrow follow-up is to
    resolve the missing Census URL and recheck that endpoint keyless.

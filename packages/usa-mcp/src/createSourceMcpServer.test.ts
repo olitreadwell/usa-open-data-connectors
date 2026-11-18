@@ -112,6 +112,15 @@ describe('createSourceMcpServer', () => {
     expect(fetchTool?.inputSchema.properties).not.toHaveProperty('apiKey');
   });
 
+  it('does not pass a caller-supplied api key to the fetch', async () => {
+    const fetchSource = vi.fn().mockResolvedValue({ ok: true });
+    const client = await connectClient(buildServer({ fetchSource }));
+
+    await client.callTool({ name: 'fetch_source', arguments: { id: 'alpha', apiKey: 'k-1' } });
+
+    expect(fetchSource).toHaveBeenCalledWith('alpha');
+  });
+
   it('fetches a source without caller-supplied options', async () => {
     const fetchSource = vi.fn().mockResolvedValue({ ok: true });
     const client = await connectClient(buildServer({ fetchSource }));

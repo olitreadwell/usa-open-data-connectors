@@ -93,9 +93,10 @@ fixture captured from the live service.
       that, and no adapter reads the optional `apiKey` seam. The MCP fetch tool
       takes no key. See "Keyed sources" below
 - [ ] Resolve and recheck the Census endpoint recorded on 2026-11-08. That note
-      has no URL. The later ACS 5-year check on 2026-11-17 is a different check.
-      Reason: this is the only Census check that cannot be identified from the
-      record. No exhaustive keyless search at Census, BEA, or EIA is planned
+      has no URL. The later ACS 5-year check on 2026-11-17 names its endpoint,
+      but the record does not show whether the two checks used the same endpoint.
+      Reason: this is the only Census record that cannot be identified from the
+      note. No exhaustive keyless search at Census, BEA, or EIA is planned
 - [x] Add each new adapter to the registry so the API and CLI pick it up
 
 ## Keyed sources
@@ -115,9 +116,10 @@ Evidence:
   adapter consumes it. The MCP `fetch_source` tool does not accept a key.
   `packages/usa-sources/src/apiKey.ts` trims a key that is set but blank, so an
   empty value is treated as unset.
-- Census has two checks. The 2026-11-08 check recorded a missing-key redirect
+- Census has two records. The 2026-11-08 note recorded a missing-key redirect
   but no URL. The 2026-11-17 check named the ACS 5-year endpoint and got the
-  same redirect.
+  same redirect. The record does not show whether the 11-08 check used the same
+  endpoint.
 - The FBI Crime Data Explorer check answered HTTP 403 with `API_KEY_MISSING` on
   2026-11-08.
 - The EIA API v2 answered HTTP 403 with `API_KEY_MISSING` on 2026-11-17.
