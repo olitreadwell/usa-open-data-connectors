@@ -62,7 +62,7 @@ fixture captured from the live service.
 | Los Angeles Open Data | `los-angeles-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
 | San Francisco Open Data | `san-francisco-open-data-catalogue` | live, keyless, fixture committed 2026-11-08 |
 | California Open Data | `california-open-data-catalogue` | live, keyless CKAN, fixture committed 2026-11-08 |
-| Census Bureau Data API | - | keyed; not supported (missing-key redirect on 2026-11-17) |
+| Census Bureau Data API | - | keyed; not supported (missing-key redirects on 2026-11-08, 2026-11-17, and 2026-11-20) |
 | api.data.gov | - | not a dataset source; shared key and catalogue service |
 | BEA | - | not supported; BEA docs require a 36-character UserID; no-key probe was inconclusive (empty HTTP 200 on 2026-11-17) |
 | EIA | - | keyed; not supported (403 API_KEY_MISSING on 2026-11-17) |
@@ -92,15 +92,17 @@ fixture captured from the live service.
       Every registered adapter declares `auth: 'none'`, a registry test enforces
       that, and no adapter reads the optional `apiKey` seam. The MCP fetch tool
       takes no key. See "Keyed sources" below
-- [x] Resolve and recheck the Census endpoint recorded on 2026-11-08: the check
-      used the ACS 1-year endpoint
+- [x] Resolve and recheck the Census endpoint recorded on 2026-11-08. The
+      connector run log for that day records requests to two ACS 1-year URLs:
       `https://api.census.gov/data/2023/acs/acs1?get=NAME,B01001_001E&for=state:06`
-      and also requested the 2024 ACS 1-year URL with the same query. Both
-      answered HTTP 302 to `https://api.census.gov/data/missing_key.html` with
-      `x-datawebapi-keyerror: 1`. Both were rechecked on 2026-11-20 with the
-      same result. The 2026-11-17 check used the ACS 5-year endpoint, which is a
-      different URL. No exhaustive keyless search at Census, BEA, or EIA is
-      planned
+      and
+      `https://api.census.gov/data/2024/acs/acs1?get=NAME,B01001_001E&for=state:06`.
+      Both returned HTTP 302 to `https://api.census.gov/data/missing_key.html`
+      with `x-datawebapi-keyerror: 1`. Both URLs returned the same response when
+      rechecked on 2026-11-20. The 2026-11-17 check used the ACS 5-year endpoint,
+      which is a different URL. The redirect does not show whether the 2024
+      dataset exists, because Census checks the key before the dataset path. No
+      exhaustive keyless search at Census, BEA, or EIA is planned
 - [x] Add each new adapter to the registry so the API and CLI pick it up
 
 ## Keyed sources
@@ -120,10 +122,11 @@ Evidence:
   adapter consumes it. The MCP `fetch_source` tool does not accept a key.
   `packages/usa-sources/src/apiKey.ts` trims a key that is set but blank, so an
   empty value is treated as unset.
-- Census has three URLs in the record. The 2026-11-08 check used the 2023 ACS
-  1-year endpoint and also requested the 2024 ACS 1-year URL; both got the
-  missing-key redirect. Both were rechecked on 2026-11-20 and got the same
-  redirect. The 2026-11-17 check used the ACS 5-year endpoint, a different URL.
+- Census has three URL requests in the record. The two ACS 1-year URLs named
+  in the completed item above returned the missing-key redirect on 2026-11-08
+  and again on 2026-11-20. The 2026-11-17 check used the ACS 5-year endpoint,
+  a different URL. The 2024 request does not prove that dataset exists,
+  because Census checks the key before the dataset path.
 - The FBI Crime Data Explorer check answered HTTP 403 with `API_KEY_MISSING` on
   2026-11-08.
 - The EIA API v2 answered HTTP 403 with `API_KEY_MISSING` on 2026-11-17.

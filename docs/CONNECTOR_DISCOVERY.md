@@ -297,7 +297,7 @@ service requires a key or the endpoint is not a usable public API.
 
 | Source | Result |
 | --- | --- |
-| Census Bureau Data API | `https://api.census.gov/data/2023/acs/acs1?get=NAME,B01001_001E&for=state:06` answered HTTP 302 to `https://api.census.gov/data/missing_key.html` with `x-datawebapi-keyerror: 1` on 2026-11-08. The 2024 ACS 1-year URL with the same query also answered HTTP 302. Both were rechecked on 2026-11-20 with the same result. Keyed; skipped. |
+| Census Bureau Data API | The 2026-11-08 connector run log records requests to `https://api.census.gov/data/2023/acs/acs1?get=NAME,B01001_001E&for=state:06` and `https://api.census.gov/data/2024/acs/acs1?get=NAME,B01001_001E&for=state:06`. Both answered HTTP 302 to `https://api.census.gov/data/missing_key.html` with `x-datawebapi-keyerror: 1` on that date. The same two URLs were rechecked on 2026-11-20 with the same result. The key check runs before the dataset lookup, so the 2024 redirect does not show that dataset exists. Keyed; skipped. |
 | FBI Crime Data Explorer API | HTTP 403 with `{"error":{"code":"API_KEY_MISSING","message":"An API key was not provided. Please get one at https://api.data.gov/signup/"}}`. Keyed; skipped. |
 | Data.gov CKAN API | `https://catalog.data.gov/api/3/action/package_search?rows=3` answered HTTP 404 on 2026-11-08. No adapter added. |
 | CMS Provider Data catalogue | The metastore API answered HTTP 403 Access Denied on 2026-11-08. No adapter added. |
@@ -312,18 +312,19 @@ not on this list.
 
 | Source | What it would cover | Check |
 | --- | --- | --- |
-| Census Bureau Data API | Population, housing, and economic tables | The 2026-11-08 check used `https://api.census.gov/data/2023/acs/acs1?get=NAME,B01001_001E&for=state:06` and also requested the 2024 ACS 1-year URL with the same query. Both answered HTTP 302 to `https://api.census.gov/data/missing_key.html` with `x-datawebapi-keyerror: 1`, and both were rechecked on 2026-11-20 with the same result. `https://api.census.gov/data/2023/acs/acs5?get=NAME&for=state:06` answered the same way on 2026-11-17. These cover the named ACS endpoints only. |
+| Census Bureau Data API | Population, housing, and economic tables | The 2026-11-08 connector run log records requests to `https://api.census.gov/data/2023/acs/acs1?get=NAME,B01001_001E&for=state:06` and `https://api.census.gov/data/2024/acs/acs1?get=NAME,B01001_001E&for=state:06`. Both answered HTTP 302 to `https://api.census.gov/data/missing_key.html` with `x-datawebapi-keyerror: 1` on that date. The same two URLs were rechecked on 2026-11-20 with the same result. The key check runs before the dataset lookup, so the 2024 redirect does not show that dataset exists. `https://api.census.gov/data/2023/acs/acs5?get=NAME&for=state:06` answered the same way on 2026-11-17. These cover the named ACS URL requests only. |
 | FBI Crime Data Explorer API | Federal crime data | The API answered HTTP 403 with `{"error":{"code":"API_KEY_MISSING","message":"An API key was not provided. Please get one at https://api.data.gov/signup/"}}` on 2026-11-08. |
 | Bureau of Economic Analysis | GDP and regional accounts | The API documentation at `https://apps.bea.gov/API/docs/index.htm` says users must obtain a unique 36-character UserID. A request to `https://apps.bea.gov/api/data/?method=GetDataSetList&ResultFormat=JSON` without one returned HTTP 200 and a zero-byte body on 2026-11-17. The empty body alone does not show why. |
 | Energy Information Administration | Energy production and prices | `https://api.eia.gov/v2/electricity/rto/region-data/data/?frequency=hourly&data[0]=value` answered HTTP 403 with `{"error":{"code":"API_KEY_MISSING","message":"No api_key was supplied.  Please register for one at https://www.eia.gov/opendata/register.php"}}` on 2026-11-17. |
 
 Decision on 2026-11-19: the registered library stays keyless-only. These sources
 are not planned as adapters. The 2026-11-08 Census record is resolved: it used
-the ACS 1-year endpoint, not the ACS 5-year endpoint checked on 2026-11-17. Both
-ACS 1-year URLs were rechecked on 2026-11-20 without a key and returned the same
-missing-key redirect. Other untested endpoints at Census, BEA, and EIA are not
-claimed to be keyed. Finding a keyless endpoint there would be new source
-discovery, not a reason to support keys.
+two ACS 1-year URLs, not the ACS 5-year URL checked on 2026-11-17. Both ACS
+1-year requests were rechecked on 2026-11-20 without a key and returned the same
+missing-key redirect. The redirect does not show that the 2024 dataset exists.
+Other untested endpoints at Census, BEA, and EIA are not claimed to be keyed.
+Finding a keyless endpoint there would be new source discovery, not a reason to
+support keys.
 
 `api.data.gov` is a shared key and catalogue service for federal APIs, not a
 dataset source. It does not serve a dataset of its own, so no adapter is planned.
