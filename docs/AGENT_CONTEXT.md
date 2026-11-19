@@ -33,9 +33,11 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
 - Every adapter also has source-level `licence` and `attribution` metadata in
   `src/registry.ts`, returned by the API, CLI, and MCP source lists
 - The 2026-11-08 Census record used two ACS 1-year URLs: the 2023 dataset and a
-  2024 request. Both returned the missing-key redirect when rechecked on
-  2026-11-20, as did the ACS 5-year check on 2026-11-17. The redirect does not
-  show that the 2024 dataset exists. No follow-up remains for the 2026-11-08
+  2024 request. On 2026-11-08 the 2023 URL captured the missing-key redirect
+  headers; the 2024 URL captured status `302` only. Both returned the full
+  redirect with headers when rechecked on 2026-11-20 NZDT, as did the ACS 5-year
+  check on 2026-11-17. No invalid-dataset control was run, so the redirect does
+  not show that the 2024 dataset exists. No follow-up remains for the 2026-11-08
   record
 - `npm run check` is green. The MCP server exposes named tools for the original
   library queries plus the generic `fetch_source` tool for any registered
