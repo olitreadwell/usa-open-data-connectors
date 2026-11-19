@@ -92,11 +92,15 @@ fixture captured from the live service.
       Every registered adapter declares `auth: 'none'`, a registry test enforces
       that, and no adapter reads the optional `apiKey` seam. The MCP fetch tool
       takes no key. See "Keyed sources" below
-- [ ] Resolve and recheck the Census endpoint recorded on 2026-11-08. That note
-      has no URL. The later ACS 5-year check on 2026-11-17 names its endpoint,
-      but the record does not show whether the two checks used the same endpoint.
-      Reason: this is the only Census record that cannot be identified from the
-      note. No exhaustive keyless search at Census, BEA, or EIA is planned
+- [x] Resolve and recheck the Census endpoint recorded on 2026-11-08: the check
+      used the ACS 1-year endpoint
+      `https://api.census.gov/data/2023/acs/acs1?get=NAME,B01001_001E&for=state:06`
+      and also requested the 2024 ACS 1-year URL with the same query. Both
+      answered HTTP 302 to `https://api.census.gov/data/missing_key.html` with
+      `x-datawebapi-keyerror: 1`. Both were rechecked on 2026-11-20 with the
+      same result. The 2026-11-17 check used the ACS 5-year endpoint, which is a
+      different URL. No exhaustive keyless search at Census, BEA, or EIA is
+      planned
 - [x] Add each new adapter to the registry so the API and CLI pick it up
 
 ## Keyed sources
@@ -116,10 +120,10 @@ Evidence:
   adapter consumes it. The MCP `fetch_source` tool does not accept a key.
   `packages/usa-sources/src/apiKey.ts` trims a key that is set but blank, so an
   empty value is treated as unset.
-- Census has two records. The 2026-11-08 note recorded a missing-key redirect
-  but no URL. The 2026-11-17 check named the ACS 5-year endpoint and got the
-  same redirect. The record does not show whether the 11-08 check used the same
-  endpoint.
+- Census has three URLs in the record. The 2026-11-08 check used the 2023 ACS
+  1-year endpoint and also requested the 2024 ACS 1-year URL; both got the
+  missing-key redirect. Both were rechecked on 2026-11-20 and got the same
+  redirect. The 2026-11-17 check used the ACS 5-year endpoint, a different URL.
 - The FBI Crime Data Explorer check answered HTTP 403 with `API_KEY_MISSING` on
   2026-11-08.
 - The EIA API v2 answered HTTP 403 with `API_KEY_MISSING` on 2026-11-17.
@@ -137,8 +141,8 @@ Why this is the decision:
   a fake key and a fetch stub. It cannot prove that the live service accepts the
   key without a real secret on the test machine.
 
-What remains:
+What this does not cover:
 
-- Resolve the missing URL in the 2026-11-08 Census note and recheck that endpoint
-  without a key. That is source discovery, not a change to the keyed-source
-  policy.
+- The checks cover the named ACS URLs only. Other endpoints at Census, BEA, and
+  EIA were not tested. A keyless endpoint among them would be new source
+  discovery, not a change to the keyed-source policy.

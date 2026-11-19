@@ -32,22 +32,16 @@ TypeScript packages (`nz-sources`, `stats-nz`) are gone.
   empty value means the source supplied none
 - Every adapter also has source-level `licence` and `attribution` metadata in
   `src/registry.ts`, returned by the API, CLI, and MCP source lists
+- The 2026-11-08 Census record used the ACS 1-year endpoint, which was rechecked
+  without a key on 2026-11-20. It returned the same missing-key redirect as the
+  ACS 5-year check on 2026-11-17. No Census follow-up remains
 - `npm run check` is green. The MCP server exposes named tools for the original
   library queries plus the generic `fetch_source` tool for any registered
   source, and `probe_sources` only probes the ids it is given.
 
 ## What is left
 
-1. The keyed-source decision is closed: the registered library stays keyless-only.
-   Every registered adapter declares `auth: 'none'`, a registry test enforces
-   that, and no adapter reads the optional `apiKey` seam. The MCP `fetch_source`
-   tool does not accept a key. Census has two records: the 2026-11-08 note has no
-   URL, and the 2026-11-17 check covers the ACS 5-year endpoint. The record does
-   not show whether the 11-08 check used the same endpoint. EIA answered with
-   `API_KEY_MISSING`; BEA's docs require a UserID and its no-key probe was an
-   empty HTTP 200. The checks cover named URLs only. The narrow follow-up is to
-   resolve the missing Census URL and recheck that endpoint keyless.
-2. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
+1. `scripts/sync-connectors.mjs` in the sibling `uk-data-lab` and
    `usa-data-lab` repos vendors one package by name and renames its scope as
    it copies. That script matches the old scope, so it needs updating before
    the rename lands there.
